@@ -1,10 +1,31 @@
 ---
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
 const { title, description, jsonld } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const all = (await getCollection('codes')).filter(c=>!c.data.example);
+const brands = [...new Map(all.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
+const year = new Date().getFullYear();
 ---
+<!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
-<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL("/og.png", Astro.site).href}/><meta name="twitter:card" content="summary_large_image"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="theme-color" content="#0b1f3a"/>
+<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta name="twitter:card" content="summary_large_image"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
-<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:auto;padding:1rem;line-height:1.5}.warn{background:#fff3cd;padding:.5rem}.ex{background:#fdd;padding:.5rem}*{box-sizing:border-box}main,p,li,a,h1,h2{overflow-wrap:anywhere}img,svg,table,pre{max-width:100%}pre,table{overflow-x:auto;display:block}footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem}footer nav a{margin-right:1rem}</style>
-</head><body><header><a href="/">HVAC Error Codes</a></header><main><slot/></main><footer><nav><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></nav><small>Information only; follow your manual and local codes.</small></footer></body></html>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-h"><div class="wrap">
+<a class="logo" href="/" aria-label="The Fault Code home"><span class="logo-mark" aria-hidden="true">FC</span>The Fault Code</a>
+<nav class="nav" aria-label="Brands">{brands.map(([s,n])=><a href={`/${s}/`}>{n}</a>)}</nav>
+</div></header>
+<main id="main"><slot/></main>
+<footer class="site-f"><div class="wrap">
+<div class="cols">
+<div><a class="logo" href="/"><span class="logo-mark" aria-hidden="true">FC</span>The Fault Code</a><p>Furnace error codes explained in plain English, taken from manufacturer installation and service manuals. Information only; always follow your unit's manual and local codes.</p></div>
+<div><h4>Brands</h4><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n} codes</a></li>)}</ul></div>
+<div><h4>Site</h4><ul><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li></ul></div>
+</div>
+<div class="legal">If you smell gas, leave the building and call your gas utility from outside. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
+</div></footer>
+</body></html>

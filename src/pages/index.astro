@@ -1,7 +1,47 @@
 ---
 import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content';
-const codes = await getCollection('codes');
-const brands = [...new Map(codes.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort();
+const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
+const brands = [...new Map(codes.map(c=>[c.brandSlug,c.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
+const count = (s)=>codes.filter(c=>c.brandSlug===s).length;
+const featured = brands.flatMap(([s])=>codes.filter(c=>c.brandSlug===s).slice(0,2));
+featured.splice(9);
+const index = codes.map(c=>({b:c.brand,c:c.code,m:c.meaning,u:`/${c.brandSlug}/${c.codeSlug}/`,t:c.equipmentType}));
+const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/'};
 ---
-<Base title="HVAC Error Code Lookup" description="Look up furnace, AC, heat pump and mini-split error codes by brand.">
-<h1>HVAC Error Code Lookup</h1><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n}</a></li>)}</ul></Base>
+<Base title="The Fault Code: Furnace Error Code Lookup" description="Look up Goodman, Carrier, Trane, Lennox and Rheem furnace error codes. Plain-English meanings, likely causes and safe next steps from manufacturer manuals." jsonld={jsonld}>
+<section class="hero"><div class="wrap">
+<h1>What is your furnace trying to tell you?</h1>
+<p class="lead">Look up a furnace error or flash code and get the meaning, likely causes, safe checks, and when to call a pro, from the manufacturer's own manual.</p>
+<div class="search" role="search">
+<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+<label for="q" class="skip">Search error codes</label>
+<input id="q" type="search" autocomplete="off" placeholder="Enter brand + code, e.g. Goodman EE3" />
+<ul id="res" class="results" aria-live="polite"></ul>
+</div>
+<div class="hero-stats"><div><strong>{codes.length}</strong>furnace codes</div><div><strong>{brands.length}</strong>brands</div><div><strong>100%</strong>sourced from manuals</div></div>
+</div></section>
+<div class="wrap">
+<section class="block"><div class="sec-h"><div><h2>Browse by brand</h2><p>Pick your furnace brand to see every code we cover.</p></div></div>
+<div class="grid g5">{brands.map(([s,n])=><a class="card brand-card" href={`/${s}/`}><div class="bn">{n}</div><div class="bc">{count(s)} furnace codes</div><span class="go">View codes →</span></a>)}</div></section>
+<section class="block"><div class="sec-h"><div><h2>Featured codes</h2><p>A sample of codes from each brand.</p></div></div>
+<div class="grid g3">{featured.map(c=><a class="card code-card" href={`/${c.brandSlug}/${c.codeSlug}/`}><div class="cb">{c.brand} · {c.equipmentType}</div><div class="cc">{c.code}</div><p class="cm">{c.meaning}</p></a>)}</div></section>
+<section class="block"><div class="sec-h"><div><h2>Why you can trust these pages</h2><p>How we put each code page together.</p></div></div>
+<div class="trust">
+<div class="card"><div class="ticon" aria-hidden="true">📘</div><h3>From the manual</h3><p>Every meaning and cause comes from the manufacturer's installation or service manual, and each page links to its source.</p></div>
+<div class="card"><div class="ticon" aria-hidden="true">✓</div><h3>Nothing guessed</h3><p>If we could not confirm a code in a manual, we left it out instead of guessing.</p></div>
+<div class="card"><div class="ticon" aria-hidden="true">⚠</div><h3>Safety first</h3><p>Each page separates simple homeowner checks from work that needs a licensed HVAC technician.</p></div>
+</div>
+<div class="gasbar"><strong>Smell gas?</strong> Don't touch switches or use a phone inside. Leave the building now and call your gas utility from outside.</div>
+</section>
+</div>
+<script type="application/json" id="idx" set:html={JSON.stringify(index)}></script>
+<script is:inline>
+(()=>{const d=JSON.parse(document.getElementById('idx').textContent),q=document.getElementById('q'),r=document.getElementById('res');
+const n=s=>s.toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim(),k=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+q.addEventListener('input',()=>{const w=n(q.value).split(' ').filter(Boolean);if(!w.length){r.innerHTML='';return}
+const hits=d.map(x=>{const hay=n(x.b+' '+x.c+' '+x.m+' '+x.t),code=k(x.c);let s=0;for(const t of w){const kt=k(t);if(code===kt)s+=5;else if(code.startsWith(kt))s+=3;else if(hay.includes(t))s+=1;else return null}return[s,x]}).filter(Boolean).sort((a,b)=>b[0]-a[0]).slice(0,8);
+r.innerHTML=hits.length?hits.map(([,x])=>`<li><a href="${x.u}"><b>${esc(x.b)} ${esc(x.c)}</b><small>${esc(x.m)}</small></a></li>`).join(''):'<li style="padding:10px 12px;color:#475569">No matching code. Try just the brand name, or browse brands below.</li>'});
+q.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=r.querySelector('a');if(a)location.href=a.href}})})();
+</script>
+</Base>

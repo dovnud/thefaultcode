@@ -1,9 +1,18 @@
 ---
 import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content';
-export async function getStaticPaths(){ const all=await getCollection('codes');
+export async function getStaticPaths(){ const all=(await getCollection('codes')).filter(c=>!c.data.example);
   const slugs=[...new Set(all.map(c=>c.data.brandSlug))];
-  return slugs.map(s=>({params:{brand:s},props:{codes:all.filter(c=>c.data.brandSlug===s)}})); }
-const { codes } = Astro.props; const brand = codes[0].data.brand;
+  return slugs.map(s=>({params:{brand:s},props:{codes:all.filter(c=>c.data.brandSlug===s).map(c=>c.data)}})); }
+const { codes } = Astro.props; const brand = codes[0].brand; const src = codes[0].sourceManualUrl;
+const jsonld={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:brand,item:`https://thefaultcode.com/${codes[0].brandSlug}/`}]};
 ---
-<Base title={`${brand} Error Codes`} description={`All ${brand} HVAC error and flash codes explained.`}>
-<h1>{brand} Error Codes</h1><ul>{codes.map(c=><li><a href={`/${c.data.brandSlug}/${c.data.codeSlug}/`}>{c.data.equipmentType} {c.data.code}</a> – {c.data.meaning}</li>)}</ul></Base>
+<Base title={`${brand} Furnace Error Codes | The Fault Code`} description={`All ${codes.length} ${brand} furnace error and flash codes we cover, with meanings from the manufacturer manual.`} jsonld={jsonld}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">{brand}</li></ol></nav>
+<div class="page-h"><h1>{brand} furnace error codes</h1><p>{codes.length} codes from the {brand} furnace manual. Select a code for causes, safe checks and when to call a pro.{src && <> <a href={src} rel="noopener">View the source manual (PDF)</a>.</>}</p></div>
+<input class="filter" id="f" type="search" placeholder={`Filter ${brand} codes…`} aria-label={`Filter ${brand} codes`} />
+<div class="grid g3" id="g" style="margin-top:18px">{codes.map(c=><a class="card code-card" href={`/${c.brandSlug}/${c.codeSlug}/`} data-s={`${c.code} ${c.meaning}`.toLowerCase()}><div class="cb">{c.equipmentType}</div><div class="cc">{c.code}</div><p class="cm">{c.meaning}</p><div class="badges" style="margin:10px 0 0">{c.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}</div></a>)}</div>
+<div class="gasbar">If you smell gas, leave the building and call your gas utility from outside.</div>
+</div>
+<script is:inline>document.getElementById('f').addEventListener('input',e=>{const v=e.target.value.toLowerCase().trim();document.querySelectorAll('#g a').forEach(a=>a.style.display=a.dataset.s.includes(v)?'':'none')})</script>
+</Base>
