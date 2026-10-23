@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "30",
+  "codeSlug": "30",
+  "displayPattern": "Dual 7-segment display: 30",
+  "meaning": "Open fuse, usually from a 24 VAC short to common or ground.",
+  "causes": [
+    "Low-voltage short to ground or common"
+  ],
+  "diySteps": [
+    "Technician: repair the short and replace the fuse"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: a short must be located before replacing the fuse.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "5 amp control board fuse",
+      "partKey": "fuse",
+      "searchTerm": "furnace control board 5 amp fuse"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

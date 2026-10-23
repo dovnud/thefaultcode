@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E09",
+  "codeSlug": "e09",
+  "displayPattern": "7-segment display alternates with mode: E09",
+  "meaning": "Open inducer limit switch or condensate pressure switch.",
+  "causes": [
+    "Condensate system not draining freely",
+    "Improper venting installation or vent terminations obstructed",
+    "Incorrect inducer limit switch installed",
+    "Inducer or heat exchanger malfunction"
+  ],
+  "diySteps": [
+    "Check that the condensate drain system is free flowing",
+    "Check that outdoor vent terminations are clear",
+    "Technician: correct the condensate drain or venting; check inducer limit"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the drain and vents are clear and the code persists.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

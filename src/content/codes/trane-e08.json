@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E08",
+  "codeSlug": "e08",
+  "displayPattern": "7-segment display alternates with mode: E08",
+  "meaning": "Low flame current, but still strong enough to allow operation.",
+  "causes": [
+    "Flame sensor location incorrect",
+    "Burner flames not directed into the heat exchanger",
+    "Faulty flame sensor",
+    "Wiring or connections"
+  ],
+  "diySteps": [
+    "Technician: measure flame current across FP pads",
+    "Technician: correct flame sensor location or replace sensor; check wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: to service the flame sensor before it causes lockouts.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

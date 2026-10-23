@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "44",
+  "codeSlug": "44",
+  "displayPattern": "Dual 7-segment display: 44",
+  "meaning": "Low pressure switch closed with inducer off.",
+  "causes": [
+    "Faulty switch",
+    "Pressure switch bypassed in the field",
+    "Loose or faulty wiring",
+    "Abnormally high negative pressure on vent system"
+  ],
+  "diySteps": [
+    "Technician: replace switch, remove any bypass, check wiring and venting"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: this indicates a failed or bypassed safety switch.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

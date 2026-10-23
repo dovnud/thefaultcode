@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "12",
+  "codeSlug": "12",
+  "displayPattern": "Dual 7-segment display: 12",
+  "meaning": "Low flame sense: flame sense current is weak or marginal. Furnace keeps running.",
+  "causes": [
+    "Flame sense rod needs cleaning or is not properly connected",
+    "Wiring between rod and control shorted or open",
+    "Improperly mounted or poorly grounded flame sensor"
+  ],
+  "diySteps": [
+    "Technician: clean or replace the flame sense rod and check connections",
+    "Technician: reinstall/replace sensor and confirm furnace ground"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: to service the sensor before it causes lockouts.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

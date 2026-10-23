@@ -1,0 +1,48 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EE0",
+  "codeSlug": "ee0",
+  "displayPattern": "Shown on the control board 7-segment display: EE0",
+  "meaning": "Furnace lockout after too many ignition retries (3 total): flame failed to establish or was lost after establishment.",
+  "causes": [
+    "Gas supply interruption",
+    "Front cover pressure switch or condensate drainage problem",
+    "Igniter worn or misaligned",
+    "Flame sensor coated or oxidized",
+    "Blocked or improperly sized flue piping",
+    "Weak induced draft blower"
+  ],
+  "diySteps": [
+    "Confirm the gas supply to the furnace is on and not interrupted",
+    "Check that the outdoor vent and intake terminations are not blocked",
+    "Technician: check front cover pressure switch operation and drainage (hose, wiring, contacts)",
+    "Technician: replace or realign the igniter",
+    "Technician: check flame sense signal and clean the sensor if coated or oxidized",
+    "Technician: verify flue piping length, elbows and termination, and induced draft blower performance"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the furnace locks out again after the gas supply and vent terminations are confirmed clear.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

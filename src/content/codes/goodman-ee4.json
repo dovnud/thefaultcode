@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EE4",
+  "codeSlug": "ee4",
+  "displayPattern": "Shown on the control board 7-segment display: EE4 (inducer and circulator blowers run continuously)",
+  "meaning": "Flame sensed with no call for heat.",
+  "causes": [
+    "Short to ground in flame sense circuit",
+    "Lingering burner flame",
+    "Slow closing gas valve"
+  ],
+  "diySteps": [
+    "Technician: correct short at flame sensor or in flame sensor wiring",
+    "Technician: check for lingering or lazy flame and verify proper gas valve operation"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: immediately; flame with no call for heat can indicate a gas valve problem.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    },
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

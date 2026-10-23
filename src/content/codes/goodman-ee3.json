@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EE3",
+  "codeSlug": "ee3",
+  "displayPattern": "Shown on the control board 7-segment display: EE3 (circulator blower runs continuously, no heat)",
+  "meaning": "Primary limit circuit is open.",
+  "causes": [
+    "Insufficient conditioned air over the heat exchanger",
+    "Blocked filters",
+    "Restrictive ductwork",
+    "Improper circulator blower speed or failed circulator blower motor",
+    "Loose or improperly connected wiring in the high limit circuit"
+  ],
+  "diySteps": [
+    "Turn off power, then check and clean or replace the air filter",
+    "Make sure supply and return registers are open and not blocked",
+    "Technician: check circulator blower speed and performance; correct speed or replace motor if necessary",
+    "Technician: tighten or correct wiring in the high limit circuit"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if a clean filter and open registers do not clear the code, or it returns.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "High limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace high limit switch"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

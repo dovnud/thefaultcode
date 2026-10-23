@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E05",
+  "codeSlug": "e05",
+  "displayPattern": "7-segment display alternates with mode: E05",
+  "meaning": "Flame detected when it should not be present.",
+  "causes": [
+    "Flame sense wire shorted to ground",
+    "Flame sensor grounded",
+    "Moisture or debris in gas valve inlet screen / faulty gas valve"
+  ],
+  "diySteps": [
+    "Technician: turn off gas and power, inspect gas valve inlet screen and drip leg, replace gas valve if needed",
+    "Technician: check flame sense wiring for shorts"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: immediately; this is a gas safety fault.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    },
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

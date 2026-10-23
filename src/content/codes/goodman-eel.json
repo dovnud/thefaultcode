@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EEL",
+  "codeSlug": "eel",
+  "displayPattern": "Shown on the control board 7-segment display: EEL",
+  "meaning": "Problem with igniter circuit.",
+  "causes": [
+    "Improperly connected or shorted igniter",
+    "Poor unit ground",
+    "Igniter relay fault on integrated control module"
+  ],
+  "diySteps": [
+    "Technician: check and correct wiring from control to igniter",
+    "Technician: diagnose and replace a shorted igniter",
+    "Technician: verify and correct unit ground wiring",
+    "Technician: check igniter output from control; replace control if necessary"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: igniter circuit diagnosis requires live electrical testing.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Integrated furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

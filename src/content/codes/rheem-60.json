@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "60",
+  "codeSlug": "60",
+  "displayPattern": "Dual 7-segment display: 60",
+  "meaning": "Blower fault, blower can still run: blower at max speed/torque or temperature limit because static pressure is too high.",
+  "causes": [
+    "Restricted or improperly designed ductwork",
+    "Dirty filter"
+  ],
+  "diySteps": [
+    "Turn off power and clean or replace the filter",
+    "Remove obstructions to airflow",
+    "Technician: repair ductwork so static pressure is within published values"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if a clean filter does not clear the code.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

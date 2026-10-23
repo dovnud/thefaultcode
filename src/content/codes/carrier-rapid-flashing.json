@@ -1,0 +1,24 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "Rapid flashing",
+  "codeSlug": "rapid-flashing",
+  "displayPattern": "Status LED flashing rapidly without a pause",
+  "meaning": "Line voltage (115 VAC) polarity reversed. If twinned, check 24 V transformer phasing.",
+  "causes": [
+    "Reversed line-voltage polarity",
+    "Improper low-voltage transformer phasing on twinned units"
+  ],
+  "diySteps": [
+    "Technician: check for correct line voltage polarity",
+    "Technician: if twinned, refer to twinning kit instructions"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: line-voltage wiring must be corrected by a qualified person.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

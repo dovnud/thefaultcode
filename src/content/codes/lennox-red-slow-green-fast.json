@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "code": "Red slow flash, green fast flash",
+  "codeSlug": "red-slow-green-fast",
+  "displayPattern": "Red LED #1: slow flash; Green LED #2: fast flash",
+  "meaning": "Low flame signal: measures below 1.5 microamps. Replace flame sense rod.",
+  "causes": [
+    "Weak flame sense signal"
+  ],
+  "diySteps": [
+    "Technician: replace the flame sense rod"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: to replace the flame sensor.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf",
+  "updated": "2026-10-23"
+}

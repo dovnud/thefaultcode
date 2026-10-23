@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "11",
+  "codeSlug": "11",
+  "displayPattern": "Dual 7-segment display: 11",
+  "meaning": "Failed ignition. After four failed attempts the control enters one-hour lockout (10).",
+  "causes": [
+    "Flame sense rod dirty or not connected",
+    "Gas valve turned off",
+    "Igniter not working, not connected or mispositioned",
+    "Furnace control faulty",
+    "Flame not spreading from first burner to the last"
+  ],
+  "diySteps": [
+    "Make sure the gas valve is turned on",
+    "Technician: clean or replace flame sense rod; check its wiring and furnace ground",
+    "Technician: replace or reposition igniter; check manifold pressure (~3.5\" WC natural gas, ~10\" WC LP)",
+    "Technician: replace burner or control if indicated"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the gas valve is on and ignition still fails.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EE6",
+  "codeSlug": "ee6",
+  "displayPattern": "Shown on the control board 7-segment display: EE6 (furnace still operates)",
+  "meaning": "Low flame signal: flame sense microamp signal is minimal.",
+  "causes": [
+    "Flame sensor coated or oxidized",
+    "Flame sensor incorrectly positioned in burner flame",
+    "Lazy burner flame due to improper gas pressure or combustion air"
+  ],
+  "diySteps": [
+    "Technician: clean flame sensor if coated or oxidized and inspect alignment",
+    "Technician: check inlet air piping for blockage, proper length, elbows and termination",
+    "Technician: compare gas pressure to rating plate and adjust as needed"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: to clean or reposition the flame sensor and check gas pressure before this becomes a lockout.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

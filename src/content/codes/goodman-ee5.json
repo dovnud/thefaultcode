@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EE5",
+  "codeSlug": "ee5",
+  "displayPattern": "Shown on the control board 7-segment display: EE5",
+  "meaning": "Open fuse.",
+  "causes": [
+    "Short in low voltage wiring"
+  ],
+  "diySteps": [
+    "Technician: locate and correct the short in low voltage wiring",
+    "Technician: replace the fuse"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: a fuse that blows again means a wiring short that must be found.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "5 amp control board fuse",
+      "partKey": "fuse",
+      "searchTerm": "furnace control board 5 amp fuse"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

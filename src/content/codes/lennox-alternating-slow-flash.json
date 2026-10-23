@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "code": "Alternating slow flash",
+  "codeSlug": "alternating-slow-flash",
+  "displayPattern": "Red LED #1: alternating slow flash; Green LED #2: alternating slow flash",
+  "meaning": "Watchguard 1 hour: burners failed to ignite or lost flame 5 times during a single heating demand.",
+  "causes": [
+    "Burners failing to ignite",
+    "Flame lost repeatedly"
+  ],
+  "diySteps": [
+    "Confirm the gas supply to the furnace is on",
+    "Technician: diagnose ignition and flame sensing"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the furnace enters Watchguard again.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf",
+  "updated": "2026-10-23"
+}

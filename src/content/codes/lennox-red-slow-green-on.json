@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "code": "Red slow flash, green on",
+  "codeSlug": "red-slow-green-on",
+  "displayPattern": "Red LED #1: slow flash; Green LED #2: on",
+  "meaning": "Primary or secondary limit switch open. Limit must close within 3 minutes or the unit goes into 1-hour Watchguard.",
+  "causes": [
+    "Limit switch open (overheating condition)"
+  ],
+  "diySteps": [
+    "Turn off power and check the air filter; replace if dirty",
+    "Technician: diagnose why the limit opened"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the code repeats or the unit enters Watchguard.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "High limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace high limit switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf",
+  "updated": "2026-10-23"
+}

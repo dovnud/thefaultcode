@@ -1,0 +1,23 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "10",
+  "codeSlug": "10",
+  "displayPattern": "Dual 7-segment display: 10 (alternates with the fault that caused it)",
+  "meaning": "One-hour lockout, caused by repeated failed ignition (11), water sensed (59), dead blower (61), internal fault (93), flame lost 5 times (13) or unexpected flame (14).",
+  "causes": [
+    "See the code shown alternately with 10"
+  ],
+  "diySteps": [
+    "Read the second code that alternates with 10 and follow that code",
+    "Lockout clears when the cause is corrected and power is cycled off and on"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the furnace keeps entering lockout.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "14",
+  "codeSlug": "14",
+  "displayPattern": "Status LED: 1 short flash(es) then 4 long flash(es) (code 14)",
+  "meaning": "Ignition lockout: system failed to ignite gas and prove flame in 4 attempts. Control auto-resets after 3 hours (see code 34).",
+  "causes": [
+    "Oxide buildup on flame sensor",
+    "Manual gas shut-off valve or gas valve turned off",
+    "Low inlet gas pressure",
+    "Defective hot surface igniter",
+    "Inadequate flame carryover or rough ignition",
+    "Control ground continuity problem"
+  ],
+  "diySteps": [
+    "Check that the manual gas shut-off valve is open and the gas valve control switch is ON",
+    "Technician: clean flame sensor with fine steel wool and check flame current (0.5 microamp DC minimum, 4.0-6.0 nominal)",
+    "Technician: check inlet gas pressure, igniter and ground (green/yellow wire must be connected to furnace sheet metal)"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if gas is on and the furnace still fails to light.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    }
+  ],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

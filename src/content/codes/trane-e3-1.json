@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E3.1",
+  "codeSlug": "e3-1",
+  "displayPattern": "7-segment display alternates with mode: E3.1",
+  "meaning": "Shorted pressure switch, 1st stage: PS1 is closed when it should be open.",
+  "causes": [
+    "Pressure switch wiring or tube routing incorrect",
+    "PS1 not oriented correctly for the application",
+    "Faulty pressure switch"
+  ],
+  "diySteps": [
+    "Technician: verify pressure switch wiring, tube routing and orientation",
+    "Technician: replace pressure switch, or verify wiring and replace IFC"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: pressure switch diagnosis requires a meter.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

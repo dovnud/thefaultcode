@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E6.3",
+  "codeSlug": "e6-3",
+  "displayPattern": "7-segment display alternates with mode: E6.3",
+  "meaning": "Igniter relay fault or igniter open/shorted.",
+  "causes": [
+    "Igniter relay stuck on control",
+    "Igniter open or shorted",
+    "Damaged igniter harness or loose connectors"
+  ],
+  "diySteps": [
+    "Technician: verify igniter harness and connectors",
+    "Technician: check igniter resistance (37-70 ohms at ~75F); replace igniter or IFC as indicated"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: igniter testing involves line voltage.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Integrated furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E12",
+  "codeSlug": "e12",
+  "displayPattern": "7-segment display alternates with mode: E12",
+  "meaning": "Open fuse: the onboard 5 amp fuse is open or missing.",
+  "causes": [
+    "Field wiring shorted",
+    "Unit wiring shorted",
+    "Accessory drawing more than the fuse rating",
+    "Fuse not seated"
+  ],
+  "diySteps": [
+    "Technician: properly seat or replace the fuse",
+    "Technician: measure transformer amp draw and correct low voltage wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the fuse blows again.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "5 amp control board fuse",
+      "partKey": "fuse",
+      "searchTerm": "furnace control board 5 amp fuse"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

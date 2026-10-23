@@ -1,0 +1,46 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E2.1",
+  "codeSlug": "e2-1",
+  "displayPattern": "7-segment display alternates with mode: E2.1",
+  "meaning": "Retry exceeded: flame never sensed after 3 ignition tries in one call for heat. One-hour lockout.",
+  "causes": [
+    "Gas valve switch OFF, no voltage to gas valve, or debris in gas valve",
+    "Inlet gas pressure too high or below nameplate minimum",
+    "Low manifold pressure",
+    "Burner misalignment or dirty burners",
+    "Igniter position",
+    "Dirty flame sensor, poor grounding, sensor location or wire connections"
+  ],
+  "diySteps": [
+    "Make sure other gas appliances in the home work, to confirm gas supply",
+    "Make sure the gas valve switch is ON",
+    "Technician: measure inlet and manifold gas pressure (manifold ~1.7\" WC natural gas, ~6.0\" WC LP)",
+    "Technician: check igniter position, burners and flame current (typical 0.75-3.0 microamps)"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if gas supply is confirmed and the lockout repeats.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

@@ -13,6 +13,7 @@ const codes = defineCollection({
     diySteps: z.array(z.string()),
     safetyNote: z.string(),
     proNeeded: z.boolean(),
+    proAdvice: z.string().optional(),
     parts: z.array(z.object({ name: z.string(), partKey: z.string(), searchTerm: z.string() })).default([]),
     sourceManualUrl: z.string().url().optional(),
     updated: z.string(),

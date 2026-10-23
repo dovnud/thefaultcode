@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "E11",
+  "codeSlug": "e11",
+  "displayPattern": "Shown on the control board 7-segment display: E11",
+  "meaning": "Open rollout switch.",
+  "causes": [
+    "Incorrect gas pressure",
+    "Incorrect burner alignment",
+    "Burner restriction"
+  ],
+  "diySteps": [
+    "Technician: check for correct gas pressure",
+    "Technician: check for correct burner alignment",
+    "Technician: check for and correct burner restriction"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: a tripped rollout switch means flame left the burner area; do not keep resetting it.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

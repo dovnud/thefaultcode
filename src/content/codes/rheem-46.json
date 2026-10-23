@@ -1,0 +1,47 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "46",
+  "codeSlug": "46",
+  "displayPattern": "Dual 7-segment display: 46",
+  "meaning": "Low pressure switch open with inducer on low speed.",
+  "causes": [
+    "Blocked or improperly terminated vents",
+    "Vent length or elbows exceed maximum",
+    "Faulty or disconnected inducer",
+    "Faulty control board",
+    "High altitude kit not installed",
+    "Loose or faulty wiring",
+    "Damaged pressure switch hoses",
+    "Wind gusts",
+    "Faulty pressure switch"
+  ],
+  "diySteps": [
+    "Check outdoor vent terminations for blockage",
+    "Technician: check venting, inducer, hoses, high-altitude kit need and pressure switch"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if vents are clear and the code persists.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}

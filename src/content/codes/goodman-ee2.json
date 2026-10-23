@@ -1,0 +1,48 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EE2",
+  "codeSlug": "ee2",
+  "displayPattern": "Shown on the control board 7-segment display: EE2 (induced draft blower runs, furnace does not light)",
+  "meaning": "Pressure switch circuit is not closed.",
+  "causes": [
+    "Pressure switch hose blocked, pinched or connected improperly",
+    "Blocked flue and/or inlet air pipe",
+    "Blocked drain system",
+    "Weak induced draft blower",
+    "Incorrect pressure switch set point or malfunctioning switch contacts",
+    "Loose or improperly connected wiring"
+  ],
+  "diySteps": [
+    "Check the outdoor flue and intake terminations for blockage (snow, debris, nests)",
+    "Technician: inspect the pressure switch hose and repair or replace if necessary",
+    "Technician: inspect flue/inlet piping length, elbows and termination",
+    "Technician: check the drain system",
+    "Technician: check induced draft blower performance and pressure switch operation",
+    "Technician: tighten or correct wiring connections"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the vent terminations are clear and the code persists.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "45",
+  "codeSlug": "45",
+  "displayPattern": "Status LED: 4 short flash(es) then 5 long flash(es) (code 45)",
+  "meaning": "Control circuitry lockout. Auto-resets after 1 hour.",
+  "causes": [
+    "Gas valve relay stuck open",
+    "Flame sense circuit failure",
+    "Software check error"
+  ],
+  "diySteps": [
+    "Reset power to clear the lockout",
+    "Technician: replace the control if the status code repeats"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the code repeats after a power reset.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

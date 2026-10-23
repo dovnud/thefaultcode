@@ -1,0 +1,47 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "13",
+  "codeSlug": "13",
+  "displayPattern": "Status LED: 1 short flash(es) then 3 long flash(es) (code 13)",
+  "meaning": "Limit circuit lockout: a limit or flame rollout switch was open longer than 3 minutes. Control auto-resets after 3 hours (see code 33).",
+  "causes": [
+    "Dirty filter or restricted duct system",
+    "Restricted vent or improper vent sizing",
+    "Loose blower wheel",
+    "Defective blower motor or capacitor",
+    "Defective switch or connections",
+    "Inadequate combustion air supply (flame rollout switch open)",
+    "Excessive wind"
+  ],
+  "diySteps": [
+    "Turn off power and check/replace a dirty air filter",
+    "Make sure return and supply grilles are open and unobstructed",
+    "Technician: check vent sizing and restrictions, blower wheel, blower motor/capacitor, switches and connections",
+    "Technician: flame rollout switch requires manual reset only after the cause is found"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the furnace locks out again after replacing the filter, or if a rollout switch has tripped.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "High limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace high limit switch"
+    },
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

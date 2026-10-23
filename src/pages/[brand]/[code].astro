@@ -16,8 +16,8 @@ const jsonld = [{ '@context':'https://schema.org','@type':'FAQPage', mainEntity:
 <h2>Likely causes</h2><ul>{e.causes.map(c=><li>{c}</li>)}</ul>
 <p class="warn"><strong>Safety:</strong> {e.safetyNote}</p>
 <h2>Safe DIY steps</h2><ol>{e.diySteps.map(s=><li>{s}</li>)}</ol>
-<h2>When to call a pro</h2><p>{e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.'}</p>
+<h2>When to call a pro</h2>{e.proAdvice ? <p>{e.proAdvice}</p> : <p>{e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.'}</p>}
 {affiliates.proReferral.enabled && <p><a rel="sponsored nofollow" href={affiliates.proReferral.url()}>{affiliates.proReferral.label}</a></p>}
 {e.parts.length>0 && <><h2>Related parts</h2><ul>{e.parts.map(p=><li><a rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)}>{p.name}</a></li>)}</ul><small>{affiliates.disclosure}</small></>}
-{e.sourceManualUrl && <p>Source: <a href={e.sourceManualUrl}>manufacturer manual</a></p>}
+{e.sourceManualUrl && <p>Source: <a href={e.sourceManualUrl} rel="noopener">manufacturer manual (PDF)</a></p>}
 <p><small>Updated {e.updated}</small></p></Base>

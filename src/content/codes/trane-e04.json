@@ -1,0 +1,47 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E04",
+  "codeSlug": "e04",
+  "displayPattern": "7-segment display alternates with mode: E04",
+  "meaning": "Open limit: main thermal limit, flame rollout switch, or reverse airflow switch.",
+  "causes": [
+    "Dirty filters or blower wheel",
+    "Blower motor not running",
+    "External static pressure above nameplate (duct issues)",
+    "Heat rise out of specification or outlet gas pressure out of specification",
+    "Return air temperature too high",
+    "Restricted flue piping or wrong LP orifices (rollout)",
+    "Burner misalignment or flame impingement (rollout)"
+  ],
+  "diySteps": [
+    "Turn off power and make sure the filter is clean",
+    "Technician: check blower, static pressure, heat rise and gas pressure",
+    "Technician: for rollout, check flue, orifices, burners and heat exchanger before resetting rollout switches",
+    "Never leave limit switches jumpered"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the code returns after a filter change, or a rollout switch has tripped.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "High limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace high limit switch"
+    },
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

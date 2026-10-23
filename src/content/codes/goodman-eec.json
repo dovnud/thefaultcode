@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EEC",
+  "codeSlug": "eec",
+  "displayPattern": "Shown on the control board 7-segment display: EEC",
+  "meaning": "Gas valve is energized when it should not be.",
+  "causes": [
+    "Gas valve circuit wiring problem",
+    "Internal gas valve error on the control"
+  ],
+  "diySteps": [
+    "Technician: check wiring in gas valve circuit",
+    "Technician: replace integrated control board if wiring is good"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: immediately; this is a gas safety fault.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

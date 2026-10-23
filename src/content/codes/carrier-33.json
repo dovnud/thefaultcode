@@ -1,1 +1,47 @@
-{"example":true,"brand":"Carrier","brandSlug":"carrier","equipmentType":"furnace","code":"33","codeSlug":"33","displayPattern":"3 flashes, pause, 3 flashes","meaning":"EXAMPLE: Limit circuit fault.","causes":["Dirty air filter","Closed supply registers","Blower failure"],"diySteps":["Replace the air filter","Open all supply registers"],"safetyNote":"Turn off power before removing the filter door.","proNeeded":false,"parts":[{"name":"Furnace air filter","partKey":"filter","searchTerm":"furnace air filter"}],"updated":"2026-10-23"}
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "33",
+  "codeSlug": "33",
+  "displayPattern": "Status LED: 3 short flash(es) then 3 long flash(es) (code 33)",
+  "meaning": "Limit circuit fault: a limit or flame rollout switch is open. Becomes lockout 13 if open longer than 3 minutes.",
+  "causes": [
+    "Dirty filter or restricted duct system",
+    "Restricted vent or improper vent sizing",
+    "Loose blower wheel",
+    "Defective blower motor or capacitor",
+    "Defective switch or connections",
+    "Improper gas input adjustment",
+    "Inadequate combustion air supply (flame rollout switch open)",
+    "Excessive wind"
+  ],
+  "diySteps": [
+    "Turn off power and check/replace a dirty air filter",
+    "Make sure return and supply grilles are open and unobstructed",
+    "Technician: check blower, venting, gas input and switches; flame rollout switch requires manual reset after the cause is corrected"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the code returns after a filter change, or if the rollout switch tripped.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "High limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace high limit switch"
+    },
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

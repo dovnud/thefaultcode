@@ -1,0 +1,44 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E3.2",
+  "codeSlug": "e3-2",
+  "displayPattern": "7-segment display alternates with mode: E3.2",
+  "meaning": "Open pressure switch, 1st stage: PS1 is open when it should be closed.",
+  "causes": [
+    "Obstructed pressure switch hose or flue piping, or incorrect vent size",
+    "Wind gusts",
+    "Inducer motor not running",
+    "PS1 not oriented correctly",
+    "Faulty pressure switch"
+  ],
+  "diySteps": [
+    "Check outdoor vent and intake terminations for blockage",
+    "Technician: check PS hose, flue piping and vent size",
+    "Technician: check inducer voltage and operation; replace inducer assembly or pressure switch as indicated"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if terminations are clear and the code persists.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

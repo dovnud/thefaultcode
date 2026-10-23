@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "23",
+  "codeSlug": "23",
+  "displayPattern": "Status LED: 2 short flash(es) then 3 long flash(es) (code 23)",
+  "meaning": "Pressure switch did not open.",
+  "causes": [
+    "Obstructed pressure tubing",
+    "Pressure switch stuck closed"
+  ],
+  "diySteps": [
+    "Technician: check pressure tubing for obstruction",
+    "Technician: check pressure switch and replace if stuck closed"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: pressure switch testing should be done by a technician.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    }
+  ],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

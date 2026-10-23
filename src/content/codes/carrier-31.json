@@ -1,0 +1,47 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "code": "31",
+  "codeSlug": "31",
+  "displayPattern": "Status LED: 3 short flash(es) then 1 long flash(es) (code 31)",
+  "meaning": "Low (LPS) or high (HPS) pressure switch did not close or reopened.",
+  "causes": [
+    "Excessive wind",
+    "Restricted vent or improper vent sizing",
+    "Defective inducer motor or low inducer voltage",
+    "Defective or miswired pressure switch",
+    "Inadequate combustion air supply",
+    "Disconnected or obstructed pressure tubing",
+    "Restricted or blocked condensate drainage, or water in sagging vent pipe",
+    "Low inlet gas pressure (if LGPS used)"
+  ],
+  "diySteps": [
+    "Check that outdoor vent and intake terminations are clear",
+    "Technician: check vent sizing, inducer, pressure switches and tubing",
+    "Technician: check condensate drain and vent pipe slope"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if vent terminations are clear and the code repeats.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "updated": "2026-10-23"
+}

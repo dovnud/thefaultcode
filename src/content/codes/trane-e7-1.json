@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E7.1",
+  "codeSlug": "e7-1",
+  "displayPattern": "7-segment display alternates with mode: E7.1",
+  "meaning": "1st stage gas valve (MVL) is energized when it should be off.",
+  "causes": [
+    "Wiring error putting 24 VAC on the gas valve",
+    "Faulty control"
+  ],
+  "diySteps": [
+    "Technician: check for 24 VAC at gas valve with no heat call; correct wiring or replace IFC"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: immediately; this is a gas valve circuit fault.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

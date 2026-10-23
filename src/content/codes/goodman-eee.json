@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EEE",
+  "codeSlug": "eee",
+  "displayPattern": "Shown on the control board 7-segment display: EEE",
+  "meaning": "Internal faults or IRQ loss in control board.",
+  "causes": [
+    "Internal control board fault"
+  ],
+  "diySteps": [
+    "Technician: replace integrated control board"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: board replacement must be done by a technician.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "updated": "2026-10-23"
+}

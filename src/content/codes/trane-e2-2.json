@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "code": "E2.2",
+  "codeSlug": "e2-2",
+  "displayPattern": "7-segment display alternates with mode: E2.2",
+  "meaning": "Recycles exceeded: flame sensed then lost 10 times (or PS1 open 10 times) in one call for heat. One-hour lockout.",
+  "causes": [
+    "Dirty flame sensor, dirty burners, poor grounding, sensor location or wire connections",
+    "Low or unstable gas manifold pressure",
+    "Blower door not secured",
+    "Wind gusts",
+    "Condensate problem",
+    "Power interruption"
+  ],
+  "diySteps": [
+    "Make sure the blower door is properly installed",
+    "Technician: measure flame current and manifold pressure during 1st and 2nd stage",
+    "Technician: correct incoming gas supply pressure if needed"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: if the lockout repeats.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "updated": "2026-10-23"
+}

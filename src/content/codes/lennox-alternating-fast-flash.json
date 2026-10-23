@@ -1,0 +1,23 @@
+{
+  "example": false,
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "code": "Alternating fast flash",
+  "codeSlug": "alternating-fast-flash",
+  "displayPattern": "Red LED #1: alternating fast flash; Green LED #2: alternating fast flash",
+  "meaning": "Improper main ground, OR line voltage below 90 volts. Control will not respond to a heat call until voltage rises above 95 volts.",
+  "causes": [
+    "Improper main ground",
+    "Line voltage below 90 V"
+  ],
+  "diySteps": [
+    "Technician: check main ground and supply voltage"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: electrical supply problems require an electrician or HVAC technician.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf",
+  "updated": "2026-10-23"
+}

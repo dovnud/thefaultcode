@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "code": "33",
+  "codeSlug": "33",
+  "displayPattern": "Dual 7-segment display: 33",
+  "meaning": "Over-temperature (rollout) switch open: flames rolled out of the heat exchanger into the burner compartment.",
+  "causes": [
+    "Insufficient venting through inlet or exhaust",
+    "Loose or faulty wiring",
+    "Unstable flame pattern"
+  ],
+  "diySteps": [
+    "Technician: check pressure switches, inducer rpm, vent length and obstructions, gaskets",
+    "Technician: check wiring, burner seals and heat exchanger for damage"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: always; the manual calls this a very serious problem to be repaired before operation continues.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "updated": "2026-10-23"
+}
