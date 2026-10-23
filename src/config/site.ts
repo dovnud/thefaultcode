@@ -1,2 +1,2 @@
-// TODO: set CONTACT_EMAIL to a public contact address before launch. While empty, the Contact link is hidden and no address is shown.
-export const CONTACT_EMAIL = '';
+// Public contact address (Cloudflare Email Routing forwards it). Clear it to hide the Contact page links.
+export const CONTACT_EMAIL = 'contact@thefaultcode.com';
