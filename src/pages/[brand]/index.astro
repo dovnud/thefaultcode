@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content';
+export async function getStaticPaths(){ const all=await getCollection('codes');
+  const slugs=[...new Set(all.map(c=>c.data.brandSlug))];
+  return slugs.map(s=>({params:{brand:s},props:{codes:all.filter(c=>c.data.brandSlug===s)}})); }
+const { codes } = Astro.props; const brand = codes[0].data.brand;
+---
+<Base title={`${brand} Error Codes`} description={`All ${brand} HVAC error and flash codes explained.`}>
+<h1>{brand} Error Codes</h1><ul>{codes.map(c=><li><a href={`/${c.data.brandSlug}/${c.data.codeSlug}/`}>{c.data.equipmentType} {c.data.code}</a> – {c.data.meaning}</li>)}</ul></Base>

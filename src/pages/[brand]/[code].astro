@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content'; import { affiliates } from '../../config/affiliates';
+export async function getStaticPaths(){ return (await getCollection('codes')).map(c=>({params:{brand:c.data.brandSlug,code:c.data.codeSlug},props:{e:c.data}})); }
+const { e } = Astro.props;
+const title = `${e.brand} ${e.equipmentType.replace('-',' ')} ${e.code}: Meaning & Fix`;
+const jsonld = [{ '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
+  {'@type':'Question',name:`What does ${e.brand} ${e.code} mean?`,acceptedAnswer:{'@type':'Answer',text:e.meaning}},
+  {'@type':'Question',name:`What causes ${e.brand} ${e.code}?`,acceptedAnswer:{'@type':'Answer',text:e.causes.join('; ')}}]},
+  ...(!e.proNeeded && e.diySteps.length ? [{'@context':'https://schema.org','@type':'HowTo',name:`How to fix ${e.brand} ${e.code}`,
+    step:e.diySteps.map((t,i)=>({'@type':'HowToStep',position:i+1,text:t}))}] : [])];
+---
+<Base title={title} description={`${e.brand} ${e.code}: ${e.meaning}`.slice(0,155)} jsonld={jsonld}>
+{e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
+<h1>{title}</h1><p><strong>Display/flash pattern:</strong> {e.displayPattern}</p>
+<h2>Meaning</h2><p>{e.meaning}</p>
+<h2>Likely causes</h2><ul>{e.causes.map(c=><li>{c}</li>)}</ul>
+<p class="warn"><strong>Safety:</strong> {e.safetyNote}</p>
+<h2>Safe DIY steps</h2><ol>{e.diySteps.map(s=><li>{s}</li>)}</ol>
+<h2>When to call a pro</h2><p>{e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.'}</p>
+{affiliates.proReferral.enabled && <p><a rel="sponsored nofollow" href={affiliates.proReferral.url()}>{affiliates.proReferral.label}</a></p>}
+{e.parts.length>0 && <><h2>Related parts</h2><ul>{e.parts.map(p=><li><a rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)}>{p.name}</a></li>)}</ul><small>{affiliates.disclosure}</small></>}
+{e.sourceManualUrl && <p>Source: <a href={e.sourceManualUrl}>manufacturer manual</a></p>}
+<p><small>Updated {e.updated}</small></p></Base>

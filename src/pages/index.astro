@@ -1,0 +1,7 @@
+---
+import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content';
+const codes = await getCollection('codes');
+const brands = [...new Map(codes.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort();
+---
+<Base title="HVAC Error Code Lookup" description="Look up furnace, AC, heat pump and mini-split error codes by brand.">
+<h1>HVAC Error Code Lookup</h1><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n}</a></li>)}</ul></Base>
