@@ -1,23 +1,44 @@
 ---
 import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content'; import { affiliates } from '../../config/affiliates';
-export async function getStaticPaths(){ return (await getCollection('codes')).map(c=>({params:{brand:c.data.brandSlug,code:c.data.codeSlug},props:{e:c.data}})); }
-const { e } = Astro.props;
-const title = `${e.brand} ${e.equipmentType.replace('-',' ')} ${e.code}: Meaning & Fix`;
+export async function getStaticPaths(){ const all = await getCollection('codes');
+  return all.map(c=>({params:{brand:c.data.brandSlug,code:c.data.codeSlug},props:{e:c.data,related:all.map(r=>r.data).filter(r=>r.codeSlug!==c.data.codeSlug||r.brandSlug!==c.data.brandSlug).filter(r=>r.brandSlug===c.data.brandSlug||r.equipmentType===c.data.equipmentType).slice(0,6)}})); }
+const { e, related } = Astro.props;
+const equip = e.equipmentType.replace('-',' ');
+const title = `${e.brand} ${equip} ${e.code}: Meaning & Fix`;
+const h1 = `${e.brand} ${e.code}: ${e.meaning.replace(/^EXAMPLE:\s*/,'').replace(/\.$/,'')}`;
+const sevLabel = {low:'Low severity',moderate:'Moderate severity',high:'High severity'}[e.severity];
 const jsonld = [{ '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
   {'@type':'Question',name:`What does ${e.brand} ${e.code} mean?`,acceptedAnswer:{'@type':'Answer',text:e.meaning}},
   {'@type':'Question',name:`What causes ${e.brand} ${e.code}?`,acceptedAnswer:{'@type':'Answer',text:e.causes.join('; ')}}]},
   ...(!e.proNeeded && e.diySteps.length ? [{'@context':'https://schema.org','@type':'HowTo',name:`How to fix ${e.brand} ${e.code}`,
     step:e.diySteps.map((t,i)=>({'@type':'HowToStep',position:i+1,text:t}))}] : [])];
+const mapped = new Set(e.parts.filter(p=>p.cause!==undefined).map(p=>p.name));
+const loose = e.parts.filter(p=>!mapped.has(p.name));
+const pro = affiliates.proReferral;
 ---
 <Base title={title} description={`${e.brand} ${e.code}: ${e.meaning}`.slice(0,155)} jsonld={jsonld}>
-{e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
-<h1>{title}</h1><p><strong>Display/flash pattern:</strong> {e.displayPattern}</p>
-<h2>Meaning</h2><p>{e.meaning}</p>
-<h2>Likely causes</h2><ul>{e.causes.map(c=><li>{c}</li>)}</ul>
-<p class="warn"><strong>Safety:</strong> {e.safetyNote}</p>
-<h2>Safe DIY steps</h2><ol>{e.diySteps.map(s=><li>{s}</li>)}</ol>
-<h2>When to call a pro</h2><p>{e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.'}</p>
-{affiliates.proReferral.enabled && <p><a rel="sponsored nofollow" href={affiliates.proReferral.url()}>{affiliates.proReferral.label}</a></p>}
-{e.parts.length>0 && <><h2>Related parts</h2><ul>{e.parts.map(p=><li><a rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)}>{p.name}</a></li>)}</ul><small>{affiliates.disclosure}</small></>}
-{e.sourceManualUrl && <p>Source: <a href={e.sourceManualUrl}>manufacturer manual</a></p>}
-<p><small>Updated {e.updated}</small></p></Base>
+<div class="wrap page">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={`/${e.brandSlug}/`}>{e.brand}</a></li><li style="text-transform:capitalize">{equip}</li><li aria-current="page">{e.code}</li></ol></nav>
+{e.example && <p class="example"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
+<h1>{h1}</h1>
+<p class="meta">Display / flash pattern: {e.displayPattern} · Updated {e.updated}</p>
+<section class="result" aria-label="Quick answer">
+ <div class="badges"><span class={`badge sev-${e.severity}`}>{sevLabel}</span><span class={`badge ${e.proNeeded?'v-pro':'v-diy'}`}>{e.proNeeded?'Call a pro':'DIY-friendly'}</span></div>
+ <p class="lead">{e.meaning.replace(/^EXAMPLE:\s*/,'')}</p>
+ {pro.enabled && <a class="btn" rel="sponsored nofollow" href={pro.url()}>Call a pro</a>}
+</section>
+<h2 class="sec" style="margin-top:28px">Likely causes</h2>
+<ol class="causes">{e.causes.map((c,i)=><li><span class="t"><span class="n">{i+1}</span>{c}</span>
+ <span class="b">{e.parts.filter(p=>p.cause===i).map(p=><a class="btn alt sm" rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)}>Shop {p.name}</a>)}</span></li>)}</ol>
+{loose.length>0 && <p style="margin-top:12px"><strong>Parts that may help:</strong> {loose.map((p,i)=><>{i>0&&', '}<a rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)}>{p.name}</a></>)}</p>}
+<h2 class="sec" style="margin-top:28px">Safe DIY steps</h2>
+<p class="safety"><strong>Safety:</strong> {e.safetyNote}</p>
+<ol class="steps">{e.diySteps.map(s=><li>{s}</li>)}</ol>
+<h2 class="sec" style="margin-top:28px">When to call a pro</h2>
+<div class="cta"><p>{e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.'}</p>
+{pro.enabled && <a class="btn" rel="sponsored nofollow" href={pro.url()}>{pro.label}</a>}</div>
+{related.length>0 && <><h2 class="sec" style="margin-top:28px">Related codes</h2>
+<div class="list">{related.map(r=><a class="card" href={`/${r.brandSlug}/${r.codeSlug}/`}><strong>{r.brand} {r.code}</strong><span>{r.meaning}</span></a>)}</div></>}
+<p class="meta" style="margin-top:28px">{e.sourceManualUrl && <><a href={e.sourceManualUrl}>Source: manufacturer manual</a> · </>}Last updated {e.updated}<br/>{affiliates.disclosure}</p>
+</div>
+</Base>

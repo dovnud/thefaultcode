@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+const idx = (await getCollection('codes')).map(c=>({t:`${c.data.brand} ${c.data.code}`,u:`/${c.data.brandSlug}/${c.data.codeSlug}/`,m:c.data.meaning,k:`${c.data.brand} ${c.data.code} ${c.data.displayPattern} ${c.data.equipmentType}`.toLowerCase()}));
+---
+<div class="search" role="search">
+<label for="q" class="skip">Search error codes</label>
+<input id="q" type="search" autocomplete="off" placeholder="Enter brand + code, e.g. Goodman 3 flashes" aria-controls="res"/>
+<ul class="results" id="res" hidden></ul>
+</div>
+<script is:inline define:vars={{idx}}>
+const q=document.getElementById('q'),r=document.getElementById('res');
+q.addEventListener('input',()=>{const w=q.value.toLowerCase().split(/\s+/).filter(Boolean);
+ const hits=w.length?idx.filter(i=>w.every(x=>i.k.includes(x))).slice(0,6):[];
+ r.innerHTML='';hits.forEach(i=>{const li=document.createElement('li'),a=document.createElement('a');a.href=i.u;a.textContent=i.t;const s=document.createElement('small');s.textContent=i.m;a.append(s);li.append(a);r.append(li)});
+ if(w.length&&!hits.length){const li=document.createElement('li');li.style.padding='10px 12px';li.textContent='No match yet. Try just the brand.';r.append(li)}
+ r.hidden=!w.length;});
+</script>

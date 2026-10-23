@@ -6,4 +6,7 @@ export async function getStaticPaths(){ const all=await getCollection('codes');
 const { codes } = Astro.props; const brand = codes[0].data.brand;
 ---
 <Base title={`${brand} Error Codes`} description={`All ${brand} HVAC error and flash codes explained.`}>
-<h1>{brand} Error Codes</h1><ul>{codes.map(c=><li><a href={`/${c.data.brandSlug}/${c.data.codeSlug}/`}>{c.data.equipmentType} {c.data.code}</a> – {c.data.meaning}</li>)}</ul></Base>
+<div class="wrap page"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>{brand}</li></ol></nav>
+<h1>{brand} Error Codes</h1><p class="meta">{codes.length} code{codes.length>1?'s':''} explained</p>
+<div class="list">{codes.map(c=><a class="card" href={`/${c.data.brandSlug}/${c.data.codeSlug}/`}><strong>{c.data.code}</strong><span>{c.data.meaning}</span></a>)}</div></div>
+</Base>

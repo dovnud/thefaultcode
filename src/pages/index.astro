@@ -1,7 +1,15 @@
 ---
-import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro'; import Search from '../components/Search.astro'; import { getCollection } from 'astro:content';
 const codes = await getCollection('codes');
 const brands = [...new Map(codes.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort();
+const count = s=>codes.filter(c=>c.data.brandSlug===s).length;
+const popular = codes.slice(0,12);
 ---
 <Base title="HVAC Error Code Lookup" description="Look up furnace, AC, heat pump and mini-split error codes by brand.">
-<h1>HVAC Error Code Lookup</h1><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n}</a></li>)}</ul></Base>
+<section class="hero"><div class="wrap"><h1>What does your error code mean?</h1>
+<p>Get the plain-English meaning, likely causes and whether it's a DIY fix.</p><Search/></div></section>
+<section class="block" id="brands"><div class="wrap"><h2 class="sec">Shop by brand</h2>
+<div class="tiles">{brands.map(([s,n])=><a class="tile" href={`/${s}/`}>{n}<small>{count(s)} code{count(s)>1?'s':''}</small></a>)}</div></div></section>
+<section class="block" id="popular"><div class="wrap"><h2 class="sec">Popular codes</h2>
+<div class="list">{popular.map(c=><a class="card" href={`/${c.data.brandSlug}/${c.data.codeSlug}/`}><strong>{c.data.brand} {c.data.code}</strong><span>{c.data.meaning}</span></a>)}</div></div></section>
+</Base>
