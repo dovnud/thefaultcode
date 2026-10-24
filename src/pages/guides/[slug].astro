@@ -10,7 +10,7 @@ const jsonld = [
  {'@context':'https://schema.org','@type':'FAQPage',mainEntity:d.faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))},
  {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Guides',item:'https://thefaultcode.com/guides/'},{'@type':'ListItem',position:3,name:d.title,item:url}]}];
 ---
-<Base title={`${d.title} | The Fault Code`} description={d.description} jsonld={jsonld} ogType="article">
+<Base title={d.title.length>52?d.title:`${d.title} | The Fault Code`} description={d.description} jsonld={jsonld} ogType="article">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
 

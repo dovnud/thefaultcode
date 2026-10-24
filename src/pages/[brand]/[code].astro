@@ -7,6 +7,9 @@ const eq = e.equipmentType.replace('-',' ');
 const title = `${e.brand} ${eq} ${e.code}: Meaning & Fix`;
 const h1 = `${e.brand} ${e.code}: ${e.meaning.replace(/\.$/,'')}`;
 const site='https://thefaultcode.com';
+const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
+const base=`${e.brand} ${eq} code ${e.code}: ${e.meaning.replace(/\.$/,'')}.`;
+const desc=base.length>=110?clip(base,158):clip(`${base} Likely causes, safe DIY checks and when to call a pro.`,158);
 const jsonld = [{ '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
   {'@type':'Question',name:`What does ${e.brand} ${e.code} mean?`,acceptedAnswer:{'@type':'Answer',text:e.meaning}},
   {'@type':'Question',name:`What causes ${e.brand} ${e.code}?`,acceptedAnswer:{'@type':'Answer',text:e.causes.join('; ')}}]},
@@ -19,7 +22,7 @@ const shop = e.parts.map(p=>({...p,href:affiliates.amazon.url(p.partKey)}));
 const hasAmazon = shop.some(p=>p.href);
 const hasAff = hasAmazon || pro.enabled;
 ---
-<Base affLinks={hasAff} amazon={hasAmazon} title={title} description={`${e.brand} ${e.code}: ${e.meaning}`.slice(0,155)} jsonld={jsonld}>
+<Base affLinks={hasAff} amazon={hasAmazon} title={title} description={desc} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={`/${e.brandSlug}/`}>{e.brand} codes</a></li><li aria-current="page">{e.code}</li></ol></nav>
 {e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}

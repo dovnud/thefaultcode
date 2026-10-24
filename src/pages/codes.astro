@@ -4,7 +4,7 @@ const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c
 const brands = [...new Map(codes.map(c=>[c.brandSlug,c.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
 const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:'All furnace error codes',url:'https://thefaultcode.com/codes/'};
 ---
-<Base title="All Furnace Error Codes: Goodman, Trane, Rheem, Carrier, Lennox | The Fault Code" description={`Browse all ${codes.length} furnace error and flash codes from Goodman, Trane, Rheem, Carrier and Lennox manuals, with plain-English meanings.`} jsonld={jsonld}>
+<Base title="All Furnace Error Codes | The Fault Code" description={`Browse all ${codes.length} furnace error and flash codes from Goodman, Trane, Rheem, Carrier and Lennox manuals, with plain-English meanings.`} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">All codes</li></ol></nav>
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>All furnace error codes</h1><p>Every code on the site, grouped by brand. Each one comes from a named manufacturer manual. Filter by brand, code or a word from the meaning.</p></div>

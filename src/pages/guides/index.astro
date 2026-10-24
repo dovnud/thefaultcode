@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content';
 const guides = (await getCollection('guides')).sort((a,b)=>a.data.title.localeCompare(b.data.title));
 ---
-<Base title="Furnace Guides | The Fault Code" description="Plain-English furnace guides: reading flash codes, resetting a furnace, short cycling, flame sensors, pressure switches and more, sourced from manufacturer manuals.">
+<Base title="Furnace Guides | The Fault Code" description="Plain-English furnace guides: reading flash codes, resetting a furnace, short cycling, flame sensors, pressure switches and more.">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Guides</li></ol></nav>
 <div class="page-h"><h1>Furnace guides</h1><p>Answers to common gas furnace questions, based on manufacturer manuals and government safety and energy sources.</p></div>
