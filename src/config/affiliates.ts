@@ -19,8 +19,8 @@ export function cjLink(adId: string, fallback: string): string {
 // Other Angi AdIDs: 17142830 = HVAC & Air Conditioning, 17141197 = Homepage.
 export const ANGI_AD_ID = '17142838';
 
-// Amazon Associates. ONE constant: change the tag here (e.g. to 'thefaultcode-20') and every link updates.
-export const AMAZON_TAG = 'thingsvegas-20';
+// Amazon Associates. ONE constant: change the tag here (dedicated Associates tracking ID for this site) and every link updates.
+export const AMAZON_TAG = 'thefaultcode-20';
 export const AMAZON_STATEMENT = 'As an Amazon Associate I earn from qualifying purchases.';
 
 /** Amazon search link for a generic part name (no part numbers, no ASINs). */
