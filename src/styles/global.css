@@ -257,3 +257,8 @@ a.card:hover{color:var(--ink);transform:translate(-2px,-2px);box-shadow:4px 4px 
 .search .hint{margin-top:14px}
 @media (max-width:600px){.search .box .go{padding:0 12px}}
 .btn-sm{min-height:44px;padding:6px 12px}
+.wrap.nf{padding:56px 16px 64px}
+.nf-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:22px 0 18px}
+.nf-brands{list-style:none;padding:0;margin:0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.nf-brands .btn{min-height:44px}
+.nf .led-win .led{font-size:clamp(3rem,18vw,5rem)}
