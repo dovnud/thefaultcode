@@ -28,7 +28,7 @@ const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault 
 </div>
 <figure class="panel" style="margin:0" aria-labelledby="fig1">
 <span class="screws" aria-hidden="true"></span>
-<div class="led-win"><div class="led" aria-hidden="true">{fig.code}</div><div class="led-row" aria-hidden="true"><span class="dot on"></span><span class="dot"></span><span class="dot g on"></span></div></div>
+<div class="led-win" id="ledwin" data-code={fig.code}><div class="sweep" aria-hidden="true"></div><div class="led led-live" aria-hidden="true"><span class="ghost">{fig.code.replace(/[A-Za-z0-9]/g,'8')}</span>{[...fig.code].map((ch,i)=><span class={`dg d${i%4}`}>{ch}</span>)}</div><div class="led-row" aria-hidden="true"><span class="dot r" id="d-r"></span><span class="dot a" id="d-a"></span><span class="dot g on" id="d-g"></span></div></div>
 <figcaption class="fig" id="fig1"><span>Fig. 01 · {fig.brand} status LED</span><a href={`/${fig.brandSlug}/${fig.codeSlug}/`}>{fig.brand} {fig.code}: {fig.meaning.split(':')[0]} →</a></figcaption>
 </figure>
 </div></section>
@@ -60,3 +60,39 @@ r.innerHTML=hits.length?hits.map(([,x])=>`<li><a href="${x.u}"><b>${esc(x.b)} ${
 q.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=r.querySelector('a');if(a)location.href=a.href}})})();
 </script>
 </Base>
+
+<script is:inline>
+(function(){
+var w=document.getElementById('ledwin');if(!w)return;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.getElementById('d-r').classList.add('on');return;}
+w.classList.add('live');
+var r=document.getElementById('d-r'),a=document.getElementById('d-a'),g=document.getElementById('d-g'),digs=w.querySelectorAll('.dg');
+var code=w.getAttribute('data-code')||'';var m=code.match(/^(\d)(\d)$/);
+var seq=m?[+m[1],+m[2]]:[3,3];
+var sleep=function(t){return new Promise(function(x){setTimeout(x,t)})};
+async function blink(n,idx){
+ for(var i=0;i<n;i++){r.classList.add('on');if(digs[idx])digs[idx].classList.add('hot');await sleep(260);r.classList.remove('on');if(digs[idx])digs[idx].classList.remove('hot');await sleep(240);}
+}
+async function loop(){
+ while(true){
+  a.classList.add('on');await sleep(120);a.classList.remove('on');
+  await blink(seq[0],0);await sleep(900);
+  await blink(seq[1],1);await sleep(300);
+  a.classList.add('on');await sleep(80);a.classList.remove('on');await sleep(40);a.classList.add('on');await sleep(80);a.classList.remove('on');
+  await sleep(1600);
+ }
+}
+loop();
+/* random power glitch: whole display stutters and one digit drops out */
+(function glitch(){
+ setTimeout(function(){
+  w.classList.add('glitch');
+  var d=digs[Math.floor(Math.random()*digs.length)];if(d)d.classList.add('dead');
+  setTimeout(function(){w.classList.remove('glitch');if(d)d.classList.remove('dead');},260+Math.random()*340);
+  glitch();
+ },1800+Math.random()*3200);
+})();
+/* green heartbeat */
+setInterval(function(){g.classList.toggle('dim')},1100);
+})();
+</script>
