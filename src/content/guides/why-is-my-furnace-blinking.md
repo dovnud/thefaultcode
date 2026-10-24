@@ -33,7 +33,7 @@
   },
   {
    "name": "Rheem R96V installation instructions (92-24161-124-03)",
-   "url": "https://pts.myrheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf"
+   "url": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf"
   },
   {
    "name": "NFPA carbon monoxide safety",

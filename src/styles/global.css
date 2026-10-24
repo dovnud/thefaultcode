@@ -263,3 +263,17 @@ a.card:hover{color:var(--ink);transform:translate(-2px,-2px);box-shadow:4px 4px 
 .nf-brands .btn{min-height:44px}
 .nf .led-win .led{font-size:clamp(3rem,18vw,5rem)}
 .fig a{display:inline-flex;align-items:center;min-height:44px}
+/* Badges that link (in-page jump) vs static labels */
+a.badge{min-height:44px;padding:8px 14px;text-decoration:none;cursor:pointer;box-shadow:2px 2px 0 currentColor;transition:transform .12s,box-shadow .12s}
+a.badge:hover{transform:translate(1px,1px);box-shadow:1px 1px 0 currentColor}
+a.badge:focus-visible{outline:3px solid var(--led,#ff7a1a);outline-offset:3px}
+.lbl-static{display:inline-flex;align-items:center;min-height:44px;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);cursor:default}
+.lbl-static:before{content:"Type:";margin-right:6px;opacity:.7}
+.tech{border:0;padding:0;margin-right:6px;background:none;cursor:default}
+.tech:after{content:":"}
+#call-a-pro,#diy-steps,#technician{scroll-margin-top:24px}
+.side .disc{margin:10px 0 0}
+.brand-group>h2 a{display:inline-flex;align-items:center;min-height:44px}
+.meta a{display:flex;align-items:center;min-height:44px}
+.parts li>a:only-child{display:flex;align-items:center;flex:1;min-height:44px}
+.parts li:has(>a:only-child){padding:0}

@@ -45,6 +45,17 @@ export const AMAZON_PARTS: Record<string, string> = {
   'thermostat': 'furnace thermostat',
 };
 
+// Official manufacturer dealer/contractor locators (NOT affiliate links, plain links with rel="noopener").
+// Used as the fallback "find a pro" button when affiliates.proReferral.enabled is false.
+// Each URL was verified to return 200 in a browser-like GET on 2026-10-24. Remove a brand's entry to hide its button.
+export const DEALER_LOCATORS: Record<string, string> = {
+  goodman: 'https://www.goodmanmfg.com/support/find-a-dealer',
+  trane: 'https://www.trane.com/residential/en/dealer-locator/',
+  rheem: 'https://www.rheem.com/find-a-pro/',
+  carrier: 'https://www.carrier.com/us/en/residential/find-a-dealer/',
+  lennox: 'https://www.lennox.com/residential/locate/',
+};
+
 export const affiliates = {
   // Parts links: Amazon Associates. RepairClinic is NOT on CJ, so it is not used.
   // Set enabled:false to hide every "Shop on Amazon" button and the Amazon disclosure.
