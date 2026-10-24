@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-h"><div class="wrap">
-<a class="logo" href="/" aria-label="The Fault Code home"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a>
+<a class="logo" href="/"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a>
 <nav class="nav" aria-label="Main">{brands.map(([s,n])=><a href={`/${s}/`}>{n}</a>)}<a href="/guides/" class="hi">Guides</a>{CONTACT_EMAIL && <a href="/contact/">Contact</a>}</nav>
 </div></header><div class="strip" aria-hidden="true"></div>
 <main id="main"><slot/></main>
