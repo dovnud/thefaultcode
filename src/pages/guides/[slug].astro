@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro'; import { getCollection, render } from 'astro:content';
+export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
+const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
+const url = `https://thefaultcode.com/guides/${g.id}/`;
+const codes = (await getCollection('codes')).filter(c=>!c.data.example && d.codes.includes(`${c.data.brandSlug}/${c.data.codeSlug}`)).map(c=>c.data);
+const others = (await getCollection('guides')).filter(o=>o.id!==g.id).slice(0,4);
+const jsonld = [
+ {'@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,dateModified:d.updated,author:{'@type':'Organization',name:'The Fault Code editorial team'},publisher:{'@type':'Organization',name:'The Fault Code',url:'https://thefaultcode.com/'},mainEntityOfPage:url},
+ {'@context':'https://schema.org','@type':'FAQPage',mainEntity:d.faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))},
+ {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Guides',item:'https://thefaultcode.com/guides/'},{'@type':'ListItem',position:3,name:d.title,item:url}]}];
+---
+<Base title={`${d.title} | The Fault Code`} description={d.description} jsonld={jsonld}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
+<p class="affnote">We may earn a commission from links on this page. <a href="/affiliate-disclosure/">Learn more</a></p>
+<div class="page-h"><h1>{d.title}</h1><p>By The Fault Code editorial team · Updated {d.updated}</p></div>
+<div class="layout"><article>
+<div class="card result"><div class="lbl">Short answer</div><p class="meaning" style="font-weight:600;font-size:1.08rem">{d.answer}</p></div>
+<div class="card sec guide"><Content /></div>
+<section class="card sec guide"><h2>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
+<section class="card sec guide"><h2>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul></section>
+</article>
+<aside class="side">
+{codes.length>0 && <div class="card box"><h3>Related codes</h3><ul class="parts">{codes.map(c=><li><a href={`/${c.brandSlug}/${c.codeSlug}/`}>{c.brand} {c.code}</a></li>)}</ul></div>}
+<div class="card box"><h3>More guides</h3><ul class="parts">{others.map(o=><li><a href={`/guides/${o.id}/`}>{o.data.title}</a></li>)}</ul></div>
+</aside></div>
+</div>
+</Base>
