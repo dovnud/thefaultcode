@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content'; import { affiliates } from '../../config/affiliates';
+import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content'; import { affiliates, affiliatesActive } from '../../config/affiliates';
 export async function getStaticPaths(){ const all=(await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
   return all.map(e=>({params:{brand:e.brandSlug,code:e.codeSlug},props:{e,related:all.filter(o=>o.brandSlug===e.brandSlug&&o.codeSlug!==e.codeSlug).slice(0,6)}})); }
 const { e, related } = Astro.props;
@@ -20,7 +20,7 @@ const pro = affiliates.proReferral;
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={`/${e.brandSlug}/`}>{e.brand}</a></li><li><a href={`/${e.brandSlug}/`} style="text-transform:capitalize">{eq}</a></li><li aria-current="page">{e.code}</li></ol></nav>
 {e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
-<p class="affnote">We may earn a commission from links on this page. <a href="/affiliate-disclosure/">Learn more about affiliate links</a></p>
+{affiliatesActive && <p class="affnote">We may earn a commission from links on this page. <a href="/affiliate-disclosure/">Learn more about affiliate links</a></p>}
 <div class="page-h"><h1>{h1}</h1><p class="meta-l">Ref. {e.brandSlug.toUpperCase()}-{e.codeSlug.toUpperCase()} · From the {e.brand} {eq} manual · Updated {e.updated}</p></div>
 <div class="layout">
 <article>
@@ -31,7 +31,7 @@ const pro = affiliates.proReferral;
 <p class="meaning">{e.meaning}</p>
 <div class="badges">{e.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}<span class="badge b-n">{eq}</span></div>
 <div class="pattern"><strong>How it shows:</strong> {e.displayPattern}</div>
-{pro.enabled && <p style="margin:16px 0 0"><a class="btn btn-p" rel="sponsored nofollow" href={pro.url()}>{pro.label} →</a></p>}
+{pro.enabled && <p style="margin:16px 0 0"><a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a></p>}
 </div></div>
 <section class="card sec" data-reveal><h2><span class="num">§1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
 <section class="card sec" data-reveal><h2><span class="num">§2</span>Safe DIY steps</h2>
@@ -39,13 +39,13 @@ const pro = affiliates.proReferral;
 <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}</div></div></section>
 <section class="card sec procard" data-critical><h2><span class="num">§3</span>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.')}</p>
-{pro.enabled && <a class="btn btn-p" rel="sponsored nofollow" href={pro.url()}>{pro.label} →</a>}</section>
+{pro.enabled && <a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a>}</section>
 {related.length>0 && <section class="sec"><h2 style="font-size:1.9rem;border-bottom:1px solid var(--rule2);padding-bottom:8px;display:flex;gap:12px;align-items:baseline"><span class="num">§4</span>Other {e.brand} codes</h2><div class="grid g3">{related.map(c=><a class="card code-card" data-reveal href={`/${c.brandSlug}/${c.codeSlug}/`}><span class="cc">{c.code}</span><span class="cb">{c.brand}</span><p class="cm">{c.meaning}</p></a>)}</div></section>}
 </article>
 <aside class="side" data-critical>
-{e.parts.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts for this code</h2><p>Parts mentioned in the causes above. Match the part number to your model before buying.</p>
-<ul class="parts">{e.parts.map(p=><li><span>{p.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)} aria-label={`Shop ${p.name}`}>Shop</a></li>)}</ul><p class="disc">{affiliates.disclosure}</p></div>}
-{pro.enabled && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Need a technician?</h2><p>Gas, venting, wiring and control-board repairs should be done by a licensed HVAC pro.</p><a class="btn btn-p btn-block" rel="sponsored nofollow" href={pro.url()}>{pro.label}</a></div>}
+{e.parts.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts mentioned</h2><p>Parts named in the causes above. Match the part number to your model's manual before buying anything.</p>
+<ul class="parts">{e.parts.map(p=><li><span>{p.name}</span>{affiliates.parts.enabled && affiliates.parts.url(p.searchTerm) && <a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" href={affiliates.parts.url(p.searchTerm)} aria-label={`Shop ${p.name}`}>Shop</a>}</li>)}</ul>{affiliates.parts.enabled && <p class="disc">{affiliates.disclosure}</p>}</div>}
+<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Need a technician?</h2><p>Gas, venting, wiring and control-board repairs should be done by a licensed HVAC pro. Your gas utility or the manufacturer's dealer locator are good places to start.</p>{pro.enabled && <a class="btn btn-p btn-block" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label}</a>}</div>
 <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Source</h2><div class="meta">{e.sourceManualUrl && <a href={e.sourceManualUrl} rel="noopener">{e.brand} manufacturer manual (PDF) ↗</a>}<span class="mono" style="font-size:.8rem">Last updated {e.updated}</span><a href="/affiliate-disclosure/">Affiliate disclosure</a></div></div>
 </aside>
 </div>
