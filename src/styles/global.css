@@ -262,3 +262,4 @@ a.card:hover{color:var(--ink);transform:translate(-2px,-2px);box-shadow:4px 4px 
 .nf-brands{list-style:none;padding:0;margin:0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .nf-brands .btn{min-height:44px}
 .nf .led-win .led{font-size:clamp(3rem,18vw,5rem)}
+.fig a{display:inline-flex;align-items:center;min-height:44px}
