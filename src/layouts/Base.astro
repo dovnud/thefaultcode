@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { CONTACT_EMAIL } from '../config/site';
-const { title, description, jsonld } = Astro.props;
+const { title, description, jsonld, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const all = (await getCollection('codes')).filter(c=>!c.data.example);
 const brands = [...new Map(all.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
@@ -10,7 +10,7 @@ const year = new Date().getFullYear();
 ---
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
+<title>{title}</title><meta name="description" content={description}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}
 <meta name="theme-color" content="#0b1f3a"/>
 <meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta name="twitter:card" content="summary_large_image"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
