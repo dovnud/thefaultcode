@@ -5,7 +5,6 @@ const brands = [...new Map(codes.map(c=>[c.brandSlug,c.brand])).entries()].sort(
 const count = (s)=>codes.filter(c=>c.brandSlug===s).length;
 const featured = brands.flatMap(([s])=>codes.filter(c=>c.brandSlug===s).slice(0,2));
 featured.splice(9);
-const index = codes.map(c=>({b:c.brand,c:c.code,m:c.meaning,u:`/${c.brandSlug}/${c.codeSlug}/`,t:c.equipmentType}));
 const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33');
 const guides = (await getCollection('guides')).slice(0,3);
 const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/'};
@@ -18,12 +17,12 @@ const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault 
 <p class="kicker">Gas furnace fault codes · {brands.length} brands</p>
 <h1>The light is blinking. <em>Here's what the board is saying.</em></h1>
 <p class="lead">Type the code from your furnace's status light or display. You get the manufacturer's meaning, the likely causes, the checks that are safe for a homeowner, and the point where it becomes a job for a licensed technician.</p>
-<div class="search" role="search">
+<form class="search" data-search role="search" aria-label="Code lookup" action="/codes/" method="get">
 <label for="q">Code lookup</label>
-<div class="box"><span class="pre" aria-hidden="true">CODE&gt;</span><input id="q" type="search" autocomplete="off" placeholder="Brand + code, e.g. Goodman EE3" /></div>
-<ul id="res" class="results" aria-live="polite"></ul>
+<div class="box"><span class="pre" aria-hidden="true">CODE&gt;</span><input id="q" name="q" type="search" data-search-input role="combobox" aria-expanded="false" aria-controls="res" aria-autocomplete="list" autocomplete="off" enterkeyhint="search" placeholder="Brand + code, e.g. Goodman EE3" /><button class="go" type="submit">Look up</button></div>
+<ul id="res" class="results" role="listbox" aria-label="Matching codes" hidden></ul>
 <p class="hint">Try <a href="/carrier/33/">Carrier 33</a> · <a href="/trane/e2-1/">Trane E2.1</a> · <a href="/rheem/11/">Rheem 11</a> · <a href="/guides/how-to-read-furnace-led-flash-codes/">How to read a flash code</a></p>
-</div>
+</form>
 <div class="stats"><div><strong><StatCounter client:visible value={codes.length} /></strong><span class="l">Codes verified</span></div><div><strong><StatCounter client:visible value={brands.length} /></strong><span class="l">Brands</span></div><div><strong>0</strong><span class="l">Guessed codes</span></div></div>
 </div>
 <figure class="panel" style="margin:0" aria-labelledby="fig1">
@@ -35,8 +34,9 @@ const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault 
 <div class="wrap">
 <section class="block"><div class="sec-h"><span class="no">§01</span><h2>Browse by brand</h2><p>Each brand's codes come from one named manual, linked on every page.</p></div>
 <div class="grid g5">{brands.map(([s,n],i)=><a class="card brand-card" data-reveal href={`/${s}/`}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{n}</div><div class="bc">{count(s)} furnace codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div></section>
-<section class="block"><div class="sec-h"><span class="no">§02</span><h2>Codes on file</h2><p>A sample from each brand. Search above for the rest.</p></div>
-<div class="grid g3">{featured.map(c=><a class="card code-card" data-reveal href={`/${c.brandSlug}/${c.codeSlug}/`}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {c.equipmentType}</span><p class="cm">{c.meaning}</p></a>)}</div></section>
+<section class="block"><div class="sec-h"><span class="no">§02</span><h2>Codes on file</h2><p>A sample from each brand. Search above, or browse the full list.</p></div>
+<div class="grid g3">{featured.map(c=><a class="card code-card" data-reveal href={`/${c.brandSlug}/${c.codeSlug}/`}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {c.equipmentType}</span><p class="cm">{c.meaning}</p></a>)}</div>
+<p style="margin-top:14px"><a href="/codes/" class="btn btn-o">Browse all {codes.length} codes →</a></p></section>
 <section class="block"><div class="sec-h"><span class="no">§03</span><h2>Field guides</h2><p>The questions homeowners ask most, answered from manuals and DOE, ENERGY STAR and NFPA guidance.</p></div>
 <div class="grid g3">{guides.map(g=><a class="card" data-reveal href={`/guides/${g.id}/`}><div class="tag">Guide</div><h3 style="font-size:1.5rem;margin:6px 0">{g.data.title}</h3><p style="margin:0;color:var(--steel);font-size:.95rem">{g.data.description}</p></a>)}</div>
 <p style="margin-top:14px"><a href="/guides/" class="btn btn-o">All guides →</a></p></section>
@@ -49,15 +49,6 @@ const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault 
 <div class="gasbar"><span class="w">Smell gas?</span><span>Don't touch switches or use a phone inside. Leave the building now and call your gas utility from outside.</span></div>
 </section>
 </div>
-<script type="application/json" id="idx" set:html={JSON.stringify(index)}></script>
-<script is:inline>
-(()=>{const d=JSON.parse(document.getElementById('idx').textContent),q=document.getElementById('q'),r=document.getElementById('res');
-const n=s=>s.toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim(),k=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
-const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-q.addEventListener('input',()=>{const w=n(q.value).split(' ').filter(Boolean);if(!w.length){r.innerHTML='';return}
-const hits=d.map(x=>{const hay=n(x.b+' '+x.c+' '+x.m+' '+x.t),code=k(x.c);let s=0;for(const t of w){const kt=k(t);if(code===kt)s+=5;else if(code.startsWith(kt))s+=3;else if(hay.includes(t))s+=1;else return null}return[s,x]}).filter(Boolean).sort((a,b)=>b[0]-a[0]).slice(0,8);
-r.innerHTML=hits.length?hits.map(([,x])=>`<li><a href="${x.u}"><b>${esc(x.b)} ${esc(x.c)}</b><small>${esc(x.m)}</small></a></li>`).join(''):'<li style="padding:10px 12px;color:#475569">No matching code. Try just the brand name, or browse brands below.</li>'});
-q.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=r.querySelector('a');if(a)location.href=a.href}})})();
 </script>
 </Base>
 

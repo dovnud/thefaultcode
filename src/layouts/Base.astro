@@ -3,7 +3,7 @@ import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { CONTACT_EMAIL } from '../config/site';
 import { affiliatesActive } from '../config/affiliates';
-const { title, description, jsonld, noindex = false } = Astro.props;
+const { title, description, jsonld, noindex = false, ogType = 'website' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const all = (await getCollection('codes')).filter(c=>!c.data.example);
 const brands = [...new Map(all.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
@@ -12,25 +12,36 @@ const year = new Date().getFullYear();
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>{title}</title><meta name="description" content={description}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}
-<meta name="theme-color" content="#2a2a27"/><link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
-<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta name="twitter:card" content="summary_large_image"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta name="theme-color" content="#2a2a27"/><script is:inline>document.documentElement.classList.add("js")</script><link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content={ogType}/><meta property="og:locale" content="en_US"/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="The Fault Code: furnace error codes explained"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={new URL('/og.png', Astro.site).href}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-h"><div class="wrap">
-<a class="logo" href="/"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a>
-<nav class="nav" aria-label="Main">{brands.map(([s,n])=><a href={`/${s}/`}>{n}</a>)}<a href="/guides/" class="hi">Guides</a>{CONTACT_EMAIL && <a href="/contact/">Contact</a>}</nav>
+<a class="logo" href="/" aria-label="The Fault Code, home"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-ic" aria-hidden="true"></span><span class="menu-t">Menu</span></button>
+<div class="h-right" id="site-nav">
+<form class="h-search" data-search role="search" aria-label="Site search" action="/codes/" method="get"><label class="sr-only" for="hq">Search all furnace codes</label><input id="hq" name="q" type="search" data-search-input role="combobox" aria-expanded="false" aria-controls="hres" aria-autocomplete="list" autocomplete="off" placeholder="Search codes" /><button type="submit" aria-label="Search"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12.5 12.5L18 18" stroke="currentColor" stroke-width="2"/></svg></button><ul id="hres" class="results h-res" role="listbox" aria-label="Matching codes" hidden></ul></form>
+<nav class="nav" aria-label="Main">{brands.map(([s,n])=><a href={`/${s}/`} aria-current={Astro.url.pathname.startsWith(`/${s}/`)?'true':undefined}>{n}</a>)}<a href="/codes/" aria-current={Astro.url.pathname==='/codes/'?'page':undefined}>All codes</a><a href="/guides/" class="hi" aria-current={Astro.url.pathname.startsWith('/guides/')?'true':undefined}>Guides</a>{CONTACT_EMAIL && <a href="/contact/">Contact</a>}</nav>
+</div>
 </div></header><div class="strip" aria-hidden="true"></div>
 <main id="main"><slot/></main>
 <footer class="site-f"><div class="strip" aria-hidden="true"></div><div class="wrap">
 <div class="cols">
 <div><a class="logo" href="/"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a><p>Furnace error codes in plain English, taken from manufacturer installation and service manuals. Information only; always follow your unit's manual and local codes.</p></div>
 <div><h2>Brands</h2><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n} codes</a></li>)}</ul></div>
-<div><h2>Site</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
+<div><h2>Site</h2><ul><li><a href="/codes/">All codes</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
 </div>
 <div class="legal">{affiliatesActive && <p style="margin:0 0 6px">We may earn a commission from some links on this site. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.</p>}If you smell gas, leave the building and call your gas utility from outside. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
 </div></footer>
 <script>
+import '../scripts/search';
+const mb = document.querySelector('.menu-btn'), nav = document.getElementById('site-nav');
+if (mb && nav) {
+  const set = (o) => { nav.classList.toggle('open', o); mb.setAttribute('aria-expanded', String(o)); };
+  mb.addEventListener('click', () => set(mb.getAttribute('aria-expanded') !== 'true'));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { set(false); mb.focus(); } });
+}
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const go = () => import('../scripts/motion').then(m => m.start());
   'requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 2500 }) : setTimeout(go, 1200);
