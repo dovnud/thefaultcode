@@ -21,30 +21,32 @@ const pro = affiliates.proReferral;
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={`/${e.brandSlug}/`}>{e.brand}</a></li><li><a href={`/${e.brandSlug}/`} style="text-transform:capitalize">{eq}</a></li><li aria-current="page">{e.code}</li></ol></nav>
 {e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
 <p class="affnote">We may earn a commission from links on this page. <a href="/affiliate-disclosure/">Learn more</a></p>
-<div class="page-h"><h1>{h1}</h1><p>From the {e.brand} {eq} manual · Updated {e.updated}</p></div>
+<div class="page-h"><h1>{h1}</h1><p class="meta-l">Ref. {e.brandSlug.toUpperCase()}-{e.codeSlug.toUpperCase()} · From the {e.brand} {eq} manual · Updated {e.updated}</p></div>
 <div class="layout">
 <article>
-<div class="card result">
+<div class="card result" data-critical>
+<div class="readout"><span class="tag">Status code</span><span class="led">{e.code}</span><span class="tag">{e.brand}</span></div>
+<div class="body">
 <div class="lbl">What it means</div>
 <p class="meaning">{e.meaning}</p>
-<div class="badges">{e.proNeeded?<span class="badge b-pro">⚠ Call a pro</span>:<span class="badge b-diy">✓ Basic checks first</span>}<span class="badge b-n" style="text-transform:capitalize">{eq}</span></div>
+<div class="badges">{e.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}<span class="badge b-n">{eq}</span></div>
 <div class="pattern"><strong>How it shows:</strong> {e.displayPattern}</div>
 {pro.enabled && <p style="margin:16px 0 0"><a class="btn btn-p" rel="sponsored nofollow" href={pro.url()}>{pro.label} →</a></p>}
-</div>
-<section class="card sec"><h2><span class="num">1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
-<section class="card sec"><h2><span class="num">2</span>Safe DIY steps</h2>
+</div></div>
+<section class="card sec" data-reveal><h2><span class="num">§1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
+<section class="card sec" data-reveal><h2><span class="num">§2</span>Safe DIY steps</h2>
 <ol class="steps">{e.diySteps.map(s=>{const x=split(s);return <li>{x.tech&&<span class="tech">Technician</span>}{x.t}</li>})}</ol>
-<div class="safety" role="note"><strong>⚠ Safety first</strong>{e.safetyNote}</div></section>
-<section class="card sec procard"><h2><span class="num" style="background:var(--brand)">3</span>When to call a pro</h2>
+<div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}</div></div></section>
+<section class="card sec procard" data-critical><h2><span class="num">§3</span>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?'This code usually needs a licensed technician.':'Call a pro if the steps above do not clear the code.')}</p>
 {pro.enabled && <a class="btn btn-p" rel="sponsored nofollow" href={pro.url()}>{pro.label} →</a>}</section>
-{related.length>0 && <section class="sec"><h2 style="margin-bottom:12px">Other {e.brand} codes</h2><div class="grid g3">{related.map(c=><a class="card code-card" href={`/${c.brandSlug}/${c.codeSlug}/`}><div class="cc">{c.code}</div><p class="cm">{c.meaning}</p></a>)}</div></section>}
+{related.length>0 && <section class="sec"><h2 style="font-size:1.9rem;border-bottom:1px solid var(--rule2);padding-bottom:8px;display:flex;gap:12px;align-items:baseline"><span class="num">§4</span>Other {e.brand} codes</h2><div class="grid g3">{related.map(c=><a class="card code-card" data-reveal href={`/${c.brandSlug}/${c.codeSlug}/`}><span class="cc">{c.code}</span><span class="cb">{c.brand}</span><p class="cm">{c.meaning}</p></a>)}</div></section>}
 </article>
-<aside class="side">
-{e.parts.length>0 && <div class="card box"><h3>Parts for this code</h3><p>Parts mentioned in the causes above. Match the part number to your model before buying.</p>
-<ul class="parts">{e.parts.map(p=><li><span>{p.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)}>Shop</a></li>)}</ul><p class="disc">{affiliates.disclosure}</p></div>}
-{pro.enabled && <div class="card box"><h3>Need a technician?</h3><p>Gas, venting, wiring and control-board repairs should be done by a licensed HVAC pro.</p><a class="btn btn-p btn-block" rel="sponsored nofollow" href={pro.url()}>{pro.label}</a></div>}
-<div class="card box"><h3>Source</h3><div class="meta">{e.sourceManualUrl && <a href={e.sourceManualUrl} rel="noopener">{e.brand} manufacturer manual (PDF) ↗</a>}<span>Last updated {e.updated}</span><a href="/affiliate-disclosure/">Affiliate disclosure</a></div></div>
+<aside class="side" data-critical>
+{e.parts.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts for this code</h2><p>Parts mentioned in the causes above. Match the part number to your model before buying.</p>
+<ul class="parts">{e.parts.map(p=><li><span>{p.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow" href={affiliates.repairClinic.url(p.searchTerm)} aria-label={`Shop ${p.name}`}>Shop</a></li>)}</ul><p class="disc">{affiliates.disclosure}</p></div>}
+{pro.enabled && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Need a technician?</h2><p>Gas, venting, wiring and control-board repairs should be done by a licensed HVAC pro.</p><a class="btn btn-p btn-block" rel="sponsored nofollow" href={pro.url()}>{pro.label}</a></div>}
+<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Source</h2><div class="meta">{e.sourceManualUrl && <a href={e.sourceManualUrl} rel="noopener">{e.brand} manufacturer manual (PDF) ↗</a>}<span class="mono" style="font-size:.8rem">Last updated {e.updated}</span><a href="/affiliate-disclosure/">Affiliate disclosure</a></div></div>
 </aside>
 </div>
 </div>

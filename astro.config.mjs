@@ -1,4 +1,4 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-// TODO: set real domain
-export default defineConfig({ site: 'https://thefaultcode.com', trailingSlash: 'always', integrations: [sitemap()] });
+import react from '@astrojs/react';
+export default defineConfig({ site: 'https://thefaultcode.com', trailingSlash: 'always', integrations: [sitemap(), react()] });

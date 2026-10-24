@@ -9,10 +9,10 @@ const jsonld={'@context':'https://schema.org','@type':'BreadcrumbList',itemListE
 <Base title={`${brand} Furnace Error Codes | The Fault Code`} description={`All ${codes.length} ${brand} furnace error and flash codes we cover, with meanings from the manufacturer manual.`} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">{brand}</li></ol></nav>
-<div class="page-h"><h1>{brand} furnace error codes</h1><p>{codes.length} codes from the {brand} furnace manual. Select a code for causes, safe checks and when to call a pro.{src && <> <a href={src} rel="noopener">View the source manual (PDF)</a>.</>}</p></div>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>{brand} furnace error codes</h1><p>{codes.length} codes from the {brand} furnace manual. Select a code for causes, safe checks and when to call a pro.{src && <> <a href={src} rel="noopener">View the source manual (PDF)</a>.</>}</p></div>
 <input class="filter" id="f" type="search" placeholder={`Filter ${brand} codes…`} aria-label={`Filter ${brand} codes`} />
-<div class="grid g3" id="g" style="margin-top:18px">{codes.map(c=><a class="card code-card" href={`/${c.brandSlug}/${c.codeSlug}/`} data-s={`${c.code} ${c.meaning}`.toLowerCase()}><div class="cb">{c.equipmentType}</div><div class="cc">{c.code}</div><p class="cm">{c.meaning}</p><div class="badges" style="margin:10px 0 0">{c.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}</div></a>)}</div>
-<div class="gasbar">If you smell gas, leave the building and call your gas utility from outside.</div>
+<div class="grid g3" id="g" style="margin-top:18px">{codes.map(c=><a class="card code-card" data-reveal href={`/${c.brandSlug}/${c.codeSlug}/`} data-s={`${c.code} ${c.meaning}`.toLowerCase()}><span class="cc">{c.code}</span><span class="cb">{c.equipmentType}</span><p class="cm">{c.meaning}</p><div class="badges">{c.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}</div></a>)}</div>
+<div class="gasbar"><span class="w">Smell gas?</span><span>If you smell gas, leave the building and call your gas utility from outside.</span></div>
 </div>
 <script is:inline>document.getElementById('f').addEventListener('input',e=>{const v=e.target.value.toLowerCase().trim();document.querySelectorAll('#g a').forEach(a=>a.style.display=a.dataset.s.includes(v)?'':'none')})</script>
 </Base>

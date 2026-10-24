@@ -11,22 +11,28 @@ const year = new Date().getFullYear();
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>{title}</title><meta name="description" content={description}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}
-<meta name="theme-color" content="#0b1f3a"/>
+<meta name="theme-color" content="#2a2a27"/><link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
 <meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta name="twitter:card" content="summary_large_image"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-h"><div class="wrap">
-<a class="logo" href="/" aria-label="The Fault Code home"><span class="logo-mark" aria-hidden="true">FC</span>The Fault Code</a>
-<nav class="nav" aria-label="Brands">{brands.map(([s,n])=><a href={`/${s}/`}>{n}</a>)}<a href="/guides/">Guides</a>{CONTACT_EMAIL && <a href="/contact/">Contact</a>}</nav>
-</div></header>
+<a class="logo" href="/" aria-label="The Fault Code home"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a>
+<nav class="nav" aria-label="Main">{brands.map(([s,n])=><a href={`/${s}/`}>{n}</a>)}<a href="/guides/" class="hi">Guides</a>{CONTACT_EMAIL && <a href="/contact/">Contact</a>}</nav>
+</div></header><div class="strip" aria-hidden="true"></div>
 <main id="main"><slot/></main>
-<footer class="site-f"><div class="wrap">
+<footer class="site-f"><div class="strip" aria-hidden="true"></div><div class="wrap">
 <div class="cols">
-<div><a class="logo" href="/"><span class="logo-mark" aria-hidden="true">FC</span>The Fault Code</a><p>Furnace error codes explained in plain English, taken from manufacturer installation and service manuals. Information only; always follow your unit's manual and local codes.</p></div>
-<div><h4>Brands</h4><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n} codes</a></li>)}</ul></div>
-<div><h4>Site</h4><ul><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
+<div><a class="logo" href="/"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Furnace field manual</small></span></a><p>Furnace error codes in plain English, taken from manufacturer installation and service manuals. Information only; always follow your unit's manual and local codes.</p></div>
+<div><h2>Brands</h2><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n} codes</a></li>)}</ul></div>
+<div><h2>Site</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
 </div>
-<div class="legal"><p style="margin:0 0 6px">We may earn a commission from some links on this site. <a href="/affiliate-disclosure/">Learn more</a>.</p>If you smell gas, leave the building and call your gas utility from outside. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
+<div class="legal"><p style="margin:0 0 6px">We may earn a commission from some links on this site. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.</p>If you smell gas, leave the building and call your gas utility from outside. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
 </div></footer>
+<script>
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const go = () => import('../scripts/motion').then(m => m.start());
+  'requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 2500 }) : setTimeout(go, 1200);
+}
+</script>
 </body></html>

@@ -1,37 +1,52 @@
 ---
-import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro'; import HeroGrid from '../components/HeroGrid.jsx'; import StatCounter from '../components/StatCounter.jsx'; import { getCollection } from 'astro:content';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
 const brands = [...new Map(codes.map(c=>[c.brandSlug,c.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
 const count = (s)=>codes.filter(c=>c.brandSlug===s).length;
 const featured = brands.flatMap(([s])=>codes.filter(c=>c.brandSlug===s).slice(0,2));
 featured.splice(9);
 const index = codes.map(c=>({b:c.brand,c:c.code,m:c.meaning,u:`/${c.brandSlug}/${c.codeSlug}/`,t:c.equipmentType}));
+const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33');
+const guides = (await getCollection('guides')).slice(0,3);
 const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/'};
 ---
 <Base title="The Fault Code: Furnace Error Code Lookup" description="Look up Goodman, Carrier, Trane, Lennox and Rheem furnace error codes. Plain-English meanings, likely causes and safe next steps from manufacturer manuals." jsonld={jsonld}>
-<section class="hero"><div class="wrap">
-<h1>What is your furnace trying to tell you?</h1>
-<p class="lead">Look up a furnace error or flash code and get the meaning, likely causes, safe checks, and when to call a pro, from the manufacturer's own manual.</p>
+<section class="hero">
+<HeroGrid client:visible />
+<div class="wrap">
+<div>
+<p class="kicker">Gas furnace fault codes · {brands.length} brands</p>
+<h1>The light is blinking. <em>Here's what the board is saying.</em></h1>
+<p class="lead">Type the code from your furnace's status light or display. You get the manufacturer's meaning, the likely causes, the checks that are safe for a homeowner, and the point where it becomes a job for a licensed technician.</p>
 <div class="search" role="search">
-<svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-<label for="q" class="skip">Search error codes</label>
-<input id="q" type="search" autocomplete="off" placeholder="Enter brand + code, e.g. Goodman EE3" />
+<label for="q">Code lookup</label>
+<div class="box"><span class="pre" aria-hidden="true">CODE&gt;</span><input id="q" type="search" autocomplete="off" placeholder="Brand + code, e.g. Goodman EE3" /></div>
 <ul id="res" class="results" aria-live="polite"></ul>
+<p class="hint">Try <a href="/carrier/33/">Carrier 33</a> · <a href="/trane/e2-1/">Trane E2.1</a> · <a href="/rheem/11/">Rheem 11</a> · <a href="/guides/how-to-read-furnace-led-flash-codes/">How to read a flash code</a></p>
 </div>
-<div class="hero-stats"><div><strong>{codes.length}</strong>furnace codes</div><div><strong>{brands.length}</strong>brands</div><div><strong>100%</strong>sourced from manuals</div></div>
+<div class="stats"><div><strong><StatCounter client:visible value={codes.length} /></strong><span class="l">Codes verified</span></div><div><strong><StatCounter client:visible value={brands.length} /></strong><span class="l">Brands</span></div><div><strong>0</strong><span class="l">Guessed codes</span></div></div>
+</div>
+<figure class="panel" style="margin:0" aria-labelledby="fig1">
+<span class="screws" aria-hidden="true"></span>
+<div class="led-win"><div class="led" aria-hidden="true">{fig.code}</div><div class="led-row" aria-hidden="true"><span class="dot on"></span><span class="dot"></span><span class="dot g on"></span></div></div>
+<figcaption class="fig" id="fig1"><span>Fig. 01 · {fig.brand} status LED</span><a href={`/${fig.brandSlug}/${fig.codeSlug}/`}>{fig.brand} {fig.code}: {fig.meaning.split(':')[0]} →</a></figcaption>
+</figure>
 </div></section>
 <div class="wrap">
-<section class="block"><div class="sec-h"><div><h2>Browse by brand</h2><p>Pick your furnace brand to see every code we cover.</p></div></div>
-<div class="grid g5">{brands.map(([s,n])=><a class="card brand-card" href={`/${s}/`}><div class="bn">{n}</div><div class="bc">{count(s)} furnace codes</div><span class="go">View codes →</span></a>)}</div></section>
-<section class="block"><div class="sec-h"><div><h2>Featured codes</h2><p>A sample of codes from each brand.</p></div></div>
-<div class="grid g3">{featured.map(c=><a class="card code-card" href={`/${c.brandSlug}/${c.codeSlug}/`}><div class="cb">{c.brand} · {c.equipmentType}</div><div class="cc">{c.code}</div><p class="cm">{c.meaning}</p></a>)}</div></section>
-<section class="block"><div class="sec-h"><div><h2>Why you can trust these pages</h2><p>How we put each code page together.</p></div></div>
-<div class="trust">
-<div class="card"><div class="ticon" aria-hidden="true">📘</div><h3>From the manual</h3><p>Every meaning and cause comes from the manufacturer's installation or service manual, and each page links to its source.</p></div>
-<div class="card"><div class="ticon" aria-hidden="true">✓</div><h3>Nothing guessed</h3><p>If we could not confirm a code in a manual, we left it out instead of guessing.</p></div>
-<div class="card"><div class="ticon" aria-hidden="true">⚠</div><h3>Safety first</h3><p>Each page separates simple homeowner checks from work that needs a licensed HVAC technician.</p></div>
+<section class="block"><div class="sec-h"><span class="no">§01</span><h2>Browse by brand</h2><p>Each brand's codes come from one named manual, linked on every page.</p></div>
+<div class="grid g5">{brands.map(([s,n],i)=><a class="card brand-card" data-reveal href={`/${s}/`}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{n}</div><div class="bc">{count(s)} furnace codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div></section>
+<section class="block"><div class="sec-h"><span class="no">§02</span><h2>Codes on file</h2><p>A sample from each brand. Search above for the rest.</p></div>
+<div class="grid g3">{featured.map(c=><a class="card code-card" data-reveal href={`/${c.brandSlug}/${c.codeSlug}/`}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {c.equipmentType}</span><p class="cm">{c.meaning}</p></a>)}</div></section>
+<section class="block"><div class="sec-h"><span class="no">§03</span><h2>Field guides</h2><p>The questions homeowners ask most, answered from manuals and DOE, ENERGY STAR and NFPA guidance.</p></div>
+<div class="grid g3">{guides.map(g=><a class="card" data-reveal href={`/guides/${g.id}/`}><div class="tag">Guide</div><h3 style="font-size:1.5rem;margin:6px 0">{g.data.title}</h3><p style="margin:0;color:var(--steel);font-size:.95rem">{g.data.description}</p></a>)}</div>
+<p style="margin-top:14px"><a href="/guides/" class="btn btn-o">All guides →</a></p></section>
+<section class="block"><div class="sec-h"><span class="no">§04</span><h2>How these pages are built</h2><p>Rules we follow for every code.</p></div>
+<div class="trust" data-reveal>
+<div><div class="n">R-01</div><h3>Manual first</h3><p>Meanings and causes come from the manufacturer's installation or service manual, and each page links to its source PDF.</p></div>
+<div><div class="n">R-02</div><h3>No guessing</h3><p>If a code could not be confirmed in a manual, it is not on the site.</p></div>
+<div><div class="n">R-03</div><h3>Homeowner vs. technician</h3><p>Steps are split into what a homeowner can safely check and work that needs a licensed HVAC technician.</p></div>
 </div>
-<div class="gasbar"><strong>Smell gas?</strong> Don't touch switches or use a phone inside. Leave the building now and call your gas utility from outside.</div>
+<div class="gasbar"><span class="w">Smell gas?</span><span>Don't touch switches or use a phone inside. Leave the building now and call your gas utility from outside.</span></div>
 </section>
 </div>
 <script type="application/json" id="idx" set:html={JSON.stringify(index)}></script>

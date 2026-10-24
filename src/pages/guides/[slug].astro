@@ -14,16 +14,16 @@ const jsonld = [
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
 <p class="affnote">We may earn a commission from links on this page. <a href="/affiliate-disclosure/">Learn more</a></p>
-<div class="page-h"><h1>{d.title}</h1><p>By The Fault Code editorial team · Updated {d.updated}</p></div>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Field guide</p><h1>{d.title}</h1><p class="meta-l">By The Fault Code editorial team · Updated {d.updated}</p></div>
 <div class="layout"><article>
-<div class="card result"><div class="lbl">Short answer</div><p class="meaning" style="font-weight:600;font-size:1.08rem">{d.answer}</p></div>
+<div class="card" data-critical style="border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)"><div class="lbl">Short answer</div><p style="font-weight:600;font-size:1.1rem;margin:6px 0 0">{d.answer}</p></div>
 <div class="card sec guide"><Content /></div>
-<section class="card sec guide"><h2>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
-<section class="card sec guide"><h2>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul></section>
+<section class="card sec guide"><h2><span class="num">§F</span>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
+<section class="card sec guide"><h2><span class="num">§S</span>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul></section>
 </article>
 <aside class="side">
-{codes.length>0 && <div class="card box"><h3>Related codes</h3><ul class="parts">{codes.map(c=><li><a href={`/${c.brandSlug}/${c.codeSlug}/`}>{c.brand} {c.code}</a></li>)}</ul></div>}
-<div class="card box"><h3>More guides</h3><ul class="parts">{others.map(o=><li><a href={`/guides/${o.id}/`}>{o.data.title}</a></li>)}</ul></div>
+{codes.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Related codes</h2><ul class="parts">{codes.map(c=><li><a href={`/${c.brandSlug}/${c.codeSlug}/`}>{c.brand} {c.code}</a></li>)}</ul></div>}
+<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">More guides</h2><ul class="parts">{others.map(o=><li><a href={`/guides/${o.id}/`}>{o.data.title}</a></li>)}</ul></div>
 </aside></div>
 </div>
 </Base>
