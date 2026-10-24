@@ -2,8 +2,8 @@
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { CONTACT_EMAIL } from '../config/site';
-import { affiliatesActive } from '../config/affiliates';
-const { title, description, jsonld, noindex = false, ogType = 'website' } = Astro.props;
+import { AMAZON_STATEMENT } from '../config/affiliates';
+const { title, description, jsonld, noindex = false, ogType = 'website', affLinks = false, amazon = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const all = (await getCollection('codes')).filter(c=>!c.data.example);
 const brands = [...new Map(all.map(c=>[c.data.brandSlug,c.data.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
@@ -32,7 +32,7 @@ const year = new Date().getFullYear();
 <div><h2>Brands</h2><ul>{brands.map(([s,n])=><li><a href={`/${s}/`}>{n} codes</a></li>)}</ul></div>
 <div><h2>Site</h2><ul><li><a href="/codes/">All codes</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
 </div>
-<div class="legal">{affiliatesActive && <p style="margin:0 0 6px">We may earn a commission from some links on this site. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.</p>}If you smell gas, leave the building and call your gas utility from outside. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
+<div class="legal">{affLinks && <p style="margin:0 0 6px">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.{amazon && <>{" "}{AMAZON_STATEMENT}</>}</p>}If you smell gas, leave the building and call your gas utility from outside. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
 </div></footer>
 <script>
 import '../scripts/search';

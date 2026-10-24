@@ -19,12 +19,38 @@ export function cjLink(adId: string, fallback: string): string {
 // Other Angi AdIDs: 17142830 = HVAC & Air Conditioning, 17141197 = Homepage.
 export const ANGI_AD_ID = '17142838';
 
+// Amazon Associates. ONE constant: change the tag here (e.g. to 'thefaultcode-20') and every link updates.
+export const AMAZON_TAG = 'thingsvegas-20';
+export const AMAZON_STATEMENT = 'As an Amazon Associate I earn from qualifying purchases.';
+
+/** Amazon search link for a generic part name (no part numbers, no ASINs). */
+export function amazonLink(term: string): string {
+  return `https://www.amazon.com/s?k=${encodeURIComponent(term)}&tag=${AMAZON_TAG}`;
+}
+
+// partKey (from src/content/codes/*.json) -> generic Amazon search term.
+// Only keys listed here get a "Shop on Amazon" button. Deliberately NOT listed: 'gas-valve'
+// (gas train work is for licensed technicians only, so we do not push people to buy one).
+export const AMAZON_PARTS: Record<string, string> = {
+  'flame-sensor': 'furnace flame sensor',
+  'pressure-switch': 'furnace pressure switch',
+  'pressure-hose': 'furnace pressure switch hose',
+  'igniter': 'furnace hot surface igniter',
+  'inducer': 'furnace inducer motor',
+  'filter': 'furnace air filter',
+  'limit-switch': 'furnace high limit switch',
+  'rollout-switch': 'furnace rollout switch',
+  'control-board': 'furnace control board',
+  'fuse': 'furnace control board 5 amp fuse',
+  'thermostat': 'furnace thermostat',
+};
+
 export const affiliates = {
-  // Parts retailer. RepairClinic is NOT on CJ, so there is no parts program yet.
-  // Candidate (not approved, not applied): GE Appliance Parts, CJ advertiser 4392552.
-  // When one is approved: set enabled:true and make url() return its cjLink(...) for the search term.
-  parts: { enabled: false, label: 'Shop',
-    url: (_term: string) => '' },
+  // Parts links: Amazon Associates. RepairClinic is NOT on CJ, so it is not used.
+  // Set enabled:false to hide every "Shop on Amazon" button and the Amazon disclosure.
+  amazon: { enabled: true, label: 'Shop on Amazon',
+    /** Returns the sponsored link for a part, or '' when the part has no Amazon mapping or the flag is off. */
+    url: (partKey: string): string => { const t = AMAZON_PARTS[partKey]; return affiliates.amazon.enabled && t ? amazonLink(t) : ''; } },
   // "Find a local HVAC pro" button (Angi via CJ).
   proReferral: { enabled: false, label: 'Find a local HVAC pro',
     url: () => cjLink(ANGI_AD_ID, 'https://www.angi.com/') },
@@ -32,4 +58,4 @@ export const affiliates = {
 };
 
 /** True when at least one affiliate program is switched on (drives disclosure text on pages). */
-export const affiliatesActive = affiliates.parts.enabled || affiliates.proReferral.enabled;
+export const affiliatesActive = affiliates.amazon.enabled || affiliates.proReferral.enabled;

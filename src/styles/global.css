@@ -256,3 +256,4 @@ a.card:hover{color:var(--ink);transform:translate(-2px,-2px);box-shadow:4px 4px 
 .search .results{position:absolute;left:0;right:0;z-index:10;margin-top:6px;box-shadow:6px 6px 0 #000}
 .search .hint{margin-top:14px}
 @media (max-width:600px){.search .box .go{padding:0 12px}}
+.btn-sm{min-height:44px;padding:6px 12px}
