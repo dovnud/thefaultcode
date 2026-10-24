@@ -7,6 +7,7 @@ export async function start() {
   const els = [...document.querySelectorAll<HTMLElement>('[data-reveal]')].filter(el => !el.closest('[data-critical]'));
   const vh = innerHeight;
   const pending = els.filter(el => el.getBoundingClientRect().top > vh * 0.95);
+  if (!pending.length) return;
   gsap.set(pending, { opacity: 0, y: 18 });
   const io = new IntersectionObserver(entries => {
     const vis = entries.filter(e => e.isIntersecting).map(e => e.target);
