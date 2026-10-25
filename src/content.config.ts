@@ -5,7 +5,7 @@ const codes = defineCollection({
   schema: z.object({
     example: z.boolean().default(false),
     brand: z.string(), brandSlug: z.string(),
-    equipmentType: z.enum(['furnace','air-conditioner','heat-pump','mini-split','boiler','water-heater','thermostat','appliance']),
+    equipmentType: z.enum(['furnace','air-conditioner','heat-pump','mini-split','boiler','water-heater','thermostat','appliance','washing-machine','dishwasher','ac-heat-pump']),
     code: z.string(), codeSlug: z.string(),
     displayPattern: z.string(),
     meaning: z.string(),
@@ -16,6 +16,11 @@ const codes = defineCollection({
     proAdvice: z.string().optional(),
     parts: z.array(z.object({ name: z.string(), partKey: z.string(), searchTerm: z.string() })).default([]),
     sourceManualUrl: z.string().url().optional(),
+    // 'manual-pdf' (default, furnaces) or 'support-page' (an official manufacturer HTML support page); sourceTitle names the exact document.
+    sourceType: z.enum(['manual-pdf','support-page']).default('manual-pdf'),
+    sourceTitle: z.string().optional(),
+    // Other official pages the steps were taken from (e.g. a linked drain guide).
+    moreSources: z.array(z.object({ name: z.string(), url: z.string().url() })).default([]),
     updated: z.string(),
   }),
 });

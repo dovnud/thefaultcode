@@ -1,17 +1,17 @@
 ---
-import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content'; import { groupCodes, codePath, typeLabel, searchText } from '../config/categories';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
-const brands = [...new Map(codes.map(c=>[c.brandSlug,c.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
-const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:'All furnace error codes',url:'https://thefaultcode.com/codes/'};
+const groups = groupCodes(codes); const brandCount = new Set(codes.map(c=>c.brandSlug)).size;
+const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:'All error codes',url:'https://thefaultcode.com/codes/'};
 ---
-<Base title="All Furnace Error Codes | The Fault Code" description={`Browse all ${codes.length} furnace error and flash codes from Goodman, Trane, Rheem, Carrier and Lennox manuals, with plain-English meanings.`} jsonld={jsonld}>
+<Base title="All Error Codes: Furnace, Washer, Dishwasher, AC | The Fault Code" description={`Browse all ${codes.length} error codes for furnaces, washing machines, dishwashers and AC / heat pumps, from official manufacturer documentation, with plain-English meanings.`} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">All codes</li></ol></nav>
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>All furnace error codes</h1><p>Every code on the site, grouped by brand. Each one comes from a named manufacturer manual. Filter by brand, code or a word from the meaning.</p></div>
-<form class="filter-row" role="search" aria-label="Filter all codes"><label class="sr-only" for="f">Filter all codes</label><input class="filter" id="f" name="q" data-filter type="search" autocomplete="off" placeholder="Try: goodman ee3, e2-1, flame, lockout" /><span class="count" id="f-count" role="status" aria-live="polite">{codes.length} codes</span></form>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>All error codes</h1><p>Every code on the site, grouped by equipment type and brand. Each one comes from a named manufacturer manual. Filter by brand, code or a word from the meaning.</p></div>
+<form class="filter-row" role="search" aria-label="Filter all codes"><label class="sr-only" for="f">Filter all codes</label><input class="filter" id="f" name="q" data-filter type="search" autocomplete="off" placeholder="Try: goodman ee3, lg oe, bosch e24, washer drain" /><span class="count" id="f-count" role="status" aria-live="polite">{codes.length} codes</span></form>
 <div class="f-empty" id="f-empty" hidden><strong>No code matches that.</strong> <span>Check the spelling, try just the brand or the code, or open a brand list below. If your code is missing, we could not confirm it in a manual, so it is not on the site.</span></div>
-{brands.map(([s,n])=><section class="brand-group" data-group aria-labelledby={`b-${s}`}><h2 id={`b-${s}`}><a href={`/${s}/`}>{n}</a><small>{codes.filter(c=>c.brandSlug===s).length} codes</small></h2>
-<div class="grid g3">{codes.filter(c=>c.brandSlug===s).map(c=><a class="card code-card" href={`/${c.brandSlug}/${c.codeSlug}/`} data-s={`${c.brand} ${c.code} ${c.meaning} ${c.equipmentType}`.toLowerCase()}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {c.equipmentType}</span><p class="cm">{c.meaning}</p></a>)}</div></section>)}
+{groups.map(g=><section class="brand-group" data-group aria-labelledby={`b-${g.cat.slug}-${g.brandSlug}`}><h2 id={`b-${g.cat.slug}-${g.brandSlug}`}><a href={g.href}>{g.brand}<span class="sr-only"> {g.cat.name}</span></a><small>{g.cat.name} · {g.codes.length} codes</small></h2>
+<div class="grid g3">{g.codes.map(c=><a class="card code-card" href={codePath(c)} data-s={searchText(c)}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {typeLabel(c)}</span><p class="cm">{c.meaning}</p></a>)}</div></section>)}
 <div class="gasbar"><span class="w">Smell gas?</span><span>If you smell gas, leave the building and call your gas utility from outside.</span></div>
 </div>
 <script>import '../scripts/filter';</script>

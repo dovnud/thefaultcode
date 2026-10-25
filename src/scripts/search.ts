@@ -12,11 +12,11 @@ export function search(items: Item[], q: string): Item[] {
   if (!words.length) return [];
   const whole = key(words.join(''));
   const scored = items.map(x => {
-    const hay = norm(`${x.b} ${x.c} ${x.m} ${x.t}`), code = key(x.c);
+    const hay = norm(`${x.b} ${x.c} ${x.m} ${x.t}`), hw = hay.split(' '), code = key(x.c);
     let s = key(x.b + x.c) === whole || code === whole ? 20 : 0;
     for (const t of words) {
       const kt = key(t);
-      if (code === kt) s += 5; else if (code.startsWith(kt)) s += 3; else if (norm(x.b).startsWith(t)) s += 2; else if (hay.includes(t)) s += 1; else return null;
+      if (code === kt) s += 5; else if (code.startsWith(kt)) s += 3; else if (norm(x.b).startsWith(t)) s += 2; else if (hw.some(w => w.startsWith(t))) s += 1; else return null;
     }
     return [s, x] as [number, Item];
   }).filter((v): v is [number, Item] => !!v).sort((a, b) => b[0] - a[0]);

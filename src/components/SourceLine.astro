@@ -1,0 +1,7 @@
+---
+// Source link text shared by code, brand and hub pages. Furnace pages keep their original "manual (PDF)" wording.
+const { e, short = false } = Astro.props;
+const web = e.sourceType === 'support-page';
+const label = web ? (short ? `${e.brand} support page` : (e.sourceTitle ?? `${e.brand} official support page`)) : `${e.brand} manufacturer manual (PDF)`;
+---
+{e.sourceManualUrl && <a href={e.sourceManualUrl} rel="noopener" target="_blank">{label}<span class="sr-only"> (opens in a new tab)</span> ↗</a>}

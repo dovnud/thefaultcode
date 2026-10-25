@@ -1,10 +1,10 @@
 ---
-import Base from "../layouts/Base.astro"; import { getCollection } from 'astro:content';
+import Base from "../layouts/Base.astro"; import { getCollection } from 'astro:content'; import { CATEGORIES, groupCodes } from '../config/categories';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
-const brands = [...new Map(codes.map(c=>[c.brandSlug,c.brand])).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
+const cats = CATEGORIES.filter(c=>groupCodes(codes).some(g=>g.cat.slug===c.slug));
 ---
-<Base title="Page not found | The Fault Code" description="This page does not exist. Look up a furnace error code or browse by brand." noindex>
-<div class="wrap nf"><div class="led-win" style="max-width:320px;margin:0 auto 20px"><div class="led" aria-hidden="true">404</div></div><h1>Page not found</h1><p>That page does not exist, or the code has moved. Look up your code, or pick your brand.</p>
+<Base title="Page not found | The Fault Code" description="This page does not exist. Look up an error code or browse by equipment type." noindex>
+<div class="wrap nf"><div class="led-win" style="max-width:320px;margin:0 auto 20px"><div class="led" aria-hidden="true">404</div></div><h1>Page not found</h1><p>That page does not exist, or the code has moved. Look up your code, or pick your equipment type.</p>
 <p class="nf-actions"><a class="btn btn-p" href="/codes/">Search all codes</a><a class="btn btn-o" href="/">Home</a></p>
-<ul class="nf-brands">{brands.map(([s,n])=><li><a class="btn btn-o" href={`/${s}/`}>{n} codes</a></li>)}</ul></div>
+<ul class="nf-brands">{cats.map(c=><li><a class="btn btn-o" href={c.hub}>{c.nav}</a></li>)}</ul></div>
 </Base>

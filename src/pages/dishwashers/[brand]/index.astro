@@ -1,0 +1,5 @@
+---
+import BrandPage from '../../../components/BrandPage.astro'; import { brandPaths } from '../../../lib/paths';
+export const getStaticPaths = () => brandPaths('dishwashers');
+---
+<BrandPage {...Astro.props} />

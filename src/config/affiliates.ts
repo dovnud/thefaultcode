@@ -46,6 +46,16 @@ export const AMAZON_PARTS: Record<string, string> = {
   'blower-motor': 'furnace blower motor',
   'capacitor': 'furnace blower motor capacitor',
   'steel-wool': 'fine steel wool',
+  // Appliance categories: only parts/tools that a code's own text names (never part numbers or ASINs).
+  'washer-cleaner': 'washing machine cleaner tub clean',
+  'he-detergent': 'HE high efficiency laundry detergent',
+  'washer-fill-hose': 'washing machine water inlet hoses',
+  'washer-drain-hose': 'washing machine drain hose',
+  'dishwasher-descaler': 'dishwasher descaler cleaner',
+  'dishwasher-salt': 'dishwasher softening salt',
+  'dishwasher-detergent': 'dishwasher detergent',
+  'dishwasher-fill-hose': 'dishwasher water supply line',
+  'dishwasher-drain-hose': 'dishwasher drain hose',
 };
 
 /** Display labels for guide / brand-page shop boxes (code pages use the part name stored in each code's JSON). */
@@ -55,6 +65,11 @@ export const AMAZON_LABELS: Record<string, string> = {
   'limit-switch': 'High limit switch', 'rollout-switch': 'Rollout switch', 'control-board': 'Control board',
   'fuse': 'Control board fuse', 'thermostat': 'Thermostat', 'blower-motor': 'Blower motor',
   'capacitor': 'Blower motor capacitor', 'steel-wool': 'Fine steel wool',
+  'washer-cleaner': 'Washing machine cleaner', 'he-detergent': 'HE laundry detergent',
+  'washer-fill-hose': 'Washer water inlet hoses', 'washer-drain-hose': 'Washer drain hose',
+  'dishwasher-descaler': 'Dishwasher descaler', 'dishwasher-salt': 'Dishwasher softening salt',
+  'dishwasher-detergent': 'Dishwasher detergent', 'dishwasher-fill-hose': 'Dishwasher water supply line',
+  'dishwasher-drain-hose': 'Dishwasher drain hose',
 };
 
 /** Build [{key,name,href}] for partKeys that have an Amazon search term (gas valve etc. are deliberately omitted). */
@@ -70,6 +85,17 @@ export const DEALER_LOCATORS: Record<string, string> = {
   rheem: 'https://www.rheem.com/find-a-pro/',
   carrier: 'https://www.carrier.com/us/en/residential/find-a-dealer/',
   lennox: 'https://www.lennox.com/residential/locate/',
+};
+
+// Official manufacturer SERVICE-REQUEST pages for appliance brands (NOT affiliate links, plain links with rel="noopener").
+// Fallback "request service" button on washer and dishwasher pages. Each URL is linked from that brand's own support page and was
+// checked on 2026-10-25 (browser-like GET returned 200; Whirlpool blocks curl so it was confirmed with a page fetch). Remove an entry to hide the button.
+export const APPLIANCE_SERVICE: Record<string, string> = {
+  lg: 'https://www.lg.com/us/support/repair-service/schedule-repair',
+  samsung: 'https://www.samsung.com/us/support/service/',
+  whirlpool: 'https://www.whirlpool.com/repair-or-replace/service.html',
+  bosch: 'https://www.bosch-home.com/us/en/repair',
+  ge: 'https://genet.geappliances.com/eService/Service/home',
 };
 
 export const affiliates = {

@@ -1,0 +1,5 @@
+---
+import CodePage from '../../../components/CodePage.astro'; import { codePaths } from '../../../lib/paths';
+export const getStaticPaths = () => codePaths('washers');
+---
+<CodePage {...Astro.props} />

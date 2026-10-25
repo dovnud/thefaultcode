@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.astro';
+import { fmtDate } from '../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../config/affiliates';
+import { catOf, typeLabel, brandPath, codePath, searchText } from '../config/categories';
+const { codes } = Astro.props;
+const first = codes[0]; const cat = catOf(first); const furn = cat.slug==='furnaces';
+const updated=[...codes.map(c=>c.updated)].sort().pop(); const brand = first.brand; const src = first.sourceManualUrl;
+const shop = amazonShop(codes.flatMap(c=>c.parts.map(p=>p.partKey)));
+const noun = furn ? 'furnace' : cat.noun;
+const jsonld={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:cat.name,item:`https://thefaultcode.com${cat.hub}`},{'@type':'ListItem',position:3,name:brand,item:`https://thefaultcode.com${brandPath(first)}`}]};
+const srcs = [...new Map(codes.filter(c=>c.sourceManualUrl).map(c=>[c.sourceManualUrl,c])).values()];
+---
+<Base title={`${brand} ${furn?'Furnace':cat.name} Error Codes | The Fault Code`} description={`All ${codes.length} ${brand} ${noun} error ${furn?'and flash ':''}codes we cover, with meanings from ${furn?'the manufacturer manual':'official manufacturer documentation'}.`} jsonld={jsonld} affLinks={shop.length>0} amazon={shop.length>0}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={cat.hub}>{cat.name}</a></li><li aria-current="page">{brand}</li></ol></nav>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>{brand} {noun} error codes</h1><p>{codes.length} codes from {furn?<>the {brand} furnace manual</>:<>official {brand} {noun} documentation</>}. Select a code for causes, safe checks and when to call a pro.{srcs.length===1 && <> <SourceLine e={srcs[0]} />.</>}</p>
+{srcs.length>1 && <p class="srcline">Sources: {srcs.map((c,i)=><>{i>0&&' · '}<SourceLine e={c} short /></>)}</p>}</div>
+<form class="filter-row" role="search" aria-label={`Filter ${brand} ${noun} codes`}><label class="sr-only" for="f">Filter {brand} {noun} codes</label><input class="filter" id="f" data-filter type="search" autocomplete="off" placeholder={`Filter ${brand} codes, e.g. ${furn?'flame or 33':codes[0].code.toLowerCase()+' or drain'}`} /><span class="count" id="f-count" role="status" aria-live="polite">{codes.length} codes</span></form>
+<div class="grid g3" id="g" style="margin-top:18px">{codes.map(c=><a class="card code-card" href={codePath(c)} data-s={searchText(c)}><span class="cc">{c.code}</span><span class="cb">{typeLabel(c)}</span><p class="cm">{c.meaning}</p><div class="badges">{c.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}</div></a>)}</div>
+<div class="f-empty" id="f-empty" hidden><strong>No {brand} code matches that.</strong> <span>Clear the filter, or <a href="/codes/">search every brand</a>.</span></div>
+{shop.length>0 && <section class="card box" aria-labelledby="shop-h" style="margin-top:20px"><h2 id="shop-h" style="font-size:1.35rem;margin:0 0 6px">Parts named in {brand} codes</h2><p>Parts the {brand} codes above point to. Check your model's manual before buying{furn?', and leave gas and venting work to a licensed pro':''}.</p>
+<ul class="parts">{shop.map(p=><li><span>{p.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={p.href} aria-label={`Shop on Amazon: ${p.name} (sponsored link, opens in a new tab)`}>Shop on Amazon</a></li>)}</ul><p class="disc">Shop links open Amazon search results for the part name. {AMAZON_STATEMENT}</p></section>}
+<p class="srcline" style="margin-top:20px">Source: {srcs.length===1 ? <SourceLine e={srcs[0]} /> : srcs.length>1 ? 'see the sources listed above' : `${brand} manual`} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p>
+<div class="gasbar"><span class="w">{cat.bar[0]}</span><span>{cat.bar[1]}</span></div>
+</div>
+<script>import '../scripts/filter';</script>
+</Base>
