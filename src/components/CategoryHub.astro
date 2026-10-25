@@ -1,23 +1,24 @@
 ---
 import Base from '../layouts/Base.astro';
-import { allCodes } from '../lib/paths'; import { groupCodes, catBySlug, codePath, typeLabel, searchText } from '../config/categories';
+import { allCodes } from '../lib/paths'; import { titleCase, groupCodes, catBySlug, codePath, typeLabel, searchText } from '../config/categories';
 import { fmtDate } from '../config/site';
 const { cat: slug } = Astro.props; const cat = catBySlug(slug);
 const groups = groupCodes(await allCodes()).filter(g => g.cat.slug === slug);
 const codes = groups.flatMap(g => g.codes); const updated = codes.map(c=>c.updated).sort().pop();
+const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
 const INTRO = {
-  furnaces: 'Gas furnace flash codes and display codes from Goodman, Trane, Rheem, Carrier and Lennox manuals.',
-  washers: 'Washing machine error codes from official manufacturer support documentation. Most are clearable with a drain-filter check, a hose check or a power reset.',
-  dishwashers: 'Dishwasher error codes from official manufacturer support documentation. Most drain, fill and sudsing codes have a safe homeowner check.',
-  ac: 'Outdoor-unit fault codes for air conditioners and heat pumps, from the manufacturer service manuals. Most of these need a licensed technician, so each page says which checks are safe.',
+  furnaces: 'What does your furnace error code mean? These are the gas furnace flash codes and display codes from Goodman, Trane, Rheem, Carrier and Lennox manuals. Pick your brand to see what a code means, how to fix it safely and when to call a pro.',
+  washers: 'What does your washing machine error code mean? These codes come from official manufacturer support documentation. Most are clearable with a drain-filter check, a hose check or a power reset. Pick your brand to see how to fix yours.',
+  dishwashers: 'What does your dishwasher error code mean? These codes come from official manufacturer support documentation. Most drain, fill and sudsing codes have a safe homeowner check. Pick your brand to see how to fix yours.',
+  ac: 'What does your AC or heat pump fault code mean? These outdoor-unit codes come from the manufacturer service manuals. Most need a licensed technician, so each page says which checks are safe and when to call a pro.',
 };
 const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:`${cat.name} error codes`,url:`https://thefaultcode.com${cat.hub}`,
   breadcrumb:{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:cat.name,item:`https://thefaultcode.com${cat.hub}`}]}};
 ---
-<Base title={`${cat.name} Error Codes | The Fault Code`} description={`${codes.length} ${cat.noun} error codes from ${groups.map(g=>g.brand).join(', ')}. Plain-English meanings, likely causes and safe checks, each linked to the manufacturer source.`.slice(0,300)} jsonld={jsonld}>
+<Base title={`${titleCase(cat.label)} Error Codes: Meanings & Fixes | The Fault Code`} description={`${codes.length} ${cat.label} error codes (${groups.map(g=>g.brand).join(', ')}): what each means, likely causes and how to fix it safely. From manufacturer manuals.`} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">{cat.name}</li></ol></nav>
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{codes.length} codes · {groups.length} brand{groups.length===1?'':'s'}</p><h1>{cat.name} error codes</h1><p>{INTRO[slug]}</p></div>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{codes.length} codes · {groups.length} brand{groups.length===1?'':'s'}</p><h1>{cap(cat.label)} error codes</h1><p>{INTRO[slug]}</p></div>
 <h2 class="sr-only">Brands</h2>
 <div class="grid g5">{groups.map((g,i)=><a class="card brand-card" href={g.href}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {cat.noun} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div>
 <h2 class="rel-h" style="margin-top:28px">Codes we cover</h2>

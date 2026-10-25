@@ -1,7 +1,7 @@
 ---
 import Base from '../../../../layouts/Base.astro';
 import { allCodes } from '../../../../lib/paths';
-import { CATEGORIES, catBySlug, groupCodes, codePath, brandPath } from '../../../../config/categories';
+import { titleCase, CATEGORIES, catBySlug, groupCodes, codePath, brandPath } from '../../../../config/categories';
 import { AMAZON_STATEMENT } from '../../../../config/affiliates';
 import { compactLinks, usage, partUrl, partsCatUrl } from '../../../../lib/partLinks';
 export async function getStaticPaths(){
@@ -14,7 +14,7 @@ const n = items.reduce((a,i)=>a+i.links.length,0);
 const url=`https://thefaultcode.com/parts/for/${cat.slug}/${g.brandSlug}/`;
 const jsonld={'@context':'https://schema.org','@type':'CollectionPage',name:`Parts and tools for ${brand} ${cat.noun} codes`,url,breadcrumb:{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Parts and tools',item:'https://thefaultcode.com/parts/'},{'@type':'ListItem',position:3,name:cat.name,item:`https://thefaultcode.com/parts/for/${cat.slug}/`},{'@type':'ListItem',position:4,name:brand,item:url}]}};
 ---
-<Base title={`Parts and Tools for ${brand} ${cat.name} Codes | The Fault Code`} description={`Parts, tools and supplies named in the ${brand} ${cat.noun} manuals behind our ${g.codes.length} ${brand} code pages, with which codes mention each one.`.slice(0,300)} jsonld={jsonld} affLinks={n>0} amazon={n>0}>
+<Base title={`Parts and Tools for ${brand} ${titleCase(cat.label)} Error Codes | The Fault Code`} description={`Parts, tools and supplies named in the ${brand} ${cat.noun} manuals behind our ${g.codes.length} ${brand} code pages, with which codes mention each one.`.slice(0,300)} jsonld={jsonld} affLinks={n>0} amazon={n>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li><a href={partsCatUrl(cat.slug)}>{cat.name}</a></li><li aria-current="page">{brand}</li></ol></nav>
 {n>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}

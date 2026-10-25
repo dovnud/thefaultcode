@@ -2,10 +2,10 @@
 import Base from '../../layouts/Base.astro'; import { getCollection } from 'astro:content';
 const guides = (await getCollection('guides')).sort((a,b)=>a.data.title.localeCompare(b.data.title));
 ---
-<Base title="Furnace Guides | The Fault Code" description="Plain-English furnace guides: reading flash codes, resetting a furnace, short cycling, flame sensors, pressure switches and more.">
+<Base title="Furnace Troubleshooting Guides | The Fault Code" description="Plain-English furnace troubleshooting guides: how to read flash codes, reset a furnace, fix short cycling, clean a flame sensor, check a pressure switch and more.">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Guides</li></ol></nav>
-<div class="page-h"><h1>Furnace guides</h1><p>Answers to common gas furnace questions, based on manufacturer manuals and government safety and energy sources.</p></div>
+<div class="page-h"><h1>Furnace troubleshooting guides</h1><p>How to fix, reset and read common gas furnace problems: answers to the questions homeowners ask most, based on manufacturer manuals and government safety and energy sources.</p></div>
 <div class="grid g3">{guides.map((g,i)=><a class="card" data-reveal href={`/guides/${g.id}/`}><div class="tag">Guide {String(i+1).padStart(2,"0")}</div><h2 style="font-size:1.6rem;margin:6px 0">{g.data.title}</h2><p style="margin:0;color:var(--steel)">{g.data.description}</p></a>)}</div>
 </div>
 </Base>

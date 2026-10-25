@@ -8,6 +8,7 @@ export type Cat = {
   hub: string;            // hub URL
   nav: string;            // short nav label
   name: string;           // heading label, e.g. "Washing machines"
+  label: string;          // singular phrase used in titles and H1s, e.g. "washing machine"
   noun: string;           // singular noun used in sentences
   aliases: string;        // extra search words
   kind: 'hvac' | 'appliance';
@@ -16,24 +17,26 @@ export type Cat = {
 };
 
 export const CATEGORIES: Cat[] = [
-  { slug: 'furnaces', hub: '/furnaces/', nav: 'Furnaces', name: 'Furnaces', noun: 'furnace', aliases: 'furnace heater heating', kind: 'hvac',
+  { slug: 'furnaces', hub: '/furnaces/', nav: 'Furnaces', name: 'Furnaces', label: 'furnace', noun: 'furnace', aliases: 'furnace heater heating', kind: 'hvac',
     techTitle: 'Need a technician?',
     techText: "Gas, venting, wiring and control-board repairs should be done by a licensed HVAC pro. Your gas utility or the manufacturer's dealer locator are good places to start.",
     bar: ['Smell gas?', 'If you smell gas, leave the building and call your gas utility from outside.'] },
-  { slug: 'washers', hub: '/washers/', nav: 'Washers', name: 'Washing machines', noun: 'washing machine', aliases: 'washer washing machine laundry', kind: 'appliance',
+  { slug: 'washers', hub: '/washers/', nav: 'Washers', name: 'Washing machines', label: 'washing machine', noun: 'washing machine', aliases: 'washer washing machine laundry', kind: 'appliance',
     techTitle: 'Need a technician?',
     techText: "Motor, heater, sensor, door-lock and control-board repairs should be done by a qualified appliance technician. The manufacturer's own service-request page is a good place to start.",
     bar: ['Unplug first', 'Unplug the washer and turn off the water taps before you reach behind it, clean a filter or touch any hose.'] },
-  { slug: 'dishwashers', hub: '/dishwashers/', nav: 'Dishwashers', name: 'Dishwashers', noun: 'dishwasher', aliases: 'dishwasher dishwashing', kind: 'appliance',
+  { slug: 'dishwashers', hub: '/dishwashers/', nav: 'Dishwashers', name: 'Dishwashers', label: 'dishwasher', noun: 'dishwasher', aliases: 'dishwasher dishwashing', kind: 'appliance',
     techTitle: 'Need a technician?',
     techText: "Pump, heater, sensor, valve and control-board repairs should be done by a qualified appliance technician. The manufacturer's own service-request page is a good place to start.",
     bar: ['Power off first', 'Switch the dishwasher off at its breaker and let the tub cool before you clean a filter or reach into the base.'] },
-  { slug: 'ac', hub: '/ac/', nav: 'AC & heat pumps', name: 'AC and heat pumps', noun: 'AC / heat pump', aliases: 'ac air conditioner conditioning heat pump condenser cooling', kind: 'hvac',
+  { slug: 'ac', hub: '/ac/', nav: 'AC & heat pumps', name: 'AC and heat pumps', label: 'AC and heat pump', noun: 'AC / heat pump', aliases: 'ac air conditioner conditioning heat pump condenser cooling', kind: 'hvac',
     techTitle: 'Need a technician?',
     techText: "Refrigerant, high-voltage wiring, compressor and control-board work must be done by a licensed HVAC technician. The manufacturer's dealer locator is a good place to start.",
     bar: ['High voltage', 'Outdoor units carry line voltage even when the thermostat is off. Switch off the disconnect and the breaker before opening any panel.'] },
 ];
 
+/** Title-case a label for page titles (keeps 'and' lower-case, AC upper-case). */
+export const titleCase = (s: string) => s.replace(/\b[a-z]+/g, w => (w === 'and' ? w : w[0].toUpperCase() + w.slice(1)));
 export const catBySlug = (s: string) => CATEGORIES.find(c => c.slug === s)!;
 const APPLIANCE_TYPES: Record<string, Cat['slug']> = { 'washing-machine': 'washers', dishwasher: 'dishwashers', 'ac-heat-pump': 'ac', 'air-conditioner': 'ac', 'heat-pump': 'ac', 'mini-split': 'ac' };
 export const catOf = (e: CodeData): Cat => catBySlug(APPLIANCE_TYPES[e.equipmentType] ?? 'furnaces');

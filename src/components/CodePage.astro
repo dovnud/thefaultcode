@@ -39,14 +39,14 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <div class="card result" data-critical>
 <div class="readout"><span class="tag">Status code</span><span class="led">{e.code}</span><span class="tag">{e.brand}</span></div>
 <div class="body">
-<div class="lbl">What it means</div>
+<div class="lbl">What does {e.brand} {e.code} mean?</div>
 <p class="meaning">{e.meaning}</p>
 <div class="badges">{e.proNeeded?<a class="badge b-pro" href="#call-a-pro">Call a pro<span class="sr-only">: jump to when to call a pro</span> <span aria-hidden="true">↓</span></a>:<a class="badge b-diy" href="#diy-steps">Basic checks first<span class="sr-only">: jump to safe DIY steps</span> <span aria-hidden="true">↓</span></a>}<span class="lbl-static"><span class="sr-only">Equipment type: </span>{eq}</span></div>
 <div class="pattern"><strong>How it shows:</strong> {e.displayPattern}</div>
 {showPro && <p style="margin:16px 0 0"><a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a></p>}
 </div></div>
 <section class="card sec" data-reveal><h2><span class="num">§1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
-<section class="card sec" id="diy-steps" data-reveal><h2><span class="num">§2</span>Safe DIY steps</h2>
+<section class="card sec" id="diy-steps" data-reveal><h2><span class="num">§2</span>{e.proNeeded ? `Safe checks for ${e.code}` : `How to fix ${e.code}: safe DIY steps`}</h2>
 <ol class="steps">{e.diySteps.map(s=>{const x=split(s);return <li>{x.tech&&<span class="tech">Technician</span>}{x.t}</li>})}</ol>
 <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}</div></div></section>
 <section class="card sec procard" id="call-a-pro" data-critical><h2><span class="num">§3</span>When to call a pro</h2>

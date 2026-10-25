@@ -1,7 +1,7 @@
 ---
 import Base from '../../../../layouts/Base.astro';
 import { allCodes } from '../../../../lib/paths';
-import { CATEGORIES, catBySlug, catOf, groupCodes } from '../../../../config/categories';
+import { titleCase, CATEGORIES, catBySlug, catOf, groupCodes } from '../../../../config/categories';
 import { AMAZON_STATEMENT } from '../../../../config/affiliates';
 import { PARTS, compactLinks, partUrl, partsBrandUrl } from '../../../../lib/partLinks';
 export function getStaticPaths(){ return CATEGORIES.map(c=>({params:{cat:c.slug},props:{slug:c.slug}})); }
@@ -13,7 +13,7 @@ const n = items.reduce((a,i)=>a+i.links.length,0);
 const url=`https://thefaultcode.com/parts/for/${slug}/`;
 const jsonld={'@context':'https://schema.org','@type':'CollectionPage',name:`Parts and tools for ${cat.noun} error codes`,url,breadcrumb:{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Parts and tools',item:'https://thefaultcode.com/parts/'},{'@type':'ListItem',position:3,name:cat.name,item:url}]}};
 ---
-<Base title={`Parts and Tools for ${cat.name} Error Codes | The Fault Code`} description={`The parts, tools and supplies named in ${cat.noun} error-code manuals: ${list.length} guides covering what each is, how to choose and test it, with shopping links where it is safe for a homeowner.`.slice(0,300)} jsonld={jsonld} affLinks={n>0} amazon={n>0}>
+<Base title={`Parts and Tools for ${titleCase(cat.label)} Error Codes | The Fault Code`} description={`The parts, tools and supplies named in ${cat.noun} error-code manuals: ${list.length} guides covering what each is, how to choose and test it, with shopping links where it is safe for a homeowner.`.slice(0,300)} jsonld={jsonld} affLinks={n>0} amazon={n>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li aria-current="page">{cat.name}</li></ol></nav>
 {n>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}

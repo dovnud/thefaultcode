@@ -10,14 +10,14 @@ const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33'&&c.equipmen
 const guides = (await getCollection('guides')).slice(0,3);
 const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/',publisher:ORG};
 ---
-<Base title="The Fault Code: Furnace, Washer, Dishwasher & AC Error Codes" description="Look up furnace, washing machine, dishwasher and AC / heat pump error codes. Plain-English meanings, likely causes and safe next steps from manufacturer manuals and official support pages." jsonld={jsonld}>
+<Base title="The Fault Code: Furnace, Washer, Dishwasher & AC Error Codes" description="Look up furnace, washer, dishwasher and AC error codes: what each code means, likely causes and how to fix it safely, from manufacturer manuals and official support pages." jsonld={jsonld}>
 <section class="hero">
 <HeroGrid client:visible />
 <div class="wrap">
 <div>
 <p class="kicker">Furnace · washer · dishwasher · AC fault codes · {brandCount} brands</p>
 <h1>The light is blinking. <em>Here's what the board is saying.</em></h1>
-<p class="lead">Type the code from your furnace, washer, dishwasher or AC unit's status light or display. You get the manufacturer's meaning, the likely causes, the checks that are safe for a homeowner, and the point where it becomes a job for a licensed technician.</p>
+<p class="lead">What does your error code mean? Type the code from your furnace, washer, dishwasher or AC unit's status light or display. You get the manufacturer's meaning, the likely causes, the checks that are safe for a homeowner, and the point where it becomes a job for a licensed technician.</p>
 <form class="search" data-search role="search" aria-label="Code lookup" action="/codes/" method="get">
 <label for="q">Code lookup</label>
 <div class="box"><span class="pre" aria-hidden="true">CODE&gt;</span><input id="q" name="q" type="search" data-search-input role="combobox" aria-expanded="false" aria-controls="res" aria-autocomplete="list" autocomplete="off" enterkeyhint="search" placeholder="Brand + code, e.g. LG OE or Goodman EE3" /><button class="go" type="submit">Look up</button></div>
