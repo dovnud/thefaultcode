@@ -1,6 +1,6 @@
 ---
 import { ORG } from '../config/site';
-import Base from '../layouts/Base.astro'; import HeroGrid from '../components/HeroGrid.jsx'; import StatCounter from '../components/StatCounter.jsx'; import { getCollection } from 'astro:content'; import { groupCodes, CATEGORIES, codePath, typeLabel } from '../config/categories';
+import Base from '../layouts/Base.astro'; import HeroBoard from '../components/HeroBoard.astro'; import CatIcon from '../components/CatIcon.astro'; import StatCounter from '../components/StatCounter.jsx'; import { getCollection } from 'astro:content'; import { groupCodes, CATEGORIES, codePath, typeLabel } from '../config/categories';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
 const groups = groupCodes(codes);
 const brandCount = new Set(codes.map(c=>c.brandSlug)).size;
@@ -12,7 +12,6 @@ const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault 
 ---
 <Base title="The Fault Code: Furnace, Washer, Dishwasher & AC Error Codes" description="Look up furnace, washer, dishwasher and AC error codes: what each code means, likely causes and how to fix it safely, from manufacturer manuals and official support pages." jsonld={jsonld}>
 <section class="hero">
-<HeroGrid client:visible />
 <div class="wrap">
 <div>
 <p class="kicker">Furnace · washer · dishwasher · AC fault codes · {brandCount} brands</p>
@@ -26,32 +25,33 @@ const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault 
 </form>
 <div class="stats"><div><strong><StatCounter client:visible value={codes.length} /></strong><span class="l">Codes verified</span></div><div><strong><StatCounter client:visible value={brandCount} /></strong><span class="l">Brands</span></div><div><strong>0</strong><span class="l">Guessed codes</span></div></div>
 </div>
+<div class="hero-art"><HeroBoard />
 <figure class="panel" style="margin:0" aria-labelledby="fig1">
 <span class="screws" aria-hidden="true"></span>
 <div class="led-win" id="ledwin" data-code={fig.code}><div class="sweep" aria-hidden="true"></div><div class="led led-live" aria-hidden="true"><span class="ghost">{fig.code.replace(/[A-Za-z0-9]/g,'8')}</span>{[...fig.code].map((ch,i)=><span class={`dg d${i%4}`}>{ch}</span>)}</div><div class="led-row" aria-hidden="true"><span class="dot r" id="d-r"></span><span class="dot a" id="d-a"></span><span class="dot g on" id="d-g"></span></div></div>
 <figcaption class="fig" id="fig1"><span>Fig. 01 · {fig.brand} status LED</span><a href={`/${fig.brandSlug}/${fig.codeSlug}/`}>{fig.brand} {fig.code}: {fig.meaning.split(':')[0]} →</a></figcaption>
-</figure>
+</figure></div>
 </div></section>
-<div class="wrap">
-<section class="block"><div class="sec-h"><span class="no">§01</span><h2>Browse by equipment and brand</h2><p>Each code comes from a named manufacturer document, linked on every page.</p></div>
-{cats.map(c=>{const gs=groups.filter(g=>g.cat.slug===c.slug);return <><h3 class="cat-h"><a href={c.hub}>{c.name}</a><small>{gs.reduce((n,g)=>n+g.codes.length,0)} codes</small></h3>
-<div class="grid g5">{gs.map((g,i)=><a class="card brand-card" data-reveal href={g.href}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {c.noun} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div></>})}</section>
-<section class="block"><div class="sec-h"><span class="no">§02</span><h2>Codes on file</h2><p>A sample from each equipment type and brand. Search above, or browse the full list.</p></div>
+<div class="wrap tiles-wrap"><nav class="tiles" aria-label="Pick your equipment">{cats.map(c=>{const n=groups.filter(g=>g.cat.slug===c.slug).reduce((k,g)=>k+g.codes.length,0);return <a class="tile" href={c.hub}><span class="tile-ic"><CatIcon slug={c.slug} size={44} /></span><span class="tile-t">{c.name}</span><span class="tile-s">{n} error codes</span><span class="tile-go" aria-hidden="true">→</span></a>})}</nav></div>
+<div class="blocks">
+<section class="block"><div class="wrap"><div class="sec-h"><span class="no">§01</span><h2>Browse by equipment and brand</h2><p>Each code comes from a named manufacturer document, linked on every page.</p></div>
+{cats.map(c=>{const gs=groups.filter(g=>g.cat.slug===c.slug);return <><h3 class="cat-h"><span class="cat-ic-w"><CatIcon slug={c.slug} size={28} /></span><a href={c.hub}>{c.name}</a><small>{gs.reduce((n,g)=>n+g.codes.length,0)} codes</small></h3>
+<div class="grid g5">{gs.map((g,i)=><a class="card brand-card" data-reveal href={g.href}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {c.noun} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div></>})}</div></section>
+<section class="block band"><div class="wrap"><div class="sec-h"><span class="no">§02</span><h2>Codes on file</h2><p>A sample from each equipment type and brand. Search above, or browse the full list.</p></div>
 <div class="grid g3">{featured.map(c=><a class="card code-card" data-reveal href={codePath(c)}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {typeLabel(c)}</span><p class="cm">{c.meaning}</p></a>)}</div>
-<p style="margin-top:14px"><a href="/codes/" class="btn btn-o">Browse all {codes.length} codes →</a></p></section>
-<section class="block"><div class="sec-h"><span class="no">§03</span><h2>Field guides</h2><p>The questions homeowners ask most, answered from manuals and DOE, ENERGY STAR and NFPA guidance.</p></div>
+<p style="margin-top:14px"><a href="/codes/" class="btn btn-o">Browse all {codes.length} codes →</a></p></div></section>
+<section class="block"><div class="wrap"><div class="sec-h"><span class="no">§03</span><h2>Field guides</h2><p>The questions homeowners ask most, answered from manuals and DOE, ENERGY STAR and NFPA guidance.</p></div>
 <div class="grid g3">{guides.map(g=><a class="card" data-reveal href={`/guides/${g.id}/`}><div class="tag">Guide</div><h3 style="font-size:1.5rem;margin:6px 0">{g.data.title}</h3><p style="margin:0;color:var(--steel);font-size:.95rem">{g.data.description}</p></a>)}</div>
-<p style="margin-top:14px"><a href="/guides/" class="btn btn-o">All guides →</a></p></section>
-<section class="block"><div class="sec-h"><span class="no">§04</span><h2>How these pages are built</h2><p>Rules we follow for every code.</p></div>
+<p style="margin-top:14px"><a href="/guides/" class="btn btn-o">All guides →</a></p></div></section>
+<section class="block band"><div class="wrap"><div class="sec-h"><span class="no">§04</span><h2>How these pages are built</h2><p>Rules we follow for every code.</p></div>
 <div class="trust" data-reveal>
 <div><div class="n">R-01</div><h3>Manual first</h3><p>Meanings and causes come from the manufacturer's manual or official support page, and each page links to its source.</p></div>
 <div><div class="n">R-02</div><h3>No guessing</h3><p>If a code could not be confirmed in a manual, it is not on the site.</p></div>
 <div><div class="n">R-03</div><h3>Homeowner vs. technician</h3><p>Steps are split into what a homeowner can safely check and work that needs a licensed technician.</p></div>
 </div>
 <div class="gasbar"><span class="w">Smell gas?</span><span>Don't touch switches or use a phone inside. Leave the building now and call your gas utility from outside.</span></div>
-</section>
+</div></section>
 </div>
-</script>
 </Base>
 
 <script is:inline>
