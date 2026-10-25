@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allCodes } from '../../lib/paths';
+import { CATEGORIES, catOf, codePath, catBySlug } from '../../config/categories';
+import { AMAZON_STATEMENT } from '../../config/affiliates';
+import { PARTS, partBySlug, fullLinks, usage, partUrl, partsCatUrl, partsBrandUrl } from '../../lib/partLinks';
+export function getStaticPaths(){ return PARTS.map(p=>({params:{slug:p.slug},props:{p}})); }
+const { p } = Astro.props;
+const codes = (await allCodes()).filter(c => p.cats.includes(catOf(c).slug));
+const used = (usage(codes).get(p.slug)?.codes ?? []);
+const brands = [...new Map(codes.map(c=>[c.brand,c.brand])).keys()];
+const L = fullLinks(p, brands);
+const nLinks = L.products.length + L.searches.length + L.byBrand.length;
+const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
+const url = `https://thefaultcode.com/parts/${p.slug}/`;
+const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:p.name,description:p.summary,author:{'@type':'Organization',name:'The Fault Code editorial team'},publisher:{'@type':'Organization',name:'The Fault Code',url:'https://thefaultcode.com/'},mainEntityOfPage:url},
+ {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Parts and tools',item:'https://thefaultcode.com/parts/'},{'@type':'ListItem',position:3,name:p.name,item:url}]}];
+const byBrand = [...used.reduce((m,c)=>m.set(c.brand,[...(m.get(c.brand)??[]),c]),new Map())].slice(0,8);
+const related = p.related.map(partBySlug).filter(Boolean);
+const brandLinks = [...new Map(used.map(c=>[`${catOf(c).slug}/${c.brandSlug}`,c])).values()];
+---
+<Base title={`${p.name}: Guide | The Fault Code`} description={clip(p.summary,158)} jsonld={jsonld} ogType="article" affLinks={nLinks>0} amazon={nLinks>0}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li aria-current="page">{p.name}</li></ol></nav>
+{nLinks>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Parts and tools · {p.kind}</p><h1>{p.name}</h1><p>{p.summary}</p></div>
+<div class="layout"><article>
+<section class="card sec guide"><h2>What it is</h2>{p.what.map(t=><p>{t}</p>)}</section>
+<section class="card sec guide"><h2>How to choose</h2><ul>{p.choose.map(t=><li>{t}</li>)}</ul></section>
+{p.test.length>0 && <section class="card sec guide"><h2>How it is tested</h2><ul>{p.test.map(t=><li>{t}</li>)}</ul></section>}
+{p.replace.length>0 && <section class="card sec guide"><h2>{p.kind==='consumable'?'How to use it':'Replacing it'}</h2><ul>{p.replace.map(t=><li>{t}</li>)}</ul></section>}
+{p.caution && <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{p.caution}</div></div>}
+{p.shop ? <section class="card sec guide" id="shop"><h2>Where to buy</h2>
+<p>These are Amazon links. <strong>Product page</strong> links go to one specific listing whose title we read on Amazon; we do not say it fits your model. <strong>Search</strong> links open search results, which change. Always confirm your model number and the part number in your manual.</p>
+{L.products.length>0 && <><h3>Product pages</h3><div class="shoplinks">{L.products.map(l=><a class="btn btn-o btn-sm pd" rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`Amazon product page: ${l.label} (sponsored link, opens in a new tab)`}>{l.label}</a>)}</div></>}
+{L.searches.length>0 && <><h3>Searches by type or size</h3><div class="shoplinks">{L.searches.map(l=><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`Amazon search: ${l.label} (sponsored link, opens in a new tab)`}>Search: {l.label}</a>)}</div></>}
+{L.byBrand.length>0 && <><h3>Searches by brand</h3><div class="shoplinks">{L.byBrand.map(l=><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`Amazon search: ${l.label} (sponsored link, opens in a new tab)`}>Search: {l.label}</a>)}</div></>}
+<p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p></section>
+: <section class="card sec guide"><h2>Where to buy</h2><p>We do not link replacement safety switches. Replacing one without finding out why it opened is the situation the manuals warn about, so this page explains the part and leaves it to a technician.</p></section>}
+{byBrand.length>0 && <section class="card sec guide"><h2>Codes that mention it</h2><p>Error codes whose own causes or steps name this part or check.</p>
+{byBrand.map(([b,list])=><><h3>{b}</h3><div class="shoplinks">{list.slice(0,10).map(c=><a class="btn btn-o btn-sm" href={codePath(c)}>{c.brand} {c.code}</a>)}</div></>)}
+<p>Per-brand lists: {brandLinks.map((c,i)=><>{i>0&&' · '}<a href={partsBrandUrl(catOf(c).slug,c.brandSlug)}>{c.brand} {catOf(c).noun}</a></>)}.</p></section>}
+<section class="card sec guide"><h2>Sources</h2>{p.sources.length>0 ? <ul>{p.sources.map(s=><li><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul> : <p>General tool guidance. The product statements come from the manufacturers' own listings; check your appliance or furnace manual for anything specific to your model.</p>}</section>
+</article>
+<aside class="side">
+{related.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Related guides</h2><ul class="parts">{related.map(r=><li><a href={partUrl(r.slug)}>{r.name}</a></li>)}</ul></div>}
+<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Browse</h2><ul class="parts"><li><a href="/parts/">All parts and tools guides</a></li>{p.cats.map(c=><li><a href={partsCatUrl(c)}>Parts for {catBySlug(c).noun} codes</a></li>)}<li><a href="/guides/">Field guides</a></li></ul></div>
+</aside></div>
+</div></Base>

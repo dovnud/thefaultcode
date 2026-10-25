@@ -1,10 +1,11 @@
 ---
-import Base from '../../layouts/Base.astro'; import { fmtDate } from '../../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import { catOf, codePath } from '../../config/categories';
+import Base from '../../layouts/Base.astro'; import { fmtDate } from '../../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import { catOf, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks';
 export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
 const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
 const url = `https://thefaultcode.com/guides/${g.id}/`;
 const codes = (await getCollection('codes')).filter(c=>!c.data.example && d.codes.includes(`${c.data.brandSlug}/${c.data.codeSlug}`) && catOf(c.data).slug==='furnaces').map(c=>c.data);
 const shop = amazonShop(d.shop);
+const pg = [...new Set((d.shop??[]).map(slugForKey).filter(Boolean))].map(partBySlug).filter(Boolean);
 const others = (await getCollection('guides')).filter(o=>o.id!==g.id).slice(0,4);
 const jsonld = [
  {'@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,dateModified:d.updated,author:{'@type':'Organization',name:'The Fault Code editorial team'},publisher:{'@type':'Organization',name:'The Fault Code',url:'https://thefaultcode.com/'},mainEntityOfPage:url},
@@ -25,6 +26,7 @@ const jsonld = [
 <aside class="side">
 {shop.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Parts and filters mentioned</h2><p>Parts and supplies this guide discusses. Match any part to your model's manual before buying.</p>
 <ul class="parts">{shop.map(p=><li><span>{p.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={p.href} aria-label={`Shop on Amazon: ${p.name} (sponsored link, opens in a new tab)`}>Shop on Amazon</a></li>)}</ul><p class="disc">Shop links open Amazon search results for the part name. {AMAZON_STATEMENT}</p></div>}
+{pg.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Parts and tools guides</h2><p>What each part is, how to choose and test it, and when to call a pro.</p><ul class="parts">{pg.map(x=><li><a href={partUrl(x.slug)}>{x.name}</a></li>)}<li><a href="/parts/">All parts and tools guides</a></li></ul></div>}
 {codes.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Related codes</h2><ul class="parts">{codes.map(c=><li><a href={codePath(c)}>{c.brand} {c.code}</a></li>)}</ul></div>}
 <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">More guides</h2><ul class="parts">{others.map(o=><li><a href={`/guides/${o.id}/`}>{o.data.title}</a></li>)}</ul></div>
 </aside></div>

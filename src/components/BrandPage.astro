@@ -20,6 +20,7 @@ const srcs = [...new Map(codes.filter(c=>c.sourceManualUrl).map(c=>[c.sourceManu
 <div class="f-empty" id="f-empty" hidden><strong>No {brand} code matches that.</strong> <span>Clear the filter, or <a href="/codes/">search every brand</a>.</span></div>
 {shop.length>0 && <section class="card box" aria-labelledby="shop-h" style="margin-top:20px"><h2 id="shop-h" style="font-size:1.35rem;margin:0 0 6px">Parts named in {brand} codes</h2><p>Parts the {brand} codes above point to. Check your model's manual before buying{furn?', and leave gas and venting work to a licensed pro':''}.</p>
 <ul class="parts">{shop.map(p=><li><span>{p.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={p.href} aria-label={`Shop on Amazon: ${p.name} (sponsored link, opens in a new tab)`}>Shop on Amazon</a></li>)}</ul><p class="disc">Shop links open Amazon search results for the part name. {AMAZON_STATEMENT}</p></section>}
+<p style="margin-top:18px"><a class="btn btn-o" href={`/parts/for/${cat.slug}/${first.brandSlug}/`}>Parts and tools for {brand} {noun} codes →</a></p>
 <p class="srcline" style="margin-top:20px">Source: {srcs.length===1 ? <SourceLine e={srcs[0]} /> : srcs.length>1 ? 'see the sources listed above' : `${brand} manual`} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p>
 <div class="gasbar"><span class="w">{cat.bar[0]}</span><span>{cat.bar[1]}</span></div>
 </div>

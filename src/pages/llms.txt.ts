@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { groupCodes, CATEGORIES } from '../config/categories';
+import { PARTS } from '../data';
 export async function GET() {
   const codes = (await getCollection('codes')).filter(c => !c.data.example).map(c => c.data);
   const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
@@ -13,6 +14,10 @@ Information only; not professional advice. Gas, venting, refrigerant, high-volta
 
 ## Guides
 ${guides.map(g => `- [${g.data.title}](${s}/guides/${g.id}/): ${g.data.description}`).join('\n')}
+
+## Parts and tools guides
+- [All parts and tools guides](${s}/parts/): what each part, tool or supply named in the manuals is, how to choose and test it
+${PARTS.map(p => `- [${p.name}](${s}/parts/${p.slug}/): ${p.summary}`).join('\n')}
 
 ## Equipment categories
 ${CATEGORIES.filter(c => groups.some(g => g.cat.slug === c.slug)).map(c => `- [${c.name} error codes](${s}${c.hub}): ${groups.filter(g => g.cat.slug === c.slug).reduce((n, g) => n + g.codes.length, 0)} codes`).join('\n')}

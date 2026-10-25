@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import { CATEGORIES } from '../../config/categories';
+import { PARTS, partUrl, partsCatUrl } from '../../lib/partLinks';
+const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:'Parts and tools guides',url:'https://thefaultcode.com/parts/',
+  breadcrumb:{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Parts and tools',item:'https://thefaultcode.com/parts/'}]}};
+---
+<Base title="Parts and Tools Guides for Furnaces, Washers, Dishwashers and AC | The Fault Code" description={`${PARTS.length} plain-English guides to the parts, tools and supplies named in manufacturer error-code manuals: what each is, how to choose, test and replace it, and when to call a pro.`} jsonld={jsonld}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Parts and tools</li></ol></nav>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{PARTS.length} guides</p><h1>Parts and tools guides</h1><p>Each guide explains one part, tool or supply that appears in the manufacturer manuals behind our error-code pages: what it does, which codes name it, how to choose one, how it is tested and when a technician should handle it. Where a guide has shopping links, they are Amazon links and we earn a commission on qualifying purchases; the guides themselves stay the same either way. <a href="/affiliate-disclosure/">Affiliate disclosure</a>.</p></div>
+{CATEGORIES.map(c => { const list = PARTS.filter(p => p.cats.includes(c.slug)); return <section aria-labelledby={`h-${c.slug}`}><h2 class="cat-h" id={`h-${c.slug}`}>{c.name}<small>{list.length} guides · <a href={partsCatUrl(c.slug)}>Parts and tools for {c.noun} codes</a></small></h2>
+<div class="pt-grid">{list.map(p => <div class="card"><div class="pt-kind">{p.kind}</div><a class="t" href={partUrl(p.slug)}>{p.name}</a><p style="margin:4px 0 0;font-size:.92rem">{p.summary}</p></div>)}</div></section>; })}
+<div class="gasbar"><span class="w">Safety</span><span>Gas, venting, high-voltage and refrigerant work belongs to a licensed technician. These guides explain parts; they are not repair instructions for gas appliances.</span></div>
+</div></Base>

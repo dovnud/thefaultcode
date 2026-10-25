@@ -278,3 +278,14 @@ a.badge:focus-visible{outline:3px solid var(--led,#ff7a1a);outline-offset:3px}
 .parts li>a:only-child{display:flex;align-items:center;flex:1;min-height:44px}
 .parts li:has(>a:only-child){padding:0}
 .cat-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:26px 0 12px;font-size:1.5rem}.cat-h:first-child{margin-top:0}.cat-h a{color:var(--ink);display:inline-flex;align-items:center;min-height:44px}.cat-h small{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.shoplinks{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}.shoplinks .btn{text-transform:none;letter-spacing:0;font-size:.85rem;text-align:left}
+.shoplinks .btn.pd{border-color:var(--ink);font-weight:700}
+.pt-why{font-size:.92rem;color:var(--steel);margin:2px 0 0}.pt-why q{color:var(--ink)}
+.pt-item{border-top:1px dashed var(--rule2);padding:12px 0}.pt-item:first-of-type{border-top:0}
+.pt-item h3 a{display:inline-flex;align-items:center;min-height:44px}
+.pt-note{font-size:.88rem;margin:6px 0 0}
+.pt-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:14px 0}
+.pt-grid .card a.t{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.pt-list{list-style:none;padding:0;margin:8px 0}.pt-list li a{display:inline-flex;align-items:center;min-height:44px}
+.pt-kind{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}
+.pt-card-h a,.card.sec>h2>a,.card.sec>h3>a{display:inline-flex;align-items:center;min-height:44px}

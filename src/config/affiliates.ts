@@ -28,6 +28,11 @@ export function amazonLink(term: string): string {
   return `https://www.amazon.com/s?k=${encodeURIComponent(term)}&tag=${AMAZON_TAG}`;
 }
 
+/** Direct Amazon product link. Only for ASINs whose exact listing title was verified (see src/data/parts.ts). */
+export function amazonAsinLink(asin: string): string {
+  return `https://www.amazon.com/dp/${asin}?tag=${AMAZON_TAG}`;
+}
+
 // partKey (from src/content/codes/*.json) -> generic Amazon search term.
 // Only keys listed here get a "Shop on Amazon" button. Deliberately NOT listed: 'gas-valve'
 // (gas train work is for licensed technicians only, so we do not push people to buy one).

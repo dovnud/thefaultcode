@@ -22,7 +22,7 @@ const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:`$
 <div class="grid g5">{groups.map((g,i)=><a class="card brand-card" href={g.href}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {cat.noun} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div>
 <h2 class="rel-h" style="margin-top:28px">Codes we cover</h2>
 <div class="grid g3" style="margin-top:12px">{codes.map(c=><a class="card code-card" href={codePath(c)}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {typeLabel(c)}</span><p class="cm">{c.meaning}</p></a>)}</div>
-<p class="srcline" style="margin-top:20px">Every page links its source · Updated <time datetime={updated}>{fmtDate(updated)}</time> · <a href="/codes/">Search every category</a></p>
+<p class="srcline" style="margin-top:20px"><a href={`/parts/for/${slug}/`}>Parts and tools for {cat.noun} codes</a> · Every page links its source · Updated <time datetime={updated}>{fmtDate(updated)}</time> · <a href="/codes/">Search every category</a></p>
 <div class="gasbar"><span class="w">{cat.bar[0]}</span><span>{cat.bar[1]}</span></div>
 </div>
 </Base>
