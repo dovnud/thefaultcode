@@ -1,5 +1,5 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from '../layouts/Base.astro'; import CatIcon from './CatIcon.astro';
 import { allCodes } from '../lib/paths'; import { titleCase, groupCodes, catBySlug, codePath, typeLabel, searchText } from '../config/categories';
 import { fmtDate } from '../config/site';
 const { cat: slug } = Astro.props; const cat = catBySlug(slug);
@@ -18,7 +18,7 @@ const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:`$
 <Base title={`${titleCase(cat.label)} Error Codes: Meanings & Fixes | The Fault Code`} description={`${codes.length} ${cat.label} error codes (${groups.map(g=>g.brand).join(', ')}): what each means, likely causes and how to fix it safely. From manufacturer manuals.`} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">{cat.name}</li></ol></nav>
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{codes.length} codes · {groups.length} brand{groups.length===1?'':'s'}</p><h1>{cap(cat.label)} error codes</h1><p>{INTRO[slug]}</p></div>
+<div class="page-h ph"><span class="ph-ic" aria-hidden="true"><CatIcon slug={slug} size={46} /></span><div class="ph-b"><p class="kicker" style="color:var(--sig-ink);margin:0">{codes.length} codes · {groups.length} brand{groups.length===1?'':'s'}</p><h1>{cap(cat.label)} error codes</h1><p>{INTRO[slug]}</p></div></div>
 <h2 class="sr-only">Brands</h2>
 <div class="grid g5">{groups.map((g,i)=><a class="card brand-card" href={g.href}><div class="tag">B-{String(i+1).padStart(2,'0')}</div><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {cat.noun} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div>
 <h2 class="rel-h" style="margin-top:28px">Codes we cover</h2>

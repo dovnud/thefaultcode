@@ -1,5 +1,5 @@
 ---
-import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.astro';
+import Base from '../layouts/Base.astro'; import CatIcon from './CatIcon.astro'; import SourceLine from './SourceLine.astro';
 import { fmtDate } from '../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../config/affiliates';
 import { titleCase, catOf, typeLabel, brandPath, codePath, searchText } from '../config/categories';
 const { codes } = Astro.props;
@@ -15,8 +15,8 @@ const srcs = [...new Map(codes.filter(c=>c.sourceManualUrl).map(c=>[c.sourceManu
 <Base title={bTitle.length>52?bTitle:`${bTitle} | The Fault Code`} description={`${brand} ${noun} error ${furn?'and flash ':''}codes: what all ${codes.length} codes mean, likely causes and how to fix them safely, from ${furn?'the manufacturer manual':'official manufacturer documentation'}.`} jsonld={jsonld} affLinks={shop.length>0} amazon={shop.length>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={cat.hub}>{cat.name}</a></li><li aria-current="page">{brand}</li></ol></nav>
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>{brand} {noun} error codes</h1><p>{intro}{srcs.length===1 && <> <SourceLine e={srcs[0]} />.</>}</p>
-{srcs.length>1 && <p class="srcline">Sources: {srcs.map((c,i)=><>{i>0&&' · '}<SourceLine e={c} short /></>)}</p>}</div>
+<div class="page-h ph"><span class="ph-ic" aria-hidden="true"><CatIcon slug={cat.slug} size={46} /></span><div class="ph-b"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>{brand} {noun} error codes</h1><p>{intro}{srcs.length===1 && <> <SourceLine e={srcs[0]} />.</>}</p>
+{srcs.length>1 && <p class="srcline">Sources: {srcs.map((c,i)=><>{i>0&&' · '}<SourceLine e={c} short /></>)}</p>}</div></div>
 <form class="filter-row" role="search" aria-label={`Filter ${brand} ${noun} codes`}><label class="sr-only" for="f">Filter {brand} {noun} codes</label><input class="filter" id="f" data-filter type="search" autocomplete="off" placeholder={`Filter ${brand} codes, e.g. ${furn?'flame or 33':codes[0].code.toLowerCase()+' or drain'}`} /><span class="count" id="f-count" role="status" aria-live="polite">{codes.length} codes</span></form>
 <div class="grid g3" id="g" style="margin-top:18px">{codes.map(c=><a class="card code-card" href={codePath(c)} data-s={searchText(c)}><span class="cc">{c.code}</span><span class="cb">{typeLabel(c)}</span><p class="cm">{c.meaning}</p><div class="badges">{c.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}</div></a>)}</div>
 <div class="f-empty" id="f-empty" hidden><strong>No {brand} code matches that.</strong> <span>Clear the filter, or <a href="/codes/">search every brand</a>.</span></div>
