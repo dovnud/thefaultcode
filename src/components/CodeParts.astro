@@ -1,0 +1,15 @@
+---
+import { guidesForCode, compactLinks, partUrl } from '../lib/partLinks';
+import { AMAZON_STATEMENT } from '../config/affiliates';
+const { e } = Astro.props;
+const items = guidesForCode(e).slice(0, 6).map(g => ({ ...g, links: g.shop ? compactLinks(g.part, e.brand, `${e.brandSlug}/${e.codeSlug}`) : [] }));
+---
+{items.length > 0 && <section class="card sec" id="parts-tools" aria-labelledby="pt-h"><h2 id="pt-h">Parts &amp; tools for this fix</h2>
+<p>Each item comes from this code's own causes or steps. Links marked <strong>Search</strong> open Amazon search results; none of them confirms a fit for your model, so check your model number and manual first.</p>
+{items.map(g => <div class="pt-item"><h3><a href={partUrl(g.part.slug)}>{g.part.name}: guide</a></h3>
+<p class="pt-why">{g.tech ? 'Technician step in this code: ' : 'In this code: '}<q>{g.why}</q></p>
+{g.links.length > 0 ? <div class="shoplinks">{g.links.map(l => <a class={`btn btn-o btn-sm${l.kind === 'asin' ? ' pd' : ''}`} rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`${l.kind === 'asin' ? 'Amazon product page' : 'Amazon search'}: ${l.label} (sponsored link, opens in a new tab)`}>{l.kind === 'asin' ? '' : 'Search: '}{l.label}</a>)}</div>
+: <p class="pt-note">{g.part.shop ? 'This one is for a technician to test or replace, so we only explain it and do not link to buy it.' : 'A safety device: we explain it but do not link to buy one.'}</p>}
+</div>)}
+{items.some(g => g.links.length > 0) && <p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+</section>}

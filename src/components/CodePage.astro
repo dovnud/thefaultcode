@@ -1,5 +1,6 @@
 ---
-import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.astro';
+import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.astro'; import CodeParts from './CodeParts.astro';
+import { guidesForCode, compactLinks } from '../lib/partLinks';
 import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate } from '../config/site';
 import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
 const { e, related } = Astro.props;
@@ -21,7 +22,8 @@ const jsonld = [{ '@context':'https://schema.org','@type':'FAQPage', mainEntity:
 const split = (s)=>{const m=s.match(/^Technician:\s*(.*)$/i); return m?{tech:true,t:m[1]}:{tech:false,t:s}};
 const pro = affiliates.proReferral;
 const shop = e.parts.map(p=>({...p,href:affiliates.amazon.url(p.partKey)}));
-const hasAmazon = shop.some(p=>p.href);
+const ptLinks = guidesForCode(e).slice(0,6).some(g=>g.shop && compactLinks(g.part,e.brand,`${e.brandSlug}/${e.codeSlug}`).length>0);
+const hasAmazon = shop.some(p=>p.href) || ptLinks;
 const hasAff = hasAmazon || (pro.enabled && cat.kind==='hvac');
 const loc = proLocator(e);
 const showPro = pro.enabled && cat.kind==='hvac';   // the Angi button is HVAC-only and stays off until approved
@@ -52,11 +54,12 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <section class="card sec procard" id="call-a-pro" data-critical><h2><span class="num">§3</span>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?(cat.kind==='hvac'?'This code usually needs a licensed technician.':'This code usually needs a qualified appliance technician.'):'Call a pro if the steps above do not clear the code.')}</p>
 {showPro ? <a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a> : loc && <a class="btn btn-p" rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a>}</section>
+<CodeParts e={e} />
 {related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h"><span class="num">§4</span>{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{c.meaning}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
 </article>
 <aside class="side" data-critical>
 {e.parts.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts mentioned</h2><p>Parts named in the causes above. Match the part to your model's manual before buying anything.</p>
-<ul class="parts">{shop.map(p=><li><span>{p.name}</span>{p.href && <a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={p.href} aria-label={`${affiliates.amazon.label}: ${p.name} (sponsored link, opens in a new tab)`}>{affiliates.amazon.label}</a>}</li>)}</ul>{hasAmazon && <p class="disc">Shop links open Amazon search results for the part name. {AMAZON_STATEMENT}</p>}</div>}
+<ul class="parts">{shop.map(p=><li><span>{p.name}</span>{p.href && <a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={p.href} aria-label={`${affiliates.amazon.label}: ${p.name} (sponsored link, opens in a new tab)`}>{affiliates.amazon.label}</a>}</li>)}</ul>{shop.some(p=>p.href) && <p class="disc">Shop links open Amazon search results for the part name. {AMAZON_STATEMENT}</p>}</div>}
 <div class="card box" id="technician"><h2 style="font-size:1.35rem;margin:0 0 6px">{cat.techTitle}</h2><p>{cat.techText}</p>{showPro ? <a class="btn btn-p btn-block" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label}</a> : loc && <><a class="btn btn-p btn-block" rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a><p class="disc">{locatorNote(e,loc)}</p></>}</div>
 <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Source</h2><div class="meta"><SourceLine e={e} />{e.moreSources.map(s=><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a>)}<span class="mono" style="font-size:.8rem">Last updated <time datetime={e.updated}>{fmtDate(e.updated)}</time></span><a href="/affiliate-disclosure/">Affiliate disclosure</a></div></div>
 </aside>
