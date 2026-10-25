@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "31",
+  "codeSlug": "31",
+  "displayPattern": "Status LED: 3 short flashes then 1 long flash (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control)",
+  "meaning": "High pressure switch open: the unit steps down capacity for each occurrence and elevates to fault 84 if it happens on the lowest stage. Reset time is 6 minutes.",
+  "causes": [
+    "The manual says to refer to fault 84 for causes: high outdoor or indoor load/airflow problems, overcharge, closed service valve, restriction in the filter drier or expansion device, loose or disconnected pressure switch, faulty pressure switch"
+  ],
+  "diySteps": [
+    "Check the outdoor coil for clogging by ice or debris and clean or de-ice it if necessary (the manual also says to troubleshoot the outdoor fan motor)",
+    "Technician: follow the fault 84 table (charge, service valves, filter drier, expansion device, pressure switch harness and connection)"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 31 repeats or escalates to 84.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "updated": "2026-10-25"
+}

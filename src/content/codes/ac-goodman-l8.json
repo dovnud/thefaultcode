@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "L8",
+  "codeSlug": "l8",
+  "displayPattern": "Outdoor control display reads L8 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "Low line voltage: the supply voltage to the outdoor unit is below the specified range.",
+  "causes": [
+    "Low supply voltage",
+    "Tripped breaker or blown fuse",
+    "Unit not wired as specified on the rating plate"
+  ],
+  "diySteps": [
+    "Check that the circuit breaker has not tripped (outdoor disconnect and main panel); the manual says to check circuit breakers and fuses and verify the unit is connected as specified on the rating plate",
+    "Technician: correct the low line voltage condition and contact the local utility if needed; if voltage is within specification, replace the board"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician; contact your utility if the supply voltage is low.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

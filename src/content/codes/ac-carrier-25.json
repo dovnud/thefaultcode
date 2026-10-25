@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "25",
+  "codeSlug": "25",
+  "displayPattern": "Status LED: 2 short flashes then 5 long flashes (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control)",
+  "meaning": "Invalid model plug / inverter size: the control does not accept the model plug for this inverter.",
+  "causes": [
+    "Missing model plug",
+    "Wrong model plug installed",
+    "Damaged model plug",
+    "Model plug not fully engaged on the board",
+    "Model plug does not match the inverter size (for example a 2 ton plug on a 3 ton inverter)",
+    "Damaged AOC control"
+  ],
+  "diySteps": [
+    "Technician: install or verify the correct model plug, check it for corrosion or breakage and check its resistance per the wiring diagram",
+    "Technician: align the plug per the silkscreen layout; replace the plug or inverter with the correct size, or replace the AOC control if it is damaged"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: this is a configuration fault on the outdoor control board.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "04",
+  "codeSlug": "04",
+  "displayPattern": "Outdoor control display reads 04 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "Locked rotor: the compressor is not turning properly.",
+  "causes": [
+    "Compressor failure or bearing problem",
+    "Failed run capacitor",
+    "Low line voltage or wiring problem"
+  ],
+  "diySteps": [
+    "Technician: confirm high voltage to the system is within specification, check the run capacitor and replace it if bad, and check wiring",
+    "Technician: check compressor operation and repair or replace as needed"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: do not keep resetting the breaker, since a locked rotor stresses the compressor.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

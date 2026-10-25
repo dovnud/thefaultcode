@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "83",
+  "codeSlug": "83",
+  "displayPattern": "Status LED: 8 short flashes then 3 long flashes (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control)",
+  "meaning": "Low pressure lockout for 4 hours, elevated from fault 32 after 3 occurrences.",
+  "causes": [
+    "Service valve left closed",
+    "Undercharged system",
+    "Low indoor airflow (cooling) or low outdoor airflow (heating)",
+    "EXV or TXV malfunction",
+    "Reversing valve bypass",
+    "Restriction in the filter drier, expansion device, circuits or tubing",
+    "Uninsulated vapor line (cooling)"
+  ],
+  "diySteps": [
+    "In cooling mode, check the indoor coil for clogging by ice or debris and clean or de-ice it if necessary (the manual also says to troubleshoot the indoor fan motor)",
+    "Check the outdoor coil for clogging by ice or debris and clean or de-ice it if necessary (the manual also says to troubleshoot the outdoor fan motor)",
+    "Technician: make sure the service valves are open; check charge with the manufacturer's charging method; troubleshoot the EXV/TXV and reversing valve; check for a restriction"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: lockout 83 involves refrigerant charge, valves and expansion devices.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "01 / L1",
+  "codeSlug": "01-l1",
+  "displayPattern": "Outdoor control display reads 01 or L1 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "Low pressure cutout: the low pressure switch tripped 3 times within the same thermostat call, so the compressor and outdoor fan are off.",
+  "causes": [
+    "Open low pressure switch",
+    "Low refrigerant charge or a restriction",
+    "Low indoor airflow",
+    "Thermostat setting",
+    "Supply voltage problem"
+  ],
+  "diySteps": [
+    "Check the thermostat setting and look for anything restricting indoor airflow (the manual says to verify indoor airflow, charge and thermostat setting)",
+    "Technician: check the resistance of the low pressure switch; read the pressure on a gauge and replace the switch if the pressure is not low",
+    "Technician: if the pressure is low, verify indoor airflow and refrigerant charge, and check voltage wires (involve the electric company if needed)"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: low pressure lockouts involve refrigerant and pressure readings.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

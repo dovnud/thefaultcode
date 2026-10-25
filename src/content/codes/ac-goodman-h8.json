@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "H8",
+  "codeSlug": "h8",
+  "displayPattern": "Outdoor control display reads H8 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "High line voltage: the unit may seem to run normally, but the compressor protector may be open (compressor and outdoor fan off).",
+  "causes": [
+    "Supply voltage above the specified range"
+  ],
+  "diySteps": [
+    "Technician: check that the voltage to the system is within specification; if not, check the voltage wires and involve the electric company if necessary",
+    "Technician: if the voltage is within specification, replace the board"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician (and the electric company if the supply voltage is high).",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

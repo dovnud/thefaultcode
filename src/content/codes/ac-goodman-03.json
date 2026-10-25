@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "03",
+  "codeSlug": "03",
+  "displayPattern": "Outdoor control display reads 03 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "Short cycling: the outdoor unit is cycling on and off too quickly.",
+  "causes": [
+    "Intermittent thermostat or thermostat wiring problem",
+    "Compressor relay or control board problem",
+    "Loose low-voltage connections",
+    "Main power or ground problem"
+  ],
+  "diySteps": [
+    "Technician: verify low voltage between R and Y; if it fluctuates between 24 V and 0, check the thermostat and thermostat wiring and repair or replace as needed",
+    "Technician: if the system does not stay running, check low-voltage connections and the compressor relay; replace the control if needed, and check main power and ground"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician to trace the thermostat wiring and control board.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

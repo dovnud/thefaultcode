@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "d2",
+  "codeSlug": "d2",
+  "displayPattern": "Outdoor control display flashes d2 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "System mismatch: the outdoor and indoor units are not an acceptable combination, or the airflow trim settings are set to a prohibited value.",
+  "causes": [
+    "Outdoor and indoor units not a certified combination",
+    "Required airflow (CFM) exceeds the indoor unit's maximum",
+    "Connected indoor unit is not an EEV type"
+  ],
+  "diySteps": [
+    "Technician: check that the outdoor and indoor units are a certified combination on the AHRI website; if not, replace to a certified combination",
+    "Technician: make sure the airflow trim settings have not been set to a prohibited value"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician or the installer: d2 points to the equipment pairing or airflow settings.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

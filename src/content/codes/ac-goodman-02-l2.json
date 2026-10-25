@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "02 / L2",
+  "codeSlug": "02-l2",
+  "displayPattern": "Outdoor control display reads 02 or L2 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "High side fault: four consecutive compressor protector trips with average run time between trips of more than 1 minute and less than 15 minutes, with the low and high pressure switches closed.",
+  "causes": [
+    "High pressure on the system",
+    "Dirty condenser coil or failed outdoor fan motor",
+    "Failed capacitor or wiring fault"
+  ],
+  "diySteps": [
+    "Technician: check the resistance of the high pressure switch and cycle power if it is open; replace the switch if pressure is not high",
+    "Technician: if pressure is high, check and clean the condenser coil, check the outdoor fan motor, the capacitor and the wiring, and repair or replace as needed"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: the repeated compressor protector trips can damage the compressor.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

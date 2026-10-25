@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "E5",
+  "codeSlug": "e5",
+  "displayPattern": "Outdoor or indoor control display reads E5 (ASXC/DSXC/GSXC AC and ASZC/DSZC/GSZC heat pump outdoor units with the integrated control module)",
+  "meaning": "Open fuse: the low-voltage fuse on the control is blown.",
+  "causes": [
+    "Blown fuse",
+    "Short in the low-voltage wiring"
+  ],
+  "diySteps": [
+    "Technician: check the fuse for continuity and replace it if open",
+    "Technician: check the low-voltage wiring for a short and correct it; if there is no short, replace the board"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician: a blown fuse usually means a short somewhere in the low-voltage wiring.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Service and Troubleshooting: ASXC/DSXC/GSXC condensing units and ASZC/DSZC/GSZC heat pumps (RS6200007 r27, hosted by Daikin Comfort)",
+  "updated": "2026-10-25"
+}

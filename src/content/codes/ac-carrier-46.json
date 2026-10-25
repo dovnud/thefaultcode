@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "46",
+  "codeSlug": "46",
+  "displayPattern": "Status LED: 4 short flashes then 6 long flashes (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control)",
+  "meaning": "Brownout event: low line voltage reaching the unit. Reset time is 6 minutes.",
+  "causes": [
+    "Low line voltage",
+    "Bad connection on L1 and L2",
+    "Inverter not reading proper voltage"
+  ],
+  "diySteps": [
+    "Technician: check for line voltage of more than approximately 180 V; if it is less than 180 V and persists, contact the power provider",
+    "Technician: check the connections on the line and load side; if nothing else is found, replace the inverter"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician, and your power provider if the supply voltage is persistently low.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "updated": "2026-10-25"
+}
