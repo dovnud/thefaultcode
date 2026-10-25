@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["filter", "limit-switch", "flame-sensor", "pressure-switch", "thermostat"],
  "title": "Furnace Short Cycling: Causes and What to Check",
  "description": "Why a gas furnace turns on and off too often, the fault codes that often go with it, and safe checks before calling a technician.",
  "answer": "Short cycling means the furnace starts, runs briefly, and shuts off over and over. On a gas furnace this is often a safety control stopping the burners, such as an overheating limit switch from restricted airflow, or a flame-sensing problem. Start with the air filter and registers, then check the control board code.",

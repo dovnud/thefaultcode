@@ -40,6 +40,16 @@
       "name": "Rollout switch",
       "partKey": "rollout-switch",
       "searchTerm": "furnace rollout switch"
+    },
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    },
+    {
+      "name": "Blower motor capacitor",
+      "partKey": "capacitor",
+      "searchTerm": "furnace blower motor capacitor"
     }
   ],
   "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",

@@ -24,6 +24,11 @@
       "name": "Pressure switch",
       "partKey": "pressure-switch",
       "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
     }
   ],
   "sourceManualUrl": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",

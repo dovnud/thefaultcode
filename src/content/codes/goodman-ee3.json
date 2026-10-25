@@ -33,6 +33,11 @@
       "name": "High limit switch",
       "partKey": "limit-switch",
       "searchTerm": "furnace high limit switch"
+    },
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
     }
   ],
   "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",

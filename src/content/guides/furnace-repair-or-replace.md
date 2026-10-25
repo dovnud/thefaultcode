@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["filter", "flame-sensor"],
  "title": "Furnace Repair or Replace: How to Decide",
  "description": "Factors to weigh when deciding whether to repair or replace a gas furnace, based on U.S. Department of Energy and ENERGY STAR guidance.",
  "answer": "There is no single rule, but the U.S. Department of Energy suggests considering replacement if your furnace or boiler is more than 15 years old, needs frequent repairs while energy bills rise, or leaves some rooms too hot or cold. Get a licensed technician's diagnosis and a written quote, and compare it with the cost and efficiency (AFUE) of a new unit.",

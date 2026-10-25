@@ -33,6 +33,11 @@
       "name": "Hot surface igniter",
       "partKey": "igniter",
       "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Fine steel wool",
+      "partKey": "steel-wool",
+      "searchTerm": "fine steel wool"
     }
   ],
   "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",

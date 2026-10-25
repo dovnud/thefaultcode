@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["pressure-switch", "pressure-hose", "inducer"],
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",

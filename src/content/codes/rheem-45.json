@@ -39,6 +39,11 @@
       "name": "Inducer motor",
       "partKey": "inducer",
       "searchTerm": "furnace inducer motor"
+    },
+    {
+      "name": "Control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
     }
   ],
   "sourceManualUrl": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",

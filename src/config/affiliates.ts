@@ -43,7 +43,23 @@ export const AMAZON_PARTS: Record<string, string> = {
   'control-board': 'furnace control board',
   'fuse': 'furnace control board 5 amp fuse',
   'thermostat': 'furnace thermostat',
+  'blower-motor': 'furnace blower motor',
+  'capacitor': 'furnace blower motor capacitor',
+  'steel-wool': 'fine steel wool',
 };
+
+/** Display labels for guide / brand-page shop boxes (code pages use the part name stored in each code's JSON). */
+export const AMAZON_LABELS: Record<string, string> = {
+  'flame-sensor': 'Flame sensor', 'pressure-switch': 'Pressure switch', 'pressure-hose': 'Pressure switch hose',
+  'igniter': 'Hot surface igniter', 'inducer': 'Inducer motor', 'filter': 'Furnace air filter',
+  'limit-switch': 'High limit switch', 'rollout-switch': 'Rollout switch', 'control-board': 'Control board',
+  'fuse': 'Control board fuse', 'thermostat': 'Thermostat', 'blower-motor': 'Blower motor',
+  'capacitor': 'Blower motor capacitor', 'steel-wool': 'Fine steel wool',
+};
+
+/** Build [{key,name,href}] for partKeys that have an Amazon search term (gas valve etc. are deliberately omitted). */
+export const amazonShop = (keys: string[]) =>
+  [...new Set(keys)].filter(k => AMAZON_PARTS[k]).map(k => ({ key: k, name: AMAZON_LABELS[k] ?? k, href: affiliates.amazon.url(k) })).filter(x => x.href);
 
 // Official manufacturer dealer/contractor locators (NOT affiliate links, plain links with rel="noopener").
 // Used as the fallback "find a pro" button when affiliates.proReferral.enabled is false.

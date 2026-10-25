@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["filter", "pressure-switch", "rollout-switch", "flame-sensor", "thermostat"],
  "title": "Why Is My Furnace Blinking a Code?",
  "description": "What a blinking light on your furnace means, which faults are most often behind it, and what you can safely check yourself.",
  "answer": "A blinking light on a furnace control board is a status or fault code. The board is telling you that a safety circuit tripped or a component did not respond as expected, for example a limit, pressure switch, ignition or flame sensing fault. Note the pattern, look it up for your brand, and do only the safe checks before calling a pro.",

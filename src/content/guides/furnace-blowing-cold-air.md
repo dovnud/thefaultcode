@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["filter", "limit-switch", "thermostat", "control-board"],
  "title": "Furnace Blowing Cold Air: Common Causes",
  "description": "Why a gas furnace blows cold or room-temperature air, from thermostat fan settings to limit and ignition faults, and what to check.",
  "answer": "A furnace blowing cold air usually means the blower is running while the burners are not. That can be a thermostat fan set to ON instead of AUTO, or a fault where the burners shut down but the blower keeps running to cool the furnace, such as an open limit switch or a failed ignition. Check the thermostat and filter, then read the control board code.",

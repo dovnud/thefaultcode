@@ -29,6 +29,11 @@
       "name": "Pressure switch hose",
       "partKey": "pressure-hose",
       "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
     }
   ],
   "sourceManualUrl": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf",

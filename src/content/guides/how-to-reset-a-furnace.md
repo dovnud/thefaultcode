@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["rollout-switch", "thermostat"],
  "title": "How to Reset a Gas Furnace Safely",
  "description": "When and how to reset a gas furnace after a lockout, what the manuals say about automatic resets, and when not to reset.",
  "answer": "Many furnace lockouts clear on their own after a set time, or when power or the thermostat call is interrupted briefly. Rheem, for example, says a soft lockout can be reset by turning off the furnace power or the thermostat for 5 to 10 seconds. Do not keep resetting a furnace that locks out again, and never reset a tripped rollout switch without finding the cause.",

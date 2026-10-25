@@ -41,6 +41,11 @@
       "name": "Pressure switch",
       "partKey": "pressure-switch",
       "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
     }
   ],
   "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",

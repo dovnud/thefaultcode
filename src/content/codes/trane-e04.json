@@ -40,6 +40,11 @@
       "name": "Rollout switch",
       "partKey": "rollout-switch",
       "searchTerm": "furnace rollout switch"
+    },
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
     }
   ],
   "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",

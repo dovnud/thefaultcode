@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["flame-sensor", "steel-wool"],
  "title": "Furnace Flame Sensor: Symptoms, Codes and Cleaning",
  "description": "What a furnace flame sensor does, the codes that point to it, what the manuals say about cleaning it, and safety cautions.",
  "answer": "The flame sensor is a metal rod in the burner flame that tells the control board the gas has lit. If it is coated, the board may not sense flame and will shut the gas off, often a few seconds after ignition. Carrier's manual lists oxide build-up on the flame sensor and says to clean it with fine steel wool; Rheem recommends cleaning it at the start of each heating season by a qualified installer or service agency.",

@@ -1,5 +1,6 @@
 ---
 {
+ "shop": ["control-board", "limit-switch"],
  "title": "How to Read a Furnace LED Flash Code",
  "description": "How to find and read the blinking LED or display code on a gas furnace control board, with brand-by-brand examples from the manuals.",
  "answer": "Most modern gas furnaces have a control board that reports faults with a blinking LED or a small digit display, seen through a window in the blower door. Count the flashes (or read the characters), then look the code up in the chart printed inside your furnace door or in its manual. The same number can mean different things on different brands, so always match the code to your brand and model.",

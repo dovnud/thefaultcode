@@ -39,6 +39,11 @@
       "name": "Gas valve",
       "partKey": "gas-valve",
       "searchTerm": "furnace gas valve"
+    },
+    {
+      "name": "Fine steel wool",
+      "partKey": "steel-wool",
+      "searchTerm": "fine steel wool"
     }
   ],
   "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
