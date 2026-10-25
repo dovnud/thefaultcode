@@ -454,3 +454,7 @@ main>.wrap:last-child{padding-bottom:64px}
 @media (max-width:600px){.ph{grid-template-columns:1fr;gap:14px}.ph-ic{width:64px;height:64px;box-shadow:3px 3px 0 var(--sig)}.ph-ic .cat-ic{width:36px;height:36px}}
 .site-f ul{gap:0}.site-f li a,.site-f .f-site li a{min-height:44px}
 .site-f li a{min-width:44px}
+.hint{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px;line-height:1.4}
+.hint a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;padding:0 2px}
+@media (max-width:960px){.hero .wrap{padding-top:48px;padding-bottom:88px}}
+@media (max-width:600px){.hero .wrap{padding-top:32px;padding-bottom:80px}}
