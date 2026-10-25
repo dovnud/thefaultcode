@@ -1,4 +1,5 @@
 ---
+import { ORG } from '../config/site';
 import Base from '../layouts/Base.astro'; import HeroGrid from '../components/HeroGrid.jsx'; import StatCounter from '../components/StatCounter.jsx'; import { getCollection } from 'astro:content'; import { groupCodes, CATEGORIES, codePath, typeLabel } from '../config/categories';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
 const groups = groupCodes(codes);
@@ -7,7 +8,7 @@ const cats = CATEGORIES.filter(c=>groups.some(g=>g.cat.slug===c.slug));
 const featured = [...groups.filter(g=>g.cat.slug==='furnaces').flatMap(g=>g.codes.slice(0,1)), ...groups.filter(g=>g.cat.slug!=='furnaces').flatMap(g=>g.codes.slice(0,1))].slice(0,12);
 const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33'&&c.equipmentType==='furnace');
 const guides = (await getCollection('guides')).slice(0,3);
-const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/'};
+const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/',publisher:ORG};
 ---
 <Base title="The Fault Code: Furnace, Washer, Dishwasher & AC Error Codes" description="Look up furnace, washing machine, dishwasher and AC / heat pump error codes. Plain-English meanings, likely causes and safe next steps from manufacturer manuals and official support pages." jsonld={jsonld}>
 <section class="hero">

@@ -1,6 +1,30 @@
 ---
 import Base from "../layouts/Base.astro";
+import { fmtDate, ORG, EDITORIAL, SITE_URL, CONTACT_EMAIL } from "../config/site";
+import { siteUpdated } from "../lib/lastmod";
+import { allCodes } from "../lib/paths";
+const codes = await allCodes(); const updated = siteUpdated();
+const brands = new Set(codes.map(c => c.brandSlug)).size;
+const jsonld = [
+ { '@context':'https://schema.org', '@type':'Organization', ...ORG, description:'An independent reference site that explains furnace, washing machine, dishwasher and AC / heat pump fault codes using manufacturer manuals and official support pages.',
+   contactPoint: CONTACT_EMAIL ? { '@type':'ContactPoint', contactType:'customer support', email:CONTACT_EMAIL, url:`${SITE_URL}/contact/` } : undefined },
+ { '@context':'https://schema.org', '@type':'AboutPage', name:'About The Fault Code', url:`${SITE_URL}/about/`, dateModified:updated, publisher:{ '@id': ORG['@id'] }, about:{ '@id': ORG['@id'] } },
+ { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:`${SITE_URL}/`},{'@type':'ListItem',position:2,name:'About',item:`${SITE_URL}/about/`}] }];
 ---
-<Base title="About | The Fault Code" description="How The Fault Code works: furnace, washer, dishwasher and AC / heat pump error codes taken from manufacturer manuals and official support pages, nothing guessed, with safety guidance and a link to the source on every page.">
-<div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav><div class="card" style="margin-top:12px"><h1>About</h1><p>This site lists error codes for furnaces, washing machines, dishwashers and AC / heat pumps and what they mean, taken from the manufacturers' installation and service manuals or official support pages. Each code page links to the document it came from.</p><p>We only publish codes we could check against a manufacturer manual or official support page. If we could not read or confirm a code, we left it out.</p><p>This is general information, not professional advice. Gas furnaces can be dangerous. If you smell gas, leave the building and call your gas utility. For anything beyond basic checks, call a licensed HVAC technician (or a qualified appliance technician for washers and dishwashers).</p><p>Browse <a href="/codes/">all codes</a> or read the <a href="/guides/">guides</a> (currently furnace-focused).</p><p>Found a mistake? Check the linked manual for your exact model; manuals vary by model and revision.</p></div></div>
+<Base title="About | The Fault Code" description="How The Fault Code works: furnace, washer, dishwasher and AC / heat pump error codes taken from manufacturer manuals and official support pages, nothing guessed, with safety guidance and a link to the source on every page." jsonld={jsonld}>
+<div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav><div class="card" style="margin-top:12px"><h1>About</h1><p class="meta-l">Written by {EDITORIAL} · Last updated <time datetime={updated}>{fmtDate(updated)}</time></p>
+<p>This site lists error codes for furnaces, washing machines, dishwashers and AC / heat pumps and what they mean, taken from the manufacturers' installation and service manuals or official support pages. Each code page links to the document it came from.</p>
+<h2>Who writes it</h2>
+<p>The Fault Code is written and maintained by an independent editorial team under one name, {EDITORIAL}. We are not a repair company, and no page is reviewed or endorsed by a manufacturer. Pages are not signed by an individual, and we do not claim any professional license or technical review beyond checking the text against the linked manufacturer document.</p>
+<h2>How we source codes</h2>
+<ol><li><strong>Manufacturer documents only.</strong> Every meaning comes from an installation, service or user manual or an official support page from the brand itself. The exact document is linked on each code page and in the <a href="/data/">dataset</a>.</li><li><strong>Nothing guessed.</strong> If a code could not be found and read in a manufacturer document, we left it out instead of filling the gap.</li><li><strong>Plain-English summaries.</strong> We summarize the manual's wording; likely causes and basic checks follow the manual where it gives them, and every page says when to call a professional.</li><li><strong>Dated.</strong> Each page shows when it was last updated. Manuals vary by model and revision, so check the linked document for your exact model.</li></ol>
+<p>Right now the site covers {codes.length} codes across {brands} brands. Browse <a href="/codes/">all codes</a>, read the <a href="/guides/">guides</a> (currently furnace-focused) or the <a href="/parts/">parts and tools guides</a>.</p>
+<h2>Open data</h2>
+<p>The full list of codes, meanings and source links is available as a <a href="/data/">citable dataset</a> with <a href="/data/fault-codes.csv">CSV</a> and <a href="/data/fault-codes.json">JSON</a> downloads.</p>
+<h2>Safety</h2>
+<p>This is general information, not professional advice. Gas furnaces can be dangerous. If you smell gas, leave the building and call your gas utility. For anything beyond basic checks, call a licensed HVAC technician (or a qualified appliance technician for washers and dishwashers).</p>
+<h2>Funding</h2>
+<p>Some links go to Amazon or other retailers and may earn us a commission at no cost to you. This never changes what a code means. See the <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+<h2>Corrections</h2>
+<p>Found a mistake? Check the linked manual for your exact model, then tell us{CONTACT_EMAIL && <> at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> or via the <a href="/contact/">contact page</a></>}.</p></div></div>
 </Base>
