@@ -4,8 +4,12 @@ import { getCollection } from 'astro:content';
 import { CONTACT_EMAIL } from '../config/site';
 import { AMAZON_STATEMENT } from '../config/affiliates';
 import { CATEGORIES, groupCodes } from '../config/categories';
+import { ogSpecs, ogPath } from '../lib/og';
 const { title, description, jsonld, noindex = false, ogType = 'website', affLinks = false, amazon = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const _og = (await ogSpecs()).get(Astro.url.pathname);
+const ogImg = new URL(_og ? ogPath(Astro.url.pathname) : '/og/home.png', Astro.site).href;
+const ogAlt = _og?.alt ?? 'The Fault Code: furnace, washer, dishwasher and AC error codes explained';
 const all = (await getCollection('codes')).filter(c=>!c.data.example);
 const groups = groupCodes(all.map(c=>c.data));
 const cats = CATEGORIES.filter(c=>groups.some(g=>g.cat.slug===c.slug));
@@ -17,7 +21,7 @@ const year = new Date().getFullYear();
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>{title}</title><meta name="description" content={description}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}
 <meta name="theme-color" content="#2a2a27"/><script is:inline>document.documentElement.classList.add("js")</script><link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
-<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content={ogType}/><meta property="og:locale" content="en_US"/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="The Fault Code: furnace, washer, dishwasher and AC error codes explained"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={new URL('/og.png', Astro.site).href}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content={ogType}/><meta property="og:locale" content="en_US"/><meta property="og:image" content={ogImg}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={ogAlt}/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={ogImg}/><meta name="twitter:image:alt" content={ogAlt}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +38,7 @@ const year = new Date().getFullYear();
 <div class="cols">
 <div><a class="logo" href="/"><span class="logo-mark" aria-hidden="true">E-00</span><span>The Fault Code<small>Fault code field manual</small></span></a><p>Furnace, washer, dishwasher and AC error codes in plain English, taken from manufacturer manuals and official support documentation. Information only; always follow your unit's manual and local codes.</p></div>
 <div><h2>Codes by type</h2><ul>{groups.map(g=><li><a href={g.href}>{g.brand} {g.cat.slug==='furnaces'?'furnace':g.cat.nav.replace('AC & heat pumps','AC / heat pump').replace(/s$/,'')} codes</a></li>)}</ul></div>
-<div><h2>Site</h2><ul><li><a href="/codes/">All codes</a></li><li><a href="/guides/">Guides</a></li><li><a href="/parts/">Parts and tools</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
+<div><h2>Site</h2><ul><li><a href="/codes/">All codes</a></li><li><a href="/guides/">Guides</a></li><li><a href="/parts/">Parts and tools</a></li><li><a href="/data/">Dataset (CSV, JSON)</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
 </div>
 <div class="legal">{affLinks && <p style="margin:0 0 6px">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.{amazon && <>{" "}{AMAZON_STATEMENT}</>}</p>}If you smell gas, leave the building and call your gas utility from outside. For any appliance, unplug it or switch it off at the breaker before servicing. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
 </div></footer>
