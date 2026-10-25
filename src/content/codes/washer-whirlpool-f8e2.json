@@ -1,0 +1,24 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "F8 E2",
+  "codeSlug": "f8e2",
+  "displayPattern": "Front-load washer display shows F8 E2 (select models)",
+  "meaning": "Dispenser system problem: the detergent drawer or detergent cartridge may be clogged.",
+  "causes": [
+    "Detergent drawer or cartridge clogged with detergent"
+  ],
+  "diySteps": [
+    "Check that the detergent drawer or detergent cartridge is not clogged with detergent and clean it (Whirlpool has a separate \"How do I clean my washer dispensers?\" guide)"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If F8 E2 returns after cleaning, contact Whirlpool or schedule service online.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "updated": "2026-10-25"
+}

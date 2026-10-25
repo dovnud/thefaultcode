@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "tCL",
+  "codeSlug": "tcl",
+  "displayPattern": "Washer display shows tCL",
+  "meaning": "Tub Clean reminder: it is time to run the Tub Clean cycle. This is a maintenance reminder, not a fault.",
+  "causes": [
+    "The washer is prompting you to run the monthly Tub Clean cycle"
+  ],
+  "diySteps": [
+    "Empty the tub and pour in powder washing machine cleaner (sold near the detergent in most retail stores)",
+    "Power the washer on, turn the knob to Tub Clean (or press the Tub Clean button) and start the cycle",
+    "To skip it, turn the cycle selector knob or press the option buttons to choose another cycle. The tCL message can continue for a few cycles",
+    "Run Tub Clean monthly to keep it from coming back"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "No repair needed; the message clears once Tub Clean has been run.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washing machine cleaner",
+      "partKey": "washer-cleaner",
+      "searchTerm": "washing machine cleaner tub clean"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

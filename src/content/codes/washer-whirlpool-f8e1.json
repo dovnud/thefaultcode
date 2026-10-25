@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "F8 E1",
+  "codeSlug": "f8e1",
+  "displayPattern": "Front-load washer display shows F8 E1 or LO FL",
+  "meaning": "Low water flow: the washer is sensing a low flow of water.",
+  "causes": [
+    "Household water supply or hot/cold faucets not fully open",
+    "Kinked water inlet hoses",
+    "Anti-flood hoses or controls in the water line"
+  ],
+  "diySteps": [
+    "Check the household water supply is on and both the cold and hot faucets or valves are fully open",
+    "Check the water inlet hoses are not kinked",
+    "Check there are no anti-flood hoses or controls in the water line connected to the washer",
+    "Press the Pause or Cancel button twice and the Power button once to clear the code"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the code returns after these checks, Whirlpool says to contact it or schedule service online.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washer water inlet hoses",
+      "partKey": "washer-fill-hose",
+      "searchTerm": "washing machine water inlet hoses"
+    }
+  ],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "updated": "2026-10-25"
+}

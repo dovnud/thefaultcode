@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "SUd",
+  "codeSlug": "sud",
+  "displayPattern": "Washer display shows SUd (also shown as 5UD, Sd, 5d, SUdS or 5Ud5 on some models)",
+  "meaning": "Excessive suds error: the washer detected over-sudsing and stops for a short period to let the suds dissipate, then continues the cycle automatically.",
+  "causes": [
+    "Incorrect use of detergent (too much, or a non-HE detergent)"
+  ],
+  "diySteps": [
+    "Let the washer pause; the cycle continues automatically afterwards, and the code may flash again at the end as a reminder",
+    "Next time use less detergent and make sure it is HE detergent"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "Samsung says this code does not indicate that service is needed.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "HE laundry detergent",
+      "partKey": "he-detergent",
+      "searchTerm": "HE high efficiency laundry detergent"
+    }
+  ],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "updated": "2026-10-25"
+}

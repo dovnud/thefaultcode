@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "CE",
+  "codeSlug": "ce",
+  "displayPattern": "Washer display shows CE",
+  "meaning": "Motor over-current error: there is an over-current in the motor's electrical circuit.",
+  "causes": [
+    "Short circuit",
+    "Loose connection",
+    "Ground fault",
+    "Power surge"
+  ],
+  "diySteps": [
+    "Unplug the washer for 10 seconds",
+    "Plug it back in and try to run a cycle"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If CE persists, close the water tap, unplug the washer and request LG repair service; LG says the unit will need repair.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

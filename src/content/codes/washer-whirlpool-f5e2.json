@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "F5 E2",
+  "codeSlug": "f5e2",
+  "displayPattern": "Front-load washer display shows F5 E2",
+  "meaning": "Door error: the door is not locking properly.",
+  "causes": [
+    "Item blocking the door",
+    "Door not closing completely"
+  ],
+  "diySteps": [
+    "Check that no items are blocking the door and that it closes completely",
+    "Press the Pause or Cancel button twice and the Power button once to clear the code"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the code returns, Whirlpool says to check your owner's manual for your model, contact Whirlpool, or schedule service online.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "OE",
+  "codeSlug": "oe",
+  "displayPattern": "Washer display shows OE (also shown as E03 or E21 on some models)",
+  "meaning": "Drain error: the washer is unable to drain the water used during the wash cycle.",
+  "causes": [
+    "Kinked or clogged drain hose",
+    "Clogged drain pump filter",
+    "Too many suds, which create air pockets the drain pump cannot clear (the pump ends up pulling air instead of water)"
+  ],
+  "diySteps": [
+    "Check behind the washer and make sure the drain hose is not kinked or clogged; after clearing it, run a spin cycle to see whether the code is gone",
+    "If the hose is fine, test the drain pump: press POWER, press SPIN SPEED until HIGH is selected, then press START/PAUSE to run a SPIN ONLY cycle and listen for a humming sound (and draining water) during the first 15 seconds",
+    "If you hear the hum, the pump motor is working, so clean the drain pump filter. If you drain residual water through the drain tube, keep the tube outside the unit and screw the cap back on securely",
+    "Run a TUB CLEAN cycle after clearing debris, and use less detergent, because excess suds can also trigger OE",
+    "Run a new cycle to check whether the code has cleared"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "Request LG service if OE appears again after the hose, filter and Tub Clean checks; LG says the unit may then need a repair.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washer drain hose",
+      "partKey": "washer-drain-hose",
+      "searchTerm": "washing machine drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "4C",
+  "codeSlug": "4c",
+  "displayPattern": "Washer display shows 4C (also shown as 1 4C, nF or 4E on some models)",
+  "meaning": "Not filling error: water is not entering the washer correctly.",
+  "causes": [
+    "Hot and cold supply hoses connected to the wrong inlets, or hot not connected (the error can appear even on cycles labeled Cold)",
+    "Supply hoses bent or kinked",
+    "Water valves not fully open",
+    "Drain hose not inserted properly or kinked",
+    "Debris blocking the inlet filters"
+  ],
+  "diySteps": [
+    "Make sure the hot and cold supply hoses go to the correct inlets (hot to hot, cold to cold) and are not bent or kinked. Do not use Flood Safe hoses",
+    "Open the water valves completely and leave them open while the washer runs",
+    "Check the drain hose is inserted properly and not kinked (6 to 8 inches into the drain pipe). Do not remove the screw on the back that holds the drain hose",
+    "Unplug the washer or flip its breaker for 1 minute, restore power and try a cycle",
+    "To check for debris, turn the supply valves off, disconnect the hoses from the back of the washer, look inside the connections and carefully clean the filters; open the valves fully again after reconnecting"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If 4C continues, Samsung says to request service through its Support Center.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washer water inlet hoses",
+      "partKey": "washer-fill-hose",
+      "searchTerm": "washing machine water inlet hoses"
+    }
+  ],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "updated": "2026-10-25"
+}

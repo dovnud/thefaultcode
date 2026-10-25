@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "UE",
+  "codeSlug": "ue",
+  "displayPattern": "Washer display shows UE",
+  "meaning": "Unbalanced load error: laundry is piled on one side of the drum and the washer could not even it out.",
+  "causes": [
+    "Laundry not evenly distributed, for example from incorrect use of a laundry net",
+    "Load too large or too small",
+    "Items not suited to machine washing (pillows, cushions, bathroom mats, carpets, electric blankets, curtains, rubber mats)",
+    "Washer not level"
+  ],
+  "diySteps": [
+    "Pause the washer, take the laundry out and spread it evenly in the drum, then choose an appropriate spin cycle",
+    "Aim for a load of about 2/3 of the drum capacity",
+    "Wash blankets with the Duvet cycle and padded or down jackets with the Sportswear cycle, both at medium spin speed",
+    "If you use a laundry net, fill it only to 2/3 and wash two or three nets together with some clothes rather than one net alone",
+    "Rock the washer from the front, back and side to check for unevenness; adjust the leg on the side the unit tilts with a wrench until the legs sit firmly on the floor, and check with a level on the top plate"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If UE keeps returning on a level washer with a normal load, request LG service.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

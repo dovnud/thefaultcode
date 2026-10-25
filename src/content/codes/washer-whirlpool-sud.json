@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "Sud",
+  "codeSlug": "sud",
+  "displayPattern": "Front-load washer display shows Sud or Sd",
+  "meaning": "Too many suds: the washer cannot spin out water with excess suds, so it extends the rinse and pauses tumbling to let the bubbles break.",
+  "causes": [
+    "Non-HE detergent",
+    "\"No splash\" or \"easy pour\" liquid chlorine bleach (it contains a thickening agent that can create suds)",
+    "Restricted drain hose or standpipe"
+  ],
+  "diySteps": [
+    "Let the pause and extra rinse run; it may happen several times to clear the suds",
+    "Make sure you are using HE (high efficiency) detergent",
+    "If you used \"no splash\" or \"easy pour\" liquid chlorine bleach, run the washer with regular liquid bleach instead",
+    "Make sure the drain hose is not kinked or clogged"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "This is usually a detergent or drain-hose issue; if it persists, contact Whirlpool or schedule service online.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "HE laundry detergent",
+      "partKey": "he-detergent",
+      "searchTerm": "HE high efficiency laundry detergent"
+    },
+    {
+      "name": "Washer drain hose",
+      "partKey": "washer-drain-hose",
+      "searchTerm": "washing machine drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "updated": "2026-10-25"
+}

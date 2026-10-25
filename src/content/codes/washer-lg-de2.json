@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "dE2",
+  "codeSlug": "de2",
+  "displayPattern": "Washer display shows dE2 (also shown as E30 on some models)",
+  "meaning": "Door closed but not locked: the washer detects the door as closed, but it did not lock.",
+  "causes": [
+    "Washer overloaded",
+    "Items caught between the door and the rubber gasket",
+    "Door latch bent or broken"
+  ],
+  "diySteps": [
+    "Check the door area for anything that stops the door closing securely",
+    "Open and re-close the door",
+    "Reset the washer: power it off, unplug it or flip the circuit breaker, press and hold START/PAUSE for 5 seconds with the power off, then restore power and try again"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If dE2 or E30 persists, request LG service (a bent or broken latch needs repair).",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

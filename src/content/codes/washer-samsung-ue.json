@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "UE",
+  "codeSlug": "ue",
+  "displayPattern": "Washer display shows UE (also shown as Ub, U6, Ur, 1 Ub or 1U6 on some models)",
+  "meaning": "Unbalanced load error: the load is unbalanced inside the tub. Ur means the washer will add water, try to rebalance the load and retry the spin; Ur does not mean there is a problem.",
+  "causes": [
+    "Unbalanced or tangled load in the tub"
+  ],
+  "diySteps": [
+    "Untangle and rearrange the laundry so it is more balanced in the tub",
+    "Close the door and restart the cycle (press Start)"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If you keep getting this error, follow Samsung's \"Washer won't spin\" guide.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "F7 E1",
+  "codeSlug": "f7e1",
+  "displayPattern": "Front-load washer display shows F7 E1",
+  "meaning": "Motor speed sensing error: the motor cannot reach the correct speed for the selected cycle.",
+  "causes": [
+    "Shipping bolts still installed",
+    "Washer overloaded"
+  ],
+  "diySteps": [
+    "Check that all the shipping bolts have been removed",
+    "Check the washer has not been overloaded",
+    "Press the Pause or Cancel button twice and the Power button once to clear the code"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the code returns after these checks, Whirlpool says to contact it or schedule service online.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "Sud",
+  "codeSlug": "sud",
+  "displayPattern": "Washer display shows Sud",
+  "meaning": "Excess suds detected: the washer adds a suds-reducing cycle (about 2 hours extra) and, if suds appear during spinning, stops to help prevent leaking.",
+  "causes": [
+    "More detergent than the manufacturer recommends",
+    "Non-HE detergent",
+    "Powder detergent placed in the liquid detergent cup"
+  ],
+  "diySteps": [
+    "Use no more than the manufacturer's recommended amount of detergent, and cut it back until the sudsing stops",
+    "Use high efficiency (HE) detergent. For liquid detergent, fill only to the Max line; for powder, remove the liquid detergent cup",
+    "If you use pods, put one pod directly in the drum before loading laundry (no more than 1 per load) and never in the dispenser drawer"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "This is a detergent-use issue, not a repair; if it continues after you reduce detergent, request LG service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "HE laundry detergent",
+      "partKey": "he-detergent",
+      "searchTerm": "HE high efficiency laundry detergent"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

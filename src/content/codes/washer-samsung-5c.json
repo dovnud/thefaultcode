@@ -1,0 +1,43 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "5C",
+  "codeSlug": "5c",
+  "displayPattern": "Washer display shows 5C (also shown as nd, 5E, SE, SC or 1 5C on some models)",
+  "meaning": "No drain error: water is not draining from the washer at the correct speed, or at all.",
+  "causes": [
+    "Washer not level",
+    "Drain hose installed incorrectly (Samsung calls this the most common reason for drain issues)",
+    "Clogged pump filter (front loaders)"
+  ],
+  "diySteps": [
+    "If a hot cycle (such as Pure Cycle or Sanitize) ran recently, wait about an hour for the water to cool before you start",
+    "Turn the washer off and check that it is level",
+    "Check the drain hose: it should go no less than 6 inches and no more than 8 inches into the standpipe or sink, be secured so it cannot slip lower, not form an airtight connection, not be kinked, bent or damaged, be at least 18 inches high (24 inches for wash basins) and no higher than 96 inches (35 inches for wash basins), and not use a drain hose extension kit",
+    "Do not remove the screw on the back of the washer that holds the drain hose against the washer; if it was removed, screw it and the holder back in with any screw that fits",
+    "Front loaders: clean the pump filter",
+    "Turn the washer back on and start a cycle; it should drain at the start"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If it still does not drain at the start of the test cycle, Samsung says to request service through its Support Center.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washer drain hose",
+      "partKey": "washer-drain-hose",
+      "searchTerm": "washing machine drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "updated": "2026-10-25",
+  "moreSources": [
+    {
+      "name": "Samsung: Washing machine will not drain",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10007110/"
+    }
+  ]
+}

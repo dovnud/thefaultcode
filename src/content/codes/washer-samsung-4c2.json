@@ -1,0 +1,24 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "4C2",
+  "codeSlug": "4c2",
+  "displayPattern": "Washer display shows 4C2 (also shown as 4E2, CE, 14C2 or nF1 on some models)",
+  "meaning": "Hot/cold error: the water from the cold supply is extremely hot because the supply hoses are swapped.",
+  "causes": [
+    "Cold supply connected to the hot inlet and hot supply connected to the cold inlet"
+  ],
+  "diySteps": [
+    "Connect the cold supply to the cold inlet and the hot supply to the hot inlet (typically blue to blue and red to red)"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "Samsung says this code does not indicate that service is needed.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "updated": "2026-10-25"
+}

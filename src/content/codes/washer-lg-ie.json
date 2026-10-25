@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "IE",
+  "codeSlug": "ie",
+  "displayPattern": "Washer display shows IE (also shown as E02 or E10 on some models)",
+  "meaning": "Water inlet error: the tub did not fill to an adequate level within the set time.",
+  "causes": [
+    "Water supply cut off, faucet turned off, or the supply hose is not connected",
+    "Supply hose pressed or bent",
+    "Supply hose or faucet frozen in cold weather",
+    "Possible fault in the water supply valve if the checks below do not fix it"
+  ],
+  "diySteps": [
+    "Check that the water supply hose is connected to the faucet and that the faucet is open (turn it anti-clockwise to open)",
+    "Unfold the supply hose if it is pressed or bent (the washer can shift during washing and spinning and bend it)",
+    "In freezing weather, disconnect the hose from the washer and open the faucet to see whether water comes out. If not, wrap a towel soaked in hot water around the faucet for 5 minutes, and thaw the disconnected hose with warm water at 50°C (122°F) or lower. Reconnect only when it is completely free of ice",
+    "Clean the water supply filter: turn the faucet off, separate the hose end, pull the filter out with your fingers or pincers, remove rust, sand or stones, and put the filter back before reconnecting the hose"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If IE remains after these checks, LG says the water supply valve may be malfunctioning; request LG service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washer water inlet hoses",
+      "partKey": "washer-fill-hose",
+      "searchTerm": "washing machine water inlet hoses"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

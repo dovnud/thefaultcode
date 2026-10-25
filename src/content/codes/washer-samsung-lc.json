@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "LC",
+  "codeSlug": "lc",
+  "displayPattern": "Washer display shows LC (also shown as 1E, LE, 1C, LC1, 1 1C or 1 LC on some models)",
+  "meaning": "Water level or leakage error: moisture is detected somewhere it should not be, or there is an issue with the sensor itself.",
+  "causes": [
+    "A leak, sometimes so small it goes unnoticed",
+    "Kinked supply or drain hose",
+    "Too much detergent or non-HE detergent creating suds"
+  ],
+  "diySteps": [
+    "Look for evidence of a leak; if you find one, fixing the leak fixes the error",
+    "Check that the supply hoses and drain hose behind the washer are not kinked. Do not remove the screw on the back that holds the drain hose against the washer",
+    "Run an empty cycle with no additives (detergent, fabric softener, etc.) and watch for suds. If they appear, too much detergent or a non-HE detergent has been used; keep running empty cycles until the suds are gone, then check whether the code returns"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If no suds appear but the code continues, Samsung says to request service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "HE laundry detergent",
+      "partKey": "he-detergent",
+      "searchTerm": "HE high efficiency laundry detergent"
+    }
+  ],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "updated": "2026-10-25"
+}

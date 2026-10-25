@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "LE",
+  "codeSlug": "le",
+  "displayPattern": "Washer display shows LE",
+  "meaning": "Motor error: the tub failed to spin, so the motor cannot operate properly.",
+  "causes": [
+    "Washer overloaded and the motor strained",
+    "Coin or foreign object stuck in the tub",
+    "Temporary error"
+  ],
+  "diySteps": [
+    "Unplug the power cord, wait 5 minutes and try the cycle again",
+    "Reduce the load and select the bedding cycle for a heavy load or large blankets",
+    "Turn off the power, unload the washer and look for a coin or other object stuck in the tub; remove it with pliers or tweezers"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the washer keeps showing LE, unplug it and contact LG service.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

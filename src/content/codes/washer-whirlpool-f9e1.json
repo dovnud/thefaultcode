@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "F9 E1",
+  "codeSlug": "f9e1",
+  "displayPattern": "Front-load washer display shows F9 E1",
+  "meaning": "Slow drain: drain times are longer than expected, typically over eight minutes.",
+  "causes": [
+    "Kinked or clogged drain hose",
+    "Drain hose not set up with the U-shaped form, or standpipe height outside the allowed range",
+    "Excess suds slowing the drain"
+  ],
+  "diySteps": [
+    "Make sure the drain hose is not kinked or clogged",
+    "Use the U-shaped drain hose form on the drain hose",
+    "Check the standpipe (drainpipe) height: 39 in (99 cm) minimum and 96 in (244 cm) maximum",
+    "Use HE (high efficiency) detergent, since excessive suds can also delay draining"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the code returns after these checks, contact Whirlpool or schedule service online.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Washer drain hose",
+      "partKey": "washer-drain-hose",
+      "searchTerm": "washing machine drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "updated": "2026-10-25"
+}

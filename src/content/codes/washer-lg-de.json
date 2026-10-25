@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "dE",
+  "codeSlug": "de",
+  "displayPattern": "Washer display shows dE, dE1 or E01",
+  "meaning": "Door error: the door is not closed properly, so the washer could not lock it.",
+  "causes": [
+    "Laundry caught between the door and the rubber door gasket",
+    "Door not fully closed"
+  ],
+  "diySteps": [
+    "Open and re-close the door, making sure nothing is trapped in the gasket",
+    "Reset the washer: power it off, unplug it or flip the circuit breaker, press and hold START/PAUSE for 5 seconds with the power off, then restore power and try again"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If dE, dE1 or E01 continues after the reset, LG says service will be required.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}

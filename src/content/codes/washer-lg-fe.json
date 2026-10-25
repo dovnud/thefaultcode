@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "FE",
+  "codeSlug": "fe",
+  "displayPattern": "Washer display shows FE (also shown as E04 or E12 on some models)",
+  "meaning": "Overfill error: too much water has entered the drum. The drain pump runs to prevent leaks.",
+  "causes": [
+    "Extra water entering the drum, possibly through the detergent dispenser"
+  ],
+  "diySteps": [
+    "Check whether extra water is being supplied through the detergent dispenser",
+    "Unplug the washer, wait 60 seconds and restart it",
+    "Start a Quick 30 program; if the program does not start with a drain action, stop it and turn the washer off"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If FE, E04 or E12 persists, LG says the unit will require service.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "updated": "2026-10-25"
+}
