@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import { allCodes } from '../../lib/paths';
 import { CATEGORIES, catOf, codePath, catBySlug } from '../../config/categories';
 import { AMAZON_STATEMENT } from '../../config/affiliates';
+import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../../config/site';
+import { lastmodFor } from '../../lib/lastmod';
 import { PARTS, partBySlug, fullLinks, usage, partUrl, partsCatUrl, partsBrandUrl } from '../../lib/partLinks';
 export function getStaticPaths(){ return PARTS.map(p=>({params:{slug:p.slug},props:{p}})); }
 const { p } = Astro.props;
@@ -13,7 +15,8 @@ const L = fullLinks(p, brands);
 const nLinks = L.products.length + L.searches.length + L.byBrand.length;
 const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
 const url = `https://thefaultcode.com/parts/${p.slug}/`;
-const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:p.name,description:p.summary,author:{'@type':'Organization',name:'The Fault Code editorial team'},publisher:{'@type':'Organization',name:'The Fault Code',url:'https://thefaultcode.com/'},mainEntityOfPage:url},
+const updated = lastmodFor(`/parts/${p.slug}/`)!;
+const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:p.name,description:p.summary,dateModified:updated,author:EDITORIAL_AUTHOR,publisher:ORG,mainEntityOfPage:url},
  {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Parts and tools',item:'https://thefaultcode.com/parts/'},{'@type':'ListItem',position:3,name:p.name,item:url}]}];
 const byBrand = [...used.reduce((m,c)=>m.set(c.brand,[...(m.get(c.brand)??[]),c]),new Map())].slice(0,8);
 const related = p.related.map(partBySlug).filter(Boolean);
@@ -23,7 +26,7 @@ const brandLinks = [...new Map(used.map(c=>[`${catOf(c).slug}/${c.brandSlug}`,c]
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li aria-current="page">{p.name}</li></ol></nav>
 {nLinks>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Parts and tools · {p.kind}</p><h1>{p.name}</h1><p>{p.summary}</p></div>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Parts and tools · {p.kind}</p><h1>{p.name}</h1><p>{p.summary}</p><p class="meta-l">By {EDITORIAL} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
 <div class="layout"><article>
 <section class="card sec guide"><h2>What it is</h2>{p.what.map(t=><p>{t}</p>)}</section>
 <section class="card sec guide"><h2>How to choose</h2><ul>{p.choose.map(t=><li>{t}</li>)}</ul></section>

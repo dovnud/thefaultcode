@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { fmtDate } from '../../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import { catOf, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks';
+import Base from '../../layouts/Base.astro'; import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import { catOf, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks';
 export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
 const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
 const url = `https://thefaultcode.com/guides/${g.id}/`;
@@ -8,7 +8,7 @@ const shop = amazonShop(d.shop);
 const pg = [...new Set((d.shop??[]).map(slugForKey).filter(Boolean))].map(partBySlug).filter(Boolean);
 const others = (await getCollection('guides')).filter(o=>o.id!==g.id).slice(0,4);
 const jsonld = [
- {'@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,dateModified:d.updated,author:{'@type':'Organization',name:'The Fault Code editorial team'},publisher:{'@type':'Organization',name:'The Fault Code',url:'https://thefaultcode.com/'},mainEntityOfPage:url},
+ {'@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,dateModified:d.updated,author:EDITORIAL_AUTHOR,publisher:ORG,mainEntityOfPage:url},
  {'@context':'https://schema.org','@type':'FAQPage',mainEntity:d.faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))},
  {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Guides',item:'https://thefaultcode.com/guides/'},{'@type':'ListItem',position:3,name:d.title,item:url}]}];
 ---
@@ -16,7 +16,7 @@ const jsonld = [
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
 
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Field guide</p><h1>{d.title}</h1><p class="meta-l">By The Fault Code editorial team · Updated <time datetime={d.updated}>{fmtDate(d.updated)}</time></p></div>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Field guide</p><h1>{d.title}</h1><p class="meta-l">By {EDITORIAL} · Updated <time datetime={d.updated}>{fmtDate(d.updated)}</time></p></div>
 <div class="layout"><article>
 <div class="card" data-critical style="border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)"><div class="lbl">Short answer</div><p style="font-weight:600;font-size:1.1rem;margin:6px 0 0">{d.answer}</p></div>
 <div class="card sec guide"><Content /></div>
