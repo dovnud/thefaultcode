@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import { datasetRows } from '../../lib/dataset';
+import { siteUpdated } from '../../lib/lastmod';
+import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR, SITE_URL, CONTACT_EMAIL } from '../../config/site';
+const rows = await datasetRows();
+const updated = siteUpdated();
+const brands = new Set(rows.map(r => r.brand)).size;
+const cats = [...new Set(rows.map(r => r.category))];
+const url = `${SITE_URL}/data/`;
+const title = 'Fault Code Dataset: CSV and JSON | The Fault Code';
+const description = `All ${rows.length} fault codes on The Fault Code as a citable table with brand, category, code, meaning and the manufacturer source link. Free CSV and JSON downloads.`;
+const jsonld = [
+ { '@context':'https://schema.org','@type':'Dataset', name:'The Fault Code: appliance and HVAC fault code reference',
+   description:`${rows.length} fault and flash codes for ${cats.join(', ').toLowerCase()} across ${brands} brands. Each record gives the brand, equipment category, code, display pattern, meaning, and a link to the manufacturer manual or support page the meaning was taken from.`,
+   url, creator:EDITORIAL_AUTHOR, publisher:ORG, dateModified:updated, isAccessibleForFree:true, inLanguage:'en',
+   keywords:['fault codes','error codes','furnace','washing machine','dishwasher','air conditioner','heat pump','HVAC'],
+   distribution:[
+    { '@type':'DataDownload', encodingFormat:'text/csv', contentUrl:`${SITE_URL}/data/fault-codes.csv` },
+    { '@type':'DataDownload', encodingFormat:'application/json', contentUrl:`${SITE_URL}/data/fault-codes.json` }] },
+ { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:`${SITE_URL}/`},{'@type':'ListItem',position:2,name:'Fault code dataset',item:url}] }];
+---
+<Base title={title} description={description} jsonld={jsonld}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Dataset</li></ol></nav>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Open data · {rows.length} records</p><h1>Fault code dataset</h1><p>Every fault code published on The Fault Code, in one table you can download, cite or load into a spreadsheet. Meanings are taken from the manufacturer manual or support page linked on each row.</p><p class="meta-l">By {EDITORIAL} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
+<section class="card sec guide" aria-labelledby="dl-h"><h2 id="dl-h">Download</h2>
+<p><a class="btn btn-p" href="/data/fault-codes.csv" download>Download CSV</a> <a class="btn btn-o" href="/data/fault-codes.json" download>Download JSON</a></p>
+<p>{rows.length} records, {brands} brands, {cats.length} categories ({cats.join(', ')}). Both files are generated from the same content as the code pages and rebuilt whenever a code changes. Columns: brand, category, equipment_type, code, display_pattern, meaning, professional_recommended, source_type, source_title, source_url, page_url, date_modified.</p></section>
+<section class="card sec guide" aria-labelledby="cite-h"><h2 id="cite-h">How to cite and reuse</h2>
+<p><strong>Suggested citation:</strong> {EDITORIAL}. “Fault code dataset.” The Fault Code, updated {fmtDate(updated)}. {url}</p>
+<p>The meanings summarize text from manufacturer documents that belong to their publishers; the source link on each row is the authoritative reference. We have not yet chosen a reuse license for this compilation, so none is declared here. To ask about reuse, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. This is general information, not professional advice; always check your exact model's manual.</p></section>
+<section class="card sec" aria-labelledby="tbl-h"><h2 id="tbl-h">All {rows.length} codes</h2>
+<table class="dtab"><thead><tr><th scope="col">Brand</th><th scope="col">Category</th><th scope="col">Code</th><th scope="col">Meaning</th><th scope="col">Source</th></tr></thead><tbody>
+{rows.map(r => <tr><td data-l="Brand">{r.brand}</td><td data-l="Category">{r.category}</td><td data-l="Code"><a href={String(r.page_url).replace(SITE_URL,'')}><span class="mono">{r.code}</span></a></td><td data-l="Meaning">{r.meaning}</td><td data-l="Source">{r.source_url ? <a href={String(r.source_url)} rel="noopener" target="_blank">{r.source_type === 'manufacturer support page' ? 'Support page' : 'Manual (PDF)'}<span class="sr-only"> for {r.brand} {r.code} (opens in a new tab)</span> ↗</a> : ''}</td></tr>)}
+</tbody></table></section>
+</div>
+</Base>
+<style>
+.dtab{width:100%;border-collapse:collapse;font-size:.93rem}
+.dtab th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--rule2);font-family:var(--mono,monospace);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}
+.dtab td{padding:9px 10px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.dtab td a{display:inline-block;min-height:28px;min-width:44px;padding:3px 6px;margin-left:-6px}
+@media (max-width:720px){.dtab thead{position:absolute;left:-9999px}.dtab tr{display:block;padding:10px 0;border-bottom:1px solid var(--rule2)}.dtab td{display:block;border:0;padding:3px 0}.dtab td::before{content:attr(data-l) ": ";font-family:var(--mono,monospace);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;opacity:.75}}
+</style>

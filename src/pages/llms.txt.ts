@@ -25,8 +25,14 @@ ${CATEGORIES.filter(c => groups.some(g => g.cat.slug === c.slug)).map(c => `- [$
 ## Brand code lists
 ${groups.map(g => `- [${g.brand} ${g.cat.noun} error codes](${s}${g.href}): ${g.codes.length} codes`).join('\n')}
 
+## Data
+- [Fault code dataset](${s}/data/): every published code with brand, category, meaning and manufacturer source link
+- [fault-codes.csv](${s}/data/fault-codes.csv): the same dataset as CSV
+- [fault-codes.json](${s}/data/fault-codes.json): the same dataset as JSON
+
 ## Other
-- [About](${s}/about/)
+- [About](${s}/about/): how codes are sourced, who writes the site
+- [Dataset](${s}/data/)
 - [Sitemap](${s}/sitemap-index.xml)
 `;
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
