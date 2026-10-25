@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "bE",
+  "codeSlug": "be",
+  "displayPattern": "Dishwasher display shows bE",
+  "meaning": "Bubble error: oversudsing was detected, and the dishwasher stops to prevent leaks.",
+  "causes": [
+    "Dish soap used",
+    "Too much detergent"
+  ],
+  "diySteps": [
+    "Do not use dish soap; use a small amount of liquid dishwasher detergent, or preferably powder or solid detergent made for dishwashers",
+    "To confirm oversudsing, run the dishwasher empty with no detergent; if suds and bE appear, the cause is improper detergent",
+    "To clear suds: set the rinse aid level to L0, add no detergent, put a bowl with 200 ml (7 oz) of milk in the middle of the upper rack, and run the Standard cycle with the Extra Dry and Rinse options. Repeat if suds remain, then restore your rinse aid level"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If bE appears without any suds, LG says to request service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher detergent",
+      "partKey": "dishwasher-detergent",
+      "searchTerm": "dishwasher detergent"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "updated": "2026-10-25"
+}

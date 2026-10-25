@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E16 / E17",
+  "codeSlug": "e16-e17",
+  "displayPattern": "Dishwasher display shows E16 or E17",
+  "meaning": "Water inflow problem: water may not be able to enter the dishwasher or the filling system.",
+  "causes": [
+    "Kinked or damaged inlet hose"
+  ],
+  "diySteps": [
+    "Check the inlet hose and make sure it is not kinked or damaged"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the hose is fine and the code remains, contact Bosch Customer Support.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher water supply line",
+      "partKey": "dishwasher-fill-hose",
+      "searchTerm": "dishwasher water supply line"
+    }
+  ],
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "updated": "2026-10-25"
+}

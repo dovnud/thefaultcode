@@ -1,0 +1,42 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "OC",
+  "codeSlug": "oc",
+  "displayPattern": "Dishwasher display shows OC (also shown as 0C or oE on some models)",
+  "meaning": "Over-level water error: there is more water in the dishwasher than there should be. Samsung covers it with the same drain and overflow troubleshooting as 5C.",
+  "causes": [
+    "Blocked sink drain or garbage disposal",
+    "Drain hose pinched, kinked, or missing an air gap or high loop",
+    "Dirty or incorrectly reassembled drain and filter area"
+  ],
+  "diySteps": [
+    "Check the sink drain and garbage disposal: if you use a disposal, make sure it is clear of food waste; if the dishwasher drains directly, look down the drain for a visible blockage; if the dishwasher or disposal was recently installed, make sure the disposal cap has been removed",
+    "Check the drain hose: right after installation, the most common cause is the dishwasher sitting on its own drain hose and pinching it shut. Also check the hose has an air gap or a \"high loop\" (part of the hose above its sink connection), and is not kinked or bent",
+    "Run water in the connected sink for about 30 seconds; if the sink does not drain, the problem is in the home's plumbing, so call a plumber",
+    "Clean the drain and filter area (removable parts are covered in your user manual) and reassemble it correctly, taking care with sharp debris",
+    "Make sure your drain line is not frozen; if it might be, let the area warm up (Samsung notes frozen lines are not covered under warranty service)"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If it still holds too much water after these checks, Samsung says to request service through its Support Center.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher drain hose",
+      "partKey": "dishwasher-drain-hose",
+      "searchTerm": "dishwasher drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "updated": "2026-10-25",
+  "moreSources": [
+    {
+      "name": "Samsung: Dishwasher is not draining",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004498/"
+    }
+  ]
+}

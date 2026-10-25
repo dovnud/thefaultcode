@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E25",
+  "codeSlug": "e25",
+  "displayPattern": "Dishwasher display shows E25",
+  "meaning": "Drain pump blocked, or the drain pump cover is loose or missing.",
+  "causes": [
+    "Blocked drain pump",
+    "Loose or missing pump cover"
+  ],
+  "diySteps": [
+    "Remove the filter completely to reveal the pump cover (underneath the filter) and check that the cover is not loose",
+    "To clear a blockage, pry the pump cover off with a spoon until it clicks, grip it and pull upward until you feel resistance, then pull forward to remove it. Remove debris and standing water with a sponge, taking care because some debris may be sharp"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If E25 remains, check your owner's manual or contact Bosch Customer Support.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "updated": "2026-10-25"
+}

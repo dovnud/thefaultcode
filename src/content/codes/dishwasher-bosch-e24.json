@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E24",
+  "codeSlug": "e24",
+  "displayPattern": "Dishwasher display shows E24",
+  "meaning": "Not draining properly: the drain filter is blocked.",
+  "causes": [
+    "Blocked drain filter",
+    "Loose pump cover under the filter",
+    "Plug still in the garbage disposal's dishwasher drain connection"
+  ],
+  "diySteps": [
+    "Check the inlet hose and make sure it is not kinked or damaged",
+    "Remove the filter to reveal the pump cover at the bottom of the dishwasher and make sure the cover is not loose (see your owner's manual if you cannot find it)",
+    "If the drain hose goes to a garbage disposal's dishwasher drain connection, make sure the plug has been removed from that connection"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If E24 remains after these checks, contact Bosch Customer Support.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher water supply line",
+      "partKey": "dishwasher-fill-hose",
+      "searchTerm": "dishwasher water supply line"
+    }
+  ],
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "updated": "2026-10-25"
+}

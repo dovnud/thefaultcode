@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "IE",
+  "codeSlug": "ie",
+  "displayPattern": "Dishwasher display shows IE",
+  "meaning": "Water inlet error: the specified amount of water was not supplied to the tub.",
+  "causes": [
+    "Water outage",
+    "Bent inlet hose",
+    "Closed water inlet valve (for example after installation)"
+  ],
+  "diySteps": [
+    "Check whether the kitchen and bathroom taps have water (a water outage can cause IE)",
+    "Make sure the inlet hose is not pressed or kinked, and straighten it; check for objects pressing on it",
+    "Open the sink cabinet and check the inlet valve connected to the dishwasher and the shut-off valve above it; open each by turning it anti-clockwise"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the valves are open and IE persists, LG says a service technician needs to inspect it; contact LG support (or your installer if it was newly installed).",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher water supply line",
+      "partKey": "dishwasher-fill-hose",
+      "searchTerm": "dishwasher water supply line"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "updated": "2026-10-25"
+}

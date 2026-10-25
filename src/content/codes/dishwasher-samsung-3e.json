@@ -1,0 +1,24 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "3E",
+  "codeSlug": "3e",
+  "displayPattern": "Dishwasher display shows 3E",
+  "meaning": "High temperature water supply error: the water is too hot.",
+  "causes": [
+    "Hot water supply set too high"
+  ],
+  "diySteps": [
+    "Verify the hot water supply is not set above 176°F"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If it isn't set that high but the error still occurs, Samsung says to request service.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "updated": "2026-10-25"
+}

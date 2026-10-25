@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "AE",
+  "codeSlug": "ae",
+  "displayPattern": "Dishwasher display shows AE (also shown as EI or FE on some models)",
+  "meaning": "Leakage or overfilling error: the water supply exceeded the standard amount or a leak was detected. The dishwasher keeps draining to protect the floor.",
+  "causes": [
+    "Too much water supplied",
+    "Oversudsing from dishwashing liquid",
+    "Unit not level or door not aligned",
+    "Leak detected",
+    "Water poured into the Heat Dry blower"
+  ],
+  "diySteps": [
+    "Load big plates and pots upside down",
+    "Use detergent made for dishwashers, not dishwashing liquid",
+    "If no water is leaking onto the floor but the error shows, unplug the dishwasher (use the switch or power strip that controls it) and request service",
+    "Do not pull out a built-in unit if you poured water into the Heat Dry blower; request service instead"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the unit is not level, or AE persists on a level unit, LG says to request service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher detergent",
+      "partKey": "dishwasher-detergent",
+      "searchTerm": "dishwasher detergent"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "1E",
+  "codeSlug": "1e",
+  "displayPattern": "Dishwasher display shows 1E or IE",
+  "meaning": "Clogged filter error (Waterwall models): water is not making it through the filter. On Rotary models the same code means high temperature in the heater.",
+  "causes": [
+    "Dirty fine filter (Waterwall models)",
+    "Temperature inside the dishwasher too hot (Rotary models)"
+  ],
+  "diySteps": [
+    "Waterwall models: clean the fine filter at the bottom of the dishwasher (see your user manual)",
+    "Rotary models: switch the power off at the circuit breaker for 30 seconds and back on, empty the dishwasher, fill the detergent drawer and start a Normal cycle"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the code returns after cleaning the filter (Waterwall) or the reset (Rotary), Samsung says to request service.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C4",
+  "codeSlug": "c4",
+  "displayPattern": "Dishwasher display shows C4",
+  "meaning": "The machine filled twice after a power failure: float switch stuck or failed, or clogged drain or sump.",
+  "causes": [
+    "Stuck or failed float switch",
+    "Clogged drain or sump"
+  ],
+  "diySteps": [
+    "Touch Start and then Cancel/Reset",
+    "Tap on the float cover to un-stick the float (the plastic cover that looks like an upside-down cup in the front left corner of the tub floor)",
+    "Check the sump area at the back bottom of the tub for debris (it looks like an upside-down silverware basket and can become clogged)"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the problem persists, contact GE service.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "updated": "2026-10-25"
+}

@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E22",
+  "codeSlug": "e22",
+  "displayPattern": "Dishwasher display shows E22",
+  "meaning": "Blocked filter: food particles have clogged the dishwasher filter, which needs cleaning regularly.",
+  "causes": [
+    "Food particles and debris in the filter"
+  ],
+  "diySteps": [
+    "Remove the filter and wash it under running water with mild soap and a soft brush to remove debris",
+    "Reinstall the filter (see your owner's manual for the full instructions)"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If E22 returns after cleaning the filter, check Bosch's E22 guide or contact Bosch Customer Support.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "updated": "2026-10-25"
+}

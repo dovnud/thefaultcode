@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "H2O",
+  "codeSlug": "h2o",
+  "displayPattern": "Dishwasher display shows H2O",
+  "meaning": "Low water situation.",
+  "causes": [
+    "Low water during the cycle"
+  ],
+  "diySteps": [
+    "If H2O appears only during a 1-Hour Wash cycle, schedule service; you can run any other cycle until service is done",
+    "If it appears during AutoSense, Heavy, Normal or Light cycles, double-check that the inlet water hose is not kinked"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If neither case applies, GE says to call for service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher water supply line",
+      "partKey": "dishwasher-fill-hose",
+      "searchTerm": "dishwasher water supply line"
+    }
+  ],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "updated": "2026-10-25"
+}

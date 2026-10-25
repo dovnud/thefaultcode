@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "OE",
+  "codeSlug": "oe",
+  "displayPattern": "Dishwasher display shows OE",
+  "meaning": "Outlet error: the tub is not fully drained.",
+  "causes": [
+    "Residue clogging the filter",
+    "Drain (outlet) hose pressed or bent"
+  ],
+  "diySteps": [
+    "Clean the filter, which LG advises doing every one to two weeks: remove the lower rack, turn the filter handle counter-clockwise and pull up, separate the inner and stainless steel filters, wash both in running water, reassemble and turn the handle clockwise until it clicks. Wait 30 minutes after a cycle first, because the tub is hot",
+    "Close the shut-off valve first, then straighten any pressed or kinked parts of the drain hose",
+    "Make sure the end of the drain hose at the dishwasher is at least 30 cm (about 12 in) above the floor",
+    "If water was left in the tub after a power cut, power on and restart the cycle; for a lot of water, force a drain by powering on and long-pressing Start for at least 3 seconds (2 to 3 minutes)"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If water keeps pooling above the filter level, LG says to request service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher drain hose",
+      "partKey": "dishwasher-drain-hose",
+      "searchTerm": "dishwasher drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "updated": "2026-10-25"
+}

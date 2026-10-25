@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "9E",
+  "codeSlug": "9e",
+  "displayPattern": "Dishwasher display shows 9E",
+  "meaning": "Low water level error: there is not enough water in the dishwasher.",
+  "causes": [
+    "Samsung does not list a specific cause for this code"
+  ],
+  "diySteps": [
+    "Empty the dishwasher",
+    "Add detergent, then run a normal cycle"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the error still occurs, switch off power to the dishwasher at the circuit breaker and request service through Samsung's Support Center.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "updated": "2026-10-25"
+}

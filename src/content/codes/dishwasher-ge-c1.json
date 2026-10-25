@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C1",
+  "codeSlug": "c1",
+  "displayPattern": "Dishwasher display shows C1",
+  "meaning": "Pump-out during drain has exceeded 2 minutes.",
+  "causes": [
+    "Blocked air gap",
+    "Kinked or misplaced drain hose",
+    "Clogged disposer"
+  ],
+  "diySteps": [
+    "Clean the air gap",
+    "Replace or reposition the drain hose",
+    "Run the garbage disposer to clean it out"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "If the problem persists, contact GE service.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher drain hose",
+      "partKey": "dishwasher-drain-hose",
+      "searchTerm": "dishwasher drain hose"
+    }
+  ],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "updated": "2026-10-25"
+}

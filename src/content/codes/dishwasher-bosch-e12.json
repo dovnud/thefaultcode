@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E12",
+  "codeSlug": "e12",
+  "displayPattern": "Dishwasher display shows E12",
+  "meaning": "Limescale build-up in the heat pump.",
+  "causes": [
+    "Limescale, especially in hard water areas"
+  ],
+  "diySteps": [
+    "Descale the dishwasher with a dishwasher descaler (Bosch sells its own); follow the product instructions",
+    "To help prevent it, use softening salt if your dishwasher has a water softener function"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "Bosch gives descaling as the fix. If E12 returns after descaling, contact Bosch Customer Support.",
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Dishwasher descaler",
+      "partKey": "dishwasher-descaler",
+      "searchTerm": "dishwasher descaler cleaner"
+    },
+    {
+      "name": "Dishwasher softening salt",
+      "partKey": "dishwasher-salt",
+      "searchTerm": "dishwasher softening salt"
+    }
+  ],
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "updated": "2026-10-25"
+}

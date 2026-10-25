@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E15",
+  "codeSlug": "e15",
+  "displayPattern": "Dishwasher display shows E15",
+  "meaning": "Leakage protection activated: the safety switch has detected water in the base of the dishwasher.",
+  "causes": [
+    "Water collected in the base of the dishwasher"
+  ],
+  "diySteps": [
+    "Turn off the water inflow to the dishwasher",
+    "Contact Bosch Customer Support for assistance"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proAdvice": "Bosch says to turn off the water inflow and contact Bosch Customer Support; the leak needs finding and fixing before you run it again.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "updated": "2026-10-25"
+}
