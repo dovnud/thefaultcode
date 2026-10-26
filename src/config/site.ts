@@ -13,3 +13,6 @@ export const EDITORIAL = 'The Fault Code editorial team';
 export const ORG = { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'The Fault Code', url: `${SITE_URL}/`, email: CONTACT_EMAIL };
 /** Editorial author: an organization, never a made-up person. */
 export const EDITORIAL_AUTHOR = { '@type': 'Organization', name: EDITORIAL, url: `${SITE_URL}/about/`, parentOrganization: { '@id': ORG['@id'] } };
+
+/** Google Analytics 4 measurement ID (property "The Fault Code"). ONE value: override with the PUBLIC_GA_ID env var, or set to '' to disable. Only emitted in production builds. */
+export const GA_MEASUREMENT_ID: string = import.meta.env.PUBLIC_GA_ID ?? 'G-HV4LDVBLNM';
