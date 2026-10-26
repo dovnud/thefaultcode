@@ -458,3 +458,5 @@ main>.wrap:last-child{padding-bottom:64px}
 .hint a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;padding:0 2px}
 @media (max-width:960px){.hero .wrap{padding-top:48px;padding-bottom:88px}}
 @media (max-width:600px){.hero .wrap{padding-top:32px;padding-bottom:80px}}
+.safety .sg{font-size:.88rem;line-height:1.5;margin:10px 0 0;color:var(--steel)}.safety .sg strong{display:inline;font:inherit;font-weight:700;text-transform:none;letter-spacing:0;color:var(--ink)}.safety .sg a{color:inherit}
+.legal a{color:inherit;text-decoration:underline}

@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import { catOf, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks';
+import Base from '../../layouts/Base.astro'; import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import { catOf, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks';
 export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
 const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
 const url = `https://thefaultcode.com/guides/${g.id}/`;
@@ -15,11 +15,12 @@ const jsonld = [
 <Base title={d.title.length>52?d.title:`${d.title} | The Fault Code`} description={d.description} jsonld={jsonld} ogType="article" affLinks={shop.length>0} amazon={shop.length>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
-
+{shop.length>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Field guide</p><h1>{d.title}</h1><p class="meta-l">By {EDITORIAL} · Updated <time datetime={d.updated}>{fmtDate(d.updated)}</time></p></div>
 <div class="layout"><article>
 <div class="card" data-critical style="border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)"><div class="lbl">Short answer</div><p style="font-weight:600;font-size:1.1rem;margin:6px 0 0">{d.answer}</p></div>
 <div class="card sec guide"><Content /></div>
+<SafetyNotice kind="furnace" />
 <section class="card sec guide"><h2><span class="num">§F</span>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
 <section class="card sec guide"><h2><span class="num">§S</span>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul></section>
 </article>

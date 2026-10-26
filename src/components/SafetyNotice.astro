@@ -1,0 +1,10 @@
+---
+// Standard repair-safety notice. Plain, general text only: no credentials or guarantees are claimed.
+const { kind = 'generic', inline = false } = Astro.props;
+const power = kind === 'furnace' ? 'Unplug the furnace or switch it off at the breaker, and shut off the gas supply where relevant,'
+  : kind === 'washer' || kind === 'dishwasher' ? 'Unplug the appliance or switch it off at the breaker, and turn off the water supply where relevant,'
+  : kind === 'ac' ? 'Switch off the indoor unit and the outdoor disconnect or breaker'
+  : 'Unplug the appliance or switch off its power (and any gas or water supply) at the source';
+---
+{inline ? <p class="sg"><strong>Before you open any panel:</strong> {power} first. Capacitors can hold a charge after power is off. Gas, electrical-panel, sealed-system refrigerant and carbon-monoxide-related work belongs to a licensed professional. Follow your manufacturer's manual. This is general information, not professional advice; The Fault Code editorial team is not responsible for damage or injury (<a href="/terms/#safety">see Terms</a>).</p>
+: <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong><p class="sg" style="margin:6px 0 0">{power} before you open any panel. Capacitors can hold a charge after power is off. Gas, electrical-panel, sealed-system refrigerant and carbon-monoxide-related work belongs to a licensed professional. Follow your manufacturer's manual. This is general information, not professional advice; The Fault Code editorial team is not responsible for damage or injury (<a href="/terms/#safety">see Terms</a>).</p></div></div>}

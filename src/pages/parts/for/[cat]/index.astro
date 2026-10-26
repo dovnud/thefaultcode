@@ -16,13 +16,13 @@ const jsonld={'@context':'https://schema.org','@type':'CollectionPage',name:`Par
 <Base title={`Parts and Tools for ${titleCase(cat.label)} Error Codes | The Fault Code`} description={`The parts, tools and supplies named in ${cat.noun} error-code manuals: ${list.length} guides covering what each is, how to choose and test it, with shopping links where it is safe for a homeowner.`.slice(0,300)} jsonld={jsonld} affLinks={n>0} amazon={n>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li aria-current="page">{cat.name}</li></ol></nav>
-{n>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+{n>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{list.length} guides</p><h1>Parts and tools for {cat.noun} error codes</h1><p>These are the parts, tools and supplies that the manufacturer manuals behind our {cat.noun} code pages actually name. Each guide explains what the item does, how to choose and test it and when to leave it to a technician. Shopping links are Amazon links; search links open results and never confirm a fit for your model.</p></div>
 <h2 class="rel-h">By brand</h2>
 <p class="shoplinks">{groups.map(g=><a class="btn btn-o btn-sm" href={partsBrandUrl(slug,g.brandSlug)}>{g.brand} {cat.noun}</a>)}</p>
 <h2 class="rel-h" style="margin-top:24px">Guides</h2>
-{items.map(({p,links})=><section class="card sec" style="margin-top:14px"><div class="pt-kind">{p.kind}</div><h3 style="margin:2px 0"><a href={partUrl(p.slug)}>{p.name}</a></h3><p style="margin:4px 0">{p.summary}</p>
-{links.length>0 && <div class="shoplinks">{links.map(l=><a class={`btn btn-o btn-sm${l.kind==='asin'?' pd':''}`} rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`${l.kind==='asin'?'Amazon product page':'Amazon search'}: ${l.label} (sponsored link, opens in a new tab)`}>{l.kind==='asin'?'':'Search: '}{l.label}</a>)}</div>}</section>)}
+{items.map(({p,links},i)=><><section class="card sec" style="margin-top:14px"><div class="pt-kind">{p.kind}</div><h3 style="margin:2px 0"><a href={partUrl(p.slug)}>{p.name}</a></h3><p style="margin:4px 0">{p.summary}</p>
+{links.length>0 && <div class="shoplinks">{links.map(l=><a class={`btn btn-o btn-sm${l.kind==='asin'?' pd':''}`} rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`${l.kind==='asin'?'Amazon product page':'Amazon search'}: ${l.label} (sponsored link, opens in a new tab)`}>{l.kind==='asin'?'':'Search: '}{l.label}</a>)}</div>}</section>{links.length>0 && (i+1)%6===0 && <p class="disc" style="margin:8px 0 0">{AMAZON_STATEMENT}</p>}</>)}
 {n>0 && <p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="gasbar"><span class="w">{cat.bar[0]}</span><span>{cat.bar[1]}</span></div>
 </div></Base>
