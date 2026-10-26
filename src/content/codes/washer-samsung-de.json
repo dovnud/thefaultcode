@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "dE",
+  "codeSlug": "de",
+  "displayPattern": "Washer display shows dE (also shown as dS, d5, FL, LO, L0, dE1, dE2, dC, dC1, dL, 1 dC, 1dC4 or 1dC1 on some models)",
+  "meaning": "Door error: the washer does not detect the door as closed and locked.",
+  "causes": [
+    "Laundry or other items caught in the door",
+    "Door not fully closed and secured",
+    "Door latch not securely fixed",
+    "Damaged door or latch",
+    "Child Lock on with water in the tub (the code can appear even when no cycle is running)",
+    "FlexWash washers (1dC4): the rubber button next to the upper washer's latch is missing"
+  ],
+  "diySteps": [
+    "Check that no laundry or other items are caught in the door, then close the door firmly so it is secured",
+    "Check that the latch is securely fixed",
+    "If Child Lock is on and there is water in the tub, close the door or turn Child Lock off within 30 seconds, otherwise the washer will drain the tub",
+    "FlexWash with 1dC4: replacing the missing rubber button next to the upper washer's latch fixes the error; Samsung says service is not needed",
+    "On some models dC means an unbalanced load, not a door error. Check your user manual; if it is the unbalanced-load code, untangle and rearrange the laundry and restart the cycle",
+    "If the door is stuck locked instead: make sure the cycle has finished and drained and wait for the door lock light to go off. Front-load models keep the door locked while water is detected inside"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If the code cannot be corrected, or the door or latch is damaged, Samsung says to request service.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "moreSources": [
+    {
+      "name": "Samsung washer door is locked (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10007180/"
+    }
+  ],
+  "updated": "2026-10-26"
+}

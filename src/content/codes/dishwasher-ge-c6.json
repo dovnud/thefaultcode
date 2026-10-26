@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C6",
+  "codeSlug": "c6",
+  "displayPattern": "Dishwasher display shows C6",
+  "meaning": "Water temperature is too low: the water coming into the dishwasher is below the 120°F GE requires.",
+  "causes": [
+    "Incoming hot water below 120°F (GE's range is 120°F minimum, 150°F maximum)",
+    "Cold water sitting in the pipe between the water heater and the dishwasher, especially when the water heater is far away",
+    "Water heater set too low",
+    "Hot water being used for showers or the washing machine while the dishwasher fills",
+    "Dishwasher hooked to the cold water line instead of the hot line (GE says a dishwasher cannot heat cold water up to 120°F)"
+  ],
+  "diySteps": [
+    "Check the water temperature: turn on the hot faucet nearest the dishwasher, put a candy or meat thermometer in a glass and let the water run into it until the reading stops rising (one minute or more). It should read between 120°F and 150°F",
+    "Before starting the dishwasher, run the hot water at the sink next to it until it comes out hot, to purge cold water from the line",
+    "If the water never reaches 120°F, the water heater temperature may need to be adjusted (follow the water heater maker's instructions)",
+    "Don't run the washing machine or take showers while the dishwasher is running",
+    "Use cycle options that make the dishwasher run longer and add more heat, if your model has them",
+    "Check under the sink that the dishwasher is connected to the hot water line, not the cold line"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician. Water near 150°F can scald: test it in a glass, not with your hand.",
+  "proNeeded": false,
+  "proAdvice": "GE says that if switching power off for a minute or two does not clear a code, service may be required. C7 is a different fault: GE says it means the water temperature sensor circuit has stopped working.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "moreSources": [
+    {
+      "name": "Dishwasher – Correct Water Temperature (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=18924"
+    }
+  ],
+  "updated": "2026-10-26"
+}

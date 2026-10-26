@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "HE",
+  "codeSlug": "he",
+  "displayPattern": "Dishwasher display shows HE",
+  "meaning": "Heater error: the heater that heats the dishwasher's water is not heating it, or the water overheated above 90°C (194°F).",
+  "causes": [
+    "Heater malfunction: the water supplied to the dishwasher is not being heated",
+    "Water overheated above 90°C (194°F)"
+  ],
+  "diySteps": [
+    "Try one reset: press Power to turn the dishwasher off",
+    "Switch off the dishwasher's circuit breaker for 10 seconds",
+    "Restore power and try to run another cycle",
+    "If HE appears again, request LG service"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": true,
+  "proAdvice": "LG says HE requires inspection by a service technician if it returns after a reset. A related code, tE, points to the temperature sensor and also needs a technician.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "moreSources": [
+    {
+      "name": "LG Dish Washer – HE (LG Help Library)",
+      "url": "https://www.lg.com/eastafrica/support/product-help/CT20279065-20150409361507"
+    }
+  ],
+  "updated": "2026-10-26"
+}

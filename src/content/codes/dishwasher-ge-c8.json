@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C8",
+  "codeSlug": "c8",
+  "displayPattern": "Dishwasher display shows C8",
+  "meaning": "Detergent cup blocked: something is stopping the detergent cup from opening fully.",
+  "causes": [
+    "Silverware, a pan, pot handles or other tall items touching the detergent cup",
+    "A detergent pod or tablet not lined up in the cup, binding the cover",
+    "Old detergent residue left in the cup from a previous wash",
+    "Old, lumpy powder detergent"
+  ],
+  "diySteps": [
+    "Remove the obstruction (for example silverware or a pan), close and latch the door, and wait 30 seconds for the cup to open",
+    "Reload so nothing touches the detergent cup. On flip-open cups it is normal for the cover to open about 45 degrees and rest against the upper rack",
+    "Wipe out any old detergent left in the cup",
+    "If you use pods or tablets, line them up in the opening so they cannot bind the cover; if you use powder, it should be fresh and loose, not lumpy"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If the cup still does not open after these checks, GE says service may be needed.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "moreSources": [
+    {
+      "name": "Dishwasher – Detergent Cup Did Not Open (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=18903"
+    }
+  ],
+  "updated": "2026-10-26"
+}
