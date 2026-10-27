@@ -29,6 +29,7 @@ const codes = defineCollection({
 const guides = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
   schema: z.object({ title: z.string(), description: z.string(), answer: z.string(), updated: z.string(),
+    category: z.enum(['furnaces','washers','dishwashers','ac']).default('furnaces'),
     faq: z.array(z.object({ q: z.string(), a: z.string() })), sources: z.array(z.object({ name: z.string(), url: z.string().url() })), codes: z.array(z.string()).default([]), shop: z.array(z.string()).default([]) }),
 });
 export const collections = { codes, guides };
