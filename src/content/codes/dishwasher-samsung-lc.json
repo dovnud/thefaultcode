@@ -1,0 +1,53 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "LC",
+  "codeSlug": "lc",
+  "displayPattern": "Dishwasher display shows LC (also shown as LE on some models)",
+  "meaning": "Leakage error: the dishwasher's leak sensor has detected moisture where it doesn't belong. The dishwasher turns itself on and will not turn off while it tries to drain the water away.",
+  "causes": [
+    "A leak at the water supply hose, at either connection or along its length",
+    "Drain hose not connected to the home correctly",
+    "Garbage disposal cap left in place after the dishwasher was connected to a disposal",
+    "Door seal pushed out of its channel, dirty or damaged",
+    "Dish soap instead of dishwasher detergent, or too much detergent: suds escape, and leftover detergent is moist enough to trigger the sensor",
+    "Dishwasher not level, so the door bumps the cabinets or water pools at the door",
+    "Cabinet screws over-tightened, stretching the tub sides and opening gaps",
+    "Food stuck in the nozzles, diverting spray at the door seal",
+    "Water splashed near the sensor underneath when the dishwasher was moved",
+    "Waterwall models: the water reflector is blocked"
+  ],
+  "diySteps": [
+    "Turn the dishwasher off at the circuit breaker (or unplug it). It will keep running and draining until the moisture is gone, so cut the power while you check",
+    "Look and feel for a leak along the water supply hose and at both of its connections. If you find one, turn off the water supply",
+    "If the dishwasher was recently connected to a garbage disposal, make sure the disposal cap was removed",
+    "Check where the drain hose connects to your home; reinstalling or tightening that connection may be all it needs",
+    "Push the rubber door seal back into its channel if it has slipped, and clean it with a towel and mild soap",
+    "Use only detergent labelled for dishwashers, never dish soap; do not overfill the dispenser or add detergent outside it",
+    "Level the dishwasher side to side and front to back",
+    "Measure across the opening exactly where the cabinet screws are: it should be 22 inches. If it is more, loosen the screws",
+    "Clean food out of the nozzles and jets; on Waterwall models make sure no dishes block the water reflector",
+    "Give it time to dry, especially after a move, then restore power. If LC or LE is still shown, request Samsung service"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Samsung says to request service if the error returns after the area has dried, if the door seal is damaged, or if water leaks anywhere along the drain hose other than its connection to your home. The water supply hose is sold separately and is not covered by Samsung service; Samsung recommends a 3/8-inch stainless steel hose.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "moreSources": [
+    {
+      "name": "Samsung dishwasher is leaking or has a leakage error code (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10010593/"
+    },
+    {
+      "name": "Samsung dishwasher turns on by itself (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10007199/"
+    }
+  ],
+  "amazonMax": 3,
+  "updated": "2026-10-27"
+}

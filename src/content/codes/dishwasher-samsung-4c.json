@@ -1,0 +1,42 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "4C",
+  "codeSlug": "4c",
+  "displayPattern": "Dishwasher display shows 4C (also shown as 4E on some models)",
+  "meaning": "Water supply error: the dishwasher is not getting water at the pressure or temperature it needs.",
+  "causes": [
+    "Household water pressure outside Samsung's 20 to 120 psi range (below 20 psi can make the water supply valve fail and stop it shutting off properly)",
+    "Hot water supply outside the 120 to 149°F (49 to 65°C) range Samsung specifies",
+    "A problem with the supply line feeding the dishwasher (Samsung says supply line issues can cause error codes or blinking lights)"
+  ],
+  "diySteps": [
+    "Troubleshoot before you reset: Samsung warns that clearing the code without fixing the cause can make it return",
+    "Check the hot water supply temperature: Samsung specifies 120 to 149°F (49 to 65°C) and says it should not exceed 149°F to avoid severe burns",
+    "Check that your home's water pressure is between 20 and 120 psi",
+    "Inspect the supply line and its connections. Samsung recommends a stainless steel supply line (sold separately, up to 10 ft) and a 90-degree elbow with 1/2-inch NPT on one end and a 3/8-inch compression fitting on the other",
+    "On models without a digital display, a blinking Auto or Express 60 light can mean the same thing: water pressure or temperature is not correct",
+    "If temperature and pressure are within range and the error still occurs, switch off power to the dishwasher at the circuit breaker and request Samsung service"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If your water temperature and pressure meet Samsung's requirements and the error keeps returning, Samsung says to switch off the dishwasher at the breaker and request service.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "moreSources": [
+    {
+      "name": "Samsung dishwasher water supply requirements (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/answer/ANS10004782/"
+    },
+    {
+      "name": "Lights are blinking on the Samsung dishwasher (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10002410/"
+    }
+  ],
+  "amazonMax": 3,
+  "updated": "2026-10-27"
+}

@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "9C1",
+  "codeSlug": "9c1",
+  "displayPattern": "Washer display shows 9C1 (also shown as 9C2, PF, 3E, 2E, 9E1, 9E2, UC, 19C1 or 19C2 on some models)",
+  "meaning": "Power supply (voltage) error: there is an irregularity in the electrical current reaching the washer.",
+  "causes": [
+    "The washer shares its circuit with other loads instead of having its own",
+    "The washer is plugged into an extension cord",
+    "PF only: the power went out before the washer powered itself off (an outage, the washer being unplugged, or a tripped breaker)",
+    "A washer used outside its country of origin, where power grids and regulations differ",
+    "On some models 3E means a motor error, not a power supply error"
+  ],
+  "diySteps": [
+    "Confirm the washer is on its own circuit",
+    "Plug it straight into the wall outlet, not into an extension cord",
+    "If PF appeared after a power cut, an unplugged cord or a tripped breaker, that is what the code is reporting: power was lost before the washer switched itself off",
+    "If your display shows 3E, check your user manual to see whether it is a power supply error or a motor error. For a motor error Samsung's basic steps are to power off for 2 to 3 minutes, power back on and restart the cycle",
+    "If the code continues, request Samsung service"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Samsung says to request service if the code continues after the washer is on its own circuit without an extension cord.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "amazonMax": 3,
+  "updated": "2026-10-27"
+}

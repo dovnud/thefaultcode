@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "bE2",
+  "codeSlug": "be2",
+  "displayPattern": "Washer display shows bE2 (also shown as E2, 6E2, BE2 or 8E2 on some models)",
+  "meaning": "Jammed button error: a button on the control panel is detected as stuck or continuously pressed.",
+  "causes": [
+    "A control panel button stuck or held in",
+    "A damaged button",
+    "On some models BE2 (8E2) is a MEMS sensor error instead, not a jammed button"
+  ],
+  "diySteps": [
+    "Power off the washer",
+    "Touch every button on the panel one at a time, working each one back and forth to reach all its edges before releasing it",
+    "Power the washer back on and check whether the code has cleared",
+    "If your display shows BE2 or 8E2, check your user manual: on some models that is a MEMS sensor error. Samsung's basic steps for it are to power off for 2 to 3 minutes, power back on and restart the cycle"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If any button is damaged, or the code returns after you power the washer back on, Samsung says to request service.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "amazonMax": 3,
+  "updated": "2026-10-27"
+}

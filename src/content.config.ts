@@ -21,6 +21,8 @@ const codes = defineCollection({
     sourceTitle: z.string().optional(),
     // Other official pages the steps were taken from (e.g. a linked drain guide).
     moreSources: z.array(z.object({ name: z.string(), url: z.string().url() })).default([]),
+    // Optional cap on Amazon links in the 'Parts & tools' block of this code page (newer pages use 3). Unset = no cap.
+    amazonMax: z.number().int().min(0).optional(),
     updated: z.string(),
   }),
 });
