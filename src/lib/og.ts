@@ -21,7 +21,7 @@ async function build() {
     m.set(path, { kind: 'text', kicker, title, sub, alt: alt ?? `The Fault Code: ${title}. ${sub}` });
   text('/', 'Fault code field manual', 'Furnace, washer, dishwasher & AC error codes', `${codes.length} codes in plain English, each linked to the manufacturer manual it came from.`);
   text('/codes/', 'Code index', 'All error codes', `${codes.length} furnace, washer, dishwasher and AC codes, searchable.`);
-  text('/guides/', 'Field guides', 'Furnace guides', 'Flash codes, flame sensors, filters and resets, explained from the manuals.');
+  text('/guides/', 'Field guides', 'Troubleshooting guides', 'Furnace, washer, dishwasher and AC guides from manufacturer documentation.');
   text('/about/', 'About', 'How The Fault Code works', 'Every code is taken from a manufacturer manual or official support page, linked on each page.');
   text('/contact/', 'Contact', 'Contact The Fault Code', 'Corrections and questions.');
   text('/privacy/', 'Privacy', 'Privacy policy', 'What this site does and does not collect.');

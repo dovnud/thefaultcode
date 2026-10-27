@@ -61,6 +61,9 @@ export const AMAZON_PARTS: Record<string, string> = {
   'dishwasher-detergent': 'dishwasher detergent',
   'dishwasher-fill-hose': 'dishwasher water supply line',
   'dishwasher-drain-hose': 'dishwasher drain hose',
+  // Tools and alarms a guide can point at. Search links only; no model-fit claim.
+  'co-alarm': 'carbon monoxide alarm',
+  'voltage-tester': 'non-contact voltage tester',
 };
 
 /** Display labels for guide / brand-page shop boxes (code pages use the part name stored in each code's JSON). */
@@ -75,6 +78,7 @@ export const AMAZON_LABELS: Record<string, string> = {
   'dishwasher-descaler': 'Dishwasher descaler', 'dishwasher-salt': 'Dishwasher softening salt',
   'dishwasher-detergent': 'Dishwasher detergent', 'dishwasher-fill-hose': 'Dishwasher water supply line',
   'dishwasher-drain-hose': 'Dishwasher drain hose',
+  'co-alarm': 'Carbon monoxide alarm', 'voltage-tester': 'Non-contact voltage tester',
 };
 
 /** Build [{key,name,href}] for partKeys that have an Amazon search term (gas valve etc. are deliberately omitted). */

@@ -13,8 +13,9 @@ const KEY_TO_SLUG: Record<string, string> = {
   'control-board': 'control-board', fuse: 'control-board', 'limit-switch': 'limit-and-rollout-switches', 'rollout-switch': 'limit-and-rollout-switches',
   thermostat: 'thermostat', filter: 'hvac-air-filter', 'washer-cleaner': 'washer-cleaner', 'he-detergent': 'he-detergent',
   'washer-fill-hose': 'washer-inlet-hoses', 'washer-drain-hose': 'washer-drain-hose', 'dishwasher-descaler': 'dishwasher-descaler',
-  'dishwasher-salt': 'dishwasher-salt', 'dishwasher-detergent': 'dishwasher-detergent', 'dishwasher-fill-hose': 'dishwasher-supply-line',
+  'dishwasher-salt': 'dishwasher-salt', 'dishwasher-detergent': 'dishwasher-detergent',   'dishwasher-fill-hose': 'dishwasher-supply-line',
   'dishwasher-drain-hose': 'dishwasher-drain-hose',
+  'voltage-tester': 'voltage-tester',
 };
 export const slugForKey = (k: string) => KEY_TO_SLUG[k];
 

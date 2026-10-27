@@ -7,7 +7,9 @@ const brandCount = new Set(codes.map(c=>c.brandSlug)).size;
 const cats = CATEGORIES.filter(c=>groups.some(g=>g.cat.slug===c.slug));
 const featured = [...groups.filter(g=>g.cat.slug==='furnaces').flatMap(g=>g.codes.slice(0,1)), ...groups.filter(g=>g.cat.slug!=='furnaces').flatMap(g=>g.codes.slice(0,1))].slice(0,12);
 const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33'&&c.equipmentType==='furnace');
-const guides = (await getCollection('guides')).slice(0,3);
+const guidePick = ['how-to-read-furnace-led-flash-codes','washer-will-not-drain','dishwasher-will-not-drain','ac-high-and-low-pressure-codes','furnace-carbon-monoxide-and-rollout','washer-suds-and-detergent'];
+const guideAll = await getCollection('guides');
+const guides = guidePick.map(id => guideAll.find(g => g.id === id)).filter(Boolean);
 const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/',publisher:ORG};
 ---
 <Base title="The Fault Code: Furnace, Washer, Dishwasher & AC Error Codes" description="Look up furnace, washer, dishwasher and AC error codes: what each code means, likely causes and how to fix it safely, from manufacturer manuals and official support pages." jsonld={jsonld}>

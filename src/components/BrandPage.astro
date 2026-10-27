@@ -1,7 +1,9 @@
 ---
 import Base from '../layouts/Base.astro'; import CatIcon from './CatIcon.astro'; import SourceLine from './SourceLine.astro';
+import { getCollection } from 'astro:content';
 import { fmtDate } from '../config/site'; import { amazonShop, AMAZON_STATEMENT } from '../config/affiliates';
 import { titleCase, catOf, typeLabel, brandPath, codePath, searchText } from '../config/categories';
+import { guideMentions } from '../lib/guideLinks';
 const { codes } = Astro.props;
 const first = codes[0]; const cat = catOf(first); const furn = cat.slug==='furnaces';
 const updated=[...codes.map(c=>c.updated)].sort().pop(); const brand = first.brand; const src = first.sourceManualUrl;
@@ -11,13 +13,21 @@ const bTitle = `${brand} ${titleCase(cat.label)} Error Codes: Meanings & Fixes`;
 const intro = `What does your ${brand} ${noun} error code mean? ${codes.length} codes from ${furn?`the ${brand} furnace manual`:`official ${brand} ${noun} documentation`}. Select a code for causes, how to fix it safely and when to call a pro.`;
 const jsonld={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:cat.name,item:`https://thefaultcode.com${cat.hub}`},{'@type':'ListItem',position:3,name:brand,item:`https://thefaultcode.com${brandPath(first)}`}]};
 const srcs = [...new Map(codes.filter(c=>c.sourceManualUrl).map(c=>[c.sourceManualUrl,c])).values()];
+const allGuides = await getCollection('guides');
+const mentioned = allGuides.filter(g => codes.some(c => guideMentions(c, g.data.codes)));
+const moreGuides = allGuides.filter(g => g.data.category === cat.slug && !mentioned.some(m => m.id === g.id)).slice(0, 4);
+const brandGuides = [...mentioned, ...moreGuides];
+const proCount = codes.filter(c => c.proNeeded).length;
 ---
 <Base title={bTitle.length>52?bTitle:`${bTitle} | The Fault Code`} description={`${brand} ${noun} error ${furn?'and flash ':''}codes: what all ${codes.length} codes mean, likely causes and how to fix them safely, from ${furn?'the manufacturer manual':'official manufacturer documentation'}.`} jsonld={jsonld} affLinks={shop.length>0} amazon={shop.length>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={cat.hub}>{cat.name}</a></li><li aria-current="page">{brand}</li></ol></nav>
 {shop.length>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h ph"><span class="ph-ic" aria-hidden="true"><CatIcon slug={cat.slug} size={46} /></span><div class="ph-b"><p class="kicker" style="color:var(--sig-ink);margin:0">Code index · {codes.length} entries</p><h1>{brand} {noun} error codes</h1><p>{intro}{srcs.length===1 && <> <SourceLine e={srcs[0]} />.</>}</p>
-{srcs.length>1 && <p class="srcline">Sources: {srcs.map((c,i)=><>{i>0&&' · '}<SourceLine e={c} short /></>)}</p>}</div></div>
+{srcs.length>1 && <p class="srcline">Sources: {srcs.map((c,i)=><>{i>0&&' · '}<SourceLine e={c} short /></>)}</p>}
+<p>{proCount===0 ? `None of these ${codes.length} ${brand} ${noun} pages are marked call-a-pro on arrival: each one lists a homeowner check taken from the ${brand} document, and says when that check is finished and a technician should take over.` : `${proCount} of these ${codes.length} ${brand} ${noun} pages are marked call-a-pro because the source document points at gas, venting, refrigerant, high voltage or a control the manual does not leave to a homeowner. The other ${codes.length-proCount} start with a check the document describes, then say when to stop.`}</p>
+{brandGuides.length>0 && <p style="margin-bottom:0">Related guides: {brandGuides.map((g,i)=><>{i>0&&' · '}<a href={`/guides/${g.id}/`}>{g.data.title}</a></>)}.</p>}
+</div></div>
 <form class="filter-row" role="search" aria-label={`Filter ${brand} ${noun} codes`}><label class="sr-only" for="f">Filter {brand} {noun} codes</label><input class="filter" id="f" data-filter type="search" autocomplete="off" placeholder={`Filter ${brand} codes, e.g. ${furn?'flame or 33':codes[0].code.toLowerCase()+' or drain'}`} /><span class="count" id="f-count" role="status" aria-live="polite">{codes.length} codes</span></form>
 <div class="grid g3" id="g" style="margin-top:18px">{codes.map(c=><a class="card code-card" href={codePath(c)} data-s={searchText(c)}><span class="cc">{c.code}</span><span class="cb">{typeLabel(c)}</span><p class="cm">{c.meaning}</p><div class="badges">{c.proNeeded?<span class="badge b-pro">Call a pro</span>:<span class="badge b-diy">Basic checks first</span>}</div></a>)}</div>
 <div class="f-empty" id="f-empty" hidden><strong>No {brand} code matches that.</strong> <span>Clear the filter, or <a href="/codes/">search every brand</a>.</span></div>
