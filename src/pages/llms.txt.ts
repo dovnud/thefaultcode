@@ -31,6 +31,7 @@ ${groups.map(g => `- [${g.brand} ${g.cat.noun} error codes](${s}${g.href}): ${g.
 - [fault-codes.json](${s}/data/fault-codes.json): the same dataset as JSON
 
 ## Other
+- [Full text](${s}/llms-full.txt): markdown corpus of the guides and every published code
 - [About](${s}/about/): how codes are sourced, who writes the site
 - [Dataset](${s}/data/)
 - [Sitemap](${s}/sitemap-index.xml)
