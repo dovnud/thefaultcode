@@ -21,11 +21,12 @@ const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:p.na
 const byBrand = [...used.reduce((m,c)=>m.set(c.brand,[...(m.get(c.brand)??[]),c]),new Map())].slice(0,8);
 const related = p.related.map(partBySlug).filter(Boolean);
 const brandLinks = [...new Map(used.map(c=>[`${catOf(c).slug}/${c.brandSlug}`,c])).values()];
+const sizeKind = /hose|supply-line/.test(p.slug) ? 'hose' : (p.slug === 'hvac-air-filter' || p.slug === 'furnace-filter-sizes') ? 'filter' : '';
 ---
 <Base title={`${p.name}: Guide | The Fault Code`} description={clip(p.summary,158)} jsonld={jsonld} ogType="article" affLinks={nLinks>0} amazon={nLinks>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li aria-current="page">{p.name}</li></ol></nav>
-{nLinks>0 && <p class="affnote">Some links on this page are affiliate links and may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+{nLinks>0 && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Parts and tools · {p.kind}</p><h1>{p.name}</h1><p>{p.summary}</p><p class="meta-l">By {EDITORIAL} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
 <div class="layout"><article>
 <section class="card sec guide"><h2>What it is</h2>{p.what.map(t=><p>{t}</p>)}</section>
@@ -36,6 +37,8 @@ const brandLinks = [...new Map(used.map(c=>[`${catOf(c).slug}/${c.brandSlug}`,c]
 {p.caution && <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{p.caution}<SafetyNotice kind={p.cats.length===1?(p.cats[0]==='furnaces'?'furnace':p.cats[0]==='ac'?'ac':p.cats[0]==='washers'?'washer':'dishwasher'):'generic'} inline /></div></div>}
 {p.shop ? <section class="card sec guide" id="shop"><h2>Where to buy</h2>
 <p>These are Amazon links. <strong>Product page</strong> links go to one specific listing whose title we read on Amazon; we do not say it fits your model. <strong>Search</strong> links open search results, which change. Always confirm your model number and the part number in your manual.</p>
+{sizeKind === 'hose' && <p>Read the length and the connection on the old hose. The searches below are by part name. They are not a fit for your model.</p>}
+{sizeKind === 'filter' && <p>Read the size printed on the old filter (for example 16×25×1). The searches below are by size. They are not a fit for your model.</p>}
 {L.products.length>0 && <><h3>Product pages</h3><div class="shoplinks">{L.products.map(l=><a class="btn btn-o btn-sm pd" rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`Amazon product page: ${l.label} (sponsored link, opens in a new tab)`}>{l.label}</a>)}</div></>}
 {L.searches.length>0 && <><h3>Searches by type or size</h3><div class="shoplinks">{L.searches.map(l=><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`Amazon search: ${l.label} (sponsored link, opens in a new tab)`}>Search: {l.label}</a>)}</div></>}
 {L.byBrand.length>0 && <><h3>Searches by brand</h3><div class="shoplinks">{L.byBrand.map(l=><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`Amazon search: ${l.label} (sponsored link, opens in a new tab)`}>Search: {l.label}</a>)}</div></>}

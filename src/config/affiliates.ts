@@ -34,8 +34,9 @@ export function amazonAsinLink(asin: string): string {
 }
 
 // partKey (from src/content/codes/*.json) -> generic Amazon search term.
-// Only keys listed here get a "Shop on Amazon" button. Deliberately NOT listed: 'gas-valve'
-// (gas train work is for licensed technicians only, so we do not push people to buy one).
+// Only keys listed here get a "Search on Amazon" button. Deliberately NOT listed: 'gas-valve'
+// (gas train work is for licensed technicians only), and 'limit-switch' / 'rollout-switch'
+// (safety switches: the parts guide explains them and does not sell replacements).
 export const AMAZON_PARTS: Record<string, string> = {
   'flame-sensor': 'furnace flame sensor',
   'pressure-switch': 'furnace pressure switch',
@@ -43,8 +44,6 @@ export const AMAZON_PARTS: Record<string, string> = {
   'igniter': 'furnace hot surface igniter',
   'inducer': 'furnace inducer motor',
   'filter': 'furnace air filter',
-  'limit-switch': 'furnace high limit switch',
-  'rollout-switch': 'furnace rollout switch',
   'control-board': 'furnace control board',
   'fuse': 'furnace control board 5 amp fuse',
   'thermostat': 'furnace thermostat',
@@ -70,7 +69,7 @@ export const AMAZON_PARTS: Record<string, string> = {
 export const AMAZON_LABELS: Record<string, string> = {
   'flame-sensor': 'Flame sensor', 'pressure-switch': 'Pressure switch', 'pressure-hose': 'Pressure switch hose',
   'igniter': 'Hot surface igniter', 'inducer': 'Inducer motor', 'filter': 'Furnace air filter',
-  'limit-switch': 'High limit switch', 'rollout-switch': 'Rollout switch', 'control-board': 'Control board',
+  'control-board': 'Control board',
   'fuse': 'Control board fuse', 'thermostat': 'Thermostat', 'blower-motor': 'Blower motor',
   'capacitor': 'Blower motor capacitor', 'steel-wool': 'Fine steel wool',
   'washer-cleaner': 'Washing machine cleaner', 'he-detergent': 'HE laundry detergent',
@@ -81,9 +80,35 @@ export const AMAZON_LABELS: Record<string, string> = {
   'co-alarm': 'Carbon monoxide alarm', 'voltage-tester': 'Non-contact voltage tester',
 };
 
-/** Build [{key,name,href}] for partKeys that have an Amazon search term (gas valve etc. are deliberately omitted). */
+/** Build [{key,name,href}] for partKeys that have an Amazon search term (gas valve and safety switches are omitted). */
 export const amazonShop = (keys: string[]) =>
   [...new Set(keys)].filter(k => AMAZON_PARTS[k]).map(k => ({ key: k, name: AMAZON_LABELS[k] ?? k, href: affiliates.amazon.url(k) })).filter(x => x.href);
+
+/** Parts a homeowner can buy from a search. Technician parts stay in AMAZON_PARTS for data, but are not the page's button. */
+const HOME_PART_KEYS = new Set([
+  'filter', 'steel-wool', 'flame-sensor', 'igniter', 'pressure-hose', 'thermostat',
+  'washer-cleaner', 'he-detergent', 'washer-drain-hose', 'washer-fill-hose',
+  'dishwasher-drain-hose', 'dishwasher-fill-hose', 'dishwasher-descaler', 'dishwasher-salt', 'dishwasher-detergent',
+  'co-alarm', 'voltage-tester',
+]);
+
+/** First homeowner part in `keys`. Steel wool wins over a flame sensor when both are listed (the cleaning supply, not the replacement). */
+export function primaryShop(keys: string[]) {
+  const list = amazonShop(keys).filter(p => HOME_PART_KEYS.has(p.key));
+  if (list.some(p => p.key === 'steel-wool') && list.some(p => p.key === 'flame-sensor')) return list.find(p => p.key === 'steel-wool')!;
+  return list[0] ?? null;
+}
+
+/** Up to `max` homeowner parts, in first-seen order. */
+export function homeownerShops(keys: string[], max = 3) {
+  const out = [];
+  for (const item of amazonShop(keys)) {
+    if (!HOME_PART_KEYS.has(item.key)) continue;
+    out.push(item);
+    if (out.length >= max) break;
+  }
+  return out;
+}
 
 // Official manufacturer dealer/contractor locators (NOT affiliate links, plain links with rel="noopener").
 // Used as the fallback "find a pro" button when affiliates.proReferral.enabled is false.
@@ -109,8 +134,8 @@ export const APPLIANCE_SERVICE: Record<string, string> = {
 
 export const affiliates = {
   // Parts links: Amazon Associates. RepairClinic is NOT on CJ, so it is not used.
-  // Set enabled:false to hide every "Shop on Amazon" button and the Amazon disclosure.
-  amazon: { enabled: true, label: 'Shop on Amazon',
+  // Set enabled:false to hide every "Search on Amazon" button and the Amazon disclosure.
+  amazon: { enabled: true, label: 'Search on Amazon',
     /** Returns the sponsored link for a part, or '' when the part has no Amazon mapping or the flag is off. */
     url: (partKey: string): string => { const t = AMAZON_PARTS[partKey]; return affiliates.amazon.enabled && t ? amazonLink(t) : ''; } },
   // "Find a local HVAC pro" button (Angi via CJ).

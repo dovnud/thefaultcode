@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.astro'; import CodeParts from './CodeParts.astro';
 import { getCollection } from 'astro:content';
-import { guidesForCode, compactLinks } from '../lib/partLinks';
+import { guidesForCode, compactLinks, codePrimary, slugForKey } from '../lib/partLinks';
 import { guideMentions } from '../lib/guideLinks';
 import SafetyNotice from './SafetyNotice.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../config/site';
 import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
@@ -9,7 +9,14 @@ const { e, related } = Astro.props;
 const cat = catOf(e); const furn = cat.slug === 'furnaces';
 const eq = typeLabel(e);
 const title = `${e.brand} ${eq} ${e.code}: Meaning & Fix`;
-const h1 = `${e.brand} ${e.code}: ${e.meaning.replace(/\.$/,'')}`;
+const shortMeaning = (meaning: string) => {
+  const m = meaning.replace(/\s+/g, ' ').trim().replace(/\.$/, '');
+  const head = m.split(':')[0].trim();
+  if (head.length >= 6 && head.length < m.length && head.length <= 72) return head;
+  const sentence = m.split('. ')[0];
+  return sentence.length <= 72 ? sentence : sentence.slice(0, 71).replace(/\s+\S*$/, '');
+};
+const h1 = `${e.brand} ${e.code}: ${shortMeaning(e.meaning)}`;
 const site='https://thefaultcode.com';
 const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
 const base=`${e.brand} ${eq} code ${e.code}: ${e.meaning.replace(/\.$/,'')}.`;
@@ -22,8 +29,11 @@ const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:h1,d
 const split = (s)=>{const m=s.match(/^Technician:\s*(.*)$/i); return m?{tech:true,t:m[1]}:{tech:false,t:s}};
 const pro = affiliates.proReferral;
 const shop = e.parts.map(p=>({...p,href:affiliates.amazon.url(p.partKey)}));
+const primary = codePrimary(e);
+const primaryOnRow = !!primary && shop.some(p => slugForKey(p.partKey) === primary.slug);
+const proBtn = primary ? 'btn btn-o' : 'btn btn-p';
 const ptLinks = guidesForCode(e).slice(0,6).some(g=>g.shop && compactLinks(g.part,e.brand,`${e.brandSlug}/${e.codeSlug}`).length>0);
-const hasAmazon = shop.some(p=>p.href) || ptLinks;
+const hasAmazon = !!primary || ptLinks;
 const hasAff = hasAmazon || (pro.enabled && cat.kind==='hvac');
 const loc = proLocator(e);
 const fieldGuides = (await getCollection('guides')).filter(g => guideMentions(e, g.data.codes));
@@ -35,7 +45,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={cat.hub}>{cat.name}</a></li><li><a href={brandPath(e)}>{e.brand}</a></li><li aria-current="page">{e.code}</li></ol></nav>
 {e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
-{hasAff && <p class="affnote">Some links on this page are affiliate links and may earn us a commission.{hasAmazon && <>{" "}{AMAZON_STATEMENT}</>} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+{hasAff && <p class="affnote">Affiliate links may earn us a commission.{hasAmazon && <>{" "}{AMAZON_STATEMENT}</>} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><h1>{h1}</h1><p class="meta-l">Ref. {furn?'':cat.slug.toUpperCase()+'-'}{e.brandSlug.toUpperCase()}-{e.codeSlug.toUpperCase()} · {e.sourceManualUrl ? <>Source: <a href={e.sourceManualUrl} rel="noopener" target="_blank">{hdrSrc}<span class="sr-only"> (opens in a new tab)</span> ↗</a></> : <>From the {e.brand} {eq} manual</>} · By {EDITORIAL} · Updated <time datetime={e.updated}>{fmtDate(e.updated)}</time></p></div>
 <div class="layout">
 <article>
@@ -44,9 +54,10 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <div class="body">
 <div class="lbl">What does {e.brand} {e.code} mean?</div>
 <p class="meaning">{e.meaning}</p>
+{primary && <div class="result-cta"><p class="result-cta-l">Homeowner part this code names: {primary.name}.</p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a><p class="disc">Opens an Amazon search for that name. Check the size against your manual. {AMAZON_STATEMENT}</p></div>}
 <div class="badges">{e.proNeeded?<a class="badge b-pro" href="#call-a-pro">Call a pro<span class="sr-only">: jump to when to call a pro</span> <span aria-hidden="true">↓</span></a>:<a class="badge b-diy" href="#diy-steps">Basic checks first<span class="sr-only">: jump to safe DIY steps</span> <span aria-hidden="true">↓</span></a>}<span class="lbl-static"><span class="sr-only">Equipment type: </span>{eq}</span></div>
 <div class="pattern"><strong>How it shows:</strong> {e.displayPattern}</div>
-{showPro && <p style="margin:16px 0 0"><a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a></p>}
+{showPro && <p style="margin:16px 0 0"><a class={proBtn} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a></p>}
 </div></div>
 <section class="card sec" data-reveal><h2><span class="num">§1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
 <section class="card sec" id="diy-steps" data-reveal><h2><span class="num">§2</span>{e.proNeeded ? `Safe checks for ${e.code}` : `How to fix ${e.code}: safe DIY steps`}</h2>
@@ -54,14 +65,14 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}<SafetyNotice kind={cat.slug==='furnaces'?'furnace':cat.slug==='ac'?'ac':cat.slug==='washers'?'washer':cat.slug==='dishwashers'?'dishwasher':'generic'} inline /></div></div></section>
 <section class="card sec procard" id="call-a-pro" data-critical><h2><span class="num">§3</span>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?(cat.kind==='hvac'?'This code usually needs a licensed technician.':'This code usually needs a qualified appliance technician.'):'Call a pro if the steps above do not clear the code.')}</p>
-{showPro ? <a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a> : loc && <a class="btn btn-p" rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a>}</section>
+{showPro ? <a class={proBtn} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a> : loc && <a class={proBtn} rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a>}</section>
 <CodeParts e={e} />
 {related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h"><span class="num">§4</span>{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{c.meaning}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
 </article>
 <aside class="side" data-critical>
 {e.parts.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts mentioned</h2><p>Parts named in the causes above. Match the part to your model's manual before buying anything.</p>
-<ul class="parts">{shop.map(p=><li><span>{p.name}</span>{p.href && <a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={p.href} aria-label={`${affiliates.amazon.label}: ${p.name} (sponsored link, opens in a new tab)`}>{affiliates.amazon.label}</a>}</li>)}</ul>{shop.some(p=>p.href) && <p class="disc">Shop links open Amazon search results for the part name. {AMAZON_STATEMENT}</p>}</div>}
-<div class="card box" id="technician"><h2 style="font-size:1.35rem;margin:0 0 6px">{cat.techTitle}</h2><p>{cat.techText}</p>{showPro ? <a class="btn btn-p btn-block" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label}</a> : loc && <><a class="btn btn-p btn-block" rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a><p class="disc">{locatorNote(e,loc)}</p></>}</div>
+<ul class="parts">{primary && !primaryOnRow && <li><span>{primary.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a></li>}{shop.map(p=><li><span>{p.name}</span>{primary && slugForKey(p.partKey)===primary.slug && <a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a>}</li>)}</ul>{primary && <p class="disc">Search on Amazon opens search results for {primary.name}. It does not confirm a fit. {AMAZON_STATEMENT}</p>}</div>}
+<div class="card box" id="technician"><h2 style="font-size:1.35rem;margin:0 0 6px">{cat.techTitle}</h2><p>{cat.techText}</p>{showPro ? <a class={`${proBtn} btn-block`} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label}</a> : loc && <><a class={`${proBtn} btn-block`} rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a><p class="disc">{locatorNote(e,loc)}</p></>}</div>
 {fieldGuides.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Field guides</h2><p>Longer pages that cite this code, with the checks from the same manufacturer documents.</p><ul class="parts">{fieldGuides.map(g=><li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul><p style="margin:8px 0 0"><a href="/guides/">All guides</a></p></div>}
 <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Source</h2><div class="meta"><SourceLine e={e} />{e.moreSources.map(s=><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a>)}<span class="mono" style="font-size:.8rem">Last updated <time datetime={e.updated}>{fmtDate(e.updated)}</time></span><a href="/affiliate-disclosure/">Affiliate disclosure</a></div></div>
 </aside>

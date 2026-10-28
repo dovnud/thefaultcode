@@ -7,8 +7,8 @@ const lines = [...e.causes, ...e.diySteps];
 const pos = (g) => { const i = lines.findIndex(x => g.why && x.includes(g.why.replace(/…$/, ''))); return i < 0 ? lines.length : i; };
 const base = guidesForCode(e).slice(0, 6).map(g => ({ ...g, all: g.shop ? compactLinks(g.part, e.brand, `${e.brandSlug}/${e.codeSlug}`) : [] }));
 const alloc = new Map();
-let budget = e.amazonMax ?? Infinity;
-for (const g of [...base].sort((a, b) => e.amazonMax === undefined ? 0 : pos(a) - pos(b))) { const n = Math.min(g.all.length, Math.max(0, budget)); alloc.set(g.part.slug, n); budget -= n; }
+let budget = Math.min(e.amazonMax ?? 3, 3);
+for (const g of [...base].sort((a, b) => pos(a) - pos(b))) { const n = Math.min(g.all.length, Math.max(0, budget)); alloc.set(g.part.slug, n); budget -= n; }
 const items = base.map(g => { const links = g.all.slice(0, alloc.get(g.part.slug)); return { ...g, links, capped: g.all.length > 0 && links.length === 0 }; });
 ---
 {items.length > 0 && <section class="card sec" id="parts-tools" aria-labelledby="pt-h"><h2 id="pt-h">Parts &amp; tools for this fix</h2>

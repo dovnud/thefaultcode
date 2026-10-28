@@ -1,5 +1,26 @@
 # CRO audit — thefaultcode.com
 
+## Implemented (28 Oct 2026)
+
+**Updated moneymaker score: 8/10** (expert estimate, not measured revenue). This is the path's score after the small and medium affiliate steps below. AdSense is unchanged at 2/10 and was not built. Leads stay off.
+
+Shipped on the live templates:
+
+- Code pages: one-line H1 (`Carrier 33: Limit circuit fault`). One filled **Search on Amazon** button in the result card for the homeowner part the code's own text names, with the Associates sentence beside it. `rel="sponsored nofollow"`. Tag stays `thefaultcode-20`.
+- Dealer locator is an outline button when that search button is present, so a view has one filled button.
+- Limit and rollout switches are not sold. Gas valves stay excluded.
+- "Parts & tools" is capped at three links. Glove, towel, tray, and measuring-cup searches are gone.
+- Disclosure above the title is one sentence, plus the Associates line.
+- Guides: the same search button sits under the short answer. The flame-sensor guide points at fine steel wool.
+- Filter and hose "Where to buy" pages say to read the size, length, or connection, and that the search is not a model fit.
+- Brand hubs list at most three homeowner parts.
+- Header search stays on screen below 1100px. Homepage lookup sits above the lead.
+- `proReferral` stays disabled.
+
+Not built: ad slots, `ads.txt`, ad scripts, and privacy edits for ads. No new affiliate program. Washer and dishwasher symptom guides were already on this branch, so no new cluster was added.
+
+The review below is the 27 Oct 2026 pass, before these changes.
+
 Live review, 27 Oct 2026, at 390×844 and 1280×900: homepage, Carrier 33, LG OE, Bosch E24, guides index, flame-sensor guide, Carrier hub, limit-switch parts page, contact, affiliate disclosure. Paths are the live templates. Scores are expert judgment, not measured traffic or revenue.
 
 ## 1. Conversion score
