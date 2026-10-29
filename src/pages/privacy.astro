@@ -1,7 +1,9 @@
 ---
-import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL } from "../config/site";
+import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, SITE_URL } from "../config/site";
+import { breadcrumbLd } from "../lib/schema";
+const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Privacy policy',item:`${SITE_URL}/privacy/`}]);
 ---
-<Base title="Privacy policy | The Fault Code" description="The Fault Code privacy policy: no accounts, forms or comments; Google Analytics 4 for aggregated usage stats; hosting logs and third-party affiliate links.">
+<Base title="Privacy policy | The Fault Code" description="The Fault Code privacy policy: no accounts, forms or comments; Google Analytics 4 for aggregated usage stats; hosting logs and third-party affiliate links." jsonld={jsonld}>
 <div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Privacy policy</li></ol></nav><div class="card" style="margin-top:12px"><h1>Privacy policy</h1>
 <p>This site has no accounts, forms, or comments, and we do not ask you for personal information.</p>
 <h2>Analytics (Google Analytics 4)</h2>
@@ -13,7 +15,7 @@ import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL } from "../conf
 <h2>Links to other sites and affiliate links</h2>
 <p>Some pages link to other sites, such as parts retailers and contractor-matching services. Those sites have their own privacy policies, and if a link is an affiliate link they may use cookies to track referrals from us. See our <a href="/affiliate-disclosure/">affiliate disclosure</a> for details.</p>
 <h2>Search</h2>
-<p>The code search on this site runs in your browser; what you type is not sent to us.</p>
+<p>The <a href="/codes/">code search</a> on this site runs in your browser; what you type is not sent to us.</p>
 <h2>Contact</h2><p>Privacy questions: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->.</p>
 <h2>Changes</h2>
 <p>If this policy changes, we will update this page.</p></div></div>

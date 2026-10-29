@@ -1,5 +1,6 @@
 ---
-import { ORG } from '../config/site';
+import { ORG, SITE_URL } from '../config/site';
+import { organizationLd } from '../lib/schema';
 import Base from '../layouts/Base.astro'; import HeroBoard from '../components/HeroBoard.astro'; import CatIcon from '../components/CatIcon.astro'; import StatCounter from '../components/StatCounter.jsx'; import { getCollection } from 'astro:content'; import { groupCodes, CATEGORIES, codePath, typeLabel } from '../config/categories';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
 const groups = groupCodes(codes);
@@ -10,7 +11,7 @@ const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33'&&c.equipmen
 const guidePick = ['how-to-read-furnace-led-flash-codes','washer-will-not-drain','dishwasher-will-not-drain','ac-high-and-low-pressure-codes','furnace-carbon-monoxide-and-rollout','washer-suds-and-detergent'];
 const guideAll = await getCollection('guides');
 const guides = guidePick.map(id => guideAll.find(g => g.id === id)).filter(Boolean);
-const jsonld={'@context':'https://schema.org','@type':'WebSite',name:'The Fault Code',url:'https://thefaultcode.com/',publisher:ORG};
+const jsonld=[organizationLd(), {'@context':'https://schema.org','@type':'WebSite','@id':`${SITE_URL}/#website`,name:'The Fault Code',url:`${SITE_URL}/`,description:'Plain-English furnace, washer, dishwasher and AC / heat pump error codes, each taken from a manufacturer manual or official support page.',inLanguage:'en',publisher:{'@id':ORG['@id']}}];
 ---
 <Base title="The Fault Code: Furnace, Washer, Dishwasher & AC Error Codes" description="Look up furnace, washer, dishwasher and AC error codes: what each code means, likely causes and how to fix it safely, from manufacturer manuals and official support pages." jsonld={jsonld}>
 <section class="hero">

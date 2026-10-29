@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro'; import { getCollection } from 'astro:content'; import { groupCodes, codePath, typeLabel, searchText } from '../config/categories';
+import { breadcrumbLd } from '../lib/schema';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
 const groups = groupCodes(codes); const brandCount = new Set(codes.map(c=>c.brandSlug)).size;
-const jsonld = {'@context':'https://schema.org','@type':'CollectionPage',name:'All error codes',url:'https://thefaultcode.com/codes/'};
+const jsonld = [{'@context':'https://schema.org','@type':'CollectionPage',name:'All error codes',url:'https://thefaultcode.com/codes/'},
+ breadcrumbLd([{name:'Home',item:'https://thefaultcode.com/'},{name:'All codes',item:'https://thefaultcode.com/codes/'}])];
 ---
 <Base title="All Error Codes: Furnace, Washer, Dishwasher, AC | The Fault Code" description={`Browse all ${codes.length} error codes for furnaces, washing machines, dishwashers and AC / heat pumps, from official manufacturer documentation, with plain-English meanings.`} jsonld={jsonld}>
 <div class="wrap">
