@@ -3,7 +3,9 @@ import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.a
 import { getCollection } from 'astro:content';
 import { guidesForCode, compactLinks } from '../lib/partLinks';
 import { guideMentions } from '../lib/guideLinks';
-import SafetyNotice from './SafetyNotice.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../config/site';
+import { allCodes } from '../lib/paths';
+import { articleLd, breadcrumbLd } from '../lib/schema';
+import SafetyNotice from './SafetyNotice.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate, EDITORIAL } from '../config/site';
 import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
 const { e, related } = Astro.props;
 const cat = catOf(e); const furn = cat.slug === 'furnaces';
@@ -14,11 +16,13 @@ const site='https://thefaultcode.com';
 const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
 const base=`${e.brand} ${eq} code ${e.code}: ${e.meaning.replace(/\.$/,'')}.`;
 const desc=base.length>=110?clip(base,158):clip(`${base} Likely causes, safe DIY checks and when to call a pro.`,158);
-const crumbs=[{name:'Home',item:`${site}/`},{name:cat.name,item:`${site}${cat.hub}`},{name:e.brand,item:`${site}${brandPath(e)}`},{name:e.code,item:`${site}${codePath(e)}`}];
-const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:h1,description:desc,dateModified:e.updated,author:EDITORIAL_AUTHOR,publisher:ORG,mainEntityOfPage:`${site}${codePath(e)}`},
+const pageUrl = `${site}${codePath(e)}`;
+const crumbs=[{name:'Home',item:`${site}/`},{name:cat.name,item:`${site}${cat.hub}`},{name:e.brand,item:`${site}${brandPath(e)}`},{name:e.code,item:pageUrl}];
+const twins = (await allCodes()).filter(c => c.brandSlug === e.brandSlug && c.code.toLowerCase() === e.code.toLowerCase() && codePath(c) !== codePath(e));
+const jsonld = [articleLd({ headline: h1, description: desc, url: pageUrl, pathname: codePath(e), published: e.updated, modified: e.updated }),
   ...(!e.proNeeded && e.diySteps.length ? [{'@context':'https://schema.org','@type':'HowTo',name:`How to fix ${e.brand} ${e.code}`,
     step:e.diySteps.map((t,i)=>({'@type':'HowToStep',position:i+1,text:t}))}] : []),
-  {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:crumbs.map((c,i)=>({'@type':'ListItem',position:i+1,name:c.name,item:c.item}))}];
+  breadcrumbLd(crumbs)];
 const split = (s)=>{const m=s.match(/^Technician:\s*(.*)$/i); return m?{tech:true,t:m[1]}:{tech:false,t:s}};
 const pro = affiliates.proReferral;
 const shop = e.parts.map(p=>({...p,href:affiliates.amazon.url(p.partKey)}));
@@ -46,6 +50,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <p class="meaning">{e.meaning}</p>
 <div class="badges">{e.proNeeded?<a class="badge b-pro" href="#call-a-pro">Call a pro<span class="sr-only">: jump to when to call a pro</span> <span aria-hidden="true">↓</span></a>:<a class="badge b-diy" href="#diy-steps">Basic checks first<span class="sr-only">: jump to safe DIY steps</span> <span aria-hidden="true">↓</span></a>}<span class="lbl-static"><span class="sr-only">Equipment type: </span>{eq}</span></div>
 <div class="pattern"><strong>How it shows:</strong> {e.displayPattern}</div>
+{twins.length>0 && <p class="pattern"><strong>Same characters, different appliance:</strong> {twins.map(c => { const noun = catOf(c).noun; const art = /^[aeiou]/i.test(noun) ? 'an' : 'a'; return <span>{`${e.brand} ${e.code} on ${art} ${noun} is a different fault. `}<a href={codePath(c)}>{`${e.brand} ${typeLabel(c)} ${e.code}`}</a>. </span>; })}</p>}
 {showPro && <p style="margin:16px 0 0"><a class="btn btn-p" rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a></p>}
 </div></div>
 <section class="card sec" data-reveal><h2><span class="num">§1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>

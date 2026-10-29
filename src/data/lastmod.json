@@ -1,9 +1,9 @@
 {
- "src/pages/about.astro": "2026-10-27",
- "src/pages/contact.astro": "2026-10-26",
- "src/pages/privacy.astro": "2026-10-26",
- "src/pages/terms.astro": "2026-10-26",
- "src/pages/affiliate-disclosure.astro": "2026-10-27",
+ "src/pages/about.astro": "2026-10-29",
+ "src/pages/contact.astro": "2026-10-29",
+ "src/pages/privacy.astro": "2026-10-29",
+ "src/pages/terms.astro": "2026-10-29",
+ "src/pages/affiliate-disclosure.astro": "2026-10-29",
  "src/data/hvac.ts": "2026-10-25",
  "src/data/appliance.ts": "2026-10-25",
  "src/data/parts.ts": "2026-10-25"

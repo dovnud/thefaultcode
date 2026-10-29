@@ -1,10 +1,12 @@
 ---
-import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL } from "../config/site";
+import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, SITE_URL } from "../config/site";
+import { breadcrumbLd } from "../lib/schema";
+const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Terms of Use',item:`${SITE_URL}/terms/`}]);
 ---
-<Base title="Terms of Use | The Fault Code" description="Terms of use for The Fault Code: information only, not professional advice, safety warnings, no warranty and third-party links.">
+<Base title="Terms of Use | The Fault Code" description="Terms of use for The Fault Code: information only, not professional advice, safety warnings, no warranty and third-party links." jsonld={jsonld}>
 <div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Terms of Use</li></ol></nav><div class="card" style="margin-top:12px"><h1>Terms of Use</h1>
 <p>By using thefaultcode.com ("the site") you agree to these terms. If you do not agree, please do not use the site.</p>
-<h2>Information only</h2><p>The site provides general information about furnace, washing machine, dishwasher and AC / heat pump error codes, based on manufacturers' published manuals and official support pages. It is not professional advice and is not a substitute for your equipment's manual or for a licensed HVAC or appliance technician. Manuals vary by model and revision; always check the manual for your exact unit.</p>
+<h2>Information only</h2><p>The site provides general information about <a href="/codes/">furnace, washing machine, dishwasher and AC / heat pump error codes</a>, based on manufacturers' published manuals and official support pages. It is not professional advice and is not a substitute for your equipment's manual or for a licensed HVAC or appliance technician. Manuals vary by model and revision; always check the manual for your exact unit.</p>
 <h2 id="safety">Safety and no professional advice</h2><p>Gas appliances can cause fire, explosion, carbon monoxide poisoning and electric shock. Only do checks you can perform safely, turn off power before opening any panel, and never bypass safety devices. Gas, venting, wiring and control-board work should be done by a licensed technician. If you smell gas, leave the building and call your gas utility from outside.</p>
 <p>Before opening any panel, unplug the appliance or switch off its power at the breaker or disconnect, and shut off the gas or water supply where relevant. Capacitors can hold a charge after power is off. Gas, electrical-panel, sealed-system refrigerant and carbon-monoxide-related work belongs to a licensed professional. Follow the manufacturer's manual for your model. The Fault Code editorial team provides general information only, not professional advice, and is not responsible for damage or injury.</p>
 <h2>No warranty</h2><p>The site is provided "as is" without warranties of any kind. We try to keep information accurate but do not guarantee that it is complete, current or error-free.</p>

@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { datasetRows } from '../../lib/dataset';
 import { siteUpdated } from '../../lib/lastmod';
 import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR, SITE_URL, CONTACT_EMAIL } from '../../config/site';
+import { isoDate } from '../../lib/schema';
 const rows = await datasetRows();
 const updated = siteUpdated();
 const brands = new Set(rows.map(r => r.brand)).size;
@@ -13,7 +14,7 @@ const description = `All ${rows.length} fault codes on The Fault Code as a citab
 const jsonld = [
  { '@context':'https://schema.org','@type':'Dataset', name:'The Fault Code: appliance and HVAC fault code reference',
    description:`${rows.length} fault and flash codes for ${cats.join(', ').toLowerCase()} across ${brands} brands. Each record gives the brand, equipment category, code, display pattern, meaning, and a link to the manufacturer manual or support page the meaning was taken from.`,
-   url, creator:EDITORIAL_AUTHOR, publisher:ORG, dateModified:updated, isAccessibleForFree:true, inLanguage:'en',
+   url, creator:EDITORIAL_AUTHOR, publisher:ORG, datePublished:isoDate(updated), dateModified:isoDate(updated), isAccessibleForFree:true, inLanguage:'en',
    keywords:['fault codes','error codes','furnace','washing machine','dishwasher','air conditioner','heat pump','HVAC'],
    distribution:[
     { '@type':'DataDownload', encodingFormat:'text/csv', contentUrl:`${SITE_URL}/data/fault-codes.csv` },
