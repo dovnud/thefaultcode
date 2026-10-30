@@ -1,13 +1,18 @@
 ---
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
-import { CONTACT_EMAIL, GA_MEASUREMENT_ID } from '../config/site';
+import { CONTACT_EMAIL, GA_MEASUREMENT_ID, fmtDate } from '../config/site';
+import { fitTitle, fitDesc } from '../lib/seo';
+import { lastmodFor, siteUpdated } from '../lib/lastmod';
 import { affiliates, AMAZON_STATEMENT } from '../config/affiliates';
 import { CATEGORIES, groupCodes } from '../config/categories';
 import CatIcon from '../components/CatIcon.astro';
 import { ogSpecs, ogPath } from '../lib/og';
-const { title, description, jsonld, noindex = false, ogType = 'website', affLinks = false, amazon = false, markdownHref = '' } = Astro.props;
+const { title, description, jsonld, noindex = false, ogType = 'website', affLinks = false, amazon = false, updated, markdownHref = '' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const seoTitle = fitTitle(String(title ?? 'The Fault Code'));
+const seoDesc = fitDesc(String(description ?? ''));
+const dateModified = String(updated || lastmodFor(Astro.url.pathname) || siteUpdated() || '');
 const _og = (await ogSpecs()).get(Astro.url.pathname);
 const ogImg = new URL(_og ? ogPath(Astro.url.pathname) : '/og/home.png', Astro.site).href;
 const ogAlt = _og?.alt ?? 'The Fault Code: furnace, washer, dishwasher and AC error codes explained';
@@ -22,9 +27,9 @@ const gaId = import.meta.env.PROD && /^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID) ? G
 ---
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title}</title><meta name="description" content={description}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}<link rel="describedby" href="/llms.txt"/>{markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref}/>}
+<title>{seoTitle}</title><meta name="description" content={seoDesc}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}<link rel="describedby" href="/llms.txt"/>{markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref}/>}
 <meta name="theme-color" content="#2a2a27"/><script is:inline>document.documentElement.classList.add("js")</script><link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
-<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content={ogType}/><meta property="og:locale" content="en_US"/><meta property="og:image" content={ogImg}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={ogAlt}/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={ogImg}/><meta name="twitter:image:alt" content={ogAlt}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={seoTitle}/><meta property="og:description" content={seoDesc}/><meta property="og:url" content={canonical}/><meta property="og:type" content={ogType}/><meta property="og:locale" content="en_US"/><meta property="og:image" content={ogImg}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={ogAlt}/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={seoTitle}/><meta name="twitter:description" content={seoDesc}/><meta name="twitter:image" content={ogImg}/><meta name="twitter:image:alt" content={ogAlt}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 {gaId && <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',${JSON.stringify(gaId)});addEventListener('load',function(){var f=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${gaId}';document.head.appendChild(s)};'requestIdleCallback' in window?requestIdleCallback(f,{timeout:3000}):setTimeout(f,1500)});`} />}
 </head><body>
@@ -44,7 +49,7 @@ const gaId = import.meta.env.PROD && /^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID) ? G
 {cats.map(c=><div class="f-cat"><h2><a href={c.hub}><CatIcon slug={c.slug} size={20} />{c.label.charAt(0).toUpperCase()+c.label.slice(1)} codes</a></h2><ul>{groups.filter(g=>g.cat.slug===c.slug).map(g=><li><a href={g.href}>{g.brand}</a></li>)}</ul></div>)}
 <div class="f-site"><h2>Site</h2><ul><li><a href="/codes/">All codes</a></li><li><a href="/guides/">Guides</a></li><li><a href="/parts/">Parts and tools</a></li><li><a href="/data/">Dataset (CSV, JSON)</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/terms/">Terms of Use</a></li>{CONTACT_EMAIL && <li><a href="/contact/">Contact</a></li>}</ul></div>
 </div>
-<div class="legal">{affLinks && <p style="margin:0 0 6px">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.</p>}{affiliates.amazon.enabled && <p style="margin:0 0 6px">{AMAZON_STATEMENT}</p>}If you smell gas, leave the building and call your gas utility from outside. Before servicing any appliance, unplug it or switch it off at the breaker. Information only, not professional advice: see <a href="/terms/#safety">Safety and no professional advice</a>. Questions: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
+<div class="legal">{affLinks && <p style="margin:0 0 6px">Some links on this page are affiliate links and may earn us a commission. <a href="/affiliate-disclosure/">Learn more about our affiliate links</a>.</p>}{affiliates.amazon.enabled && <p style="margin:0 0 6px">{AMAZON_STATEMENT}</p>}If you smell gas, leave the building and call your gas utility from outside. Before servicing any appliance, unplug it or switch it off at the breaker. Information only, not professional advice: see <a href="/terms/#safety">Safety and no professional advice</a>. Questions: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->. Last updated <time datetime={dateModified.slice(0,10)}>{fmtDate(dateModified.slice(0,10))}</time>. © {year} The Fault Code. Brand names are trademarks of their owners; this site is not affiliated with any manufacturer.</div>
 </div></footer>
 <script>
 import '../scripts/search';

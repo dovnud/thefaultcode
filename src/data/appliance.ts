@@ -53,7 +53,7 @@ export const WASHER_PARTS: Part[] = [
     test: ['LG\'s OE steps: press POWER, press SPIN SPEED until HIGH, then START/PAUSE to run a SPIN ONLY cycle and listen for a humming sound. If you hear the hum, the pump motor is working, so clean the drain pump filter.'],
     replace: ['Unplug the washer, drain residual water through the drain tube as your manual directs, then remove the filter, clean it and refit it fully.', 'LG advises running a TUB CLEAN cycle after clearing debris and using less detergent.'],
     caution: 'Unplug the washer and let hot water cool before opening the filter. Pump motor and sensor repairs belong to a qualified technician.',
-    terms: [t('Washing machine drain pump filter', 'washing machine drain pump filter'), t('Front load washer drain pump', 'front load washer drain pump'), t('LG washer drain pump', 'LG washer drain pump'), t('Samsung washer drain pump filter', 'Samsung washer drain pump filter'), t('Whirlpool washer drain pump', 'Whirlpool washer drain pump'), t('Shallow tray for draining an appliance', 'shallow tray for appliance drain'), t('Absorbent microfiber towels', 'absorbent microfiber towels')],
+    terms: [t('Washing machine drain pump filter', 'washing machine drain pump filter'), t('Front load washer drain pump', 'front load washer drain pump'), t('LG washer drain pump', 'LG washer drain pump'), t('Samsung washer drain pump filter', 'Samsung washer drain pump filter'), t('Whirlpool washer drain pump', 'Whirlpool washer drain pump')],
     asins: [A.affW], sources: [S.lgW, S.samW],
     related: ['washer-drain-hose', 'washer-cleaner', 'he-detergent'] },
 
@@ -96,7 +96,7 @@ export const WASHER_PARTS: Part[] = [
     test: ['Samsung says SUd means the washer detected over-sudsing, pauses briefly to let the suds dissipate, then continues the cycle on its own.'],
     replace: [],
     caution: 'Keep detergents and cleaners away from children and pets.',
-    terms: [t('HE laundry detergent, general search', 'HE high efficiency laundry detergent'), t('HE liquid laundry detergent', 'HE liquid laundry detergent'), t('HE powder laundry detergent', 'HE powder laundry detergent'), t('HE laundry pods', 'HE laundry detergent pods'), t('Fragrance-free HE detergent', 'fragrance free HE laundry detergent'), t('Laundry detergent measuring cup', 'laundry detergent measuring cup')],
+    terms: [t('HE laundry detergent, general search', 'HE high efficiency laundry detergent'), t('HE liquid laundry detergent', 'HE liquid laundry detergent'), t('HE powder laundry detergent', 'HE powder laundry detergent'), t('HE laundry pods', 'HE laundry detergent pods'), t('Fragrance-free HE detergent', 'fragrance free HE laundry detergent')],
     asins: [], sources: [S.lgW, S.samW, S.whW],
     related: ['washer-cleaner', 'washer-drain-hose'] },
 ];
@@ -109,7 +109,7 @@ export const DW_PARTS: Part[] = [
     test: ['LG says to clean the filter every one to two weeks. Bosch (E25): remove the filter completely to reveal the pump cover and check that the cover is not loose.'],
     replace: ['Switch the dishwasher off at its breaker. Remove the lower rack, take out the filter as your manual shows (LG: turn the handle counter-clockwise and pull up), wash the parts and refit them completely.', 'Samsung says to take care with sharp debris.'],
     caution: 'Switch off the dishwasher at its breaker first and wear gloves: broken glass can sit in the filter area.',
-    terms: [t('Dishwasher filter cleaning brush', 'dishwasher filter cleaning brush'), t('Soft bristle detail brush', 'soft bristle detail cleaning brush'), t('Dishwasher filter replacement', 'dishwasher filter replacement'), t('Bosch dishwasher filter', 'Bosch dishwasher filter'), t('LG dishwasher filter', 'LG dishwasher filter'), t('Samsung dishwasher filter', 'Samsung dishwasher filter'), t('GE dishwasher filter', 'GE dishwasher filter'), t('Cut-resistant work gloves', 'cut resistant work gloves')],
+    terms: [t('Dishwasher filter cleaning brush', 'dishwasher filter cleaning brush'), t('Soft bristle detail brush', 'soft bristle detail cleaning brush'), t('Dishwasher filter replacement', 'dishwasher filter replacement'), t('Bosch dishwasher filter', 'Bosch dishwasher filter'), t('LG dishwasher filter', 'LG dishwasher filter'), t('Samsung dishwasher filter', 'Samsung dishwasher filter'), t('GE dishwasher filter', 'GE dishwasher filter')],
     asins: [], sources: [S.boschDW, S.lgDW, S.samDW],
     related: ['dishwasher-drain-hose', 'dishwasher-descaler'] },
 

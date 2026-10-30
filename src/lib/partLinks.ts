@@ -115,6 +115,22 @@ export function fullLinks(p: Part, brands: string[]) {
   return { products, searches, byBrand };
 }
 
+/** The one homeowner part to feature on a code page: the earliest non-technician shop guide in the code's own text. */
+export function codePrimary(e: CodeData): { name: string; href: string; slug: string } | null {
+  if (!affiliates.amazon.enabled) return null;
+  const lines = [...e.causes, ...e.diySteps];
+  const pos = (g: CodeGuide) => {
+    const raw = g.why.replace(/…$/, '');
+    const i = lines.findIndex(x => x.replace(/^Technician:\s*/i, '').includes(raw.slice(0, 48)));
+    return i < 0 ? 999 : i;
+  };
+  const shops = guidesForCode(e).filter(g => g.shop && !g.tech);
+  const parts = shops.filter(g => g.part.kind !== 'tool').sort((a, b) => pos(a) - pos(b));
+  const g = parts[0] ?? shops.sort((a, b) => pos(a) - pos(b))[0];
+  if (!g) return null;
+  return { name: g.part.noun, href: amazonLink(g.part.noun), slug: g.part.slug };
+}
+
 export const partUrl = (slug: string) => `/parts/${slug}/`;
 export const partsCatUrl = (cat: string) => `/parts/for/${cat}/`;
 export const partsBrandUrl = (cat: string, brand: string) => `/parts/for/${cat}/${brand}/`;
