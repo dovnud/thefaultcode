@@ -1,15 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
 import { fmtDate, ORG, EDITORIAL, SITE_URL, CONTACT_EMAIL } from "../config/site";
+import { organizationLd, breadcrumbLd, isoDate } from "../lib/schema";
 import { siteUpdated } from "../lib/lastmod";
 import { allCodes } from "../lib/paths";
 const codes = await allCodes(); const updated = siteUpdated();
 const brands = new Set(codes.map(c => c.brandSlug)).size;
 const jsonld = [
- { '@context':'https://schema.org', '@type':'Organization', ...ORG, description:'An independent reference site that explains furnace, washing machine, dishwasher and AC / heat pump fault codes using manufacturer manuals and official support pages.',
-   contactPoint: CONTACT_EMAIL ? { '@type':'ContactPoint', contactType:'customer support', email:CONTACT_EMAIL, url:`${SITE_URL}/contact/` } : undefined },
- { '@context':'https://schema.org', '@type':'AboutPage', name:'About The Fault Code', url:`${SITE_URL}/about/`, dateModified:updated, publisher:{ '@id': ORG['@id'] }, about:{ '@id': ORG['@id'] } },
- { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:`${SITE_URL}/`},{'@type':'ListItem',position:2,name:'About',item:`${SITE_URL}/about/`}] }];
+ organizationLd(),
+ { '@context':'https://schema.org', '@type':'AboutPage', name:'About The Fault Code', url:`${SITE_URL}/about/`, dateModified:isoDate(updated), publisher:{ '@id': ORG['@id'] }, about:{ '@id': ORG['@id'] } },
+ breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'About',item:`${SITE_URL}/about/`}])];
 ---
 <Base title="About | The Fault Code" description="How The Fault Code works: furnace, washer, dishwasher and AC / heat pump error codes taken from manufacturer manuals and official support pages, nothing guessed, with safety guidance and a link to the source on every page." jsonld={jsonld}>
 <div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav><div class="card" style="margin-top:12px"><h1>About</h1><p class="meta-l">Written by {EDITORIAL} · Last updated <time datetime={updated}>{fmtDate(updated)}</time></p>

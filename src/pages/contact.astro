@@ -1,8 +1,11 @@
 ---
-import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL } from "../config/site";
+import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, SITE_URL } from "../config/site";
+import { breadcrumbLd } from "../lib/schema";
+const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Contact',item:`${SITE_URL}/contact/`}]);
 ---
-<Base title="Contact | The Fault Code" description="Contact The Fault Code with corrections or questions about a code page. We cannot diagnose individual appliances or HVAC systems.">
+<Base title="Contact | The Fault Code" description="Contact The Fault Code with corrections or questions about a code page. We cannot diagnose individual appliances or HVAC systems." jsonld={jsonld}>
 <div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol></nav><div class="card" style="margin-top:12px"><h1>Contact</h1>
 {CONTACT_EMAIL ? <p>Questions or corrections? Email <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->.</p> : <p>A contact address is not available yet. Please check back soon.</p>}
+<p>To look up a code, open the <a href="/codes/">code index</a> or the <a href="/guides/">troubleshooting guides</a>.</p>
 <p>We can't diagnose individual furnaces, appliances or HVAC systems. For a problem with your system, contact a licensed HVAC technician or, for a washer or dishwasher, a qualified appliance technician. If you smell gas, leave the building and call your gas utility from outside.</p></div></div>
 </Base>

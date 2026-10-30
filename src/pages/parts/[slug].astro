@@ -3,7 +3,8 @@ import Base from '../../layouts/Base.astro'; import SafetyNotice from '../../com
 import { allCodes } from '../../lib/paths';
 import { CATEGORIES, catOf, codePath, catBySlug } from '../../config/categories';
 import { AMAZON_STATEMENT } from '../../config/affiliates';
-import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR } from '../../config/site';
+import { fmtDate, EDITORIAL } from '../../config/site';
+import { articleLd, breadcrumbLd } from '../../lib/schema';
 import { lastmodFor } from '../../lib/lastmod';
 import { PARTS, partBySlug, fullLinks, usage, partUrl, partsCatUrl, partsBrandUrl } from '../../lib/partLinks';
 export function getStaticPaths(){ return PARTS.map(p=>({params:{slug:p.slug},props:{p}})); }
@@ -16,8 +17,8 @@ const nLinks = L.products.length + L.searches.length + L.byBrand.length;
 const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
 const url = `https://thefaultcode.com/parts/${p.slug}/`;
 const updated = lastmodFor(`/parts/${p.slug}/`)!;
-const jsonld = [{'@context':'https://schema.org','@type':'Article',headline:p.name,description:p.summary,dateModified:updated,author:EDITORIAL_AUTHOR,publisher:ORG,mainEntityOfPage:url},
- {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://thefaultcode.com/'},{'@type':'ListItem',position:2,name:'Parts and tools',item:'https://thefaultcode.com/parts/'},{'@type':'ListItem',position:3,name:p.name,item:url}]}];
+const jsonld = [articleLd({ headline: p.name, description: clip(p.summary, 158), url, pathname: `/parts/${p.slug}/`, published: updated, modified: updated }),
+ breadcrumbLd([{name:'Home',item:'https://thefaultcode.com/'},{name:'Parts and tools',item:'https://thefaultcode.com/parts/'},{name:p.name,item:url}])];
 const byBrand = [...used.reduce((m,c)=>m.set(c.brand,[...(m.get(c.brand)??[]),c]),new Map())].slice(0,8);
 const related = p.related.map(partBySlug).filter(Boolean);
 const brandLinks = [...new Map(used.map(c=>[`${catOf(c).slug}/${c.brandSlug}`,c])).values()];

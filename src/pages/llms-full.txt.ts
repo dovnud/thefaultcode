@@ -1,64 +1,63 @@
-// Build-time markdown corpus for answer engines. Static route: /llms-full.txt
-import { readFileSync, readdirSync } from 'node:fs';
 import { getCollection } from 'astro:content';
-import { codePath } from '../config/categories';
-
-function stripFront(raw: string): string {
-  const mark = raw.indexOf('\n---\n');
-  if (mark !== -1) return raw.slice(mark + 5).trim();
-  return raw.trim();
-}
+import { SITE_URL, EDITORIAL, CONTACT_EMAIL } from '../config/site';
+import { catOf, codePath, typeLabel } from '../config/categories';
+import { PARTS } from '../data';
+import { guideBody } from '../lib/guideMarkdown';
 
 export async function GET() {
-  const s = 'https://thefaultcode.com';
   const codes = (await getCollection('codes')).filter(c => !c.data.example).map(c => c.data)
-    .sort((a, b) => codePath(a).localeCompare(codePath(b)));
+    .sort((a, b) => catOf(a).name.localeCompare(catOf(b).name) || a.brand.localeCompare(b.brand) || a.code.localeCompare(b.code, 'en', { numeric: true }));
   const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
-  const files = new Map(readdirSync('src/content/guides').map(f => [f.replace(/\.md$/, ''), readFileSync(`src/content/guides/${f}`, 'utf8')]));
-  const parts: string[] = [];
-  parts.push(`# The Fault Code
+  const codeBlocks = codes.map(e => {
+    const pro = e.proAdvice ?? (e.proNeeded ? 'This code usually needs a qualified technician.' : 'Call a pro if the checks do not clear the code.');
+    return `### ${e.brand} ${typeLabel(e)} ${e.code}
 
-> Full text of the troubleshooting guides and every published fault code. Each code's meaning comes from a manufacturer manual or official support page linked on the code page. This file is generated at build time. Information only, not professional advice.
-
-- Site: ${s}/
-- About: ${s}/about/
-- Index: ${s}/llms.txt
-`);
-  parts.push(`\n# Guides\n`);
-  for (const g of guides) {
+- Page: ${SITE_URL}${codePath(e)}
+- Meaning: ${e.meaning}
+- How it shows: ${e.displayPattern}
+- Causes: ${e.causes.join('; ')}
+- Checks: ${e.diySteps.join(' ')}
+- When to call a pro: ${pro}
+- Source: ${e.sourceManualUrl ?? 'see the page'}
+- Updated: ${e.updated}`;
+  }).join('\n\n');
+  const guideBlocks = guides.map(g => {
     const d = g.data;
-    const body = stripFront(files.get(g.id) ?? '');
-    parts.push(`## ${d.title}
+    return `### ${d.title}
 
-URL: ${s}/guides/${g.id}/
-Last updated: ${d.updated}
+- Markdown: ${SITE_URL}/guides/${g.id}.md
+- Page: ${SITE_URL}/guides/${g.id}/
+- Updated: ${d.updated}
 
 ${d.answer}
 
-${body}
-`);
-  }
-  parts.push(`\n# Fault codes\n`);
-  for (const e of codes) {
-    const steps = (e.diySteps ?? []).map(x => `- ${x}`).join('\n');
-    const causes = (e.causes ?? []).map(x => `- ${x}`).join('\n');
-    parts.push(`## ${e.brand} ${e.code}
+${guideBody(g.id)}
 
-URL: ${s}${codePath(e)}
-Last updated: ${e.updated}
-Equipment: ${e.equipmentType}
+#### FAQ
+${d.faq.map(f => `**${f.q}** ${f.a}`).join('\n\n')}`;
+  }).join('\n\n');
+  const partBlocks = PARTS.map(p => `### ${p.name}
 
-${e.meaning}
+- Page: ${SITE_URL}/parts/${p.slug}/
+- ${p.summary}
+${p.what.map(t => `- ${t}`).join('\n')}`).join('\n\n');
+  const body = `# The Fault Code
 
-### Likely causes
-${causes || '- None listed.'}
+> Full text of the published guides, fault codes, and parts guides. Written by ${EDITORIAL}. Information only, not professional advice. Contact: ${CONTACT_EMAIL}.
 
-### Checks
-${steps || '- See the code page.'}
+Curated index: ${SITE_URL}/llms.txt
 
-${e.proNeeded ? 'This code usually needs a licensed technician.' : 'Call a technician if the checks do not clear the code.'}
-${e.sourceManualUrl ? `\nSource: ${e.sourceManualUrl}` : ''}
-`);
-  }
-  return new Response(parts.join('\n'), { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
-}
+## Guides
+
+${guideBlocks}
+
+## Fault codes
+
+${codeBlocks}
+
+## Parts and tools
+
+${partBlocks}
+`;
+  return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+};

@@ -2,18 +2,17 @@
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { CONTACT_EMAIL, GA_MEASUREMENT_ID, fmtDate } from '../config/site';
-import { fitTitle, fitDesc, pageGraph } from '../lib/seo';
+import { fitTitle, fitDesc } from '../lib/seo';
 import { lastmodFor, siteUpdated } from '../lib/lastmod';
 import { affiliates, AMAZON_STATEMENT } from '../config/affiliates';
 import { CATEGORIES, groupCodes } from '../config/categories';
 import CatIcon from '../components/CatIcon.astro';
 import { ogSpecs, ogPath } from '../lib/og';
-const { title, description, jsonld, noindex = false, ogType = 'website', affLinks = false, amazon = false, updated } = Astro.props;
+const { title, description, jsonld, noindex = false, ogType = 'website', affLinks = false, amazon = false, updated, markdownHref = '' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const seoTitle = fitTitle(String(title ?? 'The Fault Code'));
 const seoDesc = fitDesc(String(description ?? ''));
 const dateModified = String(updated || lastmodFor(Astro.url.pathname) || siteUpdated() || '');
-const graph = pageGraph({ title: seoTitle, description: seoDesc, url: canonical, path: Astro.url.pathname, dateModified, jsonld });
 const _og = (await ogSpecs()).get(Astro.url.pathname);
 const ogImg = new URL(_og ? ogPath(Astro.url.pathname) : '/og/home.png', Astro.site).href;
 const ogAlt = _og?.alt ?? 'The Fault Code: furnace, washer, dishwasher and AC error codes explained';
@@ -28,10 +27,10 @@ const gaId = import.meta.env.PROD && /^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID) ? G
 ---
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{seoTitle}</title><meta name="description" content={seoDesc}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}
+<title>{seoTitle}</title><meta name="description" content={seoDesc}/>{noindex ? <meta name="robots" content="noindex"/> : <link rel="canonical" href={canonical}/>}<link rel="describedby" href="/llms.txt"/>{markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref}/>}
 <meta name="theme-color" content="#2a2a27"/><script is:inline>document.documentElement.classList.add("js")</script><link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin/>
 <meta property="og:site_name" content="The Fault Code"/><meta property="og:title" content={seoTitle}/><meta property="og:description" content={seoDesc}/><meta property="og:url" content={canonical}/><meta property="og:type" content={ogType}/><meta property="og:locale" content="en_US"/><meta property="og:image" content={ogImg}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={ogAlt}/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={seoTitle}/><meta name="twitter:description" content={seoDesc}/><meta name="twitter:image" content={ogImg}/><meta name="twitter:image:alt" content={ogAlt}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-<script type="application/ld+json" set:html={JSON.stringify(graph)} />
+{jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 {gaId && <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',${JSON.stringify(gaId)});addEventListener('load',function(){var f=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${gaId}';document.head.appendChild(s)};'requestIdleCallback' in window?requestIdleCallback(f,{timeout:3000}):setTimeout(f,1500)});`} />}
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
