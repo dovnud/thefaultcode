@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "48",
+  "codeSlug": "48",
+  "displayPattern": "Status LED: 4 short flashes then 8 long flashes (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control). The earlier, local version of this fault is code 33.",
+  "meaning": "Lost inverter communications (system malfunction): the outdoor control (AOC) and the inverter (MOC) have stopped communicating. Fault 33 is logged after 2 minutes with no communication and is elevated to 48 after 3 consecutive failures within 20 minutes, or 20 minutes of continuous loss of connection.",
+  "causes": [
+    "Loose or disconnected harness between the AOC (PL20) and the MOC",
+    "Radio or electrical noise",
+    "Possible damage to the inverter"
+  ],
+  "diySteps": [
+    "Note the flash pattern on the amber status LED: 4 short flashes then 8 long flashes is 48; 3 short then 3 long is 33. Short flashes give the first digit and long flashes the second",
+    "For radio or electrical noise, the manual says the system will try to self-mitigate with repeated start attempts",
+    "Technician: verify a good harness connection between the AOC (PL20) and the MOC",
+    "Technician: on the inverter's MOC board, a steady green LD5 indicates the 5 volt connection between AOC and MOC is OK, and a blinking amber LED3 indicates communication from the MOC to the AOC",
+    "Technician: if the harness is good, the manual's action for possible inverter damage is to change out the inverter drive"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "proAdvice": "Call a licensed HVAC technician: fault 48 involves the harness inside the outdoor unit and possibly the inverter drive, both of which carry high voltage.",
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "updated": "2026-10-30"
+}

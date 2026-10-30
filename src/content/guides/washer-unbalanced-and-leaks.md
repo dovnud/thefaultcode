@@ -5,7 +5,7 @@
  "title": "Washer Unbalanced Load, Overfill and Leak Codes",
  "description": "What LG UE, Samsung UE, LG FE and Samsung washer LC mean, and the load, level, hose and detergent checks those support pages publish.",
  "answer": "An unbalanced tub and a leak are different faults. LG UE and Samsung UE mean the load is piled on one side and the washer could not even it out. LG FE means too much water entered and the drain pump is running to prevent a leak. Samsung washer LC means moisture where it should not be, or a problem with the sensor. Rearrange the load before you assume the machine is broken.",
- "updated": "2026-10-27",
+ "updated": "2026-10-30",
  "faq": [
   {
    "q": "What does Samsung Ur mean?",
@@ -30,7 +30,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/"
   }
  ],
- "codes": ["washers/lg/ue", "washers/samsung/ue", "washers/lg/fe", "washers/samsung/lc", "washers/lg/le"]
+ "codes": ["washers/lg/ue", "washers/samsung/ue", "washers/lg/fe", "washers/samsung/lc", "washers/lg/le", "washers/lg/ae"]
 }
 ---
 ## Three faults that get lumped together
@@ -44,6 +44,8 @@ A washer that bangs, a washer that fills past where you expect, and a washer tha
 | [Samsung LC](/washers/samsung/lc/) | Water level or leakage: moisture where it should not be, or an issue with the sensor. Some models show 1E, LE, 1C or LC1. |
 
 Samsung also warns, on the door-code page, that some models use dC for an unbalanced load. If your manual says that, this is the page to follow, not the [door-lock guide](/guides/washer-door-will-not-lock/).
+
+On LG washers, the leak code is [AE](/washers/lg/ae/): water leaked inside the appliance and the anti-flood safety switch was activated. LG's causes are a leak, a damaged inlet hose or a faulty safety switch, and its checks are the inlet hoses for loose connections or cuts, then a 60-second power reset.
 
 ## LG UE
 LG's causes are laundry that is not evenly distributed (including incorrect use of a laundry net), a load that is too large or too small, items that are not suited to machine washing, and a washer that is not level.

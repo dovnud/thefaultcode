@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "AE",
+  "codeSlug": "ae",
+  "displayPattern": "Washer display shows AE",
+  "meaning": "Leakage error: the washer has detected a water leak inside the appliance and its anti-flood safety switch has been activated.",
+  "causes": [
+    "Water leakage inside the washer",
+    "A damaged inlet hose",
+    "A faulty safety switch"
+  ],
+  "diySteps": [
+    "LG notes the washer has a safety mechanism to prevent flooding the floor: when water leaks, the safety switch is activated",
+    "Check the inlet hoses for loose connections or cuts",
+    "Unplug the washer, wait 60 seconds and restart it"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If AE persists after you check the inlet hoses and restart the washer, LG says to schedule a service request.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 2,
+  "updated": "2026-10-30"
+}

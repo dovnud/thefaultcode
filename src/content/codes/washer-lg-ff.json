@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "FF",
+  "codeSlug": "ff",
+  "displayPattern": "Washer display shows FF (all controls disabled)",
+  "meaning": "Freeze failure: the temperature inside the washer has dropped below 1°C (about 34°F), so water in the drain or inlet hoses may be frozen. The washer will not start until it warms above 4°C (about 39°F).",
+  "causes": [
+    "Continued cold weather freezing water left in the drain pump, drain hose or inlet hoses",
+    "A frozen faucet or water supply hose (this can also show as IE, the water inlet error, once the washer runs)",
+    "If FF appears when the weather is not cold, LG says to request service"
+  ],
+  "diySteps": [
+    "Open the door and remove all laundry",
+    "Pour warm water at 50 to 60°C (122 to 140°F) into the drum, close the door and wait 1 to 2 hours for the drain pump to thaw. Do not use boiling water: LG warns it risks a burn injury",
+    "Open the access cover on the lower side of the washer, remove the cap from the drain tube and drain any water, then close the cap securely. If no water comes out, the ice may not have fully melted, so wait a little longer and try again",
+    "Turn the washer on and run a Rinse x1 cycle to check that it operates without issues",
+    "If IE appears and the drum does not fill, close the taps and separate the inlet hoses from the washer. Open the taps to test whether water flows. If it does not, wrap a cloth soaked in hot water around each tap for five minutes",
+    "Thaw the inlet hoses in warm water below 50°C (122°F), reconnect them, then run a Rinse (once) + Spin cycle to test",
+    "To prevent it: if you will not use the washer during winter, drain the residual water from the drain tube, hold the drain hose downward with no bends so no water is trapped, and close the taps before removing the water from the inlet hoses"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If FF appears even though the weather is not cold, or the washer still will not run after thawing, LG says to request service.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-10-30"
+}

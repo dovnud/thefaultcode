@@ -5,7 +5,7 @@
  "title": "Washer Will Not Fill: IE, 4C and F8 E1",
  "description": "Why a washer shows LG IE, Samsung 4C or 4C2, or Whirlpool F8 E1, and the faucet, hose and inlet-filter checks each brand publishes.",
  "answer": "A fill code means water did not enter the tub in the time the washer allows, or the flow was too low. LG calls that IE, Samsung calls it 4C, and Whirlpool calls low flow F8 E1. Samsung 4C2 is a different message: the hot and cold hoses are swapped. Start with the faucets and the hoses, which is where all three brands start.",
- "updated": "2026-10-27",
+ "updated": "2026-10-30",
  "faq": [
   {
    "q": "Why does Samsung 4C appear on a Cold cycle?",
@@ -34,7 +34,7 @@
    "url": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers"
   }
  ],
- "codes": ["washers/lg/ie", "washers/samsung/4c", "washers/samsung/4c2", "washers/whirlpool/f8e1"]
+ "codes": ["washers/lg/ie", "washers/samsung/4c", "washers/samsung/4c2", "washers/whirlpool/f8e1", "washers/lg/ff"]
 }
 ---
 ## Fill codes versus drain codes
@@ -107,6 +107,8 @@ If the code returns, Whirlpool says to contact them or schedule service. There i
 A whole-house outage looks like IE or 4C or F8 E1 on every faucet, not only the washer. Check a tap before you take the washer apart. LG's dishwasher IE page makes the same point for that appliance: check whether the kitchen and bathroom taps have water. The washer IE page says the supply may be cut off.
 
 In freezing weather, only LG's washer IE page gives the thawing method quoted above, including the 50°C limit. Do not apply that number to a Samsung or Whirlpool hose unless that brand's page says the same thing. It does not, on the pages we publish.
+
+If an LG washer shows [FF](/washers/lg/ff/) instead of IE, the washer itself has dropped below 1°C (about 34°F). LG says its controls stay disabled until it warms above 4°C (about 39°F), and the FF page has LG's warm-water method for thawing the drum and drain pump before you get to the hoses.
 
 ## When to stop
 Stop if water is leaking at a fitting you just reconnected, if the inlet screen is damaged, or if the code returns after the faucets are fully open and the hoses are straight. The inlet valve is electrically operated. Replacing it means moving the washer, disconnecting powered parts, and matching a valve to the model. That is service work once the published checks are done.
