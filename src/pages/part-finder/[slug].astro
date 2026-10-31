@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import SafetyNotice from '../../components/SafetyNotice.astro';
+import { allCodes } from '../../lib/paths';
+import { catBySlug, typeLabel } from '../../config/categories';
+import { affiliates, AMAZON_STATEMENT } from '../../config/affiliates';
+import { fmtDate, EDITORIAL, SITE_URL } from '../../config/site';
+import { articleLd, breadcrumbLd } from '../../lib/schema';
+import { FINDER_PARTS, FINDER_UPDATED, WINTER_GUIDE, codesForPart, finderBySlug, finderPath } from '../../lib/partFinder';
+export async function getStaticPaths() {
+  const codes = await allCodes();
+  return FINDER_PARTS.filter(p => codesForPart(p.slug, codes).length > 0).map(p => ({ params: { slug: p.slug }, props: { slug: p.slug } }));
+}
+const { slug } = Astro.props;
+const part = finderBySlug(slug)!;
+const hits = codesForPart(slug, await allCodes());
+const cat = catBySlug(part.cat);
+const shop = affiliates.amazon.url(part.partKey);
+const url = `${SITE_URL}${finderPath(slug)}`;
+const name = part.name.toLowerCase();
+const art = /^[aeiou]/i.test(name) ? 'an' : 'a';
+const desc = `${hits.length} published fault codes name ${art} ${name} in the manufacturer manual. Each row quotes that sentence and links the source document.`;
+const brands = [...hits.reduce((m, h) => m.set(h.code.brand, [...(m.get(h.code.brand) ?? []), h]), new Map<string, typeof hits>())];
+const siblings = FINDER_PARTS.filter(p => p.cat === part.cat && p.slug !== part.slug);
+const jsonld = [
+  articleLd({ headline: `${part.name}: codes that name it`, description: desc, url, pathname: finderPath(slug), published: FINDER_UPDATED, modified: FINDER_UPDATED }),
+  { '@context': 'https://schema.org', '@type': 'ItemList', name: `Codes that name a ${part.name.toLowerCase()}`, numberOfItems: hits.length,
+    itemListElement: hits.map((h, i) => ({ '@type': 'ListItem', position: i + 1, name: `${h.code.brand} ${h.code.code}`, url: `${SITE_URL}${h.href}` })) },
+  breadcrumbLd([{ name: 'Home', item: `${SITE_URL}/` }, { name: 'Part finder', item: `${SITE_URL}/part-finder/` }, { name: part.name, item: url }]),
+];
+---
+<Base title={`${part.name}: Fault Codes That Name It | The Fault Code`} description={desc} jsonld={jsonld} ogType="article" updated={FINDER_UPDATED} affLinks={!!shop} amazon={!!shop}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/part-finder/">Part finder</a></li><li aria-current="page">{part.name}</li></ol></nav>
+{shop && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{cat.name} · {hits.length} {hits.length === 1 ? 'code' : 'codes'}</p><h1>{part.name}</h1>
+<p>These codes name {art} {name} in the manufacturer document linked on the row. The sentence is the wording published from that document. Codes that do not name it are not listed.</p>
+<p class="meta-l">By {EDITORIAL} · Updated <time datetime={FINDER_UPDATED}>{fmtDate(FINDER_UPDATED)}</time></p></div>
+<div class="layout"><article>
+{part.slug === 'flame-sensor' && <section class="card sec"><h2>What the manuals say about cleaning</h2>
+<p>Goodman GR9S96/GD9S96 installation and operating guide (IOG-2037B) says the flame sensor should be carefully cleaned by a qualified servicer using emery cloth or steel wool. <a href="https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf" rel="noopener" target="_blank">Goodman IOG-2037B<span class="sr-only"> (opens in a new tab)</span> ↗</a></p>
+<p>Rheem R96V installation instructions recommend that at the beginning of the heating season the flame sensor be cleaned with fine steel wool or a Scotch Bright Pad by a qualified installer, service agency or the gas supplier. <a href="https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf" rel="noopener" target="_blank">Rheem R96V installation instructions<span class="sr-only"> (opens in a new tab)</span> ↗</a></p>
+</section>}
+{part.slug === 'filter' && <section class="card sec"><h2>How often the filter is checked</h2>
+<p>The U.S. Department of Energy Energy Saver guide says to clean or replace filters on furnaces once a month or as recommended. <a href="https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf" rel="noopener" target="_blank">Energy Saver guide<span class="sr-only"> (opens in a new tab)</span> ↗</a></p>
+<p>ENERGY STAR says to inspect, clean, or change air filters once a month. <a href="https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist" rel="noopener" target="_blank">ENERGY STAR maintenance checklist<span class="sr-only"> (opens in a new tab)</span> ↗</a></p>
+</section>}
+{part.slug === 'pressure-switch' && <section class="card sec"><h2>Vents and snow</h2>
+<p>Goodman IOG-2037B requires every vent and intake termination to be at least 12 inches above ground level or the anticipated snow level. The same guide's EE2 corrective action is to inspect the flue and inlet air piping for blockage. <a href="https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf" rel="noopener" target="_blank">Goodman IOG-2037B<span class="sr-only"> (opens in a new tab)</span> ↗</a></p>
+</section>}
+<section class="card sec" aria-labelledby="codes-h"><h2 id="codes-h">Codes that name it</h2>
+{brands.map(([brand, list]) => <div><h3>{brand}</h3><ul class="causes">{list.map(h => <li><a href={h.href}>{h.code.brand} {typeLabel(h.code)} {h.code.code}</a>: <q>{h.quote}</q> <a href={h.sourceUrl} rel="noopener" target="_blank">{h.sourceName}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul></div>)}
+</section>
+{shop ? <section class="card sec" id="shop"><h2>Search for this part</h2>
+<p>{part.tech ? 'The button opens an Amazon search for the part name. It does not confirm a fit for your model, and it does not make the repair a homeowner job. Gas, venting and line-voltage work belongs to a licensed technician.' : 'The button opens an Amazon search for the part name. It does not confirm a fit. Match the size and connections to the old part and to your manual.'}</p>
+<p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={shop} aria-label={`Search on Amazon: ${part.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a></p>
+<p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
+</section> : <section class="card sec"><h2>Technician part</h2>
+<p>{part.partKey === 'gas-valve' ? 'Goodman IOG-2037B says installation and service must be performed by a qualified installer, service agency or the gas supplier. This page does not link a replacement gas valve.' : 'Limit and rollout switches are safety devices. This page names the codes that mention them and leaves replacement to a licensed technician.'}</p>
+</section>}
+{part.tech && <SafetyNotice kind={part.cat === 'furnaces' ? 'furnace' : part.cat === 'washers' ? 'washer' : 'dishwasher'} />}
+</article>
+<aside class="side">
+{part.guideSlug && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Parts and tools guide</h2><p>What the manuals say about choosing and testing it.</p><ul class="parts"><li><a href={`/parts/${part.guideSlug}/`}>Open the {part.name.toLowerCase()} guide</a></li></ul></div>}
+{part.cat === 'furnaces' && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">No heat</h2><ul class="parts"><li><a href={WINTER_GUIDE}>Furnace no heat, winter 2026</a></li></ul></div>}
+<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Other parts</h2><ul class="parts">{siblings.map(s => <li><a href={finderPath(s.slug)}>{s.name}</a></li>)}<li><a href="/part-finder/">All parts in the finder</a></li></ul></div>
+</aside>
+</div>
+<div class="gasbar"><span class="w">{cat.bar[0]}</span><span>{cat.bar[1]}</span></div>
+</div>
+</Base>

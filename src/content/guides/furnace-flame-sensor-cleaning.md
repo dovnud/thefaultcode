@@ -4,7 +4,7 @@
  "title": "Furnace Flame Sensor: Symptoms, Codes and Cleaning",
  "description": "What a furnace flame sensor does, the codes that point to it, what the manuals say about cleaning it, and safety cautions.",
  "answer": "The flame sensor is a metal rod in the burner flame that tells the control board the gas has lit. If it is coated, the board may not sense flame and will shut the gas off, often a few seconds after ignition. Carrier's manual lists oxide build-up on the flame sensor and says to clean it with fine steel wool; Rheem recommends cleaning it at the start of each heating season by a qualified installer or service agency.",
- "updated": "2026-10-23",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "Can I clean a flame sensor myself?",
@@ -67,5 +67,7 @@
 
 ## If the sensor is not the problem
 A weak signal after cleaning can mean grounding, polarity or gas pressure issues (see [Goodman EEA](/goodman/eea/) and [Trane E06](/trane/e06/)). These need a technician with a meter.
+
+The [winter 2026 no-heat checklist](/guides/furnace-no-heat-winter-2026/) routes a no-heat call to the ignition and flame-sense codes. Every code that names the sensor is on the [part finder](/part-finder/flame-sensor/).
 
 > **Safety first:** If you smell gas, don't touch light switches or use a phone inside. Leave the building and call your gas utility from outside. Turn off power to the furnace before opening any panel, and never bypass or jumper a safety switch. Gas, venting, wiring and control-board work is for a licensed HVAC technician.

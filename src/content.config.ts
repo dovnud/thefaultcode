@@ -30,6 +30,8 @@ const guides = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
   schema: z.object({ title: z.string(), description: z.string(), answer: z.string(), updated: z.string(),
     category: z.enum(['furnaces','washers','dishwashers','ac']).default('furnaces'),
-    faq: z.array(z.object({ q: z.string(), a: z.string() })), sources: z.array(z.object({ name: z.string(), url: z.string().url() })), codes: z.array(z.string()).default([]), shop: z.array(z.string()).default([]) }),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })), sources: z.array(z.object({ name: z.string(), url: z.string().url() })), codes: z.array(z.string()).default([]), shop: z.array(z.string()).default([]),
+    // Text product cards. asin must be one already stored in src/data/parts.ts. Search cards use the site Amazon tag.
+    cards: z.array(z.object({ kind: z.enum(['asin', 'search']), asin: z.string().optional(), term: z.string().optional(), label: z.string().optional(), note: z.string() })).default([]) }),
 });
 export const collections = { codes, guides };
