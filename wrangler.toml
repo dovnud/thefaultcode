@@ -1,3 +1,16 @@
 name = "hvac-codes"
 compatibility_date = "2026-10-01"
 pages_build_output_dir = "./dist"
+
+# Pages project is "thefaultcode" (production branch content/furnace-codes).
+# POST /api/subscribe reads binding DB on database thefaultcode-subscribers.
+# The Cloudflare account is at its D1 database cap (10), so this database is not
+# created yet. When a slot is free:
+#   npx wrangler d1 create thefaultcode-subscribers
+# then add:
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "thefaultcode-subscribers"
+# database_id = "<uuid>"
+# and bind that id as DB on the Pages project (production and preview).
+# The Function creates the tables on first use (migrations/0001_subscribers.sql).

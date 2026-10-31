@@ -24,7 +24,7 @@ async function build() {
   text('/guides/', 'Field guides', 'Troubleshooting guides', 'Furnace, washer, dishwasher and AC guides from manufacturer documentation.');
   text('/about/', 'About', 'How The Fault Code works', 'Every code is taken from a manufacturer manual or official support page, linked on each page.');
   text('/contact/', 'Contact', 'Contact The Fault Code', 'Corrections and questions.');
-  text('/privacy/', 'Privacy', 'Privacy policy', 'What this site does and does not collect.');
+  text('/privacy/', 'Privacy', 'Privacy policy', 'Stored email requests, analytics, and how to ask for deletion.');
   text('/terms/', 'Terms', 'Terms of use', 'Information only, not professional advice.');
   text('/affiliate-disclosure/', 'Disclosure', 'Affiliate disclosure', 'How links that may earn us a commission are marked.');
   text('/parts/', 'Parts and tools', 'Parts and tools guides', `${PARTS.length} guides to the parts, tools and supplies named in the manuals.`);

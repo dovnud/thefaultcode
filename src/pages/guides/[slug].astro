@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { fmtDate, EDITORIAL } from '../../config/site'; import { AMAZON_STATEMENT, primaryShop } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import { catBySlug, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks'; import { guideMentions } from '../../lib/guideLinks'; import { articleLd, breadcrumbLd } from '../../lib/schema';
+import Base from '../../layouts/Base.astro'; import { fmtDate, EDITORIAL } from '../../config/site'; import { AMAZON_STATEMENT, primaryShop } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import CaptureForm from '../../components/CaptureForm.astro'; import { catBySlug, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks'; import { guideMentions } from '../../lib/guideLinks'; import { articleLd, breadcrumbLd } from '../../lib/schema';
 export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
 const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
 const url = `https://thefaultcode.com/guides/${g.id}/`;
@@ -26,6 +26,7 @@ const jsonld = [
 </div>
 <div class="card sec guide"><Content /></div>
 <SafetyNotice kind={safetyKind} />
+{g.id === 'furnace-air-filter-guide' && <CaptureForm purpose="reminder" pageUrl={`/guides/${g.id}/`} />}
 <section class="card sec guide"><h2><span class="num">§F</span>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
 <section class="card sec guide"><h2><span class="num">§S</span>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul></section>
 </article>
