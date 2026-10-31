@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C7",
+  "codeSlug": "c7",
+  "displayPattern": "Dishwasher display shows C7",
+  "meaning": "Water temperature sensor circuit failure: GE says the dishwasher's water temperature sensor circuit has become inoperative.",
+  "causes": [
+    "The water temperature sensor circuit has stopped working (a sensor or wiring fault inside the dishwasher)",
+    "A temporary control error that a power reset can clear"
+  ],
+  "diySteps": [
+    "Disconnect power to the dishwasher at the circuit breaker for about 30 seconds",
+    "Restore power and reset the dishwasher, then run a cycle",
+    "Not the same as C6: C6 means the incoming water is too cold (below 120°F). Checking the water at the sink does not fix C7, because C7 is the sensor circuit itself"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If C7 returns after the breaker reset, GE says to contact service. The temperature sensor and its wiring are inside the dishwasher and need a qualified appliance technician.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "amazonMax": 0,
+  "updated": "2026-10-31"
+}

@@ -5,7 +5,7 @@
  "title": "Dishwasher Leak Codes: E15, AE, LC and Suds",
  "description": "What Bosch E15, LG AE, LG bE and Samsung dishwasher LC mean when a dishwasher reports a leak or oversuds, and which of those codes tell you to stop and call.",
  "answer": "A leak code means water, or suds that the sensor reads as water, reached a place the dishwasher protects. Bosch E15 says to turn off the water and contact Bosch. LG AE and Samsung LC list checks you can do, including detergent that is not made for dishwashers. LG bE is the suds code and has its own milk-rinse procedure. Do not keep running a dishwasher that is leaking onto the floor.",
- "updated": "2026-10-27",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "Can dish soap cause a leak code?",
@@ -34,7 +34,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/"
   }
  ],
- "codes": ["dishwashers/bosch/e15", "dishwashers/lg/ae", "dishwashers/lg/be", "dishwashers/samsung/lc"]
+ "codes": ["dishwashers/bosch/e15", "dishwashers/lg/ae", "dishwashers/lg/be", "dishwashers/samsung/lc", "dishwashers/ge/999"]
 }
 ---
 ## What a leak code is protecting
@@ -48,6 +48,8 @@ Dishwashers sit over a finished floor. Several of them have a float or a sensor 
 | [Samsung LC](/dishwashers/samsung/lc/) | The leak sensor has detected moisture where it does not belong. The dishwasher turns itself on and will not turn off while it tries to drain. Some models show LE. |
 
 Samsung washer LC is a different appliance. It is on the [washer leak and unbalance guide](/guides/washer-unbalanced-and-leaks/). Do not follow washer hose heights for a dishwasher, or the other way around.
+
+On GE dishwashers, [999](/dishwashers/ge/999/) depends on the model. On models with Floor Protect with Alert, GE says it indicates a possible leak and the dishwasher will not start until it is serviced. On the other models GE lists, it means the control needs a reset (hold Cycle Select and Start for 5 seconds). Check which one you have before you reset it.
 
 ## Bosch E15
 Bosch's cause is water collected in the base. The steps are two lines: turn off the water inflow to the dishwasher, and contact Bosch Customer Support. Bosch says the leak needs finding and fixing before you run it again.

@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-10-27",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -38,7 +38,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -53,7 +53,7 @@ A dishwasher can fail to clean because the water never got hot, because the dete
 | [LG HE](/dishwashers/lg/he/) | The heater is not heating the water, or the water went above 90°C (194°F). |
 | [Bosch E12](/dishwashers/bosch/e12/) | Limescale build-up in the heat pump. |
 
-GE notes that C7 is a different fault: the water temperature sensor circuit has stopped working. Do not use the C6 thermometer test as a fix for C7.
+GE notes that [C7](/dishwashers/ge/c7/) is a different fault: the water temperature sensor circuit has stopped working. Do not use the C6 thermometer test as a fix for C7. GE's only owner step for C7 is to switch the dishwasher off at the breaker for about 30 seconds and reset it; if C7 comes back, GE says to contact service.
 
 ## GE C6, water that arrives cold
 GE's causes:

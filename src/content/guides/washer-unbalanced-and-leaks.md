@@ -5,7 +5,7 @@
  "title": "Washer Unbalanced Load, Overfill and Leak Codes",
  "description": "What LG UE, Samsung UE, LG FE and Samsung washer LC mean, and the load, level, hose and detergent checks those support pages publish.",
  "answer": "An unbalanced tub and a leak are different faults. LG UE and Samsung UE mean the load is piled on one side and the washer could not even it out. LG FE means too much water entered and the drain pump is running to prevent a leak. Samsung washer LC means moisture where it should not be, or a problem with the sensor. Rearrange the load before you assume the machine is broken.",
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "What does Samsung Ur mean?",
@@ -30,7 +30,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/"
   }
  ],
- "codes": ["washers/lg/ue", "washers/samsung/ue", "washers/lg/fe", "washers/samsung/lc", "washers/lg/le", "washers/lg/ae"]
+ "codes": ["washers/lg/ue", "washers/samsung/ue", "washers/lg/fe", "washers/samsung/lc", "washers/lg/le", "washers/lg/ae", "washers/lg/vs", "washers/lg/pe"]
 }
 ---
 ## Three faults that get lumped together
@@ -46,6 +46,8 @@ A washer that bangs, a washer that fills past where you expect, and a washer tha
 Samsung also warns, on the door-code page, that some models use dC for an unbalanced load. If your manual says that, this is the page to follow, not the [door-lock guide](/guides/washer-door-will-not-lock/).
 
 On LG washers, the leak code is [AE](/washers/lg/ae/): water leaked inside the appliance and the anti-flood safety switch was activated. LG's causes are a leak, a damaged inlet hose or a faulty safety switch, and its checks are the inlet hoses for loose connections or cuts, then a 60-second power reset.
+
+Two LG sensor codes look like these faults but are not load or water problems. [vS](/washers/lg/vs/) (shown as u5 or uS on some displays) is the vibration sensor itself: a contact problem or a sensor malfunction, not an unbalanced load. [PE](/washers/lg/pe/) means the water level sensor is malfunctioning. For both, LG's owner steps are a resume or a short power reset, and service if the code returns.
 
 ## LG UE
 LG's causes are laundry that is not evenly distributed (including incorrect use of a laundry net), a load that is too large or too small, items that are not suited to machine washing, and a washer that is not level.

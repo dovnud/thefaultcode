@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "PE",
+  "codeSlug": "pe",
+  "displayPattern": "Washer display shows PE",
+  "meaning": "Water level sensor error: LG says the PE code indicates that the washer's water level sensor is malfunctioning.",
+  "causes": [
+    "A malfunctioning water level sensor, the cause LG gives",
+    "A temporary error that can clear after a short power reset"
+  ],
+  "diySteps": [
+    "Unplug the washer for 10 seconds",
+    "Plug the washer back in and restart the cycle"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If PE persists after the 10-second power reset, LG says the washer will require a repair service. The water level sensor is an internal part, so this is technician work.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-10-31"
+}

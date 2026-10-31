@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "999",
+  "codeSlug": "999",
+  "displayPattern": "Dishwasher display shows 999 (it may also flash). The dishwasher will not start or run.",
+  "meaning": "Control reset needed, or a possible leak: on most models 999 means the control needs to be reset, but on models with the Floor Protect with Alert feature GE says it indicates a possible leak.",
+  "causes": [
+    "The control needs a reset (GE lists GDT225SGLBB, GDT225SGLWW, GDT225SSLSS, PDT145SGLBB, PDT145SGLWW, PDT145SSLSS, ZDT165SILII and ZDT165SSLSS for this)",
+    "On models with Floor Protect with Alert: moisture in the pan under the dishwasher, which GE treats as a possible leak"
+  ],
+  "diySteps": [
+    "Check your model: if your dishwasher has Floor Protect with Alert, treat 999 as a possible leak. GE says the dishwasher will not start and to contact service; do not keep resetting it",
+    "On the other models, press and hold the Cycle Select and Start pads together for 5 seconds, or until 999 goes away. A blank display or another number is acceptable",
+    "Press any button to finish the reset. 130 or another cycle time may appear in the display, and the dishwasher is then ready to use",
+    "If the dishwasher is also beeping while showing a leak message, GE says to disconnect power to it until it can be repaired"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician. If water is on the floor, switch off the breaker before you step in it or mop near the dishwasher.",
+  "proNeeded": false,
+  "proAdvice": "Call for service if your model has Floor Protect with Alert, if there is water under the dishwasher, or if 999 returns after the Cycle Select + Start reset. GE says leaking from underneath the dishwasher always needs service.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "moreSources": [
+    {
+      "name": "Dishwasher – 999 Error Code Appears in Display (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=37645"
+    },
+    {
+      "name": "Dishwasher – Floor Protect / Leak Protection Feature (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16828"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-10-31"
+}

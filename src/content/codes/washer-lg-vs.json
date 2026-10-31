@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "vS",
+  "codeSlug": "vs",
+  "displayPattern": "Washer display shows vS. LG notes it may appear as u5 or uS on the display. The washer pauses when it shows this code.",
+  "meaning": "Vibration sensor error: LG says vS (shown as u5 or uS on some displays) indicates a potential issue with the vibration sensor, due to a contact problem or a sensor malfunction.",
+  "causes": [
+    "A contact problem at the vibration sensor",
+    "A malfunctioning vibration sensor",
+    "A temporary glitch that clears when the washer is resumed or restarted"
+  ],
+  "diySteps": [
+    "The washer is paused when vS appears. Press Start/Pause to resume the cycle",
+    "If the error comes back after you press Start/Pause, turn the washer off and then restart it",
+    "Not the same as UE: if the display reads UE rather than vS, u5 or uS, LG treats it as an unbalanced load, which has its own page and steps (LG UE)"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If resuming and then restarting the washer do not clear vS, LG says the vibration sensor will require inspection and to contact LG Support.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-10-31"
+}
