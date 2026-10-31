@@ -1,17 +1,17 @@
-import { originAllowed, hostAllowed, isHoneypot, validateSubmission, RATE_LIMIT_PER_HOUR, EMAIL_CAP_PER_DAY } from '../_lib/validate.js';
+import { originAllowed, hostAllowed, isHoneypot, validateSubmission, RATE_LIMIT_PER_HOUR, EMAIL_CAP_PER_DAY, SITE, SHARED_SITE_DEFAULT } from '../_lib/validate.js';
 
 const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS subscribers (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT NOT NULL,
     page_url TEXT NOT NULL,
     purpose TEXT NOT NULL,
     extra TEXT NOT NULL,
     consent_text TEXT NOT NULL,
     created_at TEXT NOT NULL,
-    ip_hash TEXT NOT NULL
+    ip_hash TEXT NOT NULL,
+    site TEXT NOT NULL DEFAULT '${SHARED_SITE_DEFAULT}',
+    PRIMARY KEY (email, purpose)
   )`,
-  `CREATE UNIQUE INDEX IF NOT EXISTS subscribers_dedupe ON subscribers (email, purpose, page_url)`,
   `CREATE TABLE IF NOT EXISTS subscribe_hits (
     ip_hash TEXT NOT NULL,
     created_at TEXT NOT NULL
@@ -21,14 +21,23 @@ const SCHEMA = [
 
 let schemaReady;
 
-function ensureSchema(db) {
+async function ensureSchema(db) {
   if (!schemaReady) {
-    schemaReady = db.batch(SCHEMA.map((sql) => db.prepare(sql))).catch((err) => {
+    schemaReady = applySchema(db).catch((err) => {
       schemaReady = undefined;
       throw err;
     });
   }
   return schemaReady;
+}
+
+async function applySchema(db) {
+  await db.batch(SCHEMA.map((sql) => db.prepare(sql)));
+  const info = await db.prepare('PRAGMA table_info(subscribers)').all();
+  const rows = info?.results || info || [];
+  if (!rows.some((col) => col.name === 'site')) {
+    await db.prepare(`ALTER TABLE subscribers ADD COLUMN site TEXT NOT NULL DEFAULT '${SHARED_SITE_DEFAULT}'`).run();
+  }
 }
 
 /** @internal tests reset the once-per-isolate schema promise */
@@ -191,17 +200,17 @@ export async function handleSubscribe(request, env) {
     if (Number(hits?.n || 0) >= RATE_LIMIT_PER_HOUR) {
       return respond(request, 429, { ok: false, message: 'Too many requests. Try again later.' }, origin);
     }
-    const prior = await env.DB.prepare('SELECT COUNT(*) AS n FROM subscribers WHERE email = ? AND created_at > ?').bind(value.email, dayAgo).first();
+    const prior = await env.DB.prepare('SELECT COUNT(*) AS n FROM subscribers WHERE email = ? AND site = ? AND created_at > ?').bind(value.email, SITE, dayAgo).first();
     if (Number(prior?.n || 0) >= EMAIL_CAP_PER_DAY) {
       return respond(request, 429, { ok: false, message: 'Too many requests. Try again later.' }, origin);
     }
 
     await env.DB.prepare('INSERT INTO subscribe_hits (ip_hash, created_at) VALUES (?, ?)').bind(ipHash, createdAt).run();
     const inserted = await env.DB.prepare(
-      `INSERT INTO subscribers (email, page_url, purpose, extra, consent_text, created_at, ip_hash)
-       VALUES (?, ?, ?, ?, ?, ?, ?)
-       ON CONFLICT(email, purpose, page_url) DO NOTHING`,
-    ).bind(value.email, value.page_url, value.purpose, JSON.stringify(value.extra), value.consent_text, createdAt, ipHash).run();
+      `INSERT INTO subscribers (email, page_url, purpose, extra, consent_text, created_at, ip_hash, site)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(email, purpose) DO NOTHING`,
+    ).bind(value.email, value.page_url, value.purpose, JSON.stringify(value.extra), value.consent_text, createdAt, ipHash, SITE).run();
     const stored = Number(inserted?.meta?.changes ?? 0) > 0;
     return respond(request, 200, { ok: true, stored, message: stored ? STORED : DUPLICATE }, origin);
   } catch {

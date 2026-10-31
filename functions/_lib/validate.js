@@ -1,6 +1,10 @@
 /** Shared rules for POST /api/subscribe. No I/O. */
 
 export const CONSENT_TEXT = "We'll only use your email for this request.";
+/** Value written on this site's rows in the shared subscribers database. */
+export const SITE = 'thefaultcode.com';
+/** Default for rows that existed before the site column. */
+export const SHARED_SITE_DEFAULT = 'minisplitzip.com';
 export const PURPOSES = ['fix', 'reminder'];
 export const RATE_LIMIT_PER_HOUR = 5;
 export const EMAIL_CAP_PER_DAY = 10;

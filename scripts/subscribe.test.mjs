@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
-import { CONSENT_TEXT, hostAllowed, isHoneypot, validateSubmission } from '../functions/_lib/validate.js';
+import { CONSENT_TEXT, SITE, hostAllowed, isHoneypot, validateSubmission } from '../functions/_lib/validate.js';
 import { handleSubscribe, resetSchemaForTests } from '../functions/api/subscribe.js';
 
 test('consent text matches the public site config', () => {
@@ -72,7 +72,7 @@ function memoryDb() {
   const subscribers = [];
   const hits = [];
   function run(sql, args) {
-    if (sql.startsWith('CREATE')) return { meta: { changes: 0 } };
+    if (sql.startsWith('CREATE') || sql.startsWith('ALTER') || sql.startsWith('PRAGMA')) return { meta: { changes: 0 } };
     if (sql.startsWith('DELETE FROM subscribe_hits')) {
       const cut = args[0];
       const before = hits.length;
@@ -84,8 +84,8 @@ function memoryDb() {
       return { meta: { changes: 1 } };
     }
     if (sql.startsWith('INSERT INTO subscribers')) {
-      const row = { email: args[0], page_url: args[1], purpose: args[2], extra: args[3], consent_text: args[4], created_at: args[5], ip_hash: args[6] };
-      if (subscribers.some((item) => item.email === row.email && item.purpose === row.purpose && item.page_url === row.page_url)) {
+      const row = { email: args[0], page_url: args[1], purpose: args[2], extra: args[3], consent_text: args[4], created_at: args[5], ip_hash: args[6], site: args[7] };
+      if (subscribers.some((item) => item.email === row.email && item.purpose === row.purpose)) {
         return { meta: { changes: 0 } };
       }
       subscribers.push(row);
@@ -98,7 +98,9 @@ function memoryDb() {
       return { n: hits.filter((hit) => hit.ip_hash === args[0] && hit.created_at > args[1]).length };
     }
     if (sql.includes('FROM subscribers')) {
-      return { n: subscribers.filter((row) => row.email === args[0] && row.created_at > args[1]).length };
+      const since = args[args.length - 1];
+      const site = args.length > 2 ? args[1] : null;
+      return { n: subscribers.filter((row) => row.email === args[0] && row.created_at > since && (site == null || row.site === site)).length };
     }
     throw new Error(`unexpected first: ${sql}`);
   }
@@ -108,6 +110,7 @@ function memoryDb() {
       bind(...args) { stmt.args = args; return stmt; },
       run() { return Promise.resolve(run(sql, stmt.args)); },
       first() { return Promise.resolve(first(sql, stmt.args)); },
+      all() { return Promise.resolve({ results: [{ name: 'email' }, { name: 'site' }] }); },
     };
     return stmt;
   }
@@ -150,6 +153,8 @@ test('stores a request, dedupes, and rate-limits', async () => {
   assert.equal(db.subscribers.length, 1);
   assert.equal(JSON.parse(db.subscribers[0].extra).code, 'EE6');
   assert.equal(db.subscribers[0].consent_text, CONSENT_TEXT);
+  assert.equal(db.subscribers[0].site, SITE);
+  assert.equal(db.subscribers[0].page_url, '/goodman/ee6/');
   assert.match(db.subscribers[0].ip_hash, /^[a-f0-9]{64}$/);
   assert.equal(db.subscribers[0].ip_hash.includes('203.0.113.5'), false);
 
@@ -165,6 +170,22 @@ test('stores a request, dedupes, and rate-limits', async () => {
   }
   const limited = await handleSubscribe(post(fixBody('/carrier/limited/'), { 'cf-connecting-ip': '203.0.113.5' }), env);
   assert.equal(limited.status, 429);
+});
+
+test('does not overwrite a minisplitzip row', async () => {
+  resetSchemaForTests();
+  const db = memoryDb();
+  db.subscribers.push({
+    email: 'reader@example.com', purpose: 'fix', page_url: '/sizes/12k/', site: 'minisplitzip.com',
+    extra: '{}', consent_text: 'other', created_at: '2020-01-01T00:00:00.000Z', ip_hash: 'abc',
+  });
+  const response = await handleSubscribe(post(fixBody()), { DB: db, IP_HASH_SALT: 'test-salt' });
+  const body = await response.json();
+  assert.equal(response.status, 200);
+  assert.equal(body.stored, false);
+  assert.equal(db.subscribers.length, 1);
+  assert.equal(db.subscribers[0].site, 'minisplitzip.com');
+  assert.equal(db.subscribers[0].page_url, '/sizes/12k/');
 });
 
 test('honeypot and a foreign origin store nothing', async () => {

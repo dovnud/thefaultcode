@@ -1,5 +1,6 @@
--- thefaultcode-subscribers. Applied remotely when the database is created.
--- The Pages Function also runs these statements (IF NOT EXISTS) on first use.
+-- Base table for the shared minisplitzip-subscribers database.
+-- The live table already exists (primary key email, purpose). Do not drop it.
+-- Site column: migrations/0002_site.sql. The Function applies both on first use.
 
 CREATE TABLE IF NOT EXISTS subscribers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
