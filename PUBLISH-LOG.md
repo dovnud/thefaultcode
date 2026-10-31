@@ -1,5 +1,22 @@
 # Publish log
 
+## 2026-10-31
+
+New pages (LG pages from the official LG USA front-load washer error code list; GE pages from GE Appliances "Dishwasher - Error, Fault or Function Codes", with GE's 999 reset article and Floor Protect article as extra sources on 999; source links on each page):
+
+- LG washer PE: water level sensor error — https://thefaultcode.com/washers/lg/pe/
+- LG washer vS: vibration sensor error (also shown as u5 / uS) — https://thefaultcode.com/washers/lg/vs/
+- GE dishwasher 999: control reset needed, or a possible leak on Floor Protect with Alert models — https://thefaultcode.com/dishwashers/ge/999/
+- GE dishwasher C7: water temperature sensor circuit failure — https://thefaultcode.com/dishwashers/ge/c7/
+
+Internal links: Washer Unbalanced Load, Overfill and Leak Codes guide links LG vS and PE; Dishwasher Leak Codes guide links GE 999; Dishwasher Temperature, Detergent and Limescale Codes guide links GE C7 (all three updated 2026-10-31).
+Note: origin had 1 newer commit at start (005e520, Email capture #4), fast-forwarded before work. That PR adds a capture form to every code page; click.py now checks its submit button without ever submitting it (backup click.py.bak-1031). The audit's two sub-44px items on code pages (honeypot input, hidden/aria-hidden; consent checkbox 22px inside a 46px-tall label) come from that form, are sitewide, and are not from the new pages.
+Commits: f8cd540 (pages + guide links; lastmod.json unchanged).
+Amazon links: none on the four new pages (amazonMax 0; a leveling-tool primary link on vS was avoided by rewording the UE pointer, since leveling is not a vS fix). Site total unchanged at 1056. All rel="sponsored nofollow noopener", tag=thefaultcode-20.
+QA: build OK (232 pages); static link check (213 affiliate URLs never fetched) no new issues (same pre-existing cpsc.gov/whirlpool.com 403s and multimeter "angi" substring false positive); axe 0 violations on new and edited pages (mobile/tablet/desktop audit), no tap targets under 44px except the capture-form items noted above;
+click test 645 (mobile) / 627 (desktop) elements, 0 new issues (desktop only flags the intentionally hidden nav Contact link, as before); seo_check 0 problems, 0 image problems; Associates statement check OK; 1056 Amazon anchors validated statically, 0 bad.
+Live: all 4 URLs and the 3 edited guides 200 with correct content, OG images 200 (image/png), sitemap lastmod 2026-10-31, codes present in /data/fault-codes.csv and llms-full.txt. IndexNow: HTTP 200 (7 URLs).
+
 ## 2026-10-30
 
 New pages (LG pages from the official LG USA front-load washer error code list; Carrier 48 from the Carrier Infinity 25VNA8/24VNA9 service manual; source links on each page):
