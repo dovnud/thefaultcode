@@ -1,3 +1,13 @@
 name = "hvac-codes"
 compatibility_date = "2026-10-01"
 pages_build_output_dir = "./dist"
+
+# Pages project "thefaultcode" binds DB to the shared D1 database.
+# Rows for this site are subscribers.site = 'thefaultcode.com'.
+# Export this site only:
+#   npx wrangler d1 execute minisplitzip-subscribers --remote --json --command "SELECT email, page_url, purpose, extra, consent_text, created_at, ip_hash, site FROM subscribers WHERE site = 'thefaultcode.com'"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "minisplitzip-subscribers"
+database_id = "2f5bdf97-e759-4e64-83bc-ae3537f0ed10"

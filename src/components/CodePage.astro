@@ -5,7 +5,7 @@ import { guidesForCode, compactLinks, codePrimary, slugForKey } from '../lib/par
 import { guideMentions } from '../lib/guideLinks';
 import { allCodes } from '../lib/paths';
 import { articleLd, breadcrumbLd } from '../lib/schema';
-import SafetyNotice from './SafetyNotice.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate, EDITORIAL } from '../config/site';
+import SafetyNotice from './SafetyNotice.astro'; import CaptureForm from './CaptureForm.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate, EDITORIAL } from '../config/site';
 import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
 const { e, related } = Astro.props;
 const cat = catOf(e); const furn = cat.slug === 'furnaces';
@@ -71,6 +71,8 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <section class="card sec procard" id="call-a-pro" data-critical><h2><span class="num">§3</span>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?(cat.kind==='hvac'?'This code usually needs a licensed technician.':'This code usually needs a qualified appliance technician.'):'Call a pro if the steps above do not clear the code.')}</p>
 {showPro ? <a class={proBtn} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a> : loc && <a class={proBtn} rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a>}</section>
+<CaptureForm purpose="fix" pageUrl={codePath(e)} extra={{ brand: e.brand, code: e.code, equipment: eq }} />
+{cat.kind === 'hvac' && <CaptureForm purpose="reminder" pageUrl={codePath(e)} />}
 <CodeParts e={e} />
 {related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h"><span class="num">§4</span>{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{c.meaning}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
 </article>

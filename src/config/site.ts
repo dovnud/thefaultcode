@@ -8,6 +8,10 @@ export function fmtDate(iso: string): string {
 }
 
 export const SITE_URL = 'https://thefaultcode.com';
+/** Shown on the request form and stored with each row. Do not reword without updating functions/_lib/validate.js. */
+export const CONSENT_TEXT = "We'll only use your email for this request.";
+/** Public Turnstile site key. The secret is the Pages env var TURNSTILE_SECRET, never this file. */
+export const TURNSTILE_SITE_KEY: string = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAFtqDGEwH-mD2HM8';
 export const EDITORIAL = 'The Fault Code editorial team';
 /** Organization node reused in Article / WebSite / Dataset schema. No sameAs: add only profiles that really exist (see about.astro). */
 export const ORG = { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'The Fault Code', url: `${SITE_URL}/`, email: CONTACT_EMAIL };

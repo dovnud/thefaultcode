@@ -1,22 +1,37 @@
 ---
-import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, SITE_URL } from "../config/site";
+import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, CONSENT_TEXT, SITE_URL, TURNSTILE_SITE_KEY } from "../config/site";
 import { breadcrumbLd } from "../lib/schema";
 const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Privacy policy',item:`${SITE_URL}/privacy/`}]);
 ---
-<Base title="Privacy policy | The Fault Code" description="The Fault Code privacy policy: no accounts, forms or comments; Google Analytics 4 for aggregated usage stats; hosting logs and third-party affiliate links." jsonld={jsonld}>
+<Base title="Privacy policy | The Fault Code" description="What The Fault Code stores if you request a code-page fix or an HVAC filter reminder, why it is stored, and how to ask for deletion." jsonld={jsonld}>
 <div class="wrap prose"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Privacy policy</li></ol></nav><div class="card" style="margin-top:12px"><h1>Privacy policy</h1>
-<p>This site has no accounts, forms, or comments, and we do not ask you for personal information.</p>
+<p>This site has no accounts and no comments. The only personal information we ask for is an email address, and only if you choose to submit a request form.</p>
+<h2>Stored email requests</h2>
+<p>Some pages include a form that stores a request. One form, labeled "Email me this fix," is on code pages and stores that code page. Another stores a request for an HVAC filter and maintenance reminder. Submitting a form does not send email. It does not sign you up for a newsletter, weekly messages, or deals.</p>
+<p>When you submit a form we store:</p>
+<ul>
+<li>Your email address.</li>
+<li>The page address the form was on.</li>
+<li>The purpose of the request (a code-page fix, or an HVAC filter and maintenance reminder).</li>
+<li>Extra details from that form, saved as a short JSON record. For a code page that can include the brand, code and equipment type. For a reminder it is the topic you picked and the interval in days.</li>
+<li>The consent text you agreed to: "{CONSENT_TEXT}"</li>
+<li>The date and time the request was stored.</li>
+<li>A one-way hash of the IP address the request came from, used to limit repeated submissions. We do not store the raw IP address in this database.</li>
+</ul>
+<p>We store this so the request you submitted is on file. We do not sell, rent, or trade it, and we do not share it with advertisers or data brokers. We do not combine it with analytics.</p>
+<p>To ask us to delete a stored request, email <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->. Email to that address is the only way to request deletion.</p>
+{TURNSTILE_SITE_KEY && <p>Before a request is stored, Cloudflare Turnstile may check that a person submitted the form. Cloudflare receives the technical data that check needs. See <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare's privacy policy</a>. The site stores the result of that check only as a pass or fail for the submission; it does not add the check to the saved request.</p>}
 <h2>Analytics (Google Analytics 4)</h2>
 <p>We use Google Analytics 4, a web analytics service from Google, to understand how the site is used so we can improve it. Google Analytics sets cookies in your browser and collects usage data such as the pages you view, how you arrived at the site (for example a search engine or a link), approximate location (country or city, derived from your IP address), device type, browser, operating system, and screen size. We see this only as aggregated reports; we cannot identify you from it, and we do not combine it with any other personal information.</p>
 <p>Your IP address is sent to Google when the analytics script loads. Google Analytics 4 does not log or store IP addresses; Google uses them only to derive approximate location and then discards them. Google processes this data under its own terms; see <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses data from sites that use its services</a>.</p>
 <p>You can opt out of Google Analytics on all websites by installing the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics Opt-out Browser Add-on</a>. Blocking or deleting cookies in your browser settings, or using a content blocker, also prevents it. The site works fully without analytics.</p>
 <h2>Hosting logs</h2>
-<p>Like most websites, our hosting provider may log basic technical data such as IP address, browser type, and pages requested, for security and operation.</p>
+<p>Like most websites, our hosting provider may log basic technical data such as IP address, browser type, and pages requested, for security and operation. Those logs are separate from the stored email requests above.</p>
 <h2>Links to other sites and affiliate links</h2>
 <p>Some pages link to other sites, such as parts retailers and contractor-matching services. Those sites have their own privacy policies, and if a link is an affiliate link they may use cookies to track referrals from us. See our <a href="/affiliate-disclosure/">affiliate disclosure</a> for details.</p>
 <h2>Search</h2>
 <p>The <a href="/codes/">code search</a> on this site runs in your browser; what you type is not sent to us.</p>
-<h2>Contact</h2><p>Privacy questions: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->.</p>
+<h2>Contact</h2><p>Privacy questions, and deletion of a stored request: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->.</p>
 <h2>Changes</h2>
 <p>If this policy changes, we will update this page.</p></div></div>
 </Base>

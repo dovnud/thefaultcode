@@ -1,0 +1,69 @@
+---
+import { CONSENT_TEXT, TURNSTILE_SITE_KEY } from '../config/site';
+
+interface Props {
+  purpose: 'fix' | 'reminder';
+  pageUrl: string;
+  extra?: { brand?: string; code?: string; equipment?: string };
+}
+
+const { purpose, pageUrl, extra = {} } = Astro.props;
+const fix = purpose === 'fix';
+const titleId = `cap-${purpose}-title`;
+const emailId = `cap-${purpose}-email`;
+const topicId = `cap-${purpose}-topic`;
+const intervalId = `cap-${purpose}-interval`;
+---
+<section class="card sec capture" aria-labelledby={titleId}>
+  <h2 id={titleId}>{fix ? 'Email me this fix' : 'Request a filter and maintenance reminder'}</h2>
+  {fix ? (
+    <p class="capture-lead">This stores a request for this code page. We save your email and this page. Nothing is sent from this form, and we do not use the address for a newsletter, weekly messages, or deals. {CONSENT_TEXT}</p>
+  ) : (
+    <p class="capture-lead">This stores a request for an HVAC filter and maintenance reminder. We save your email, this page, and the interval you pick. Nothing is sent from this form, and we do not use the address for a newsletter, weekly messages, or deals. {CONSENT_TEXT}</p>
+  )}
+  <form class="capture-form" method="post" action="/api/subscribe" data-capture data-purpose={purpose} data-sitekey={TURNSTILE_SITE_KEY || undefined}>
+    <input type="hidden" name="purpose" value={purpose} />
+    <input type="hidden" name="page_url" value={pageUrl} />
+    <input type="hidden" name="consent_text" value={CONSENT_TEXT} />
+    {fix && extra.brand && <input type="hidden" name="brand" value={extra.brand} />}
+    {fix && extra.code && <input type="hidden" name="code" value={extra.code} />}
+    {fix && extra.equipment && <input type="hidden" name="equipment" value={extra.equipment} />}
+    <div class="hp" aria-hidden="true">
+      <label>Company website <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+    </div>
+    <label class="fld" for={emailId}>Email
+      <input id={emailId} name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email" spellcheck="false" />
+    </label>
+    {!fix && (
+      <div class="capture-row">
+        <label class="fld" for={topicId}>What to store
+          <select id={topicId} name="topic" required>
+            <option value="both">Filter and seasonal maintenance</option>
+            <option value="filter">Filter change</option>
+            <option value="maintenance">Seasonal maintenance</option>
+          </select>
+        </label>
+        <label class="fld" for={intervalId}>Interval
+          <select id={intervalId} name="interval_days" required>
+            <option value="30">30 days</option>
+            <option value="60">60 days</option>
+            <option value="90" selected>90 days</option>
+            <option value="180">180 days</option>
+          </select>
+        </label>
+      </div>
+    )}
+    <label class="capture-consent">
+      <input type="checkbox" name="consent" value="yes" required />
+      <span>{CONSENT_TEXT}</span>
+    </label>
+    {TURNSTILE_SITE_KEY && <div data-turnstile hidden></div>}
+    <button class="btn btn-p" type="submit">Store this request</button>
+    <p class="capture-status" data-status role="status" aria-live="polite"></p>
+    <p class="disc"><a href="/privacy/">Privacy</a>. Deletion requests go to the address on that page.</p>
+  </form>
+  {TURNSTILE_SITE_KEY && <noscript><p class="disc">Storing a request needs JavaScript so the bot check can run.</p></noscript>}
+</section>
+<script>
+  import '../scripts/capture';
+</script>

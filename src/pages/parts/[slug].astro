@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import SafetyNotice from '../../components/SafetyNotice.astro';
+import Base from '../../layouts/Base.astro'; import SafetyNotice from '../../components/SafetyNotice.astro'; import CaptureForm from '../../components/CaptureForm.astro';
 import { allCodes } from '../../lib/paths';
 import { CATEGORIES, catOf, codePath, catBySlug } from '../../config/categories';
 import { AMAZON_STATEMENT } from '../../config/affiliates';
@@ -49,6 +49,7 @@ const sizeKind = /hose|supply-line/.test(p.slug) ? 'hose' : (p.slug === 'hvac-ai
 {byBrand.map(([b,list])=><><h3>{b}</h3><div class="shoplinks">{list.slice(0,10).map(c=><a class="btn btn-o btn-sm" href={codePath(c)}>{c.brand} {c.code}</a>)}</div></>)}
 <p>Per-brand lists: {brandLinks.map((c,i)=><>{i>0&&' · '}<a href={partsBrandUrl(catOf(c).slug,c.brandSlug)}>{c.brand} {catOf(c).noun}</a></>)}.</p></section>}
 <section class="card sec guide"><h2>Sources</h2>{p.sources.length>0 ? <ul>{p.sources.map(s=><li><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul> : <p>General tool guidance. The product statements come from the manufacturers' own listings; check your appliance or furnace manual for anything specific to your model.</p>}</section>
+{(p.slug === 'hvac-air-filter' || p.slug === 'furnace-filter-sizes') && <CaptureForm purpose="reminder" pageUrl={`/parts/${p.slug}/`} />}
 </article>
 <aside class="side">
 {related.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Related guides</h2><ul class="parts">{related.map(r=><li><a href={partUrl(r.slug)}>{r.name}</a></li>)}</ul></div>}
