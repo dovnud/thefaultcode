@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { CATEGORIES, catOf, codePath, groupCodes, typeLabel } from '../config/categories';
 import { PARTS } from '../data';
+import { FINDER_PARTS, codesForPart } from './partFinder';
 
 export type OgSpec = { kind: 'code' | 'text'; kicker: string; title: string; sub?: string; big?: string; alt: string };
 const clip = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…');
@@ -45,5 +46,10 @@ async function build() {
   }
   for (const g of guides) text(`/guides/${g.id}/`, 'Field guide', g.data.title, clip(g.data.answer, 120));
   for (const p of PARTS) text(`/parts/${p.slug}/`, `Parts and tools · ${p.kind}`, p.name, clip(p.summary, 120));
+  text('/part-finder/', 'Lookup', 'Part finder', 'A part is listed only when the manufacturer document for that code names it.');
+  for (const p of FINDER_PARTS) {
+    if (!codesForPart(p.slug, codes).length) continue;
+    text(`/part-finder/${p.slug}/`, 'Part finder', p.name, `Fault codes whose manufacturer document names a ${p.name.toLowerCase()}.`);
+  }
   return m;
 }

@@ -4,7 +4,7 @@
  "title": "Furnace Blowing Cold Air: Common Causes",
  "description": "Why a gas furnace blows cold or room-temperature air, from thermostat fan settings to limit and ignition faults, and what to check.",
  "answer": "A furnace blowing cold air usually means the blower is running while the burners are not. That can be a thermostat fan set to ON instead of AUTO, or a fault where the burners shut down but the blower keeps running to cool the furnace, such as an open limit switch or a failed ignition. Check the thermostat and filter, then read the control board code.",
- "updated": "2026-10-23",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "Why does my furnace blow cold air at the start?",
@@ -59,5 +59,7 @@ The Goodman EE3 entry in its manual notes the circulator blower runs continuousl
 1. Thermostat: set to HEAT, fan to AUTO, setpoint above room temperature.
 2. Replace a dirty filter and open registers.
 3. Read and look up the control board code.
+
+The [winter 2026 no-heat checklist](/guides/furnace-no-heat-winter-2026/) puts these checks in the order a cold house usually needs. The [part finder](/part-finder/) lists the parts each code's manual names.
 
 > **Safety first:** If you smell gas, don't touch light switches or use a phone inside. Leave the building and call your gas utility from outside. Turn off power to the furnace before opening any panel, and never bypass or jumper a safety switch. Gas, venting, wiring and control-board work is for a licensed HVAC technician.

@@ -4,7 +4,7 @@
  "title": "Furnace Air Filters: How Often to Change and Why It Matters",
  "description": "How a dirty furnace filter causes limit and short-cycling faults, how often to check it, and what MERV ratings mean.",
  "answer": "A clogged air filter restricts airflow, which can overheat the furnace and trip the limit switch, one of the most common causes of furnace fault codes. The DOE recommends cleaning or replacing furnace filters once a month or as recommended, and ENERGY STAR says to inspect, clean or change them monthly. Use the filter size and type your furnace manual specifies.",
- "updated": "2026-10-23",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "Can a dirty filter cause a furnace error code?",
@@ -69,5 +69,7 @@ MERV (Minimum Efficiency Reporting Value) rates how well a filter captures parti
 1. Turn the thermostat off or the furnace switch off.
 2. Note the size and airflow arrow on the old filter.
 3. Insert the new filter with the arrow pointing toward the furnace.
+
+The [winter 2026 no-heat checklist](/guides/furnace-no-heat-winter-2026/) starts with this filter check when the blower runs and the house stays cold. Codes that name a filter are collected on the [part finder](/part-finder/filter/).
 
 > **Safety first:** If you smell gas, don't touch light switches or use a phone inside. Leave the building and call your gas utility from outside. Turn off power to the furnace before opening any panel, and never bypass or jumper a safety switch. Gas, venting, wiring and control-board work is for a licensed HVAC technician.

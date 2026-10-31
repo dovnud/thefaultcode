@@ -7,6 +7,7 @@ import { fmtDate, EDITORIAL } from '../../config/site';
 import { articleLd, breadcrumbLd } from '../../lib/schema';
 import { lastmodFor } from '../../lib/lastmod';
 import { PARTS, partBySlug, fullLinks, usage, partUrl, partsCatUrl, partsBrandUrl } from '../../lib/partLinks';
+import { GUIDE_TO_FINDER, WINTER_GUIDE, WINTER_PART_GUIDES, finderBySlug, finderPath } from '../../lib/partFinder';
 export function getStaticPaths(){ return PARTS.map(p=>({params:{slug:p.slug},props:{p}})); }
 const { p } = Astro.props;
 const codes = (await allCodes()).filter(c => p.cats.includes(catOf(c).slug));
@@ -53,6 +54,6 @@ const sizeKind = /hose|supply-line/.test(p.slug) ? 'hose' : (p.slug === 'hvac-ai
 </article>
 <aside class="side">
 {related.length>0 && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Related guides</h2><ul class="parts">{related.map(r=><li><a href={partUrl(r.slug)}>{r.name}</a></li>)}</ul></div>}
-<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Browse</h2><ul class="parts"><li><a href="/parts/">All parts and tools guides</a></li>{p.cats.map(c=><li><a href={partsCatUrl(c)}>Parts for {catBySlug(c).noun} codes</a></li>)}<li><a href="/guides/">Field guides</a></li></ul></div>
+<div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Browse</h2><ul class="parts"><li><a href="/parts/">All parts and tools guides</a></li>{p.cats.map(c=><li><a href={partsCatUrl(c)}>Parts for {catBySlug(c).noun} codes</a></li>)}{(GUIDE_TO_FINDER[p.slug] ?? []).map(s => { const f = finderBySlug(s); return f ? <li><a href={finderPath(s)}>Part finder: {f.name}</a></li> : null; })}{WINTER_PART_GUIDES.has(p.slug) && <li><a href={WINTER_GUIDE}>Furnace no heat, winter 2026</a></li>}<li><a href="/guides/">Field guides</a></li><li><a href="/part-finder/">Part finder</a></li></ul></div>
 </aside></div>
 </div></Base>
