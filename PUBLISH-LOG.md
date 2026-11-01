@@ -1,5 +1,22 @@
 # Publish log
 
+## 2026-11-01
+
+New pages (LG PF from the official LG USA front-load washer error code list; Bosch pages from Bosch's "Bosch Dishwasher Error Codes: Troubleshooting Guide", with Bosch's E14 self-help page as an extra source on E14; Samsung HE from Samsung Support "Samsung dishwasher is displaying an error code"; source links on each page):
+
+- LG washer PF: power failure (supply interrupted mid-cycle; LG's unplug + hold START/PAUSE 5 s reset) — https://thefaultcode.com/washers/lg/pf/
+- Bosch dishwasher E27: house power supply too low (breaker reset, then an electrician checks incoming voltage) — https://thefaultcode.com/dishwashers/bosch/e27/
+- Bosch dishwasher E14: flow meter failure or a water inflow / filling-system issue (Bosch: contact Customer Support) — https://thefaultcode.com/dishwashers/bosch/e14/
+- Samsung dishwasher HE: heater error, inside temperature detected incorrectly — https://thefaultcode.com/dishwashers/samsung/he/
+
+Internal links: Dishwasher Will Not Fill guide links Bosch E14 (table row + E14 paragraph); Dishwasher Temperature, Detergent and Limescale Codes guide links Samsung HE (both updated 2026-11-01). LG PF and Bosch E27 have no matching guide; they are linked from their brand hubs, /codes/, /data/ and llms-full.txt. E27 also appears in the multimeter parts page's automatic "Codes that mention it" list (its text names a voltage check; the E27 page itself says that check is electrician work and has no Amazon link).
+Note: origin had 1 newer commit at start (de4a7e8, part finder + winter furnace checklist #5), fast-forwarded before work. The build regenerated lastmod.json (about/affiliate-disclosure dates from that PR), committed with the pages.
+Commits: 866752d (pages + guide links + regenerated lastmod.json).
+Amazon links: amazonMax 0 on all four. HE keeps 1 primary search (dishwasher detergent, from Samsung's own "add detergent" step); PF, E27, E14 none (an E14 hose/supply-line primary link was avoided by rewording the E16/E17/E18 pointer, since Bosch gives no hose check for E14). Site total 1083 (was 1082 after #5). All rel="sponsored nofollow noopener", tag=thefaultcode-20.
+QA: build OK (255 pages); static link check (215 affiliate URLs never fetched) no new issues (identical issue list to 10-31: pre-existing cpsc.gov/whirlpool.com 403s and multimeter "angi" substring false positive); axe 0 violations on new and edited pages (mobile/tablet/desktop audit), no tap targets under 44px except the sitewide capture-form items noted 10-31;
+click test 642 (mobile) / 624 (desktop) elements, 0 new issues (desktop only flags the intentionally hidden nav Contact link, as before; capture form never submitted); seo_check 0 problems, 0 image problems; Associates statement check OK (255 pages, 171 with Amazon hrefs, 0 missing); 1083 Amazon anchors validated statically, 0 bad.
+Live: all 4 URLs and both edited guides 200 with correct content, OG images 200 (image/png), sitemap lastmod 2026-11-01, codes present in /data/fault-codes.csv and llms-full.txt. IndexNow: HTTP 200 (6 URLs).
+
 ## 2026-10-31
 
 New pages (LG pages from the official LG USA front-load washer error code list; GE pages from GE Appliances "Dishwasher - Error, Fault or Function Codes", with GE's 999 reset article and Floor Protect article as extra sources on 999; source links on each page):
