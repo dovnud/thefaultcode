@@ -2,6 +2,7 @@ import { getCollection } from 'astro:content';
 import { SITE_URL, EDITORIAL, CONTACT_EMAIL } from '../config/site';
 import { catOf, codePath, typeLabel } from '../config/categories';
 import { PARTS } from '../data';
+import { FINDER_PARTS, codesForPart, finderPath } from '../lib/partFinder';
 import { guideBody } from '../lib/guideMarkdown';
 
 export async function GET() {
@@ -58,6 +59,19 @@ ${codeBlocks}
 ## Parts and tools
 
 ${partBlocks}
+
+## Part finder
+
+A code is listed only when its manufacturer document names the part. The quote is the sentence published from that document.
+
+${FINDER_PARTS.map(p => {
+  const hits = codesForPart(p.slug, codes);
+  if (!hits.length) return '';
+  return `### ${p.name}
+
+- Page: ${SITE_URL}${finderPath(p.slug)}
+${hits.map(h => `- ${h.code.brand} ${h.code.code} (${SITE_URL}${h.href}): ${h.quote} Source: ${h.sourceName} ${h.sourceUrl}`).join('\n')}`;
+}).filter(Boolean).join('\n\n')}
 `;
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

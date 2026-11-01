@@ -4,7 +4,7 @@
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",
- "updated": "2026-10-23",
+ "updated": "2026-10-31",
  "faq": [
   {
    "q": "Can I replace the pressure switch myself?",
@@ -76,5 +76,7 @@
 - Note the code before power is removed.
 
 Do not jumper or bypass a pressure switch. It protects against venting failures that can put carbon monoxide in the home.
+
+The [winter 2026 no-heat checklist](/guides/furnace-no-heat-winter-2026/) includes the vent-termination check from Goodman IOG-2037B. Codes that name the switch are on the [part finder](/part-finder/pressure-switch/).
 
 > **Safety first:** If you smell gas, don't touch light switches or use a phone inside. Leave the building and call your gas utility from outside. Turn off power to the furnace before opening any panel, and never bypass or jumper a safety switch. Gas, venting, wiring and control-board work is for a licensed HVAC technician.

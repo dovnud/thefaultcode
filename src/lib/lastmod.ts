@@ -4,6 +4,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { groupCodes, codePath } from '../config/categories';
 import { HVAC_PARTS } from '../data/hvac';
+import { FINDER_PARTS, FINDER_UPDATED } from './partFinder';
 import manifest from '../data/lastmod.json';
 
 const read = (dir: string) => readdirSync(dir).map(f => ({ f, s: readFileSync(`${dir}/${f}`, 'utf8') }));
@@ -33,6 +34,8 @@ export function lastmodMap() {
     m.set(`/${slug}/`, d); m.set(`/parts/for/${slug}/`, max([d, partsMax]));
   }
   m.set('/parts/', max([partsMax, codesMax]));
+  m.set('/part-finder/', FINDER_UPDATED);
+  for (const p of FINDER_PARTS) m.set(`/part-finder/${p.slug}/`, FINDER_UPDATED);
   const hv = new Set(HVAC_PARTS.map(p => p.slug));
   return (memoParts(m, hv), (memo = m));
 }

@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allCodes } from '../../lib/paths';
+import { CATEGORIES } from '../../config/categories';
+import { fmtDate, EDITORIAL, SITE_URL } from '../../config/site';
+import { breadcrumbLd } from '../../lib/schema';
+import { FINDER_PARTS, FINDER_UPDATED, codesForPart, finderPath } from '../../lib/partFinder';
+const codes = await allCodes();
+const rows = FINDER_PARTS.map(p => ({ p, n: codesForPart(p.slug, codes).length })).filter(r => r.n > 0);
+const url = `${SITE_URL}/part-finder/`;
+const jsonld = [
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Part finder', url, dateModified: `${FINDER_UPDATED}T12:00:00Z`,
+    description: 'Fault codes whose manufacturer document names a specific part.' },
+  { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Parts named by fault codes', itemListElement: rows.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.p.name, url: `${SITE_URL}${finderPath(r.p.slug)}` })) },
+  breadcrumbLd([{ name: 'Home', item: `${SITE_URL}/` }, { name: 'Part finder', item: url }]),
+];
+---
+<Base title="Part Finder: Which Fault Codes Name Which Part | The Fault Code" description="Which furnace, washer and dishwasher fault codes name a flame sensor, igniter, pressure switch, filter or hose. Each row cites the manufacturer document." jsonld={jsonld} updated={FINDER_UPDATED}>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Part finder</li></ol></nav>
+<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{rows.length} parts · from published codes</p><h1>Part finder</h1>
+<p>Each part below is listed only where a published code's manufacturer document names that part. The sentence on the part page is the wording taken from that document, and the link is the document. A part that appears in our notes but is not named in that text is left off. Cleaning materials such as steel wool stay on the code page; they are not treated as the failed part.</p>
+<p class="meta-l">By {EDITORIAL} · Updated <time datetime={FINDER_UPDATED}>{fmtDate(FINDER_UPDATED)}</time></p></div>
+{CATEGORIES.filter(c => rows.some(r => r.p.cat === c.slug)).map(c => {
+  const list = rows.filter(r => r.p.cat === c.slug);
+  return <section aria-labelledby={`pf-${c.slug}`}><h2 class="cat-h" id={`pf-${c.slug}`}>{c.name}<small>{list.length} parts</small></h2>
+  <div class="pt-grid">{list.map(r => <div class="card"><div class="pt-kind">{r.p.tech ? 'Technician' : 'Homeowner check'}</div><a class="t" href={finderPath(r.p.slug)}>{r.p.name}</a><p style="margin:4px 0 0;font-size:.92rem">{r.n} {r.n === 1 ? 'code names' : 'codes name'} this part in the manufacturer document.</p></div>)}</div></section>;
+})}
+<p class="srcline">Related: <a href="/parts/">parts and tools guides</a> · <a href="/guides/furnace-no-heat-winter-2026/">furnace no heat, winter 2026</a> · <a href="/codes/">all codes</a></p>
+<div class="gasbar"><span class="w">Safety</span><span>Gas valve, venting, pressure-switch, limit, rollout and control-board work belongs to a licensed technician. These pages name the part the manual names. They are not repair instructions.</span></div>
+</div>
+</Base>

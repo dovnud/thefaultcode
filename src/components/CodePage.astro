@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro'; import SourceLine from './SourceLine.astro'; import CodeParts from './CodeParts.astro';
 import { getCollection } from 'astro:content';
 import { guidesForCode, compactLinks, codePrimary, slugForKey } from '../lib/partLinks';
+import { partsForCode } from '../lib/partFinder';
 import { guideMentions } from '../lib/guideLinks';
 import { allCodes } from '../lib/paths';
 import { articleLd, breadcrumbLd } from '../lib/schema';
@@ -41,6 +42,7 @@ const hasAmazon = !!primary || ptLinks;
 const hasAff = hasAmazon || (pro.enabled && cat.kind==='hvac');
 const loc = proLocator(e);
 const fieldGuides = (await getCollection('guides')).filter(g => guideMentions(e, g.data.codes));
+const pointed = partsForCode(e);
 const showPro = pro.enabled && cat.kind==='hvac';   // the Angi button is HVAC-only and stays off until approved
 const relH = furn ? `Related ${e.brand} codes` : `Related ${e.brand} ${cat.noun} codes`;
 const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.brand} manual (PDF)`;
@@ -77,6 +79,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 {related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h"><span class="num">§4</span>{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{c.meaning}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
 </article>
 <aside class="side" data-critical>
+{pointed.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts this code points to</h2><p>Named in the manufacturer document for this code. Each link is the part finder page for that part.</p><ul class="parts">{pointed.map(h=><li><a href={`/part-finder/${h.part.slug}/`}>{h.part.name}</a></li>)}</ul><p style="margin:8px 0 0"><a href="/part-finder/">Part finder</a></p></div>}
 {e.parts.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts mentioned</h2><p>Parts named in the causes above. Match the part to your model's manual before buying anything.</p>
 <ul class="parts">{primary && !primaryOnRow && <li><span>{primary.name}</span><a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a></li>}{shop.map(p=><li><span>{p.name}</span>{primary && slugForKey(p.partKey)===primary.slug && <a class="btn btn-o btn-sm" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a>}</li>)}</ul>{primary && <p class="disc">Search on Amazon opens search results for {primary.name}. It does not confirm a fit. {AMAZON_STATEMENT}</p>}</div>}
 <div class="card box" id="technician"><h2 style="font-size:1.35rem;margin:0 0 6px">{cat.techTitle}</h2><p>{cat.techText}</p>{showPro ? <a class={`${proBtn} btn-block`} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label}</a> : loc && <><a class={`${proBtn} btn-block`} rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a><p class="disc">{locatorNote(e,loc)}</p></>}</div>

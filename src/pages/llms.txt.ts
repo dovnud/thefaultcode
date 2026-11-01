@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content';
 import { groupCodes, CATEGORIES } from '../config/categories';
 import { PARTS } from '../data';
+import { FINDER_PARTS, codesForPart, finderPath } from '../lib/partFinder';
 export async function GET() {
   const codes = (await getCollection('codes')).filter(c => !c.data.example).map(c => c.data);
   const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
@@ -24,6 +25,11 @@ ${guides.map(g => `- [${g.data.title}](${s}/guides/${g.id}.md): ${g.data.descrip
 ## Parts and tools guides
 - [All parts and tools guides](${s}/parts/): what each part, tool or supply named in the manuals is, how to choose and test it
 ${PARTS.map(p => `- [${p.name}](${s}/parts/${p.slug}/): ${p.summary}`).join('\n')}
+
+## Part finder
+A code is listed under a part only when that code's manufacturer document names the part. The sentence and the source are on the part page.
+- [Part finder](${s}/part-finder/)
+${FINDER_PARTS.map(p => { const n = codesForPart(p.slug, codes).length; return n ? `- [${p.name}](${s}${finderPath(p.slug)}): ${n} codes name it` : ''; }).filter(Boolean).join('\n')}
 
 ## Equipment categories
 ${CATEGORIES.filter(c => groups.some(g => g.cat.slug === c.slug)).map(c => `- [${c.name} error codes](${s}${c.hub}): ${groups.filter(g => g.cat.slug === c.slug).reduce((n, g) => n + g.codes.length, 0)} codes`).join('\n')}

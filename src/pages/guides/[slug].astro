@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { fmtDate, EDITORIAL } from '../../config/site'; import { AMAZON_STATEMENT, primaryShop } from '../../config/affiliates'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import CaptureForm from '../../components/CaptureForm.astro'; import { catBySlug, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks'; import { guideMentions } from '../../lib/guideLinks'; import { articleLd, breadcrumbLd } from '../../lib/schema';
+import Base from '../../layouts/Base.astro'; import { fmtDate, EDITORIAL } from '../../config/site'; import { AMAZON_STATEMENT, amazonAsinLink, amazonLink, primaryShop } from '../../config/affiliates'; import { A } from '../../data/parts'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import CaptureForm from '../../components/CaptureForm.astro'; import { catBySlug, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks'; import { guideMentions } from '../../lib/guideLinks'; import { articleLd, breadcrumbLd } from '../../lib/schema';
 export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
 const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
 const url = `https://thefaultcode.com/guides/${g.id}/`;
@@ -7,6 +7,17 @@ const cat = catBySlug(d.category);
 const safetyKind = d.category==='furnaces'?'furnace':d.category==='washers'?'washer':d.category==='dishwashers'?'dishwasher':'ac';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example && guideMentions(c.data, d.codes)).map(c=>c.data);
 const primary = primaryShop(d.shop ?? []);
+const asinById = new Map(Object.values(A).map(a => [a.asin, a]));
+const cards = (d.cards ?? []).map(c => {
+  if (c.kind === 'asin') {
+    const a = c.asin ? asinById.get(c.asin) : undefined;
+    if (!a) throw new Error(`Unknown Amazon ASIN on guide ${g.id}: ${c.asin ?? ''}`);
+    return { kind: 'asin' as const, title: a.label, listing: a.title, note: c.note, href: amazonAsinLink(a.asin), button: 'Buy on Amazon' };
+  }
+  if (!c.term || !c.label) throw new Error(`Search card on guide ${g.id} needs a term and a label`);
+  return { kind: 'search' as const, title: c.label, listing: '', note: c.note, href: amazonLink(c.term), button: 'Search on Amazon' };
+});
+const hasAmazon = !!primary || cards.length > 0;
 const pg = [...new Set((d.shop??[]).map(slugForKey).filter(Boolean))].map(partBySlug).filter(Boolean);
 const allGuides = await getCollection('guides');
 const others = [...allGuides.filter(o=>o.id!==g.id && o.data.category===d.category), ...allGuides.filter(o=>o.id!==g.id && o.data.category!==d.category)].slice(0,6);
@@ -15,16 +26,20 @@ const jsonld = [
  ...(d.faq.length ? [{'@context':'https://schema.org','@type':'FAQPage',mainEntity:d.faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))}] : []),
  breadcrumbLd([{name:'Home',item:'https://thefaultcode.com/'},{name:'Guides',item:'https://thefaultcode.com/guides/'},{name:d.title,item:url}])];
 ---
-<Base title={d.title.length>52?d.title:`${d.title} | The Fault Code`} description={d.description} jsonld={jsonld} ogType="article" affLinks={!!primary} amazon={!!primary} markdownHref={`/guides/${g.id}.md`}>
+<Base title={d.title.length>52?d.title:`${d.title} | The Fault Code`} description={d.description} jsonld={jsonld} ogType="article" affLinks={hasAmazon} amazon={hasAmazon} markdownHref={`/guides/${g.id}.md`}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
-{primary && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
+{hasAmazon && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Field guide</p><h1>{d.title}</h1><p class="meta-l">By {EDITORIAL} · Updated <time datetime={d.updated}>{fmtDate(d.updated)}</time></p></div>
 <div class="layout"><article>
 <div class="card" data-critical style="border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)"><div class="lbl">Short answer</div><p style="font-weight:600;font-size:1.1rem;margin:6px 0 0">{d.answer}</p>
 {primary && <div class="result-cta"><p class="result-cta-l">This guide names {primary.name}. The button opens an Amazon search, not a listing chosen for your model.</p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a><p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p></div>}
 </div>
 <div class="card sec guide"><Content /></div>
+{cards.length > 0 && <section class="card sec" id="shop" aria-labelledby="buy-h"><h2 id="buy-h">Filters and tools named above</h2>
+<p>Text cards only. No product photos. A <strong>Buy on Amazon</strong> button opens one listing whose title was read on Amazon on October 25, 2026. A <strong>Search on Amazon</strong> button opens search results, which change. None of them confirms a fit for your model.</p>
+<div class="pt-grid">{cards.map(c => <div class="card"><div class="pt-kind">{c.kind === 'asin' ? 'Product page' : 'Search'}</div><p class="t" style="font-weight:700;margin:4px 0">{c.title}</p>{c.listing && <p style="margin:0 0 8px;font-size:.92rem">{c.listing}</p>}<p style="margin:0 0 10px;font-size:.92rem">{c.note}</p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={c.href} aria-label={`${c.button}: ${c.title} (sponsored link, opens in a new tab)`}>{c.button}</a></div>)}</div>
+<p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p></section>}
 <SafetyNotice kind={safetyKind} />
 {g.id === 'furnace-air-filter-guide' && <CaptureForm purpose="reminder" pageUrl={`/guides/${g.id}/`} />}
 <section class="card sec guide"><h2><span class="num">§F</span>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
