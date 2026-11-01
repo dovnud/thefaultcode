@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "HE",
+  "codeSlug": "he",
+  "displayPattern": "Dishwasher display shows HE",
+  "meaning": "Heater error: Samsung says the temperature inside the dishwasher is being detected incorrectly.",
+  "causes": [
+    "The dishwasher is reading its inside temperature incorrectly, the cause Samsung gives"
+  ],
+  "diySteps": [
+    "Empty the dishwasher",
+    "Add detergent, then run a Normal cycle",
+    "Not the same as HC: Samsung's HC means the temperature inside is too hot, and its steps start with a 30-second breaker reset"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If HE still occurs, Samsung says to switch off power to the dishwasher at the circuit breaker and request service.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-01"
+}

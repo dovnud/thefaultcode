@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -38,7 +38,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -50,6 +50,7 @@ A dishwasher can fail to clean because the water never got hot, because the dete
 | [GE C8](/dishwashers/ge/c8/) | Something is stopping the detergent cup from opening fully. |
 | [Samsung 3E](/dishwashers/samsung/3e/) | High temperature water supply. The water is too hot. |
 | [Samsung 1E](/dishwashers/samsung/1e/) | On Waterwall models, a clogged filter. On Rotary models, high temperature in the heater. Some models show IE. |
+| [Samsung HE](/dishwashers/samsung/he/) | Heater error. The temperature inside the dishwasher is being detected incorrectly. |
 | [LG HE](/dishwashers/lg/he/) | The heater is not heating the water, or the water went above 90°C (194°F). |
 | [Bosch E12](/dishwashers/bosch/e12/) | Limescale build-up in the heat pump. |
 

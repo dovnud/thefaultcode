@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "PF",
+  "codeSlug": "pf",
+  "displayPattern": "Washer display shows PF",
+  "meaning": "Power failure: LG says PF means the power supply to the washer was interrupted during a cycle, for example by a power outage.",
+  "causes": [
+    "A power outage or interruption while a cycle was running, the cause LG gives",
+    "Power cut at the outlet or circuit breaker mid-cycle"
+  ],
+  "diySteps": [
+    "Unplug the washer, or switch off the circuit breaker that supplies it",
+    "While the washer has no power, press and hold the START/PAUSE button for 5 seconds",
+    "Restore power and try to run a cycle"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If PF keeps appearing after this reset, LG says the washer will require a repair service.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-01"
+}

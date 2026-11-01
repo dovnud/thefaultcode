@@ -5,7 +5,7 @@
  "title": "Dishwasher Will Not Fill: E16, H2O, IE and 4C",
  "description": "What Bosch E16, E17 and E18, GE H2O, LG dishwasher IE, and Samsung 4C and 9E mean when a dishwasher is not getting water.",
  "answer": "A fill code means the dishwasher did not get the water it expects. Bosch E16 and E17 point at the inlet hose. GE H2O is a low-water situation. LG IE is water that never reached the tub. Samsung 4C adds water pressure and hot-water temperature ranges. Check the shutoff valve and a kinked hose before you assume the valve inside the door has failed.",
- "updated": "2026-10-27",
+ "updated": "2026-11-01",
  "faq": [
   {
    "q": "What water flow does Bosch ask for on E18?",
@@ -38,7 +38,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/"
   }
  ],
- "codes": ["dishwashers/bosch/e16-e17", "dishwashers/bosch/e18", "dishwashers/ge/h2o", "dishwashers/lg/ie", "dishwashers/samsung/4c", "dishwashers/samsung/9e"]
+ "codes": ["dishwashers/bosch/e16-e17", "dishwashers/bosch/e18", "dishwashers/ge/h2o", "dishwashers/lg/ie", "dishwashers/samsung/4c", "dishwashers/samsung/9e", "dishwashers/bosch/e14"]
 }
 ---
 ## Not enough water
@@ -48,6 +48,7 @@ A dishwasher that hums and never fills, or that fills and then throws a low-wate
 |---|---|
 | [Bosch E16 / E17](/dishwashers/bosch/e16-e17/) | Water inflow problem. Water may not be able to enter, or the filling system is at fault. |
 | [Bosch E18](/dishwashers/bosch/e18/) | Water flow problem. The water level is too low, or water is not being pumped correctly. |
+| [Bosch E14](/dishwashers/bosch/e14/) | Flow meter failure, or an issue with water flowing in or with the filling system. |
 | [GE H2O](/dishwashers/ge/h2o/) | Low water situation. |
 | [LG IE](/dishwashers/lg/ie/) | Water inlet error. The specified amount of water was not supplied to the tub. |
 | [Samsung 4C](/dishwashers/samsung/4c/) | Water supply error. The dishwasher is not getting water at the pressure or temperature it needs. Some models show 4E. On models without a display, a blinking Auto or Express 60 light can mean the same thing. |
@@ -59,6 +60,8 @@ The washer versions of IE and 4C are [LG washer IE](/washers/lg/ie/) and [Samsun
 **E16 and E17.** Bosch's cause is a kinked or damaged inlet hose. The step is to check that hose and make sure it is not kinked or damaged. If the hose is fine and the code remains, contact Bosch Customer Support. There is no temperature specification on this entry.
 
 **E18.** Causes are a kinked or damaged inlet hose, and a water supply that is turned off or too low. Steps: check the inlet hose, and make sure the water supply is turned on. Bosch gives the required flow rate as 10 liters per minute. If the code remains, contact Bosch.
+
+**E14.** Bosch reads this as a flow meter failure or a problem with water flowing into the dishwasher or the filling system. Unlike E16, E17 and E18, Bosch gives no hose or supply check for [E14](/dishwashers/bosch/e14/): its only step is to contact Bosch Customer Support.
 
 Ten liters per minute is a house-plumbing number. If every faucet in the kitchen is weak, the dishwasher is reporting the house, not a failed inlet valve. If only the dishwasher is weak, the hose and the shutoff under the sink are the parts Bosch has you look at before you call.
 
