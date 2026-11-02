@@ -5,7 +5,7 @@
  "title": "Dishwasher Leak Codes: E15, AE, LC and Suds",
  "description": "What Bosch E15, LG AE, LG bE and Samsung dishwasher LC mean when a dishwasher reports a leak or oversuds, and which of those codes tell you to stop and call.",
  "answer": "A leak code means water, or suds that the sensor reads as water, reached a place the dishwasher protects. Bosch E15 says to turn off the water and contact Bosch. LG AE and Samsung LC list checks you can do, including detergent that is not made for dishwashers. LG bE is the suds code and has its own milk-rinse procedure. Do not keep running a dishwasher that is leaking onto the floor.",
- "updated": "2026-10-31",
+ "updated": "2026-11-02",
  "faq": [
   {
    "q": "Can dish soap cause a leak code?",
@@ -34,7 +34,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/"
   }
  ],
- "codes": ["dishwashers/bosch/e15", "dishwashers/lg/ae", "dishwashers/lg/be", "dishwashers/samsung/lc", "dishwashers/ge/999"]
+ "codes": ["dishwashers/bosch/e15", "dishwashers/lg/ae", "dishwashers/lg/be", "dishwashers/samsung/lc", "dishwashers/ge/999", "dishwashers/samsung/7e"]
 }
 ---
 ## What a leak code is protecting
@@ -102,6 +102,7 @@ Causes and the matching checks from the support page:
 - Dishwasher not level, so the door bumps the cabinets or water pools at the door. Level it side to side and front to back.
 - Cabinet screws over-tightened, stretching the tub sides and opening gaps. Measure across the opening exactly where the cabinet screws are. Samsung says it should be 22 inches. If it is more, loosen the screws.
 - Food stuck in the nozzles, diverting spray at the door seal. Clean the nozzles and jets. On Waterwall models, make sure no dishes block the water reflector.
+  If the reflector itself cannot move, Samsung shows a separate code, [7E](/dishwashers/samsung/7e/) (7C on some models): clear what blocks it, check the WaterWall logo faces forward and upward, and reseat it on the gray shuttle if it is reversed.
 - Water splashed near the sensor underneath when the dishwasher was moved. Give it time to dry, especially after a move, then restore power.
 
 If LC or LE is still on after the area has dried, request service. Also request service if water leaks anywhere along the drain hose other than its connection to the house. Samsung draws that line: the house connection you can reseat, a leak in the hose itself is service.

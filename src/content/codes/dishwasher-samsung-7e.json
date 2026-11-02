@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "7E",
+  "codeSlug": "7e",
+  "displayPattern": "Dishwasher display shows 7E (also shown as 7C on some models)",
+  "meaning": "Waterwall reflector error: the WaterWall reflector (the vane that travels along the rail at the back of the tub) is unable to move. Something is blocking or holding it in place, or it was not reattached correctly.",
+  "causes": [
+    "Something blocking the reflector, such as a pot handle, a large knife or a ladle",
+    "Packing tape still on a newly installed dishwasher; it runs along the top of the guide rail",
+    "The reflector reattached the wrong way round after it was removed"
+  ],
+  "diySteps": [
+    "Remove the bottom rack so you can see the WaterWall assembly",
+    "Clear anything that blocks the reflector, such as a pot handle, large knife or ladle",
+    "If the dishwasher was recently installed, remove the packing tape along the top of the guide rail",
+    "Check the reflector's position: when it is correct, the WaterWall logo faces forward and upward",
+    "If it is installed incorrectly, lift up on the vane to remove it, turn it around, and reseat it on the gray shuttle on the WaterWall rail",
+    "If it is installed properly but the code remains, switch the dishwasher off at the circuit breaker for two minutes, then switch it back on",
+    "Repeat the checks; Samsung says a power cycle may be needed to clear the code once the reflector is free"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Samsung says it is exceptionally rare for 7E to need service. Request service if the reflector or rail is damaged, or if the code keeps returning after you are confident the reflector is assembled correctly and you have power cycled. Samsung notes that if a technician finds no defect, the visit is not covered under warranty. A blocked reflector can also contribute to the LC leak code on Waterwall models.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10007371/",
+  "sourceType": "support-page",
+  "sourceTitle": "Waterwall reflector error code 7E on Samsung dishwasher (Samsung Support)",
+  "moreSources": [
+    {
+      "name": "Samsung dishwasher is displaying an error code (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-02"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "bE",
+  "codeSlug": "be",
+  "displayPattern": "Dishwasher display shows bE (also shown as 6E on some models)",
+  "meaning": "Button error: the control panel detects a stuck button.",
+  "causes": [
+    "A control panel button detected as stuck, the cause Samsung gives"
+  ],
+  "diySteps": [
+    "Turn off the dishwasher",
+    "Touch every button on the panel",
+    "Turn the dishwasher back on and check whether bE (or 6E) has cleared"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If any buttons are not working correctly, or the code returns after you turn the dishwasher back on, Samsung says to request service. Not the same as LG dishwasher bE: LG uses bE for a bubble (oversudsing) error, which has its own steps.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-02"
+}

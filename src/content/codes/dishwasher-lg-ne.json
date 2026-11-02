@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "nE",
+  "codeSlug": "ne",
+  "displayPattern": "Dishwasher display shows nE",
+  "meaning": "The impeller is not spinning normally. LG says this can happen when the impeller does not spin or when dishes touch it.",
+  "causes": [
+    "Dishes touching the impeller",
+    "The impeller not spinning"
+  ],
+  "diySteps": [
+    "Reorganize the dishes so nothing touches the impeller",
+    "Restart the dishwasher",
+    "If nE appears again, request LG service"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If the error persists after the dishes are rearranged, LG says inspection by a service technician is necessary. A different LG code, LE, points to the cleaning motor and also needs a technician.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-02"
+}
