@@ -4,7 +4,7 @@ import SafetyNotice from '../../components/SafetyNotice.astro';
 import { allCodes } from '../../lib/paths';
 import { catBySlug, typeLabel } from '../../config/categories';
 import { affiliates, AMAZON_STATEMENT } from '../../config/affiliates';
-import { fmtDate, EDITORIAL, SITE_URL } from '../../config/site';
+import { fmtDate, SITE_URL } from '../../config/site';
 import { articleLd, breadcrumbLd } from '../../lib/schema';
 import { FINDER_PARTS, FINDER_UPDATED, WINTER_GUIDE, codesForPart, finderBySlug, finderPath } from '../../lib/partFinder';
 export async function getStaticPaths() {
@@ -35,7 +35,7 @@ const jsonld = [
 {shop && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{cat.name} · {hits.length} {hits.length === 1 ? 'code' : 'codes'}</p><h1>{part.name}</h1>
 <p>These codes name {art} {name} in the manufacturer document linked on the row. The sentence is the wording published from that document. Codes that do not name it are not listed.</p>
-<p class="meta-l">By {EDITORIAL} · Updated <time datetime={FINDER_UPDATED}>{fmtDate(FINDER_UPDATED)}</time></p></div>
+<p class="meta-l">Updated <time datetime={FINDER_UPDATED}>{fmtDate(FINDER_UPDATED)}</time></p></div>
 <div class="layout"><article>
 {part.slug === 'flame-sensor' && <section class="card sec"><h2>What the manuals say about cleaning</h2>
 <p>Goodman GR9S96/GD9S96 installation and operating guide (IOG-2037B) says the flame sensor should be carefully cleaned by a qualified servicer using emery cloth or steel wool. <a href="https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf" rel="noopener" target="_blank">Goodman IOG-2037B<span class="sr-only"> (opens in a new tab)</span> ↗</a></p>

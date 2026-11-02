@@ -16,11 +16,7 @@ const intervalId = `cap-${purpose}-interval`;
 ---
 <section class="card sec capture" aria-labelledby={titleId}>
   <h2 id={titleId}>{fix ? 'Email me this fix' : 'Request a filter and maintenance reminder'}</h2>
-  {fix ? (
-    <p class="capture-lead">This stores a request for this code page. We save your email and this page. Nothing is sent from this form, and we do not use the address for a newsletter, weekly messages, or deals. {CONSENT_TEXT}</p>
-  ) : (
-    <p class="capture-lead">This stores a request for an HVAC filter and maintenance reminder. We save your email, this page, and the interval you pick. Nothing is sent from this form, and we do not use the address for a newsletter, weekly messages, or deals. {CONSENT_TEXT}</p>
-  )}
+  <p class="capture-lead">{fix ? 'We save your email and this page. Nothing is emailed.' : 'We save your email, this page, and the interval you pick. Nothing is emailed.'} {CONSENT_TEXT}</p>
   <form class="capture-form" method="post" action="/api/subscribe" data-capture data-purpose={purpose} data-sitekey={TURNSTILE_SITE_KEY || undefined}>
     <input type="hidden" name="purpose" value={purpose} />
     <input type="hidden" name="page_url" value={pageUrl} />

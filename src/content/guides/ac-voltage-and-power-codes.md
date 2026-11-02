@@ -17,7 +17,7 @@
   },
   {
    "q": "Is a non-contact tester a way to measure the brownout?",
-   "a": "No. A non-contact tester only indicates that voltage is present. It does not read 180 V or tell you whether the supply is high or low. Use it to confirm a disconnect you just switched off is actually dead before you look inside. The number on Carrier 46 is a meter reading for a technician."
+   "a": "No. A non-contact tester only indicates that voltage is present. It does not read 180 V or tell you whether the supply is high or low. Use it to confirm a disconnect you just switched off is no longer live before you look inside. The number on Carrier 46 is a meter reading for a technician."
   }
  ],
  "sources": [
@@ -84,7 +84,7 @@ Homeowners sometimes swap this fuse because it looks like the fuse in a furnace 
 [Goodman EE](/ac/goodman/ee/) is the neighboring "the board is wrong" code: welded compressor relay contacts. There is no reset that separates welded contacts. That is a technician diagnosis. If the display says EE, call. Do not confuse it with E5.
 
 ## A non-contact tester is only a dead-or-live check
-The shop button on this page searches Amazon for a non-contact voltage tester. The [voltage tester](/parts/voltage-tester/) page describes what that tool does: it signals when it is near live AC. It does not display a voltage number, so it cannot confirm Carrier's approximately 180 V, and it cannot tell H8 from L8. The legitimate use while you are standing at an outdoor unit is to confirm that a disconnect you switched off is actually off before you look past the cover, and to re-check before you touch anything. Test the tester on a known live outlet first, or it will tell you a live cabinet is safe.
+The shop button on this page searches Amazon for a non-contact voltage tester. The [voltage tester](/parts/voltage-tester/) page describes what that tool does: it signals when it is near live AC. It does not display a voltage number, so it cannot confirm Carrier's approximately 180 V, and it cannot tell H8 from L8. The legitimate use while you are standing at an outdoor unit is to confirm that a disconnect you switched off is off before you look past the cover, and to re-check before you touch anything. Test the tester on a known live outlet first, or it will tell you a live cabinet is safe.
 
 A multimeter that can read line voltage is a different tool, and using it inside a disconnect is the technician work the manuals already assigned. The [multimeter](/parts/multimeter/) page is the general note. This guide does not walk through probe placement on L1 and L2.
 

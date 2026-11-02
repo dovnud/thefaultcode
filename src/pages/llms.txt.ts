@@ -11,7 +11,7 @@ export async function GET() {
 
 > Error and flash codes for gas furnaces, washing machines, dishwashers and AC / heat pumps, explained in plain English. Each code page gives the meaning, likely causes, safe homeowner checks, when to call a qualified technician, and a link to the manufacturer manual or official support page the information came from. Codes we could not verify in a manual are not published.
 
-Information only; not professional advice. Gas, venting, refrigerant, high-voltage wiring and control-board work should be done by a licensed technician. Written by The Fault Code editorial team. Questions: contact@thefaultcode.com.
+Information only; not professional advice. Gas, venting, refrigerant, high-voltage wiring and control-board work should be done by a licensed technician. Written by The Fault Code. Questions: contact@thefaultcode.com.
 
 HTML pages point here with rel="describedby". Guide links below are Markdown twins of the canonical HTML pages.
 

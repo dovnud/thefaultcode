@@ -109,7 +109,7 @@ If the code returns, Whirlpool says to check the owner's manual for your model, 
 ## Why there is no shop button
 A door lock assembly is model-specific, it is wired into the control, and the support pages above do not tell a homeowner to buy one. Shipping the first "washer door lock" a search returns is how a code that was a sock in the gasket becomes a washer that will not run at all. This guide does not carry an Amazon button. If a later repair quote names a latch, match the part number on the quote to the model tag, which is a different task from clearing dE tonight.
 
-The [level and wrench](/parts/leveling-tools/) page is for codes that actually mention level, such as LG UE and Samsung 5C. It is not a door-lock tool. Do not pull the washer out to level it because the door code is on. Close the door first.
+The [level and wrench](/parts/leveling-tools/) page is for codes that mention level, such as LG UE and Samsung 5C. It is not a door-lock tool. Do not pull the washer out to level it because the door code is on. Close the door first.
 
 ## Resets are not a repair
 Each brand publishes one reset: LG's five-second START/PAUSE hold with power removed, Samsung's Child Lock timing, Whirlpool's Pause/Cancel twice and Power once. Doing that reset ten times does not reseat a bent strike. If the first reset and a clear gasket do not hold through a cycle, the pages say service.

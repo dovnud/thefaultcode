@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro'; import SafetyNotice from '../../com
 import { allCodes } from '../../lib/paths';
 import { CATEGORIES, catOf, codePath, catBySlug } from '../../config/categories';
 import { AMAZON_STATEMENT } from '../../config/affiliates';
-import { fmtDate, EDITORIAL } from '../../config/site';
+import { fmtDate } from '../../config/site';
 import { articleLd, breadcrumbLd } from '../../lib/schema';
 import { lastmodFor } from '../../lib/lastmod';
 import { PARTS, partBySlug, fullLinks, usage, partUrl, partsCatUrl, partsBrandUrl } from '../../lib/partLinks';
@@ -29,7 +29,7 @@ const sizeKind = /hose|supply-line/.test(p.slug) ? 'hose' : (p.slug === 'hvac-ai
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/parts/">Parts and tools</a></li><li aria-current="page">{p.name}</li></ol></nav>
 {nLinks>0 && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Parts and tools · {p.kind}</p><h1>{p.name}</h1><p>{p.summary}</p><p class="meta-l">By {EDITORIAL} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
+<div class="page-h"><h1>{p.name}</h1><p>{p.summary}</p><p class="meta-l">Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
 <div class="layout"><article>
 <section class="card sec guide"><h2>What it is</h2>{p.what.map(t=><p>{t}</p>)}</section>
 <section class="card sec guide"><h2>How to choose</h2><ul>{p.choose.map(t=><li>{t}</li>)}</ul></section>

@@ -59,9 +59,5 @@ if (mb && nav) {
   mb.addEventListener('click', () => set(mb.getAttribute('aria-expanded') !== 'true'));
   addEventListener('keydown', e => { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { set(false); mb.focus(); } });
 }
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const go = () => import('../scripts/motion').then(m => m.start());
-  'requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 2500 }) : setTimeout(go, 1200);
-}
 </script>
 </body></html>

@@ -56,7 +56,7 @@ Bosch's cause is water collected in the base. The steps are two lines: turn off 
 
 There is no filter-clean step on E15. There is no "tip the dishwasher to drain the base" step. Water in the base means a supply hose, a tub seal, a pump seal or a similar path has already failed, and the safety switch did what it was built to do. Shut the water off under the sink so the leak cannot keep filling the pan, leave the breaker off, and contact Bosch.
 
-If the code you actually have is [E24](/dishwashers/bosch/e24/) or [E25](/dishwashers/bosch/e25/), that is standing water in the tub, which is the [drain guide](/guides/dishwasher-will-not-drain/). E15 is water where you may not see it.
+If the code on the dishwasher is [E24](/dishwashers/bosch/e24/) or [E25](/dishwashers/bosch/e25/), that is standing water in the tub, which is the [drain guide](/guides/dishwasher-will-not-drain/). E15 is water where you may not see it.
 
 ## LG AE
 Causes LG lists: too much water supplied, oversudsing from dishwashing liquid, the unit not level or the door not aligned, a leak, and water poured into the Heat Dry blower.
@@ -94,7 +94,7 @@ The dishwasher turns itself on and keeps trying to drain. Cut power at the break
 
 Causes and the matching checks from the support page:
 
-- A leak at the water supply hose, at either connection or along its length. Look and feel. If you find one, turn off the water supply. Samsung says the supply hose is sold separately and is not covered by Samsung service, and it recommends a 3/8-inch stainless steel hose. The shop button on this guide searches for dishwasher detergent, because suds are the homeowner mistake. A supply hose, if you need one, is the [supply line](/parts/dishwasher-supply-line/) page, and the search there is for the hose. Match the fitting. Samsung's 4C dishwasher page describes a stainless line up to 10 feet and a 90-degree elbow with 1/2-inch NPT on one end and 3/8-inch compression on the other. That hardware note lives on the fill code. Use it only if you are replacing a hose that is actually leaking.
+- A leak at the water supply hose, at either connection or along its length. Look and feel. If you find one, turn off the water supply. Samsung says the supply hose is sold separately and is not covered by Samsung service, and it recommends a 3/8-inch stainless steel hose. The shop button on this guide searches for dishwasher detergent, because suds are the homeowner mistake. A supply hose, if you need one, is the [supply line](/parts/dishwasher-supply-line/) page, and the search there is for the hose. Match the fitting. Samsung's 4C dishwasher page describes a stainless line up to 10 feet and a 90-degree elbow with 1/2-inch NPT on one end and 3/8-inch compression on the other. That hardware note lives on the fill code. Use it only if you are replacing a hose that is leaking.
 - Drain hose not connected to the house correctly. Reinstalling or tightening that connection may be all it needs.
 - Garbage disposal cap left in place. Same knockout as on the drain codes.
 - Door seal pushed out of its channel, dirty, or damaged. Push a seal that has slipped back into the channel, and clean it with a towel and mild soap. If the seal is damaged, Samsung says to request service.

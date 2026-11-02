@@ -24,7 +24,7 @@ const jsonld = [
 <Base title={title} description={description} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Dataset</li></ol></nav>
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Open data · {rows.length} records</p><h1>Fault code dataset</h1><p>Every fault code published on The Fault Code, in one table you can download, cite or load into a spreadsheet. Meanings are taken from the manufacturer manual or support page linked on each row.</p><p class="meta-l">By {EDITORIAL} · Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
+<div class="page-h"><h1>Fault code dataset</h1><p>Every fault code published on The Fault Code, in one table you can download, cite or load into a spreadsheet. Meanings are taken from the manufacturer manual or support page linked on each row.</p><p class="meta-l">Updated <time datetime={updated}>{fmtDate(updated)}</time></p></div>
 <section class="card sec guide" aria-labelledby="dl-h"><h2 id="dl-h">Download</h2>
 <p><a class="btn btn-p" href="/data/fault-codes.csv" download>Download CSV</a> <a class="btn btn-o" href="/data/fault-codes.json" download>Download JSON</a></p>
 <p>{rows.length} records, {brands} brands, {cats.length} categories ({cats.join(', ')}). Both files are generated from the same content as the code pages and rebuilt whenever a code changes. Columns: brand, category, equipment_type, code, display_pattern, meaning, professional_recommended, source_type, source_title, source_url, page_url, date_modified.</p></section>

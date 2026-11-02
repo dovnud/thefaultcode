@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { fmtDate, EDITORIAL } from '../../config/site'; import { AMAZON_STATEMENT, amazonAsinLink, amazonLink, primaryShop } from '../../config/affiliates'; import { A } from '../../data/parts'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import CaptureForm from '../../components/CaptureForm.astro'; import { catBySlug, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks'; import { guideMentions } from '../../lib/guideLinks'; import { articleLd, breadcrumbLd } from '../../lib/schema';
+import Base from '../../layouts/Base.astro'; import { fmtDate } from '../../config/site'; import { AMAZON_STATEMENT, amazonAsinLink, amazonLink, primaryShop } from '../../config/affiliates'; import { A } from '../../data/parts'; import { getCollection, render } from 'astro:content'; import SafetyNotice from '../../components/SafetyNotice.astro'; import CaptureForm from '../../components/CaptureForm.astro'; import { catBySlug, codePath } from '../../config/categories'; import { slugForKey, partBySlug, partUrl } from '../../lib/partLinks'; import { guideMentions } from '../../lib/guideLinks'; import { articleLd, breadcrumbLd } from '../../lib/schema';
 export async function getStaticPaths(){ return (await getCollection('guides')).map(g=>({params:{slug:g.id},props:{g}})); }
 const { g } = Astro.props; const d = g.data; const { Content } = await render(g);
 const url = `https://thefaultcode.com/guides/${g.id}/`;
@@ -30,9 +30,9 @@ const jsonld = [
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page">{d.title}</li></ol></nav>
 {hasAmazon && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
-<div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">Field guide</p><h1>{d.title}</h1><p class="meta-l">By {EDITORIAL} · Updated <time datetime={d.updated}>{fmtDate(d.updated)}</time></p></div>
+<div class="page-h"><h1>{d.title}</h1><p class="meta-l">Updated <time datetime={d.updated}>{fmtDate(d.updated)}</time></p></div>
 <div class="layout"><article>
-<div class="card" data-critical style="border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)"><div class="lbl">Short answer</div><p style="font-weight:600;font-size:1.1rem;margin:6px 0 0">{d.answer}</p>
+<div class="card" data-critical style="border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)"><p style="font-weight:600;font-size:1.1rem;margin:0">{d.answer}</p>
 {primary && <div class="result-cta"><p class="result-cta-l">This guide names {primary.name}. The button opens an Amazon search, not a listing chosen for your model.</p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a><p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p></div>}
 </div>
 <div class="card sec guide"><Content /></div>
@@ -42,8 +42,8 @@ const jsonld = [
 <p class="disc">{AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p></section>}
 <SafetyNotice kind={safetyKind} />
 {g.id === 'furnace-air-filter-guide' && <CaptureForm purpose="reminder" pageUrl={`/guides/${g.id}/`} />}
-<section class="card sec guide"><h2><span class="num">§F</span>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
-<section class="card sec guide"><h2><span class="num">§S</span>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul></section>
+<section class="card sec guide"><h2>FAQ</h2>{d.faq.map(f=><><h3>{f.q}</h3><p>{f.a}</p></>)}</section>
+<section class="card sec guide"><h2>Sources</h2><ul>{d.sources.map(s=><li><a href={s.url} rel="noopener" target="_blank">{s.name}<span class="sr-only"> (opens in a new tab)</span> ↗</a></li>)}</ul></section>
 </article>
 <aside class="side">
 {primary && <div class="card box"><h2 style="font-size:1.35rem;margin:0 0 6px">Parts and filters mentioned</h2><p>Match this to your model's manual before buying.</p>
