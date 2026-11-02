@@ -54,7 +54,7 @@
 }
 ---
 ## Two different warnings
-A furnace status light and a carbon monoxide alarm are not the same instrument. The light reports what the control board measured: an open switch, a failed ignition, a pressure switch that did not close. A CO alarm samples the air in the room. You can have a rollout code with an alarm that is silent, and you can have an alarm sounding with no furnace code at all, because the source might be a car left running, a generator, a grill, or a water heater. This page keeps those two warnings separate and says what each published source actually supports.
+A furnace status light and a carbon monoxide alarm are not the same instrument. The light reports what the control board measured: an open switch, a failed ignition, a pressure switch that did not close. A CO alarm samples the air in the room. You can have a rollout code with an alarm that is silent, and you can have an alarm sounding with no furnace code at all, because the source might be a car left running, a generator, a grill, or a water heater. This page keeps those two warnings separate and says what each published source supports.
 
 If you feel ill, follow the alarm instructions, not the furnace manual. If you smell gas, leave and call the gas utility from outside. Do not stay to read the LED.
 

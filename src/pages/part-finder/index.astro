@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { allCodes } from '../../lib/paths';
 import { CATEGORIES } from '../../config/categories';
-import { fmtDate, EDITORIAL, SITE_URL } from '../../config/site';
+import { fmtDate, SITE_URL } from '../../config/site';
 import { breadcrumbLd } from '../../lib/schema';
 import { FINDER_PARTS, FINDER_UPDATED, codesForPart, finderPath } from '../../lib/partFinder';
 const codes = await allCodes();
@@ -20,7 +20,7 @@ const jsonld = [
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Part finder</li></ol></nav>
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{rows.length} parts · from published codes</p><h1>Part finder</h1>
 <p>Each part below is listed only where a published code's manufacturer document names that part. The sentence on the part page is the wording taken from that document, and the link is the document. A part that appears in our notes but is not named in that text is left off. Cleaning materials such as steel wool stay on the code page; they are not treated as the failed part.</p>
-<p class="meta-l">By {EDITORIAL} · Updated <time datetime={FINDER_UPDATED}>{fmtDate(FINDER_UPDATED)}</time></p></div>
+<p class="meta-l">Updated <time datetime={FINDER_UPDATED}>{fmtDate(FINDER_UPDATED)}</time></p></div>
 {CATEGORIES.filter(c => rows.some(r => r.p.cat === c.slug)).map(c => {
   const list = rows.filter(r => r.p.cat === c.slug);
   return <section aria-labelledby={`pf-${c.slug}`}><h2 class="cat-h" id={`pf-${c.slug}`}>{c.name}<small>{list.length} parts</small></h2>

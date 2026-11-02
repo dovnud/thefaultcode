@@ -8,7 +8,12 @@
   "displayPattern": "Status LED: 3 short flashes then 2 long flashes (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control)",
   "meaning": "Low pressure trip: the control elevates to fault 83 (low pressure lockout) after 3 occurrences. Reset time is 6 minutes.",
   "causes": [
-    "The manual says to refer to fault 83 for causes: closed service valve, undercharged system, low indoor (cooling) or outdoor (heating) airflow, EXV or TXV problems, restriction in the filter drier or circuits"
+    "The service manual points code 32 at the fault 83 cause list",
+    "Closed service valve",
+    "Undercharged system",
+    "Low indoor airflow in cooling, or low outdoor airflow in heating",
+    "EXV or TXV problem",
+    "Restriction in the filter drier or the refrigerant circuits"
   ],
   "diySteps": [
     "In cooling mode, check the indoor coil for clogging by ice or debris and clean or de-ice it if necessary (the manual also says to troubleshoot the indoor fan motor)",

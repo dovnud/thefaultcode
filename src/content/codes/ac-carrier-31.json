@@ -8,7 +8,13 @@
   "displayPattern": "Status LED: 3 short flashes then 1 long flash (Infinity 25VNA8 heat pump and 24VNA9 air conditioner; amber status LED on the outdoor control)",
   "meaning": "High pressure switch open: the unit steps down capacity for each occurrence and elevates to fault 84 if it happens on the lowest stage. Reset time is 6 minutes.",
   "causes": [
-    "The manual says to refer to fault 84 for causes: high outdoor or indoor load/airflow problems, overcharge, closed service valve, restriction in the filter drier or expansion device, loose or disconnected pressure switch, faulty pressure switch"
+    "The service manual points code 31 at the fault 84 cause list",
+    "High outdoor or indoor load, or an airflow problem",
+    "Overcharge",
+    "Closed service valve",
+    "Restriction in the filter drier or expansion device",
+    "Loose or disconnected pressure switch",
+    "Faulty pressure switch"
   ],
   "diySteps": [
     "Check the outdoor coil for clogging by ice or debris and clean or de-ice it if necessary (the manual also says to troubleshoot the outdoor fan motor)",

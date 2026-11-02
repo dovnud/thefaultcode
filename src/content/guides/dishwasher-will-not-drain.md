@@ -42,7 +42,7 @@
 }
 ---
 ## Standing water is a drain code
-At the end of a cycle the dishwasher pump sends water out a hose, usually to the sink drain or a garbage disposal, sometimes through an air gap on the counter. If that path is blocked, the tub stays wet and the control shows a drain code. The letters depend on the brand. A washer in the same kitchen can show OE or 5C for its own drain fault. Open the page for the appliance that is actually wet.
+At the end of a cycle the dishwasher pump sends water out a hose, usually to the sink drain or a garbage disposal, sometimes through an air gap on the counter. If that path is blocked, the tub stays wet and the control shows a drain code. The letters depend on the brand. A washer in the same kitchen can show OE or 5C for its own drain fault. Open the page for the appliance that has water in it.
 
 | Code | What that brand says |
 |---|---|

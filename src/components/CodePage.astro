@@ -6,7 +6,8 @@ import { partsForCode } from '../lib/partFinder';
 import { guideMentions } from '../lib/guideLinks';
 import { allCodes } from '../lib/paths';
 import { articleLd, breadcrumbLd } from '../lib/schema';
-import SafetyNotice from './SafetyNotice.astro'; import CaptureForm from './CaptureForm.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate, EDITORIAL } from '../config/site';
+import SafetyNotice from './SafetyNotice.astro'; import CaptureForm from './CaptureForm.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate } from '../config/site';
+import { codeNote } from '../lib/codeNotes';
 import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
 const { e, related } = Astro.props;
 const cat = catOf(e); const furn = cat.slug === 'furnaces';
@@ -20,6 +21,9 @@ const shortMeaning = (meaning: string) => {
   return sentence.length <= 72 ? sentence : sentence.slice(0, 71).replace(/\s+\S*$/, '');
 };
 const h1 = `${e.brand} ${e.code}: ${shortMeaning(e.meaning)}`;
+const relLabel = (meaning: string) => shortMeaning(meaning).split(/\s+/).slice(0, 6).join(' ');
+const visiblePattern = e.displayPattern.replace(/\s*\(([^)]{60,})\)/g, '').replace(/\s{2,}/g, ' ').trim();
+const note = codeNote(`${cat.slug}/${e.brandSlug}/${e.codeSlug}`);
 const site='https://thefaultcode.com';
 const clip=(t,n)=>t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…';
 const base=`${e.brand} ${eq} code ${e.code}: ${e.meaning.replace(/\.$/,'')}.`;
@@ -50,9 +54,9 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <Base affLinks={hasAff} amazon={hasAmazon} title={title} description={desc} jsonld={jsonld}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={cat.hub}>{cat.name}</a></li><li><a href={brandPath(e)}>{e.brand}</a></li><li aria-current="page">{e.code}</li></ol></nav>
-{e.example && <p class="ex"><strong>EXAMPLE DATA – not verified, do not publish.</strong></p>}
+{e.example && <p class="ex"><strong>EXAMPLE DATA: not verified, do not publish.</strong></p>}
 {hasAff && <p class="affnote">Affiliate links may earn us a commission.{hasAmazon && <>{" "}{AMAZON_STATEMENT}</>} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
-<div class="page-h"><h1>{h1}</h1><p class="meta-l">Ref. {furn?'':cat.slug.toUpperCase()+'-'}{e.brandSlug.toUpperCase()}-{e.codeSlug.toUpperCase()} · {e.sourceManualUrl ? <>Source: <a href={e.sourceManualUrl} rel="noopener" target="_blank">{hdrSrc}<span class="sr-only"> (opens in a new tab)</span> ↗</a></> : <>From the {e.brand} {eq} manual</>} · By {EDITORIAL} · Updated <time datetime={e.updated}>{fmtDate(e.updated)}</time></p></div>
+<div class="page-h"><h1>{h1}</h1><p class="meta-l">{e.sourceManualUrl ? <>Source: <a href={e.sourceManualUrl} rel="noopener" target="_blank">{hdrSrc}<span class="sr-only"> (opens in a new tab)</span> ↗</a></> : <>From the {e.brand} {eq} manual</>} · Updated <time datetime={e.updated}>{fmtDate(e.updated)}</time></p></div>
 <div class="layout">
 <article>
 <div class="card result" data-critical>
@@ -62,21 +66,22 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <p class="meaning">{e.meaning}</p>
 {primary && <div class="result-cta"><p class="result-cta-l">Homeowner part this code names: {primary.name}.</p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a><p class="disc">Opens an Amazon search for that name. Check the size against your manual. {AMAZON_STATEMENT}</p></div>}
 <div class="badges">{e.proNeeded?<a class="badge b-pro" href="#call-a-pro">Call a pro<span class="sr-only">: jump to when to call a pro</span> <span aria-hidden="true">↓</span></a>:<a class="badge b-diy" href="#diy-steps">Basic checks first<span class="sr-only">: jump to safe DIY steps</span> <span aria-hidden="true">↓</span></a>}<span class="lbl-static"><span class="sr-only">Equipment type: </span>{eq}</span></div>
-<div class="pattern"><strong>How it shows:</strong> {e.displayPattern}</div>
+<div class="pattern"><strong>How it shows:</strong> {visiblePattern}</div>
+{note && <p class="code-note">{note}</p>}
 {twins.length>0 && <p class="pattern"><strong>Same characters, different appliance:</strong> {twins.map(c => { const noun = catOf(c).noun; const art = /^[aeiou]/i.test(noun) ? 'an' : 'a'; return <span>{`${e.brand} ${e.code} on ${art} ${noun} is a different fault. `}<a href={codePath(c)}>{`${e.brand} ${typeLabel(c)} ${e.code}`}</a>. </span>; })}</p>}
 {showPro && <p style="margin:16px 0 0"><a class={proBtn} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a></p>}
 </div></div>
-<section class="card sec" data-reveal><h2><span class="num">§1</span>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
-<section class="card sec" id="diy-steps" data-reveal><h2><span class="num">§2</span>{e.proNeeded ? `Safe checks for ${e.code}` : `How to fix ${e.code}: safe DIY steps`}</h2>
+<section class="card sec" data-reveal><h2>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
+<section class="card sec" id="diy-steps" data-reveal><h2>{e.proNeeded ? `Safe checks for ${e.code}` : `How to fix ${e.code}: safe DIY steps`}</h2>
 <ol class="steps">{e.diySteps.map(s=>{const x=split(s);return <li>{x.tech&&<span class="tech">Technician</span>}{x.t}</li>})}</ol>
 <div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}<SafetyNotice kind={cat.slug==='furnaces'?'furnace':cat.slug==='ac'?'ac':cat.slug==='washers'?'washer':cat.slug==='dishwashers'?'dishwasher':'generic'} inline /></div></div></section>
-<section class="card sec procard" id="call-a-pro" data-critical><h2><span class="num">§3</span>When to call a pro</h2>
+<section class="card sec procard" id="call-a-pro" data-critical><h2>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?(cat.kind==='hvac'?'This code usually needs a licensed technician.':'This code usually needs a qualified appliance technician.'):'Call a pro if the steps above do not clear the code.')}</p>
 {showPro ? <a class={proBtn} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a> : loc && <a class={proBtn} rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a>}</section>
 <CaptureForm purpose="fix" pageUrl={codePath(e)} extra={{ brand: e.brand, code: e.code, equipment: eq }} />
 {cat.kind === 'hvac' && <CaptureForm purpose="reminder" pageUrl={codePath(e)} />}
 <CodeParts e={e} />
-{related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h"><span class="num">§4</span>{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{c.meaning}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
+{related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h">{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{relLabel(c.meaning)}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
 </article>
 <aside class="side" data-critical>
 {pointed.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts this code points to</h2><p>Named in the manufacturer document for this code. Each link is the part finder page for that part.</p><ul class="parts">{pointed.map(h=><li><a href={`/part-finder/${h.part.slug}/`}>{h.part.name}</a></li>)}</ul><p style="margin:8px 0 0"><a href="/part-finder/">Part finder</a></p></div>}
