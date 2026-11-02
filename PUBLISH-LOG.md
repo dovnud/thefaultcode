@@ -1,5 +1,21 @@
 # Publish log
 
+## 2026-11-02
+
+New pages (Samsung 7E from Samsung Support "Waterwall reflector error code 7E on Samsung dishwasher" (TSG10007371), with the "Samsung dishwasher is displaying an error code" list (TSG10004499) as an extra source; Samsung bE from TSG10004499; LG nE from the official LG USA "[LG Dishwasher] Guide to Error Codes"; source links on each page):
+
+- Samsung dishwasher 7E: Waterwall reflector error (also 7C; reflector blocked, packing tape on the rail, or reflector reversed; Samsung's 2-minute breaker power cycle) — https://thefaultcode.com/dishwashers/samsung/7e/
+- Samsung dishwasher bE: button error, a stuck control-panel button (also 6E) — https://thefaultcode.com/dishwashers/samsung/be/
+- LG dishwasher nE: impeller not spinning normally, or dishes touching it (rearrange dishes, restart, then LG service) — https://thefaultcode.com/dishwashers/lg/ne/
+
+Internal links: Dishwasher Leak Codes guide links Samsung 7E from the Waterwall reflector line in its Samsung LC section, and lists it in the guide's codes (updated 2026-11-02). Samsung bE and LG nE have no matching guide; they are linked from their brand hubs, /codes/, /data/ and llms-full.txt.
+Note: origin had no newer commits at start. Samsung bE first built with 1 dishwasher-detergent primary search, triggered by the word "oversudsing" in a "not the same as LG bE" step; that note was moved to proAdvice (not scanned for parts) and the page rebuilt with no Amazon link. lastmod.json unchanged.
+Commits: 80cecff (pages + guide link).
+Amazon links: amazonMax 0 on all three, and none of them has an Amazon link. Site total unchanged at 1083. All rel="sponsored nofollow noopener", tag=thefaultcode-20.
+QA: build OK (258 pages); static link check (215 affiliate URLs never fetched) no new issues from this run: same pre-existing cpsc.gov/whirlpool.com 403s and multimeter "angi" substring false positive, plus one new external failure not caused by today's pages: https://www.carrier.com/us/en/residential/find-a-dealer/ now returns 404 (linked from 18 pages, e.g. /ac/carrier/25/, /ac/carrier/31/; left unchanged, needs a replacement URL); axe 0 violations on new and edited pages (mobile/tablet/desktop audit), no tap targets under 44px except the sitewide capture-form items noted 10-31;
+click test 280 (mobile) / 272 (desktop) elements, 0 new issues (desktop only flags the intentionally hidden nav Contact link, as before; capture form never submitted); bE re-clicked after the rebuild, 63 elements, 0 issues; seo_check 0 problems, 0 image problems; Associates statement check OK (258 pages, 171 with Amazon hrefs, 0 missing); 1083 Amazon anchors validated statically, 0 bad.
+Live: all 3 URLs, the edited guide and both brand hubs 200 with correct content, OG images 200 (image/png), sitemap lastmod 2026-11-02, codes present in /data/fault-codes.csv and llms-full.txt. IndexNow: HTTP 200 (6 URLs).
+
 ## 2026-11-01
 
 New pages (LG PF from the official LG USA front-load washer error code list; Bosch pages from Bosch's "Bosch Dishwasher Error Codes: Troubleshooting Guide", with Bosch's E14 self-help page as an extra source on E14; Samsung HE from Samsung Support "Samsung dishwasher is displaying an error code"; source links on each page):
