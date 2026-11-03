@@ -1,5 +1,22 @@
 # Publish log
 
+## 2026-11-03
+
+New pages (Bosch pages from Bosch's "Bosch Dishwasher Error Codes: Troubleshooting Guide", with Bosch's E23 self-help page as an extra source on E23; LG LE from the official LG USA "[LG Dishwasher] Guide to Error Codes"; Samsung 3C from Samsung Support "Samsung washing machine information and error codes" (TSG10000997), with Samsung's "Run diagnostics on your Samsung washer or dryer" (ANS10004796) as an extra source; source links on each page):
+
+- Bosch dishwasher E23: drain pump issue, pump blocked, clogged or faulty (Bosch: contact Customer Support; not the E24/E25 homeowner steps) — https://thefaultcode.com/dishwashers/bosch/e23/
+- Bosch dishwasher E21: heat pump blocked (30-second breaker reset, then Bosch Customer Support) — https://thefaultcode.com/dishwashers/bosch/e21/
+- LG dishwasher LE: cleaning motor not functioning normally (LG: service technician inspection) — https://thefaultcode.com/dishwashers/lg/le/
+- Samsung washer 3C: motor error (also 3E, E3, 1 3C; Samsung's 2-3 minute power-off, restart, then service; 3E is a voltage error on some models) — https://thefaultcode.com/washers/samsung/3c/
+
+Internal links: Dishwasher Will Not Drain guide links Bosch E23 (table row + E23 paragraph in the Bosch section, heading now "Bosch E24, E25, E23 and E22"); Dishwasher Temperature, Detergent and Limescale Codes guide links Bosch E21 from the E12 heat-pump section (both updated 2026-11-03, both added to the guides' codes lists). LG LE and Samsung 3C have no matching guide; they are linked from their brand hubs, /codes/, /data/ and llms-full.txt.
+Note: origin had 2 newer merged commits at start (9ac81a9 de-slop #6, b537de5 AdSense loader + ads.txt #7), fast-forwarded before work. The box had lost hvac-codes/node_modules, the qa axe-core module and the Playwright Chromium build; reinstalled (npm ci, qa npm install, playwright install chromium) before building and testing. lastmod.json unchanged.
+Commits: 4c99715 (pages + guide links).
+Amazon links: amazonMax 0 on all four, and none of them has an Amazon link. Site total unchanged at 1083. All rel="sponsored nofollow noopener", tag=thefaultcode-20.
+QA: build OK (262 pages); static link check (215 affiliate URLs never fetched) no new issues: same pre-existing cpsc.gov/whirlpool.com 403s and multimeter "angi" substring false positive (the carrier.com find-a-dealer 404 from 11-02 no longer appears); axe 0 violations on new and edited pages (mobile/tablet/desktop audit), no tap targets under 44px except the sitewide capture-form items noted 10-31;
+click test 640 (mobile) / 622 (desktop) elements, 0 new issues from today's pages (desktop flags the intentionally hidden nav Contact link, as before; capture form never submitted). New sitewide console message on both viewports, from the AdSense loader added in #7, not from today's pages: "Framing 'https://www.google.com/' violates the following report-only Content Security Policy directive: frame-ancestors 'self'" (report-only, nothing blocked); seo_check 0 problems, 0 image problems; Associates statement check OK (262 pages, 171 with Amazon hrefs, 0 missing); 1083 Amazon anchors validated statically, 0 bad.
+Live: all 4 URLs, both edited guides and the 3 brand hubs 200 with correct content, OG images 200 (image/png), sitemap lastmod 2026-11-03, codes present in /data/fault-codes.csv, fault-codes.json and llms-full.txt (live llms-full.txt identical to the build). IndexNow: HTTP 200 (6 URLs).
+
 ## 2026-11-02
 
 New pages (Samsung 7E from Samsung Support "Waterwall reflector error code 7E on Samsung dishwasher" (TSG10007371), with the "Samsung dishwasher is displaying an error code" list (TSG10004499) as an extra source; Samsung bE from TSG10004499; LG nE from the official LG USA "[LG Dishwasher] Guide to Error Codes"; source links on each page):
