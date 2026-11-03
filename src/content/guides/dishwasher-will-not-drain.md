@@ -5,7 +5,7 @@
  "title": "Dishwasher Will Not Drain: E24, C1, OE and 5C",
  "description": "What Bosch E24 and E25, GE C1 and C3, LG dishwasher OE and Samsung 5C mean when a dishwasher will not drain, including filters, air gaps and the disposal knockout.",
  "answer": "A dishwasher left full of water is a drain code: Bosch E24 or E25, GE C1 or C3, LG OE, or Samsung 5C. The shared checks are a blocked filter or pump cover, a kinked drain hose, and a garbage-disposal knockout that was never removed. Each brand's page adds its own steps. Do not use the washer drain steps on a dishwasher.",
- "updated": "2026-10-27",
+ "updated": "2026-11-03",
  "faq": [
   {
    "q": "What is the garbage disposal knockout?",
@@ -38,7 +38,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/"
   }
  ],
- "codes": ["dishwashers/bosch/e24", "dishwashers/bosch/e25", "dishwashers/bosch/e22", "dishwashers/ge/c1", "dishwashers/ge/c3", "dishwashers/lg/oe", "dishwashers/samsung/5c", "dishwashers/samsung/oc"]
+ "codes": ["dishwashers/bosch/e24", "dishwashers/bosch/e25", "dishwashers/bosch/e22", "dishwashers/bosch/e23", "dishwashers/ge/c1", "dishwashers/ge/c3", "dishwashers/lg/oe", "dishwashers/samsung/5c", "dishwashers/samsung/oc"]
 }
 ---
 ## Standing water is a drain code
@@ -49,6 +49,7 @@ At the end of a cycle the dishwasher pump sends water out a hose, usually to the
 | [Bosch E24](/dishwashers/bosch/e24/) | Not draining properly. Bosch's meaning on this code is that the drain filter is blocked. |
 | [Bosch E25](/dishwashers/bosch/e25/) | The drain pump is blocked, or the drain pump cover is loose or missing. |
 | [Bosch E22](/dishwashers/bosch/e22/) | Food particles have clogged the filter. |
+| [Bosch E23](/dishwashers/bosch/e23/) | An issue with the drain pump: blocked, clogged, or faulty. |
 | [GE C1](/dishwashers/ge/c1/) | Pump-out during drain has exceeded 2 minutes. |
 | [GE C3](/dishwashers/ge/c3/) | The dishwasher will not drain. GE does not list a specific cause. |
 | [LG OE](/dishwashers/lg/oe/) | Outlet error: the tub is not fully drained. |
@@ -57,7 +58,7 @@ At the end of a cycle the dishwasher pump sends water out a hose, usually to the
 
 Switch the dishwasher off at the breaker before you remove a filter or a pump cover. The tub and the water are hot right after a cycle. LG says to wait 30 minutes before you handle the filter. Debris in the pump can be sharp. Bosch says so. Samsung says so.
 
-## Bosch E24, E25 and E22
+## Bosch E24, E25, E23 and E22
 **E22** is the filter by itself. Remove it and wash it under running water with mild soap and a soft brush. Reinstall it the way the owner's manual shows. If E22 returns, Bosch points you to its E22 guide or to Customer Support.
 
 **E24** is "not draining properly," and the steps are wider than the filter:
@@ -67,6 +68,8 @@ Switch the dishwasher off at the breaker before you remove a filter or a pump co
 - If the drain hose goes to a garbage disposal, make sure the plug has been removed from the disposal's dishwasher connection. A new disposal ships with that plug in place. The dishwasher hose can be clamped on and still go nowhere.
 
 **E25** is the pump itself or the cover. Remove the filter completely. Check that the pump cover is not loose. To clear a blockage, Bosch says to pry the pump cover off with a spoon until it clicks, grip it and pull upward until you feel resistance, then pull forward to remove it. Remove debris and standing water with a sponge. Some debris may be sharp.
+
+**E23** is the drain pump itself: Bosch says it is blocked, clogged, or faulty, and its only step is to contact Bosch Customer Support. Bosch gives E23 no spoon or filter procedure, so do not borrow the E25 steps for it.
 
 If E24 or E25 remains, contact Bosch Customer Support. Do not run the dishwasher to "see if it clears" while the cover is off.
 

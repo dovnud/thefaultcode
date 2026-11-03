@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "LE",
+  "codeSlug": "le",
+  "displayPattern": "Dishwasher display shows LE",
+  "meaning": "Cleaning motor error: LG says LE may appear when the cleaning motor is not functioning normally.",
+  "causes": [
+    "An issue with the cleaning motor, the cause LG gives"
+  ],
+  "diySteps": [
+    "LG gives no homeowner fix for LE: it says the error requires inspection by a service technician",
+    "Request service from LG"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": true,
+  "proAdvice": "LG says an LE error requires inspection from a service technician. Not the same as nE, which LG uses when the impeller does not spin or dishes touch it; nE has a rearrange-and-restart step first. Not the same as LG washer LE either, which is a washer motor error (the tub failed to spin) with its own steps.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-03"
+}

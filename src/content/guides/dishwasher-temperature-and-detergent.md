@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-11-01",
+ "updated": "2026-11-03",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -38,7 +38,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -129,6 +129,8 @@ Detergent that is the wrong kind, as opposed to a cup that cannot open, is the l
 Bosch's meaning is limescale build-up in the heat pump, especially in hard water. The steps: descale with a dishwasher descaler (Bosch sells its own) and follow the product instructions. To help prevent it, use softening salt if your dishwasher has a water softener.
 
 If E12 returns after descaling, contact Bosch Customer Support. Do not scrape a heat pump. The descaler is the repair Bosch published.
+
+A different Bosch code, [E21](/dishwashers/bosch/e21/), means the heat pump is blocked, not scaled. Bosch's step there is a 30-second breaker reset, then Customer Support. Descaler is not the E21 fix.
 
 Salt is only for machines that have a softener and a salt compartment. Pouring salt into a detergent cup is not what Bosch wrote. The [salt](/parts/dishwasher-salt/) and [descaler](/parts/dishwasher-descaler/) pages say the same thing.
 

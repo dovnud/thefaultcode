@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E23",
+  "codeSlug": "e23",
+  "displayPattern": "Dishwasher display shows E23",
+  "meaning": "Drain pump problem: Bosch says E23 indicates an issue with the drain pump, which happens when the pump is blocked, clogged, or faulty.",
+  "causes": [
+    "A blocked or clogged drain pump",
+    "A faulty drain pump"
+  ],
+  "diySteps": [
+    "Bosch's only published step for E23 is to contact Bosch Customer Support (1-800-944-2904)",
+    "Have your dishwasher model number ready before you call, as Bosch asks",
+    "To clear the code after the repair, Bosch's general reset is to turn the dishwasher off (or switch off its breaker), wait about 1 minute, turn it back on and run a short empty test cycle"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": true,
+  "proAdvice": "Bosch routes E23 straight to Customer Support rather than giving homeowner steps. Not the same as E24 or E25: Bosch gives E24 (drain filter blocked) and E25 (drain pump blocked, or its cover loose or missing) their own homeowner checks, while E23 points at the pump itself being blocked, clogged or faulty.",
+  "parts": [],
+  "moreSources": [
+    {
+      "name": "E23 Bosch Dishwasher Error Code (Bosch)",
+      "url": "https://www.bosch-home.com/us/owner-support/get-support/support-selfhelp-dishwasher-error-e23"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-03",
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)"
+}

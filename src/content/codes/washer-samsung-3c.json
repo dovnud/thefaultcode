@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "3C",
+  "codeSlug": "3c",
+  "displayPattern": "Washer display shows 3C (also shown as 3E, E3 or 1 3C on some models)",
+  "meaning": "Motor error: Samsung lists 3C, 3E, E3 and 1 3C as a motor error. On some models 3E is a voltage error instead, so check your user manual.",
+  "causes": [
+    "A motor error detected by the washer, the meaning Samsung gives"
+  ],
+  "diySteps": [
+    "Power off the washer for 2-3 minutes",
+    "Power it back on",
+    "Restart the cycle",
+    "If the error continues, request service through Samsung's Support Center"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Samsung gives 3C no specific troubleshooting beyond the power cycle and restart; if it keeps returning, request service. Samsung's Smart Install self-test shows 3C when its high-speed spin check fails, but Samsung says not to run Smart Install while the washer is already showing an error code. If your manual lists 3E as a voltage error, use the 9C1 voltage-error page instead.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "moreSources": [
+    {
+      "name": "Run diagnostics on your Samsung washer or dryer (Samsung Support)",
+      "url": "https://www.samsung.com/us/support/answer/ANS10004796/"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-03"
+}
