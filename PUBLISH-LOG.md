@@ -1,5 +1,23 @@
 # Publish log
 
+## 2026-11-04
+
+New pages (LG dishwasher CL and tE from the official LG USA "[LG Dishwasher] Guide to Error Codes"; LG washer CL from the official LG USA front-load washer error code list; Samsung HC from Samsung Support "Samsung dishwasher is displaying an error code" (TSG10004499); GE C5 from GE Appliances "Dishwasher - Error, Fault or Function Codes"; source links on each page):
+
+- LG dishwasher CL: Control Lock is on, not a fault (long-press Half Load and Energy Saver for at least 3 seconds; stays on after the cycle powers the unit off) — https://thefaultcode.com/dishwashers/lg/cl/
+- LG washer CL: Child Lock is on, not an error (hold the Child Lock button, or the two-button pair named in that model's manual, for 3 seconds) — https://thefaultcode.com/washers/lg/cl/
+- Samsung dishwasher HC: high temperature heater error, the inside temperature is too hot (30-second breaker reset, then empty, detergent, and a Normal cycle) — https://thefaultcode.com/dishwashers/samsung/hc/
+- LG dishwasher tE: temperature sensor contact problem or sensor failure (LG: service technician inspection; no reset) — https://thefaultcode.com/dishwashers/lg/te/
+- GE dishwasher C5: pump-out time is too short (water turned on, retry the cycle, tap the float cover) — https://thefaultcode.com/dishwashers/ge/c5/
+
+Internal links: Dishwasher Temperature, Detergent and Limescale Codes guide links Samsung HC and LG tE (table rows plus sections; the LG HE FAQ answer now says tE does not get the HE reset); Dishwasher Will Not Drain guide links GE C5 (table row and a paragraph; heading now "GE C1, C3 and C5"); Washer Door Will Not Lock guide links LG washer CL and LG dishwasher CL under "Related codes that are not the door", and distinguishes tCL (all three guides updated 2026-11-04 and added to the guides' codes lists).
+Note: origin was already at 28f1773 at start. lastmod.json unchanged. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content at build.
+Commits: 5d7bd0a (pages + guide links).
+Amazon links: amazonMax 0 on all five. HC keeps 1 primary search (dishwasher detergent, from Samsung's own "fill the detergent drawer" step). The two CL pages, tE, and C5 have none. A C5 supply-line primary link was avoided by putting GE's "water supply" sentence in proAdvice, which is not scanned for parts; the steps still say to make sure the water is turned on. Site total 1084 (was 1083). All rel="sponsored nofollow noopener", tag=thefaultcode-20. No Amazon links added or removed on existing pages.
+QA: build OK (267 pages); static link check (1084 affiliate URLs never fetched) no new issues: same pre-existing cpsc.gov and whirlpool.com 403s; axe 0 violations on the 5 new pages, 3 edited guides, and 4 brand hubs (mobile/tablet/desktop audit). No tap targets under 44px except sitewide chrome also present on unchanged /dishwashers/bosch/e23/: the skip-to-content link (117×27 or 117×28) and the capture-form consent checkbox (22px, inside a 46px-tall label on mobile). The capture-form honeypot stays aria-hidden. click.py is not in the repo, so there was no click sweep; the capture form was not submitted.
+FAQ schema on the 3 edited guides matches the visible questions and answers. Associates statement check OK (267 pages, 172 with Amazon hrefs, 0 missing); 1084 Amazon anchors validated statically, 0 bad. OG images in the build are 1200×630 PNG.
+Live: all 5 URLs, the 3 edited guides, the 4 brand hubs, and /codes/ 200 with correct content, OG images 200 (image/png), sitemap lastmod 2026-11-04, codes present in /data/fault-codes.csv, fault-codes.json, and llms-full.txt. IndexNow: HTTP 200 (8 URLs).
+
 ## 2026-11-03
 
 New pages (Bosch pages from Bosch's "Bosch Dishwasher Error Codes: Troubleshooting Guide", with Bosch's E23 self-help page as an extra source on E23; LG LE from the official LG USA "[LG Dishwasher] Guide to Error Codes"; Samsung 3C from Samsung Support "Samsung washing machine information and error codes" (TSG10000997), with Samsung's "Run diagnostics on your Samsung washer or dryer" (ANS10004796) as an extra source; source links on each page):
