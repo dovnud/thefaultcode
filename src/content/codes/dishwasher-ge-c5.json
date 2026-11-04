@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C5",
+  "codeSlug": "c5",
+  "displayPattern": "Dishwasher display shows C5",
+  "meaning": "The pump-out time is too short.",
+  "causes": [
+    "Water to the dishwasher is not turned on",
+    "A float that GE says to tap, in case it is stuck"
+  ],
+  "diySteps": [
+    "Make sure that the water is turned on",
+    "Try the same cycle again",
+    "Tap on the float cover to un-stick the float. GE describes that cover as the plastic piece that looks like an upside-down cup in the front left corner of the tub floor"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "GE's article says to make sure that the water supply is turned on, try the same cycle again, and tap the float cover. If C5 persists, contact GE service. Not the same as C1, which is a pump-out that has already exceeded 2 minutes and has air-gap, hose and disposer checks. Not the same as C4, which is a machine that filled twice after a power failure.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "amazonMax": 0,
+  "updated": "2026-11-04"
+}

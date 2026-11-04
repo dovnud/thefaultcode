@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "CL",
+  "codeSlug": "cl",
+  "displayPattern": "Washer display shows CL",
+  "meaning": "Child Lock is on: LG says CL is not an error code. Child Lock is active, so the control panel is disabled and settings cannot be adjusted.",
+  "causes": [
+    "Child Lock is active"
+  ],
+  "diySteps": [
+    "Make sure the washer is powered on",
+    "Press and hold the Child Lock button for 3 seconds to turn Child Lock off or on",
+    "On some models Child Lock is not one button. LG says it can be a combination of two buttons. Use the pair named in that model's manual"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "No repair is indicated. Not the same as tCL, which is the Tub Clean reminder. Not the same as dE or dE2, which mean the door did not close or did not lock. LG's dishwasher CL page names Half Load and Energy Saver. This washer page does not name a button pair, so do not borrow the dishwasher buttons.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-04"
+}

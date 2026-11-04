@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "tE",
+  "codeSlug": "te",
+  "displayPattern": "Dishwasher display shows tE",
+  "meaning": "Temperature sensor error: LG says tE can appear because of a temperature sensor contact problem or a sensor failure.",
+  "causes": [
+    "A temperature sensor contact problem or a sensor failure, the causes LG gives"
+  ],
+  "diySteps": [
+    "LG gives no homeowner fix for tE: it says the error requires inspection by a service technician",
+    "Request service from LG"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": true,
+  "proAdvice": "LG does not publish a reset for dishwasher tE. Not the same as LG dishwasher HE, which allows one power-off and a 10-second breaker reset before service. Not the same as LG washer tE, which is a heating error (usually a faulty thermistor) with an unplug, drain and restart sequence on the washer page.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-04"
+}

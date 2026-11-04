@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "CL",
+  "codeSlug": "cl",
+  "displayPattern": "Dishwasher display shows CL, or a lock icon is lit",
+  "meaning": "Control Lock is on: LG says CL is not a fault. The control panel is locked, so buttons cannot be pressed and cycles and options cannot be selected.",
+  "causes": [
+    "Control Lock (Child Lock) is turned on"
+  ],
+  "diySteps": [
+    "If the dishwasher is powered on, Control Lock can be turned off. Long-press the CL button or buttons for 3 seconds",
+    "On the models LG names, long-press Half Load and Energy Saver together for at least 3 seconds",
+    "If a cycle ended with Control Lock still on, LG says it stays on after the dishwasher powers off, and CL shows again the next time you turn it on. Turn Control Lock off, then run the dishwasher"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "CL is the lock feature, not a failed button and not a failed control. Not the same as LG washer CL: on the washer, LG says to hold that model's Child Lock button, or the two-button pair named in the washer manual, for 3 seconds. Do not use Half Load and Energy Saver on the washer. Those two names are the dishwasher instructions.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-04"
+}

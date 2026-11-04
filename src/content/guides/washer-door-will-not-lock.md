@@ -5,7 +5,7 @@
  "title": "Washer Door Will Not Lock: dE and F5 E2",
  "description": "What LG dE and dE2, Samsung dE, and Whirlpool F5 E2 mean when a washer door will not lock, and why you should not bypass the lock.",
  "answer": "A door code means the washer did not detect the door as closed and locked, so it will not fill or spin. LG, Samsung and Whirlpool each start with something caught in the door and a door that is not fully shut. A bent latch or a lock that fails after that check is a service call. Do not bypass the lock.",
- "updated": "2026-10-27",
+ "updated": "2026-11-04",
  "faq": [
   {
    "q": "Why does the door stay locked when the cycle is over?",
@@ -26,6 +26,10 @@
    "url": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456"
   },
   {
+   "name": "LG dishwasher guide to error codes",
+   "url": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108"
+  },
+  {
    "name": "Samsung washing machine information and error codes (Samsung Support)",
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/"
   },
@@ -38,7 +42,7 @@
    "url": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers"
   }
  ],
- "codes": ["washers/lg/de", "washers/lg/de2", "washers/samsung/de", "washers/whirlpool/f5e2"]
+ "codes": ["washers/lg/de", "washers/lg/de2", "washers/samsung/de", "washers/whirlpool/f5e2", "washers/lg/cl", "dishwashers/lg/cl"]
 }
 ---
 ## What the lock is doing
@@ -120,5 +124,6 @@ Also do not unplug the washer in the middle of a fill to "unlock" it, then plug 
 - [LG LE](/washers/lg/le/) is the motor, including a coin in the tub. The door can be locked normally the whole time.
 - [LG CE](/washers/lg/ce/) is motor over-current. LG's homeowner step is to unplug for 10 seconds and try one cycle. If it persists, close the tap, unplug, and request repair. It is not a door code.
 - [Samsung bE2](/washers/samsung/be2/) is a jammed button on the control panel, not the door latch.
+- [LG washer CL](/washers/lg/cl/) means Child Lock is on and the panel is disabled. It is not a door that failed to lock. LG says to power the washer on and hold the Child Lock button for 3 seconds. On some models that control is two buttons, and LG says to use the pair named in that model's manual. [LG dishwasher CL](/dishwashers/lg/cl/) is the same kind of lock on a dishwasher. For that one, LG names Half Load and Energy Saver, held together for at least 3 seconds. Do not use the dishwasher pair on the washer. [tCL](/washers/lg/tcl/) is a different display: the Tub Clean reminder, not Child Lock.
 
 > **Safety first:** Never bypass, tape or wedge a washer door lock. Unplug the washer before you look behind it. If the door is damaged or the glass is cracked, stop and request service. Do not run a cycle.

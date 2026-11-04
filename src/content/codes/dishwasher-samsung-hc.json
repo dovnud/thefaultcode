@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "HC",
+  "codeSlug": "hc",
+  "displayPattern": "Dishwasher display shows HC",
+  "meaning": "High temperature heater error: Samsung says the temperature inside the dishwasher is too hot.",
+  "causes": [
+    "The temperature inside the dishwasher is too hot, the cause Samsung gives"
+  ],
+  "diySteps": [
+    "Switch the power to the dishwasher off for 30 seconds at the circuit breaker, then switch it back on",
+    "Empty the dishwasher",
+    "Fill the detergent drawer, then start a Normal cycle",
+    "If HC occurs again, request service through Samsung's Support Center"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Not the same as HE. Samsung's HE means the inside temperature is being detected incorrectly, and its steps do not start with the 30-second breaker reset that HC starts with. Not the same as 3E, which is a hot water supply above 176°F. Rotary 1E uses the same breaker, empty, detergent and Normal-cycle steps as HC, but 1E on a Waterwall model is a clogged filter instead. Read the characters on the display.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-04"
+}
