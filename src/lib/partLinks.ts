@@ -4,7 +4,7 @@ import { PARTS, partBySlug, type Part } from '../data';
 import { amazonLink, amazonAsinLink, affiliates } from '../config/affiliates';
 import { catOf, type CodeData } from '../config/categories';
 
-export const BRAND_NAMES = ['Goodman', 'Trane', 'Carrier', 'Rheem', 'Lennox', 'LG', 'Samsung', 'Whirlpool', 'Bosch', 'GE'];
+export const BRAND_NAMES = ['Goodman', 'Trane', 'Carrier', 'Rheem', 'Lennox', 'American Standard', 'Amana', 'York', 'Bryant', 'LG', 'Samsung', 'Whirlpool', 'Bosch', 'GE'];
 
 /** partKey in a code's JSON -> guide slug (keys with no guide, such as gas-valve, are omitted on purpose). */
 const KEY_TO_SLUG: Record<string, string> = {

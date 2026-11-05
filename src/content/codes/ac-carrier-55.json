@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "55",
+  "codeSlug": "55",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. Short flashes, then long flashes. Code 55 is 5 short flashes and 5 long flashes",
+  "meaning": "Coil temperature sensor fault.",
+  "causes": [
+    "Sensor harness not connected to the AOC control",
+    "Broken or loose harness wire",
+    "Coil thermistor not properly attached, or attached in the wrong location",
+    "Broken or damaged sensor",
+    "Hardware damage to the AOC control"
+  ],
+  "diySteps": [
+    "If the outdoor coil thermistor fails, the manual says defrost occurs at each time interval during heating, and ends after 2 minutes",
+    "Technician: make sure the sensor is clipped to the distributor entry tube, check the harness, and replace the AOC only if its hardware is damaged"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 55 is flashing. Short defrost cycles in cold weather can be this sensor, not an empty refrigerant charge.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

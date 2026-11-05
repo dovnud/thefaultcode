@@ -1,0 +1,45 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE3",
+  "codeSlug": "ee3",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE3. The circulator blower runs continuously and there is no furnace operation",
+  "meaning": "Primary limit circuit is open. The chart lists insufficient air over the heat exchanger.",
+  "causes": [
+    "Blocked filters",
+    "Restrictive ductwork",
+    "Improper circulator blower speed or a failed circulator blower motor",
+    "Loose or improperly connected wiring in the high limit circuit"
+  ],
+  "diySteps": [
+    "With the furnace switched off, check the filter and replace it if it is blocked. Open supply and return registers that are shut",
+    "Technician: check circulator blower speed and performance, and the high limit circuit wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if EE3 returns after the filter is clean and the registers are open.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    },
+    {
+      "name": "Limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace limit switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

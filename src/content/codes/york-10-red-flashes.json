@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "10 red flashes",
+  "codeSlug": "10-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 10 red flashes",
+  "meaning": "The gas valve is energized with no call for heat. The main blower and the inducer blower run, and no ignition sequence starts, for as long as this condition exists.",
+  "causes": [
+    "Gas valve fault",
+    "Gas valve wiring fault"
+  ],
+  "diySteps": [
+    "If you smell gas, leave and call the gas supplier from outside",
+    "Technician: check the gas valve and the gas valve wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Do not keep resetting a furnace whose gas valve is powered when the thermostat is not calling.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

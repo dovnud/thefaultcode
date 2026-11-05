@@ -4,7 +4,7 @@
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",
- "updated": "2026-10-31",
+ "updated": "2026-11-05",
  "faq": [
   {
    "q": "Can I replace the pressure switch myself?",
@@ -43,13 +43,32 @@
   {
    "name": "NFPA carbon monoxide safety",
    "url": "https://www.nfpa.org/education-and-research/home-fire-safety/carbon-monoxide"
+  },
+  {
+   "name": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+   "url": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf"
+  },
+  {
+   "name": "Amana and Goodman *CVC96 / *MVC96 installation instructions (IOG-2015L)",
+   "url": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf"
+  },
+  {
+   "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+   "url": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf"
   }
  ],
  "codes": [
   "goodman/ee2",
   "carrier/31",
   "trane/e3-2",
-  "rheem/45"
+  "rheem/45",
+  "york/3-red-flashes",
+  "york/2-red-flashes",
+  "york/6-red-flashes",
+  "amana/ee2",
+  "amana/ee9",
+  "american-standard/e3-2",
+  "american-standard/e3-4"
  ]
 }
 ---
@@ -63,6 +82,10 @@
 | [Trane E3.1](/trane/e3-1/) / [E3.2](/trane/e3-2/) | 1st stage pressure switch shorted / open |
 | [Lennox red off / green slow](/lennox/red-off-green-slow/) | Pressure prove switch open or blocked inlet/exhaust vent |
 | [Rheem 44](/rheem/44/) / [45](/rheem/45/) / [46](/rheem/46/) | Low pressure switch closed with inducer off / open with inducer on |
+| [York 3 red flashes](/york/3-red-flashes/) | Pressure switch contacts open when they should be closed |
+| [York 2 red flashes](/york/2-red-flashes/) | Pressure switch closed when it should be open |
+| [Amana EE2](/amana/ee2/) | Low stage pressure switch circuit not closed |
+| [American Standard E3.2](/american-standard/e3-2/) | Open pressure switch, 1st stage |
 
 ## Causes listed by manufacturers
 - Blocked or restricted vent or intake pipe (Rheem FAQ, Lennox, Carrier)

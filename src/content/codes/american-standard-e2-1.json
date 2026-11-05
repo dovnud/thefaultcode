@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E2.1",
+  "codeSlug": "e2-1",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E2.1",
+  "meaning": "Retry exceeded: flame was never sensed. One-hour lockout after 3 times.",
+  "causes": [
+    "Flame never sensed during the ignition trials"
+  ],
+  "diySteps": [
+    "Write the code down. Open the Active Alarm or Last 6 Faults (L6F) menu only if you already know that control; otherwise leave the door on",
+    "The same guide's heating sequence says the ignitor warm-up is about 20 seconds and flame must be sensed within 4 seconds",
+    "Technician: find why flame was never sensed. Typical flame current in this guide is 0.75 to 3.0 microamps, read as DC volts on the FP pads (1 VDC = 1 microamp)"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if E2.1 returns. The one-hour lockout is the control stopping further tries, not a repair.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    }
+  ],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

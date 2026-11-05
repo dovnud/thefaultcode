@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE8",
+  "codeSlug": "ee8",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE8. High stage does not run; low stage can still operate. The induced draft blower is running",
+  "meaning": "High stage pressure switch circuit is closed at the start of the heating cycle.",
+  "causes": [
+    "High stage pressure switch contacts sticking",
+    "Short in the pressure switch circuit wiring"
+  ],
+  "diySteps": [
+    "Low stage heat may still run. EE8 is not the open high-stage switch (EE9)",
+    "Technician: diagnose the high stage pressure switch and repair a short in the wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the furnace will not go to high stage and the display shows EE8.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

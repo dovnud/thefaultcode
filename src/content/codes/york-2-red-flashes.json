@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "2 red flashes",
+  "codeSlug": "2-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 2 red flashes",
+  "meaning": "The pressure switch is closed when it should be open. The control checks that the contacts are open at the start of each heat cycle and will not continue ignition if they are already closed.",
+  "causes": [
+    "A faulty pressure switch",
+    "Miswiring of the pressure switch"
+  ],
+  "diySteps": [
+    "Write down the 2 red flashes before power is removed",
+    "Technician: check for a faulty pressure switch or miswiring. The manual says never to adjust a pressure switch to allow furnace operation"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 2 red flashes return. This is a switch that is closed too early, not a blocked vent.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

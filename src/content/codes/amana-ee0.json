@@ -1,0 +1,48 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE0",
+  "codeSlug": "ee0",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE0",
+  "meaning": "Furnace lockout after an excessive number of ignition retries (3 total): flame was not established, or flame was lost after it was established.",
+  "causes": [
+    "Gas supply interruption",
+    "Front cover pressure switch or condensate drainage problem",
+    "Igniter that needs replacement or realignment",
+    "Flame sensor coated or oxidized",
+    "Blocked flue piping, or piping with the wrong length, elbows or termination",
+    "Induced draft blower not performing properly"
+  ],
+  "diySteps": [
+    "Confirm the gas supply to the furnace is on",
+    "The manual says an EE0 lockout can reset after one hour, after a power interruption, or after the thermostat is lowered for 1 to 20 seconds. If the original problem is still there, the control returns to lockout",
+    "Technician: check the front cover pressure switch and drainage, realign or replace the igniter, clean the flame sensor if it is coated or oxidized, check the flue, and check the induced draft blower"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if EE0 returns after the gas supply is confirmed. This chart is the two-stage *CVC96 / *MVC96 guide, not the single-stage GR9S96 list.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

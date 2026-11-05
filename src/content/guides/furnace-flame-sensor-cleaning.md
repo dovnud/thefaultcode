@@ -4,7 +4,7 @@
  "title": "Furnace Flame Sensor: Symptoms, Codes and Cleaning",
  "description": "What a furnace flame sensor does, the codes that point to it, what the manuals say about cleaning it, and safety cautions.",
  "answer": "The flame sensor is a metal rod in the burner flame that tells the control board the gas has lit. If it is coated, the board may not sense flame and will shut the gas off, often a few seconds after ignition. Carrier's manual lists oxide build-up on the flame sensor and says to clean it with fine steel wool; Rheem recommends cleaning it at the start of each heating season by a qualified installer or service agency.",
- "updated": "2026-10-31",
+ "updated": "2026-11-05",
  "faq": [
   {
    "q": "Can I clean a flame sensor myself?",
@@ -39,13 +39,29 @@
   {
    "name": "Lennox ML180UH installation & operation manual",
    "url": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf"
+  },
+  {
+   "name": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+   "url": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf"
+  },
+  {
+   "name": "Amana and Goodman *CVC96 / *MVC96 installation instructions (IOG-2015L)",
+   "url": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf"
+  },
+  {
+   "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+   "url": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf"
   }
  ],
  "codes": [
   "goodman/ee6",
   "trane/e08",
   "rheem/12",
-  "carrier/34"
+  "carrier/34",
+  "york/continuous-amber",
+  "york/7-red-flashes",
+  "amana/ee6",
+  "american-standard/e08"
  ]
 }
 ---
@@ -58,12 +74,18 @@
 | [Rheem 12](/rheem/12/) | Low flame sense: weak or marginal current, furnace keeps running |
 | [Carrier 34](/carrier/34/) | Ignition proving failure: flame not sensed |
 | [Rheem 13](/rheem/13/) | Flame lost after established |
+| [York continuous amber](/york/continuous-amber/) | Flame current below 1.5 microamps. Normal on that page is about 3.7 |
+| [Amana EE6](/amana/ee6/) | Low flame-sense signal while the furnace may still run |
+| [American Standard E08](/american-standard/e08/) | Flame current low, but still strong enough to allow operation |
 
 ## What the manuals say
 - **Carrier 59SC5:** check for oxide build-up on the flame sensor; clean with fine steel wool.
 - **Rheem R96V:** recommends the flame sensor be cleaned at the start of each heating season with fine steel wool or a Scotch-Brite pad by a qualified installer, service agency or the gas supplier.
 - **Trane S9V2 Service Facts:** lists a normal flame current range of 0.75 to 3.0 microamps.
 - **Rheem FAQ:** besides a dirty rod, failed flame sense can come from wrong polarity, a poor equipment ground or incorrect gas pressure.
+- **York TG9S:** continuous amber means flame current is below 1.5 microamps. The same page lists about 3.7 microamps as normal, and 0.1 microamps as the lockout point. Cleaning the sensor is in that paragraph, and the current check is at the flame test pad.
+- **Amana IOG-2015L, code EE6:** flame sensor coated or oxidized, or positioned wrong in the burner. Cleaning is in the technician column of that chart.
+- **American Standard S9V2, code E08:** flame current is low but the furnace is still allowed to run. The heating sequence gives a typical range of 0.75 to 3.0 microamps.
 
 ## If the sensor is not the problem
 A weak signal after cleaning can mean grounding, polarity or gas pressure issues (see [Goodman EEA](/goodman/eea/) and [Trane E06](/trane/e06/)). These need a technician with a meter.

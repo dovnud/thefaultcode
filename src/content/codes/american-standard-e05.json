@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E05",
+  "codeSlug": "e05",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E05",
+  "meaning": "Flame was detected when it should not be present.",
+  "causes": [
+    "Flame detected with no call for flame"
+  ],
+  "diySteps": [
+    "If you smell gas, leave and call the gas supplier from outside",
+    "Technician: the display code is flame present when it should not be. This is not the low-flame code E08"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician before using the furnace. E05 means the control saw flame at the wrong time.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

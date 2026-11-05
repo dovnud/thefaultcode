@@ -119,6 +119,10 @@ export const DEALER_LOCATORS: Record<string, string> = {
   rheem: 'https://www.rheem.com/find-a-pro/',
   carrier: 'https://www.carrier.com/us/en/residential/find-a-dealer/',
   lennox: 'https://www.lennox.com/residential/locate/',
+  // Checked with a browser-like GET on 2026-11-05 (200). York's old locator redirected to an empty page, so York has no button.
+  'american-standard': 'https://www.americanstandardair.com/find-a-dealer/',
+  amana: 'https://www.amana-hac.com/resources/find-a-dealer',
+  bryant: 'https://www.bryant.com/en/us/dealers/',
 };
 
 // Official manufacturer SERVICE-REQUEST pages for appliance brands (NOT affiliate links, plain links with rel="noopener").

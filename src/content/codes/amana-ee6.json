@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE6",
+  "codeSlug": "ee6",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE6. The chart lists this during otherwise normal furnace operation",
+  "meaning": "Flame sense microamp signal is low.",
+  "causes": [
+    "Flame sensor coated or oxidized",
+    "Flame sensor positioned incorrectly in the burner",
+    "Lazy burner flame from improper gas pressure or combustion air"
+  ],
+  "diySteps": [
+    "The furnace may still be heating. Write down EE6",
+    "Technician: clean the flame sensor if it is coated or oxidized, check its alignment, check the inlet air piping, and compare gas pressure with the rating plate"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician to clean the flame sensor and check gas pressure before a low signal becomes a lockout.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

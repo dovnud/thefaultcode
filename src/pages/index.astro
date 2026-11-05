@@ -7,7 +7,7 @@ const groups = groupCodes(codes);
 const cats = CATEGORIES.filter(c=>groups.some(g=>g.cat.slug===c.slug));
 const featured = [...groups.filter(g=>g.cat.slug==='furnaces').flatMap(g=>g.codes.slice(0,1)), ...groups.filter(g=>g.cat.slug!=='furnaces').flatMap(g=>g.codes.slice(0,1))].slice(0,12);
 const fig = codes.find(c=>c.brandSlug==='carrier'&&c.codeSlug==='33'&&c.equipmentType==='furnace');
-const guidePick = ['furnace-no-heat-winter-2026','how-to-read-furnace-led-flash-codes','washer-will-not-drain','dishwasher-will-not-drain','ac-high-and-low-pressure-codes','furnace-carbon-monoxide-and-rollout','washer-suds-and-detergent'];
+const guidePick = ['furnace-no-heat-winter-2026','furnace-ignition-lockout','heat-pump-not-heating-in-the-cold','how-to-read-furnace-led-flash-codes','washer-will-not-drain','dishwasher-will-not-drain','ac-high-and-low-pressure-codes','furnace-carbon-monoxide-and-rollout','washer-suds-and-detergent'];
 const guideAll = await getCollection('guides');
 const guides = guidePick.map(id => guideAll.find(g => g.id === id)).filter(Boolean);
 const jsonld=[organizationLd(), {'@context':'https://schema.org','@type':'WebSite','@id':`${SITE_URL}/#website`,name:'The Fault Code',url:`${SITE_URL}/`,description:'Plain-English furnace, washer, dishwasher and AC / heat pump error codes, each taken from a manufacturer manual or official support page.',inLanguage:'en',publisher:{'@id':ORG['@id']}}];
@@ -21,7 +21,7 @@ const jsonld=[organizationLd(), {'@context':'https://schema.org','@type':'WebSit
 <label for="q">Code lookup</label>
 <div class="box"><span class="pre" aria-hidden="true">CODE&gt;</span><input id="q" name="q" type="search" data-search-input role="combobox" aria-expanded="false" aria-controls="res" aria-autocomplete="list" autocomplete="off" enterkeyhint="search" placeholder="Brand + code, e.g. LG OE" /><button class="go" type="submit">Look up</button></div>
 <ul id="res" class="results" role="listbox" aria-label="Matching codes" hidden></ul>
-<p class="hint">Try <a href="/carrier/33/">Carrier 33</a> · <a href="/washers/lg/oe/">LG OE</a> · <a href="/dishwashers/bosch/e24/">Bosch E24</a> · <a href="/trane/e2-1/">Trane E2.1</a> · <a href="/guides/how-to-read-furnace-led-flash-codes/">How to read a flash code</a></p>
+<p class="hint">Try <a href="/carrier/33/">Carrier 33</a> · <a href="/york/7-red-flashes/">York 7 red flashes</a> · <a href="/washers/lg/oe/">LG OE</a> · <a href="/amana/ee2/">Amana EE2</a> · <a href="/guides/furnace-ignition-lockout/">Ignition lockout</a></p>
 </form>
 <p class="lead">Type the code from the status light or display. Each page gives the manufacturer's meaning, the likely causes, the checks a homeowner can do, and the point where the manual hands the job to a licensed technician.</p>
 </div>

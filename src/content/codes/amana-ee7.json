@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE7",
+  "codeSlug": "ee7",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE7",
+  "meaning": "Igniter circuit fault. The furnace fails to operate.",
+  "causes": [
+    "Problem with the igniter circuit",
+    "Improperly connected or shorted igniter",
+    "Poor unit ground",
+    "Igniter relay fault on the integrated control module"
+  ],
+  "diySteps": [
+    "Leave the gas valve alone. An igniter fault is not a reason to jumper the valve",
+    "Technician: check wiring from the integrated control module to the igniter, the unit ground, and igniter output from the control"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. The chart's igniter checks are electrical.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

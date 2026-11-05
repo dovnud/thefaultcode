@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "56",
+  "codeSlug": "56",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. Short flashes, then long flashes. Code 56 is 5 short flashes and 6 long flashes",
+  "meaning": "Outdoor air temperature and outdoor coil temperature thermistors are out of range. The manual lists this as an event, not a lockout.",
+  "causes": [
+    "Heating when cooling is demanded",
+    "Coil thermistor not properly attached, or attached in the wrong location",
+    "Outdoor ambient temperature sensor installed so the sensor body touches sheet metal"
+  ],
+  "diySteps": [
+    "With the disconnect and breaker off, look at the outdoor coil for a blockage by debris or ice. The manual's action for this event includes inspecting the outdoor coil for obstructions",
+    "Technician: troubleshoot the reversing valve if the unit heats when cooling is demanded, confirm the coil thermistor is clipped to the distributor entry tube, and install the outdoor air sensor so it is not touching sheet metal"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 56 returns after the outdoor coil is clear, or if the system heats when the thermostat is calling for cooling.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

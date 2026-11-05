@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E08",
+  "codeSlug": "e08",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E08",
+  "meaning": "Flame current is low, but still strong enough to allow operation.",
+  "causes": [
+    "Low flame current while the furnace is still allowed to run"
+  ],
+  "diySteps": [
+    "The furnace may still heat. Write down E08 before it is cleared",
+    "Technician: measure flame current at the flame sensor. This guide reads it on the FP pads, typically 0.75 to 3.0 microamps"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician to measure and correct the low flame current before it becomes a lockout.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

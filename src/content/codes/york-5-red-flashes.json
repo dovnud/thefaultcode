@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "5 red flashes",
+  "codeSlug": "5-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 5 red flashes",
+  "meaning": "The normally closed rollout switch has opened. The rollout control is manually reset. The control enters a hard lockout, and power has to be cycled off and on only after the problem is corrected.",
+  "causes": [
+    "Combustion air problem",
+    "Inducer not operating properly",
+    "Primary heat exchanger failure or a burner problem"
+  ],
+  "diySteps": [
+    "Turn the furnace off at its switch or the breaker and leave it off. Do not reset the rollout switch and turn the furnace back on",
+    "Technician: check combustion air, inducer operation, and the primary heat exchanger or burners before the rollout switch is reset"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician before the furnace is used again. A rollout switch means flame left the burner area.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

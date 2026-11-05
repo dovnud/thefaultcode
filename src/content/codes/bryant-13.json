@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "13",
+  "codeSlug": "13",
+  "displayPattern": "Amber status LED on a Bryant 926TB: short flashes, then long flashes. Code 13 is 1 short flash and 3 long flashes",
+  "meaning": "Limit circuit lockout. The limit or flame rollout switch was open longer than 3 minutes, or 10 successive limit trips occurred during high heat. The control auto-resets after 3 hours. The manual says to see status code 33.",
+  "causes": [
+    "Limit switch open longer than 3 minutes",
+    "Flame rollout switch open longer than 3 minutes",
+    "10 successive limit trips during high heat"
+  ],
+  "diySteps": [
+    "Count 1 short flash and 3 long flashes before you cut power. The 3-hour auto-reset is not a repair",
+    "If a rollout switch has opened, leave the furnace off. Do not reset it and walk away",
+    "Technician: use status code 33, which this lockout points to, to find which switch opened"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 13 is stored. This Bryant page only states what code 13 itself says. It does not copy another brand's cause list onto code 33.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace limit switch"
+    },
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 926TB installation, start-up, operating and service instructions",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

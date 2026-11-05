@@ -4,7 +4,7 @@
  "title": "How to Read a Furnace LED Flash Code",
  "description": "How to find and read the blinking LED or display code on a gas furnace control board, with brand-by-brand examples from the manuals.",
  "answer": "Most modern gas furnaces have a control board that reports faults with a blinking LED or a small digit display, seen through a window in the blower door. Count the flashes (or read the characters), then look the code up in the chart printed inside your furnace door or in its manual. The same number can mean different things on different brands, so always match the code to your brand and model.",
- "updated": "2026-10-23",
+ "updated": "2026-11-05",
  "faq": [
   {
    "q": "Does the same flash code mean the same thing on every brand?",
@@ -12,7 +12,7 @@
   },
   {
    "q": "Will turning off power erase the code?",
-   "a": "It can, so note the code first. Many boards also store recent faults: the Goodman, Trane, Rheem and Carrier manuals we used each describe a way to recall past fault codes."
+   "a": "The light you are watching can go out, so write the pattern down first. Stored history is separate. York's TG9S manual says the last five codes stay in memory even if power is lost, and it assigns the LAST ERROR button to a qualified technician. American Standard's S9V2 guide stores the last six faults in the L6F menu."
   },
   {
    "q": "Where is my furnace's code chart?",
@@ -39,6 +39,22 @@
   {
    "name": "Rheem R96V installation instructions (92-24161-124-03)",
    "url": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf"
+  },
+  {
+   "name": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+   "url": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf"
+  },
+  {
+   "name": "Amana and Goodman *CVC96 / *MVC96 installation instructions (IOG-2015L)",
+   "url": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf"
+  },
+  {
+   "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+   "url": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf"
+  },
+  {
+   "name": "Bryant 926TB installation, start-up, operating and service instructions",
+   "url": "https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf"
   }
  ],
  "codes": [
@@ -46,7 +62,11 @@
   "goodman/ee3",
   "trane/e2-1",
   "lennox/red-slow-green-on",
-  "rheem/11"
+  "rheem/11",
+  "york/7-red-flashes",
+  "amana/ee3",
+  "american-standard/e2-1",
+  "bryant/14"
  ]
 }
 ---
@@ -61,6 +81,10 @@ The status light or display is on the furnace control board, usually behind the 
 | Trane S9V2 | Seven-segment LED readout, e.g. E2.1 | [Trane E2.1](/trane/e2-1/): retry exceeded |
 | Lennox ML180UH | Red and green LEDs in combinations of on, off, slow and fast flash | [Lennox red slow / green on](/lennox/red-slow-green-on/): limit switch open |
 | Rheem R96V | Dual 7-segment diagnostic display showing a numbered code | [Rheem 11](/rheem/11/): failed ignition |
+| York TG9S | One LED behind the blower-door window. Red flashes are 1/3 second on and off, then a 2-second pause. Amber and green are normal or a flame warning | [York 7 red flashes](/york/7-red-flashes/): three failed ignition trials |
+| Amana *MVC96 / *CVC96 | 7-segment display. The chart is in IOG-2015L | [Amana EE3](/amana/ee3/): primary limit open |
+| American Standard S9V2 | 7-segment display. Last 6 faults are in the L6F menu | [American Standard E2.1](/american-standard/e2-1/): flame never sensed |
+| Bryant 926TB | Amber LED. Short flashes, then long flashes | [Bryant 14](/bryant/14/): ignition lockout |
 
 ## Step by step
 1. Look through the sight window without removing the door, if your furnace has one.

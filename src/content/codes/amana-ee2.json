@@ -1,0 +1,45 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE2",
+  "codeSlug": "ee2",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE2. The induced draft blower runs and the furnace does not operate",
+  "meaning": "Low stage pressure switch circuit is not closed.",
+  "causes": [
+    "Pressure switch hose blocked, pinched, or connected improperly",
+    "Blocked flue and/or inlet air pipe, blocked drain, or weak induced draft blower",
+    "Incorrect pressure switch set point or malfunctioning switch contacts",
+    "Loose or improperly connected wiring"
+  ],
+  "diySteps": [
+    "Look at the outdoor flue and inlet air pipes for snow, ice or debris. Do not dismantle them",
+    "Technician: inspect the pressure switch hose, flue and inlet piping, the drain, induced draft blower performance, pressure switch operation and the wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the outdoor pipes are clear and EE2 continues. Low stage will not light until that switch closes.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

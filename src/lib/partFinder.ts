@@ -3,7 +3,7 @@
 // A part listed in the JSON but not named in that text is left out.
 import { codePath, type CodeData } from '../config/categories';
 
-export const FINDER_UPDATED = '2026-10-31';
+export const FINDER_UPDATED = '2026-11-05';
 export const WINTER_GUIDE = '/guides/furnace-no-heat-winter-2026/';
 
 /** Parts-guide slugs that should link the winter no-heat checklist. */
@@ -20,6 +20,10 @@ const MANUALS: Record<string, string> = {
   'https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf': 'Lennox ML180UH installation and operation manual',
   'https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf': 'Carrier Infinity 25VNA8 / 24VNA9 service manual',
   'https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf': 'Goodman service manual RS6200007 r27',
+  'https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf': 'York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)',
+  'https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf': 'American Standard S9V2 installer\'s guide (18-CE01D1-1E-EN)',
+  'https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf': 'Amana and Goodman *CVC96 / *MVC96 installation instructions (IOG-2015L)',
+  'https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf': 'Bryant 926TB installation, start-up, operating and service instructions',
 };
 
 export type FinderPart = {
