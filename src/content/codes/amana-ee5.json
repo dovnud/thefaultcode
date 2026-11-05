@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE5",
+  "codeSlug": "ee5",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE5",
+  "meaning": "Open fuse, with no furnace operation.",
+  "causes": [
+    "Open fuse",
+    "Short in low voltage wiring"
+  ],
+  "diySteps": [
+    "Do not replace the fuse with a larger one to get heat back",
+    "Technician: replace the fuse only after locating and correcting the short in the low-voltage wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if EE5 is showing or the fuse opens again.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Control-board fuse",
+      "partKey": "fuse",
+      "searchTerm": "furnace control board 5 amp fuse"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

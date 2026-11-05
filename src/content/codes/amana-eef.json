@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EEF",
+  "codeSlug": "eef",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EEF",
+  "meaning": "Auxiliary limit switch (condensate switch) is open. The furnace fails to operate.",
+  "causes": [
+    "Condensate switch open"
+  ],
+  "diySteps": [
+    "Do not bypass the condensate switch to get heat",
+    "Technician: check the evaporator drain pan, trap and piping, which is the corrective action in the chart"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. EEF is the condensate switch, which is a common cold-weather shutdown when the drain path is blocked or frozen.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

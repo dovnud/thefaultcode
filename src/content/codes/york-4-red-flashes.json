@@ -1,0 +1,49 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "4 red flashes",
+  "codeSlug": "4-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 4 red flashes",
+  "meaning": "The main limit switch has opened its normally closed contacts. The control runs the supply air blower and the inducer while the limit stays open.",
+  "causes": [
+    "Dirty filter",
+    "Improperly sized duct system",
+    "Incorrect blower speed setting",
+    "Incorrect firing rate",
+    "Loose limit switch wiring",
+    "Faulty blower motor"
+  ],
+  "diySteps": [
+    "With power off at the furnace switch, check the filter and replace it if it is packed with dust. Use the size printed on the old filter",
+    "If the limit has not closed within five minutes, the manual says the control assumes the blower is not functioning, starts a hard lockout, and flashes 11 red flashes. Power has to be cycled after that problem is corrected",
+    "If the main limit opens five times in one call for heat, the control still shows 4 red flashes and enters a one-hour soft lockout",
+    "Technician: check duct size, blower speed, firing rate, limit switch wiring and the blower motor"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 4 red flashes return after a filter change, or if the light changes to 11 red flashes.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    },
+    {
+      "name": "Limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace limit switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

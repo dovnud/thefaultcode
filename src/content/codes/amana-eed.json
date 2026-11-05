@@ -1,0 +1,44 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EEd",
+  "codeSlug": "eed",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EEd",
+  "meaning": "Auxiliary limit switch in the blower compartment is open. The furnace fails to operate.",
+  "causes": [
+    "Blocked filters or ductwork",
+    "Circulator blower speed or a failed blower motor",
+    "Loose wiring in the auxiliary limit circuit"
+  ],
+  "diySteps": [
+    "With power off, check the filter and replace it if it is blocked. Open registers that are shut",
+    "Technician: check circulator blower speed and performance, and the auxiliary limit wiring"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if EEd returns after the filter and registers are clear. This is the blower-compartment auxiliary limit, not the primary limit code EE3.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    },
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    },
+    {
+      "name": "Limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace limit switch"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

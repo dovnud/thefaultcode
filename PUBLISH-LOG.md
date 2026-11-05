@@ -1,5 +1,26 @@
 # Publish log
 
+## 2026-11-05
+
+New heating-season pages. Each code cites a manufacturer document. This entry is the content batch; it is not a live-deploy checklist.
+
+Furnace brands added:
+
+- York TG9S, 12 pages, from Johnson Controls installation manual 1083287-UIM-C-0715 (1 through 11 red flashes, plus continuous amber). Example: https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf
+- American Standard S9V2, 13 pages, from installer's guide 18-CE01D1-1E-EN on americanstandardair.com (E2.1, E2.2, E2.3, E3.1, E3.2, E3.4, E04, E05, E6.3, E7.1, E08, E09, E12).
+- Amana *CVC96 / *MVC96 (IOG-2015L on amana-hac.com), 11 pages: EE0, EE2, EE3, EE4, EE5, EE6, EE7, EE8, EE9, EEd, EEF. The same chart covers the Goodman models in that family; the pages say so.
+- Bryant 926TB, 2 pages (status codes 13 and 14) from the installation instructions on shareddocs.com. The rest of that model's chart is a service-label figure and was not transcribed.
+
+AC / heat pump, same Carrier 25VNA8 / 24VNA9 service manual already used on the site: codes 33, 53, 55 and 56.
+
+Symptom guides: Furnace Ignition Lockout; Furnace Limit Switch Open; Heat Pump Not Heating in the Cold. Existing no-heat, pressure-switch, flame-sensor, flash-code and rollout guides link the new codes where the manuals match.
+
+Heil was not added. The public Heil/ICP install manuals point at a service-label figure for the status chart, and that figure was not clear enough to publish from.
+
+Dealer buttons: American Standard, Amana and Bryant locators checked 2026-11-05. York's locator URL did not resolve to a dealer page, so York has no button.
+
+Build: 320 pages. Sitemap, llms.txt, llms-full.txt, and /data/fault-codes.csv and .json are generated from content. Amazon tag unchanged (thefaultcode-20). No new ASINs.
+
 ## 2026-11-04
 
 New pages (LG dishwasher CL and tE from the official LG USA "[LG Dishwasher] Guide to Error Codes"; LG washer CL from the official LG USA front-load washer error code list; Samsung HC from Samsung Support "Samsung dishwasher is displaying an error code" (TSG10004499); GE C5 from GE Appliances "Dishwasher - Error, Fault or Function Codes"; source links on each page):

@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "33",
+  "codeSlug": "33",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. Short flashes, then long flashes. Code 33 is 3 short flashes and 3 long flashes",
+  "meaning": "Lost inverter communications, the local fault. It is logged after 2 minutes with no communication between the outdoor control (AOC) and the inverter (MOC). It elevates to fault 48 after 3 consecutive failures within 20 minutes, or after 20 minutes of continuous loss of connection. The manual says to refer to fault code 48.",
+  "causes": [
+    "The fault 48 list this row points to: a loose or disconnected harness between AOC plug PL20 and the MOC",
+    "Radio or electrical noise",
+    "Possible damage to the inverter"
+  ],
+  "diySteps": [
+    "Count 3 short and 3 long before you pull the disconnect. Code 48 is 4 short and 8 long",
+    "For radio or electrical noise, the fault 48 action says the system will try to self-mitigate with repeated start attempts",
+    "Technician: verify the harness between AOC PL20 and the MOC. If the harness is good, the manual's action for possible inverter damage is to change the inverter drive"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Code 33 is the earlier communications fault. Code 48 is the elevated lockout of the same problem.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "9 red flashes",
+  "codeSlug": "9-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 9 red flashes",
+  "meaning": "Reversed line-voltage polarity, a grounding problem, or reversed low-voltage transformer wires. Heating and cooling are both affected. The furnace will not start the ignition sequence until this is corrected.",
+  "causes": [
+    "Reversed line voltage polarity",
+    "A grounding problem",
+    "Reversed low-voltage transformer wires",
+    "Flame probe shorted to the chassis"
+  ],
+  "diySteps": [
+    "Leave the furnace off if it will not light. Do not swap wires on the furnace",
+    "Technician: check polarity at the furnace and the branch circuit, check furnace grounding, and check that the flame probe is not shorted to the chassis"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Nine red flashes is an electrical fault, not a filter or vent problem.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

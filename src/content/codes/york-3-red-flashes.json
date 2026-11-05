@@ -1,0 +1,46 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "3 red flashes",
+  "codeSlug": "3-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 3 red flashes",
+  "meaning": "The pressure switch contacts are open when they should be closed.",
+  "causes": [
+    "Faulty inducer",
+    "Blocked vent pipe",
+    "Broken pressure switch hose",
+    "Disconnected pressure switch or inducer wires",
+    "Faulty pressure switch"
+  ],
+  "diySteps": [
+    "Look at the outdoor vent pipe for snow, ice, leaves or a nest. Do not take the pipe apart",
+    "Technician: check the inducer, the pressure switch hose, disconnected pressure switch or inducer wires, and the pressure switch"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the vent pipe is clear and 3 red flashes continue. Do not jumper or adjust the pressure switch.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E3.4",
+  "codeSlug": "e3-4",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E3.4",
+  "meaning": "Open pressure switch, 2nd stage.",
+  "causes": [
+    "2nd stage pressure switch did not close"
+  ],
+  "diySteps": [
+    "The 2nd stage sequence says if pressure switch 2 does not close within 45 seconds, the furnace declares a PS2 open error and keeps running in 1st stage",
+    "If PS2 fails on the third attempt in the same heating call, the guide says 2nd stage locks out until the heat call is removed or power is cycled",
+    "Technician: check the 2nd stage pressure switch, tubing and inducer. Tubing must rise so condensate does not enter the switch"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the furnace will heat on low stage but never steps up, and E3.4 is stored.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    }
+  ],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

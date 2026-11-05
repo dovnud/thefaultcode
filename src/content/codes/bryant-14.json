@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "14",
+  "codeSlug": "14",
+  "displayPattern": "Amber status LED on a Bryant 926TB: short flashes, then long flashes. Code 14 is 1 short flash and 4 long flashes",
+  "meaning": "Ignition lockout. The system failed to ignite gas and prove flame in 4 attempts. The control auto-resets after 3 hours. The manual says to see status code 34.",
+  "causes": [
+    "Gas did not ignite and flame was not proved in 4 attempts"
+  ],
+  "diySteps": [
+    "Count 1 short flash and 4 long flashes. The same manual's sequence says the hot-surface igniter warms up for 17 seconds, then a 2-second flame-proving window follows. Failed trials repeat, then the control goes to ignition lockout",
+    "The sequence says lockout resets after three hours, or when 115 V or 24 V power to the control is interrupted. Resetting is not a repair",
+    "The sequence also says the furnace control must be grounded or it will lock out",
+    "Technician: follow status code 34, which code 14 points to"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 14 returns after the 3-hour reset. Do not jumper the gas valve.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 926TB installation, start-up, operating and service instructions",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

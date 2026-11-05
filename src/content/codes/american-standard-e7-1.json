@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E7.1",
+  "codeSlug": "e7-1",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E7.1",
+  "meaning": "The 1st stage gas valve (MVL) is energized when it should be off.",
+  "causes": [
+    "1st stage gas valve energized with no call for it to be on"
+  ],
+  "diySteps": [
+    "If you smell gas, leave and call the gas supplier from outside",
+    "Technician: check why the 1st stage gas valve is energized when the control says it should be off"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Do not cycle the furnace to see if a gas valve that is powered at the wrong time clears itself.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

@@ -86,6 +86,132 @@ export const CODE_NOTES: Record<string, string> = {
 
   'dishwashers/bosch/e25':
 `Bosch E25 is a drain pump that is blocked, or a drain pump cover that is loose or missing. It is not the filter-clog code E22. The filter still comes out, but only so you can see the pump cover underneath it. Check that the cover is not loose. To clear a blockage, pry the cover off with a spoon until it clicks, grip it, pull upward until you feel resistance, then pull forward to remove it. Take debris and standing water out with a sponge. Some debris is sharp. If E25 remains, use the owner's manual or contact Bosch Customer Support.`,
+
+  'furnaces/york/1-red-flash':
+`York TG9S 1 red flash means flame was sensed with no call for heat. The control runs the inducer and the supply blower. The only check in that paragraph is a leaking or slow-closing gas valve. It is not 7 red flashes, which is three failed ignition trials, and it is not 10 red flashes, which is the gas valve energized with no call for heat. If you smell gas, leave. Do not reset this to see if the smell goes away.`,
+
+  'furnaces/york/2-red-flashes':
+`York TG9S 2 red flashes means the pressure switch is already closed when the heat cycle starts. The control will not continue ignition. The manual names a faulty pressure switch or miswiring, and it says never to adjust a pressure switch so the furnace will run. Blocked vent and a broken hose are the 3 red flash list, not this one.`,
+
+  'furnaces/york/3-red-flashes':
+`York TG9S 3 red flashes means the pressure switch stayed open when it should have closed. The manual lists a faulty inducer, a blocked vent pipe, a broken pressure switch hose, disconnected pressure switch or inducer wires, and a faulty pressure switch. The outdoor pipe is the homeowner look. The hose, wires, inducer and switch are technician checks. Six red flashes is the same switch opening four times during a running cycle, then a one-hour lockout.`,
+
+  'furnaces/york/4-red-flashes':
+`York TG9S 4 red flashes means the main limit opened. The blower and inducer keep running while it is open. The manual lists a dirty filter, duct size, blower speed, firing rate, loose limit wiring and a faulty blower motor. If the limit is still open after five minutes, the control goes to a hard lockout and 11 red flashes. Five openings in one call for heat stay on 4 red flashes and add a one-hour soft lockout. Change a dirty filter with the power off. Call if it returns.`,
+
+  'furnaces/york/5-red-flashes':
+`York TG9S 5 red flashes means the rollout switch opened. It is a manual-reset switch and a hard lockout. The manual says to check combustion air, inducer operation, and the primary heat exchanger or burners, then cycle power only after that problem is corrected. Do not reset the switch to get through the night. Four red flashes is the main limit, which can be a dirty filter. Five red flashes is not that filter step.`,
+
+  'furnaces/york/6-red-flashes':
+`York TG9S 6 red flashes means the pressure switch opened four times during one call for heat. The furnace locks out for an hour and then tries again. Causes in the manual are a faulty inducer, a blocked vent pipe, or a faulty pressure switch. Three red flashes is the switch that never closed at the start. Six is the switch that opened again and again while the furnace was already running.`,
+
+  'furnaces/york/7-red-flashes':
+`York TG9S 7 red flashes means flame was not established in three ignition trials. The lockout lasts one hour, then the control tries again. The manual says to check that the gas valve switch is ON, then low or no gas pressure, a faulty gas valve, a dirty or faulty flame sensor, a faulty hot surface ignitor, loose wires, or a burner problem. The gas-valve switch and whether other gas appliances light are the homeowner checks. Eight red flashes is flame that was established and then lost five times.`,
+
+  'furnaces/york/8-red-flashes':
+`York TG9S 8 red flashes means the flame was lost five times, which the manual also calls four recycles, during the heating cycle. Then a one-hour lockout. The checks are low gas pressure, a dirty or faulty flame sensor, and a faulty gas valve. Seven red flashes is the code for flame that never established. Continuous amber is the low-current warning, below 1.5 microamps, while the furnace may still run.`,
+
+  'furnaces/york/9-red-flashes':
+`York TG9S 9 red flashes is reversed line polarity, a grounding problem, or reversed low-voltage transformer wires. Heating and cooling both stop starting the ignition sequence until it is fixed. The manual also says to check that the flame probe is not shorted to the chassis. There is no filter step and no vent-pipe step on this code.`,
+
+  'furnaces/york/10-red-flashes':
+`York TG9S 10 red flashes means the gas valve is energized when there is no call for heat. The main blower and the inducer run, and ignition does not start, until the condition clears. The manual says to check the gas valve and its wiring. One red flash is flame sensed with no call, which can be a valve that leaks or closes slowly. Ten red flashes is the valve being powered. If you smell gas, leave.`,
+
+  'furnaces/york/11-red-flashes':
+`York TG9S 11 red flashes means the main limit stayed open more than five minutes. The manual says that is usually a failed blower motor or blower wheel, and it is a hard lockout. Power is cycled only after the blower problem is corrected. It is the next step after 4 red flashes when the limit does not reclose. The dirty-filter check is on 4 red flashes, not on this hard lockout.`,
+
+  'furnaces/york/continuous-amber':
+`A continuous amber flash on a York TG9S, with no long pause, means flame current is under 1.5 microamps. The same page lists normal current at about 3.7 microamps, the warning at 1.5, and lockout at 0.1. The checks are to clean the flame sensor, check gas flow, and read the current at the flame test pad. That reading is a technician measurement. It is not a counted red code.`,
+
+  'furnaces/american-standard/e2-1':
+`American Standard S9V2 E2.1 is retry exceeded: flame was never sensed, then a one-hour lockout after three times. The same installer's guide says ignitor warm-up is about 20 seconds and flame has to be sensed within 4 seconds. E2.2 is the other lockout, flame sensed and then lost, after 10 recycles. This guide does not list a filter check for E2.1.`,
+
+  'furnaces/american-standard/e2-2':
+`American Standard S9V2 E2.2 is recycles exceeded. Flame was sensed, then lost, and the control locks out for one hour after 10 times. E2.1 is flame that was never sensed, after 3 times. The sequence in this guide measures flame current on the FP pads, typically 0.75 to 3.0 microamps. That measurement is technician work.`,
+
+  'furnaces/american-standard/e2-3':
+`American Standard S9V2 E2.3 means the 1st stage gas valve was not energized when the control expected it, and that happened until the count passed 10. It is not E7.1, which is the same valve energized when it should be off. Do not jumper the valve. The heating sequence closes the valve relay only after ignitor warm-up.`,
+
+  'furnaces/american-standard/e3-1':
+`American Standard S9V2 E3.1 is a shorted 1st stage pressure switch. The sequence proves both pressure switches open before the inducer starts, so a switch that is already closed or shorted fails that test. E3.2 is the 1st stage switch that stays open. E3.3 would be the shorted 2nd stage switch. Do not jumper either switch.`,
+
+  'furnaces/american-standard/e3-2':
+`American Standard S9V2 E3.2 is an open 1st stage pressure switch. In the heating sequence the inducer starts and pressure switch 1 is supposed to close. The guide also says that if a thermal limit is open, 24 volts will not be present at either pressure switch, and that pressure-switch tubing has to rise so flue condensate does not run into the switch. E3.4 is the open 2nd stage switch, and low stage can still run on that one.`,
+
+  'furnaces/american-standard/e3-4':
+`American Standard S9V2 E3.4 is an open 2nd stage pressure switch. The sequence gives PS2 45 seconds to close. If it does not, the furnace records the open switch and stays in 1st stage. On the third miss in the same heat call, 2nd stage locks out until the thermostat call ends or power is cycled. The house can still have low-stage heat. E3.2 is the 1st stage switch, which stops ignition.`,
+
+  'furnaces/american-standard/e04':
+`American Standard S9V2 E04 is an open limit. The guide names three switches: the main thermal limit, a rollout switch, or the reverse airflow switch. It does not add a filter sentence on this row. The sequence proves all three closed before the inducer starts. If the burners show scorching, treat it as rollout: furnace off, and a technician finds the cause before any manual reset.`,
+
+  'furnaces/american-standard/e05':
+`American Standard S9V2 E05 means flame was detected when it should not be present. E08 is different: flame current is low but the furnace is still allowed to run. E7.1 is the 1st stage gas valve energized when it should be off. If E05 is on the display and you smell gas, leave. Do not keep resetting it.`,
+
+  'furnaces/american-standard/e6-3':
+`American Standard S9V2 E6.3 is an igniter fault. The guide lists two conditions: the igniter relay fails, or the igniter is open. The heating sequence turns the ignitor on for about 20 seconds after 1st stage pressure switch 1 closes. E2.1 is the lockout after flame is never sensed, which can follow an igniter that never got hot. The igniter check itself is technician work.`,
+
+  'furnaces/american-standard/e08':
+`American Standard S9V2 E08 means flame current is low and the furnace is still allowed to run. The sequence gives a typical range of 0.75 to 3.0 microamps, read as DC volts on the FP pads. E2.2 is what happens later if flame is sensed and then lost often enough to lock out. Measuring the current is a technician step.`,
+
+  'furnaces/american-standard/e09':
+`American Standard S9V2 E09 is an open inducer limit switch or an open condensate pressure switch. The heating sequence will not start the inducer until both are proved closed, so the burners never reach ignition. It is not E3.2, the 1st stage pressure switch that proves inducer draft. A frozen condensate line belongs in this technician check, not in a jumper.`,
+
+  'furnaces/american-standard/e7-1':
+`American Standard S9V2 E7.1 means the 1st stage gas valve, marked MVL, is energized when it should be off. E2.3 is the opposite problem: the valve was not energized when it should have been. If you smell gas with E7.1 on the display, leave and call the gas supplier from outside.`,
+
+  'furnaces/american-standard/e12':
+`American Standard S9V2 E12 means the fuse is open. The control drawing in this installer's guide labels that fuse as 5 amp. The alarm line does not add a thermostat-wiring procedure. Do not fit a larger fuse. A technician has to find why it opened. This is not E6.1, reversed polarity, which is a different alarm on the same table.`,
+
+  'furnaces/amana/ee0':
+`Amana EE0 on the *CVC96 / *MVC96 chart in IOG-2015L is a lockout after 3 ignition retries. Flame was never established, or it was lost after it was established. The chart says to correct a gas interruption, then a technician checks the front cover pressure switch and drainage, the igniter, the flame sensor, the flue, and the induced draft blower. The manual also says the control can try again after one hour, and will return to lockout if the cause is still there. This is the two-stage family, including Amana AMVC96 and ACVC96. It is a different document from the Goodman GR9S96 single-stage guide.`,
+
+  'furnaces/amana/ee2':
+`Amana EE2 means the low-stage pressure switch circuit is not closed. The induced draft blower runs and the furnace does not light. The chart lists a blocked, pinched, or badly connected pressure switch hose, a blocked flue or inlet, a blocked drain, a weak inducer, a bad switch, and loose wiring. The outdoor pipes are the homeowner look. EE9 is the high-stage switch that will not close; low stage can still run on EE9. EE2 stops the heating cycle.`,
+
+  'furnaces/amana/ee3':
+`Amana EE3 means the primary limit is open. The circulator runs continuously and there is no heat. The chart names blocked filters, restrictive ducts, blower speed or a failed blower motor, and loose high-limit wiring. Check the filter with the power off. EEd is the auxiliary limit in the blower compartment, a different switch with its own filter sentence. EE3 is the primary limit.`,
+
+  'furnaces/amana/ee4':
+`Amana EE4 means flame was sensed when heat was not called. The induced draft blower and the circulator both keep running. The chart lists a short in the flame sense circuit, a lingering burner flame, and a slow-closing gas valve. If you smell gas, leave. This is not EE6, which is a low flame signal while the furnace is otherwise operating normally.`,
+
+  'furnaces/amana/ee5':
+`Amana EE5 is an open fuse, and the furnace does not run. The chart pairs that with a short in the low-voltage wiring. Replace the fuse only after the short is found, which is technician work. A larger fuse is not the fix. EE0 lockout still shows a code and has tried to light. EE5 does not get that far.`,
+
+  'furnaces/amana/ee6':
+`Amana EE6 is a low flame-sense signal while the furnace can still be operating normally. The chart says the flame sensor may be coated or oxidized, or sitting wrong in the flame, or the flame is lazy because of gas pressure or combustion air. Cleaning and the gas-pressure comparison to the rating plate are technician steps. EE0 is the lockout after the signal fails often enough.`,
+
+  'furnaces/amana/ee7':
+`Amana EE7 is an igniter circuit fault and the furnace does not operate. The chart lists the igniter circuit, a misconnected or shorted igniter, poor ground, and an igniter relay fault on the integrated control module. The technician checks are the wiring to the igniter, the ground, and igniter output from the control. EE0 can be what you see later if ignition never happens. EE7 names the igniter circuit itself.`,
+
+  'furnaces/amana/ee8':
+`Amana EE8 means the high-stage pressure switch is closed at the start of the cycle. High stage will not run. Low stage can. The induced draft blower is on. The chart says the contacts may be sticking or the switch wiring is shorted. EE9 is the high-stage switch that will not close. EE2 is the low-stage switch that will not close, and that one stops heat.`,
+
+  'furnaces/amana/ee9':
+`Amana EE9 means the high-stage pressure switch did not close. The furnace can still run on low stage, with the induced draft blower operating. The chart says to inspect the pressure switch hose, the flue and inlet piping, the drain, inducer performance, and the wiring. Look at the outdoor terminations. EE2 is the low-stage version of an open switch and does not leave you with low-stage heat.`,
+
+  'furnaces/amana/eed':
+`Amana EEd is the auxiliary limit in the blower compartment. The furnace does not operate. The chart says to check filters and ductwork, blower speed or a failed blower motor, and the wiring. The filter is the homeowner step, with power off. EE3 is the primary limit, also with a filter step, and on EE3 the circulator is described as running continuously. EEd is the blower-compartment switch.`,
+
+  'furnaces/amana/eef':
+`Amana EEF is the condensate auxiliary limit, the condensate switch, open. The chart's corrective action is to check the evaporator drain pan, trap, and piping. That is technician work. Do not bypass the switch. EEd is the blower-compartment auxiliary limit and has the filter step. EEF does not.`,
+
+  'furnaces/bryant/13':
+`Bryant 926TB code 13 is the limit-circuit lockout. Count 1 short flash and 3 long flashes. The troubleshooting guide says the limit or the flame rollout switch was open longer than 3 minutes, or high heat had 10 limit trips in a row. The control auto-resets after 3 hours and says to see code 33 for the fault itself. This page does not invent a code 33 cause list. If rollout opened, leave the furnace off.`,
+
+  'furnaces/bryant/14':
+`Bryant 926TB code 14 is ignition lockout. Count 1 short flash and 4 long flashes. The guide says the furnace failed to ignite gas and prove flame in 4 attempts, then auto-resets after 3 hours, and says to see code 34. The sequence in the same manual warms the hot-surface igniter for 17 seconds and then allows a 2-second proving window. It also says the control must be grounded or it will lock out. Resetting the 3-hour timer is not a repair.`,
+
+  'ac/carrier/33':
+`Carrier 33 on the Infinity 25VNA8 / 24VNA9 is lost inverter communication, the local fault. Count 3 short flashes and 3 long flashes. It is logged after 2 minutes with no talk between the outdoor control and the inverter, and it becomes fault 48 after 3 failures in 20 minutes or after 20 minutes continuous. The manual says to use the fault 48 checks: the harness between AOC plug PL20 and the MOC, electrical noise, and possible inverter damage. Furnace code 33 on a Carrier furnace is a limit switch. This outdoor 33 is not that.`,
+
+  'ac/carrier/53':
+`Carrier 53 is an outdoor air temperature sensor fault on the 25VNA8 / 24VNA9. Count 5 short flashes and 3 long flashes. Causes are an unplugged or damaged harness, a damaged sensor, or a damaged outdoor control. If that sensor fails, the manual says defrost is started from coil temperature and time instead. It is not a charge code. Code 55 is the coil temperature sensor.`,
+
+  'ac/carrier/55':
+`Carrier 55 is a coil temperature sensor fault. Count 5 short and 5 long. The manual wants the thermistor clipped to the distributor entry tube, the harness checked, and the outdoor control replaced only if its hardware is damaged. If this sensor fails, defrost runs every interval in heating and stops after 2 minutes. That short defrost is why a heat pump can feel like it is not heating. Code 53 is the outdoor air sensor, which fails over to a different defrost rule.`,
+
+  'ac/carrier/56':
+`Carrier 56 means the outdoor air and coil thermistors are out of range. Count 5 short and 6 long. The manual calls it an event. Causes include heating when cooling was called, a coil thermistor clipped in the wrong place, and an outdoor air sensor body touching sheet metal. One listed action is to inspect the outdoor coil for obstructions, with the power off. The reversing valve, if the unit heats in cooling, is technician work. It is not code 55's failed-sensor defrost rule.`,
 };
 
 export function codeNote(key: string): string | undefined {

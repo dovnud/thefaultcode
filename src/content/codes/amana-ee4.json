@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "Amana",
+  "brandSlug": "amana",
+  "equipmentType": "furnace",
+  "code": "EE4",
+  "codeSlug": "ee4",
+  "displayPattern": "7-segment display on a *CVC96 or *MVC96 two-stage furnace covered by IOG-2015L, including Amana AMVC96 and ACVC96: EE4. The induced draft blower and circulator blower run continuously and the furnace does not operate",
+  "meaning": "Flame was sensed with no call for heat.",
+  "causes": [
+    "Short to ground in the flame sense circuit",
+    "Lingering burner flame",
+    "Slow closing gas valve"
+  ],
+  "diySteps": [
+    "If you smell gas, leave and call the gas supplier from outside",
+    "Technician: correct a short at the flame sensor or in the flame sensor wiring, and check for a lingering or lazy flame and gas valve operation"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. EE4 means the control sees flame when heat was not requested.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Amana and Goodman *CVC96 / *MVC96 two-stage furnace installation instructions (IOG-2015L)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

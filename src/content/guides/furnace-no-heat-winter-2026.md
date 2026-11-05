@@ -3,7 +3,7 @@
  "title": "Furnace No Heat: Winter 2026 Checklist",
  "description": "Winter 2026 checklist for a gas furnace with no heat. Each step cites the manufacturer manual and links the matching fault-code page.",
  "answer": "Write down the code on the board, set the thermostat to call for heat, and check the filter before assuming a part has failed. Goodman EE3 is an open limit with the blower running and no heat, often from blocked filters. Goodman EE2 is a pressure switch that did not close, and the same manual tells you to inspect the flue and inlet for blockage. Ignition lockouts name the igniter and the flame sensor. Gas valve, venting and live electrical work belong to a licensed technician.",
- "updated": "2026-10-31",
+ "updated": "2026-11-05",
  "category": "furnaces",
  "shop": [],
  "cards": [
@@ -116,7 +116,17 @@
   "trane/e2-1",
   "trane/e6-3",
   "lennox/red-slow-green-on",
-  "lennox/red-off-green-slow"
+  "lennox/red-off-green-slow",
+  "york/7-red-flashes",
+  "york/4-red-flashes",
+  "york/3-red-flashes",
+  "amana/ee0",
+  "amana/ee2",
+  "amana/ee3",
+  "american-standard/e2-1",
+  "american-standard/e04",
+  "bryant/14",
+  "bryant/13"
  ]
 }
 ---
@@ -149,6 +159,8 @@ Write down the characters or the flash pattern before you cut power. [How to rea
 | Rollout switch open | Goodman E11: open rollout switch, furnace fails to operate. Trane E04 says never to leave limit switches jumpered, and its rollout checks are for a technician. | [Goodman E11](/goodman/e11/), [Trane E04](/trane/e04/) |
 
 The [part finder](/part-finder/) lists every code whose document names the [flame sensor](/part-finder/flame-sensor/), [igniter](/part-finder/igniter/), [pressure switch](/part-finder/pressure-switch/), [filter](/part-finder/filter/), or [limit switch](/part-finder/limit-switch/).
+
+York, Amana, American Standard and Bryant use the same idea with different lights. [York 7 red flashes](/york/7-red-flashes/) is three failed ignition trials. [York 3 red flashes](/york/3-red-flashes/) is a pressure switch that stayed open, and the manual names a blocked vent pipe. [York 4 red flashes](/york/4-red-flashes/) is an open main limit, and a dirty filter is on that list. [Amana EE0](/amana/ee0/), [EE2](/amana/ee2/) and [EE3](/amana/ee3/) are the lockout, open low-stage pressure switch, and open primary limit on the *CVC96 / *MVC96 chart. [American Standard E2.1](/american-standard/e2-1/) is flame never sensed. [Bryant 14](/bryant/14/) is ignition lockout after 4 attempts. The longer writeups are the [ignition lockout](/guides/furnace-ignition-lockout/) and [open limit](/guides/furnace-open-limit/) guides.
 
 ## Outdoor terminations and snow
 

@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E04",
+  "codeSlug": "e04",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E04",
+  "meaning": "Open limit: the main thermal limit, a rollout switch, or the reverse airflow switch.",
+  "causes": [
+    "Main thermal limit open",
+    "Rollout switch open",
+    "Reverse airflow switch open"
+  ],
+  "diySteps": [
+    "If you see scorching at the burners, or you smell hot metal or combustion odor, turn the furnace off and leave it off",
+    "The heating sequence proves the rollout switches, the main thermal limit and any reverse-airflow switch closed before the inducer starts",
+    "Technician: find which of those switches is open before any manual reset"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. E04 names three different safety switches. Do not jumper a limit or reset a rollout switch to finish the night.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Limit switch",
+      "partKey": "limit-switch",
+      "searchTerm": "furnace limit switch"
+    },
+    {
+      "name": "Rollout switch",
+      "partKey": "rollout-switch",
+      "searchTerm": "furnace rollout switch"
+    }
+  ],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "continuous amber",
+  "codeSlug": "continuous-amber",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S, flashing amber continuously with no longer pause",
+  "meaning": "Flame sense current is below 1.5 microamps. The manual's ignition-control levels put a normal flame sense current at about 3.7 microamps DC, the low-flame warning at 1.5 microamps, and the control lockout point at 0.1 microamps DC.",
+  "causes": [
+    "Flame sensor that needs cleaning",
+    "Gas flow that is not correct"
+  ],
+  "diySteps": [
+    "Write down that the light is amber and continuous, not a counted red code",
+    "Technician: check and clean the flame sensor, check gas flow, and verify that current at the flame current test pad is greater than 1.5 microamps"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician to clean the flame sensor and measure flame current. A continuous amber light is a warning, not one of the numbered red codes.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "1 red flash",
+  "codeSlug": "1-red-flash",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 1 red flash",
+  "meaning": "Flame was sensed when there was not a call for heat. The control turns on both the inducer motor and the supply air blower.",
+  "causes": [
+    "A leaking or slow-closing gas valve"
+  ],
+  "diySteps": [
+    "If you smell gas, leave the building and call the gas supplier from outside. Do not reset the furnace to clear the smell",
+    "Technician: check for a leaking or slow-closing gas valve"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. York's diagnostics say to check for a leaking or slow-closing gas valve, and the same section says never to bypass a safety control.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 0,
+  "updated": "2026-11-05"
+}

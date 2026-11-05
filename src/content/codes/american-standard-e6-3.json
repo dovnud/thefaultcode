@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "American Standard",
+  "brandSlug": "american-standard",
+  "equipmentType": "furnace",
+  "code": "E6.3",
+  "codeSlug": "e6-3",
+  "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E6.3",
+  "meaning": "Igniter fault: the igniter relay fails, or the igniter is open.",
+  "causes": [
+    "Igniter relay failure",
+    "Igniter open"
+  ],
+  "diySteps": [
+    "The heating sequence energizes the ignitor for about 20 seconds of warm-up after 1st stage pressure switch 1 closes",
+    "Technician: check the igniter and the igniter relay on the control"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. An open igniter will not glow, and the gas valve should not be forced on.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    }
+  ],
+  "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}

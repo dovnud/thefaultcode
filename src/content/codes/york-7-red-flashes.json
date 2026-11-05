@@ -1,0 +1,47 @@
+{
+  "example": false,
+  "brand": "York",
+  "brandSlug": "york",
+  "equipmentType": "furnace",
+  "code": "7 red flashes",
+  "codeSlug": "7-red-flashes",
+  "displayPattern": "LED behind the blower-door view port on a York TG9S. Each flash is 1/3 second on and 1/3 second off, then a 2-second pause: 7 red flashes",
+  "meaning": "The flame could not be established during three trials for ignition. The furnace locks out for one hour and then restarts.",
+  "causes": [
+    "Gas valve switch not in the ON position",
+    "Low or no gas pressure",
+    "Faulty gas valve",
+    "Dirty or faulty flame sensor",
+    "Faulty hot surface ignitor",
+    "Loose wires or a burner problem"
+  ],
+  "diySteps": [
+    "Check that the switch on the gas valve is in the ON position, and that other gas appliances in the home still light",
+    "Technician: check gas pressure, the gas valve, the flame sensor, the hot surface ignitor, wiring and the burners"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the gas valve switch is ON and 7 red flashes return after the one-hour lockout.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Hot surface igniter",
+      "partKey": "igniter",
+      "searchTerm": "furnace hot surface igniter"
+    },
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.hvacdiscounters.com/customer/docs/skudocs/coltg9s-iom-manual.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "York TG9S installation manual (Johnson Controls 1083287-UIM-C-0715)",
+  "amazonMax": 3,
+  "updated": "2026-11-05"
+}
