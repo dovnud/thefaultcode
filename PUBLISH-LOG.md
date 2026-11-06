@@ -29,11 +29,10 @@ New pages (Samsung 3C, CE and tE from Samsung Support "Samsung dishwasher is dis
 
 Internal links: Dishwasher Will Not Drain guide links GE C2 (table row and a C2 paragraph; heading now "GE C1, C2, C3 and C5"; C1 air-gap, hose and disposer steps are not applied to C2). Dishwasher Temperature, Detergent and Limescale Codes guide links Samsung tE (table row and a section next to HE/HC). Samsung's own page gives HE and tE the same opening steps, so the guide says so. HC still starts with the 30-second breaker reset. 3E stays the 176°F supply. LG tE stays the other brand's sensor code, which LG sends to a technician. Both guides updated 2026-11-06 and added to the guides' codes lists. FAQ text on both guides was left as written; the FAQ schema is generated from that same text.
 Note: lastmod.json unchanged. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content at build. Samsung's page labels HE and tE differently (heater error vs temperature sensor error) but the owner steps start the same way, so the pages do not claim otherwise.
-Commits: 3356708 (pages, guide links, and this log).
+Commits: 3356708 (pages and guide links), ab6a4c4 (publish-log hash), merged to content/furnace-codes as 15a6b74.
 Amazon links: amazonMax 0 on all four. Parts arrays empty. No new ASINs. tE keeps 1 primary search (dishwasher detergent, from Samsung's own "add detergent" step). 3C, CE and C2 have none. The two edited guides keep the shop searches they already had (drain hose; detergent). No Amazon links added or removed on other pages. All rel="sponsored nofollow noopener", tag=thefaultcode-20. Site total 1425 Amazon anchors, 0 bad. CJ and Angi URLs are absent from the build.
 QA: build OK (365 pages). Static check of dist HTML only; amazon.com, amzn.to, CJ and Angi hosts were not requested. OG images for the four codes are 1200×630 PNG. The four routes and both guides are in dist. Codes are in fault-codes.csv, fault-codes.json and llms-full.txt. Sitemap lastmod 2026-11-06 on the four code URLs and both guides. FAQ schema on the two guides matches the visible questions and answers.
-Live: pending.
-IndexNow: pending.
+Live: all 4 URLs and both edited guides 200 with the correct H1 and meaning, OG images 200 (image/png, 1200×630), sitemap lastmod 2026-11-06, codes present in /data/fault-codes.csv, fault-codes.json, and llms-full.txt. IndexNow: HTTP 200 (6 URLs).
 
 ## 2026-11-05
 
