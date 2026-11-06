@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-11-04",
+ "updated": "2026-11-06",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -38,7 +38,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/lg/te"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -52,6 +52,7 @@ A dishwasher can fail to clean because the water never got hot, because the dete
 | [Samsung 1E](/dishwashers/samsung/1e/) | On Waterwall models, a clogged filter. On Rotary models, high temperature in the heater. Some models show IE. |
 | [Samsung HE](/dishwashers/samsung/he/) | Heater error. The temperature inside the dishwasher is being detected incorrectly. |
 | [Samsung HC](/dishwashers/samsung/hc/) | High temperature heater error. Samsung says the temperature inside is too hot. |
+| [Samsung tE](/dishwashers/samsung/te/) | Temperature sensor error. The temperature inside the dishwasher is being detected incorrectly. |
 | [LG HE](/dishwashers/lg/he/) | The heater is not heating the water, or the water went above 90°C (194°F). |
 | [LG tE](/dishwashers/lg/te/) | Temperature sensor contact problem or sensor failure. LG sends this one to a technician. |
 | [Bosch E12](/dishwashers/bosch/e12/) | Limescale build-up in the heat pump. |
@@ -103,7 +104,17 @@ Samsung's meaning for HC is that the temperature inside the dishwasher is too ho
 
 If HC returns, request service.
 
-[HE](/dishwashers/samsung/he/) is the code for a temperature that is being detected incorrectly. HE's list does not start with that 30-second breaker reset. [3E](/dishwashers/samsung/3e/) is the water arriving too hot, and the figure there is 176°F, not a heater reset. Rotary [1E](/dishwashers/samsung/1e/) uses the same breaker, empty, detergent and Normal-cycle steps as HC, but only when the model is Rotary. On a Waterwall model, 1E is the fine filter. Use the characters on the display.
+[HE](/dishwashers/samsung/he/) is the code for a temperature that is being detected incorrectly. HE's list does not start with that 30-second breaker reset. [tE](/dishwashers/samsung/te/) uses that same detection sentence, and its steps start with an empty tub and a normal cycle, not with HC's breaker reset. [3E](/dishwashers/samsung/3e/) is the water arriving too hot, and the figure there is 176°F, not a heater reset. Rotary [1E](/dishwashers/samsung/1e/) uses the same breaker, empty, detergent and Normal-cycle steps as HC, but only when the model is Rotary. On a Waterwall model, 1E is the fine filter. Use the characters on the display.
+
+## Samsung tE
+Samsung's meaning for tE is a temperature sensor error: the temperature inside the dishwasher is being detected incorrectly. The steps on that entry:
+
+1. Empty the dishwasher.
+2. Add detergent and run a normal cycle.
+
+If tE still occurs, switch off power to the dishwasher at the circuit breaker and request service through Samsung's Support Center.
+
+[HE](/dishwashers/samsung/he/) is the heater error. Samsung uses the same detection sentence for HE, and HE's steps start the same way: empty the dishwasher, add detergent, and run a normal cycle, then the breaker-off and service request if it returns. [HC](/dishwashers/samsung/hc/) means the temperature inside is too hot, and its steps start with a 30-second breaker reset. [3E](/dishwashers/samsung/3e/) is water arriving too hot, above 176°F. [LG tE](/dishwashers/lg/te/) is a different brand. LG's causes are a sensor contact problem or a sensor failure, and LG sends that code to a technician. Do not run this Samsung cycle on an LG tE.
 
 ## LG HE
 LG's meaning is a heater that is not heating the water supplied to the dishwasher, or water that overheated above 90°C (194°F).

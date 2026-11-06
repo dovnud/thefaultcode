@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "CE",
+  "codeSlug": "ce",
+  "displayPattern": "Dishwasher display shows CE",
+  "meaning": "Communication error: the control panel is unable to communicate with the rest of the dishwasher.",
+  "causes": [
+    "Control panel cannot communicate with the rest of the dishwasher"
+  ],
+  "diySteps": [
+    "Turn off the dishwasher",
+    "Try to start it again"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": true,
+  "proAdvice": "If the error continues, Samsung says to request service through its Support Center. Not the same as bE or 6E, which is a stuck button. Not the same as AP, which is Access Point mode for connecting the dishwasher to a mobile device.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}
