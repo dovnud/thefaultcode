@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "46",
+  "codeSlug": "46",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 46 is 4 short and 6 long",
+  "meaning": "Brownout. Line voltage at the outdoor unit is low. Reset time is 6 minutes.",
+  "causes": [
+    "Low line voltage",
+    "Bad connection on L1 and L2",
+    "Inverter not reading voltage properly"
+  ],
+  "diySteps": [
+    "Count 4 short flashes and 6 long flashes. The 6-minute reset is the control waiting, not a repair",
+    "Technician: check for line voltage approximately greater than 180 V. If it is less than 180 V and that persists, contact the power provider. Then check the line-side and load-side connections. If those are good, replace the inverter"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician or the electric utility. Do not use a non-contact tester as a substitute for the 180 V check. That reading is a technician meter step.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

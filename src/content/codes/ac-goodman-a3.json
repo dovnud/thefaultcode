@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "A3",
+  "codeSlug": "a3",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank, digit 2 is A, digit 1 is 3. The code is A3",
+  "meaning": "Outdoor coil temperature sensor fault. The chart says the heat pump fails to operate in heating mode, and the display shows A3.",
+  "causes": [
+    "Shorted sensor",
+    "Open sensor",
+    "Sensor disconnected",
+    "Sensor out of range"
+  ],
+  "diySteps": [
+    "If the heat pump will not heat and the display reads A3, leave the electrical panel closed",
+    "Technician: check the sensor connection and replace an open or shorted sensor, with power off, using the correct replacement part"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. A heat pump that will not heat on A3 is a sensor fault in this chart, not a reason to add refrigerant.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

@@ -3,7 +3,7 @@
  "title": "Furnace No Heat: Winter 2026 Checklist",
  "description": "Winter 2026 checklist for a gas furnace with no heat. Each step cites the manufacturer manual and links the matching fault-code page.",
  "answer": "Write down the code on the board, set the thermostat to call for heat, and check the filter before assuming a part has failed. Goodman EE3 is an open limit with the blower running and no heat, often from blocked filters. Goodman EE2 is a pressure switch that did not close, and the same manual tells you to inspect the flue and inlet for blockage. Ignition lockouts name the igniter and the flame sensor. Gas valve, venting and live electrical work belong to a licensed technician.",
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "category": "furnaces",
  "shop": [],
  "cards": [
@@ -126,7 +126,10 @@
   "american-standard/e2-1",
   "american-standard/e04",
   "bryant/14",
-  "bryant/13"
+  "bryant/13",
+  "bryant/34",
+  "bryant/33",
+  "bryant/32"
  ]
 }
 ---
@@ -160,7 +163,7 @@ Write down the characters or the flash pattern before you cut power. [How to rea
 
 The [part finder](/part-finder/) lists every code whose document names the [flame sensor](/part-finder/flame-sensor/), [igniter](/part-finder/igniter/), [pressure switch](/part-finder/pressure-switch/), [filter](/part-finder/filter/), or [limit switch](/part-finder/limit-switch/).
 
-York, Amana, American Standard and Bryant use the same idea with different lights. [York 7 red flashes](/york/7-red-flashes/) is three failed ignition trials. [York 3 red flashes](/york/3-red-flashes/) is a pressure switch that stayed open, and the manual names a blocked vent pipe. [York 4 red flashes](/york/4-red-flashes/) is an open main limit, and a dirty filter is on that list. [Amana EE0](/amana/ee0/), [EE2](/amana/ee2/) and [EE3](/amana/ee3/) are the lockout, open low-stage pressure switch, and open primary limit on the *CVC96 / *MVC96 chart. [American Standard E2.1](/american-standard/e2-1/) is flame never sensed. [Bryant 14](/bryant/14/) is ignition lockout after 4 attempts. The longer writeups are the [ignition lockout](/guides/furnace-ignition-lockout/) and [open limit](/guides/furnace-open-limit/) guides.
+York, Amana, American Standard and Bryant use the same idea with different lights. [York 7 red flashes](/york/7-red-flashes/) is three failed ignition trials. [York 3 red flashes](/york/3-red-flashes/) is a pressure switch that stayed open, and the manual names a blocked vent pipe. [York 4 red flashes](/york/4-red-flashes/) is an open main limit, and a dirty filter is on that list. [Amana EE0](/amana/ee0/), [EE2](/amana/ee2/) and [EE3](/amana/ee3/) are the lockout, open low-stage pressure switch, and open primary limit on the *CVC96 / *MVC96 chart. [American Standard E2.1](/american-standard/e2-1/) is flame never sensed. [Bryant 14](/bryant/14/) is ignition lockout after 4 attempts on the 926TB. On the 80% two-stage chart, [Bryant 34](/bryant/34/) is the proving failure before that lockout, [Bryant 33](/bryant/33/) is the limit fault and names a dirty filter, and [Bryant 32](/bryant/32/) is the low-heat pressure switch with a restricted vent on the list. The longer writeups are the [ignition lockout](/guides/furnace-ignition-lockout/) and [open limit](/guides/furnace-open-limit/) guides.
 
 ## Outdoor terminations and snow
 

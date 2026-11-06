@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "43",
+  "codeSlug": "43",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 43 is 4 short and 3 long",
+  "meaning": "Low-heat pressure switch is open while the high-heat pressure switch is closed. The chart says to check the pressure tubing, low inlet gas pressure if a low-gas-pressure switch is used, mis-wired switches, and a low-heat switch stuck open.",
+  "causes": [
+    "Disconnected or obstructed pressure tubing",
+    "Low inlet gas pressure, if a low-gas-pressure switch is used",
+    "Mis-wired pressure switches",
+    "Low-heat pressure switch stuck open"
+  ],
+  "diySteps": [
+    "Count 4 short flashes and 3 long flashes. Do not swap the pressure-switch hoses to see what happens",
+    "Technician: check tubing, switch wiring, and the low-heat switch. Gas pressure, if an LGPS is used, is part of that check"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Two pressure switches disagreeing is not a vent-cap cleaning.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

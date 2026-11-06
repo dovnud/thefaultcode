@@ -1,0 +1,42 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "34",
+  "codeSlug": "34",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 34 is 3 short and 4 long",
+  "meaning": "Ignition proving failure. The control tries three more times before lockout 14. If the flame signal is lost during the blower on-delay, the blower runs the selected off-delay.",
+  "causes": [
+    "Low inlet gas pressure",
+    "Gas valve defective, turned off, or the manual valve shut off",
+    "Oxide buildup on the flame sensor",
+    "Control ground continuity problem, or the flame sensor is grounded",
+    "Inadequate flame carryover or rough ignition"
+  ],
+  "diySteps": [
+    "Check that the manual gas shutoff is open and the switch on the gas valve is ON",
+    "Technician: clean oxide off the flame sensor with fine steel wool, and read flame current. This chart says 0.5 microamps DC minimum, with 4.0 to 6.0 nominal",
+    "Technician: the green/yellow ground wire must be connected to the furnace sheet metal"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the gas valve is on and 34 still goes to lockout 14. Bryant 14 on this site is the 926TB lockout. This 34 page is the 80% chart's own proving-failure list.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Flame sensor",
+      "partKey": "flame-sensor",
+      "searchTerm": "furnace flame sensor"
+    },
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

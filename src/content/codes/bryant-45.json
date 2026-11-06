@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "45",
+  "codeSlug": "45",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 45 is 4 short and 5 long",
+  "meaning": "Control circuitry lockout. The control auto-resets after a 1-hour lockout caused by a flame-sense circuit failure, a gas-valve relay stuck open, or a software check error. Reset power to clear the lockout. Replace the control if the code repeats.",
+  "causes": [
+    "Flame-sense circuit failure",
+    "Gas valve relay stuck open",
+    "Software check error"
+  ],
+  "diySteps": [
+    "Count 4 short flashes and 5 long flashes. The 1-hour reset is not a repair",
+    "Technician: reset power once to clear the lockout. If 45 returns, replace the furnace control"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 45 returns after one power reset. Do not keep resetting it overnight.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

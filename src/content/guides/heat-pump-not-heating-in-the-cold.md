@@ -5,7 +5,7 @@
  "title": "Heat Pump Not Heating in the Cold",
  "description": "Why a heat pump can blow cool air or stop heating in cold weather, from Carrier's defrost rules and the outdoor-sensor codes, plus the American Standard balance-point setting.",
  "answer": "A heat pump can stop heating in the cold because it is in a normal defrost, because an outdoor temperature sensor failed and changed how defrost runs, or because a furnace lockout temperature has handed the job to the gas furnace. Carrier's 25VNA8 manual only allows defrost below 50°F outdoors, and it says a failed coil sensor makes every heating defrost stop after 2 minutes. Refrigerant, sensors and the reversing valve are technician work. The filter and a debris-covered outdoor coil are the checks the manuals leave outside the electrical cabinet.",
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "faq": [
   {
    "q": "Is steam off the outdoor unit an emergency?",
@@ -24,6 +24,10 @@
   {
    "name": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf"
+  },
+  {
+   "name": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+   "url": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf"
   },
   {
    "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
@@ -46,6 +50,9 @@
   "ac/carrier/53",
   "ac/carrier/55",
   "ac/carrier/56",
+  "ac/bryant/53",
+  "ac/bryant/55",
+  "ac/bryant/56",
   "ac/carrier/32",
   "ac/carrier/83",
   "ac/goodman/01-l1",
@@ -65,6 +72,8 @@ Two sensor failures change that on purpose:
 
 - If the outdoor air thermistor fails, defrost is initiated from coil temperature and time. That failure is [code 53](/ac/carrier/53/).
 - If the outdoor coil thermistor fails, defrost occurs at each time interval during heating and terminates after 2 minutes. That failure is [code 55](/ac/carrier/55/). A two-minute defrost, every interval, will not keep the coil clear in a hard freeze, and the indoor air stays lukewarm.
+
+The same two failover sentences are in the Bryant 288BNV / 189BNV service manual. [Bryant 53](/ac/bryant/53/) is the outdoor air sensor. [Bryant 55](/ac/bryant/55/) is the coil sensor and the 2-minute defrost. [Bryant 56](/ac/bryant/56/) is the out-of-range event, which uses that same 2-minute defrost.
 
 [Code 56](/ac/carrier/56/) is both thermistors out of range. The manual lists heating when cooling was demanded, a coil thermistor on the wrong tube, and an outdoor air sensor touching sheet metal. One action is to inspect the outdoor coil for obstructions. Do that with the disconnect and the breaker off. Leaves and a solid block of ice are visible without opening the electrical panel. The reversing valve, if the unit heats while the thermostat calls for cooling, is technician work.
 

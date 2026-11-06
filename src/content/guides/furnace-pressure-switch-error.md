@@ -4,7 +4,7 @@
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "faq": [
   {
    "q": "Can I replace the pressure switch myself?",
@@ -55,6 +55,10 @@
   {
    "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
    "url": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf"
+  },
+  {
+   "name": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+   "url": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf"
   }
  ],
  "codes": [
@@ -68,7 +72,11 @@
   "amana/ee2",
   "amana/ee9",
   "american-standard/e3-2",
-  "american-standard/e3-4"
+  "american-standard/e3-4",
+  "bryant/32",
+  "bryant/23",
+  "bryant/31",
+  "bryant/43"
  ]
 }
 ---
@@ -86,6 +94,9 @@
 | [York 2 red flashes](/york/2-red-flashes/) | Pressure switch closed when it should be open |
 | [Amana EE2](/amana/ee2/) | Low stage pressure switch circuit not closed |
 | [American Standard E3.2](/american-standard/e3-2/) | Open pressure switch, 1st stage |
+| [Bryant 32](/bryant/32/) | Low-heat pressure switch did not close or reopened. Restricted vent is on that list |
+| [Bryant 23](/bryant/23/) | Pressure switch did not open |
+| [Bryant 43](/bryant/43/) | Low-heat switch open while the high-heat switch is closed |
 
 ## Causes listed by manufacturers
 - Blocked or restricted vent or intake pipe (Rheem FAQ, Lennox, Carrier)

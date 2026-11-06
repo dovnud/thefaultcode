@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "49",
+  "codeSlug": "49",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 49 is 4 short and 9 long",
+  "meaning": "Compressor overcurrent fault. The control elevates this to fault 95 after 5 occurrences. Reset time is 6 minutes.",
+  "causes": [
+    "The service manual points code 49 at the fault 95 cause list",
+    "Compressor operating outside its allowed envelope, or high superheat",
+    "Incoming power supply voltage, loose power leads, or a phase imbalance",
+    "Outdoor airflow too low, refrigerant overcharge, inverter damage, or compressor internal damage"
+  ],
+  "diySteps": [
+    "Count 4 short flashes and 9 long flashes. With power off, look at the outdoor coil for ice or debris. That is the airflow line on the fault 95 table this code points to",
+    "Technician: follow fault 95. Charge, winding resistance, voltage against the rating plate, and inverter or compressor replacement are that table"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 49 repeats. Five occurrences become the 2-hour lockout 95.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

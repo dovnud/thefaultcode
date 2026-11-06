@@ -212,6 +212,116 @@ export const CODE_NOTES: Record<string, string> = {
 
   'ac/carrier/56':
 `Carrier 56 means the outdoor air and coil thermistors are out of range. Count 5 short and 6 long. The manual calls it an event. Causes include heating when cooling was called, a coil thermistor clipped in the wrong place, and an outdoor air sensor body touching sheet metal. One listed action is to inspect the outdoor coil for obstructions, with the power off. The reversing valve, if the unit heats in cooling, is technician work. It is not code 55's failed-sensor defrost rule.`,
+  'furnaces/bryant/12':
+`Bryant 12 on the TG-GFB80-02 chart is the blower running for 90 seconds after power returns, not a lockout. It flashes when the furnace is powered up during a heat call, or when the heat call opens during the blower on-delay. The amber LED goes back to continuous on after those 90 seconds if no fault is stored. It is not code 15, the blower-motor lockout, and it is not rapid flashing, which is reversed line polarity.`,
+
+  'furnaces/bryant/15':
+`Bryant 15 is the blower-motor lockout on the 80% two-stage chart, not the fault while the blower is still being watched. The blower failed to reach 250 RPM, or failed to communicate, within 30 seconds after it was turned on, and that happened on two heating cycles in a row. The control auto-resets after 3 hours and says to see code 41. Code 41 is the fault itself, including a miss during steady running. Code 12 is only the 90-second blower run after power-up.`,
+
+  'furnaces/bryant/21':
+`Bryant 21 on the 80% two-stage chart is a gas-heating lockout that will not auto-reset. The chart lists a mis-wired gas valve and a defective control valve relay. It is not code 22, which is flame proved while the gas valve is off. Code 21 does not clear on the 3-hour timer used by codes 13, 14, and 15.`,
+
+  'furnaces/bryant/22':
+`Bryant 22 means flame is proved while the gas valve is de-energized. The inducer keeps running until the fault clears. The chart lists a leaky gas valve or a gas valve stuck open. There is no filter check and no 3-hour auto-reset on this row. Code 21 is the lockout that will not auto-reset because of valve wiring or the valve relay. If you smell gas with 22 on the LED, leave.`,
+
+  'furnaces/bryant/23':
+`Bryant 23 means the pressure switch did not open. The chart lists obstructed pressure tubing and a pressure switch stuck closed. It is not code 24, the open 24 V fuse, which is 2 short and 4 long. Nothing on 23 asks you to pull a thermostat wire or change a fuse. Code 32 is the low-heat switch that did not close.`,
+
+  'furnaces/bryant/24':
+`Bryant 24 on the 80% two-stage chart means the secondary-voltage fuse is open. The only check in that row is a short in the 24 V wiring. It is not code 23, the pressure switch that did not open. The 987MA modulating chart adds thermostat leads to its own code 24. This page does not copy that sentence onto the 80% chart.`,
+
+  'furnaces/bryant/25':
+`Bryant furnace 25 is a model-selection or setup error on the 80% two-stage chart, not a pressure code. Four flashes at power-up means the model plug is missing and the control is using the model stored in memory. Continuous 25 means the plug is missing or wrong, a heat or cool call is present with SW1-1 or SW1-6 on, both of those switches are on together, or two different models are twinned. Bryant heat pump 25 is a different fault, on the outdoor amber LED.`,
+
+  'furnaces/bryant/31':
+`Bryant furnace 31 is the high-heat pressure switch or relay that did not close, or that reopened. The chart says the control relay may be defective or the gas valve may be mis-wired, and it says to see code 32. This page does not copy the code 32 vent list onto 31. Bryant outdoor code 31 is the high-pressure switch on a 288BNV or 189BNV, a different appliance.`,
+
+  'furnaces/bryant/32':
+`Bryant furnace 32 is the low-heat pressure switch that did not close or that reopened. If it stays open longer than five minutes, the inducer shuts off for 15 minutes before a retry. If it opens during the blower on-delay, the blower runs the selected off-delay. The chart lists vent sizing, a restricted vent, the inducer, 115 V to the inducer, the switch, low inlet gas pressure if an LGPS is used, wind, combustion air, and the pressure tubing. Code 23 is the switch that did not open. Code 31 is the high-heat switch.`,
+
+  'furnaces/bryant/33':
+`Bryant 33 on the 80% two-stage chart is the limit circuit fault while a limit, draft safeguard, flame rollout, or blocked-vent switch is open, or while the furnace is locked into high heat after two low-heat limit trips. The blower runs 4 minutes or until the switch remakes. Open longer than 3 minutes becomes lockout 13. The flame rollout switch needs a manual reset. A dirty filter is on this list. The 926TB install manual points its own lockout 13 at a status code 33, and that service-label figure is not copied here.`,
+
+  'furnaces/bryant/34':
+`Bryant 34 on the 80% two-stage chart is an ignition proving failure. The control tries three more times, then stores lockout 14. The chart lists low inlet gas pressure, ground continuity, a gas valve that is off or defective, a closed manual valve, oxide on the flame sensor, flame current of 0.5 microamps DC minimum with 4.0 to 6.0 nominal, the green/yellow wire on the furnace sheet metal, poor flame carryover, and a grounded flame sensor. It does not list a hot-surface igniter. Bryant 14 already on this site is the 926TB lockout, which also says to see code 34.`,
+
+  'furnaces/bryant/41':
+`Bryant 41 is the blower motor fault, not the lockout. The blower failed to reach 250 RPM or failed to communicate within 30 seconds after being turned on, or within 10 seconds during steady running. Lockout 15 is what the chart stores after that miss happens on two heating cycles in a row, and 15 says to see 41. The component-test row for 41 says to check the blower, the wiring, and the furnace control.`,
+
+  'furnaces/bryant/43':
+`Bryant 43 means the low-heat pressure switch is open while the high-heat pressure switch is closed. The chart lists disconnected or obstructed pressure tubing, low inlet gas pressure if an LGPS is used, mis-wired pressure switches, and a low-heat switch stuck open. It is not code 32, which is the low-heat switch that did not close on its own, and it is not code 23, which is a switch that did not open.`,
+
+  'furnaces/bryant/45':
+`Bryant 45 is a control-circuitry lockout with a 1-hour auto-reset. The chart names a flame-sense circuit failure, a gas-valve relay stuck open, or a software check error. Reset power to clear it. Replace the control if 45 repeats. It is not ignition lockout 14, which is a 3-hour reset after four failed proving attempts.`,
+
+  'furnaces/bryant/rapid-flashing':
+`Rapid flashing on this Bryant chart is the amber LED blinking with no pause. The status table calls it reversed 115 V polarity. The rapid-flashing section adds a second case: transformers out of phase when two furnaces are twinned. A counted code, short flashes then long flashes, is not this pattern. Continuous on means the control has 24 V. Continuous off means check 115 V at L1 and L2 and 24 V at SEC-1 and SEC-2.`,
+
+  'furnaces/bryant/35':
+`Bryant 35 is a gas-valve fault on the 987MA Series A modulating chart only. The modulating valve did not answer a command from the furnace control, or power to the valve electronics was interrupted. The check is an intermittent red, yellow, or orange wire at the gas valve or at PL8. The 80% two-stage chart used for the other Bryant furnace pages has no code 35. Code 22 on that other chart is flame proved while the valve is off.`,
+
+  'furnaces/bryant/42':
+`Bryant 42 is an inducer motor fault on the 987MA Series A modulating chart. The inducer did not start within 20 seconds after a call for heat, the RPM is outside its valid range, or the RPM signal was lost for 5 seconds while running. The chart lists vent sizing, a restricted vent, and a failed inducer. The 80% two-stage chart has no code 42. Code 41 on that chart is the blower, not the inducer.`,
+
+  'ac/bryant/25':
+`Bryant outdoor 25 is an invalid model plug or inverter size on the 288BNV / 189BNV. It is not a pressure code. Causes in Table 6 are a missing plug, the wrong plug, a damaged plug, a plug that is not fully seated, a plug that does not match the inverter size, and a damaged outdoor control. The manual's size example is a 2 ton plug on a 3 ton inverter. Furnace code 25 is the setup-switch fault on the 80% furnace chart. Both steps here are for a technician.`,
+
+  'ac/bryant/31':
+`Bryant outdoor 31 means the high pressure switch opened. The unit steps down a stage for each occurrence and elevates to fault 84 when that happens on the lowest stage. Reset time is 6 minutes, then reduced-stage operation. Reduced capacity clears after 2 hours of continuous running at any stage. Table 6 says to use the fault 84 checks. Furnace code 31 is the high-heat pressure switch inside the furnace, a different fault.`,
+
+  'ac/bryant/32':
+`Bryant outdoor 32 is a low pressure trip, not the high-pressure switch. It elevates to fault 83 after 3 occurrences. Reset time is 6 minutes. Table 6 says to use the fault 83 checks: a closed service valve, low charge, low indoor airflow in cooling, low outdoor airflow in heating, and a restriction in the filter drier or expansion device. Code 31 is the high-pressure switch. Furnace code 32 is the furnace low-heat pressure switch.`,
+
+  'ac/bryant/33':
+`Bryant outdoor 33 is lost inverter communication, the local fault. It is logged after 2 minutes with no talk between the outdoor control and the inverter, and it becomes fault 48 after 3 failures in 20 minutes or after 20 minutes continuous. The manual says to use the fault 48 checks. Furnace code 33 is a limit switch. This outdoor 33 is not that.`,
+
+  'ac/bryant/46':
+`Bryant outdoor 46 is a brownout. Reset time is 6 minutes. The manual says to check for line voltage approximately greater than 180 V, and to contact the power provider if the reading stays under that. Then check the connections on L1 and L2. If the inverter is not reading voltage properly, replace the inverter. Code 46 does not use the coil checks from 31 or 32. It is not a homeowner meter job.`,
+
+  'ac/bryant/48':
+`Bryant outdoor 48 means the outdoor control and the inverter have stopped communicating. It is elevated from fault 33 after 3 occurrences. Causes are a loose harness between AOC plug PL20 and the inverter, electrical noise, and possible inverter damage. For noise, the manual says the system tries repeated starts. If the harness is good and the inverter is damaged, change the inverter drive. Code 33 is the local fault after 2 minutes. This page is the lockout-style communication fault.`,
+
+  'ac/bryant/53':
+`Bryant outdoor 53 is an outdoor air temperature sensor fault. Causes are a harness not plugged into the outdoor control, a broken or loose harness wire, a broken or damaged sensor, and hardware damage to the outdoor control. If that sensor fails, the manual says defrost is started from coil temperature and time instead. It is not a charge code. Code 55 is the coil temperature sensor.`,
+
+  'ac/bryant/55':
+`Bryant outdoor 55 is a coil temperature sensor fault. The manual wants the thermistor clipped to the distributor entry tube, the harness checked, and the outdoor control replaced only if its hardware is damaged. If this sensor fails, defrost runs at each interval in heating and stops after 2 minutes. That short defrost is why a heat pump can feel like it is not heating. Code 53 is the outdoor air sensor, which fails over to a different defrost rule.`,
+
+  'ac/bryant/56':
+`Bryant outdoor 56 means the outdoor air and coil thermistors are out of range. The manual calls it an event. Causes include heating when cooling was called, a coil thermistor clipped in the wrong place, and an outdoor air sensor body touching sheet metal. One listed action is to inspect the outdoor coil for obstructions. If the thermistors are out of range, defrost runs every heating interval and stops after 2 minutes, the same short defrost as a failed coil sensor. Code 55 is the failed coil sensor itself.`,
+
+  'ac/bryant/83':
+`Bryant outdoor 83 is a low-pressure lockout for 4 hours, elevated from fault 32 after 3 occurrences. The 6-minute trip is code 32. Causes listed for 83 include a service valve left closed, an undercharged system, low indoor airflow in cooling, low outdoor airflow in heating, an EXV problem in heating, a restriction in the filter drier, and an expansion-device restriction. In cooling, check the indoor coil for ice or debris. In heating, check the outdoor coil.`,
+
+  'ac/bryant/84':
+`Bryant outdoor 84 is a high-pressure lockout for 4 hours, elevated from fault 31 when the stage can no longer be lowered. Causes include low outdoor airflow in cooling, low indoor airflow in heating, overcharge, a service valve left closed, a loose high-pressure-switch harness, a restricted filter drier, non-condensables, a faulty pressure switch, and a reversing valve stuck in cooling. In heating, the homeowner check is the indoor coil and the filter. Also check the outdoor coil for ice or debris.`,
+
+  'ac/carrier/49':
+`Carrier 49 is a compressor overcurrent fault, the local code. It elevates to fault 95 after 5 occurrences. Reset time is 6 minutes. Table 6 says to use the fault 95 checks. It is not brownout 46, and it is not the 2-hour lockout 95. Count 4 short flashes and 9 long flashes.`,
+
+  'ac/carrier/57':
+`Carrier 57 is a suction pressure sensor fault. It is not low-pressure trip 32 and not high-pressure switch 31. Causes are an electrical short that destroyed the transducer electronics, and heat damage during brazing. The actions are to compare the transducer reading with a gauge at the service valve, correct the short, and replace the transducer. There is no filter step and no coil-cleaning step on this row.`,
+
+  'ac/carrier/65':
+`Carrier 65 is DC-volts low, speed limiting. The manual's voltage on this row is supply under 197 V. Causes are that low supply, a loose wire in the control box, and internal inverter damage. It is not brownout 46, which uses approximately 180 V. Code 65 has no reset time in the table. The actions are to check supply voltage and call the utility if it is low, find the loose wire, or replace the inverter.`,
+
+  'ac/carrier/88':
+`Carrier 88 is a compressor and inverter lockout for 2 hours, elevated from fault 79 after 5 occurrences. Causes in the table are a blocked inverter heat exchanger, condenser airflow too low, evaporator airflow too low, high load in cold-ambient heating or high-ambient cooling, overcharge, and inverter damage. Code 79 is the local fault when the compressor fails to start. 88 is the lockout after those attempts.`,
+
+  'ac/carrier/95':
+`Carrier 95 is the compressor overcurrent lockout for 2 hours, elevated from fault 49 after 5 occurrences. The 6-minute event is code 49. Causes include high superheat, the compressor outside its allowed envelope, supply voltage, loose connections, phase imbalance, low outdoor airflow, overcharge, inverter damage, and compressor internal damage. The outdoor-coil check is the airflow line. Voltage is compared with the rating plate, not with code 46's 180 V figure.`,
+
+  'ac/goodman/a2':
+`Goodman A2 on the PCBHR104 chart is an outdoor air temperature sensor fault. Digit 2 is A and digit 1 is 2. Causes are a shorted sensor, an open sensor, a disconnected sensor, and a sensor out of range. The actions are to check the connection and replace an open or shorted sensor. It is not outdoor coil sensor A3, which the same chart ties to a heat pump that will not run in heating. The chart is repeated on PCBHR105 with the same fault text.`,
+
+  'ac/goodman/a3':
+`Goodman A3 on the PCBHR104 chart is an outdoor coil temperature sensor fault, and the symptom line says the heat pump fails to operate in heating. Causes match A2: shorted, open, disconnected, or out of range. A2 does not carry that heating-failure symptom. The actions are to check the connection and replace an open or shorted sensor. The same text is repeated on the PCBHR105 chart.`,
+
+  'ac/goodman/b0':
+`Goodman b0 on the PCBHR104 chart means the circulator blower motor is not running when it should be. The air conditioner or heat pump fails to operate. Causes are an indoor blower motor problem and a communications error between the indoor and outdoor units. The actions are the indoor blower motor, its wiring, the indoor control, and repairing or replacing faulty wiring or the motor. It is not b9, which is airflow lower than demanded while the system still runs at reduced performance. The display uses a lowercase b.`,
+
+  'ac/goodman/b9':
+`Goodman b9 means airflow is lower than demanded. The system can keep running at reduced performance, or stay in low stage when high stage was expected. Causes are an indoor blower motor problem, blocked filters, restrictive or undersized ductwork, and an indoor and outdoor unit mismatch. The filter is the homeowner check. Motor, duct size, and the approved system match are technician checks. b0 is the blower that is not running at all.`,
 };
 
 export function codeNote(key: string): string | undefined {

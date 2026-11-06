@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "48",
+  "codeSlug": "48",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 48 is 4 short and 8 long",
+  "meaning": "Lost inverter communications, elevated from fault 33 after 3 occurrences. The outdoor control and the inverter are not talking.",
+  "causes": [
+    "Loose or disconnected harness between outdoor-control plug PL20 and the inverter",
+    "Radio or electrical noise",
+    "Possible inverter damage"
+  ],
+  "diySteps": [
+    "Count 4 short flashes and 8 long flashes. Code 33 is the earlier local version of the same loss",
+    "Technician: verify the harness between PL20 and the inverter. The manual says the system will try repeated starts if the cause is electrical noise. If the inverter is damaged, change the inverter drive"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Harness and inverter work is inside a cabinet that carries line voltage.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

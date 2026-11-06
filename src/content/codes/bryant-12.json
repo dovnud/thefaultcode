@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "12",
+  "codeSlug": "12",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 12 is 1 short and 2 long",
+  "meaning": "Blower on after power-up. The blower runs for 90 seconds if the furnace is powered up during a call for heat, or if that call opens during the blower on-delay. The same guide's sequence says the amber LED flashes 12 during those 90 seconds, then stays on continuously if no fault is found.",
+  "causes": [
+    "115 V or 24 V power returned while the furnace was in a call for heat",
+    "The call for heat opened during the blower on-delay"
+  ],
+  "diySteps": [
+    "Count 1 short flash and 2 long flashes before you turn the furnace off. This pattern is the 90-second blower run, not a lockout",
+    "Wait out the 90 seconds. The chart says the LED returns to continuous on when no fault is present",
+    "If a different counted code replaces 12, use that code. Do not clear history to erase 12"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the blower does not stop after the 90 seconds, or if a fault code replaces 12.",
+  "proNeeded": false,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

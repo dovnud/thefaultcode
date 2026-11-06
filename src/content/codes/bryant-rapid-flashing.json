@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "rapid flashing",
+  "codeSlug": "rapid-flashing",
+  "displayPattern": "Amber LED blinking rapidly without a pause on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02)",
+  "meaning": "Line voltage polarity is reversed, or, on twinned furnaces, the transformers are out of phase. The status table states the polarity fault. The rapid-flashing section is the twinning case.",
+  "causes": [
+    "115 V line polarity reversed",
+    "On twinned furnaces, the transformers are out of phase"
+  ],
+  "diySteps": [
+    "Confirm the LED is flashing rapidly with no pause. A pause between groups of short and long flashes is a numbered code, not this one",
+    "Technician: correct line polarity. On a twinned pair, the same section checks breaker legs and the 115 V leads, then reversing the transformer secondary leads SEC-1 and SEC-2 on the main furnace"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Do not swap line wires in the furnace to experiment.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

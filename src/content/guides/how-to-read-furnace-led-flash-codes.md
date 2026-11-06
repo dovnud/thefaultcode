@@ -4,7 +4,7 @@
  "title": "How to Read a Furnace LED Flash Code",
  "description": "How to find and read the blinking LED or display code on a gas furnace control board, with brand-by-brand examples from the manuals.",
  "answer": "Most modern gas furnaces have a control board that reports faults with a blinking LED or a small digit display, seen through a window in the blower door. Count the flashes (or read the characters), then look the code up in the chart printed inside your furnace door or in its manual. The same number can mean different things on different brands, so always match the code to your brand and model.",
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "faq": [
   {
    "q": "Does the same flash code mean the same thing on every brand?",
@@ -66,7 +66,10 @@
   "york/7-red-flashes",
   "amana/ee3",
   "american-standard/e2-1",
-  "bryant/14"
+  "bryant/14",
+  "bryant/33",
+  "bryant/rapid-flashing",
+  "bryant/25"
  ]
 }
 ---
@@ -85,6 +88,7 @@ The status light or display is on the furnace control board, usually behind the 
 | Amana *MVC96 / *CVC96 | 7-segment display. The chart is in IOG-2015L | [Amana EE3](/amana/ee3/): primary limit open |
 | American Standard S9V2 | 7-segment display. Last 6 faults are in the L6F menu | [American Standard E2.1](/american-standard/e2-1/): flame never sensed |
 | Bryant 926TB | Amber LED. Short flashes, then long flashes | [Bryant 14](/bryant/14/): ignition lockout |
+| Bryant 80% two-stage (TG-GFB80-02) | Same short-then-long amber LED. Rapid flashing with no pause is polarity | [Bryant 33](/bryant/33/): limit circuit fault. The count is in [how to read a Bryant furnace LED](/guides/how-to-read-bryant-furnace-led-codes/) |
 
 ## Step by step
 1. Look through the sight window without removing the door, if your furnace has one.

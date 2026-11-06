@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "33",
+  "codeSlug": "33",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 33 is 3 short and 3 long",
+  "meaning": "Lost inverter communications, the local fault. It occurs after 2 minutes with no communication between the outdoor control and the inverter, and it elevates to fault 48 after 3 consecutive failures within 20 minutes or after 20 minutes of continuous loss.",
+  "causes": [
+    "The service manual points code 33 at the fault 48 checks",
+    "Loose or disconnected harness between outdoor-control plug PL20 and the inverter",
+    "Radio or electrical noise",
+    "Possible inverter damage"
+  ],
+  "diySteps": [
+    "Count 3 short flashes and 3 long flashes. Do not open the outdoor cabinet to reseat a harness",
+    "Technician: check the harness between PL20 and the inverter. For noise, the manual says the system tries repeated starts. If the inverter is damaged, change the inverter drive"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. This cabinet carries line voltage. Furnace code 33 is a limit fault and does not apply here.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

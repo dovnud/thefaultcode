@@ -5,7 +5,7 @@
  "title": "AC High and Low Pressure Codes",
  "description": "What Carrier 31, 32, 83 and 84 and Goodman 01, L1, 02 and L2 mean on an AC or heat pump, and which airflow checks the service manuals leave with the homeowner.",
  "answer": "High-pressure and low-pressure codes mean a safety switch opened or the compressor protector tripped, and the outdoor unit shut itself down. Carrier 31 can escalate to lockout 84, and Carrier 32 can escalate to lockout 83. Goodman 01 or L1 is a low-pressure cutout. The manuals let you check coils, filters and the thermostat setting. Refrigerant charge, service valves and gauges are technician work.",
- "updated": "2026-10-27",
+ "updated": "2026-11-06",
  "faq": [
   {
    "q": "What is the difference between Carrier 31 and Carrier 84?",
@@ -30,6 +30,10 @@
    "url": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf"
   },
   {
+   "name": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+   "url": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf"
+  },
+  {
    "name": "U.S. Department of Energy, Energy Saver guide (PDF)",
    "url": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf"
   },
@@ -38,7 +42,7 @@
    "url": "https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist"
   }
  ],
- "codes": ["ac/carrier/31", "ac/carrier/32", "ac/carrier/83", "ac/carrier/84", "ac/goodman/01-l1", "ac/goodman/02-l2", "ac/goodman/03"]
+ "codes": ["ac/carrier/31", "ac/carrier/32", "ac/carrier/83", "ac/carrier/84", "ac/goodman/01-l1", "ac/goodman/02-l2", "ac/goodman/03", "ac/bryant/31", "ac/bryant/32", "ac/bryant/83", "ac/bryant/84"]
 }
 ---
 ## Pressure codes are a shutdown, not a suggestion
@@ -56,6 +60,10 @@ Outdoor units carry line voltage even when the thermostat is off. The disconnect
 | [Carrier 83](/ac/carrier/83/) | Low pressure lockout for 4 hours, elevated from 32 after 3 occurrences. |
 | [Goodman 01 / L1](/ac/goodman/01-l1/) | Low pressure cutout. The low pressure switch tripped 3 times within the same thermostat call, so the compressor and outdoor fan are off. |
 | [Goodman 02 / L2](/ac/goodman/02-l2/) | High side fault. Four consecutive compressor protector trips with average run time between trips of more than 1 minute and less than 15 minutes, with both pressure switches closed. |
+| [Bryant 31](/ac/bryant/31/) | High pressure switch open on a 288BNV or 189BNV. Steps down, then elevates to 84 on the lowest stage. Reset time is 6 minutes. |
+| [Bryant 84](/ac/bryant/84/) | High pressure lockout for 4 hours, elevated from 31 when the stage can no longer be lowered. |
+| [Bryant 32](/ac/bryant/32/) | Low pressure trip. Elevates to 83 after 3 occurrences. Reset time is 6 minutes. |
+| [Bryant 83](/ac/bryant/83/) | Low pressure lockout for 4 hours, elevated from 32 after 3 occurrences. |
 
 Carrier's status LED uses short flashes and long flashes. 31 is 3 short and 1 long. 32 is 3 short and 2 long. 83 is 8 short and 3 long. 84 is 8 short and 4 long. Count them before you pull the disconnect. Goodman shows 01, L1, 02 or L2 on the outdoor control display.
 

@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "25",
+  "codeSlug": "25",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 25 is 2 short and 5 long",
+  "meaning": "Model selection or setup error. The model plug PL4 is missing or incorrect, or setup switch SW1-1 or SW1-6 is in the wrong position. If 25 flashes only four times at power-up, the control is using the model stored in memory.",
+  "causes": [
+    "Model plug PL4 missing or incorrect",
+    "A heating or cooling call is present while SW1-1 is ON",
+    "A heating or cooling call is present while SW1-6 is ON",
+    "SW1-1 and SW1-6 are both ON",
+    "Two different furnace models are twinned"
+  ],
+  "diySteps": [
+    "Count whether 25 flashes four times and stops, or keeps flashing. Four times means the control defaulted to the stored model. Continuous flashing is the rest of the list",
+    "Turn SW1-1 off after you finish reading stored codes. The recall procedure in this guide uses SW1-1, and leaving it on is one cause of code 25",
+    "Technician: compare the model plug number and resistance with the wiring diagram"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 25 keeps flashing after the setup switches are off and the model plug is seated. Do not twin two different models.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

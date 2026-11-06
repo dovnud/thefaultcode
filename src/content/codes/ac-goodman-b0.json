@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "b0",
+  "codeSlug": "b0",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank, digit 2 is b, digit 1 is 0. The code is b0",
+  "meaning": "Circulator blower motor is not running when it should be. The air conditioner or heat pump fails to operate, and the display shows b0.",
+  "causes": [
+    "Indoor blower motor problem",
+    "Communications error between the indoor and outdoor units"
+  ],
+  "diySteps": [
+    "Confirm the display reads b0, with a lowercase b, not b9. b9 is low airflow while the system is still running",
+    "Technician: check the indoor blower motor and its wiring, the indoor unit control, and repair or replace faulty wiring, the motor, or the control. Turn power off first"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. A blower that is not running is not fixed by changing the filter.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    }
+  ],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

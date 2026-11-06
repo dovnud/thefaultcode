@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "55",
+  "codeSlug": "55",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 55 is 5 short and 5 long",
+  "meaning": "Coil temperature sensor fault. If this sensor fails, the manual says defrost occurs at each time interval during heating and terminates after 2 minutes.",
+  "causes": [
+    "Sensor harness not connected to the outdoor control",
+    "Broken or loose harness wire",
+    "Thermistor not clipped to the distributor entry tube, or in the wrong location",
+    "Broken or damaged sensor, or hardware damage to the outdoor control"
+  ],
+  "diySteps": [
+    "Count 5 short flashes and 5 long flashes. A two-minute defrost, every interval, will not keep the outdoor unit clear in a hard freeze. That is the manual's failover, not a charge you can add",
+    "Technician: clip the sensor to the distributor entry tube, check the harness, and replace the outdoor control only if its hardware is damaged"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 55 is flashing and the heat pump is not keeping up. Do not hose an energized outdoor unit.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "A2",
+  "codeSlug": "a2",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank, digit 2 is A, digit 1 is 2. The code is A2",
+  "meaning": "Outdoor air temperature sensor fault. The integrated control module shows A2. The air conditioner or heat pump may show only this code, with no separate symptom line on this row.",
+  "causes": [
+    "Shorted outdoor air temperature sensor",
+    "Open sensor",
+    "Sensor disconnected",
+    "Sensor out of range"
+  ],
+  "diySteps": [
+    "Write down A2 before you turn power off. Digit 3 on this chart is blank",
+    "Technician: check the sensor connection and replace an open or shorted sensor. Turn power off before the repair. The chart says to use the correct replacement part"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. This is a sensor circuit, not a filter code.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}
