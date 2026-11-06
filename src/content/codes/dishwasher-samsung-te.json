@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "tE",
+  "codeSlug": "te",
+  "displayPattern": "Dishwasher display shows tE",
+  "meaning": "Temperature sensor error: the temperature inside the dishwasher is being detected incorrectly.",
+  "causes": [
+    "Temperature inside the dishwasher is being detected incorrectly"
+  ],
+  "diySteps": [
+    "Empty the dishwasher",
+    "Add detergent and run a normal cycle",
+    "If the error still occurs, switch off power to the dishwasher at the circuit breaker, and request service through Samsung's Support Center"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If tE returns after that cycle, switch off power at the circuit breaker and request service through Samsung's Support Center. HE is also a detection error: Samsung says the inside temperature is being detected incorrectly, and HE's steps start the same way (empty the dishwasher, add detergent, run a normal cycle) before the same breaker-off and service request. HC is different. Samsung says HC means the temperature inside is too hot, and HC's steps start with a 30-second breaker reset. 3E is a hot water supply above 176°F. LG dishwasher tE is a different brand's temperature sensor code. LG sends that one to a technician and does not publish this cycle.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

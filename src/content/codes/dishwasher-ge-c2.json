@@ -1,0 +1,25 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "C2",
+  "codeSlug": "c2",
+  "displayPattern": "Dishwasher display shows C2",
+  "meaning": "The total pump-out cycle exceeds 7 minutes.",
+  "causes": [
+    "Total pump-out cycle ran longer than 7 minutes"
+  ],
+  "diySteps": [
+    "Press RESET to stop the beep"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Not the same as C1, which is a pump-out during drain that exceeded 2 minutes and has air-gap, hose, and disposer checks. Not the same as C3, which is a dishwasher that will not drain and uses a 30-second breaker reset. GE's only solution on the C2 row is Press RESET to stop the beep. If C2 returns after RESET, contact GE service. The same GE page says to schedule a repair with Bodewell when a reset does not clear a code. Do not use the C1 steps on C2.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

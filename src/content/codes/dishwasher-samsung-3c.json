@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "3C",
+  "codeSlug": "3c",
+  "displayPattern": "Dishwasher display shows 3C",
+  "meaning": "Pump operation error: the pump has failed.",
+  "causes": [
+    "Pump failure"
+  ],
+  "diySteps": [
+    "Turn off the dishwasher",
+    "Try to start the cycle again"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": true,
+  "proAdvice": "If the error still occurs, Samsung says to request service through its Support Center. Not the same as Samsung washer 3C, which is a motor error. Not the same as dishwasher 3E, which is a high temperature water supply. Read the characters on the display.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}
