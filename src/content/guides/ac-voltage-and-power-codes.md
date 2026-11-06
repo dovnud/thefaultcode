@@ -5,7 +5,7 @@
  "title": "AC Voltage and Power Codes: Brownout, L8, H8, E5",
  "description": "What Carrier 46, Goodman L8, H8 and E5 mean when an AC or heat pump reports low voltage, high voltage, or an open low-voltage fuse, and what is safe to check.",
  "answer": "Voltage codes mean the outdoor unit saw supply voltage outside the range it will run in, or a low-voltage fuse opened. Carrier 46 is a brownout. Goodman L8 is low line voltage and H8 is high line voltage. Goodman E5 is an open low-voltage fuse. The homeowner check on L8 is whether the breaker tripped. Measuring line voltage and replacing boards are technician steps, and the manuals say to involve the utility if the supply itself is wrong.",
- "updated": "2026-10-27",
+ "updated": "2026-11-06",
  "faq": [
   {
    "q": "What voltage does the Carrier 46 page mention?",
@@ -28,9 +28,13 @@
   {
    "name": "Goodman service manual RS6200007 r27 (hosted by Daikin Comfort)",
    "url": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf"
+  },
+  {
+   "name": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+   "url": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf"
   }
  ],
- "codes": ["ac/carrier/46", "ac/goodman/l8", "ac/goodman/h8", "ac/goodman/e5", "ac/goodman/ee"]
+ "codes": ["ac/carrier/46", "ac/carrier/65", "ac/goodman/l8", "ac/goodman/h8", "ac/goodman/e5", "ac/goodman/ee", "ac/bryant/46"]
 }
 ---
 ## The outdoor unit is watching the supply
@@ -43,6 +47,8 @@ The cabinet stays live when the thermostat is set to Off. Line voltage is presen
 | Code | Meaning in the service manual |
 |---|---|
 | [Carrier 46](/ac/carrier/46/) | Brownout. Low line voltage reaching the unit. Reset time is 6 minutes. The LED pattern is 4 short flashes and 6 long flashes. |
+| [Carrier 65](/ac/carrier/65/) | DC volts low, speed limiting. This row says supply under 197 V. It is not code 46's approximately 180 V check. |
+| [Bryant 46](/ac/bryant/46/) | Brownout on a 288BNV or 189BNV. Reset time is 6 minutes. The manual says approximately greater than 180 V. |
 | [Goodman L8](/ac/goodman/l8/) | Low line voltage. The supply to the outdoor unit is below the specified range. |
 | [Goodman H8](/ac/goodman/h8/) | High line voltage. The unit may seem to run normally, but the compressor protector may be open, so the compressor and outdoor fan are off. |
 | [Goodman E5](/ac/goodman/e5/) | Open fuse. The low-voltage fuse on the control is blown. |

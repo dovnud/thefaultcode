@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "88",
+  "codeSlug": "88",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 88 is 8 short and 8 long",
+  "meaning": "Compressor and inverter lockout for 2 hours, elevated from fault 79 after 5 occurrences. The compressor failed to start often enough that the control stopped the retries.",
+  "causes": [
+    "Blocked inverter heat-exchanger fins",
+    "Condenser airflow too low or off",
+    "Evaporator airflow too low or off",
+    "High load at cold-ambient heating or high-ambient cooling",
+    "Overcharge",
+    "Inverter damage"
+  ],
+  "diySteps": [
+    "With the disconnect and the breaker off, look at the outdoor coil for ice or debris. In heating that coil is the condenser. In cooling, the indoor coil is the evaporator the table also names",
+    "Technician: clean blocked inverter fins, check both fan motors, check charge, and replace the inverter if it is damaged"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 88 is stored. Fault 79 was the control still trying to start the compressor.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

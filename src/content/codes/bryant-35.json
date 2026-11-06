@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "35",
+  "codeSlug": "35",
+  "displayPattern": "Amber LED on a Bryant 987MA Series A modulating furnace (Form 987MA-01T). Short flashes are the first digit and long flashes are the second. Code 35 is 3 short and 5 long",
+  "meaning": "Gas valve fault on a Bryant 987MA modulating furnace. The modulating gas valve failed to respond to a command from the furnace control, or power to the gas valve electronics was interrupted.",
+  "causes": [
+    "Intermittent red, yellow, or orange wire at the gas valve",
+    "Intermittent red, yellow, or orange wire at connector PL8"
+  ],
+  "diySteps": [
+    "Count 3 short flashes and 5 long flashes. This code is from the 987MA modulating guide, not the 80% two-stage chart",
+    "If you smell gas, leave and call the gas supplier from outside",
+    "Technician: check the red, yellow, and orange wires at the gas valve and at PL8"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Do not jumper a modulating gas valve.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/06/987MA-01T.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 987MA Series A modulating furnace troubleshooting guide (Form 987MA-01T)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

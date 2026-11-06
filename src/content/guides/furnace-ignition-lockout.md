@@ -3,7 +3,7 @@
  "title": "Furnace Ignition Lockout: It Tried to Light and Stopped",
  "description": "What an ignition lockout means on York, Amana, American Standard, Bryant, Carrier, Goodman and Trane, and which checks the manuals leave with a homeowner.",
  "answer": "An ignition lockout means the control tried to light the burners, did not prove flame, and stopped trying. York 7 red flashes is three failed trials and a one-hour pause. Bryant 14 and Carrier 14 are four failed attempts and a three-hour reset. Amana EE0 is three retries. The gas-valve switch and whether other gas appliances light are the homeowner checks the manuals name. Gas pressure, the igniter and the flame sensor are technician work.",
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "category": "furnaces",
  "shop": [],
  "faq": [
@@ -38,6 +38,10 @@
    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf"
   },
   {
+   "name": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+   "url": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf"
+  },
+  {
    "name": "Carrier 59SC5 installation, start-up and operating instructions",
    "url": "https://hvactechgroup.com/files/59sc5.pdf"
   },
@@ -56,6 +60,7 @@
   "american-standard/e2-2",
   "american-standard/e6-3",
   "bryant/14",
+  "bryant/34",
   "goodman/ee0",
   "carrier/14",
   "carrier/34",
@@ -76,6 +81,7 @@ Write the code down before you cut power. York counts red flashes with a two-sec
 | [American Standard E2.1](/american-standard/e2-1/) | Retry exceeded. Flame never sensed. One-hour lockout after 3 times. |
 | [American Standard E2.2](/american-standard/e2-2/) | Recycles exceeded. Flame sensed, then lost. One-hour lockout after 10 times. |
 | [Bryant 14](/bryant/14/) | Failed to ignite gas and prove flame in 4 attempts. Auto-reset after 3 hours. The guide says see code 34. |
+| [Bryant 34](/bryant/34/) | Ignition proving failure on the 80% two-stage chart. Three more tries, then lockout 14. The chart names oxide on the flame sensor. |
 | [Carrier 14](/carrier/14/) | Ignition lockout after the proving trials. The paired proving fault is [Carrier 34](/carrier/34/). |
 | [Goodman EE0](/goodman/ee0/) | Lockout after 3 ignition retries on the GR9S96 / GD9S96 guide. |
 | [Trane E2.1](/trane/e2-1/) | Retry exceeded on the S9V2 service facts. |

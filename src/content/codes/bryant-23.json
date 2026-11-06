@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "23",
+  "codeSlug": "23",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 23 is 2 short and 3 long",
+  "meaning": "Pressure switch did not open. The chart says to check for obstructed pressure tubing or a pressure switch stuck closed.",
+  "causes": [
+    "Obstructed pressure tubing",
+    "Pressure switch stuck closed"
+  ],
+  "diySteps": [
+    "Count 2 short flashes and 3 long flashes. Do not jumper the pressure switch",
+    "Technician: check the pressure tubing for an obstruction, then the switch if it is stuck closed"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. A switch that stays closed is a safety-circuit fault, not a filter job.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

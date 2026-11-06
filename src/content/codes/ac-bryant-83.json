@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "83",
+  "codeSlug": "83",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 83 is 8 short and 3 long",
+  "meaning": "Low pressure lockout for 4 hours, elevated from fault 32 after 3 occurrences. The outdoor unit stops retrying the 6-minute trips.",
+  "causes": [
+    "Service valve left closed",
+    "Undercharged system",
+    "Indoor airflow too low or off in cooling",
+    "Outdoor airflow too low or off in heating",
+    "EXV malfunction in heating",
+    "Restriction in the filter drier, expansion device, circuits, or tubing"
+  ],
+  "diySteps": [
+    "In cooling, with power off, check the indoor coil for ice or debris. In heating, check the outdoor coil for ice or debris",
+    "Technician: confirm the service valves are open, check charge with the manual's method, and troubleshoot the EXV or TXV and the filter drier"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. The 4-hour lockout means code 32 already happened three times. Do not add refrigerant to clear it.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

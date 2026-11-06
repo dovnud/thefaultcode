@@ -1,0 +1,48 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "32",
+  "codeSlug": "32",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 32 is 3 short and 2 long",
+  "meaning": "Low-heat pressure switch did not close, or it reopened. If it stays open longer than five minutes, the inducer shuts off for 15 minutes before a retry. If it opens during the blower on-delay, the blower comes on for the selected blower off-delay.",
+  "causes": [
+    "Vent sizing is wrong, or the vent is restricted",
+    "Defective inducer motor or a low 115 V supply to the inducer",
+    "Defective pressure switch",
+    "Low inlet gas pressure, if a low-gas-pressure switch is used",
+    "Excessive wind or inadequate combustion air",
+    "Disconnected or obstructed pressure tubing"
+  ],
+  "diySteps": [
+    "Look at the outdoor intake and exhaust terminations for snow, ice, leaves, or a nest. Leave the pipes connected",
+    "Count 3 short flashes and 2 long flashes before you cut power. A 15-minute inducer pause is the control waiting, not a repair",
+    "Technician: check vent sizing, the inducer and its 115 V supply, the pressure switch, inlet gas pressure if an LGPS is used, and the pressure tubing"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the terminations are clear and 32 returns. Never jumper a pressure switch.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    },
+    {
+      "name": "Pressure switch hose",
+      "partKey": "pressure-hose",
+      "searchTerm": "furnace pressure switch hose"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

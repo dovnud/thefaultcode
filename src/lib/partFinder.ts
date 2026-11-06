@@ -24,6 +24,9 @@ const MANUALS: Record<string, string> = {
   'https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf': 'American Standard S9V2 installer\'s guide (18-CE01D1-1E-EN)',
   'https://www.amana-hac.com/docs/default-source/default-document-library/im-iog-2015l.pdf': 'Amana and Goodman *CVC96 / *MVC96 installation instructions (IOG-2015L)',
   'https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf': 'Bryant 926TB installation, start-up, operating and service instructions',
+  'https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf': 'Bryant 80% variable-speed two-stage furnace troubleshooting guide (TG-GFB80-02)',
+  'https://www.shareddocs.com/hvac/docs/1009/Public/06/987MA-01T.pdf': 'Bryant 987MA Series A modulating furnace troubleshooting guide (Form 987MA-01T)',
+  'https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf': 'Bryant 288BNV / 189BNV service manual (SM288BNV-189BNV-04)',
 };
 
 export type FinderPart = {

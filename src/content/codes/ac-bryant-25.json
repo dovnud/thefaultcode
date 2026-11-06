@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "25",
+  "codeSlug": "25",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 25 is 2 short and 5 long",
+  "meaning": "Invalid model plug or inverter size. The outdoor control does not accept the model plug fitted to this inverter. There is no reset time on this row.",
+  "causes": [
+    "Model plug missing, wrong, damaged, or not fully seated",
+    "Model plug size does not match the inverter. The manual's example is a 2 ton plug on a 3 ton inverter",
+    "Damaged outdoor control (AOC)"
+  ],
+  "diySteps": [
+    "Count 2 short flashes and 5 long flashes. This is the model plug, not a pressure or airflow code",
+    "Technician: install the correct plug, check it for corrosion or breakage, align it to the silkscreen, and compare its resistance with the wiring diagram. Replace the plug, the inverter, or the AOC if that part is damaged"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Do not run the outdoor unit with the model plug removed.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "21",
+  "codeSlug": "21",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 21 is 2 short and 1 long",
+  "meaning": "Gas heating lockout. The control will not auto-reset. The chart says to check for a mis-wired gas valve or a defective control valve relay.",
+  "causes": [
+    "Mis-wired gas valve",
+    "Defective control valve relay"
+  ],
+  "diySteps": [
+    "Count 2 short flashes and 1 long flash. This lockout does not clear itself after 3 hours",
+    "If you smell gas, leave the building and call the gas supplier from outside",
+    "Technician: check the gas-valve wiring and the valve relay on the control"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Do not jumper the gas valve to get heat back.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    },
+    {
+      "name": "Furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

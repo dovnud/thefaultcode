@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "22",
+  "codeSlug": "22",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 22 is 2 short and 2 long",
+  "meaning": "Abnormal flame-proving signal. Flame is proved while the gas valve is de-energized. The inducer runs until the fault clears. The chart says to check for a leaky gas valve or a stuck-open gas valve.",
+  "causes": [
+    "Leaky gas valve",
+    "Stuck-open gas valve"
+  ],
+  "diySteps": [
+    "Count 2 short flashes and 2 long flashes. Leave the furnace off if you smell gas",
+    "Technician: inspect the gas valve. The inducer is supposed to keep running until this fault clears"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician immediately. Do not reset this and leave the furnace running.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "31",
+  "codeSlug": "31",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 31 is 3 short and 1 long",
+  "meaning": "High pressure switch open. The unit steps down capacity for each occurrence and elevates to fault 84 if it happens on the lowest stage. Reset time is 6 minutes, then the unit runs at a reduced stage.",
+  "causes": [
+    "The service manual points code 31 at the fault 84 cause list",
+    "Outdoor airflow too low or off, including a coil blocked by ice or debris",
+    "Overcharge, a closed service valve, or a restriction in the filter drier, EXV, TXV, or tubing",
+    "Loose high-pressure-switch harness, or the switch disconnected from the inverter",
+    "Faulty pressure switch, or the reversing valve stuck in cooling during a heating call"
+  ],
+  "diySteps": [
+    "With the disconnect and the breaker off, check the outdoor coil for ice or debris and clear it if you can do that without opening the electrical panel",
+    "Technician: follow the fault 84 table for charge, service valves, the filter drier, the expansion device, and the pressure-switch harness"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 31 repeats or becomes 84. The 6-minute reset is not a repair.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

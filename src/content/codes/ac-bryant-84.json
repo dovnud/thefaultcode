@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "84",
+  "codeSlug": "84",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 84 is 8 short and 4 long",
+  "meaning": "High pressure lockout for 4 hours, elevated from fault 31 when the stage can no longer be lowered.",
+  "causes": [
+    "Outdoor airflow too low or off in cooling, including a coil blocked by ice or debris",
+    "Indoor airflow too low or off in heating",
+    "Overcharged system, closed service valve, or non-condensables",
+    "Loose high-pressure-switch harness, or the switch disconnected from the inverter",
+    "Restricted filter drier or expansion device",
+    "Reversing valve stuck in cooling during a heating call",
+    "On a furnace-plus-heat-pump system, the furnace running when it should not"
+  ],
+  "diySteps": [
+    "In heating, with power off, check the indoor coil and the filter for debris. Also check the outdoor coil for ice or debris",
+    "Technician: the table says to check discharge pressure with a gauge, and to replace the pressure switch if pressure is less than 600 plus or minus 20 psig and the switch is open. Charge, valves, and the reversing valve are the same visit"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 84 is stored. Code 31 was still stepping the unit down. 84 is the control stopping that.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

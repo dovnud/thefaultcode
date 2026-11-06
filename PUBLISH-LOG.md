@@ -1,5 +1,23 @@
 # Publish log
 
+## 2026-11-06
+
+New exact-match pages. Each code cites a manufacturer document. This entry is the content batch.
+
+Bryant furnaces, troubleshooting guide TG-GFB80-02 (Bryant Heating & Cooling Systems, catalog TG-GFB80-02) on shareddocs.com. Amber LED, short flashes then long flashes. Pages: 12, 15, 21, 22, 23, 24, 25, 31, 32, 33, 34, 41, 43, 45, and rapid flashing. Codes 13 and 14 were already published from the 926TB install manual. The 926TB service-label chart was not transcribed onto these pages. Code 33 and code 34 say so.
+
+Bryant 987MA Series A modulating guide (Form 987MA-01T) on shareddocs.com: codes 35 (gas valve) and 42 (inducer). Those two numbers are not on the 80% chart.
+
+Bryant 288BNV / 189BNV service manual SM288BNV-189BNV-04 (Bryant Heating & Cooling Systems) on shareddocs.com. Outdoor pages under /ac/bryant/: 25, 31, 32, 33, 46, 48, 53, 55, 56, 83, 84.
+
+Carrier Infinity 25VNA8 / 24VNA9 service manual, codes not already on the site: 49, 57, 65, 88, 95.
+
+Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic chart (same manual already used for ASXC/GSXC outdoor codes): A2, A3, b0, b9.
+
+Guides: How to Read a Bryant Furnace LED Code; How to Read a Bryant Evolution Outdoor Status Light. Existing pressure, limit, ignition, no-heat, rollout, flash-code, AC pressure, AC voltage, and heat-pump heating guides link the new codes where the manuals match.
+
+Sitemap, llms.txt, llms-full.txt, and /data/fault-codes.csv and .json are generated from content. Amazon tag unchanged (thefaultcode-20). No new ASINs.
+
 ## 2026-11-05
 
 New heating-season pages. Each code cites a manufacturer document. This entry is the content batch; it is not a live-deploy checklist.

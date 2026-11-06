@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "42",
+  "codeSlug": "42",
+  "displayPattern": "Amber LED on a Bryant 987MA Series A modulating furnace (Form 987MA-01T). Short flashes are the first digit and long flashes are the second. Code 42 is 4 short and 2 long",
+  "meaning": "Inducer motor fault on a Bryant 987MA modulating furnace. The inducer has not started within 20 seconds after a call for heat, the inducer RPM is outside its valid range, or the RPM signal was lost for 5 seconds during operation.",
+  "causes": [
+    "Inducer did not start within 20 seconds of a call for heat",
+    "Inducer RPM outside its valid range, or the RPM signal lost for 5 seconds",
+    "Vent sizing is wrong, or the vent is restricted",
+    "Failed inducer motor"
+  ],
+  "diySteps": [
+    "Look at the outdoor intake and exhaust terminations for a blockage. Leave the pipes connected",
+    "Technician: check vent sizing, a restricted vent, and the inducer motor. This code is not blower fault 41"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the terminations are clear and 42 remains. Inducer replacement is not a homeowner job.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Inducer motor",
+      "partKey": "inducer",
+      "searchTerm": "furnace inducer motor"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/06/987MA-01T.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 987MA Series A modulating furnace troubleshooting guide (Form 987MA-01T)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "57",
+  "codeSlug": "57",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 57 is 5 short and 7 long",
+  "meaning": "Suction pressure sensor fault. The suction pressure transducer reading cannot be trusted. There is no reset time on this row.",
+  "causes": [
+    "Electrical short destroyed the transducer electronics",
+    "Heat damage during brazing"
+  ],
+  "diySteps": [
+    "Count 5 short flashes and 7 long flashes. Do not add refrigerant because a pressure sensor failed",
+    "Technician: compare the transducer reading with a gauge at the service valve, using the transducer chart in the manual. Correct an electrical short and replace the transducer"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Gauge work and transducer replacement are not homeowner checks.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

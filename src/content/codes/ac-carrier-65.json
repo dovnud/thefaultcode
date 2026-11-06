@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "ac-heat-pump",
+  "code": "65",
+  "codeSlug": "65",
+  "displayPattern": "Amber status LED on a Carrier Infinity 25VNA8 heat pump or 24VNA9 air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 65 is 6 short and 5 long",
+  "meaning": "DC volts low, speed limiting. Supply voltage is under 197 V, or a loose wire or the inverter is limiting compressor speed. The table does not list a reset time.",
+  "causes": [
+    "Low supply line voltage, under 197 V",
+    "Loose wire in the control box",
+    "Inverter internal damage"
+  ],
+  "diySteps": [
+    "Count 6 short flashes and 5 long flashes. Do not use code 46's approximately 180 V figure on this row. This row says under 197 V",
+    "Technician: check supply voltage to the outdoor unit and contact the utility if it is low. Check for a loose wire in the unit. Replace the inverter if the damage is internal"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Measuring line voltage at the outdoor unit is not a homeowner check.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA8-24VNA9-4SM.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Carrier Infinity 25VNA8 heat pump / 24VNA9 air conditioner Service Manual (4SM)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

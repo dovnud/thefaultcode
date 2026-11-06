@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "41",
+  "codeSlug": "41",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 41 is 4 short and 1 long",
+  "meaning": "Blower motor fault. The blower failed to reach 250 RPM, or failed to communicate, within 30 seconds after being turned on or within 10 seconds during steady-state operation.",
+  "causes": [
+    "Blower did not reach 250 RPM within 30 seconds of being turned on",
+    "Blower did not communicate within 30 seconds of being turned on",
+    "During steady running, the blower missed 250 RPM or communication within 10 seconds"
+  ],
+  "diySteps": [
+    "Count 4 short flashes and 1 long flash. If this happened on two heating cycles in a row, the chart stores lockout 15",
+    "Technician: the component-test line for code 41 says to check the blower, the wiring, and the furnace control"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Blower RPM and communication checks are not a homeowner meter job.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    },
+    {
+      "name": "Furnace control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

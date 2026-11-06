@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "31",
+  "codeSlug": "31",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 31 is 3 short and 1 long",
+  "meaning": "High-heat pressure switch or relay did not close, or it reopened. The chart says the control relay may be defective or the gas valve may be mis-wired, and it says to see status code 32.",
+  "causes": [
+    "High-heat pressure switch or relay did not close or reopened",
+    "Control relay may be defective",
+    "Gas valve may be mis-wired"
+  ],
+  "diySteps": [
+    "Count 3 short flashes and 1 long flash. Do not jumper the high-heat pressure switch",
+    "Technician: follow status code 32 for the vent, inducer, and tubing checks this chart points at, and check the relay and gas-valve wiring named on 31"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. High-heat pressure faults are not a filter replacement.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    },
+    {
+      "name": "Gas valve",
+      "partKey": "gas-valve",
+      "searchTerm": "furnace gas valve"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

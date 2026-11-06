@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "furnace",
+  "code": "24",
+  "codeSlug": "24",
+  "displayPattern": "Amber LED on a Bryant 80% two-stage variable-speed furnace (troubleshooting guide TG-GFB80-02). Short flashes are the first digit and long flashes are the second. Code 24 is 2 short and 4 long",
+  "meaning": "Secondary voltage fuse is open. The chart says to check for a short circuit in the secondary (24 V) wiring.",
+  "causes": [
+    "Short circuit in the 24 V secondary wiring"
+  ],
+  "diySteps": [
+    "Count 2 short flashes and 4 long flashes. A new fuse on a shorted wire opens again",
+    "Technician: find the short in the 24 V wiring, then replace the fuse with the rating printed on the control"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if the fuse is open. Do not install a higher-amp fuse.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Control-board fuse",
+      "partKey": "fuse",
+      "searchTerm": "furnace control board fuse"
+    }
+  ],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
+  "amazonMax": 0,
+  "updated": "2026-11-06"
+}

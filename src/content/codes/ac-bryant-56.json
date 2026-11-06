@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Bryant",
+  "brandSlug": "bryant",
+  "equipmentType": "ac-heat-pump",
+  "code": "56",
+  "codeSlug": "56",
+  "displayPattern": "Amber status LED on a Bryant 288BNV Evolution heat pump or 189BNV air conditioner. A short flash is 0.25 seconds on and a long flash is 1.0 second on. Code 56 is 5 short and 6 long",
+  "meaning": "Outdoor air and coil thermistors out of range. The manual calls this an event. If the thermistors are out of range, defrost occurs at each heating interval and terminates after 2 minutes.",
+  "causes": [
+    "Thermistor not attached properly or clipped in the wrong place",
+    "Outdoor air sensor body touching sheet metal",
+    "Heating when cooling was demanded",
+    "Sensor harness not connected, or a broken harness wire"
+  ],
+  "diySteps": [
+    "With the disconnect and the breaker off, inspect the outdoor coil for obstructions",
+    "Technician: clip the coil thermistor to the distributor entry tube, install the outdoor air sensor so the body is not on the sheet metal, and check the reversing valve if the unit heats while cooling is called"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if 56 stays on after the coil is clear. The reversing valve is not a homeowner part.",
+  "proNeeded": true,
+  "parts": [],
+  "sourceManualUrl": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Bryant 288BNV heat pump / 189BNV air conditioner service manual (SM288BNV-189BNV-04)",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}

@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "code": "b9",
+  "codeSlug": "b9",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank, digit 2 is b, digit 1 is 9. The code is b9",
+  "meaning": "Airflow is lower than demanded. The air conditioner or heat pump operates at reduced performance, or in low stage when high stage was expected. The display shows b9.",
+  "causes": [
+    "Indoor blower motor problem",
+    "Blocked filters",
+    "Restrictive or undersized ductwork",
+    "Indoor and outdoor unit mismatch"
+  ],
+  "diySteps": [
+    "With the blower off, check the filter and replace it if it is blocked. The chart says to clean or replace filters as needed",
+    "Technician: check the indoor blower motor, resize restrictive ductwork, and verify the indoor and outdoor units are an approved match. The notes point at the specification sheet for airflow and maximum external static pressure"
+  ],
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician if b9 remains after a clean filter. Low stage when you expected high stage can be a system match, which is not a thermostat setting.",
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Furnace air filter",
+      "partKey": "filter",
+      "searchTerm": "furnace air filter"
+    }
+  ],
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes",
+  "amazonMax": 3,
+  "updated": "2026-11-06"
+}
