@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "05",
+  "codeSlug": "05",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is 0 and digit 1 is 5. The code is 05",
+  "meaning": "Open circuit. The compressor and outdoor fan have been off for more than 4 hours, and both pressure switches are closed.",
+  "causes": [
+    "Power is disconnected",
+    "Failed compressor protector",
+    "Compressor not wired to the control the way the chart requires"
+  ],
+  "diySteps": [
+    "Check the circuit breakers and fuses. That is the first action on the 05 row. If a breaker trips again as soon as the unit starts, leave it off",
+    "Technician: check wiring to the unit, the compressor, and the compressor wiring. The chart says the fault clears after 1 normal cycle, or by cycling 24 VAC to the control"
+  ],
+  "proAdvice": "Call a licensed HVAC technician if the breakers and fuses are intact and 05 remains. An open compressor circuit is not a coil-cleaning code.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

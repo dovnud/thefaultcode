@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated furnace control",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "E15",
+  "codeSlug": "e15",
+  "displayPattern": "7-segment display on a Trane S9V2 two-stage variable-speed furnace (Service Facts S9V2-SF-2A-EN): E15",
+  "meaning": "Personality module and control data are both corrupted.",
+  "causes": [
+    "Personality module corrupted",
+    "Faulty integrated furnace control"
+  ],
+  "diySteps": [
+    "Write down E15. The troubleshooting step shown for fault 15 is to disconnect power",
+    "Technician: the chart's possible causes are a corrupted personality module and a faulty IFC. It does not list a filter or a gas-valve check"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. E15 is corrupted unit data on both the personality module and the control.",
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "sourceTitle": "Trane S9V2 Service Facts S9V2-SF-2A-EN (04 Mar 2021), troubleshooting section. Read 2026-11-07"
+}

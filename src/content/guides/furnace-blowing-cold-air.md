@@ -4,7 +4,7 @@
  "title": "Furnace Blowing Cold Air: Common Causes",
  "description": "Why a gas furnace blows cold or room-temperature air, from thermostat fan settings to limit and ignition faults, and what to check.",
  "answer": "A furnace blowing cold air usually means the blower is running while the burners are not. That can be a thermostat fan set to ON instead of AUTO, or a fault where the burners shut down but the blower keeps running to cool the furnace, such as an open limit switch or a failed ignition. Check the thermostat and filter, then read the control board code.",
- "updated": "2026-10-31",
+ "updated": "2026-11-07",
  "faq": [
   {
    "q": "Why does my furnace blow cold air at the start?",
@@ -41,7 +41,12 @@
   "goodman/ee3",
   "carrier/33",
   "carrier/34",
-  "rheem/11"
+  "rheem/11",
+  "goodman/eaf",
+  "goodman/eal",
+  "goodman/eas",
+  "goodman/ear",
+  "carrier/12"
  ]
 }
 ---
@@ -52,8 +57,12 @@
 | Blower runs, no heat | Limit switch open, blower runs to cool the furnace | [Goodman EE3](/goodman/ee3/), [Carrier 33](/carrier/33/) |
 | Burners try, then stop | Ignition or flame sensing failure | [Carrier 34](/carrier/34/), [Rheem 11](/rheem/11/), [Trane E2.1](/trane/e2-1/) |
 | No burner attempt | Pressure switch or lockout | [Goodman EE2](/goodman/ee2/), [Carrier 14](/carrier/14/) |
+| Heat stops and only the fan runs | R-32 mitigation on a *R9S96, *D9S96 or *R9S92 single-stage furnace in IOG-2037B | [Goodman EAF](/goodman/eaf/), [EAL](/goodman/eal/), [EAS](/goodman/eas/), [Ear](/goodman/ear/) |
+| Blower runs about 90 seconds after power returns | Normal on a Carrier 59SC5, not a failed part | [Carrier 12](/carrier/12/) |
 
 The Goodman EE3 entry in its manual notes the circulator blower runs continuously with no heat when the primary limit is open, and Carrier says the blower runs for 4 minutes or until the open switch closes for code 33.
+
+IOG-2037B uses a different sentence for EAF, EAL, EAS and Ear: heating stops and only the fan runs because the furnace is in R-32 mitigation. EAF is lost communication with the R-32 sensor. EAL is the sensor reporting a refrigerant leak. EAS is a sensor fault. Ear is an A2L relay fault. Those four are not the limit code EE3, and they are not a thermostat left on Fan. Carrier 12 is the opposite kind of blower run: the service label calls a 90-second blower after power-up normal operation.
 
 ## Safe checks
 1. Thermostat: set to HEAT, fan to AUTO, setpoint above room temperature.

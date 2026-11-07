@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "proNeeded": false,
+  "parts": [
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "d6",
+  "codeSlug": "d6",
+  "displayPattern": "Dual 7-segment display on a Rheem R96V / (-)96V furnace (installation instructions 92-24161-124-03): d6",
+  "meaning": "Horsepower conflict on the memory card. The motor's horsepower does not match the card, but the model data in the furnace control does match the motor. This is a non-critical fault, shown in standby.",
+  "causes": [
+    "Blower motor was replaced with the wrong horsepower",
+    "Memory card or furnace control was replaced with the wrong part"
+  ],
+  "diySteps": [
+    "If the furnace is running and d6 appears only in standby, the manual says operation should proceed as normal",
+    "Technician: determine the correct motor and model-data card and replace the incorrect part. The manual says the original card must be used when it is available, and a card from another furnace can damage the heat exchanger"
+  ],
+  "proAdvice": "Call a licensed HVAC technician before anyone replaces the blower motor or the memory card. d6 is a parts-match fault, not a lockout.",
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "sourceTitle": "Rheem (-)96V series installation instructions 92-24161-124-03, Table 20 R96V fault codes. Read 2026-11-07"
+}

@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "08",
+  "codeSlug": "08",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is 0 and digit 1 is 8. The code is 08",
+  "meaning": "No line voltage. The unit may appear to be operating normally, and the compressor protector may be open so the compressor and outdoor fan are off.",
+  "causes": [
+    "No line voltage at the outdoor unit"
+  ],
+  "diySteps": [
+    "Check the circuit breaker and the fuses. That is the first action on the 08 row. If the breaker trips again immediately, leave it off",
+    "Technician: verify the unit is connected to the power supply as specified on the rating plate. The notes on this row say the control detects line voltage less than 185 VAC, and the fault clears if line voltage increases above 185 VAC"
+  ],
+  "proAdvice": "Call a licensed HVAC technician if the breaker and fuses are not the cause. On this same PCBHR104 chart, L8 is the low-line-voltage fault and its notes use the same 185 VAC sentences. 08 is labeled no line voltage. Neither number is Carrier's approximately 180 V figure.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

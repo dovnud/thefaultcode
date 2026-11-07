@@ -4,8 +4,8 @@
  "shop": ["voltage-tester"],
  "title": "AC Voltage and Power Codes: Brownout, L8, H8, E5",
  "description": "What Carrier 46, Goodman L8, H8 and E5 mean when an AC or heat pump reports low voltage, high voltage, or an open low-voltage fuse, and what is safe to check.",
- "answer": "Voltage codes mean the outdoor unit saw supply voltage outside the range it will run in, or a low-voltage fuse opened. Carrier 46 is a brownout. Goodman L8 is low line voltage and H8 is high line voltage. Goodman E5 is an open low-voltage fuse. The homeowner check on L8 is whether the breaker tripped. Measuring line voltage and replacing boards are technician steps, and the manuals say to involve the utility if the supply itself is wrong.",
- "updated": "2026-11-06",
+ "answer": "Voltage codes mean the outdoor unit saw supply voltage outside the range it will run in, or a low-voltage fuse opened. Carrier 46 is a brownout. Goodman L8 is low line voltage and H8 is high line voltage. On the PCBHR104 chart in that Goodman manual, 08 is no line voltage and 09 is low secondary voltage. Goodman E5 is an open low-voltage fuse. The homeowner check on L8 and on 08 is whether the breaker tripped. Measuring line voltage and replacing boards are technician steps, and the manuals say to involve the utility if the supply itself is wrong.",
+ "updated": "2026-11-07",
  "faq": [
   {
    "q": "What voltage does the Carrier 46 page mention?",
@@ -34,7 +34,7 @@
    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/02/SM288BNV-189BNV-04.pdf"
   }
  ],
- "codes": ["ac/carrier/46", "ac/carrier/65", "ac/goodman/l8", "ac/goodman/h8", "ac/goodman/e5", "ac/goodman/ee", "ac/bryant/46"]
+ "codes": ["ac/carrier/46", "ac/carrier/65", "ac/goodman/l8", "ac/goodman/h8", "ac/goodman/08", "ac/goodman/09", "ac/goodman/e5", "ac/goodman/ee", "ac/bryant/46"]
 }
 ---
 ## The outdoor unit is watching the supply
@@ -50,6 +50,8 @@ The cabinet stays live when the thermostat is set to Off. Line voltage is presen
 | [Carrier 65](/ac/carrier/65/) | DC volts low, speed limiting. This row says supply under 197 V. It is not code 46's approximately 180 V check. |
 | [Bryant 46](/ac/bryant/46/) | Brownout on a 288BNV or 189BNV. Reset time is 6 minutes. The manual says approximately greater than 180 V. |
 | [Goodman L8](/ac/goodman/l8/) | Low line voltage. The supply to the outdoor unit is below the specified range. |
+| [Goodman 08](/ac/goodman/08/) | No line voltage on the PCBHR104 chart. The notes say the control detects line voltage less than 185 VAC. |
+| [Goodman 09](/ac/goodman/09/) | Low pilot (secondary) voltage. The notes say under 18 VAC, clearing above 21 VAC. |
 | [Goodman H8](/ac/goodman/h8/) | High line voltage. The unit may seem to run normally, but the compressor protector may be open, so the compressor and outdoor fan are off. |
 | [Goodman E5](/ac/goodman/e5/) | Open fuse. The low-voltage fuse on the control is blown. |
 | [Goodman EE](/ac/goodman/ee/) | Board misoperation. The manual lists welded compressor relay contacts as the error condition. |
@@ -79,6 +81,16 @@ Technician steps on L8: correct the low line voltage and contact the local utili
 H8 means the supply is above the specified range. Goodman notes the unit may seem to run normally, while the compressor protector is open and the compressor and outdoor fan are off. From the house it can look like "the air conditioner died" even though the code is a high-voltage code, not a dead compressor.
 
 Both steps are technician: check that the voltage to the system is within specification, and if it is not, check the voltage wires and involve the electric company if necessary. If the voltage is within specification, replace the board. Call a licensed HVAC technician, and the electric company if they confirm the supply is high. There is no homeowner breaker step on H8 the way there is on L8. A breaker does not protect you from voltage that is too high.
+
+## Goodman 08, no line voltage
+On the PCBHR104 unitary chart in RS6200007 r27, display 08 is labeled no line voltage. The unit may appear to run normally, and the compressor protector may be open, so the compressor and outdoor fan are off. The first action on that row is to check the circuit breaker and the fuses, then verify the unit is connected as the rating plate specifies.
+
+The notes on the 08 row say the control detects line voltage less than 185 VAC, and the fault clears if line voltage rises above 185 VAC. [Goodman L8](/ac/goodman/l8/) is the low-line-voltage fault on the same chart family. The L8 page already on this site was taken from the earlier ASXC/GSXC status section of this manual, and that section does not print a number. The PCBHR104 notes for L8 use the same 185 VAC sentences as 08. Those sentences are not Carrier 46's approximately 180 V check, and they are not a number added for this page. Measuring them is technician work. If the breaker trips again as soon as the unit starts, leave it off.
+
+## Goodman 09, low secondary voltage
+09 is labeled low pilot voltage. It is the 24-volt side, not the line. The chart says the unit may appear to operate normally. Causes on the row are secondary voltage less than 18 VAC, an overloaded transformer, and low line voltage. The actions are to check the fuse, correct the low secondary voltage, and check the transformer. The notes say the fault clears if secondary voltage rises above 21 VAC. Both numbers are on that PCBHR104 row. They are a technician's meter readings.
+
+09 is not [Goodman E5](/ac/goodman/e5/). E5 is the open low-voltage fuse. 09 can still send you to that fuse, but the fault name is the low secondary voltage itself.
 
 ## Goodman E5, the low-voltage fuse
 E5 is not line voltage. It is the low-voltage fuse on the control, the fuse in the 24-volt circuit that runs the thermostat and the contactor coil. Causes: a blown fuse, and a short in the low-voltage wiring.

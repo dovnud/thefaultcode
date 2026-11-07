@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated control board",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "Ear",
+  "codeSlug": "ear",
+  "displayPattern": "7-segment display on a *R9S96, *D9S96 or *R9S92 single-stage furnace in IOG-2037B (Goodman GR9S96, GD9S96 and GR9S92, and the Amana models in that same guide): Ear",
+  "meaning": "A2L relay fault: heating stops and only the fan runs while the furnace is in mitigation mode. The fault is on the furnace control board.",
+  "causes": [
+    "A2L relay fault on the furnace control board"
+  ],
+  "diySteps": [
+    "Write down Ear before cycling power. The chart lists a power cycle only with the relay check, not as a stand-alone fix",
+    "Technician: investigate the A2L relay, cycle power, and replace the integrated control board if the fault remains"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. Ear is a control-board relay fault in mitigation mode.",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "sourceTitle": "Goodman *R9S96/*D9S96 and *R9S92 single-stage gas furnace installation instructions (IOG-2037B), 1-stage troubleshooting codes. Read 2026-11-07"
+}

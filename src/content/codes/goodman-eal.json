@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EAL",
+  "codeSlug": "eal",
+  "displayPattern": "7-segment display on a *R9S96, *D9S96 or *R9S92 single-stage furnace in IOG-2037B (Goodman GR9S96, GD9S96 and GR9S92, and the Amana models in that same guide): EAL",
+  "meaning": "R-32 sensor reports a refrigerant leak: heating stops and only the fan runs while the furnace is in mitigation mode. The chart says normal operation returns once a leak is not detected and the 5-minute delay is over.",
+  "causes": [
+    "R-32 sensor reports a refrigerant leak, so the furnace stays in mitigation mode"
+  ],
+  "diySteps": [
+    "If heat has stopped and only the fan is running, write down EAL and leave the panels on",
+    "Technician: the chart says to investigate the indoor coil for a refrigerant leak. The furnace resumes normal operation once a leak is not detected and the 5-minute delay is over"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. A refrigerant leak is not a filter change or a breaker reset.",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "sourceTitle": "Goodman *R9S96/*D9S96 and *R9S92 single-stage gas furnace installation instructions (IOG-2037B), 1-stage troubleshooting codes. Read 2026-11-07"
+}

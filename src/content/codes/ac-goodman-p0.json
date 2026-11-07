@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Run capacitor",
+      "partKey": "capacitor",
+      "searchTerm": "air conditioner run capacitor"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "P0",
+  "codeSlug": "p0",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is P and digit 1 is 0. The code is P0",
+  "meaning": "Compressor protector open. The compressor is off.",
+  "causes": [
+    "No current through the run or start windings",
+    "Compressor run winding is open",
+    "Compressor not wired to the control, or other faulty compressor wiring",
+    "Failed run capacitor or faulty run-capacitor wiring"
+  ],
+  "diySteps": [
+    "Write down P0 before power is cycled. The chart says the fault can clear after 1 normal cycle or by cycling 24 VAC to the control, after the cause is corrected",
+    "Technician: check the compressor, the wiring, and the run capacitor"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. An open compressor protector is not cleared by rinsing the outdoor coil.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

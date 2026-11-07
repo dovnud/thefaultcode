@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Run capacitor",
+      "partKey": "capacitor",
+      "searchTerm": "air conditioner run capacitor"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "06",
+  "codeSlug": "06",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is 0 and digit 1 is 6. The code is 06",
+  "meaning": "Open start circuit. The compressor and outdoor fan are off, and both pressure switches are closed.",
+  "causes": [
+    "Compressor start winding is open",
+    "Failed run capacitor",
+    "Faulty run-capacitor wiring",
+    "Compressor not wired to the control, or other faulty compressor wiring"
+  ],
+  "diySteps": [
+    "Write down 06. It is the open start circuit, not the 4-trip lockout L6",
+    "Technician: check the compressor, the run capacitor, and the wiring. The chart says the fault clears after 1 normal cycle, or by cycling 24 VAC to the control"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. A failed run capacitor and an open start winding are inside the outdoor cabinet.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

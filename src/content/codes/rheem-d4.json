@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "proNeeded": false,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "d4",
+  "codeSlug": "d4",
+  "displayPattern": "Dual 7-segment display on a Rheem R96V / (-)96V furnace (installation instructions 92-24161-124-03): d4",
+  "meaning": "No valid model data on the memory card. This is a non-critical fault. The furnace should still operate, and d4 is displayed in standby.",
+  "causes": [
+    "Memory card is blank, missing, or corrupt and cannot be read",
+    "A valid copy of the model data is still stored in the furnace control microprocessor"
+  ],
+  "diySteps": [
+    "If the furnace is heating or cooling and the display shows d4 only while it is idle, that matches the manual: operation should proceed as normal",
+    "Technician: replace the card with the original card or the correct replacement. The manual says never to use a card from another furnace, condenser, or air handler"
+  ],
+  "proAdvice": "Call a licensed HVAC technician to replace a corrupt or missing card. d4 does not by itself shut the furnace down. d1 does.",
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "sourceTitle": "Rheem (-)96V series installation instructions 92-24161-124-03, Table 20 R96V fault codes. Read 2026-11-07"
+}

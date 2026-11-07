@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "09",
+  "codeSlug": "09",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is 0 and digit 1 is 9. The code is 09",
+  "meaning": "Low pilot voltage. The air conditioner or heat pump may appear to be operating normally. The chart's note says the control detects secondary voltage less than 18 VAC.",
+  "causes": [
+    "Secondary voltage less than 18 VAC",
+    "Transformer overloaded",
+    "Low line voltage"
+  ],
+  "diySteps": [
+    "Write down 09. This is the low-voltage secondary circuit, not line-voltage code 08 or L8",
+    "Technician: check the fuse, correct the low secondary voltage, and check the transformer. The chart says the fault clears if secondary voltage rises above 21 VAC"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. The 18 VAC and 21 VAC figures are the PCBHR104 notes for 09. They are meter readings, not a homeowner test.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Integrated furnace control",
+      "partKey": "control-board",
+      "searchTerm": "furnace control board"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "E14",
+  "codeSlug": "e14",
+  "displayPattern": "7-segment display on a Trane S9V2 two-stage variable-speed furnace (Service Facts S9V2-SF-2A-EN): E14",
+  "meaning": "Personality module missing: the control cannot read the information stored on the board.",
+  "causes": [
+    "Personality module not installed or not fully seated",
+    "Personality module not programmed",
+    "Faulty integrated furnace control"
+  ],
+  "diySteps": [
+    "Do not pull the control board to look for the module with power on",
+    "Technician: disconnect power, then install or fully seat the personality module. The chart lists a module that was not programmed, and a faulty IFC, as possible causes"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. E14 is a missing personality module. E15 is the module and the control both corrupted.",
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "sourceTitle": "Trane S9V2 Service Facts S9V2-SF-2A-EN (04 Mar 2021), troubleshooting section. Read 2026-11-07"
+}

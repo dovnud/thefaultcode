@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "proNeeded": false,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "12",
+  "codeSlug": "12",
+  "displayPattern": "Amber status LED on a Carrier 59SC5: 1 short flash, then 2 long flashes (code 12)",
+  "meaning": "Blower on after power-up. The service label calls this normal operation. The blower runs for 90 seconds if the furnace was powered up during a call for heat, or if that call opened during the blower on-delay.",
+  "causes": [
+    "115 VAC or 24 VAC power came up while a call for heat was present (R-W closed)",
+    "The heat call opened during the blower on-delay"
+  ],
+  "diySteps": [
+    "Count 1 short flash and 2 long flashes. If the blower stops after about 90 seconds, that matches the label",
+    "If the blower never stops, the call for heat may still be closed. A technician checks that circuit. Code 12 is not a limit lockout and not an ignition lockout"
+  ],
+  "proAdvice": "Call a licensed HVAC technician if the blower runs and the burners never light, or if the blower does not stop. A 90-second run right after power returns is the normal code 12 the label describes.",
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "sourceTitle": "Carrier 59SC5A installation, start-up, operating and service instructions (Catalog No. 59SC5A-01SI), Fig. 55 service label. Read 2026-11-07"
+}

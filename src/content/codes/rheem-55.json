@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Pressure switch",
+      "partKey": "pressure-switch",
+      "searchTerm": "furnace pressure switch"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "55",
+  "codeSlug": "55",
+  "displayPattern": "Dual 7-segment display on a Rheem R96V / (-)96V furnace (installation instructions 92-24161-124-03): 55",
+  "meaning": "High pressure switch closed while the inducer is off. This is a critical fault for gas heat. Cooling can still run. The code is present during a heat call before pre-purge.",
+  "causes": [
+    "Faulty high pressure switch",
+    "Pressure switch physically bypassed",
+    "Loose or faulty wiring",
+    "Abnormally high negative pressure on the vent with the inducer not running"
+  ],
+  "diySteps": [
+    "Do not jumper or bypass the pressure switch. The manual lists a field bypass as a cause of 55, and says to remove it",
+    "Technician: replace the high pressure switch if it is faulty, remove any bypass and correct the reason it was added, repair the wiring, and check venting and terminations against the installation instructions"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. A switch that stays closed with the inducer off is a safety-circuit fault. Code 57 is the high pressure switch open with the inducer on high speed.",
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "sourceTitle": "Rheem (-)96V series installation instructions 92-24161-124-03, Table 20 R96V fault codes. Read 2026-11-07"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "d4",
+  "codeSlug": "d4",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is d and digit 1 is 4. The code is d4",
+  "meaning": "Invalid shared data. The air conditioner or heat pump fails to operate. The chart says the code clears once data is loaded.",
+  "causes": [
+    "Shared data on the Bluetooth Shared Data Loader BTSDL01 has been rejected"
+  ],
+  "diySteps": [
+    "Write down d4. The chart says this code clears once data is loaded",
+    "Technician: verify communicating or legacy wiring and re-populate the correct shared data for this model with BTSDL01, or wire the system as a legacy system",
+    "Technician: turn power off before inserting or removing the loader"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. d4 is rejected shared data from the loader, not an airflow code.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}
