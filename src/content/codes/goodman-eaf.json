@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EAF",
+  "codeSlug": "eaf",
+  "displayPattern": "7-segment display on a *R9S96, *D9S96 or *R9S92 single-stage furnace in IOG-2037B (Goodman GR9S96, GD9S96 and GR9S92, and the Amana models in that same guide): EAF",
+  "meaning": "Lost communication with the R-32 sensor: heating stops and only the fan runs because the furnace is in mitigation mode.",
+  "causes": [
+    "Furnace not paired with an R-32 cooling unit",
+    "Loose or damaged R-32 sensor wire",
+    "R-32 sensor that the chart says to replace"
+  ],
+  "diySteps": [
+    "If the fan is running and the burners are not, write down EAF before you shut the furnace off",
+    "Technician: the chart says the furnace may not be paired with an R-32 cooling unit, and points to the R-32 information section of IOG-2037B",
+    "Technician: check that the R-32 sensor wire is connected and not damaged, and replace the R-32 sensor if that is what the chart calls for"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. EAF is a sensor-communication fault in mitigation mode, not a thermostat fan setting.",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "sourceTitle": "Goodman *R9S96/*D9S96 and *R9S92 single-stage gas furnace installation instructions (IOG-2037B), 1-stage troubleshooting codes. Read 2026-11-07"
+}

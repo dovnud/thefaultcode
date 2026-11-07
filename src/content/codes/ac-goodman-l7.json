@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "L7",
+  "codeSlug": "l7",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is L and digit 1 is 7. The code is L7",
+  "meaning": "Open run-circuit lockout. The open run circuit was detected 4 times, with a 5-minute delay between each detection. The compressor and outdoor fan are off.",
+  "causes": [
+    "Compressor run winding is open",
+    "Compressor not wired to the control",
+    "Faulty compressor wiring"
+  ],
+  "diySteps": [
+    "Write down L7. The single open-run trip is 07. L7 is the lockout after four detections",
+    "Technician: check the compressor and the wiring. The chart says this lockout must be cleared by cycling 24 VAC to the control"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. L7 is a lockout of the run circuit, not a pressure-switch code.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

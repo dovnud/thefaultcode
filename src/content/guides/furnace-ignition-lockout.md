@@ -3,7 +3,7 @@
  "title": "Furnace Ignition Lockout: It Tried to Light and Stopped",
  "description": "What an ignition lockout means on York, Amana, American Standard, Bryant, Carrier, Goodman and Trane, and which checks the manuals leave with a homeowner.",
  "answer": "An ignition lockout means the control tried to light the burners, did not prove flame, and stopped trying. York 7 red flashes is three failed trials and a one-hour pause. Bryant 14 and Carrier 14 are four failed attempts and a three-hour reset. Amana EE0 is three retries. The gas-valve switch and whether other gas appliances light are the homeowner checks the manuals name. Gas pressure, the igniter and the flame sensor are technician work.",
- "updated": "2026-11-06",
+ "updated": "2026-11-07",
  "category": "furnaces",
  "shop": [],
  "faq": [
@@ -64,7 +64,9 @@
   "goodman/ee0",
   "carrier/14",
   "carrier/34",
-  "trane/e2-1"
+  "trane/e2-1",
+  "trane/e2-3",
+  "trane/e11"
  ]
 }
 ---
@@ -104,5 +106,8 @@ The rest of the lists are inside the furnace.
 Flame current numbers differ by manual. Do not mix them. York's TG9S page says normal is about 3.7 microamps, the low warning starts at 1.5, and lockout is 0.1. American Standard's S9V2 sequence says typical current is 0.75 to 3.0 microamps. Those are meter readings for a technician. [York continuous amber](/york/continuous-amber/) and [Amana EE6](/amana/ee6/) are the "still running, but the signal is weak" codes. They are how a lockout often starts.
 
 The [winter no-heat checklist](/guides/furnace-no-heat-winter-2026/) is the outdoor vent and filter pass. A pressure switch that never closes is a different fault: [York 3 red flashes](/york/3-red-flashes/) and [Amana EE2](/amana/ee2/). Do not treat those as ignition lockouts.
+
+## Gas-valve codes that are not the retry lockout
+[Trane E2.3](/trane/e2-3/) is not [Trane E2.1](/trane/e2-1/). The S9V2 service facts say the 1st stage gas valve was not energized when it should have been, 10 times in the same call for heat, and 24 VAC was not sensed on MVL. The step on that row is to replace the integrated furnace control. [Trane E11](/trane/e11/) is the control reporting failed internal gas-valve relays, or 24 VAC at the 2nd stage gas valve. On the Goodman single-stage chart, [EEb](/goodman/eeb/) is the gas valve not energized when it should be, and [EEC](/goodman/eec/) is the valve energized when it should not be. None of those is an ignition-retry counter.
 
 > **Safety first:** If you smell gas, don't touch light switches or use a phone inside. Leave the building and call your gas utility from outside. Turn off power to the furnace before opening any panel, and never bypass or jumper a safety switch. Gas, venting, wiring and control-board work is for a licensed HVAC technician.

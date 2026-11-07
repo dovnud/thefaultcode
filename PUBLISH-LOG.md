@@ -1,5 +1,21 @@
 # Publish log
 
+## 2026-11-07
+
+New exact-match pages. Each code cites a manufacturer document read on this date. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content at build. Amazon tag unchanged (thefaultcode-20). No new ASINs. amazonMax 0 on every new page.
+
+Goodman *R9S96 / *D9S96 / *R9S92 single-stage furnaces, IOG-2037B (already used for the EE and E10 pages). Codes that were on the 1-stage troubleshooting chart and not yet published: EEJ, EEH, EbL, EbU, EAF, EAL, EAS, Ear.
+
+Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic chart (same manual already used for the outdoor codes): d0, d1, d3, d4, 05, 06, L6, 07, L7, 08, 09, P0. 08 and 09 are also linked from the AC voltage guide. The 185 VAC note on 08 is the PCBHR104 row, not a change to the published L8 page.
+
+Rheem (-)96V installation instructions 92-24161-124-03, Table 20 (same manual already used for the numbered R96V codes): d1, d4, d6, 55, 58. Code 55 is linked from the pressure-switch guide.
+
+Trane S9V2 Service Facts S9V2-SF-2A-EN (same document already used for the published S9V2 codes): E2.3, E2.4, E3.3, E7.2, E10, E11, E13, E14, E15, E17, E18. E3.3 is linked from the pressure-switch guide. E2.3 and E11 are linked from the ignition-lockout guide as gas-valve faults, not retry lockouts.
+
+Carrier 59SC5A service label, Fig. 55 (same manual already used for the published Carrier furnace codes): 11, 12, continuous off, continuous on.
+
+Guides updated 2026-11-07 where those manuals match: furnace pressure switch, AC voltage and power, how to read a furnace LED, furnace ignition lockout, furnace blowing cold air.
+
 ## 2026-11-06
 
 New exact-match pages. Each code cites a manufacturer document. This entry is the content batch.

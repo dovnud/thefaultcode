@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "58",
+  "codeSlug": "58",
+  "displayPattern": "Dual 7-segment display on a Rheem R96V / (-)96V furnace (installation instructions 92-24161-124-03): 58",
+  "meaning": "Water circuit open. The control cannot see continuity between pins 1 and 2 of connector P4, so it does not see both water sensors. Gas heat will not run. Other modes, such as cooling, should.",
+  "causes": [
+    "Damaged wiring between the control and a water sensor",
+    "Connector P4 or a sensor connector not seated",
+    "A water sensor has been removed"
+  ],
+  "diySteps": [
+    "Write down 58. It is not 59. Code 59 means water was sensed in the collector box. Code 58 means the sensor circuit is open",
+    "Technician: repair or replace the wiring, reseat P4 and the sensor connectors, and replace a missing water sensor"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. 58 is an open water-sensor circuit, not a clogged drain.",
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://pts.rheem.com/docstore/webdocs/Public/ServicePublic/Trouble2a/pdfs/Gas_Furnace/R96V/92-24161-124-03_R96V.pdf",
+  "sourceTitle": "Rheem (-)96V series installation instructions 92-24161-124-03, Table 20 R96V fault codes. Read 2026-11-07"
+}

@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "proNeeded": false,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "Continuous on",
+  "codeSlug": "continuous-on",
+  "displayPattern": "Amber status LED on a Carrier 59SC5 stays on, with no flashes",
+  "meaning": "Control has 24 VAC power: a steady amber LED is not a fault code.",
+  "causes": [
+    "The furnace control has 24 VAC power and is not flashing a status code"
+  ],
+  "diySteps": [
+    "A steady amber light matches the label's continuous-on line. It means the control has 24 VAC. It does not name a failed part",
+    "If the furnace still has no heat, watch for a flash code and look that number up. A technician is the next step when there is no heat and the light never flashes a code"
+  ],
+  "proAdvice": "Call a licensed HVAC technician if there is no heat and the LED stays on without a flash code. Continuous on is the powered, no-code state. Rapid flashing is reversed polarity, which is a different pattern.",
+  "brand": "Carrier",
+  "brandSlug": "carrier",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://hvactechgroup.com/files/59sc5.pdf",
+  "sourceTitle": "Carrier 59SC5A installation, start-up, operating and service instructions (Catalog No. 59SC5A-01SI), Fig. 55 service label. Read 2026-11-07"
+}

@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "code": "EAS",
+  "codeSlug": "eas",
+  "displayPattern": "7-segment display on a *R9S96, *D9S96 or *R9S92 single-stage furnace in IOG-2037B (Goodman GR9S96, GD9S96 and GR9S92, and the Amana models in that same guide): EAS",
+  "meaning": "R-32 sensor fault: heating stops and only the fan runs while the furnace is in mitigation mode.",
+  "causes": [
+    "R-32 sensor fault while the furnace is in mitigation mode"
+  ],
+  "diySteps": [
+    "Write down EAS. Heat is off and the fan can still be running",
+    "Technician: the chart says to investigate the R-32 sensor and replace it"
+  ],
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proAdvice": "Call a licensed HVAC technician. EAS is the sensor-fault mitigation code, not the leak code EAL and not the lost-communication code EAF.",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
+  "sourceTitle": "Goodman *R9S96/*D9S96 and *R9S92 single-stage gas furnace installation instructions (IOG-2037B), 1-stage troubleshooting codes. Read 2026-11-07"
+}

@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "d0",
+  "codeSlug": "d0",
+  "displayPattern": "PCBHR104 unitary diagnostic display in Goodman service manual RS6200007 r27 (ASXC, DSXC, GSXC condensing units and ASZC, DSZC, GSZC heat pumps). Digit 3 is blank. Digit 2 is d and digit 1 is 0. The code is d0",
+  "meaning": "Data not yet on the network. The air conditioner or heat pump fails to operate.",
+  "causes": [
+    "The unit is wired as part of a communicating system and the integrated control module does not contain any shared data"
+  ],
+  "diySteps": [
+    "Write down d0 before power is turned off",
+    "Technician: verify whether the system is communicating or legacy. Populate shared data with the Bluetooth Shared Data Loader BTSDL01 for that model, or wire the system as a legacy system",
+    "Technician: the chart says to turn power off before the repair, insert the loader before turning power on, and turn power off again before removing the loader"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. d0 is missing shared data on a communicating system, not a filter code.",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "ac-heat-pump",
+  "safetyNote": "Outdoor units carry line voltage even when the thermostat is off. Switch off the unit's disconnect and breaker before touching anything. Refrigerant, wiring, compressor and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://daikincomfort.com/docs/default-source/cscf/sm-rs6200007r27.pdf",
+  "sourceTitle": "Goodman service manual RS6200007 r27, PCBHR104 unitary diagnostic codes (ASXC, DSXC, GSXC, ASZC, DSZC, GSZC). Read 2026-11-07"
+}

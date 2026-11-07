@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "proNeeded": true,
+  "parts": [
+    {
+      "name": "Blower motor",
+      "partKey": "blower-motor",
+      "searchTerm": "furnace blower motor"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-07",
+  "sourceType": "manual-pdf",
+  "code": "E17",
+  "codeSlug": "e17",
+  "displayPattern": "7-segment display on a Trane S9V2 two-stage variable-speed furnace (Service Facts S9V2-SF-2A-EN): E17",
+  "meaning": "No return signal from the blower: the integrated furnace control does not see the motor answer.",
+  "causes": [
+    "4-pin motor communication connector not installed or not fully seated on the IFC",
+    "9-pin connector at the blower vestibule panel not seated",
+    "4-pin connector at the blower not seated",
+    "Motor wiring without continuity, or a motor the chart says to replace"
+  ],
+  "diySteps": [
+    "Leave the blower door on. Seating these connectors is inside the cabinet",
+    "Technician: disconnect power, seat the 4-pin communication connector on the IFC, the 9-pin connector at the blower vestibule panel, and the 4-pin connector at the blower. Then verify continuity of the motor wiring and replace the motor if required"
+  ],
+  "proAdvice": "Call a licensed HVAC technician. E17 is no return signal from the blower. If removing the 4-pin connector with power on changes the code to E17, that test belongs to E18.",
+  "brand": "Trane",
+  "brandSlug": "trane",
+  "equipmentType": "furnace",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://www.wbmemphis.com/customer/docs/skudocs/s9v2-sf-2a-en-03052021.pdf",
+  "sourceTitle": "Trane S9V2 Service Facts S9V2-SF-2A-EN (04 Mar 2021), troubleshooting section. Read 2026-11-07"
+}
