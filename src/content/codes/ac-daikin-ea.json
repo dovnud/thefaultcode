@@ -1,0 +1,28 @@
+{
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "code": "EA",
+  "codeSlug": "ea",
+  "displayPattern": "Service-check code EA on an ARC466 remote for FTX30NVJU or FTX36NVJU.",
+  "meaning": "Four-way valve abnormality: room temperature and indoor coil temperature stay out of range for the mode.",
+  "causes": [
+    "Four-way valve coil disconnected",
+    "Defective four-way valve, coil, or harness",
+    "Defective outdoor unit PCB"
+  ],
+  "diySteps": [
+    "Leave the unit off at the disconnect and the breaker. A four-way valve is in the refrigerant circuit",
+    "Do not open service valves or add refrigerant"
+  ],
+  "proNeeded": true,
+  "proAdvice": "EA is not a filter code and not U4. The valve, coil and outdoor board are licensed HVAC work.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

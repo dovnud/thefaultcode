@@ -1,0 +1,28 @@
+{
+  "brand": "Fujitsu",
+  "brandSlug": "fujitsu",
+  "equipmentType": "mini-split",
+  "code": "63",
+  "codeSlug": "63",
+  "displayPattern": "ASUG09LZAS, ASUG12LZAS or ASUG15LZAS. Operation lamp (green) blinks 6 times, timer lamp (orange) blinks 3 times, economy lamp (green) flashes continuously. Wired controller shows 63.",
+  "meaning": "Inverter error: the outdoor unit received an error from the inverter board. The operation lamp blinks 6 times and the timer lamp blinks 3 times.",
+  "causes": [
+    "External cause such as a momentary voltage drop or an open in the supply",
+    "Power-supply wiring to the inverter PCB disconnected or open",
+    "Inverter PCB failure"
+  ],
+  "diySteps": [
+    "Switch the breaker off and back on once. If the 6-and-3 blink returns, leave the outdoor unit off",
+    "Technician: the manual checks inverter wiring and then replaces the inverter PCB"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 63 is the inverter, not a filter problem. Call a licensed HVAC technician.",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://portal.fujitsugeneral.com/files/catalog/files/(SM)%20ASUG09-15LZAS_AOUG09-15LZAS1.pdf",
+  "sourceTitle": "Fujitsu General service manual SR_AS024EF_04 (ASUG09LZAS, ASUG12LZAS, ASUG15LZAS)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

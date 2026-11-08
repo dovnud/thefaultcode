@@ -4,7 +4,7 @@
  "title": "How to Read a Furnace LED Flash Code",
  "description": "How to find and read the blinking LED or display code on a gas furnace control board, with brand-by-brand examples from the manuals.",
  "answer": "Most modern gas furnaces have a control board that reports faults with a blinking LED or a small digit display, seen through a window in the blower door. Count the flashes (or read the characters), then look the code up in the chart printed inside your furnace door or in its manual. The same number can mean different things on different brands, so always match the code to your brand and model.",
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "faq": [
   {
    "q": "Does the same flash code mean the same thing on every brand?",
@@ -55,6 +55,10 @@
   {
    "name": "Bryant 926TB installation, start-up, operating and service instructions",
    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/06/II926TB-04.pdf"
+  },
+  {
+   "name": "Lennox SL280DFNV installation instructions 508150-02",
+   "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
   }
  ],
  "codes": [
@@ -75,7 +79,9 @@
   "carrier/continuous-on",
   "goodman/ebl",
   "goodman/eaf",
-  "rheem/d1"
+  "rheem/d1",
+  "lennox/e200",
+  "lennox/e270"
  ]
 }
 ---
@@ -89,6 +95,7 @@ The status light or display is on the furnace control board, usually behind the 
 | Goodman GR9S96/GD9S96 | 7-segment display shows a code such as EE3, or a later code such as EbL or EAF | [Goodman EE3](/goodman/ee3/): primary limit circuit open. [Goodman EbL](/goodman/ebl/) is low blower current and a hard lockout. [Goodman EAF](/goodman/eaf/) is a lost R-32 sensor, heat off and the fan still running |
 | Trane S9V2 | Seven-segment LED readout, e.g. E2.1 | [Trane E2.1](/trane/e2-1/): retry exceeded |
 | Lennox ML180UH | Red and green LEDs in combinations of on, off, slow and fast flash | [Lennox red slow / green on](/lennox/red-slow-green-on/): limit switch open |
+| Lennox SL280DFNV | Seven-segment diagnostic LED. These E-codes are not the ML180 red and green pair | [Lennox E200](/lennox/e200/): rollout hard lockout. [Lennox E270](/lennox/e270/): retries used up, no flame current |
 | Rheem R96V | Dual 7-segment diagnostic display. A letter code is not the same as a heat call | [Rheem 11](/rheem/11/): failed ignition. [Rheem d1](/rheem/d1/) is no model data. A lone H or h on that display is a call for gas heat, which is a normal-operation code in the same manual, not d1 |
 | York TG9S | One LED behind the blower-door window. Red flashes are 1/3 second on and off, then a 2-second pause. Amber and green are normal or a flame warning | [York 7 red flashes](/york/7-red-flashes/): three failed ignition trials |
 | Amana *MVC96 / *CVC96 | 7-segment display. The chart is in IOG-2015L | [Amana EE3](/amana/ee3/): primary limit open |

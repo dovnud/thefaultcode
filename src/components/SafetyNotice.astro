@@ -2,6 +2,7 @@
 // Standard repair-safety notice. Plain, general text only: no credentials or guarantees are claimed.
 const { kind = 'generic', inline = false } = Astro.props;
 const power = kind === 'furnace' ? 'Unplug the furnace or switch it off at the breaker, and shut off the gas supply where relevant,'
+  : kind === 'water-heater' ? 'Switch the water heater off at the breaker and shut off the gas supply,'
   : kind === 'washer' || kind === 'dishwasher' ? 'Unplug the appliance or switch it off at the breaker, and turn off the water supply where relevant,'
   : kind === 'ac' ? 'Switch off the indoor unit and the outdoor disconnect or breaker'
   : 'Unplug the appliance or switch off its power (and any gas or water supply) at the source';

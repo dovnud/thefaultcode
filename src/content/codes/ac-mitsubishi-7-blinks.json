@@ -1,0 +1,27 @@
+{
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "7 blinks",
+  "codeSlug": "7-blinks",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp: 7 blinks, then 2.5 seconds off. Troubleshooting table 9-4.",
+  "meaning": "Outdoor control fault: the inverter board or outdoor control board cannot read its memory. The left lamp blinks 7 times.",
+  "causes": [
+    "Inverter P.C. board cannot read its memory",
+    "Outdoor electronic control P.C. board cannot read its memory"
+  ],
+  "diySteps": [
+    "Switch off the outdoor disconnect and the breaker and leave the cabinet closed",
+    "The manual's remedy is to replace the inverter board or the outdoor control board"
+  ],
+  "proAdvice": "Seven blinks are a board fault, not a filter fault. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "code": "E7",
+  "codeSlug": "e7",
+  "displayPattern": "Service-check code E7 on an ARC466 remote for FTX30NVJU or FTX36NVJU. The manual shows this code only when the system shuts down.",
+  "meaning": "Outdoor fan lock: the outdoor fan does not start within 15 to 30 seconds.",
+  "causes": [
+    "Fan motor connector disconnected",
+    "Foreign matter stuck in or around the outdoor fan",
+    "Defective outdoor fan motor",
+    "Defective outdoor unit PCB"
+  ],
+  "diySteps": [
+    "Switch off the outdoor disconnect and the breaker. From outside the cabinet, look for leaves or debris sitting in the fan. Do not reach through the grille",
+    "If you cannot see an obvious blockage, leave the unit off"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Clearing debris inside the fan, reseating the motor connector, and the rotation-pulse check are technician steps. Repeated fan-lock errors shut the system down. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

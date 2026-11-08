@@ -1,0 +1,26 @@
+{
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E19",
+  "codeSlug": "e19",
+  "displayPattern": "Dishwasher display shows E19",
+  "meaning": "Detergent dispenser solenoid circuit fault.",
+  "causes": [
+    "Dispenser solenoid circuit fault"
+  ],
+  "diySteps": [
+    "Reset power at the breaker for 30 seconds, then turn it back on",
+    "If E19 is still there, call Bosch Customer Support at 1-800-944-2904 with the model number"
+  ],
+  "proNeeded": false,
+  "proAdvice": "E19 is the dispenser solenoid circuit. Bosch does not list a cup-cleaning step for it. If the reset does not clear it, the next step on the page is Customer Support.",
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0
+}

@@ -74,7 +74,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <section class="card sec" data-reveal><h2>Likely causes</h2><ul class="causes">{e.causes.map(c=><li>{c}</li>)}</ul></section>
 <section class="card sec" id="diy-steps" data-reveal><h2>{e.proNeeded ? `Safe checks for ${e.code}` : `How to fix ${e.code}: safe DIY steps`}</h2>
 <ol class="steps">{e.diySteps.map(s=>{const x=split(s);return <li>{x.tech&&<span class="tech">Technician</span>}{x.t}</li>})}</ol>
-<div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}<SafetyNotice kind={cat.slug==='furnaces'?'furnace':cat.slug==='ac'?'ac':cat.slug==='washers'?'washer':cat.slug==='dishwashers'?'dishwasher':'generic'} inline /></div></div></section>
+<div class="safety" role="note"><span class="sw" aria-hidden="true"></span><div class="st"><strong>Safety first</strong>{e.safetyNote}<SafetyNotice kind={cat.slug==='furnaces'?'furnace':cat.slug==='ac'?'ac':cat.slug==='washers'?'washer':cat.slug==='dishwashers'?'dishwasher':cat.slug==='water-heaters'?'water-heater':'generic'} inline /></div></div></section>
 <section class="card sec procard" id="call-a-pro" data-critical><h2>When to call a pro</h2>
 <p>{e.proAdvice ?? (e.proNeeded?(cat.kind==='hvac'?'This code usually needs a licensed technician.':'This code usually needs a qualified appliance technician.'):'Call a pro if the steps above do not clear the code.')}</p>
 {showPro ? <a class={proBtn} rel="sponsored nofollow noopener" href={pro.url()}>{pro.label} →</a> : loc && <a class={proBtn} rel="noopener" target="_blank" href={loc.url}>{locatorLabel(e,loc)}<span class="sr-only">{locatorSr(loc)}</span> ↗</a>}</section>

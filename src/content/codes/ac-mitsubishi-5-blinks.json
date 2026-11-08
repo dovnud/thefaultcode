@@ -1,0 +1,27 @@
+{
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "5 blinks",
+  "codeSlug": "5-blinks",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp: 5 blinks, then 2.5 seconds off. Indoor and outdoor units do not operate. Troubleshooting table 9-4.",
+  "meaning": "Outdoor power system fault: the compressor stopped three times for overcurrent or start-up failure within a minute of starting. The left lamp blinks 5 times.",
+  "causes": [
+    "Compressor overcurrent or start-up failure, three times within a minute of starting",
+    "Stop valve not open"
+  ],
+  "diySteps": [
+    "Leave the outdoor disconnect and the breaker off. Do not reset the breaker to force another start",
+    "Technician: the manual points this row at the inverter and compressor checks in the outdoor service manual, and at the stop valve"
+  ],
+  "proAdvice": "Five blinks mean the outdoor unit has already stopped the compressor three times. Another reset can repeat that. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

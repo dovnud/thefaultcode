@@ -1,0 +1,29 @@
+{
+  "brand": "Fujitsu",
+  "brandSlug": "fujitsu",
+  "equipmentType": "mini-split",
+  "code": "11",
+  "codeSlug": "11",
+  "displayPattern": "ASUG09LZAS, ASUG12LZAS or ASUG15LZAS. Operation lamp (green) blinks 1 time, timer lamp (orange) blinks 1 time, economy lamp (green) flashes continuously. Wired controller shows 11.",
+  "meaning": "Serial communication error: the indoor unit is not receiving the serial signal from the outdoor unit. The operation lamp blinks once and the timer lamp blinks once.",
+  "causes": [
+    "Connection failure between the indoor and outdoor units",
+    "External electrical noise",
+    "Outdoor unit main PCB failure",
+    "Outdoor unit fan motor failure"
+  ],
+  "diySteps": [
+    "Switch the breaker off, wait a minute, and turn it back on. If the same 1-and-1 blink returns, stop",
+    "Technician: the manual then checks the indoor-to-outdoor connections and the power supply at the outdoor unit"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A repeating 1-and-1 blink is wiring, noise, the outdoor fan motor, or the outdoor main board. Do not measure the outdoor terminals. Call a licensed HVAC technician.",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://portal.fujitsugeneral.com/files/catalog/files/(SM)%20ASUG09-15LZAS_AOUG09-15LZAS1.pdf",
+  "sourceTitle": "Fujitsu General service manual SR_AS024EF_04 (ASUG09LZAS, ASUG12LZAS, ASUG15LZAS)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

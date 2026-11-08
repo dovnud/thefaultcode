@@ -322,6 +322,66 @@ export const CODE_NOTES: Record<string, string> = {
 
   'ac/goodman/b9':
 `Goodman b9 means airflow is lower than demanded. The system can keep running at reduced performance, or stay in low stage when high stage was expected. Causes are an indoor blower motor problem, blocked filters, restrictive or undersized ductwork, and an indoor and outdoor unit mismatch. The filter is the homeowner check. Motor, duct size, and the approved system match are technician checks. b0 is the blower that is not running at all.`,
+
+  'furnaces/lennox/e200':
+`Lennox E200 is the SL280DFNV seven-segment code for a rollout hard lockout. The installation instructions say the rollout circuit is open or was open, and the action is to correct that cause or replace the flame rollout switch, then test the furnace. It clears after the fault is recovered. It is not the ML180 red-slow / green-on limit pattern, and it is not E250, which is the limit circuit on this same control.`,
+
+  'furnaces/lennox/e223':
+`Lennox E223 on the SL280DFNV means the low pressure switch failed open. The row says to measure the switch in inches of water column on a heat call and to inspect the vent and the combustion air inducer. The outdoor termination is the homeowner look. It is not the ML180 red-off / green-slow prove-switch pattern.`,
+
+  'furnaces/lennox/e250':
+`Lennox E250 is the SL280DFNV limit circuit open. If the limit stays open 3 minutes, the furnace goes into a 1-hour soft lockout. The row names firing rate, a blockage in the heater, and airflow. It does not name a dirty filter. E291 is the airflow lockout that does name the filter. E200 is the rollout hard lockout.`,
+
+  'furnaces/lennox/e270':
+`Lennox E270 is a soft lockout after the maximum retries, with no flame current sensed. It clears when a heat call finishes successfully. The row says to check gas flow, that the ignitor is lighting the burner, and flame sensor current. It is not E223, the pressure switch, and not E200, the rollout lockout.`,
+
+  'furnaces/lennox/e291':
+`Lennox E291 means heat airflow is below the minimum on an SL280DFNV, and the furnace is in a 1-hour soft lockout. The row names a dirty filter, other airflow restriction, and blower performance. It clears when a heat call finishes. E250 is the open limit circuit and does not use this filter sentence.`,
+
+  'water-heaters/navien/e003':
+`Navien E003 on the NPE-2 user's chart is ignition failure. The owner action is to make sure the main gas supply valve is open. E004 is false flame, and its action is a grounded cord. E012 is flame loss after the burner had lit, and that row adds the intake-air filter.`,
+
+  'water-heaters/navien/e012':
+`Navien E012 is flame loss: the burner lit, then the flame went out. The chart says to clean the intake air filter and to make sure the cord is grounded. E003 is the burner that never lit. E110 is abnormal air pressure and also names that filter, plus a blocked exhaust pipe.`,
+
+  'water-heaters/navien/e110':
+`Navien E110 is abnormal air pressure. The chart says to make sure the exhaust pipe is free of obstructions and to clean the intake air filter. Section 4.5 also says a clogged intake filter can stop the heater and show error 110. It is not E016 or E030, which are overheating and name the cold-water inlet filter and a heat-exchanger flush.`,
+
+  'water-heaters/rinnai/11':
+`Rinnai code 11 in the N-series with-pump manual is no ignition: the heater is not turning on. The owner lines are gas on at the heater, meter or cylinder, and gas in a propane tank. Code 12 is no flame and repeats the gas checks, then hands the flame rod to a technician. Code 10 is an air-supply or exhaust blockage, or a full condensate trap.`,
+
+  'water-heaters/rinnai/12':
+`Rinnai code 12 is no flame. Code 11 is no ignition. Both start with the gas supply. Code 12's other listed checks are the flame rod wire, gas type and inlet pressure, and air in the gas line, which the manual marks for a qualified professional.`,
+
+  'water-heaters/rinnai/ss':
+`Rinnai SS is the service-soon timer, not a lockout. The manual says it is time to flush the heat exchanger (section 6.3). Pressing On/Off five times in five seconds clears the code. It is not code 14, which is heat exchanger overheat.`,
+
+  'ac/daikin/u4':
+`Daikin U4 on the FTX-N service manual is a signal transmission error between the indoor and outdoor units. It is not A5. A5 is freeze-up protection in cooling or heating peak-cut, and A5 is the code whose checks start with the air path and the indoor filter.`,
+
+  'ac/daikin/a5':
+`Daikin A5 stops the unit when the indoor heat exchanger is below 32°F in cooling, or above about 140°F in heating. The manual's first checks are a short-circuited air path and a dirty indoor filter. U4 is the indoor-to-outdoor transmission error and does not use that filter step.`,
+
+  'ac/mitsubishi/3-blinks':
+`Mitsubishi 3 blinks on MSZ-FS table 9-4 are the indoor fan: the rotation feedback signal is not emitted while the fan should be running. 5 blinks are the outdoor power system, after the compressor has already stopped three times for overcurrent or start-up failure. The failure-mode recall function uses different blink counts. Do not mix the two tables.`,
+
+  'ac/mitsubishi/5-blinks':
+`Mitsubishi 5 blinks on table 9-4 mean the outdoor power system. The compressor stopped for overcurrent or start-up failure three times within a minute of starting, and both units stay off. The manual points at the inverter, the compressor, and the stop valve. 3 blinks are the indoor fan. 7 blinks are the outdoor control memory.`,
+
+  'ac/mitsubishi/continuous-blink':
+`A steady 0.5-second blink of the left lamp, with no 2.5-second pause, is table 9-4 row 1: miswiring or a missing serial signal for 6 minutes. It is not a counted blink. The manual warns that miswiring can damage the indoor control board.`,
+
+  'ac/fujitsu/11':
+`Fujitsu 11 on ASUG09/12/15LZAS is a serial communication error. The operation lamp blinks once and the timer lamp blinks once, and the economy lamp flashes continuously. Code 41 blinks 4 and then 1 and is the room temperature sensor. The service manual's first check for 11 is a power reset. If the blink returns, the wiring and the outdoor board are technician work.`,
+
+  'ac/fujitsu/41':
+`Fujitsu 41 is the room temperature thermistor open or short. The lamps blink 4 and then 1. Code 42 blinks 4 and then 2 and is the indoor heat exchanger sensor. Do not use the 41 page for a 4-and-2 blink.`,
+
+  'dishwashers/bosch/e09':
+`Bosch writes E09 and E20 with the same sentence: a heat pump internal heater fault. Both get a 30-second breaker reset, then Customer Support. E12 is limescale in the heat pump and uses a descaler. E21 is a blocked heat pump. E01 is the heat pump motor circuit at the main control board.`,
+
+  'dishwashers/bosch/e20':
+`Bosch's page gives E20 the same meaning it gives E09: heat pump internal heater fault, 30-second breaker reset, then Customer Support. It is not E12. Descaling is the E12 step, not this one.`,
 };
 
 export function codeNote(key: string): string | undefined {

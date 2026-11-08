@@ -1,0 +1,31 @@
+{
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "code": "A5",
+  "codeSlug": "a5",
+  "displayPattern": "Service-check code A5 on an ARC466 remote for FTX30NVJU or FTX36NVJU. In cooling the indoor heat exchanger is below 32\u00b0F (0\u00b0C). In heating it is above about 140\u00b0F (60\u00b0C), depending on the model.",
+  "meaning": "Freeze-up protection or heating peak-cut: the indoor heat exchanger got too cold in cooling or too hot in heating.",
+  "causes": [
+    "Short-circuited air around the indoor unit",
+    "Clogged air filter of the indoor unit",
+    "Dust on the indoor heat exchanger",
+    "Defective indoor heat exchanger thermistor",
+    "Defective indoor unit PCB"
+  ],
+  "diySteps": [
+    "Make sure supply and return air can move around the indoor unit. The manual calls a blocked path a short circuit of air",
+    "Clean the indoor unit's washable air filter if it is dirty, with the breaker off, and put it back dry",
+    "If A5 returns, stop. Thermistor and board checks are in the service manual"
+  ],
+  "proNeeded": false,
+  "proAdvice": "Call a licensed HVAC technician if a clear air path and a clean filter do not keep A5 from returning. Do not spray the coil or open the outdoor unit.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

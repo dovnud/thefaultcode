@@ -1,0 +1,29 @@
+{
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf",
+  "sourceTitle": "Rinnai N-series residential with pump SENSEI installation and operation manual (RUR199i, RUR160i, RUR199e, RUR160e), section 5.6",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "10",
+  "codeSlug": "10",
+  "displayPattern": "Diagnostic code 10 on a Rinnai N-series SENSEI tankless water heater with pump (RUR199i, RUR160i, RUR199e, RUR160e). Section 5.6 shows how to recall the last nine codes.",
+  "meaning": "Air supply or exhaust blockage, or the condensate trap is full.",
+  "causes": [
+    "Condensate line blocked",
+    "Internal air filter obstructed on an indoor water heater",
+    "Combustion-air or exhaust vent blocked"
+  ],
+  "diySteps": [
+    "Look at the condensate drain and make sure it is not blocked",
+    "On an indoor model, check that the internal air filter is clean and not obstructed",
+    "Look at the combustion-air and exhaust terminations outside for snow, leaves or a blocked cap. Do not take the vent apart"
+  ],
+  "proNeeded": true,
+  "proAdvice": "The rest of Rinnai's code 10 list is for a trained technician: high-altitude parameter, vent length and approved materials, debris in the fan, and the check valve between the fan and the burner. The manual says consumers should not attempt checks they are not qualified to perform.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

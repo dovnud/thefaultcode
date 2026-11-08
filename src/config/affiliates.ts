@@ -123,6 +123,9 @@ export const DEALER_LOCATORS: Record<string, string> = {
   'american-standard': 'https://www.americanstandardair.com/find-a-dealer/',
   amana: 'https://www.amana-hac.com/resources/find-a-dealer',
   bryant: 'https://www.bryant.com/en/us/dealers/',
+  // Checked with a browser-like GET on 2026-11-08 (200).
+  daikin: 'https://daikincomfort.com/support/find-a-contractor',
+  navien: 'https://www.navieninc.com/where-to-buy',
 };
 
 // Official manufacturer SERVICE-REQUEST pages for appliance brands (NOT affiliate links, plain links with rel="noopener").

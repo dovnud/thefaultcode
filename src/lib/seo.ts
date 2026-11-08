@@ -28,7 +28,7 @@ export function fitTitle(raw: string): string {
 /** Meta description in the 120–155 band (always inside 70–160). */
 export function fitDesc(raw: string): string {
   let d = (raw || '').replace(/\s+/g, ' ').trim();
-  if (!d) d = 'Furnace, washer, dishwasher and AC error codes in plain English, from manufacturer manuals.';
+  if (!d) d = 'Furnace, washer, dishwasher, AC and tankless water heater error codes in plain English, from manufacturer manuals.';
   const extra = ' From manufacturer manuals and official support pages.';
   if (d.length < 120 && !/manufacturer manual/i.test(d) && (d.replace(/\.$/, '') + '.' + extra).length <= 155) {
     d = d.replace(/\.$/, '') + '.' + extra;

@@ -1,0 +1,28 @@
+{
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf",
+  "sourceTitle": "Rinnai N-series residential with pump SENSEI installation and operation manual (RUR199i, RUR160i, RUR199e, RUR160e), section 5.6",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "12",
+  "codeSlug": "12",
+  "displayPattern": "Diagnostic code 12 on a Rinnai N-series SENSEI tankless water heater with pump (RUR199i, RUR160i, RUR199e, RUR160e).",
+  "meaning": "No flame.",
+  "causes": [
+    "Gas shut off at the water heater, the meter, or the propane cylinder",
+    "Propane tank empty",
+    "Flame rod wire not connected"
+  ],
+  "diySteps": [
+    "Check that the gas is turned on at the water heater, the gas meter, or the cylinder",
+    "If the system is propane, make sure there is gas in the tank"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 12 is not code 11 and not code 10. Rinnai's other code 12 checks (the flame rod wire, gas type and inlet pressure, and bleeding air from the gas lines) belong to a trained technician. Call Rinnai Customer Care at 1-800-621-9419 or a licensed technician if the gas is on and 12 remains.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

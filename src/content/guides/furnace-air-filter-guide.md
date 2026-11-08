@@ -4,7 +4,7 @@
  "title": "Furnace Air Filters: How Often to Change and Why It Matters",
  "description": "How a dirty furnace filter causes limit and short-cycling faults, how often to check it, and what MERV ratings mean.",
  "answer": "A clogged air filter restricts airflow, which can overheat the furnace and trip the limit switch, one of the most common causes of furnace fault codes. The DOE recommends cleaning or replacing furnace filters once a month or as recommended, and ENERGY STAR says to inspect, clean or change them monthly. Use the filter size and type your furnace manual specifies.",
- "updated": "2026-10-31",
+ "updated": "2026-11-08",
  "faq": [
   {
    "q": "Can a dirty filter cause a furnace error code?",
@@ -39,12 +39,17 @@
   {
    "name": "Lennox ML180UH installation & operation manual",
    "url": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf"
+  },
+  {
+   "name": "Lennox SL280DFNV installation instructions 508150-02",
+   "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
   }
  ],
  "codes": [
   "goodman/ee3",
   "carrier/33",
   "lennox/red-slow-green-on",
+  "lennox/e291",
   "trane/e04"
  ]
 }
@@ -55,6 +60,7 @@
 | [Goodman EE3](/goodman/ee3/) | Primary limit circuit open |
 | [Carrier 33](/carrier/33/) / [13](/carrier/13/) | Limit circuit fault / lockout |
 | [Lennox red slow / green on](/lennox/red-slow-green-on/) | Primary or secondary limit open |
+| [Lennox E291](/lennox/e291/) | SL280DFNV heat airflow below the minimum. That row names a dirty filter. E250 on the same control does not |
 | [Trane E04](/trane/e04/) | Open limit |
 
 ## How often

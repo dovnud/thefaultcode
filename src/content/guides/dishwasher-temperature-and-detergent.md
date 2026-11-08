@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-11-06",
+ "updated": "2026-11-08",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -38,7 +38,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te", "dishwashers/bosch/e09", "dishwashers/bosch/e20"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -56,6 +56,7 @@ A dishwasher can fail to clean because the water never got hot, because the dete
 | [LG HE](/dishwashers/lg/he/) | The heater is not heating the water, or the water went above 90°C (194°F). |
 | [LG tE](/dishwashers/lg/te/) | Temperature sensor contact problem or sensor failure. LG sends this one to a technician. |
 | [Bosch E12](/dishwashers/bosch/e12/) | Limescale build-up in the heat pump. |
+| [Bosch E09](/dishwashers/bosch/e09/) and [E20](/dishwashers/bosch/e20/) | Heat pump internal heater fault. Bosch writes both codes with the same sentence. The step is a 30-second breaker reset, then Customer Support. Not the E12 descaler. |
 
 GE notes that [C7](/dishwashers/ge/c7/) is a different fault: the water temperature sensor circuit has stopped working. Do not use the C6 thermometer test as a fix for C7. GE's only owner step for C7 is to switch the dishwasher off at the breaker for about 30 seconds and reset it; if C7 comes back, GE says to contact service.
 
@@ -158,6 +159,9 @@ Detergent that is the wrong kind, as opposed to a cup that cannot open, is the l
 Bosch's meaning is limescale build-up in the heat pump, especially in hard water. The steps: descale with a dishwasher descaler (Bosch sells its own) and follow the product instructions. To help prevent it, use softening salt if your dishwasher has a water softener.
 
 If E12 returns after descaling, contact Bosch Customer Support. Do not scrape a heat pump. The descaler is the repair Bosch published.
+
+## Bosch E09 and E20, the heater fault
+Bosch's error-code page uses one sentence for both [E09](/dishwashers/bosch/e09/) and [E20](/dishwashers/bosch/e20/): a heat pump internal heater fault. The step is to reset power at the breaker for 30 seconds. If the code is still there, call Bosch Customer Support. That is not the E12 descaler, and it is not [E21](/dishwashers/bosch/e21/), which Bosch calls a blocked heat pump. [E01](/dishwashers/bosch/e01/) is the heat pump motor circuit at the main control board, and it gets the same 30-second reset.
 
 A different Bosch code, [E21](/dishwashers/bosch/e21/), means the heat pump is blocked, not scaled. Bosch's step there is a 30-second breaker reset, then Customer Support. Descaler is not the E21 fix.
 

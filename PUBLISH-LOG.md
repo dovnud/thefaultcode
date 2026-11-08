@@ -1,5 +1,29 @@
 # Publish log
 
+## 2026-11-08
+
+New exact-match pages. Each code cites a manufacturer document read on this date. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content at build. Amazon tag unchanged (thefaultcode-20). No new ASINs. amazonMax is 0 on every new page except Lennox E291, which keeps a furnace-filter search because that row names a dirty filter.
+
+Lennox SL280DFNV installation instructions 508150-02 (04/2024) on lennox.com. Seven-segment codes, not the ML180 red/green chart already on the site: E200, E223, E250, E270, E291.
+
+Daikin service manual SiUS041638EA (FTX30NVJU / FTX36NVJU) on cdn.daikincloud.io. Mini-split pages under /ac/daikin/: U4, A5, A6, E7, EA.
+
+Fujitsu General service manual SR_AS024EF_04 (ASUG09/12/15LZAS) on portal.fujitsugeneral.com. Lamp counts are the operation lamp, then the timer lamp: 11, 41, 51, 63, 99.
+
+Mitsubishi Electric service manual OBH872A (MSZ-FS06NA through MSZ-FS18NA), troubleshooting check table 9-4. Blink pages under /ac/mitsubishi/: 2 blinks, 3 blinks, 5 blinks, 7 blinks, continuous blink. These are not the failure-mode recall counts.
+
+Navien NPE-2 user's information manual (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models): E003, E004, E012, E016, E030, E110. New category /water-heaters/.
+
+Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 (RUR199i, RUR160i, RUR199e, RUR160e): 10, 11, 12, 14, SS.
+
+Whirlpool Product Help: F0 E5 (off balance) and LOC (control lock). F8 E2 was already published and was left as it was.
+
+Bosch dishwasher error-code page: E01, E09, E19, E20. E09 and E20 use Bosch's same heater-fault sentence. They are not E12.
+
+Guides updated 2026-11-08 where those documents match: furnace air filter (E291), pressure switch (E223), ignition lockout (E270), open limit (E250, E291), rollout (E200), how to read a furnace LED (SL280 row), washer unbalanced load (F0 E5), dishwasher temperature (E09, E20).
+
+York furnace flash codes were already published and were not repeated. Heil, and any code whose primary source did not state a meaning, were skipped.
+
 ## 2026-11-07
 
 New exact-match pages. Each code cites a manufacturer document read on this date. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content at build. Amazon tag unchanged (thefaultcode-20). No new ASINs. amazonMax 0 on every new page.

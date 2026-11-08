@@ -1,0 +1,28 @@
+{
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "F0 E5",
+  "codeSlug": "f0e5",
+  "displayPattern": "Front-load washer display shows F0 E5",
+  "meaning": "Off balance: an unbalanced load can lengthen the cycle and leave clothes dripping.",
+  "causes": [
+    "Washer overloaded so clothes cannot move freely",
+    "A bulky item washed by itself"
+  ],
+  "diySteps": [
+    "If the load is not dripping wet, Whirlpool says the cycle finished and only took longer to balance. No action is needed",
+    "If the load is dripping, take a few items out so the rest can move freely, and run a Drain & Spin cycle",
+    "Do not wash one bulky item alone. Add a few extra garments to a rug or a jeans jacket, then run Drain & Spin"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If F0 E5 keeps returning on a normal mixed load, contact Whirlpool or schedule service. This code is the off-balance fault, not the slow-drain code F9 E1.",
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Front_Load_Washers/Error_Codes/%22F%22_Error_Codes/F0_E5_-_Front_Load_Washer",
+  "sourceType": "support-page",
+  "sourceTitle": "F0 E5 - Front Load Washer (Whirlpool Product Help)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0
+}

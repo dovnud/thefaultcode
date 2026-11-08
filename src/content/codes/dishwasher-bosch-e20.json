@@ -1,0 +1,26 @@
+{
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E20",
+  "codeSlug": "e20",
+  "displayPattern": "Dishwasher display shows E20",
+  "meaning": "Heat pump internal heater fault. Bosch uses this same sentence for E09.",
+  "causes": [
+    "Heat pump internal heater fault"
+  ],
+  "diySteps": [
+    "Reset power at the breaker for 30 seconds, then turn it back on",
+    "If E20 is still there, call Bosch Customer Support at 1-800-944-2904 with the model number"
+  ],
+  "proNeeded": false,
+  "proAdvice": "E20 and E09 are written the same way on Bosch's list. Neither one is E12. E12 is limescale and uses a descaler. E21 is a blocked heat pump, which is a different sentence.",
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0
+}

@@ -20,8 +20,8 @@ async function build() {
   const groups = groupCodes(codes);
   const text = (path: string, kicker: string, title: string, sub: string, alt?: string) =>
     m.set(path, { kind: 'text', kicker, title, sub, alt: alt ?? `The Fault Code: ${title}. ${sub}` });
-  text('/', 'Fault code field manual', 'Furnace, washer, dishwasher & AC error codes', `${codes.length} codes in plain English, each linked to the manufacturer manual it came from.`);
-  text('/codes/', 'Code index', 'All error codes', `${codes.length} furnace, washer, dishwasher and AC codes, searchable.`);
+  text('/', 'Fault code field manual', 'Furnace, washer, dishwasher, AC & water heater codes', `${codes.length} codes in plain English, each linked to the manufacturer manual it came from.`);
+  text('/codes/', 'Code index', 'All error codes', `${codes.length} furnace, washer, dishwasher, AC and water heater codes, searchable.`);
   text('/guides/', 'Field guides', 'Troubleshooting guides', 'Furnace, washer, dishwasher and AC guides from manufacturer documentation.');
   text('/about/', 'About', 'How The Fault Code works', 'Every code is taken from a manufacturer manual or official support page, linked on each page.');
   text('/contact/', 'Contact', 'Contact The Fault Code', 'Corrections and questions.');
