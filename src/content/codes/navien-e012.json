@@ -1,0 +1,28 @@
+{
+  "brand": "Navien",
+  "brandSlug": "navien",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.navieninc.com/downloads/npe-2-user-s-information-manual-en/download.pdf",
+  "sourceTitle": "Navien NPE-2 condensing water heaters user's information manual (NPE-180A2, NPE-210A2, NPE-240A2, NPE-180S2, NPE-210S2, NPE-240S2)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "E012",
+  "codeSlug": "e012",
+  "displayPattern": "Front panel on an NPE-2 condensing tankless water heater (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models)",
+  "meaning": "Flame loss: the burner lit and then lost its flame.",
+  "causes": [
+    "Intake air filter clogged",
+    "Electrical cord not properly grounded"
+  ],
+  "diySteps": [
+    "Turn the water heater off, disconnect power, and clean the air intake filter the way section 4.5 describes: it is at the top left behind the front cover, held by a screw, and it is washed with a toothbrush under clean running water, dried, and put back",
+    "Confirm the cord is plugged into a grounded outlet",
+    "Reconnect power, turn the heater on, and press Back if the code is still showing"
+  ],
+  "proNeeded": true,
+  "proAdvice": "If E012 returns after the intake filter is clean and the cord is grounded, call a licensed technician or Navien Technical Support at 1-800-519-8794. This chart does not send the owner into the burner or the gas valve.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

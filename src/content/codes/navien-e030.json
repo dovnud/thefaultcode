@@ -1,0 +1,27 @@
+{
+  "brand": "Navien",
+  "brandSlug": "navien",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.navieninc.com/downloads/npe-2-user-s-information-manual-en/download.pdf",
+  "sourceTitle": "Navien NPE-2 condensing water heaters user's information manual (NPE-180A2, NPE-210A2, NPE-240A2, NPE-180S2, NPE-210S2, NPE-240S2)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "E030",
+  "codeSlug": "e030",
+  "displayPattern": "Front panel on an NPE-2 condensing tankless water heater (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models)",
+  "meaning": "Exhaust overheating: the heater shuts down when flue temperature exceeds 149\u00b0F (65\u00b0C).",
+  "causes": [
+    "Cold water inlet filter needs cleaning",
+    "Heat exchanger needs flushing"
+  ],
+  "diySteps": [
+    "Clean the cold water inlet filter the way section 4.4 describes, then see whether E030 returns",
+    "Flushing the heat exchanger is the other action on this row (section 4.3). Leave that to a technician if you do not already have the flush kit connected"
+  ],
+  "proNeeded": true,
+  "proAdvice": "E030 is the flue getting too hot, not a request to raise the setpoint. If the inlet filter is clean and the code returns, call a licensed technician or Navien Technical Support at 1-800-519-8794.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

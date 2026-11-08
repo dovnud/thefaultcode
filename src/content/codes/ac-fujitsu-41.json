@@ -1,0 +1,28 @@
+{
+  "brand": "Fujitsu",
+  "brandSlug": "fujitsu",
+  "equipmentType": "mini-split",
+  "code": "41",
+  "codeSlug": "41",
+  "displayPattern": "ASUG09LZAS, ASUG12LZAS or ASUG15LZAS. Operation lamp (green) blinks 4 times, timer lamp (orange) blinks 1 time, economy lamp (green) flashes continuously. Wired controller shows 41.",
+  "meaning": "Room temperature sensor error: the room-temperature thermistor is open or shorted. The operation lamp blinks 4 times and the timer lamp blinks once.",
+  "causes": [
+    "Connector loose, removed, or miswired",
+    "Thermistor failed open or short",
+    "Indoor unit main PCB failure"
+  ],
+  "diySteps": [
+    "Switch the breaker off and leave the indoor unit closed. The sensor is inside the unit",
+    "Technician: the manual checks the thermistor connector and its resistance, then the board"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 41 is the room sensor, not the heat-exchanger sensor (code 42, which blinks 4 and then 2). Call a licensed HVAC technician.",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://portal.fujitsugeneral.com/files/catalog/files/(SM)%20ASUG09-15LZAS_AOUG09-15LZAS1.pdf",
+  "sourceTitle": "Fujitsu General service manual SR_AS024EF_04 (ASUG09LZAS, ASUG12LZAS, ASUG15LZAS)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

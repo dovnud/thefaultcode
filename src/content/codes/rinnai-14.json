@@ -1,0 +1,27 @@
+{
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf",
+  "sourceTitle": "Rinnai N-series residential with pump SENSEI installation and operation manual (RUR199i, RUR160i, RUR199e, RUR160e), section 5.6",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "14",
+  "codeSlug": "14",
+  "displayPattern": "Diagnostic code 14 on a Rinnai N-series SENSEI tankless water heater with pump (RUR199i, RUR160i, RUR199e, RUR160e).",
+  "meaning": "Heat exchanger overheat.",
+  "causes": [
+    "Scale build-up in the heat exchanger",
+    "Unit left in the forced Hi setting"
+  ],
+  "diySteps": [
+    "Do not raise the temperature to chase this code. Code 14 means the heat exchanger is too hot",
+    "Rinnai points this code at the flush procedure in the manual and says hard water must be treated to prevent scale. If you have not flushed this heater before, leave the flush to a technician"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Measuring the overheat switch and inspecting the heat exchanger surface for hot spots are technician steps in this manual. Call a licensed technician. A forced Hi parameter is also an installer setting, not a knob to experiment with.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

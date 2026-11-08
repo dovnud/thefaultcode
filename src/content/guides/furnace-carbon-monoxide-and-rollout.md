@@ -5,7 +5,7 @@
  "title": "Furnace Rollout Codes and Carbon Monoxide Safety",
  "description": "What a furnace rollout or open-limit code means, which of those codes are technician-only, and what CPSC says about carbon monoxide alarms and symptoms.",
  "answer": "An open rollout switch means flame left the burner area. Rheem calls code 33 a very serious problem to repair before the furnace runs again. Goodman E11, Carrier 33 and 13, and Trane E04 are the related codes on this site. Carbon monoxide is a separate hazard: CPSC describes it as a colorless, odorless poisonous gas and says to install CO alarms on every level and outside sleeping areas. A rollout code is a reason to stop the furnace and call a technician, not a code to reset.",
- "updated": "2026-11-06",
+ "updated": "2026-11-08",
  "faq": [
   {
    "q": "Does a rollout code mean carbon monoxide is in the house?",
@@ -64,9 +64,13 @@
   {
    "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
    "url": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf"
+  },
+  {
+   "name": "Lennox SL280DFNV installation instructions 508150-02",
+   "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
   }
  ],
- "codes": ["goodman/e11", "rheem/33", "trane/e04", "carrier/33", "carrier/13", "goodman/ee3", "rheem/59", "york/5-red-flashes", "bryant/13", "bryant/33", "american-standard/e04"]
+ "codes": ["goodman/e11", "rheem/33", "trane/e04", "carrier/33", "carrier/13", "goodman/ee3", "rheem/59", "york/5-red-flashes", "bryant/13", "bryant/33", "american-standard/e04", "lennox/e200"]
 }
 ---
 ## Two different warnings
@@ -103,6 +107,8 @@ Rheem 33's technician checks are pressure switches, inducer speed, vent length a
 Trane E04 can be an ordinary high-limit trip or a rollout. The homeowner step Trane allows is to turn off power and make sure the filter is clean. Everything else is technician: blower, static pressure, heat rise, gas pressure, and, for rollout, the flue, the orifices, the burners and the heat exchanger before anyone resets the rollout switches. Trane says never to leave limit switches jumpered. If a rollout switch has tripped, call. If the code returns after a filter change, call.
 
 Carrier 33 and 13 share causes: a dirty filter or restricted ducts, a restricted or wrongly sized vent, a loose blower wheel, a defective blower motor or capacitor, a defective switch, inadequate combustion air when the rollout switch is the one that opened, and excessive wind. Carrier 33 also lists improper gas input. The homeowner steps are to turn off power, check or replace a dirty filter, and make sure return and supply grilles are open. Carrier says the flame rollout switch requires a manual reset only after the cause is found. If the furnace locks out again after a filter change, or if a rollout switch has tripped, call. Lockout 13 auto-resets after 3 hours. That timer is not a repair. It will lock out again if the switch opens again.
+
+[Lennox E200](/lennox/e200/) is the SL280DFNV hard lockout for a rollout circuit that is open or was open. The installation instructions say to correct the cause of the rollout trip, or replace the flame rollout switch, and then test the furnace. It clears after the fault is recovered. That is not the ML180 red-and-green limit pattern, and it is not E250, which is the limit circuit. Leave E200 off until a technician has found why the rollout opened.
 
 [York 5 red flashes](/york/5-red-flashes/) is only the rollout switch. The TG9S manual says it is manually reset, the control hard-locks, and the checks are combustion air, inducer operation, and the primary heat exchanger or burners. Power is cycled after that problem is corrected, not before. [Bryant 13](/bryant/13/) is the lockout after a limit or rollout switch stayed open longer than 3 minutes. [Bryant 33](/bryant/33/) is the 80% two-stage chart's limit fault, and it says the flame rollout switch requires a manual reset. That chart is not the 926TB service label. [American Standard E04](/american-standard/e04/) names the main thermal limit, a rollout switch, or the reverse airflow switch in one code. If the burners look scorched, treat E04 as rollout and leave the furnace off. York 4 red flashes is the main limit and does list a dirty filter. Do not use that filter step on 5 red flashes.
 

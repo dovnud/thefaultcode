@@ -1,0 +1,30 @@
+{
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "code": "A6",
+  "codeSlug": "a6",
+  "displayPattern": "Service-check code A6 on an ARC466 remote for FTX30NVJU or FTX36NVJU.",
+  "meaning": "Indoor fan motor fault: the DC fan is not reaching the speed the control asked for.",
+  "causes": [
+    "Power supply well below the rated voltage",
+    "Layer short or a broken wire in the fan motor",
+    "Broken fan-motor lead wires",
+    "Defective fan-motor capacitor",
+    "Defective indoor unit PCB"
+  ],
+  "diySteps": [
+    "Switch off the breaker and the outdoor disconnect. Do not spin the indoor fan or unplug its connector",
+    "Technician: the manual checks supply voltage, whether the fan turns by hand with power off, and the motor-connector outputs"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A6 is an indoor fan-motor fault. The voltage checks in the service manual are not a homeowner job. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

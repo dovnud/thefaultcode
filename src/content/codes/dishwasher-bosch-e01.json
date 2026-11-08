@@ -1,0 +1,26 @@
+{
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "dishwasher",
+  "code": "E01",
+  "codeSlug": "e01",
+  "displayPattern": "Dishwasher display shows E01",
+  "meaning": "Heat pump motor circuit fault at the main control board.",
+  "causes": [
+    "Heat pump motor circuit fault at the main control board"
+  ],
+  "diySteps": [
+    "Reset power at the breaker for 30 seconds, then turn it back on",
+    "If E01 is still there, call Bosch Customer Support at 1-800-944-2904 with the model number"
+  ],
+  "proNeeded": false,
+  "proAdvice": "Bosch's only steps for E01 are the 30-second breaker reset and Customer Support. It is not E12, which is limescale and is descaled. It is not E09 or E20, which Bosch calls an internal heater fault.",
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "sourceManualUrl": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes",
+  "sourceType": "support-page",
+  "sourceTitle": "Bosch Dishwasher Error Codes: Troubleshooting Guide (Bosch)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0
+}

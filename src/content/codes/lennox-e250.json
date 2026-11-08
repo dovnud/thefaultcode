@@ -1,0 +1,29 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "E250",
+  "codeSlug": "e250",
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "meaning": "Limit switch circuit open. If the limit does not close within 3 minutes, the furnace goes into a 1-hour soft lockout.",
+  "causes": [
+    "Limit circuit open",
+    "Blockage in the heater",
+    "Airflow problem",
+    "Firing rate not correct for the furnace"
+  ],
+  "diySteps": [
+    "Turn the furnace off and make sure return and supply grilles are open and nothing is blocking them",
+    "Technician: check firing rate, look for a blockage in the heater, and check airflow. The code resumes after the fault is cleared"
+  ],
+  "proAdvice": "E250 names firing rate and a blockage in the heater, which are not a filter swap by themselves. E291 is the row that names a dirty filter. If E250 returns, or the furnace goes into the 1-hour lockout, call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

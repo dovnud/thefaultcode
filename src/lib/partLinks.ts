@@ -4,7 +4,7 @@ import { PARTS, partBySlug, type Part } from '../data';
 import { amazonLink, amazonAsinLink, affiliates } from '../config/affiliates';
 import { catOf, type CodeData } from '../config/categories';
 
-export const BRAND_NAMES = ['Goodman', 'Trane', 'Carrier', 'Rheem', 'Lennox', 'American Standard', 'Amana', 'York', 'Bryant', 'LG', 'Samsung', 'Whirlpool', 'Bosch', 'GE'];
+export const BRAND_NAMES = ['Goodman', 'Trane', 'Carrier', 'Rheem', 'Lennox', 'American Standard', 'Amana', 'York', 'Bryant', 'LG', 'Samsung', 'Whirlpool', 'Bosch', 'GE', 'Daikin', 'Mitsubishi', 'Fujitsu', 'Navien', 'Rinnai'];
 
 /** partKey in a code's JSON -> guide slug (keys with no guide, such as gas-valve, are omitted on purpose). */
 const KEY_TO_SLUG: Record<string, string> = {
@@ -66,6 +66,8 @@ export function guidesForCode(e: CodeData): CodeGuide[] {
   const hit = new Map<string, string>();
   for (const [slug, cats, re] of RULES) {
     if (!cats.includes(cat)) continue;
+    // Mini-split filters and coils are not the furnace filter and condenser-coil guides.
+    if (e.equipmentType === 'mini-split' && (slug === 'hvac-air-filter' || slug === 'coil-cleaning')) continue;
     const l = lines.find(x => re.test(x));
     if (l) hit.set(slug, l);
   }

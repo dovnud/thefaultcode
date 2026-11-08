@@ -1,0 +1,28 @@
+{
+  "brand": "Navien",
+  "brandSlug": "navien",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.navieninc.com/downloads/npe-2-user-s-information-manual-en/download.pdf",
+  "sourceTitle": "Navien NPE-2 condensing water heaters user's information manual (NPE-180A2, NPE-210A2, NPE-240A2, NPE-180S2, NPE-210S2, NPE-240S2)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "E110",
+  "codeSlug": "e110",
+  "displayPattern": "Front panel on an NPE-2 condensing tankless water heater (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models). The manual also says a clogged intake filter can show Error Code 110.",
+  "meaning": "Abnormal air pressure.",
+  "causes": [
+    "Exhaust pipe obstructed",
+    "Intake air filter clogged"
+  ],
+  "diySteps": [
+    "Look at the exhaust termination outside and clear snow, leaves or debris you can see without taking the vent apart",
+    "Clean the air intake filter the way section 4.5 describes. The manual says to do that every 3 to 4 months, and that a clogged filter can stop the heater and show this code",
+    "Press Back to reset after the filter is back in and the cover is on"
+  ],
+  "proNeeded": true,
+  "proAdvice": "If the exhaust is clear and the intake filter is clean and E110 returns, stop. Vent length, the fan and the pressure circuit are technician work. Call a licensed technician or Navien Technical Support at 1-800-519-8794.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

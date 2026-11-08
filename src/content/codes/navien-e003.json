@@ -1,0 +1,26 @@
+{
+  "brand": "Navien",
+  "brandSlug": "navien",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.navieninc.com/downloads/npe-2-user-s-information-manual-en/download.pdf",
+  "sourceTitle": "Navien NPE-2 condensing water heaters user's information manual (NPE-180A2, NPE-210A2, NPE-240A2, NPE-180S2, NPE-210S2, NPE-240S2)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "E003",
+  "codeSlug": "e003",
+  "displayPattern": "Front panel on an NPE-2 condensing tankless water heater (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models)",
+  "meaning": "Ignition failure: the burner did not light.",
+  "causes": [
+    "Main gas supply valve closed"
+  ],
+  "diySteps": [
+    "Make sure the main gas supply valve is open",
+    "If the code remains, press the Back button on the front panel once to reset, then try a hot-water tap again"
+  ],
+  "proNeeded": true,
+  "proAdvice": "If E003 returns with the gas supply open, stop resetting it and call a licensed technician or Navien Technical Support at 1-800-519-8794. Gas pressure, the igniter and the gas valve are not owner checks in this chart.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

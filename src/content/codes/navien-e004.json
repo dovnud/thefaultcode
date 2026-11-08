@@ -1,0 +1,26 @@
+{
+  "brand": "Navien",
+  "brandSlug": "navien",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.navieninc.com/downloads/npe-2-user-s-information-manual-en/download.pdf",
+  "sourceTitle": "Navien NPE-2 condensing water heaters user's information manual (NPE-180A2, NPE-210A2, NPE-240A2, NPE-180S2, NPE-210S2, NPE-240S2)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "code": "E004",
+  "codeSlug": "e004",
+  "displayPattern": "Front panel on an NPE-2 condensing tankless water heater (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models)",
+  "meaning": "False flame detection: the control sensed a flame when it should not have.",
+  "causes": [
+    "Electrical cord not properly grounded"
+  ],
+  "diySteps": [
+    "Confirm the water heater is plugged into a grounded outlet and the cord is not on an adapter that removes the ground pin",
+    "Leave the cover on. If E004 remains, press Back once to reset and stop if it returns"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A false-flame code is a combustion-safety fault. If a grounded cord does not clear it, call a licensed technician or Navien Technical Support at 1-800-519-8794. Do not keep resetting it.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

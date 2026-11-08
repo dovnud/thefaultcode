@@ -4,7 +4,7 @@
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "faq": [
   {
    "q": "Can I replace the pressure switch myself?",
@@ -59,6 +59,10 @@
   {
    "name": "Bryant 80% variable-speed two-stage furnace troubleshooting guide (Catalog No. TG-GFB80-02)",
    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/0D/TG-GFB80-02.pdf"
+  },
+  {
+   "name": "Lennox SL280DFNV installation instructions 508150-02",
+   "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
   }
  ],
  "codes": [
@@ -78,7 +82,8 @@
   "bryant/31",
   "bryant/43",
   "rheem/55",
-  "trane/e3-3"
+  "trane/e3-3",
+  "lennox/e223"
  ]
 }
 ---
@@ -91,6 +96,7 @@
 | [Carrier 31](/carrier/31/) | Low or high pressure switch did not close or reopened |
 | [Trane E3.1](/trane/e3-1/) / [E3.2](/trane/e3-2/) | 1st stage pressure switch shorted / open |
 | [Lennox red off / green slow](/lennox/red-off-green-slow/) | Pressure prove switch open or blocked inlet/exhaust vent |
+| [Lennox E223](/lennox/e223/) | SL280DFNV low pressure switch failed open. Not the ML180 red/green pattern |
 | [Rheem 44](/rheem/44/) / [45](/rheem/45/) / [46](/rheem/46/) | Low pressure switch closed with inducer off / open with inducer on |
 | [Rheem 55](/rheem/55/) | High pressure switch closed while the inducer is off. Code 57 is that switch open with the inducer on high |
 | [Trane E3.3](/trane/e3-3/) | 2nd stage switch PS2 closed when it should be open. The service facts say the switch is not the problem in most cases |

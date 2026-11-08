@@ -5,7 +5,7 @@
  "title": "Washer Unbalanced Load, Overfill and Leak Codes",
  "description": "What LG UE, Samsung UE, LG FE and Samsung washer LC mean, and the load, level, hose and detergent checks those support pages publish.",
  "answer": "An unbalanced tub and a leak are different faults. LG UE and Samsung UE mean the load is piled on one side and the washer could not even it out. LG FE means too much water entered and the drain pump is running to prevent a leak. Samsung washer LC means moisture where it should not be, or a problem with the sensor. Rearrange the load before you assume the machine is broken.",
- "updated": "2026-10-31",
+ "updated": "2026-11-08",
  "faq": [
   {
    "q": "What does Samsung Ur mean?",
@@ -28,9 +28,13 @@
   {
    "name": "Samsung washing machine information and error codes (Samsung Support)",
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/"
+  },
+  {
+   "name": "F0 E5 - Front Load Washer (Whirlpool Product Help)",
+   "url": "https://producthelp.whirlpool.com/Laundry/Washers/Front_Load_Washers/Error_Codes/%22F%22_Error_Codes/F0_E5_-_Front_Load_Washer"
   }
  ],
- "codes": ["washers/lg/ue", "washers/samsung/ue", "washers/lg/fe", "washers/samsung/lc", "washers/lg/le", "washers/lg/ae", "washers/lg/vs", "washers/lg/pe"]
+ "codes": ["washers/lg/ue", "washers/samsung/ue", "washers/lg/fe", "washers/samsung/lc", "washers/lg/le", "washers/lg/ae", "washers/lg/vs", "washers/lg/pe", "washers/whirlpool/f0e5"]
 }
 ---
 ## Three faults that get lumped together
@@ -42,6 +46,7 @@ A washer that bangs, a washer that fills past where you expect, and a washer tha
 | [Samsung UE](/washers/samsung/ue/) | Unbalanced load inside the tub. Ur is the rebalance attempt and is not an error. Some models show Ub, U6, 1 Ub or 1U6. |
 | [LG FE](/washers/lg/fe/) | Overfill: too much water has entered the drum. The drain pump runs to prevent leaks. Some models show E04 or E12. |
 | [Samsung LC](/washers/samsung/lc/) | Water level or leakage: moisture where it should not be, or an issue with the sensor. Some models show 1E, LE, 1C or LC1. |
+| [Whirlpool F0 E5](/washers/whirlpool/f0e5/) | Off balance on a front-loader. A load that cannot move, or one bulky item washed alone, can stretch the cycle and leave clothes dripping. |
 
 Samsung also warns, on the door-code page, that some models use dC for an unbalanced load. If your manual says that, this is the page to follow, not the [door-lock guide](/guides/washer-door-will-not-lock/).
 
@@ -76,6 +81,13 @@ Samsung is explicit about Ur. Ur means the washer will add water, try to rebalan
 If you keep getting the error, Samsung says to follow its "Washer won't spin" guide. There is no leg-adjustment procedure on the Samsung UE page we publish. Do not import LG's leg steps onto a Samsung unless Samsung's own won't-spin article tells you to. The code page is the boundary.
 
 A washer that will not spin because it will not drain is [5C](/washers/samsung/5c/), and Samsung's 5C page does say to check that the washer is level. Level on 5C is about draining, not about UE. Use the code on the display to pick the page.
+
+## Whirlpool F0 E5
+Whirlpool's front-load page calls F0 E5 an off-balance condition. A sizable unbalanced load can make the cycle longer than the display first showed, and a reduced spin leaves clothes dripping.
+
+If the load is not dripping, Whirlpool says the cycle finished and only took longer to balance. No action. If it is dripping, take a few items out so the rest can move freely and run Drain & Spin. Do not wash one bulky item, such as a rug or a jeans jacket, by itself. Add a few garments and run Drain & Spin.
+
+F0 E5 does not use LG's two-thirds rule or LG's leg adjustment. Those steps are on the LG UE page. Whirlpool's slow-drain code is [F9 E1](/washers/whirlpool/f9e1/), which is the hose and the standpipe, not the load.
 
 ## LG FE, the overfill
 FE is not "the load is lumpy." It means too much water has entered the drum, and the drain pump runs to keep that water off the floor. Some models show E04 or E12. LG's cause is extra water entering the drum, possibly through the detergent dispenser.

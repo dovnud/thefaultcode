@@ -1,0 +1,29 @@
+{
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "code": "U4",
+  "codeSlug": "u4",
+  "displayPattern": "Service-check code U4 on an ARC466 remote for FTX30NVJU or FTX36NVJU. Hold Timer Cancel for 5 seconds until 00 shows, then press Timer Cancel until a long beep. The operation lamp also blinks for a transmission error.",
+  "meaning": "Signal transmission error between the indoor unit and the outdoor unit.",
+  "causes": [
+    "Power supply out of specification",
+    "Wiring error or a broken connecting wire between the indoor and outdoor units (wire No. 3)",
+    "Defective indoor or outdoor unit PCB",
+    "Short circuit inside the outdoor fan motor winding"
+  ],
+  "diySteps": [
+    "Write the code down, then switch off the outdoor disconnect and the breaker. Leave both cabinets closed",
+    "Technician: the manual checks supply voltage, the interconnecting wires, insulation on terminals 1-3 and 2-3, outdoor LED A, and whether the outdoor fan turns freely"
+  ],
+  "proNeeded": true,
+  "proAdvice": "U4 is a communication fault, not a filter fault. Do not open the outdoor unit. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

@@ -1,0 +1,26 @@
+{
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "3 blinks",
+  "codeSlug": "3-blinks",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp: 3 blinks, then 2.5 seconds off. Troubleshooting table 9-4, not the failure-mode recall pattern.",
+  "meaning": "Indoor fan motor fault: the fan is not reporting rotation. The left lamp blinks 3 times, then pauses 2.5 seconds.",
+  "causes": [
+    "Indoor fan motor not reporting rotation"
+  ],
+  "diySteps": [
+    "Write down a 3-blink pattern, then switch off the breaker. Do not open the indoor unit to spin the fan",
+    "Technician: section 9-6 starts by checking for foreign matter in the line-flow fan, with power off, then measures the fan-motor connector"
+  ],
+  "proAdvice": "Three blinks are the indoor fan. Five blinks are the outdoor power system. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

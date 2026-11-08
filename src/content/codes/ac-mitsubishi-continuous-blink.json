@@ -1,0 +1,27 @@
+{
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "Continuous blink",
+  "codeSlug": "continuous-blink",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp blinks 0.5 second on and 0.5 second off, with no counted pause. Troubleshooting table 9-4, row 1. This is not a counted blink code.",
+  "meaning": "Miswiring or serial signal: the outdoor unit's serial signal was missing for 6 minutes. The left lamp blinks 0.5 second on and 0.5 second off, with no counted pause.",
+  "causes": [
+    "Miswiring between the indoor and outdoor units",
+    "Serial signal from the outdoor unit missing for 6 minutes"
+  ],
+  "diySteps": [
+    "Confirm you are seeing a steady half-second blink, not a counted pattern with a 2.5-second pause. Write it down",
+    "Switch off the breaker and the outdoor disconnect. Do not move wires on the terminal block"
+  ],
+  "proAdvice": "The manual sends this pattern to the miswiring and serial-signal check, and it warns that miswiring can damage the indoor control board. Call a licensed HVAC technician.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

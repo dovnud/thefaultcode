@@ -1,0 +1,27 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "E223",
+  "codeSlug": "e223",
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "meaning": "Low pressure switch failed open.",
+  "causes": [
+    "Low pressure switch did not close on a heat call",
+    "Vent or combustion-air inducer restricted or not operating"
+  ],
+  "diySteps": [
+    "With the furnace off, look at the outdoor intake and exhaust terminations for snow, ice, leaves or a nest. Do not take the vent apart",
+    "Technician: measure the pressure switch in inches of water column on a heat call, and inspect the vent and the combustion-air inducer"
+  ],
+  "proAdvice": "If the terminations are clear and E223 returns, the switch, the inducer and the vent are technician work. The code resumes normal operation only after the fault is cleared. Do not jumper the switch.",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

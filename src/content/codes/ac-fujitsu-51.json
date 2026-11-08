@@ -1,0 +1,29 @@
+{
+  "brand": "Fujitsu",
+  "brandSlug": "fujitsu",
+  "equipmentType": "mini-split",
+  "code": "51",
+  "codeSlug": "51",
+  "displayPattern": "ASUG09LZAS, ASUG12LZAS or ASUG15LZAS. Operation lamp (green) blinks 5 times, timer lamp (orange) blinks 1 time, economy lamp (green) flashes continuously. Wired controller shows 51.",
+  "meaning": "Indoor fan motor error: fan speed stayed below one-third of the target for more than 56 seconds. The operation lamp blinks 5 times and the timer lamp blinks once.",
+  "causes": [
+    "Fan will not rotate (caught, dropped, or a locked motor)",
+    "Fan motor winding open",
+    "Motor protection from high temperature around the motor",
+    "Indoor control PCB or fan motor failure"
+  ],
+  "diySteps": [
+    "Switch the breaker off. Do not open the indoor unit to spin the fan by hand",
+    "Technician: the manual's first check is to rotate the fan with power off and see if it is caught"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A 5-and-1 blink is the indoor fan, not an outdoor-fan code. Call a licensed HVAC technician.",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://portal.fujitsugeneral.com/files/catalog/files/(SM)%20ASUG09-15LZAS_AOUG09-15LZAS1.pdf",
+  "sourceTitle": "Fujitsu General service manual SR_AS024EF_04 (ASUG09LZAS, ASUG12LZAS, ASUG15LZAS)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}

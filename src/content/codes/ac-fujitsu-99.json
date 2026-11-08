@@ -1,0 +1,30 @@
+{
+  "brand": "Fujitsu",
+  "brandSlug": "fujitsu",
+  "equipmentType": "mini-split",
+  "code": "99",
+  "codeSlug": "99",
+  "displayPattern": "ASUG09LZAS, ASUG12LZAS or ASUG15LZAS. Operation lamp (green) blinks 9 times, timer lamp (orange) blinks 9 times, economy lamp (green) flashes continuously. Wired controller shows 99.",
+  "meaning": "4-way valve error: heat-exchanger temperature and room temperature stay too far apart for the mode. The operation lamp blinks 9 times and the timer lamp blinks 9 times.",
+  "causes": [
+    "Connector connection failure",
+    "Thermistor failure",
+    "4-way valve coil failure",
+    "4-way valve failure",
+    "Main PCB failure"
+  ],
+  "diySteps": [
+    "Leave the unit off at the breaker and the outdoor disconnect. The valve is in the refrigerant circuit",
+    "If the same condition repeats 5 times, the manual says the compressor stops permanently until it is repaired"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A 9-and-9 blink is not a thermostat setting. Call a licensed HVAC technician. Do not open service valves.",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "sourceManualUrl": "https://portal.fujitsugeneral.com/files/catalog/files/(SM)%20ASUG09-15LZAS_AOUG09-15LZAS1.pdf",
+  "sourceTitle": "Fujitsu General service manual SR_AS024EF_04 (ASUG09LZAS, ASUG12LZAS, ASUG15LZAS)",
+  "example": false,
+  "updated": "2026-11-08",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf"
+}
