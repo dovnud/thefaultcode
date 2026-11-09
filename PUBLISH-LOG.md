@@ -27,7 +27,9 @@ Guides updated 2026-11-09: washer door (ddC), washer suds (OPn and dcL are not s
 
 Build: 466 routes. Static check of dist HTML only. amazon.com, amzn.to, CJ and Angi hosts were not requested. New pages: one H1, self-canonical, no noindex, in the sitemap with lastmod 2026-11-09, in the dataset and llms-full.txt, OG images 1200×630 PNG. axe 0 violations on the 10 new pages, the 3 edited guides, both E2.3 pages, Goodman EE0, and unchanged Bosch E23 (mobile, tablet, desktop). The capture form was not submitted. Inline text links and the sitewide search control, skip link, and consent checkbox are under 44px on the unchanged Bosch page as well.
 
-Live checks are recorded after this batch is on https://thefaultcode.com.
+Content commit 22f78da. Merged to content/furnace-codes as 94ef936 (pull request 15).
+
+Live on 2026-11-09 after the Cloudflare Pages production deploy: all 10 new URLs returned 200, with the H1 above, a self-canonical, no noindex, sitemap lastmod 2026-11-09, and an OG image of 200 image/png at 1200×630. The three edited guides, Goodman EE0, Trane E2.3, American Standard E2.3, Samsung washer dE, and /ac/lg/ also returned 200 with a self-canonical and no noindex. Samsung PE's only Amazon anchor is the dishwasher-detergent search, rel="sponsored nofollow noopener", tag thefaultcode-20, with the Associates sentence. American Standard E2.3 has no Amazon link and no parts list. IndexNow: HTTP 200 for 47 new and updated URLs. That acceptance is not indexing. Search Console and GA4 were not read. No property access was available, and no new sign-in was attempted.
 
 ### 404 and link check
 
