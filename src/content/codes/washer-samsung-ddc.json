@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "ddC",
+  "codeSlug": "ddc",
+  "displayPattern": "Display on a Samsung washer with an Add Door: ddC (also shown as dC3)",
+  "meaning": "Add Door not locked: Samsung says the Add Door is not detected as closed and locked. This is not the main-door code.",
+  "causes": [
+    "Add Door latch not securely fixed",
+    "Laundry or another item caught in the Add Door",
+    "Add Door not closed and secured",
+    "Damaged Add Door or latch"
+  ],
+  "diySteps": [
+    "Check that the Add Door latch is securely fixed",
+    "Check that laundry or other items are not caught in the Add Door, then close it so it is secured",
+    "ddC and dC3 are the Add Door. The main door uses a different code, including dE. A lone dC can be a door error or an unbalanced load, depending on the model. Do not treat ddC as that dC note",
+    "If the code cannot be corrected, or the Add Door or its latch is damaged, request service"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Samsung says to request service when the Add Door code cannot be corrected or the Add Door or latch is damaged. Do not bypass the Add Door lock, and do not use the main-door steps as if this were dE.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

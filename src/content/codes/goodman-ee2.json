@@ -5,7 +5,7 @@
   "equipmentType": "furnace",
   "code": "EE2",
   "codeSlug": "ee2",
-  "displayPattern": "Shown on the control board 7-segment display: EE2 (induced draft blower runs, furnace does not light)",
+  "displayPattern": "7-segment display on a single-stage *R9S96, *D9S96 or *R9S92 furnace (IOG-2037B): EE2 (induced draft blower runs, furnace does not light)",
   "meaning": "Pressure switch circuit is not closed.",
   "causes": [
     "Pressure switch hose blocked, pinched or connected improperly",
@@ -24,7 +24,7 @@
     "Technician: tighten or correct wiring connections"
   ],
   "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
-  "proAdvice": "Call a licensed HVAC technician: if the vent terminations are clear and the code persists.",
+  "proAdvice": "Call a licensed HVAC technician: if the vent terminations are clear and the code persists. This page is the single-stage IOG-2037B chart (Goodman GR9S96, GD9S96 and GR9S92, and the Amana models in that same guide). A two-stage *CVC96 or *MVC96 uses IOG-2015L instead.",
   "proNeeded": true,
   "parts": [
     {
@@ -44,5 +44,7 @@
     }
   ],
   "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
-  "updated": "2026-10-23"
+  "updated": "2026-11-09",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Goodman *R9S96/*D9S96 and *R9S92 single-stage gas furnace installation instructions (IOG-2037B), 1-stage troubleshooting codes. Read 2026-11-09"
 }

@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "air-conditioner",
+  "code": "CH04",
+  "codeSlug": "ch04",
+  "displayPattern": "Display on an LG room air conditioner: CH04, or FL on some window and portable units",
+  "meaning": "Condensate: LG says CH04 is a drainage problem. On a ceiling unit the indoor drain is not clearing condensate. On a window or portable unit the condensate tank is too full. Some models show FL instead of CH04.",
+  "causes": [
+    "Ceiling unit: condensate inside the indoor unit is not draining",
+    "Window or portable unit: condensate increased, including on a rainy or humid day, and the tank is too full"
+  ],
+  "diySteps": [
+    "Use the procedure for the unit you have. Do not drain a ceiling unit through a rear cap, and do not stop at a power cycle on a window or portable unit",
+    "Window and portable: power the unit off and unplug it. Set a bowl or pan of about 1.5 liters under the drain port on the lower rear. There may be one port or two. Remove the drain cap and let the water drain into the pan, then screw the cap back on. Cooling can still run",
+    "Window and portable, optional: LG says you can drain through a hose instead of the pan. Use an LG drain hose with an 18 mm diameter. The hose is sold separately. If the unit is on an exterior wall, do not let condensate drip onto neighbors below",
+    "Ceiling unit: unplug the power cord or turn off the breaker, wait 5 minutes, then restore power. If CH04 remains, request service",
+    "If a window or portable unit shows CH04 or FL often, even on dry days, request service"
+  ],
+  "safetyNote": "Unplug the air conditioner, or switch off its breaker, before you remove a drain cap or move the unit. Condensate can be dirty. Do not open a ceiling unit's cabinet. Refrigerant, sealed-system and control-board work belong to a licensed HVAC technician.",
+  "proNeeded": false,
+  "proAdvice": "Call for service when a ceiling unit still shows CH04 after the 5-minute power cycle, or when a window or portable unit shows CH04 or FL often on dry days. LG says cooling can keep running on a window or portable unit while you drain it. Frequent CH04 on those units still needs inspection.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-air-conditioner-guide-to-error-codes--20155047719306",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Air Conditioner] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

@@ -5,7 +5,7 @@
   "equipmentType": "furnace",
   "code": "EEC",
   "codeSlug": "eec",
-  "displayPattern": "Shown on the control board 7-segment display: EEC",
+  "displayPattern": "7-segment display on a single-stage *R9S96, *D9S96 or *R9S92 furnace (IOG-2037B): EEC",
   "meaning": "Gas valve is energized when it should not be.",
   "causes": [
     "Gas valve circuit wiring problem",
@@ -16,7 +16,7 @@
     "Technician: replace integrated control board if wiring is good"
   ],
   "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
-  "proAdvice": "Call a licensed HVAC technician: immediately; this is a gas safety fault.",
+  "proAdvice": "Call a licensed HVAC technician: immediately; this is a gas safety fault. This code is on the single-stage *R9S96, *D9S96 and *R9S92 chart in IOG-2037B (Goodman GR9S96, GD9S96 and GR9S92, and the Amana models in that same guide). It is not a *CVC96 or *MVC96 code from IOG-2015L.",
   "proNeeded": true,
   "parts": [
     {
@@ -26,5 +26,7 @@
     }
   ],
   "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf",
-  "updated": "2026-10-23"
+  "updated": "2026-11-09",
+  "sourceType": "manual-pdf",
+  "sourceTitle": "Goodman *R9S96/*D9S96 and *R9S92 single-stage gas furnace installation instructions (IOG-2037B), 1-stage troubleshooting codes. Read 2026-11-09"
 }

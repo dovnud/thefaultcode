@@ -5,7 +5,7 @@
  "title": "Washer Door Will Not Lock: dE and F5 E2",
  "description": "What LG dE and dE2, Samsung dE, and Whirlpool F5 E2 mean when a washer door will not lock, and why you should not bypass the lock.",
  "answer": "A door code means the washer did not detect the door as closed and locked, so it will not fill or spin. LG, Samsung and Whirlpool each start with something caught in the door and a door that is not fully shut. A bent latch or a lock that fails after that check is a service call. Do not bypass the lock.",
- "updated": "2026-11-04",
+ "updated": "2026-11-09",
  "faq": [
   {
    "q": "Why does the door stay locked when the cycle is over?",
@@ -18,6 +18,10 @@
   {
    "q": "Is there a part to buy for a door code?",
    "a": "Not from these pages. The published checks are to clear the gasket, close the door, and reset. A bent or broken latch is a repair. This guide has no shop button for that reason."
+  },
+  {
+   "q": "Is Samsung ddC the same as dE?",
+   "a": "No. ddC and dC3 are the Add Door, not the main door. Samsung's checks are the Add Door latch, anything caught in that door, and closing it. dE is the main door. A lone dC can be a door error or an unbalanced load, depending on the model. ddC is not that dC note."
   }
  ],
  "sources": [
@@ -42,7 +46,7 @@
    "url": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers"
   }
  ],
- "codes": ["washers/lg/de", "washers/lg/de2", "washers/samsung/de", "washers/whirlpool/f5e2", "washers/lg/cl", "dishwashers/lg/cl"]
+ "codes": ["washers/lg/de", "washers/lg/de2", "washers/samsung/de", "washers/samsung/ddc", "washers/whirlpool/f5e2", "washers/lg/cl", "dishwashers/lg/cl"]
 }
 ---
 ## What the lock is doing
@@ -53,6 +57,7 @@ A front-load washer will not fill or spin until the control confirms the door is
 | [LG dE](/washers/lg/de/) | Door error: the door is not closed properly, so the washer could not lock it. Some models show dE1 or E01. |
 | [LG dE2](/washers/lg/de2/) | The door is detected closed, but it did not lock. Some models show E30. |
 | [Samsung dE](/washers/samsung/de/) | The washer does not detect the door as closed and locked. Many alternate characters are listed on the code page, including dS, FL, LO, dE1 and dE2. |
+| [Samsung ddC](/washers/samsung/ddc/) | The Add Door, not the main door. Also shown as dC3. |
 | [Whirlpool F5 E2](/washers/whirlpool/f5e2/) | The door is not locking properly. |
 
 Read every character. Samsung warns that on some models dC is an unbalanced load, not a door fault. If your manual says dC is unbalance, follow [Samsung UE](/washers/samsung/ue/) and the [unbalanced-load guide](/guides/washer-unbalanced-and-leaks/) instead of taking the door apart.
@@ -99,6 +104,11 @@ Steps Samsung publishes:
 - If the problem is the opposite, a door stuck locked: make sure the cycle has finished and drained, and wait for the door lock light to go off. Samsung says front-load models keep the door locked while water is detected inside. Draining is the [5C](/washers/samsung/5c/) problem if the tub will not empty. Fix the drain, and the lock has a reason to release.
 
 If the code cannot be corrected, or the door or latch is damaged, Samsung says to request service.
+
+## Samsung ddC is the Add Door
+[Samsung ddC](/washers/samsung/ddc/), also shown as dC3, is not the main door. Samsung says the Add Door is not detected as closed and locked. The checks are the Add Door latch, laundry caught in that door, and closing it until it is secured. If the Add Door or its latch is damaged, or the code cannot be corrected, request service.
+
+Do not fold ddC into dE. A lone dC is a different display: on some models it is a door error, and on some models it is an unbalanced load. Samsung says to check the user manual for that one. ddC is specifically the Add Door.
 
 ## Whirlpool F5 E2
 Whirlpool's meaning is simply that the door is not locking properly. Causes: an item blocking the door, or the door not closing completely.

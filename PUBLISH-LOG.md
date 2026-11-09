@@ -2,7 +2,36 @@
 
 ## 2026-11-09
 
-404 and link check. No new code pages. Amazon tag unchanged. No Amazon links added or removed.
+### Washer, dishwasher and room-AC codes
+
+Ten new pages. Each one was checked against the manufacturer page named on it, read 2026-11-09. No new code pages had landed earlier on this date (the only merge was the 404 and redirect pass). Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content. Amazon tag unchanged (thefaultcode-20). No new ASINs. Nine of the ten pages have no Amazon link. Samsung dishwasher PE has one search, dishwasher detergent, because Samsung's own step says to add detergent and run a half-load cycle. amazonMax is 0 on every new page, so that search is the primary button only.
+
+- LG washer Cd, cool down after a dry cycle, not a fault, washer-dryer combos on the front-load list — https://thefaultcode.com/washers/lg/cd/
+- LG washer OPn, detergent drawer not fully inserted or opened while running — https://thefaultcode.com/washers/lg/opn/
+- LG washer dcL, ezDispense nozzle clean, not a fault, about 16 minutes, ezDispense models only — https://thefaultcode.com/washers/lg/dcl/
+- Samsung washer ddC (also dC3), Add Door not locked, not the main-door dE page — https://thefaultcode.com/washers/samsung/ddc/
+- Samsung washer Cb (also C6), calibration mode, not a fault, tub must be empty — https://thefaultcode.com/washers/samsung/cb/
+- Samsung dishwasher AP, Access Point pairing, not a fault — https://thefaultcode.com/dishwashers/samsung/ap/
+- Samsung dishwasher PE, half-load function not performing correctly — https://thefaultcode.com/dishwashers/samsung/pe/
+- LG dishwasher PF, power was cut and the cycle can resume, not a fault, and not the washer PF reset — https://thefaultcode.com/dishwashers/lg/pf/
+- LG room AC CH04 (window and portable units may show FL), condensate. Window and portable: drain the rear port. Ceiling: 5-minute power cycle, then service. The two procedures are separate on the page — https://thefaultcode.com/ac/lg/ch04/
+- LG room AC CH07, heat and cool selected at the same time on a 2-in-1 or multi-room system — https://thefaultcode.com/ac/lg/ch07/
+
+Sources: LG front-load washer error-code list; Samsung washing machine information and error codes (TSG10000997); Samsung dishwasher error codes (TSG10004499); LG dishwasher guide to error codes; LG air conditioner guide to error codes. All on the manufacturer's own site.
+
+Not published: Samsung Ur (already on the UE page); Samsung washer 4E/5E and dishwasher 4E/5E/IE/6E (aliases of pages that exist); LG dishwasher FE (already covered with AE); LG HE, SE, Ed5, nC, nE, nF and Samsung washer tE/HE/HC where the support page only says reset, then service; Bosch codes whose official page only says call support; Lennox mini-split CL/dF/LL; further sister-brand twin pages; the removed Mitsubishi E6 example. Samsung washer dn (download in progress) and the GE dishwasher PF, Cup Open and 1H rows were left off. The ten pages above filled the day's cap, and GE's article says not every code is on every model.
+
+Quality fixes, no new sister-brand pages: code pages for Trane/American Standard, Carrier/Bryant, and Goodman/Amana now cross-link the sister page that already exists, and the Goodman/Amana sentence names the two different charts. The 23 October Goodman furnace pages (EE0, EE1, EE2, EE3, EE4, EE5, EE6, EEA, EEb, EEC, EEE, EEL, EEn, E10, E11) now name the single-stage *R9S96 / *D9S96 / *R9S92 family in IOG-2037B and have sourceTitle set. Where the same characters exist on the two-stage *CVC96 / *MVC96 chart, the Goodman page points at the IOG-2015L page. Trane E2.3 and American Standard E2.3: both manuals say the 1st stage gas valve was not energized after 10 times. Trane Service Facts S9V2-SF-2A-EN says 24 VAC was not sensed on MVL and the step is to replace the integrated furnace control, not the gas valve. The American Standard installer's guide 18-CE01D1-1E-EN does not name a replacement part. The gas-valve part was removed from the American Standard page. No Amazon link was added or removed on those furnace pages. Existing affiliate links were left in place.
+
+Guides updated 2026-11-09: washer door (ddC), washer suds (OPn and dcL are not suds), dishwasher temperature (PE, AP, and LG dishwasher PF are not heater codes). FAQ schema is generated from the same questions and answers shown on the page.
+
+Build: 466 routes. Static check of dist HTML only. amazon.com, amzn.to, CJ and Angi hosts were not requested. New pages: one H1, self-canonical, no noindex, in the sitemap with lastmod 2026-11-09, in the dataset and llms-full.txt, OG images 1200×630 PNG. axe 0 violations on the 10 new pages, the 3 edited guides, both E2.3 pages, Goodman EE0, and unchanged Bosch E23 (mobile, tablet, desktop). The capture form was not submitted. Inline text links and the sitewide search control, skip link, and consent checkbox are under 44px on the unchanged Bosch page as well.
+
+Live checks are recorded after this batch is on https://thefaultcode.com.
+
+### 404 and link check
+
+No new code pages in that pass. Amazon tag unchanged. No Amazon links added or removed.
 
 Live crawl of the sitemap (453 URLs) and of href/src links on those pages, llms.txt, llms-full.txt, and the dataset: every internal content URL returned 200. Sitemap URLs are the final https://thefaultcode.com/.../ form, with a self canonical, and none carry noindex. The 404 page is noindex, has no canonical, and is not in the sitemap. That noindex is intentional. www and http already 301 to the apex https host. A missing trailing slash on a real directory 308s to the slashed URL. Those redirects are the host canonical, and the site does not link to them.
 

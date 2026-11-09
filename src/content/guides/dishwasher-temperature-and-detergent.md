@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -18,6 +18,10 @@
   {
    "q": "What does LG HE mean if the reset does not clear it?",
    "a": "LG says the heater is not heating the water, or the water overheated above 90°C (194°F). If HE returns after one power reset, request service. A related code, tE, is the temperature sensor. LG says tE needs a technician and does not publish the HE reset for it."
+  },
+  {
+   "q": "Is Samsung PE a heater code?",
+   "a": "No. Samsung PE means the half-load function is not performing correctly. Empty the dishwasher, add detergent, and run a half-load cycle. AP is Access Point pairing, not a fault. LG dishwasher PF means power was cut and the cycle can resume. Press start/pause. None of those three is HE, HC or tE."
   }
  ],
  "sources": [
@@ -38,7 +42,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te", "dishwashers/bosch/e09", "dishwashers/bosch/e20"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te", "dishwashers/bosch/e09", "dishwashers/bosch/e20", "dishwashers/samsung/pe", "dishwashers/samsung/ap", "dishwashers/lg/pf"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -166,6 +170,13 @@ Bosch's error-code page uses one sentence for both [E09](/dishwashers/bosch/e09/
 A different Bosch code, [E21](/dishwashers/bosch/e21/), means the heat pump is blocked, not scaled. Bosch's step there is a 30-second breaker reset, then Customer Support. Descaler is not the E21 fix.
 
 Salt is only for machines that have a softener and a salt compartment. Pouring salt into a detergent cup is not what Bosch wrote. The [salt](/parts/dishwasher-salt/) and [descaler](/parts/dishwasher-descaler/) pages say the same thing.
+
+## Codes on the same Samsung and LG pages that are not heater codes
+[Samsung PE](/dishwashers/samsung/pe/) means the half-load function is not performing correctly. Samsung's steps are to empty the dishwasher, add detergent, and run a half-load cycle. If it returns, switch the breaker off and request service. It is not HE, HC or tE.
+
+[Samsung AP](/dishwashers/samsung/ap/) is Access Point mode, so the dishwasher can pair with a phone. It is not a fault. If you are not pairing, turn the dishwasher off and on. Do not run a detergent cycle to clear AP.
+
+[LG dishwasher PF](/dishwashers/lg/pf/) means power was cut and the dishwasher will resume. LG says it is not an error. Press start/pause. That is not the LG washer PF reset, and it is not a heater code.
 
 ## What the shop buttons are
 This page searches Amazon for dishwasher detergent, dishwasher descaler, and dishwasher softening salt. Those are the supplies the codes above name. They are not heater elements and not control boards. Match a descaler to the instructions on its package and to Bosch's E12 note if that is your code. Match salt to a machine that has a softener. A detergent pod still has to fit the cup the way GE describes for C8, or it becomes the obstruction.

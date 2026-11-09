@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "dcL",
+  "codeSlug": "dcl",
+  "displayPattern": "Display on an LG washer with ezDispense, while nozzle clean is running: dcL",
+  "meaning": "Nozzle clean: LG says dcL is not a fault. It appears when the ezDispense nozzle-clean program is running. That program cleans the ezDispense nozzles and hose and takes about 16 minutes.",
+  "causes": [
+    "ezDispense nozzle clean was started, on one compartment or on both",
+    "The product type was changed, or ezDispense had not been used for some time"
+  ],
+  "diySteps": [
+    "dcL means the clean program is running. LG says it takes about 16 minutes. Let it finish",
+    "The compartment being cleaned has to be empty of product. Empty it, clean it, and fill it with water to the max line",
+    "You can clean one compartment or both. Start the function the way that model's owner's manual describes",
+    "Use it when changing the product in the dispenser, or when ezDispense has not been used for some time"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "dcL is maintenance on ezDispense models only. It is not Sud and not OPn. LG says there should be no detergent or softener in the tray you are cleaning. If the display is a different code after the 16 minutes, use that code.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

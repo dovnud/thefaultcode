@@ -5,7 +5,7 @@
  "title": "Washer Suds Codes: HE Detergent and Too Many Suds",
  "description": "What LG Sud, Samsung SUd and Whirlpool Sud mean, how much detergent those pages allow, and how suds also cause drain and leak codes.",
  "answer": "Sud, SUd and Sd are detergent codes. The washer saw too many suds, paused or added a rinse, and is trying to finish the cycle. Use HE detergent in the amount the manufacturer describes. Non-HE detergent, too much detergent, and a few other products these pages name are the causes, not a failed motor.",
- "updated": "2026-10-27",
+ "updated": "2026-11-09",
  "faq": [
   {
    "q": "Will the washer finish the cycle by itself?",
@@ -18,6 +18,10 @@
   {
    "q": "Is tCL a suds code?",
    "a": "No. LG tCL is a reminder to run the monthly Tub Clean cycle. It is maintenance, not a fault. Empty the tub, add a powder washing machine cleaner, and run Tub Clean."
+  },
+  {
+   "q": "Is LG OPn or dcL a suds code?",
+   "a": "No. OPn means the detergent drawer was not fully inserted, or it was opened while the washer was running. dcL means the ezDispense nozzle-clean program is running, for about 16 minutes. Neither one is Sud."
   }
  ],
  "sources": [
@@ -34,7 +38,7 @@
    "url": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers"
   }
  ],
- "codes": ["washers/lg/sud", "washers/samsung/sud", "washers/whirlpool/sud", "washers/lg/tcl", "washers/whirlpool/f8e2", "washers/lg/oe"]
+ "codes": ["washers/lg/sud", "washers/samsung/sud", "washers/whirlpool/sud", "washers/lg/tcl", "washers/whirlpool/f8e2", "washers/lg/oe", "washers/lg/opn", "washers/lg/dcl"]
 }
 ---
 ## Why front loaders are strict about suds
@@ -81,6 +85,11 @@ Dishwashers have the same class of mistake, with different codes. LG dishwasher 
 
 ## A clogged dispenser is not a suds code
 [Whirlpool F8 E2](/washers/whirlpool/f8e2/) means a dispenser system problem: the detergent drawer or detergent cartridge may be clogged. Whirlpool's step is to check that the drawer or cartridge is not clogged with detergent and clean it. The brand points to its own "How do I clean my washer dispensers?" guide for the procedure. If F8 E2 returns after cleaning, contact Whirlpool. This is select models, which the code page notes. It is not the same display as Sud.
+
+## Drawer messages that are not suds
+[LG OPn](/washers/lg/opn/) means the washer ran without the detergent drawer fully inserted, or the drawer was opened during the cycle. Push the drawer in until it seats. If OPn remains, LG says to request service. It is not Sud and it is not a reason to buy more detergent.
+
+[LG dcL](/washers/lg/dcl/) means ezDispense nozzle clean is running. LG says that program takes about 16 minutes. The compartment being cleaned has to be empty of detergent or softener, then filled with water to the max line. It is maintenance on ezDispense models, not a suds code and not OPn.
 
 ## LG tCL is a reminder, not a fault
 [LG tCL](/washers/lg/tcl/) means it is time to run Tub Clean. LG's steps: empty the tub, pour in a powder washing machine cleaner (LG says these are sold near the detergent in most retail stores), run the Tub Clean cycle, and run it monthly so the reminder does not come back. No repair is needed. The message clears once Tub Clean has been run.
