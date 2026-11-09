@@ -2,7 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { datasetRows } from '../../lib/dataset';
 import { siteUpdated } from '../../lib/lastmod';
-import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR, SITE_URL, CONTACT_EMAIL } from '../../config/site';
+import EmailAddress from '../../components/EmailAddress.astro';
+import { fmtDate, ORG, EDITORIAL, EDITORIAL_AUTHOR, SITE_URL } from '../../config/site';
 import { isoDate } from '../../lib/schema';
 const rows = await datasetRows();
 const updated = siteUpdated();
@@ -30,7 +31,7 @@ const jsonld = [
 <p>{rows.length} records, {brands} brands, {cats.length} categories ({cats.join(', ')}). Both files are generated from the same content as the code pages and rebuilt whenever a code changes. Columns: brand, category, equipment_type, code, display_pattern, meaning, professional_recommended, source_type, source_title, source_url, page_url, date_modified.</p></section>
 <section class="card sec guide" aria-labelledby="cite-h"><h2 id="cite-h">How to cite and reuse</h2>
 <p><strong>Suggested citation:</strong> {EDITORIAL}. “Fault code dataset.” The Fault Code, updated {fmtDate(updated)}. {url}</p>
-<p>The meanings summarize text from manufacturer documents that belong to their publishers; the source link on each row is the authoritative reference. We have not yet chosen a reuse license for this compilation, so none is declared here. To ask about reuse, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. This is general information, not professional advice; always check your exact model's manual.</p></section>
+<p>The meanings summarize text from manufacturer documents that belong to their publishers; the source link on each row is the authoritative reference. We have not yet chosen a reuse license for this compilation, so none is declared here. To ask about reuse, email <EmailAddress />. This is general information, not professional advice; always check your exact model's manual.</p></section>
 <section class="card sec" aria-labelledby="tbl-h"><h2 id="tbl-h">All {rows.length} codes</h2>
 <table class="dtab"><thead><tr><th scope="col">Brand</th><th scope="col">Category</th><th scope="col">Code</th><th scope="col">Meaning</th><th scope="col">Source</th></tr></thead><tbody>
 {rows.map(r => <tr><td data-l="Brand">{r.brand}</td><td data-l="Category">{r.category}</td><td data-l="Code"><a href={String(r.page_url).replace(SITE_URL,'')}><span class="mono">{r.code}</span></a></td><td data-l="Meaning">{r.meaning}</td><td data-l="Source">{r.source_url ? <a href={String(r.source_url)} rel="noopener" target="_blank">{r.source_type === 'manufacturer support page' ? 'Support page' : 'Manual (PDF)'}<span class="sr-only"> for {r.brand} {r.code} (opens in a new tab)</span> ↗</a> : ''}</td></tr>)}

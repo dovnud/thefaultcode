@@ -1,5 +1,21 @@
 # Publish log
 
+## 2026-11-09
+
+404 and link check. No new code pages. Amazon tag unchanged. No Amazon links added or removed.
+
+Live crawl of the sitemap (453 URLs) and of href/src links on those pages, llms.txt, llms-full.txt, and the dataset: every internal content URL returned 200. Sitemap URLs are the final https://thefaultcode.com/.../ form, with a self canonical, and none carry noindex. The 404 page is noindex, has no canonical, and is not in the sitemap. That noindex is intentional. www and http already 301 to the apex https host. A missing trailing slash on a real directory 308s to the slashed URL. Those redirects are the host canonical, and the site does not link to them.
+
+What was actually 404ing: the code in the case printed on the appliance (`/goodman/EE0/`, `/washers/lg/vS/`, `/washers/lg/OE/`), dot and alias forms the pages already name (`/trane/e2.3/`, `/washers/lg/e03/`, `/washers/lg/u5/`, `/dishwashers/bosch/e16/`), and the furnace-style or singular prefix (`/whirlpool/f5e2/`, `/washer/lg/oe/`, `/navien/E003/`). `public/_redirects` sends each of those to the one published page, 301. Samsung washer 3E is not redirected, because that support page uses 3E for two different faults. `/lg/oe/` is not redirected, because LG uses OE on both the washer and the dishwasher. Removed example fixtures (`/goodman/3-flashes/`, `/mitsubishi/e6/`) stay 404. Nothing redirects to the home page.
+
+About and the dataset page were linking to `/cdn-cgi/l/email-protection`, which is Cloudflare's email-obfuscation URL and returns Cloudflare's own 404 (title "Email Protection | Cloudflare", noindex). The build was stripping `<!--email_off-->`, so obfuscation rewrote the mailto. Mailto links now go out through a component that keeps those comments. The address is still contact@thefaultcode.com.
+
+`/water-heaters/` and `/parts/for/water-heaters/` were in the sitemap with no lastmod. The date list had not been updated when that category was added. Both now use 2026-11-08, the newest code on those hubs.
+
+Carrier dealer link: https://www.carrier.com/us/en/residential/find-a-dealer/ was checked again on this date. It returns 200, the title is "Find a local HVAC Dealer or Contractor", and the page canonical is that same URL. https://www.carrier.com/residential/en/us/find-a-dealer/ 301s to it. The link was already the current official locator, so it was not replaced. The 404 recorded on 2026-11-02 is not what this URL returns now.
+
+Build: 454 routes. Sitemap: 453 HTML URLs, all with lastmod. Static check of dist HTML, llms, and the dataset found no internal link to a missing path. Affiliate hosts were not requested.
+
 ## 2026-11-08
 
 New exact-match pages. Each code cites a manufacturer document read on this date. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content at build. Amazon tag unchanged (thefaultcode-20). No new ASINs. amazonMax is 0 on every new page except Lennox E291, which keeps a furnace-filter search because that row names a dirty filter.
