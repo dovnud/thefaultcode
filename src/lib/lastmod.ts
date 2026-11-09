@@ -2,7 +2,7 @@
 // Codes and guides: their own `updated` field. Hubs and indexes: the newest `updated` among the codes/guides they list.
 // Static pages and the parts guides (which live in code): last git commit date of the source file, kept in src/data/lastmod.json.
 import { readFileSync, readdirSync } from 'node:fs';
-import { groupCodes, codePath } from '../config/categories';
+import { CATEGORIES, groupCodes, codePath } from '../config/categories';
 import { HVAC_PARTS } from '../data/hvac';
 import { FINDER_PARTS, FINDER_UPDATED } from './partFinder';
 import manifest from '../data/lastmod.json';
@@ -29,7 +29,7 @@ export function lastmodMap() {
     m.set(g.href, d);
     m.set(`/parts/for/${g.cat.slug}/${g.brandSlug}/`, max([d, partsMax]));
   }
-  for (const slug of ['furnaces', 'washers', 'dishwashers', 'ac']) {
+  for (const slug of CATEGORIES.map(c => c.slug)) {
     const d = max(codes.filter(c => groupCodes([c])[0]?.cat.slug === slug).map(c => c.updated));
     m.set(`/${slug}/`, d); m.set(`/parts/for/${slug}/`, max([d, partsMax]));
   }

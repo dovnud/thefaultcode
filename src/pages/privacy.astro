@@ -1,5 +1,5 @@
 ---
-import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, CONSENT_TEXT, SITE_URL, TURNSTILE_SITE_KEY } from "../config/site";
+import Base from "../layouts/Base.astro"; import EmailAddress from "../components/EmailAddress.astro"; import { CONSENT_TEXT, SITE_URL, TURNSTILE_SITE_KEY } from "../config/site";
 import { breadcrumbLd } from "../lib/schema";
 const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Privacy policy',item:`${SITE_URL}/privacy/`}]);
 ---
@@ -19,7 +19,7 @@ const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Privacy po
 <li>A one-way hash of the IP address the request came from, used to limit repeated submissions. We do not store the raw IP address in this database.</li>
 </ul>
 <p>We store this so the request you submitted is on file. We do not sell, rent, or trade it, and we do not share it with advertisers or data brokers. We do not combine it with analytics.</p>
-<p>To ask us to delete a stored request, email <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->. Email to that address is the only way to request deletion.</p>
+<p>To ask us to delete a stored request, email <EmailAddress />. Email to that address is the only way to request deletion.</p>
 {TURNSTILE_SITE_KEY && <p>Before a request is stored, Cloudflare Turnstile may check that a person submitted the form. Cloudflare receives the technical data that check needs. See <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare's privacy policy</a>. The site stores the result of that check only as a pass or fail for the submission; it does not add the check to the saved request.</p>}
 <h2>Analytics (Google Analytics 4)</h2>
 <p>We use Google Analytics 4, a web analytics service from Google, to understand how the site is used so we can improve it. Google Analytics sets cookies in your browser and collects usage data such as the pages you view, how you arrived at the site (for example a search engine or a link), approximate location (country or city, derived from your IP address), device type, browser, operating system, and screen size. We see this only as aggregated reports; we cannot identify you from it, and we do not combine it with any other personal information.</p>
@@ -33,7 +33,7 @@ const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Privacy po
 <p>Some pages link to other sites, such as parts retailers and contractor-matching services. Those sites have their own privacy policies, and if a link is an affiliate link they may use cookies to track referrals from us. See our <a href="/affiliate-disclosure/">affiliate disclosure</a> for details.</p>
 <h2>Search</h2>
 <p>The <a href="/codes/">code search</a> on this site runs in your browser; what you type is not sent to us.</p>
-<h2>Contact</h2><p>Privacy questions, and deletion of a stored request: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->.</p>
+<h2>Contact</h2><p>Privacy questions, and deletion of a stored request: <EmailAddress />.</p>
 <h2>Changes</h2>
 <p>If this policy changes, we will update this page.</p></div></div>
 </Base>

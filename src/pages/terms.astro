@@ -1,5 +1,5 @@
 ---
-import Base from "../layouts/Base.astro"; import { CONTACT_EMAIL, SITE_URL } from "../config/site";
+import Base from "../layouts/Base.astro"; import EmailAddress from "../components/EmailAddress.astro"; import { SITE_URL } from "../config/site";
 import { breadcrumbLd } from "../lib/schema";
 const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Terms of Use',item:`${SITE_URL}/terms/`}]);
 ---
@@ -13,7 +13,7 @@ const jsonld = breadcrumbLd([{name:'Home',item:`${SITE_URL}/`},{name:'Terms of U
 <h2>Limitation of liability</h2><p>To the fullest extent permitted by law, the site's operators are not liable for any loss, damage or injury arising from your use of the site or reliance on its content, including any repair you or others perform.</p>
 <h2>Third-party links</h2><p>The site links to other websites, including manufacturers, parts retailers and contractor-referral services. Some are affiliate links (see our <a href="/affiliate-disclosure/">affiliate disclosure</a>). We do not control those sites and are not responsible for their content, products or services.</p>
 <h2>Trademarks</h2><p>Brand and product names are trademarks of their respective owners. The site is not affiliated with or endorsed by any manufacturer.</p>
-<h2>Contact</h2><p>Questions about these terms: <!--email_off--><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><!--/email_off-->.</p>
+<h2>Contact</h2><p>Questions about these terms: <EmailAddress />.</p>
 <h2>Changes</h2><p>We may update these terms at any time by posting a new version on this page. Continued use of the site means you accept the updated terms.</p>
 </div></div>
 </Base>
