@@ -6,27 +6,21 @@
   "code": "E2.3",
   "codeSlug": "e2-3",
   "displayPattern": "7-segment display on an American Standard S9V2 two-stage variable-speed furnace: E2.3",
-  "meaning": "1st stage gas valve was not energized when it should be, and that fault was exceeded after 10 times.",
+  "meaning": "1st stage gas valve not energized: the installer's guide says it was not energized when it should be, and that fault was exceeded after 10 times.",
   "causes": [
     "1st stage gas valve not energized on a call when the control expected it"
   ],
   "diySteps": [
     "Do not jumper the gas valve to force heat",
-    "Technician: the sequence says the 1st stage gas valve relay closes after ignitor warm-up. E2.3 is that valve not being energized"
+    "Technician: the heating sequence in this guide closes the 1st stage gas valve relay after ignitor warm-up. This guide does not name a part to replace"
   ],
   "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
-  "proAdvice": "Call a licensed HVAC technician. E2.3 is the gas-valve circuit, not a filter code.",
+  "proAdvice": "Call a licensed HVAC technician. E2.3 is the gas-valve circuit, not a filter code. This installer's guide does not say to replace the gas valve or the control. The Trane Service Facts flowchart for the same S9V2 code says 24 VAC was not sensed on MVL and the step there is to replace the integrated furnace control. Follow the badge on the furnace.",
   "proNeeded": true,
-  "parts": [
-    {
-      "name": "Gas valve",
-      "partKey": "gas-valve",
-      "searchTerm": "furnace gas valve"
-    }
-  ],
+  "parts": [],
   "sourceManualUrl": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf",
   "sourceType": "manual-pdf",
   "sourceTitle": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
   "amazonMax": 0,
-  "updated": "2026-11-05"
+  "updated": "2026-11-09"
 }

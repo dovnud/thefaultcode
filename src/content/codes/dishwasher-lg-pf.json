@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "dishwasher",
+  "code": "PF",
+  "codeSlug": "pf",
+  "displayPattern": "Display on an LG dishwasher after power was cut: PF",
+  "meaning": "Power restored: LG says PF is not an error. Power was cut, and the dishwasher will remember the point it had reached and continue from there.",
+  "causes": [
+    "A power outage during a cycle",
+    "The dishwasher was unplugged during a cycle"
+  ],
+  "diySteps": [
+    "PF is not a fault. LG says the dishwasher recalls the last operation from before the power cut",
+    "Press the start/pause button to start it again",
+    "This is not the LG washer PF reset. The washer instructions are a different appliance"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Do not request service only because PF appeared after an outage or after the dishwasher was unplugged. Press start/pause. If a different code is on the display after power is back, follow that code. LG notes that codes can differ by model.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-dishwasher-guide-to-error-codes--20154823515108",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Dishwasher] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "Cd",
+  "codeSlug": "cd",
+  "displayPattern": "Multi display on an LG front-load washer-dryer combo after a drying cycle: Cd",
+  "meaning": "Cool down: LG says Cd is not an error. The drying cycle has finished, and the combo tumbles the load so wrinkles do not set, for up to 4 hours.",
+  "causes": [
+    "The drying cycle has finished and cool down started on its own",
+    "Clothes were left in a washer-dryer combo after the dry cycle"
+  ],
+  "diySteps": [
+    "Cd is not a fault to clear. Cool down is set automatically when the drying cycle ends",
+    "The drum periodically tumbles, rearranges and fluffs the load for up to 4 hours so wrinkles do not form",
+    "The message stays until the clothes are removed, or until START/PAUSE is pressed",
+    "A wash-only LG washer does not use this dry-cycle display. If the machine has no drying cycle, check the code against the list again"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Do not request a repair because Cd is on the display after a dry cycle. Remove the clothes or press START/PAUSE. This is the washer-dryer combo behavior on LG's front-load list, not a wash-cycle fault.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "OPn",
+  "codeSlug": "opn",
+  "displayPattern": "Display on an LG front-load washer with a removable drawer: OPn",
+  "meaning": "Drawer not inserted: LG says the washer was started without the detergent drawer fully inserted, or the drawer was opened while the washer was running.",
+  "causes": [
+    "The drawer was not fully inserted when the cycle started",
+    "The drawer was opened while the washer was operating"
+  ],
+  "diySteps": [
+    "Push the drawer in until it is completely seated",
+    "If it was opened during a cycle, close it fully and start the cycle again",
+    "If OPn remains with the drawer seated, request service"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "OPn is the drawer, not a drain code and not a suds code. LG says to request service if seating the detergent drawer does not clear it.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

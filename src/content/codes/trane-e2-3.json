@@ -9,7 +9,7 @@
     }
   ],
   "amazonMax": 0,
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "sourceType": "manual-pdf",
   "code": "E2.3",
   "codeSlug": "e2-3",
@@ -20,9 +20,9 @@
   ],
   "diySteps": [
     "Do not jumper the gas valve to force heat",
-    "Technician: the troubleshooting step for fault 2.3 is to replace the integrated furnace control"
+    "Technician: the Service Facts step for fault 2.3 is to replace the integrated furnace control (IFC)"
   ],
-  "proAdvice": "Call a licensed HVAC technician. E2.3 is the gas-valve circuit after ten misses. It is not retry lockout E2.1.",
+  "proAdvice": "Call a licensed HVAC technician. The Service Facts flowchart for fault 2.3 says 24 VAC was not sensed on MVL ten times in the same call for heat, and the step is to replace the integrated furnace control. It does not say to replace the gas valve. The American Standard installer's guide states the same alarm and does not name that part. E2.3 is not retry lockout E2.1.",
   "brand": "Trane",
   "brandSlug": "trane",
   "equipmentType": "furnace",

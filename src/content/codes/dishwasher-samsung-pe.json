@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "dishwasher",
+  "code": "PE",
+  "codeSlug": "pe",
+  "displayPattern": "Display on a Samsung dishwasher with a half-load function: PE",
+  "meaning": "Half load failed: Samsung says the half-load function is not performing correctly.",
+  "causes": [
+    "The half-load function is not performing correctly"
+  ],
+  "diySteps": [
+    "Empty the dishwasher",
+    "Add detergent and run a half load cycle",
+    "This is the half-load code. It is not the leak code and not the heater codes"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If PE still occurs after the empty half-load cycle, Samsung says to switch off power to the dishwasher at the circuit breaker and request service. The half-load steps apply to models that have that function.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung dishwasher is displaying an error code (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

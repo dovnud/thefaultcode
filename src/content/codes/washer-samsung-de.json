@@ -25,7 +25,7 @@
   ],
   "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
   "proNeeded": false,
-  "proAdvice": "If the code cannot be corrected, or the door or latch is damaged, Samsung says to request service.",
+  "proAdvice": "If the code cannot be corrected, or the door or latch is damaged, Samsung says to request service. ddC and dC3 are the Add Door, a different code from this main door.",
   "parts": [],
   "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
   "sourceType": "support-page",
@@ -36,5 +36,5 @@
       "url": "https://www.samsung.com/us/support/troubleshoot/TSG10007180/"
     }
   ],
-  "updated": "2026-10-26"
+  "updated": "2026-11-09"
 }

@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "Cb",
+  "codeSlug": "cb",
+  "displayPattern": "Display on a Samsung washer during weight calibration: Cb (also shown as C6)",
+  "meaning": "Calibration: Samsung says Cb is calibration mode, not a fault. The washer is recalibrating weight detection, which sets how much water a cycle uses. It is usually done at the end of installation.",
+  "causes": [
+    "Calibration mode is running",
+    "Something was left in the tub, so the weight calibration cannot finish correctly"
+  ],
+  "diySteps": [
+    "Cb is not a fault. Calibration rotates the tub or drum back and forth for 1 to 3 minutes and then ends by itself",
+    "The tub has to be empty. If anything is in the washer, take it out and run calibration again with the washer empty",
+    "The button sequence that starts calibration is in the user manual or in Samsung's installation article. This error-code page does not list those buttons"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Do not request service because Cb or C6 appeared during an empty calibration. If the message stays well past the 1 to 3 minutes Samsung describes, and the tub is empty, use the manual's calibration steps or request service. This is not Child Lock and not a load-balance code.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

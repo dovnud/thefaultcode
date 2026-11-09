@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "air-conditioner",
+  "code": "CH07",
+  "codeSlug": "ch07",
+  "displayPattern": "Display on an LG 2-in-1 or multi-room air conditioner when indoor units disagree: CH07",
+  "meaning": "Mode conflict: LG says CH07 appears when heating and cooling are selected at the same time. On a 2-in-1, the standing unit and the wall unit are in different mode families. On a ceiling system, rooms are set to conflicting modes.",
+  "causes": [
+    "One indoor unit is set to heating while another is set to cooling",
+    "One indoor unit is set to heating while another is set to dehumidification"
+  ],
+  "diySteps": [
+    "Check the mode on every indoor unit",
+    "Set them all to heating, or set them all to cooling or dehumidification. Cooling together with dehumidification is allowed. Heating together with cooling is not, and heating together with dehumidification is not",
+    "Air Purification and Fan can be used at any time, including while other units are heating or cooling",
+    "If every unit is already in one mode family and CH07 remains, request service"
+  ],
+  "safetyNote": "Unplug the air conditioner, or switch off its breaker, before you remove a drain cap or move the unit. Condensate can be dirty. Do not open a ceiling unit's cabinet. Refrigerant, sealed-system and control-board work belong to a licensed HVAC technician.",
+  "proNeeded": false,
+  "proAdvice": "CH07 is a mode setting on a 2-in-1 or a multi-room system, not a refrigerant code and not CH04 condensate. Do not open the unit to clear it. Request service only if the units already share one mode family and the code remains.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-air-conditioner-guide-to-error-codes--20155047719306",
+  "sourceType": "support-page",
+  "sourceTitle": "[LG Air Conditioner] Guide to Error Codes (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-09"
+}

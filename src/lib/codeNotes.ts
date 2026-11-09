@@ -130,7 +130,10 @@ export const CODE_NOTES: Record<string, string> = {
 `American Standard S9V2 E2.2 is recycles exceeded. Flame was sensed, then lost, and the control locks out for one hour after 10 times. E2.1 is flame that was never sensed, after 3 times. The sequence in this guide measures flame current on the FP pads, typically 0.75 to 3.0 microamps. That measurement is technician work.`,
 
   'furnaces/american-standard/e2-3':
-`American Standard S9V2 E2.3 means the 1st stage gas valve was not energized when the control expected it, and that happened until the count passed 10. It is not E7.1, which is the same valve energized when it should be off. Do not jumper the valve. The heating sequence closes the valve relay only after ignitor warm-up.`,
+`American Standard S9V2 E2.3 means the 1st stage gas valve was not energized when the control expected it, and that happened until the count passed 10. It is not E7.1, which is the same valve energized when it should be off. Do not jumper the valve. The heating sequence closes the valve relay only after ignitor warm-up. This installer's guide does not name a replacement part. The Trane Service Facts flowchart for the same alarm says 24 VAC was not sensed on MVL and the step is to replace the integrated furnace control. That part is not copied onto this page as if this guide said it.`,
+
+  'furnaces/trane/e2-3':
+`Trane S9V2 E2.3 means the 1st stage gas valve was not energized when it should have been, 10 times in the same call for heat. The Service Facts flowchart says 24 VAC was not sensed on MVL those 10 times, and the step is to replace the integrated furnace control. It does not say to replace the gas valve. The American Standard installer's guide states the same alarm and does not name that part. E2.3 is not retry lockout E2.1.`,
 
   'furnaces/american-standard/e3-1':
 `American Standard S9V2 E3.1 is a shorted 1st stage pressure switch. The sequence proves both pressure switches open before the inducer starts, so a switch that is already closed or shorted fails that test. E3.2 is the 1st stage switch that stays open. E3.3 would be the shorted 2nd stage switch. Do not jumper either switch.`,
@@ -382,6 +385,36 @@ export const CODE_NOTES: Record<string, string> = {
 
   'dishwashers/bosch/e20':
 `Bosch's page gives E20 the same meaning it gives E09: heat pump internal heater fault, 30-second breaker reset, then Customer Support. It is not E12. Descaling is the E12 step, not this one.`,
+
+  'washers/lg/cd':
+`LG Cd is cool down after a drying cycle on a washer-dryer combo, not a fault. It can tumble for up to 4 hours. The message stays until the clothes are removed or START/PAUSE is pressed. A wash-only machine does not use this display.`,
+
+  'washers/lg/opn':
+`LG OPn means the detergent drawer was not fully inserted, or it was opened while the washer was running. Seat the drawer. It is not OE, the drain code, and it is not Sud.`,
+
+  'washers/lg/dcl':
+`LG dcL means the ezDispense nozzle-clean program is running. LG says it takes about 16 minutes, and the compartment being cleaned has to be empty of detergent or softener and filled with water to the max line. It is not OPn and it is not Sud. ezDispense models only.`,
+
+  'washers/samsung/ddc':
+`Samsung ddC, also shown as dC3, is the Add Door, not the main door. dE is the main door. A lone dC can be a door error or an unbalanced load, depending on the model. Do not use that dC note for ddC.`,
+
+  'washers/samsung/cb':
+`Samsung Cb, also shown as C6, is weight-calibration mode, not a fault. The tub has to be empty. The rotation lasts 1 to 3 minutes and then ends. It is not Child Lock.`,
+
+  'dishwashers/samsung/ap':
+`Samsung dishwasher AP is Access Point mode for pairing with a phone, not a fault. If you are not pairing, turn the dishwasher off and on. It is not a leak code.`,
+
+  'dishwashers/samsung/pe':
+`Samsung dishwasher PE means the half-load function is not performing correctly. Empty the dishwasher, add detergent, and run a half-load cycle. It is not the leak code and not HE or HC.`,
+
+  'dishwashers/lg/pf':
+`LG dishwasher PF means power was cut and the cycle can resume. It is not an error. Press start/pause. The LG washer PF reset, unplug and hold START/PAUSE for 5 seconds, is a different appliance.`,
+
+  'ac/lg/ch04':
+`LG CH04 is condensate. Window and portable units: unplug, then drain the rear port into a pan. Ceiling units: power off for 5 minutes, then restore power, and request service if it returns. Some window and portable units show FL instead of CH04. Do not use the ceiling reset as the only step on a window unit.`,
+
+  'ac/lg/ch07':
+`LG CH07 means heating and cooling are selected at the same time on a 2-in-1 or a multi-room system. Set every indoor unit to heating, or to cooling or dehumidification. Cooling with dehumidification is allowed. Air Purification and Fan are allowed with either family. It is not CH04.`,
 };
 
 export function codeNote(key: string): string | undefined {
