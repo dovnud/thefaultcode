@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "dET",
+  "codeSlug": "det",
+  "displayPattern": "Front-load washer display shows dET (select models with a detergent cartridge)",
+  "meaning": "Detergent cartridge not detected: Whirlpool says dET means the detergent cartridge is not detected in the dispenser. It appears on select models only.",
+  "causes": [
+    "The dispenser cartridge is not inserted correctly",
+    "The dispenser drawer is not shut completely",
+    "You are using single-load doses, so the cartridge slot is empty on purpose"
+  ],
+  "diySteps": [
+    "If you use single-load doses, Whirlpool says to ignore this message",
+    "If you use the cartridge, make sure it is inserted correctly in the dispenser",
+    "Shut the dispenser drawer completely"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "dET is a dispenser message, not a repair code. If the cartridge is seated, the drawer is shut and dET keeps showing, contact Whirlpool or schedule service online, as the same page says for codes the steps do not solve. dET is not F8 E2, which is a dispenser system that may be clogged with detergent.",
+  "parts": [],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

@@ -2015,3 +2015,10 @@
 /ac/lg/CH7/ /ac/lg/ch07/ 301
 /ac/lg/ch7/ /ac/lg/ch07/ 301
 /ac/lg/CH07 /ac/lg/ch07/ 301
+# 2026-11-10 codes. Alias forms only: Cloudflare Pages allows 2,000 static rules and this file is close to that.
+/dishwashers/ge/f56/ /dishwashers/ge/ftd/ 301
+/dishwashers/ge/ih/ /dishwashers/ge/1h/ 301
+/washers/lg/ed1/ /washers/lg/ed1-ed2/ 301
+/washers/lg/ed2/ /washers/lg/ed1-ed2/ 301
+/washers/lg/p5/ /washers/lg/ps/ 301
+/washers/whirlpool/f34/ /washers/whirlpool/rl/ 301

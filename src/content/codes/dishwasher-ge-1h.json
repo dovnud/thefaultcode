@@ -1,0 +1,44 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "1H (number + H)",
+  "codeSlug": "1h",
+  "displayPattern": "Display on a GE touch-control dishwasher: a number followed by H, such as 1H, 2H or 3H (not all codes are found on all models)",
+  "meaning": "Delay Start is on. GE says a number plus H, for example 1H, means the dishwasher is in Delay Start mode, and the number is the hours left before the wash cycle starts. It is not a fault. 1H starts with the number 1, not the letter I.",
+  "causes": [
+    "The Delay Start or Delay Hours pad was pressed. Each press adds one hour of delay",
+    "A delay was set by accident while choosing a cycle"
+  ],
+  "diySteps": [
+    "To keep the delay, do nothing. GE says the control counts down the remaining hours and starts the programmed wash cycle at the end of the countdown",
+    "Opening or unlatching the door does not cancel the delay, according to GE",
+    "To cancel on models with a Delay Start pad, press that pad until the hours of delay indicator goes off",
+    "Models with a Delay Hours pad have no Off setting. Press and release Delay Hours until no number shows",
+    "On most models, GE says pressing and holding Start or Start/Reset for 3 seconds cancels any set cycle, including the delay. Then choose the cycle again and press Start"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "A number plus H is a setting, so there is nothing to repair while it counts down. The delay range varies by model: GE's articles say most models delay up to 8 hours, some up to 12, and touch-control models range from 1 to 14 hours, so the owner's manual for your model has the exact range. If the display will not clear after canceling the delay and the dishwasher still will not start, GE's will-not-start article says a service call may be needed.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "moreSources": [
+    {
+      "name": "Dishwasher – Delay Start Option (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=17913"
+    },
+    {
+      "name": "Dishwasher – Canceling the Delay Start Option (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=18402"
+    },
+    {
+      "name": "Dishwasher – Will Not Start or Run but Has Lights or Sound (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=17397"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

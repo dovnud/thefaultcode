@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "brand": "Whirlpool",
+  "brandSlug": "whirlpool",
+  "equipmentType": "washing-machine",
+  "code": "Int",
+  "codeSlug": "int",
+  "displayPattern": "Front-load washer display shows Int",
+  "meaning": "The cycle was paused or canceled. Whirlpool says the washer may take 20 to 30 minutes to stop spinning and drain, and shows Int during that time.",
+  "causes": [
+    "Pause or Cancel was pressed during a cycle",
+    "The cycle was interrupted and the washer is spinning down and draining"
+  ],
+  "diySteps": [
+    "Wait while the washer stops spinning and drains. Whirlpool says this can take 20 to 30 minutes",
+    "To remove the code, press the Pause or Cancel button twice and the Power button once",
+    "If Int is still displayed, unplug the washer or disconnect the power for 5 minutes, then reconnect it"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Int is a paused or canceled cycle, not a failed part. If it comes back after the 5-minute power disconnect, contact Whirlpool or schedule service online. Int is not LOC, which is Control Lock, and not F5 E2, which is a door that is not locking properly.",
+  "parts": [],
+  "sourceManualUrl": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers",
+  "sourceType": "support-page",
+  "sourceTitle": "Error Codes in Front Load Washers (Whirlpool Product Help)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

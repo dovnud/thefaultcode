@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "brand": "Samsung",
+  "brandSlug": "samsung",
+  "equipmentType": "washing-machine",
+  "code": "dn",
+  "codeSlug": "dn",
+  "displayPattern": "Display on a Wi-Fi-connected Samsung washer: dn",
+  "meaning": "Downloading: Samsung says dn means the washer is downloading an update. It is not a fault. The controls, including the dial, do not respond until the update finishes.",
+  "causes": [
+    "The washer is downloading a software update",
+    "The controls are locked out on purpose while the update runs"
+  ],
+  "diySteps": [
+    "Leave the washer powered on. Do not unplug it or switch off its breaker while dn is showing",
+    "Wait. Samsung says updates take about 15 minutes, and the message disappears when the update is complete",
+    "Do not keep turning the dial or pressing buttons. Samsung says the controls will not respond during the update",
+    "If dn stays on, check that your home Wi-Fi is working, because Samsung's time limit assumes there are no Wi-Fi connection issues"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "Samsung says to request service only if dn has been displayed for more than 30 minutes while the washer stayed powered on the whole time and there were no Wi-Fi connection issues. Under 30 minutes, keep waiting. This is not the dE door error, the ddC Add Door error or the 9C1 / PF voltage error.",
+  "parts": [],
+  "sourceManualUrl": "https://www.samsung.com/us/support/troubleshoot/TSG10000997/",
+  "sourceType": "support-page",
+  "sourceTitle": "Samsung washing machine information and error codes (Samsung Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

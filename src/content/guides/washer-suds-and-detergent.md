@@ -5,7 +5,7 @@
  "title": "Washer Suds Codes: HE Detergent and Too Many Suds",
  "description": "What LG Sud, Samsung SUd and Whirlpool Sud mean, how much detergent those pages allow, and how suds also cause drain and leak codes.",
  "answer": "Sud, SUd and Sd are detergent codes. The washer saw too many suds, paused or added a rinse, and is trying to finish the cycle. Use HE detergent in the amount the manufacturer describes. Non-HE detergent, too much detergent, and a few other products these pages name are the causes, not a failed motor.",
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "faq": [
   {
    "q": "Will the washer finish the cycle by itself?",
@@ -38,7 +38,7 @@
    "url": "https://producthelp.whirlpool.com/Laundry/Washers/Product_Info/Washer_Product_Assistance/Error_Codes_in_Front_Load_Washers"
   }
  ],
- "codes": ["washers/lg/sud", "washers/samsung/sud", "washers/whirlpool/sud", "washers/lg/tcl", "washers/whirlpool/f8e2", "washers/lg/oe", "washers/lg/opn", "washers/lg/dcl"]
+ "codes": ["washers/lg/sud", "washers/samsung/sud", "washers/whirlpool/sud", "washers/lg/tcl", "washers/whirlpool/f8e2", "washers/lg/oe", "washers/lg/opn", "washers/lg/dcl", "washers/lg/ed1-ed2", "washers/whirlpool/det", "washers/whirlpool/rl"]
 }
 ---
 ## Why front loaders are strict about suds
@@ -91,8 +91,14 @@ Dishwashers have the same class of mistake, with different codes. LG dishwasher 
 
 [LG dcL](/washers/lg/dcl/) means ezDispense nozzle clean is running. LG says that program takes about 16 minutes. The compartment being cleaned has to be empty of detergent or softener, then filled with water to the max line. It is maintenance on ezDispense models, not a suds code and not OPn.
 
+[LG Ed1 and Ed2](/washers/lg/ed1-ed2/) mean the liquid detergent in the automatic reservoir did not go down: a faulty detergent pump (Ed1) or an open circuit in that pump (Ed2). LG's steps are to check the type of detergent and remove residue from the tray that may block the flow, then request service if it persists. It is a dispenser code, not Sud.
+
+[Whirlpool dET](/washers/whirlpool/det/) means the detergent cartridge is not detected in the dispenser, on select models. Whirlpool says to ignore it if you use single-load doses. Otherwise, seat the cartridge and shut the drawer completely.
+
 ## LG tCL is a reminder, not a fault
 [LG tCL](/washers/lg/tcl/) means it is time to run Tub Clean. LG's steps: empty the tub, pour in a powder washing machine cleaner (LG says these are sold near the detergent in most retail stores), run the Tub Clean cycle, and run it monthly so the reminder does not come back. No repair is needed. The message clears once Tub Clean has been run.
+
+[Whirlpool rL](/washers/whirlpool/rl/), or F34 on some models, means items were detected in the drum during the Clean Washer cycle. Remove them and restart Clean Washer with the drum empty.
 
 That cleaner is the product the [washer cleaner](/parts/washer-cleaner/) page describes. Follow the cleaner package and the washer manual. Do not run Tub Clean with clothes in the drum. LG says to empty the tub.
 

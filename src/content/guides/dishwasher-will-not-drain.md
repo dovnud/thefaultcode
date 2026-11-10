@@ -5,7 +5,7 @@
  "title": "Dishwasher Will Not Drain: E24, C1, OE and 5C",
  "description": "What Bosch E24 and E25, GE C1 and C3, LG dishwasher OE and Samsung 5C mean when a dishwasher will not drain, including filters, air gaps and the disposal knockout.",
  "answer": "A dishwasher left full of water is a drain code: Bosch E24 or E25, GE C1 or C3, LG OE, or Samsung 5C. The shared checks are a blocked filter or pump cover, a kinked drain hose, and a garbage-disposal knockout that was never removed. Each brand's page adds its own steps. Do not use the washer drain steps on a dishwasher.",
- "updated": "2026-11-06",
+ "updated": "2026-11-10",
  "faq": [
   {
    "q": "What is the garbage disposal knockout?",
@@ -38,7 +38,7 @@
    "url": "https://www.samsung.com/us/support/troubleshoot/TSG10004499/"
   }
  ],
- "codes": ["dishwashers/bosch/e24", "dishwashers/bosch/e25", "dishwashers/bosch/e22", "dishwashers/bosch/e23", "dishwashers/ge/c1", "dishwashers/ge/c2", "dishwashers/ge/c3", "dishwashers/lg/oe", "dishwashers/samsung/5c", "dishwashers/samsung/oc", "dishwashers/ge/c5"]
+ "codes": ["dishwashers/bosch/e24", "dishwashers/bosch/e25", "dishwashers/bosch/e22", "dishwashers/bosch/e23", "dishwashers/ge/c1", "dishwashers/ge/c2", "dishwashers/ge/c3", "dishwashers/lg/oe", "dishwashers/samsung/5c", "dishwashers/samsung/oc", "dishwashers/ge/c5", "dishwashers/ge/ftd"]
 }
 ---
 ## Standing water is a drain code
@@ -85,6 +85,8 @@ Steps: clean the air gap (the small chrome or plastic fitting on the sink deck, 
 **C3** means the dishwasher will not drain, and GE does not list a specific cause. The step GE gives is to disconnect power at the circuit breaker for about 30 seconds, then reset the dishwasher. If it persists, contact GE service. There is no filter procedure on the C3 entry we publish. The air-gap and hose checks live on C1. If your unit shows C3, do the reset GE wrote down, and do not invent the Bosch spoon procedure. C2 is not that 30-second reset either.
 
 **C5** means the pump-out time is too short. GE's steps are to make sure that the water supply is turned on, try the same cycle again, and tap the float cover to un-stick the float. GE describes that cover as the plastic piece like an upside-down cup in the front left corner of the tub floor. C5 is not a long drain. C1 is the pump-out that has already passed 2 minutes, and that is where the air-gap, hose and disposer checks live. C2 is the total pump-out that exceeds 7 minutes, and GE's only owner step there is Press RESET. If the display says C5, do not start with the C1 hose steps. If it says C2, do not start with them either.
+
+[GE FTD](/dishwashers/ge/ftd/), shown as F56 on some models, means failure to drain: the dishwasher did not drain. GE's steps are the drain hose, the air gap and the disposer, and its Not Draining article adds the sump area at the rear of the tub and a disposer drain plug that was never removed after a new install. GE also says a little clean water on the tub floor can be normal, so check how much is left before treating it as FTD.
 
 [GE C4](/dishwashers/ge/c4/) is related but it is not a simple "will not drain" code. It means the machine filled twice after a power failure: a stuck or failed float, or a clogged drain or sump. GE's steps are to touch Start and then Cancel/Reset, tap the float cover (the plastic cover like an upside-down cup in the front left of the tub floor), and check the sump at the back bottom of the tub for debris. GE says that sump looks like an upside-down silverware basket.
 

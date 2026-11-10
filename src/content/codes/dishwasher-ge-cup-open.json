@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "Cup Open",
+  "codeSlug": "cup-open",
+  "displayPattern": "Display on a GE dishwasher with electronic controls: Cup Open (not all codes are found on all models)",
+  "meaning": "The detergent cup has not been closed. GE says Cup Open is a reminder to add detergent and latch the cup closed, and the cycle will not start while it shows.",
+  "causes": [
+    "The detergent cup lid was left open",
+    "Detergent has not been added and the cup latched before pressing Start"
+  ],
+  "diySteps": [
+    "Add detergent to the cup and latch the cup lid closed, then close the door and start the cycle",
+    "If you meant to run without closing the cup, GE says you can override the message by pressing the Start pad again without opening the door"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "GE says that if Cup Open persists, contact service. That is the step when the cup is latched and the message still keeps the cycle from starting. Cup Open is not C8. C8 means the cup was blocked from opening fully during a cycle, and its fix is to remove the obstruction.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

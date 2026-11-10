@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "PF",
+  "codeSlug": "pf",
+  "displayPattern": "Display on a GE dishwasher with electronic controls: PF (not all codes are found on all models)",
+  "meaning": "Power failure: GE says PF indicates that there has been a power failure to the dishwasher. It is a notice, not a part failure.",
+  "causes": [
+    "Power to the dishwasher was interrupted, for example an outage or a tripped breaker"
+  ],
+  "diySteps": [
+    "Select the cycle and options you want",
+    "Press the Start pad. GE says the dishwasher will then function normally",
+    "GE notes that not every code is on every model. If your GE dishwasher has no display, PF will not appear"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "GE's only step for PF is to select the cycle and options and press Start. If the dishwasher will not run after that, GE's same page says that disconnecting power for a minute or two can clear a code, and that service may be needed if that simple reset does not clear it. PF is not C4, which is a machine that filled twice after a power failure, and it is not 999.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

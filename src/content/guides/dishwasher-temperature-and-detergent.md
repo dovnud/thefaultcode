@@ -5,7 +5,7 @@
  "title": "Dishwasher Temperature, Detergent and Limescale Codes",
  "description": "What GE C6 and C8, Samsung 3E and 1E, LG HE, and Bosch E12 mean: incoming water temperature, a blocked detergent cup, a heater fault, and limescale.",
  "answer": "These codes are not drain or fill failures. GE C6 means incoming water is below the 120°F GE requires. Samsung 3E means the supply is too hot. LG HE is the dishwasher's own heater. GE C8 is a detergent cup that cannot open. Bosch E12 is limescale in the heat pump. Each page has its own numbers. Do not mix them.",
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "faq": [
   {
    "q": "What temperature does GE want at the dishwasher?",
@@ -42,7 +42,7 @@
    "url": "https://www.bosch-home.com/us/owner-support/dishwashers/error-codes"
   }
  ],
- "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te", "dishwashers/bosch/e09", "dishwashers/bosch/e20", "dishwashers/samsung/pe", "dishwashers/samsung/ap", "dishwashers/lg/pf"]
+ "codes": ["dishwashers/ge/c6", "dishwashers/ge/c8", "dishwashers/samsung/3e", "dishwashers/samsung/1e", "dishwashers/lg/he", "dishwashers/bosch/e12", "dishwashers/ge/c7", "dishwashers/samsung/he", "dishwashers/bosch/e21", "dishwashers/samsung/hc", "dishwashers/samsung/te", "dishwashers/lg/te", "dishwashers/bosch/e09", "dishwashers/bosch/e20", "dishwashers/samsung/pe", "dishwashers/samsung/ap", "dishwashers/lg/pf", "dishwashers/ge/cup-open"]
 }
 ---
 ## Heat, soap and scale are separate faults
@@ -156,6 +156,8 @@ Steps:
 - Line pods or tablets up in the opening so they cannot bind the cover. Powder should be fresh and loose, not lumpy.
 
 If the cup still does not open, GE says service may be needed. The wax motor or the latch that opens the cup is not in the homeowner steps.
+
+[GE Cup Open](/dishwashers/ge/cup-open/) is the opposite message, shown before a cycle starts. GE says the detergent cup has not been closed, and it is a reminder to add detergent and latch the cup closed. The cycle will not start, but GE says you can override it by pressing Start again without opening the door. C8 is a cup that was closed and could not open. Cup Open is a cup that was never closed.
 
 Detergent that is the wrong kind, as opposed to a cup that cannot open, is the leak and suds problem: dish soap on [LG bE](/dishwashers/lg/be/) and [Samsung LC](/dishwashers/samsung/lc/). Use a detergent labelled for dishwashers, in the cup, not beside it.
 

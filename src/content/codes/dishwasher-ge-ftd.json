@@ -1,0 +1,41 @@
+{
+  "example": false,
+  "brand": "GE",
+  "brandSlug": "ge",
+  "equipmentType": "dishwasher",
+  "code": "FTD (F56)",
+  "codeSlug": "ftd",
+  "displayPattern": "Display on a GE dishwasher with electronic controls: FTD, or F56 on some models (not all codes are found on all models)",
+  "meaning": "Failure to drain: GE says FTD or F56 means the dishwasher did not drain.",
+  "causes": [
+    "A kinked or blocked drain hose under the sink",
+    "A clogged air gap, if one is installed",
+    "A clogged kitchen sink drain or garbage disposer",
+    "A disposer that was recently installed with its drain plug still inside",
+    "Paper, a large object or food debris covering the sump area at the rear of the tub"
+  ],
+  "diySteps": [
+    "Clear any paper, large objects or food such as noodles, lettuce or bones from the sump area at the back of the tub floor",
+    "Check the drain hose where it connects below the sink for a kink or blockage",
+    "If a disposer is installed, run it to clear the drain. GE warns never to put your hands into the disposer to check it",
+    "If an air gap is installed, remove its cap and clean out any build-up",
+    "If the disposer was recently installed or replaced, make sure its drain plug was removed, following the disposer's installation instructions",
+    "Do not use drain cleaner in the dishwasher. GE has a separate article against it",
+    "Some water left in the tub can be normal. GE says 1 to 2 cups of clean water covering the tub bottom is normal on models without an Ultra Fine filter, and on models with one, water in the filter area is normal but should not cover the tub bottom"
+  ],
+  "safetyNote": "Switch the dishwasher off at its breaker before you reach into the base or remove a filter or cover, and let the tub and water cool after a cycle. Watch for sharp debris. Pump, heater, valve and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "If the hose, air gap, disposer and sump are clear and FTD or F56 returns, GE's code page says that disconnecting power for a minute or two can clear a code and that service may be needed if it does not. GE schedules repairs through Bodewell. FTD is not C1, which is a pump-out that has exceeded 2 minutes, and not C3, whose only step is a 30-second breaker reset.",
+  "parts": [],
+  "sourceManualUrl": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16673",
+  "sourceType": "support-page",
+  "sourceTitle": "Dishwasher – Error, Fault or Function Codes (GE Appliances)",
+  "moreSources": [
+    {
+      "name": "Dishwasher – Not Draining (GE Appliances)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16240"
+    }
+  ],
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

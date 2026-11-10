@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "PS",
+  "codeSlug": "ps",
+  "displayPattern": "Display on an LG front-load washer or washer-dryer combo: PS (can look like P5 on a 7-segment display)",
+  "meaning": "Power supply issue: LG says PS means the washer has a power supply problem and stops because it cannot continue the program. It can read as P5, because S and 5 look the same on the display.",
+  "causes": [
+    "The washer is plugged into a power strip instead of a wall outlet",
+    "A problem with the power reaching the washer"
+  ],
+  "diySteps": [
+    "Do not use a power strip. Plug the power cord directly into a wall outlet",
+    "Unplug the washer, wait 60 seconds, then plug it back in and restart it"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "LG says that if PS persists after the cord is plugged directly into a wall outlet and the washer has been restarted, request service. PS is not PF, which is a power failure during a cycle, such as an outage.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}

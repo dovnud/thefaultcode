@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "brand": "LG",
+  "brandSlug": "lg",
+  "equipmentType": "washing-machine",
+  "code": "Ed1 / Ed2",
+  "codeSlug": "ed1-ed2",
+  "displayPattern": "Display on an LG front-load washer with an automatic detergent reservoir (ezDispense): Ed1 or Ed2",
+  "meaning": "The liquid detergent in the detergent reservoir did not go down. LG says Ed1 is a faulty detergent pump detected, and Ed2 is an open circuit in the detergent pump detected.",
+  "causes": [
+    "A type of detergent the automatic dispenser is not meant to use",
+    "Detergent residue in the tray blocking the flow",
+    "For Ed1, the detergent pump detected as faulty",
+    "For Ed2, an open circuit in the detergent pump"
+  ],
+  "diySteps": [
+    "Check the type of detergent in the reservoir against the owner's manual. LG's step for both codes is to check the detergent type",
+    "Remove the detergent tray and clear any detergent residue that could be blocking the flow",
+    "When switching detergent types, LG's dcL nozzle-clean program on ezDispense models cleans the nozzles and hose",
+    "These codes are for the detergent reservoir. Ed3 and Ed4 on the same list are the softener reservoir"
+  ],
+  "safetyNote": "Unplug the washer (or switch off its breaker) and close the water taps before you reach behind it, handle hoses or open a filter. Water left from a recent hot cycle can be very hot, so let it cool first. Never bypass the door lock. Motor, pump, valve, sensor and control-board repairs belong to a qualified appliance technician.",
+  "proNeeded": false,
+  "proAdvice": "LG says that if the problem persists after the detergent and the tray are checked, request service. A pump that is faulty or has an open circuit is a repair for an LG technician, not a homeowner part swap. Ed1 and Ed2 are not OPn, which is the drawer not fully inserted, and not Ed5, which is a control communication error.",
+  "parts": [],
+  "sourceManualUrl": "https://www.lg.com/us/support/help-library/lg-front-load-washer-error-code-list--20155069413456",
+  "sourceType": "support-page",
+  "sourceTitle": "LG Front Load Washer – Error Code List (LG USA Support)",
+  "amazonMax": 0,
+  "updated": "2026-11-10"
+}
