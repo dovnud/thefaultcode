@@ -1,0 +1,29 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E272",
+  "codeSlug": "e272",
+  "meaning": "Soft lockout: recycles ran out, and the last recycle was due to the pressure switch opening.",
+  "causes": [
+    "Pressure switch opened on the last recycle",
+    "Low pressure switch stuck closed on a heat call",
+    "High pressure switch closing problem on a heat call",
+    "Vent or combustion-air inducer restricted or not operating"
+  ],
+  "diySteps": [
+    "With the furnace off, look at the outdoor intake and exhaust terminations for snow, ice, leaves or a nest. Do not take the vent apart",
+    "Technician: check whether the low pressure switch is stuck closed on a heat call, check the high pressure switch closing on a heat call, measure operating pressure, and inspect the vent and the combustion-air inducer. The code clears when a heat call finishes successfully"
+  ],
+  "proAdvice": "E272 is a recycle lockout after the pressure switch opened. It is not E271 (retry lockout) and not E274 (limit-circuit recycle lockout). Do not jumper a pressure switch. Call a licensed HVAC technician if the terminations are clear and the code returns."
+}

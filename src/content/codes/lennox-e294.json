@@ -1,0 +1,27 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E294",
+  "codeSlug": "e294",
+  "meaning": "Combustion air inducer over current.",
+  "causes": [
+    "Combustion blower bearings, wiring or amps out of range",
+    "Inducer that does not operate or does not meet performance standards"
+  ],
+  "diySteps": [
+    "Turn the furnace off. Do not spin the inducer wheel by hand",
+    "Technician: check combustion blower bearings, wiring and amps, and replace the inducer if it does not operate or does not meet performance standards. The code clears after inducer current is sensed to be in range after the ignition following the soft lockout or a reset"
+  ],
+  "proAdvice": "E294 is an inducer over-current fault. It is not a pressure-switch code (E223, E224, E225, E226, E227). Call a licensed HVAC technician."
+}

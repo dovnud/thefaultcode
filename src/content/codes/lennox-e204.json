@@ -1,0 +1,26 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E204",
+  "codeSlug": "e204",
+  "meaning": "Gas valve mis-wired.",
+  "causes": [
+    "Gas valve wiring or operation problem"
+  ],
+  "diySteps": [
+    "Leave the furnace off. Do not open the gas valve or start a heat call to test it",
+    "Technician: check gas valve operation and wiring. The code clears when it is repaired"
+  ],
+  "proAdvice": "E204 is a gas-valve wiring fault. It is not E205 (control relay contact shorted) and not E206 (second-stage relay). Call a licensed HVAC technician."
+}

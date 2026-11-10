@@ -3,7 +3,7 @@
  "title": "Furnace Ignition Lockout: It Tried to Light and Stopped",
  "description": "What an ignition lockout means on York, Amana, American Standard, Bryant, Carrier, Goodman and Trane, and which checks the manuals leave with a homeowner.",
  "answer": "An ignition lockout means the control tried to light the burners, did not prove flame, and stopped trying. York 7 red flashes is three failed trials and a one-hour pause. Bryant 14 and Carrier 14 are four failed attempts and a three-hour reset. Amana EE0 is three retries. The gas-valve switch and whether other gas appliances light are the homeowner checks the manuals name. Gas pressure, the igniter and the flame sensor are technician work.",
- "updated": "2026-11-08",
+ "updated": "2026-11-10",
  "category": "furnaces",
  "shop": [],
  "faq": [
@@ -71,7 +71,12 @@
   "trane/e2-1",
   "trane/e2-3",
   "trane/e11",
-  "lennox/e270"
+  "lennox/e270",
+  "lennox/e207",
+  "lennox/e241",
+  "lennox/e273",
+  "lennox/e275",
+  "lennox/e290"
  ]
 }
 ---
@@ -93,6 +98,11 @@ Write the code down before you cut power. York counts red flashes with a two-sec
 | [Goodman EE0](/goodman/ee0/) | Lockout after 3 ignition retries on the GR9S96 / GD9S96 guide. |
 | [Trane E2.1](/trane/e2-1/) | Retry exceeded on the S9V2 service facts. |
 | [Lennox E270](/lennox/e270/) | SL280DFNV soft lockout after the maximum retries, with no flame current sensed. It clears when a heat call finishes. |
+| [Lennox E207](/lennox/e207/) | SL280DFNV hot surface ignitor sensed open |
+| [Lennox E290](/lennox/e290/) | SL280DFNV ignitor circuit fault (failed ignitor or triggering circuitry), 1-hour soft lockout |
+| [Lennox E241](/lennox/e241/) | SL280DFNV flame sensed out of sequence, flame still present. Shut off gas and check for a valve leak |
+| [Lennox E275](/lennox/e275/) | SL280DFNV out-of-sequence soft lockout after the flame signal is gone, 1-hour soft lockout |
+| [Lennox E273](/lennox/e273/) | SL280DFNV soft lockout: recycles ran out after flame failure |
 
 ## What a homeowner can check
 York's 7 red flash paragraph is the clearest homeowner line in this set: check that the gas valve switch is in the ON position. Also see whether a stove or water heater in the same house still lights. If nothing gas works, the problem may be the supply to the house, which is the utility, not a furnace part.

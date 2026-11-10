@@ -1,0 +1,29 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E273",
+  "codeSlug": "e273",
+  "meaning": "Soft lockout: recycles ran out, and the last recycle was due to flame failure.",
+  "causes": [
+    "Flame failure on the last recycle",
+    "Low flame-sensor current",
+    "Dirty or failed flame sensor",
+    "Poor unit ground"
+  ],
+  "diySteps": [
+    "Leave the furnace off. Do not sand or pry at a flame sensor unless a technician is doing that job",
+    "Technician: check flame-sensor micro-amperes using control diagnostics or field-installed mode, clean or replace the sensor, and measure voltage of neutral to ground to ensure a good unit ground. The code clears when a heat call finishes successfully"
+  ],
+  "proAdvice": "E273 is a recycle lockout after flame failure. E240 is the low flame-current alert in run mode, and E270 is the retry lockout with no flame current. Call a licensed HVAC technician."
+}

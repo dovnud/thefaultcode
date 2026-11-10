@@ -1,0 +1,28 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E276",
+  "codeSlug": "e276",
+  "meaning": "Watchguard calibration failure: the control could not perform a pressure switch calibration. This is a 1-hour soft lockout.",
+  "causes": [
+    "Unable to perform pressure switch calibration",
+    "Vent system problem",
+    "Pressure switch wiring connection problem"
+  ],
+  "diySteps": [
+    "With the furnace off, look at the outdoor intake and exhaust terminations for snow, ice, leaves or a nest. Do not take the vent apart. Wait for the 1-hour soft lockout to end before judging a new call",
+    "Technician: check the vent system and the pressure switch wiring connections. The code clears when calibration has finished successfully"
+  ],
+  "proAdvice": "E276 is the watchguard calibration failure with a 1-hour soft lockout. E228 is the calibration-failure row that does not use that lockout sentence. Do not jumper a pressure switch. Call a licensed HVAC technician if the terminations are clear and the code returns."
+}

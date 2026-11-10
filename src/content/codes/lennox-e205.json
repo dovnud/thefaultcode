@@ -1,0 +1,27 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E205",
+  "codeSlug": "e205",
+  "meaning": "Gas valve control relay contact shorted.",
+  "causes": [
+    "Wiring problem on the control or the gas valve",
+    "Control fault if the wiring is correct"
+  ],
+  "diySteps": [
+    "Leave the furnace off. Do not jumper or force the gas valve",
+    "Technician: check wiring on the control and the gas valve. If the wiring is correct, replace the control"
+  ],
+  "proAdvice": "E205 is a shorted gas-valve control relay contact. If the wiring is correct, the manual says to replace the control. Call a licensed HVAC technician."
+}

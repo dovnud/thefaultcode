@@ -1,0 +1,28 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E252",
+  "codeSlug": "e252",
+  "meaning": "Discharge air temperature too high (gas heat only).",
+  "causes": [
+    "Temperature rise too high",
+    "Airflow problem",
+    "Input rate not correct"
+  ],
+  "diySteps": [
+    "Turn the furnace off and make sure return and supply grilles are open and nothing is blocking them",
+    "Technician: check temperature rise, airflow and input rate. The code clears when the heat call is finished"
+  ],
+  "proAdvice": "E252 is a high discharge-air temperature on gas heat. The manual names temperature rise, airflow and input rate, not a dirty filter in this row. E291 is the row that names a dirty filter. If E252 returns, call a licensed HVAC technician."
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E201",
+  "codeSlug": "e201",
+  "meaning": "Indoor blower communication failure: the control cannot communicate with the blower motor.",
+  "causes": [
+    "Lost communication with the indoor blower motor, including after a power outage",
+    "Motor not powered",
+    "Loose wiring",
+    "Problem on the control side or the motor side"
+  ],
+  "diySteps": [
+    "Turn the furnace off at the switch or breaker and confirm the furnace still has power when you turn it back on. A power outage is one cause the manual names",
+    "Technician: check motor power and wiring. The problem may be on the control or the motor. The code clears after the fault is recovered"
+  ],
+  "proAdvice": "E201 is a blower-communication fault, not a filter code and not E292 (blower unable to start). If the breaker is on and the code returns, call a licensed HVAC technician."
+}

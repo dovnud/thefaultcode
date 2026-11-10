@@ -1,0 +1,27 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E241",
+  "codeSlug": "e241",
+  "meaning": "Flame sensed out of sequence, and the flame is still present.",
+  "causes": [
+    "Flame present when it should not be",
+    "Possible gas valve leak"
+  ],
+  "diySteps": [
+    "If you smell gas, leave the building and call the gas supplier from outside. Do not turn the furnace back on",
+    "Technician: shut off the gas, check for a gas valve leak, and replace the valve if necessary. The alert clears when the fault is recovered"
+  ],
+  "proAdvice": "E241 means flame was sensed out of sequence and is still present. E275 is the out-of-sequence soft lockout after the flame signal is gone. This is gas-valve work. Call a licensed HVAC technician, or the gas supplier if you smell gas."
+}

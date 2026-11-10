@@ -1,10 +1,14 @@
 ---
 {
- "shop": ["pressure-switch", "pressure-hose", "inducer"],
+ "shop": [
+  "pressure-switch",
+  "pressure-hose",
+  "inducer"
+ ],
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",
- "updated": "2026-11-08",
+ "updated": "2026-11-10",
  "faq": [
   {
    "q": "Can I replace the pressure switch myself?",
@@ -83,7 +87,15 @@
   "bryant/43",
   "rheem/55",
   "trane/e3-3",
-  "lennox/e223"
+  "lennox/e223",
+  "lennox/e224",
+  "lennox/e225",
+  "lennox/e226",
+  "lennox/e227",
+  "lennox/e228",
+  "lennox/e271",
+  "lennox/e272",
+  "lennox/e276"
  ]
 }
 ---
@@ -97,6 +109,14 @@
 | [Trane E3.1](/trane/e3-1/) / [E3.2](/trane/e3-2/) | 1st stage pressure switch shorted / open |
 | [Lennox red off / green slow](/lennox/red-off-green-slow/) | Pressure prove switch open or blocked inlet/exhaust vent |
 | [Lennox E223](/lennox/e223/) | SL280DFNV low pressure switch failed open. Not the ML180 red/green pattern |
+| [Lennox E224](/lennox/e224/) | SL280DFNV low pressure switch failed closed (stuck closed on a heat call longer than 150 seconds) |
+| [Lennox E225](/lennox/e225/) | SL280DFNV high pressure switch failed open |
+| [Lennox E226](/lennox/e226/) | SL280DFNV high pressure switch failed closed |
+| [Lennox E227](/lennox/e227/) | SL280DFNV low pressure switch open during trial for ignition or run mode |
+| [Lennox E228](/lennox/e228/) | SL280DFNV combustion-air inducer calibration failure |
+| [Lennox E271](/lennox/e271/) | SL280DFNV soft lockout: retries ran out after the pressure switch opened |
+| [Lennox E272](/lennox/e272/) | SL280DFNV soft lockout: recycles ran out after the pressure switch opened |
+| [Lennox E276](/lennox/e276/) | SL280DFNV watchguard calibration failure, 1-hour soft lockout |
 | [Rheem 44](/rheem/44/) / [45](/rheem/45/) / [46](/rheem/46/) | Low pressure switch closed with inducer off / open with inducer on |
 | [Rheem 55](/rheem/55/) | High pressure switch closed while the inducer is off. Code 57 is that switch open with the inducer on high |
 | [Trane E3.3](/trane/e3-3/) | 2nd stage switch PS2 closed when it should be open. The service facts say the switch is not the problem in most cases |
