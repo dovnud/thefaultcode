@@ -1,10 +1,13 @@
 ---
 {
- "shop": ["flame-sensor", "steel-wool"],
+ "shop": [
+  "flame-sensor",
+  "steel-wool"
+ ],
  "title": "Furnace Flame Sensor: Symptoms, Codes and Cleaning",
  "description": "What a furnace flame sensor does, the codes that point to it, what the manuals say about cleaning it, and safety cautions.",
  "answer": "The flame sensor is a metal rod in the burner flame that tells the control board the gas has lit. If it is coated, the board may not sense flame and will shut the gas off, often a few seconds after ignition. Carrier's manual lists oxide build-up on the flame sensor and says to clean it with fine steel wool; Rheem recommends cleaning it at the start of each heating season by a qualified installer or service agency.",
- "updated": "2026-11-05",
+ "updated": "2026-11-10",
  "faq": [
   {
    "q": "Can I clean a flame sensor myself?",
@@ -61,7 +64,9 @@
   "york/continuous-amber",
   "york/7-red-flashes",
   "amana/ee6",
-  "american-standard/e08"
+  "american-standard/e08",
+  "lennox/e240",
+  "lennox/e273"
  ]
 }
 ---
@@ -71,6 +76,8 @@
 | [Goodman EE6](/goodman/ee6/) | Low flame signal: flame sense microamp signal is minimal |
 | [Trane E08](/trane/e08/) | Low flame current, but still strong enough to allow operation |
 | [Lennox red slow / green fast](/lennox/red-slow-green-fast/) | Low flame signal, below 1.5 microamps |
+| [Lennox E240](/lennox/e240/) | SL280DFNV low flame current in run mode |
+| [Lennox E273](/lennox/e273/) | SL280DFNV soft lockout after recycles failed on flame failure |
 | [Rheem 12](/rheem/12/) | Low flame sense: weak or marginal current, furnace keeps running |
 | [Carrier 34](/carrier/34/) | Ignition proving failure: flame not sensed |
 | [Rheem 13](/rheem/13/) | Flame lost after established |

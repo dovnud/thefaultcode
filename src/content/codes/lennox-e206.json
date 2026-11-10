@@ -1,0 +1,26 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E206",
+  "codeSlug": "e206",
+  "meaning": "Gas valve second-stage relay failure. The furnace will operate on first stage for the rest of that heating demand.",
+  "causes": [
+    "Second-stage gas valve relay failure"
+  ],
+  "diySteps": [
+    "You may still get first-stage heat on that call. If the house stays cold or the code returns, leave the furnace to a technician",
+    "Technician: the code clears after the fault is recovered. If the furnace cannot operate second stage, replace the control"
+  ],
+  "proAdvice": "E206 is a second-stage relay fault. The manual says the furnace will run on first stage for the rest of that demand. It is not E204 or E205. If second stage will not run, call a licensed HVAC technician."
+}

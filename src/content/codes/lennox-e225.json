@@ -1,0 +1,27 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E225",
+  "codeSlug": "e225",
+  "meaning": "High pressure switch failed open.",
+  "causes": [
+    "High pressure switch did not close on a heat call",
+    "Vent or combustion-air inducer restricted or not operating"
+  ],
+  "diySteps": [
+    "With the furnace off, look at the outdoor intake and exhaust terminations for snow, ice, leaves or a nest. Do not take the vent apart",
+    "Technician: check the pressure of the high pressure switch closing on a heat call, measure operating pressure in inches of water column, and inspect the vent and the combustion-air inducer"
+  ],
+  "proAdvice": "E225 is a high pressure switch failed open, not E226 (failed closed) and not E223 (low pressure switch failed open). Do not jumper the switch. Call a licensed HVAC technician if the terminations are clear and the code returns."
+}

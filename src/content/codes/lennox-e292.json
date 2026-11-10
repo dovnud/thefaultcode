@@ -1,0 +1,28 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E292",
+  "codeSlug": "e292",
+  "meaning": "Indoor blower motor unable to start because of an obstructed wheel or seized bearings. This is a 1-hour soft lockout.",
+  "causes": [
+    "Indoor blower motor unable to start",
+    "Seized bearing",
+    "Stuck or obstructed wheel"
+  ],
+  "diySteps": [
+    "Turn the furnace off. Do not reach into the blower housing",
+    "Technician: replace the motor or the wheel if the assembly does not operate or meet performance standards. The code clears after the circulator successfully starts"
+  ],
+  "proAdvice": "E292 is a blower that cannot start. E201 is a communication failure with the blower motor, and E295 is a blower over-temperature trip. Call a licensed HVAC technician."
+}

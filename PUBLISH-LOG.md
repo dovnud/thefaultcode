@@ -1,5 +1,44 @@
 # Publish log
 
+## 2026-11-10
+
+### Heating-season Lennox SL280 codes
+
+25 new furnace pages from the same official manual already used for E200, E223, E250, E270 and E291: Lennox SL280DFNV installation instructions 508150-02 (04/2024) on lennox.com, integrated control diagnostic codes, the seven-segment LED, not the ML180 red/green chart. Each page was checked against that PDF on 2026-11-10. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content. Amazon tag unchanged (thefaultcode-20). No new ASINs. amazonMax is 0 and parts arrays are empty on every new page. None of these rows names a dirty filter; E291 remains the SL280 row that does.
+
+New pages:
+
+- E201 indoor blower communication failure — https://thefaultcode.com/lennox/e201/
+- E202 indoor blower motor mismatch (capacity code) — https://thefaultcode.com/lennox/e202/
+- E203 appliance capacity / size not programmed — https://thefaultcode.com/lennox/e203/
+- E204 gas valve mis-wired — https://thefaultcode.com/lennox/e204/
+- E205 gas valve control relay contact shorted — https://thefaultcode.com/lennox/e205/
+- E206 gas valve second-stage relay failure (runs first stage for the rest of that demand) — https://thefaultcode.com/lennox/e206/
+- E207 hot surface ignitor sensed open — https://thefaultcode.com/lennox/e207/
+- E224 low pressure switch failed closed — https://thefaultcode.com/lennox/e224/
+- E225 high pressure switch failed open — https://thefaultcode.com/lennox/e225/
+- E226 high pressure switch failed closed — https://thefaultcode.com/lennox/e226/
+- E227 low pressure switch open during trial for ignition or run mode — https://thefaultcode.com/lennox/e227/
+- E228 combustion air inducer calibration failure — https://thefaultcode.com/lennox/e228/
+- E240 low flame current in run mode — https://thefaultcode.com/lennox/e240/
+- E241 flame sensed out of sequence, flame still present — https://thefaultcode.com/lennox/e241/
+- E252 discharge air temperature too high (gas heat only) — https://thefaultcode.com/lennox/e252/
+- E271 soft lockout: retries ran out after the pressure switch opened — https://thefaultcode.com/lennox/e271/
+- E272 soft lockout: recycles ran out after the pressure switch opened — https://thefaultcode.com/lennox/e272/
+- E273 soft lockout: recycles ran out after flame failure — https://thefaultcode.com/lennox/e273/
+- E274 soft lockout: recycles ran out after the limit circuit opened, or the limit stayed open longer than 3 minutes — https://thefaultcode.com/lennox/e274/
+- E275 soft lockout: flame sensed out of sequence, flame signal gone — https://thefaultcode.com/lennox/e275/
+- E276 watchguard calibration failure, 1-hour soft lockout — https://thefaultcode.com/lennox/e276/
+- E290 ignitor circuit fault, failed ignitor or triggering circuitry — https://thefaultcode.com/lennox/e290/
+- E292 indoor blower motor unable to start (obstructed wheel or seized bearings) — https://thefaultcode.com/lennox/e292/
+- E294 combustion air inducer over current — https://thefaultcode.com/lennox/e294/
+- E295 indoor blower motor temperature too high — https://thefaultcode.com/lennox/e295/
+
+Not published: E229 (ignition on high fire; the manual says no action is needed), E310–E312 (sensor or airflow warnings, including a cooling/continuous-fan row), and further codes after that table. Heil, Payne, Coleman and sister-brand twin pages were not added in this batch.
+
+Guides updated 2026-11-10 where those rows match: furnace pressure switch (E224, E225, E226, E227, E228, E271, E272, E276), ignition lockout (E207, E290, E241, E275, E273), open limit (E252, E274), flame sensor (E240, E273), how to read a furnace LED (SL280 row expanded). Uppercase `/lennox/E201/`-style aliases were added to `public/_redirects`, same pattern as the existing E200/E223/E250/E270/E291 redirects.
+
+
 ## 2026-11-09
 
 ### Washer, dishwasher and room-AC codes

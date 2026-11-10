@@ -1,0 +1,27 @@
+{
+  "brand": "Lennox",
+  "brandSlug": "lennox",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf",
+  "sourceTitle": "Lennox SL280DFNV installation instructions 508150-02 (04/2024), integrated control diagnostic codes",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "displayPattern": "Seven-segment diagnostic LED on a Lennox SL280DFNV.",
+  "example": false,
+  "updated": "2026-11-10",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "code": "E203",
+  "codeSlug": "e203",
+  "meaning": "Appliance capacity or size is not programmed. Invalid unit codes refer to the configuration flow chart. This is a critical alert.",
+  "causes": [
+    "No appliance capacity code selected",
+    "Invalid unit code"
+  ],
+  "diySteps": [
+    "Leave the furnace off. This is a configuration fault",
+    "Technician: check the unit size codes for the furnace in the configuration guide or the installation instructions. The code clears after a valid unit code is read following a reset. The manual says to remove the thermostat from the system while applying power and reprogramming"
+  ],
+  "proAdvice": "E203 means no valid capacity code is programmed. It is not E202, which is a mismatch after a code has been selected. Call a licensed HVAC technician."
+}
