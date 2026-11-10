@@ -39,6 +39,36 @@ Not published: E229 (ignition on high fire; the manual says no action is needed)
 Guides updated 2026-11-10 where those rows match: furnace pressure switch (E224, E225, E226, E227, E228, E271, E272, E276), ignition lockout (E207, E290, E241, E275, E273), open limit (E252, E274), flame sensor (E240, E273), how to read a furnace LED (SL280 row expanded). Uppercase `/lennox/E201/`-style aliases were added to `public/_redirects`, same pattern as the existing E200/E223/E250/E270/E291 redirects.
 
 
+
+### Washer and dishwasher codes (box build)
+
+Ten new pages, built on the box with Grok Bot usage. Each one was checked against the manufacturer page named on it, read 2026-11-10. None duplicates an existing page or alias, and none overlaps the Lennox batch above. amazonMax is 0 on every new page.
+
+- Samsung washer dn, downloading an update, not a fault; service only after 30 minutes powered on with working Wi-Fi — https://thefaultcode.com/washers/samsung/dn/ (Samsung TSG10000997)
+- GE dishwasher PF, power failure; select the cycle and press Start — https://thefaultcode.com/dishwashers/ge/pf/ (GE contentId 16673)
+- GE dishwasher Cup Open, detergent cup not closed; latch it or press Start again without opening the door — https://thefaultcode.com/dishwashers/ge/cup-open/ (GE 16673)
+- GE dishwasher 1H (number + H), Delay Start is on, with GE's cancel steps — https://thefaultcode.com/dishwashers/ge/1h/ (GE 16673, 17913, 18402, 17397)
+- GE dishwasher FTD (F56), failure to drain; hose, air gap, disposer, sump — https://thefaultcode.com/dishwashers/ge/ftd/ (GE 16673, 16240)
+- LG washer Ed1 / Ed2, detergent reservoir level did not drop (pump fault / open circuit) — https://thefaultcode.com/washers/lg/ed1-ed2/ (LG front-load error code list)
+- LG washer PS (may read P5), power supply issue; no power strip, wall outlet, 60-second restart — https://thefaultcode.com/washers/lg/ps/ (LG front-load list)
+- Whirlpool washer dET, detergent cartridge not detected, select models — https://thefaultcode.com/washers/whirlpool/det/ (Whirlpool front-load error codes)
+- Whirlpool washer Int, cycle paused or canceled; Pause/Cancel twice, Power once — https://thefaultcode.com/washers/whirlpool/int/ (Whirlpool front-load error codes)
+- Whirlpool washer rL (F34), items in the drum during Clean Washer — https://thefaultcode.com/washers/whirlpool/rl/ (Whirlpool front-load error codes)
+
+Not published: LG Ed3/Ed4 (softener twin of Ed1/Ed2, left for a later day to keep this batch to 10); LG E80, nC, nE, nF, Ed5, dHE, HE, SE and Samsung dishwasher PC (reset, then service only); GE LEAK DETECTED and PrS (service only); Samsung washer 4C2 hot/cold and Self Clean reminder (already covered / not a code).
+
+Amazon: three new pages carry one primary search each, from the code's own step: GE Cup Open (dishwasher detergent), GE FTD (dishwasher drain hose, same as GE C1), LG Ed1/Ed2 (HE laundry detergent). dET and rL were worded so no detergent or washer-cleaner search triggers, because their fixes are not a purchase. The other five have none. All anchors rel="sponsored nofollow noopener", tag thefaultcode-20, no prices; 1460 anchors validated statically in dist, 0 bad. No existing page's Amazon links changed. proReferral/CJ/Angi untouched.
+
+Guides updated 2026-11-10: dishwasher will not drain (FTD), dishwasher temperature and detergent (Cup Open vs C8), washer suds and detergent (Ed1/Ed2, dET, rL).
+
+Redirects: new aliases /dishwashers/ge/f56/, /dishwashers/ge/ih/, /washers/lg/ed1/, /washers/lg/ed2/, /washers/lg/p5/, /washers/whirlpool/f34/. After the Lennox batch the file had 2,016 static rules, over Cloudflare Pages' 2,000 static limit. The 739 /washer/, /dishwasher/ and /water-heater/ singular-prefix rules were replaced by 3 splat rules at the end of the file (1,277 static + 3 dynamic). Every removed rule was checked to resolve to the same final page (some now take 2 hops). Live checks: /washer/lg/cd/, /washer/samsung/pf/, /washer/lg/PF/, /dishwasher/lg/pf/, /water-heater/navien/e003/, the six new aliases, /goodman/EE0/ and the last Lennox alias all reach the right page.
+
+QA: build OK (501 pages after rebase onto the Lennox batch). Static link check: no new issues (pre-existing cpsc.gov/whirlpool.com 403s, a Fujitsu PDF timeout, and the multimeter "angi" substring false positive); amazon.com, amzn.to, CJ and Angi were never requested. axe 0 violations on the 10 new pages, 3 guides and 2 hubs (mobile, tablet, desktop); the only small targets are the sitewide capture-form consent checkbox (22px) and search control, as before. Click test 315 (mobile) / 307 (desktop) elements: only the intentionally hidden desktop nav Contact link and report-only CSP console notices from the sitewide AdSense script; capture form never submitted. seo_check 0 problems; Associates statement check OK (501 pages, 234 with Amazon hrefs, 0 missing).
+
+Commits: 67fc94e (pages, guides, aliases), 6ac581a (_redirects under the limit).
+
+Live on 2026-11-10: all 10 new URLs and the 3 guides returned 200 with the H1 above, self-canonical, no noindex, in the sitemap; OG images 200 image/png; codes in /data/fault-codes.csv. IndexNow: HTTP 200 for 17 URLs (10 pages, 3 guides, 4 brand hubs). That acceptance is not indexing.
+
 ## 2026-11-09
 
 ### Washer, dishwasher and room-AC codes
