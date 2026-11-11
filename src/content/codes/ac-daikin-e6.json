@@ -1,0 +1,28 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "E6",
+  "codeSlug": "e6",
+  "displayPattern": "Service-check code E6 on an ARC466 remote for FTX30NVJU or FTX36NVJU. The manual shows this code only when the system shuts down.",
+  "meaning": "Compressor lock. The outdoor unit detected a locked compressor from the current waveform.",
+  "causes": [
+    "Stop valve closed",
+    "Compressor locked",
+    "Compressor harness disconnected"
+  ],
+  "diySteps": [
+    "Switch off the outdoor disconnect and the breaker. Do not open the outdoor unit and do not turn a stop valve",
+    "Technician: the manual's first check is whether a stop valve is closed. Later steps use an inverter analyzer and can end in compressor replacement"
+  ],
+  "proAdvice": "E6 repeats until the system shuts down. The reset condition in the manual is a continuous run of about 11 minutes with no other error, which is not a homeowner reset. Call a licensed HVAC technician."
+}

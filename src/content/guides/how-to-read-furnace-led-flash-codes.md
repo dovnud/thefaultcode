@@ -7,7 +7,7 @@
  "title": "How to Read a Furnace LED Flash Code",
  "description": "How to find and read the blinking LED or display code on a gas furnace control board, with brand-by-brand examples from the manuals.",
  "answer": "Most modern gas furnaces have a control board that reports faults with a blinking LED or a small digit display, seen through a window in the blower door. Count the flashes (or read the characters), then look the code up in the chart printed inside your furnace door or in its manual. The same number can mean different things on different brands, so always match the code to your brand and model.",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "faq": [
   {
    "q": "Does the same flash code mean the same thing on every brand?",
@@ -62,6 +62,10 @@
   {
    "name": "Lennox SL280DFNV installation instructions 508150-02",
    "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
+  },
+  {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
   }
  ],
  "codes": [
@@ -92,7 +96,10 @@
   "lennox/e252",
   "lennox/e271",
   "lennox/e290",
-  "lennox/e292"
+  "lennox/e292",
+  "goodman/1-flash",
+  "goodman/3-flashes",
+  "goodman/7-flashes"
  ]
 }
 ---
@@ -104,6 +111,7 @@ The status light or display is on the furnace control board, usually behind the 
 |---|---|---|
 | Carrier 59SC5 | LED flashes a two-digit status code: the first digit is the number of short flashes, the second the number of long flashes. A steady light and a dark light are statuses too | [Carrier 33](/carrier/33/): limit circuit fault. [Carrier 11](/carrier/11/) means no stored code. [Carrier 12](/carrier/12/) is the blower running about 90 seconds after power-up |
 | Goodman GR9S96/GD9S96 | 7-segment display shows a code such as EE3, or a later code such as EbL or EAF | [Goodman EE3](/goodman/ee3/): primary limit circuit open. [Goodman EbL](/goodman/ebl/) is low blower current and a hard lockout. [Goodman EAF](/goodman/eaf/) is a lost R-32 sensor, heat off and the fan still running |
+| Goodman 80% *MES80 / *CES80 (RS6621003r3) | One diagnostic LED. Count the flashes between pauses. This is not the 7-segment EE chart | [Goodman 1 flash](/goodman/1-flash/): ignition lockout after 3 retries. [Goodman 3 flashes](/goodman/3-flashes/): pressure switch not closed. [Goodman 7 flashes](/goodman/7-flashes/): low flame signal |
 | Trane S9V2 | Seven-segment LED readout, e.g. E2.1 | [Trane E2.1](/trane/e2-1/): retry exceeded |
 | Lennox ML180UH | Red and green LEDs in combinations of on, off, slow and fast flash | [Lennox red slow / green on](/lennox/red-slow-green-on/): limit switch open |
 | Lennox SL280DFNV | Seven-segment diagnostic LED. These E-codes are not the ML180 red and green pair | [Lennox E200](/lennox/e200/): rollout hard lockout. [Lennox E270](/lennox/e270/): retries used up, no flame current. Also on this chart: [E201](/lennox/e201/) blower communication, [E207](/lennox/e207/) open ignitor, [E224](/lennox/e224/)–[E228](/lennox/e228/) pressure switch and calibration, [E240](/lennox/e240/) low flame current, [E252](/lennox/e252/) high discharge air, [E271](/lennox/e271/) pressure-switch retry lockout, [E290](/lennox/e290/) ignitor circuit, [E292](/lennox/e292/) blower will not start |

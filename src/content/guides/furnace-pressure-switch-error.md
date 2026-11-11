@@ -8,7 +8,7 @@
  "title": "Furnace Pressure Switch Error: What It Means",
  "description": "What a gas furnace pressure switch does, common pressure switch codes by brand, likely causes from the manuals and what to check.",
  "answer": "The pressure switch confirms that the inducer (draft) fan is pulling combustion gases through the furnace and vent before the burners light. A pressure switch code means the switch was open when it should be closed, or closed when it should be open. Causes listed in the manuals include blocked vents, an inducer not running to speed, blocked or disconnected tubing, and condensate problems.",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "faq": [
   {
    "q": "Can I replace the pressure switch myself?",
@@ -67,6 +67,10 @@
   {
    "name": "Lennox SL280DFNV installation instructions 508150-02",
    "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
+  },
+  {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
   }
  ],
  "codes": [
@@ -95,7 +99,9 @@
   "lennox/e228",
   "lennox/e271",
   "lennox/e272",
-  "lennox/e276"
+  "lennox/e276",
+  "goodman/2-flashes",
+  "goodman/3-flashes"
  ]
 }
 ---
@@ -104,6 +110,8 @@
 |---|---|
 | [Goodman EE1](/goodman/ee1/) | Pressure switch circuit closed at start of heating cycle |
 | [Goodman EE2](/goodman/ee2/) | Pressure switch circuit not closed |
+| [Goodman 2 flashes](/goodman/2-flashes/) | 80% *MES80 chart: pressure switch closed while the inducer is not running |
+| [Goodman 3 flashes](/goodman/3-flashes/) | 80% *MES80 chart: pressure switch not closed while the inducer is running |
 | [Carrier 23](/carrier/23/) | Pressure switch did not open |
 | [Carrier 31](/carrier/31/) | Low or high pressure switch did not close or reopened |
 | [Trane E3.1](/trane/e3-1/) / [E3.2](/trane/e3-2/) | 1st stage pressure switch shorted / open |

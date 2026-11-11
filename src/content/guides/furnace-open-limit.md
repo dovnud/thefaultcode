@@ -3,7 +3,7 @@
  "title": "Furnace Limit Switch Open: Blower Runs, No Heat",
  "description": "What an open furnace limit means on York, Amana, American Standard and Bryant, which manuals name the filter, and why a rollout switch is a different shutdown.",
  "answer": "An open limit means a safety switch got too hot, or saw flame where flame should not be, and the control shut the burners off. York 4 red flashes and Amana EE3 name a dirty filter. York 11 red flashes means the limit stayed open more than five minutes and the manual blames the blower. American Standard E04 and Bryant 13 can be the main limit or the rollout switch. Resetting a rollout switch without finding the cause is what the manuals tell you not to do.",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "category": "furnaces",
  "shop": [
   "filter"
@@ -50,6 +50,10 @@
   {
    "name": "Lennox SL280DFNV installation instructions 508150-02",
    "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
+  },
+  {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
   }
  ],
  "codes": [
@@ -62,6 +66,7 @@
   "bryant/13",
   "bryant/33",
   "goodman/ee3",
+  "goodman/4-flashes",
   "carrier/13",
   "carrier/33",
   "trane/e04",
@@ -88,6 +93,7 @@ A rollout switch is the other switch people lump in with "limit." It opens if fl
 | [Bryant 13](/bryant/13/) | Limit circuit lockout: limit or rollout open longer than 3 minutes, or 10 high-heat limit trips. Auto-reset after 3 hours. See code 33 in that manual. |
 | [Bryant 33](/bryant/33/) | Limit circuit fault on the 80% two-stage chart. Dirty filter is on this list. Open longer than 3 minutes becomes lockout 13. |
 | [Goodman EE3](/goodman/ee3/), [Carrier 33](/carrier/33/) and [13](/carrier/13/), [Trane E04](/trane/e04/) | The same idea on the manuals already on this site. Carrier 33 is the open switch. Carrier 13 is the lockout after 3 minutes. |
+| [Goodman 4 flashes](/goodman/4-flashes/) | 80% *MES80 chart: primary or auxiliary limit open. Circulator runs, no heat. Blocked filters are on the list. |
 | [Lennox E250](/lennox/e250/) | SL280DFNV limit circuit open. If it stays open 3 minutes, a 1-hour soft lockout. The row names firing rate, a blockage, and airflow. It does not name the filter. |
 | [Lennox E252](/lennox/e252/) | SL280DFNV discharge air temperature too high (gas heat only) |
 | [Lennox E274](/lennox/e274/) | SL280DFNV soft lockout: recycles ran out after the limit circuit opened, or the limit stayed open longer than 3 minutes |

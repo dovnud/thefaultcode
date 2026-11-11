@@ -3,7 +3,7 @@
  "title": "Furnace Ignition Lockout: It Tried to Light and Stopped",
  "description": "What an ignition lockout means on York, Amana, American Standard, Bryant, Carrier, Goodman and Trane, and which checks the manuals leave with a homeowner.",
  "answer": "An ignition lockout means the control tried to light the burners, did not prove flame, and stopped trying. York 7 red flashes is three failed trials and a one-hour pause. Bryant 14 and Carrier 14 are four failed attempts and a three-hour reset. Amana EE0 is three retries. The gas-valve switch and whether other gas appliances light are the homeowner checks the manuals name. Gas pressure, the igniter and the flame sensor are technician work.",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "category": "furnaces",
  "shop": [],
  "faq": [
@@ -50,6 +50,10 @@
    "url": "https://cdn.daikincloud.io/PIM/Assets/Documents/IM-IOG-2037B.pdf"
   },
   {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
+  },
+  {
    "name": "Lennox SL280DFNV installation instructions 508150-02",
    "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
   }
@@ -66,6 +70,7 @@
   "bryant/14",
   "bryant/34",
   "goodman/ee0",
+  "goodman/1-flash",
   "carrier/14",
   "carrier/34",
   "trane/e2-1",
@@ -96,6 +101,7 @@ Write the code down before you cut power. York counts red flashes with a two-sec
 | [Bryant 34](/bryant/34/) | Ignition proving failure on the 80% two-stage chart. Three more tries, then lockout 14. The chart names oxide on the flame sensor. |
 | [Carrier 14](/carrier/14/) | Ignition lockout after the proving trials. The paired proving fault is [Carrier 34](/carrier/34/). |
 | [Goodman EE0](/goodman/ee0/) | Lockout after 3 ignition retries on the GR9S96 / GD9S96 guide. |
+| [Goodman 1 flash](/goodman/1-flash/) | Lockout after 3 ignition retries on the 80% *MES80 / *CES80 chart. The control can be reset from the thermostat or the disconnect, and it also resets after one hour. |
 | [Trane E2.1](/trane/e2-1/) | Retry exceeded on the S9V2 service facts. |
 | [Lennox E270](/lennox/e270/) | SL280DFNV soft lockout after the maximum retries, with no flame current sensed. It clears when a heat call finishes. |
 | [Lennox E207](/lennox/e207/) | SL280DFNV hot surface ignitor sensed open |

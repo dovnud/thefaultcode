@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf",
+  "sourceTitle": "Goodman service manual RS6621003r3 (June 2020), 80% single-stage gas furnaces GMES80, AMES80, GCES80, ACES80, VMES80 and VCES80, troubleshooting chart",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "displayPattern": "Diagnostic LED through the blower-door window on an 80% single-stage *MES80 or *CES80 furnace: Goodman GMES80 and GCES80, Amana AMES80 and ACES80, GMC VMES80 and VCES80. Count the flashes between pauses. This is not the 7-segment EE display on a 90%+ furnace.",
+  "proNeeded": true,
+  "code": "10 flashes",
+  "codeSlug": "10-flashes",
+  "meaning": "Open fuse, or no 24 volt power to the integrated control module. The furnace is not operating.",
+  "causes": [
+    "A high-voltage surge that blows the fuse"
+  ],
+  "diySteps": [
+    "Write down ten flashes, then leave the furnace off",
+    "Technician: the chart says to replace the fuse only after line voltage is turned off"
+  ],
+  "proAdvice": "Ten flashes is the open-fuse row. Do not fit a fuse of a higher rating than the one printed on the board. Call a licensed HVAC technician. This chart is service manual RS6621003r3 for those 80% single-stage models. A 7-segment code such as EE0 or EE2 is a different furnace family."
+}

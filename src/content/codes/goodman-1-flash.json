@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf",
+  "sourceTitle": "Goodman service manual RS6621003r3 (June 2020), 80% single-stage gas furnaces GMES80, AMES80, GCES80, ACES80, VMES80 and VCES80, troubleshooting chart",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "displayPattern": "Diagnostic LED through the blower-door window on an 80% single-stage *MES80 or *CES80 furnace: Goodman GMES80 and GCES80, Amana AMES80 and ACES80, GMC VMES80 and VCES80. Count the flashes between pauses. This is not the 7-segment EE display on a 90%+ furnace.",
+  "proNeeded": true,
+  "code": "1 flash",
+  "codeSlug": "1-flash",
+  "meaning": "Furnace lockout after three ignition retries. Flame was not established, or it was lost after it lit.",
+  "causes": [
+    "No gas to the burners",
+    "Front cover pressure switch stuck open",
+    "Igniter failed or misaligned",
+    "Coated, oxidized, or improperly connected flame sensor",
+    "Flame lost after it was established: interrupted gas, lazy flames, the front cover pressure switch opening, or a weak induced draft blower"
+  ],
+  "diySteps": [
+    "Write down a single flash before you reset the furnace",
+    "Confirm the gas supply to the furnace is on and that other gas appliances in the house still light. If you smell gas, leave and call the gas supplier from outside",
+    "The abnormal-operation section says this lockout can be reset by turning the thermostat off for more than 5 seconds and less than 20 seconds, then back on, or by turning the furnace disconnect off for at least 5 seconds. The control also resets by itself after one hour",
+    "If it locks out again, stop resetting it",
+    "Technician: check the front cover pressure switch, igniter, flame sensor, flue piping and induced draft blower, as the troubleshooting chart lists"
+  ],
+  "proAdvice": "One flash is the ignition lockout on this 80% chart. Seven flashes is the low flame-signal code, and the furnace may still be running. Call a licensed HVAC technician if the lockout returns. This chart is service manual RS6621003r3 for those 80% single-stage models. A 7-segment code such as EE0 or EE2 is a different furnace family."
+}

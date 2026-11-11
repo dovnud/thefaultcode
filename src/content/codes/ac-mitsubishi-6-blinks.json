@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "6 blinks",
+  "codeSlug": "6-blinks",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp: 6 blinks, then 2.5 seconds off. Troubleshooting table 9-4, not the failure-mode recall pattern.",
+  "meaning": "Outdoor thermistor fault: an outdoor thermistor is shorted or open while the compressor is running. The left lamp blinks 6 times, then pauses 2.5 seconds.",
+  "causes": [
+    "Outdoor thermistor short or open circuit during compressor operation"
+  ],
+  "diySteps": [
+    "Write down a 6-blink pattern, then switch off the outdoor disconnect and the breaker. Do not open the outdoor unit",
+    "Technician: table 9-4 says to check the outdoor thermistor and points to the outdoor unit service manual"
+  ],
+  "proAdvice": "Six blinks are outdoor thermistors. Five blinks on the same table are the outdoor power system. Call a licensed HVAC technician."
+}

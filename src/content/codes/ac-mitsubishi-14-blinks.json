@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "14 blinks",
+  "codeSlug": "14-blinks",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp: 14 blinks or more, then 2.5 seconds off. Troubleshooting table 9-4, row 8, not the failure-mode recall pattern.",
+  "meaning": "Another abnormality, not one of the counted faults above it. The left lamp blinks 14 times or more, then pauses 2.5 seconds.",
+  "causes": [
+    "An abnormality other than the faults in rows 1 through 7 of table 9-4",
+    "Indoor thermistor, defrost thermistor, or ambient-temperature thermistor abnormality"
+  ],
+  "diySteps": [
+    "Write down the blink count, then switch the unit off and leave it off. The table says not to start operation again without repair",
+    "Technician: table 9-4 says to check the stop valve, the 4-way valve, and the outdoor failure-mode recall, and to check thermistor characteristics on the service manual"
+  ],
+  "proAdvice": "Fourteen or more blinks means the fault is not the 2, 3, 4, 5, 6 or 7 blink rows. Leave the system off and call a licensed HVAC technician."
+}

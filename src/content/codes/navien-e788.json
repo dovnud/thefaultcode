@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Navien",
+  "brandSlug": "navien",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.navieninc.com/downloads/npe-2-user-s-information-manual-en/download.pdf",
+  "sourceTitle": "Navien NPE-2 condensing water heaters user's information manual (NPE-180A2, NPE-210A2, NPE-240A2, NPE-180S2, NPE-210S2, NPE-240S2)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "displayPattern": "Front panel on an NPE-2 condensing tankless water heater (NPE-180A2, NPE-210A2, NPE-240A2 and the S2 models)",
+  "proNeeded": true,
+  "code": "E788",
+  "codeSlug": "e788",
+  "meaning": "Gas type does not match the panel setting. The supplied gas and the panel DIP switch disagree.",
+  "causes": [
+    "Supplied gas type does not match the panel DIP switch setting and the panel"
+  ],
+  "diySteps": [
+    "Confirm whether the house is supplied with natural gas or propane. Do not change DIP switches",
+    "If the gas type and the heater's setting do not match, turn the heater off"
+  ],
+  "proAdvice": "E788 means the gas the heater is set for and the gas supplied to it do not agree. Matching the DIP switch is technician work. A wrong gas setting is a safety fault. Call a licensed technician or Navien Technical Support at 1-800-519-8794."
+}

@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "F3",
+  "codeSlug": "f3",
+  "displayPattern": "Service-check code F3 on an ARC466 remote for FTX30NVJU or FTX36NVJU.",
+  "meaning": "Discharge-pipe temperature control stopped the compressor.",
+  "causes": [
+    "Defective discharge pipe thermistor, outdoor heat exchanger thermistor, or outdoor temperature thermistor",
+    "Defective electronic expansion valve or coil",
+    "Refrigerant shortage",
+    "Defective four-way valve",
+    "Water mixed in the refrigerant",
+    "Defective stop valve",
+    "Defective outdoor unit PCB"
+  ],
+  "diySteps": [
+    "Switch off the outdoor disconnect and the breaker. Do not add refrigerant and do not open either cabinet"
+  ],
+  "proAdvice": "For the outdoor models the manual writes as RK(X)30/36NMVJU(A), the compressor stops when discharge-pipe temperature rises above 120 C (248 F) and the error clears below 107 C (224.6 F). If it repeats, the system shuts down. Call a licensed HVAC technician."
+}

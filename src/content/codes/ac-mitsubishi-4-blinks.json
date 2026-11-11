@@ -1,0 +1,26 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Mitsubishi",
+  "brandSlug": "mitsubishi",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/M_MSZ-FS06-18NA-U1_SERVICE_OBH872A.pdf",
+  "sourceTitle": "Mitsubishi Electric service manual OBH872A (MSZ-FS06NA, MSZ-FS09NA, MSZ-FS12NA, MSZ-FS15NA, MSZ-FS18NA), troubleshooting check table 9-4",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "4 blinks",
+  "codeSlug": "4-blinks",
+  "displayPattern": "MSZ-FS06NA through MSZ-FS18NA. Left operation-indicator lamp: 4 blinks, then 2.5 seconds off. Troubleshooting table 9-4, not the failure-mode recall pattern.",
+  "meaning": "Indoor control fault: the indoor board cannot read its own memory. The left lamp blinks 4 times, then pauses 2.5 seconds.",
+  "causes": [
+    "Indoor electronic control board cannot read data in its nonvolatile memory"
+  ],
+  "diySteps": [
+    "Write down a 4-blink pattern, then switch off the breaker. Do not open the indoor unit",
+    "Technician: table 9-4 says to replace the indoor electronic control P.C. board"
+  ],
+  "proAdvice": "Four blinks are the indoor control board. Three blinks on the same table are the indoor fan. This is not a letter code such as E6. Call a licensed HVAC technician."
+}

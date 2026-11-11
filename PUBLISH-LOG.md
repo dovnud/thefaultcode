@@ -1,5 +1,70 @@
 # Publish log
 
+## 2026-11-11
+
+### Heating-season furnace, tankless, and mini-split codes
+
+39 new pages. Each meaning is taken from the manufacturer document named on the page, read 2026-11-11. Sitemap, llms.txt, llms-full.txt, and the dataset are generated from content. Amazon tag unchanged. No new ASINs. amazonMax is 0 and parts arrays are empty on every new page.
+
+Goodman service manual RS6621003r3 (June 2020), 80% single-stage *MES80 / *CES80 (GMES80, GCES80, AMES80, ACES80, VMES80, VCES80). Counted LED flashes, not the 7-segment EE chart:
+
+- 1 flash ignition lockout — https://thefaultcode.com/goodman/1-flash/
+- 2 flashes pressure switch stuck closed — https://thefaultcode.com/goodman/2-flashes/
+- 3 flashes pressure switch not closed — https://thefaultcode.com/goodman/3-flashes/
+- 4 flashes open limit — https://thefaultcode.com/goodman/4-flashes/
+- 5 flashes flame sensed with no call for heat — https://thefaultcode.com/goodman/5-flashes/
+- 6 flashes rollout or blown control fuse — https://thefaultcode.com/goodman/6-flashes/
+- 7 flashes low flame signal — https://thefaultcode.com/goodman/7-flashes/
+- 8 flashes igniter relay fault — https://thefaultcode.com/goodman/8-flashes/
+- 10 flashes open fuse — https://thefaultcode.com/goodman/10-flashes/
+- 11 flashes igniter open — https://thefaultcode.com/goodman/11-flashes/
+- 12 flashes inducer relay fault — https://thefaultcode.com/goodman/12-flashes/
+- Rapid flash reversed polarity — https://thefaultcode.com/goodman/rapid-flash/
+
+Rheem use and care AP21820 Rev 04, super high efficiency condensing direct-vent tankless (RTGH-95/90/84/68DVL-3 on the temperature-rise chart). Code 11 also cites troubleshooting manual AP21822 Rev 02 for the flame-rod description:
+
+- 1L lime deposits — https://thefaultcode.com/water-heaters/rheem/1l/
+- 11 gas shut-off not fully open — https://thefaultcode.com/water-heaters/rheem/11/
+- 12 gas supply interrupted — https://thefaultcode.com/water-heaters/rheem/12/
+- 14 overheating — https://thefaultcode.com/water-heaters/rheem/14/
+- 29 neutralizer clogged — https://thefaultcode.com/water-heaters/rheem/29/
+- 31 inlet thermistor — https://thefaultcode.com/water-heaters/rheem/31/
+- 33 outlet thermistor — https://thefaultcode.com/water-heaters/rheem/33/
+- 61 blower motor — https://thefaultcode.com/water-heaters/rheem/61/
+- 66 bypass motor — https://thefaultcode.com/water-heaters/rheem/66/
+- 71 solenoid valve circuit — https://thefaultcode.com/water-heaters/rheem/71/
+- 88 flush reminder — https://thefaultcode.com/water-heaters/rheem/88/
+- 90 / 99 intake or exhaust blocked — https://thefaultcode.com/water-heaters/rheem/90/
+- P1 not enough water flow — https://thefaultcode.com/water-heaters/rheem/p1/
+
+Navien NPE-2 user's information manual, rows not already published: E109, E515, E760, E788.
+
+- https://thefaultcode.com/water-heaters/navien/e109/
+- https://thefaultcode.com/water-heaters/navien/e515/
+- https://thefaultcode.com/water-heaters/navien/e760/
+- https://thefaultcode.com/water-heaters/navien/e788/
+
+Rinnai N-series with-pump SENSEI manual, section 5.6: 16, 25, 61.
+
+- https://thefaultcode.com/water-heaters/rinnai/16/
+- https://thefaultcode.com/water-heaters/rinnai/25/
+- https://thefaultcode.com/water-heaters/rinnai/61/
+
+Daikin SiUS041638EA (FTX30NVJU / FTX36NVJU): E6, U2, L4, F3.
+
+- https://thefaultcode.com/ac/daikin/e6/
+- https://thefaultcode.com/ac/daikin/u2/
+- https://thefaultcode.com/ac/daikin/l4/
+- https://thefaultcode.com/ac/daikin/f3/
+
+Mitsubishi Electric OBH872A table 9-4: 4 blinks, 6 blinks, 14 blinks.
+
+- https://thefaultcode.com/ac/mitsubishi/4-blinks/
+- https://thefaultcode.com/ac/mitsubishi/6-blinks/
+- https://thefaultcode.com/ac/mitsubishi/14-blinks/
+
+Not published: Goodman 9 flashes (twinning only). Mitsubishi letter code E6 (OBH872A uses blink counts; European "- E6" on a model name is a revision suffix, not this fault). Daikin U0 (it appears in the remote's code cycle in SiUS041638EA but that manual's diagnosis table does not define it). Rinnai LC (not in the N-series with-pump section 5.6 used for the existing Rinnai pages).
+
 ## 2026-11-10
 
 ### Design and quality pass (Nov 10 audit)

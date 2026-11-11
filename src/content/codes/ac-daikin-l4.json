@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "L4",
+  "codeSlug": "l4",
+  "displayPattern": "Service-check code L4 on an ARC466 remote for FTX30NVJU or FTX36NVJU.",
+  "meaning": "Radiation fin temperature rise. The outdoor unit detected it while the compressor was on.",
+  "causes": [
+    "Defective outdoor fan motor",
+    "Short circuit",
+    "Defective radiation fin thermistor",
+    "Connector disconnected",
+    "Defective outdoor unit PCB"
+  ],
+  "diySteps": [
+    "Switch off the outdoor disconnect and the breaker. From outside the cabinet, look for leaves or debris piled against the outdoor coil. Do not reach through the grille",
+    "If you cannot see a blockage, leave the unit off"
+  ],
+  "proAdvice": "For the outdoor models the manual writes as RK(X)30/36NMVJU(A), the fin-temperature error is decided above 82 C (179.6 F) and clears below 77 C (170.6 F). Repeated errors shut the system down. Fan, thermistor and board checks are for a licensed HVAC technician."
+}

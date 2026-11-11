@@ -1,0 +1,27 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf",
+  "sourceTitle": "Rinnai N-series residential with pump SENSEI installation and operation manual (RUR199i, RUR160i, RUR199e, RUR160e), section 5.6",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Turn off power at the breaker and shut the gas supply before any panel comes off. Gas pressure, the burner, the gas valve, venting and the control board belong to a licensed technician or the manufacturer's technical support.",
+  "displayPattern": "Diagnostic code on a Rinnai N-series SENSEI tankless water heater with pump (RUR199i, RUR160i, RUR199e, RUR160e). Section 5.6 shows how to recall the last nine codes.",
+  "proNeeded": true,
+  "code": "25",
+  "codeSlug": "25",
+  "meaning": "Condensate pump fault. This row is for the condensate-pump accessory.",
+  "causes": [
+    "Condensate pump wire harness problem",
+    "Condensate reservoir not empty, or the condensate pump not operating"
+  ],
+  "diySteps": [
+    "If a condensate pump is installed where you can see it, check that the reservoir is not full and that the pump has power. Do not open the water heater",
+    "Technician: section 5.6 also says to confirm the wire connections and harness"
+  ],
+  "proAdvice": "Code 25 applies when the condensate pump accessory is used. A full reservoir can be a winter freeze or a failed pump. If emptying a visible reservoir does not clear it, call a licensed technician."
+}
