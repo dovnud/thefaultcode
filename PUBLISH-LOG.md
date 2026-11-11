@@ -2,6 +2,23 @@
 
 ## 2026-11-10
 
+### Design and quality pass (Nov 10 audit)
+
+No new pages. Commit a17d1b8. Affiliate, Amazon, ads, lead and proReferral code untouched (no diff in src/config, src/data, partLinks, CodeParts, CaptureForm).
+
+1. Phone typography: a sitewide floor in global.css. Labels, badges, code-card brand lines, small buttons, footer links, the logo tagline, form labels and tiles are now at least 12.5px. On desktop the header logo text gets a min-width so the bigger tagline does not cause a layout shift when fonts swap. Text nodes under 12px at 390px (Playwright): before 139 on home, code, hub and guide pages (home 25, /ac/goodman/09/ 14, /lennox/ 90, guide 10), plus 183 on /furnaces/ and 11 on /parts/for/ac/daikin/, so 333 in total. After: 0 on those pages and on 13 more sampled pages, locally and live.
+2. Category hubs (/furnaces/, /ac/, /washers/, /dishwashers/, /water-heaters/): the long paragraph that named codes is now a table with Brand, Code and Short meaning columns. Its rows are the same code pages the paragraph linked. Each meaning is the first sentence of the meaning field in the content collection.
+3. "Can I fix this myself?" mark (src/lib/diy.ts, plus an optional `diy` frontmatter field that no page sets yet). The rule is conservative. proNeeded gives No. If the causes or steps mention gas, electrical or refrigerant work (gas valve, wiring, voltage, capacitor, ignitor, burner, compressor, control board and similar), the page shows no mark. A step marked Technician, or any HVAC page, gives Maybe. Washer and dishwasher pages with homeowner-only steps get Yes. Counts: Yes 86, Maybe 7, No 250, none 14.
+4. /parts/for/ac/daikin/ is now noindex and out of the sitemap (src/lib/thin.ts). All five Daikin codes come from one service manual, SiUS041638EA, and four are technician-only. The page had no Daikin-specific part data beyond two generic tool entries, so nothing was padded. The page still works for visitors.
+5. Blink-pattern drawings (BlinkPattern.astro, src/lib/blink.ts) on 43 pages. Each is an SVG timeline with a text alternative. On timed patterns a Play button starts the animation, and it stays hidden when the visitor's device asks for reduced motion. Timings were checked against the cited PDFs on 2026-11-10:
+   - Carrier 25VNA8/24VNA9 SM and Bryant 288BNV/189BNV SM: short flash 0.25 s on, long flash 1.0 s on, 0.25 s between flashes, 1.0 s between the short and long groups, then 2.5 s off. Carrier 25 31 32 33 46 48 49 53 55 56 57 65 83 84 88 95. Bryant 25 31 32 33 46 48 53 55 56 83 84.
+   - York TG9S IOM: each flash is 1/3 s on and 1/3 s off, then a 2-second pause. 1 to 11 red flashes. Continuous amber was skipped because the manual gives no rate for it.
+   - Mitsubishi OBH872A table 9-4: N blinks then 2.5 s off, drawn untimed because the manual gives no blink length (2, 3, 5 and 7 blinks). Continuous blink is 0.5 s on and 0.5 s off.
+   No photos and no generated images.
+Also: the home search "Look up" label background changed to --sig-ink, which fixes a pre-existing axe color-contrast failure on desktop.
+QA: build OK (501 pages). axe found 0 violations on mobile and desktop across 22 pages, including with the blink animation playing. The audit found no overflow and no new tap targets under 44px; only the existing capture-form honeypot and checkbox are flagged. CLS stays at or below 0.006 after the header fix. seo_check: 0 problems. stmt_check OK. 1467 Amazon anchors validated statically, 0 bad. The static link check (259 affiliate URLs never fetched) found no new issues. The mobile click test was stopped partway because it was slow; it found no issues beyond the existing google.com report-only CSP console message and the new Play button, which the script does not recognise and which was checked separately to toggle aria-pressed.
+Live (390px): 0 text nodes under 12px, axe 0, tables on all five hubs, Daikin page noindex and absent from the sitemap. IndexNow: HTTP 200 for 48 URLs (5 hubs and 43 blink pages).
+
 ### Heating-season Lennox SL280 codes
 
 25 new furnace pages from the same official manual already used for E200, E223, E250, E270 and E291: Lennox SL280DFNV installation instructions 508150-02 (04/2024) on lennox.com, integrated control diagnostic codes, the seven-segment LED, not the ML180 red/green chart. Each page was checked against that PDF on 2026-11-10. Sitemap, llms.txt, llms-full.txt, and the CSV/JSON dataset are generated from content. Amazon tag unchanged (thefaultcode-20). No new ASINs. amazonMax is 0 and parts arrays are empty on every new page. None of these rows names a dirty filter; E291 remains the SL280 row that does.
