@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Daikin",
+  "brandSlug": "daikin",
+  "equipmentType": "mini-split",
+  "sourceManualUrl": "https://cdn.daikincloud.io/PIM/Assets/Documents/SM-FTX_NVJU%20(SiUS041638EA).pdf",
+  "sourceTitle": "Daikin service manual SiUS041638EA, inverter pair wall mounted FTX-N series (FTX30NVJU, FTX36NVJU)",
+  "safetyNote": "Indoor and outdoor mini-split units carry line voltage even when the remote is off. Switch off the outdoor disconnect and the breaker before you touch the unit, and do not open either cabinet. Refrigerant, wiring and control-board work must be done by a licensed HVAC technician.",
+  "proNeeded": true,
+  "code": "U2",
+  "codeSlug": "u2",
+  "displayPattern": "Service-check code U2 on an ARC466 remote for FTX30NVJU or FTX36NVJU.",
+  "meaning": "Low-voltage or over-voltage detection on the power supply.",
+  "causes": [
+    "Power supply voltage out of specification",
+    "Momentary voltage drop or momentary power failure",
+    "Compressor harness disconnected",
+    "Short circuit inside the fan-motor winding",
+    "Defective outdoor or indoor unit PCB"
+  ],
+  "diySteps": [
+    "Note whether the lights dipped or the whole house lost power when U2 appeared. The manual lists a momentary drop and a momentary power failure as causes",
+    "After utility power is steady, leave the unit alone for at least 3 minutes. The manual says the compressor stops and can restart after a 3-minute standby",
+    "If U2 returns, switch off the outdoor disconnect and the breaker. Do not measure voltage inside the unit"
+  ],
+  "proAdvice": "The manual's voltage check is whether supply voltage stays within plus or minus 10 percent of the rated value. That measurement, the compressor harness, and the fan-motor winding are technician work. Call a licensed HVAC technician if U2 returns after power is stable."
+}

@@ -1,0 +1,33 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "moreSources": [
+    {
+      "name": "Rheem high and super high efficiency tankless troubleshooting manual AP21822 Rev 02",
+      "url": "https://files.myrheem.com/webpartners/ProductDocuments/864C38B4-7D72-4ED5-9C14-96150EFF9FB4.pdf"
+    }
+  ],
+  "brand": "Rheem",
+  "brandSlug": "rheem",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/AP21820-Rev-04-Eagle-UC-Manual.pdf",
+  "sourceTitle": "Rheem super high efficiency condensing tankless water heater use and care manual AP21820 Rev 04 (condensing direct vent; 199,900, 180,000, 157,000 and 120,000 Btu/hr)",
+  "safetyNote": "If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call your gas supplier from outside. Use and care AP21820 says not to repair electrical wiring, gas piping, the remote, burners, vent connectors or other safety devices. Those repairs belong to a qualified service technician.",
+  "displayPattern": "Remote or built-in controller on a super high efficiency condensing direct-vent tankless covered by use and care AP21820 Rev 04. The temperature-rise chart in that manual names RTGH-95DVL-3, RTGH-90DVL-3, RTGH-84DVL-3 and RTGH-68DVL-3.",
+  "proNeeded": true,
+  "diySteps": [
+    "Turn off the hot-water faucets, press POWER to turn the heater off, wait about 5 minutes, then turn it back on and open a hot faucet. If the code is still there, unplug the heater for about 30 seconds, plug it back in, and check the display again",
+    "Check the gas shut-off valve and open it completely. If you smell gas, stop and call the gas supplier from outside",
+    "If code 11 is still on the display with the valve open, turn the heater off and call for service"
+  ],
+  "code": "11",
+  "codeSlug": "11",
+  "meaning": "Gas shut-off valve is not fully open. That is the possible cause in the use and care chart.",
+  "causes": [
+    "Gas shut-off valve not fully opened"
+  ],
+  "proAdvice": "If the shut-off is already open, stop. Troubleshooting manual AP21822 Rev 02, for this high and super high efficiency family, describes code 11 as flame not detected by the flame rod after two ignition attempts. Gas pressure, the gas filter, venting, the igniter and the flame rod in that manual are technician checks."
+}

@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf",
+  "sourceTitle": "Goodman service manual RS6621003r3 (June 2020), 80% single-stage gas furnaces GMES80, AMES80, GCES80, ACES80, VMES80 and VCES80, troubleshooting chart",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "displayPattern": "Diagnostic LED through the blower-door window on an 80% single-stage *MES80 or *CES80 furnace: Goodman GMES80 and GCES80, Amana AMES80 and ACES80, GMC VMES80 and VCES80. Count the flashes between pauses. This is not the 7-segment EE display on a 90%+ furnace.",
+  "proNeeded": true,
+  "code": "3 flashes",
+  "codeSlug": "3-flashes",
+  "meaning": "Pressure switch stuck open. The switch circuit is not closed while the induced draft blower is running.",
+  "causes": [
+    "Pressure switch hose blocked, pinched, or connected improperly",
+    "Blocked flue and/or inlet air pipe",
+    "Blocked drain system",
+    "Weak induced draft blower",
+    "Incorrect pressure switch setpoint or malfunctioning switch contacts",
+    "Loose or improperly connected wiring"
+  ],
+  "diySteps": [
+    "Look at the outdoor flue and intake terminations for snow, leaves or a nest. Do not take the pipes apart, and do not jumper the pressure switch",
+    "The abnormal-operation section says that if the switch does not close within 5 minutes after the inducer starts, the control goes into a 1-hour lockout and then tries the ignition sequence again",
+    "Technician: inspect the pressure switch hose, flue and inlet piping, drain, inducer, switch setpoint and wiring. The chart says to turn power off before repair"
+  ],
+  "proAdvice": "Three flashes on this 80% chart is not a flame-sensor code. Seven flashes is the low flame-signal code. Call a licensed HVAC technician if the vent terminations are clear and the code remains. This chart is service manual RS6621003r3 for those 80% single-stage models. A 7-segment code such as EE0 or EE2 is a different furnace family."
+}

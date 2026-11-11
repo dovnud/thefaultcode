@@ -7,7 +7,7 @@
  "title": "Furnace Flame Sensor: Symptoms, Codes and Cleaning",
  "description": "What a furnace flame sensor does, the codes that point to it, what the manuals say about cleaning it, and safety cautions.",
  "answer": "The flame sensor is a metal rod in the burner flame that tells the control board the gas has lit. If it is coated, the board may not sense flame and will shut the gas off, often a few seconds after ignition. Carrier's manual lists oxide build-up on the flame sensor and says to clean it with fine steel wool; Rheem recommends cleaning it at the start of each heating season by a qualified installer or service agency.",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "faq": [
   {
    "q": "Can I clean a flame sensor myself?",
@@ -54,6 +54,10 @@
   {
    "name": "American Standard S9V2 installer's guide (18-CE01D1-1E-EN)",
    "url": "https://americanstandardair.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/Small%20Splits/Furnaces/18-CE01D1-1E-EN_11112016.pdf"
+  },
+  {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
   }
  ],
  "codes": [
@@ -66,7 +70,9 @@
   "amana/ee6",
   "american-standard/e08",
   "lennox/e240",
-  "lennox/e273"
+  "lennox/e273",
+  "goodman/7-flashes",
+  "goodman/1-flash"
  ]
 }
 ---
@@ -74,6 +80,8 @@
 | Code | Meaning (from the manual) |
 |---|---|
 | [Goodman EE6](/goodman/ee6/) | Low flame signal: flame sense microamp signal is minimal |
+| [Goodman 7 flashes](/goodman/7-flashes/) | 80% *MES80 chart: low flame-sense signal while the furnace may still run |
+| [Goodman 1 flash](/goodman/1-flash/) | 80% *MES80 chart: lockout after 3 ignition retries. A coated flame sensor is one cause, not the only one |
 | [Trane E08](/trane/e08/) | Low flame current, but still strong enough to allow operation |
 | [Lennox red slow / green fast](/lennox/red-slow-green-fast/) | Low flame signal, below 1.5 microamps |
 | [Lennox E240](/lennox/e240/) | SL280DFNV low flame current in run mode |

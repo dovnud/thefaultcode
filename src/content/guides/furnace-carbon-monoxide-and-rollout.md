@@ -5,7 +5,7 @@
  "title": "Furnace Rollout Codes and Carbon Monoxide Safety",
  "description": "What a furnace rollout or open-limit code means, which of those codes are technician-only, and what CPSC says about carbon monoxide alarms and symptoms.",
  "answer": "An open rollout switch means flame left the burner area. Rheem calls code 33 a very serious problem to repair before the furnace runs again. Goodman E11, Carrier 33 and 13, and Trane E04 are the related codes on this site. Carbon monoxide is a separate hazard: CPSC describes it as a colorless, odorless poisonous gas and says to install CO alarms on every level and outside sleeping areas. A rollout code is a reason to stop the furnace and call a technician, not a code to reset.",
- "updated": "2026-11-08",
+ "updated": "2026-11-11",
  "faq": [
   {
    "q": "Does a rollout code mean carbon monoxide is in the house?",
@@ -68,9 +68,13 @@
   {
    "name": "Lennox SL280DFNV installation instructions 508150-02",
    "url": "https://www.lennox.com/dA/78477aadd3/508150-02a.pdf"
+  },
+  {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
   }
  ],
- "codes": ["goodman/e11", "rheem/33", "trane/e04", "carrier/33", "carrier/13", "goodman/ee3", "rheem/59", "york/5-red-flashes", "bryant/13", "bryant/33", "american-standard/e04", "lennox/e200"]
+ "codes": ["goodman/e11", "rheem/33", "trane/e04", "carrier/33", "carrier/13", "goodman/ee3", "rheem/59", "york/5-red-flashes", "bryant/13", "bryant/33", "american-standard/e04", "lennox/e200", "goodman/6-flashes"]
 }
 ---
 ## Two different warnings
@@ -95,6 +99,7 @@ Rollout means flame came out of the burner box instead of staying in it. The swi
 | Code | What the manual says |
 |---|---|
 | [Goodman E11](/goodman/e11/) | Open rollout switch. Causes listed: incorrect gas pressure, incorrect burner alignment, burner restriction. All three steps are technician checks. |
+| [Goodman 6 flashes](/goodman/6-flashes/) | 80% *MES80 chart: rollout limit open, or the control-module fuse is blown. The abnormal-operation section says the circulator runs all the time when the rollout control opens. |
 | [Rheem 33](/rheem/33/) | Over-temperature (rollout) switch open. Flames rolled out of the heat exchanger into the burner compartment. The manual calls this a very serious problem to be repaired before operation continues. |
 | [Trane E04](/trane/e04/) | Open limit. That can be the main thermal limit, the flame rollout switch, or the reverse airflow switch. |
 | [Carrier 33](/carrier/33/) | Limit circuit fault. A limit or flame rollout switch is open. It becomes lockout 13 if the switch stays open longer than 3 minutes. |

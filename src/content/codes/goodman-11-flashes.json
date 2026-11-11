@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf",
+  "sourceTitle": "Goodman service manual RS6621003r3 (June 2020), 80% single-stage gas furnaces GMES80, AMES80, GCES80, ACES80, VMES80 and VCES80, troubleshooting chart",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "displayPattern": "Diagnostic LED through the blower-door window on an 80% single-stage *MES80 or *CES80 furnace: Goodman GMES80 and GCES80, Amana AMES80 and ACES80, GMC VMES80 and VCES80. Count the flashes between pauses. This is not the 7-segment EE display on a 90%+ furnace.",
+  "proNeeded": true,
+  "code": "11 flashes",
+  "codeSlug": "11-flashes",
+  "meaning": "Igniter circuit is open. The furnace is not operating.",
+  "causes": [
+    "Igniter connected improperly",
+    "Bad igniter",
+    "Poor unit ground or poor burner ground",
+    "Faulty integrated control module"
+  ],
+  "diySteps": [
+    "Turn the furnace off. Do not handle the igniter",
+    "Technician: the chart says to check wiring from the control module to the igniter, replace a bad igniter, correct the ground, or replace the control module"
+  ],
+  "proAdvice": "Eleven flashes is an open igniter. Eight flashes is the igniter relay fault. One flash is the lockout after three ignition retries. Call a licensed HVAC technician. This chart is service manual RS6621003r3 for those 80% single-stage models. A 7-segment code such as EE0 or EE2 is a different furnace family."
+}

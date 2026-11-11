@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "updated": "2026-11-11",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Goodman",
+  "brandSlug": "goodman",
+  "equipmentType": "furnace",
+  "sourceManualUrl": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf",
+  "sourceTitle": "Goodman service manual RS6621003r3 (June 2020), 80% single-stage gas furnaces GMES80, AMES80, GCES80, ACES80, VMES80 and VCES80, troubleshooting chart",
+  "safetyNote": "If you smell gas, do not touch any electrical switch or use a phone in the building; leave immediately and call your gas supplier from outside. Turn off electrical power at the furnace switch or breaker before opening any panel, and never bypass or jumper a limit, rollout or pressure switch. Gas valve, burner, venting, wiring and control-board work should be done by a licensed HVAC technician.",
+  "displayPattern": "Diagnostic LED through the blower-door window on an 80% single-stage *MES80 or *CES80 furnace: Goodman GMES80 and GCES80, Amana AMES80 and ACES80, GMC VMES80 and VCES80. Count the flashes between pauses. This is not the 7-segment EE display on a 90%+ furnace.",
+  "proNeeded": false,
+  "code": "4 flashes",
+  "codeSlug": "4-flashes",
+  "meaning": "Primary or auxiliary limit circuit is open. The circulator blower runs and the furnace does not heat.",
+  "causes": [
+    "Faulty primary or auxiliary limit switch",
+    "Not enough air over the heat exchanger: blocked filters, restrictive ductwork, the wrong circulator speed, or a failed circulator blower",
+    "Loose or improperly connected wiring"
+  ],
+  "diySteps": [
+    "Turn the furnace off and replace a dirty air filter. Open supply and return grilles that are closed",
+    "The abnormal-operation section names the same airflow causes: a dirty filter, duct resistance, a faulty limit, a faulty blower, or blower speed set too low",
+    "Technician: check the limit, circulator speed and performance, and the limit-circuit wiring. Do not jumper the limit"
+  ],
+  "proAdvice": "Call a licensed HVAC technician if four flashes returns after the filter is clean and the grilles are open. Six flashes on this chart is the rollout switch or a blown control fuse, which is a different shutdown. This chart is service manual RS6621003r3 for those 80% single-stage models. A 7-segment code such as EE0 or EE2 is a different furnace family."
+}

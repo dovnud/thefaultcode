@@ -3,7 +3,7 @@
  "title": "Furnace No Heat: Winter 2026 Checklist",
  "description": "Winter 2026 checklist for a gas furnace with no heat. Each step cites the manufacturer manual and links the matching fault-code page.",
  "answer": "Write down the code on the board, set the thermostat to call for heat, and check the filter before assuming a part has failed. Goodman EE3 is an open limit with the blower running and no heat, often from blocked filters. Goodman EE2 is a pressure switch that did not close, and the same manual tells you to inspect the flue and inlet for blockage. Ignition lockouts name the igniter and the flame sensor. Gas valve, venting and live electrical work belong to a licensed technician.",
- "updated": "2026-11-06",
+ "updated": "2026-11-11",
  "category": "furnaces",
  "shop": [],
  "cards": [
@@ -96,12 +96,21 @@
   {
    "name": "Lennox ML180UH installation and operation manual",
    "url": "https://www.lennox.com/dA/c7cd7e796f/Lennox_ML180UH_IOM.pdf"
+  },
+  {
+   "name": "Goodman service manual RS6621003r3, 80% single-stage gas furnaces",
+   "url": "https://mobile.goodmanmfg.com/mobileapp/stellent/pdf/infoPdf/Lit/RS6621003R3.pdf"
   }
  ],
  "codes": [
   "goodman/ee3",
   "goodman/ee2",
   "goodman/ee0",
+  "goodman/1-flash",
+  "goodman/3-flashes",
+  "goodman/4-flashes",
+  "goodman/6-flashes",
+  "goodman/7-flashes",
   "goodman/ee6",
   "goodman/e11",
   "carrier/33",
@@ -133,7 +142,7 @@
  ]
 }
 ---
-This checklist is for the 2026–2027 heating season. It was updated on October 31, 2026. ENERGY STAR says to check the heating system in the fall, because contractors get busy once winter comes. Nothing below is a deadline, a price, or a stock claim.
+This checklist is for the 2026–2027 heating season. It was updated on 11 November 2026. ENERGY STAR says to check the heating system in the fall, because contractors get busy once winter comes. Nothing below is a deadline, a price, or a stock claim.
 
 ## If you smell gas, stop
 
@@ -160,6 +169,8 @@ Write down the characters or the flash pattern before you cut power. [How to rea
 | Ignition tries, then stops | Goodman EE0: lockout after 3 ignition retries; igniter worn or misaligned; flame sensor coated or oxidized. Rheem 11: failed ignition, then one-hour lockout 10. Carrier 34 and 14: oxide on the flame sensor; defective hot surface igniter. Trane E2.1: flame never sensed after 3 tries. | [Goodman EE0](/goodman/ee0/), [Rheem 11](/rheem/11/), [Carrier 34](/carrier/34/), [Carrier 14](/carrier/14/), [Trane E2.1](/trane/e2-1/) |
 | Furnace still runs, weak flame signal | Goodman EE6: flame sensor coated or oxidized. Rheem 12 is the low-flame-sense code on that control. | [Goodman EE6](/goodman/ee6/), [Rheem 12](/rheem/12/) |
 | Rollout switch open | Goodman E11: open rollout switch, furnace fails to operate. Trane E04 says never to leave limit switches jumpered, and its rollout checks are for a technician. | [Goodman E11](/goodman/e11/), [Trane E04](/trane/e04/) |
+
+An 80% single-stage Goodman, Amana or GMC furnace in the *MES80 / *CES80 family does not use those EE characters. Service manual RS6621003r3 counts flashes on one LED. [1 flash](/goodman/1-flash/) is the ignition lockout, [3 flashes](/goodman/3-flashes/) is the pressure switch not closed, [4 flashes](/goodman/4-flashes/) is an open limit, [6 flashes](/goodman/6-flashes/) is rollout or a blown control fuse, and [7 flashes](/goodman/7-flashes/) is a low flame signal. Do not read an EE page for a counted flash.
 
 The [part finder](/part-finder/) lists every code whose document names the [flame sensor](/part-finder/flame-sensor/), [igniter](/part-finder/igniter/), [pressure switch](/part-finder/pressure-switch/), [filter](/part-finder/filter/), or [limit switch](/part-finder/limit-switch/).
 
