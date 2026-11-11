@@ -2,9 +2,10 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import { lastmodFor } from './src/lib/lastmod.ts';
+import { NOINDEX_PATHS } from './src/lib/thin.ts';
 // Per-URL <lastmod> from content `updated` dates / git commit dates (see src/lib/lastmod.ts). URLs without a known date get no lastmod rather than a made-up one.
 export default defineConfig({ site: 'https://thefaultcode.com', trailingSlash: 'always', integrations: [
   sitemap({
-    filter: (page) => !/\.(png|jpe?g|gif|webp|svg|json|csv|txt|md)\/?$/.test(new URL(page).pathname),
+    filter: (page) => !/\.(png|jpe?g|gif|webp|svg|json|csv|txt|md)\/?$/.test(new URL(page).pathname) && !NOINDEX_PATHS.has(new URL(page).pathname),
     serialize(item) { const d = lastmodFor(new URL(item.url).pathname); if (d) item.lastmod = d; else delete item.lastmod; return item; },
   }), react()] });

@@ -488,3 +488,37 @@ main>.wrap:last-child{padding-bottom:64px}
 .method{max-width:68ch;margin:0;font-size:1.05rem;line-height:1.6}
 .code-note{margin:14px 0 0;font-size:1.02rem;line-height:1.65}
 h1,h2,h3,.kicker,.fig,.tag,.lbl,.site-f h2,.brand-card .bn,.tile-t,.tile-s,.badge,.btn,.gasbar .w,.cat-h small,.code-card .cb,.guide th,.lbl-static,.pt-kind,.safety strong,a.code-card:after,.search label,.search .box .go,.menu-btn,.tech,.capture .fld{text-transform:none;letter-spacing:.01em}
+/* Readability floor (2026-11-10 audit): labels and small UI text stay at or above 12.5px on every viewport */
+.logo small,.site-f .logo small{font-size:12.5px;letter-spacing:.04em;white-space:nowrap}
+@media (min-width:601px){.site-h .logo>span:last-child{min-width:13.5rem}}
+.search label,.stats span.l,.code-card .cb,.affnote,.badge,.btn-sm,.tech,.lbl-static,.pt-kind,.tile-s,.capture .fld,a.code-card:after,.tag{font-size:max(.78rem,12.5px)}
+.site-f h2 a{font-size:max(.78rem,12.5px)}
+@media (max-width:600px){.tile-s{font-size:12.5px}}
+/* Hub key-codes table */
+.tbl-wrap{max-width:100%}
+.ktab td:last-child{overflow-wrap:anywhere}.ktab td:first-child{white-space:nowrap}
+.ktab{width:100%;border-collapse:collapse;font-size:.95rem}
+.ktab caption{text-align:left;color:var(--steel);font-size:.92rem;margin:0 0 10px}
+.ktab th,.ktab td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--rule2,#d8d2c4)}
+.ktab thead th{font-family:var(--mono);font-size:max(.78rem,12.5px);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);border-bottom:2px solid var(--ink)}
+.ktab tbody th{font-family:var(--mono);font-weight:700;white-space:nowrap}
+.ktab tbody th a{display:inline-flex;align-items:center;min-height:44px;min-width:44px}
+@media (max-width:600px){.ktab th,.ktab td{padding:8px 6px}.ktab td:first-child{padding-left:0}.ktab{font-size:.92rem}}
+/* "Can I fix this myself?" mark on code pages */
+.diy-mark{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0 0 16px;padding:10px 14px;border-left:5px solid var(--steel);background:var(--sheet);font-size:1rem;line-height:1.45}
+.diy-mark .diy-q{font-family:var(--mono);font-size:max(.8rem,13px);letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.diy-mark strong{font-family:var(--disp);font-size:1.35rem;text-transform:uppercase;letter-spacing:.03em}
+.diy-mark .diy-why{flex-basis:100%;color:var(--steel);font-size:.95rem}
+.diy-yes{border-left-color:var(--ok)}.diy-yes strong{color:var(--ok)}
+.diy-maybe{border-left-color:var(--amber)}.diy-maybe strong{color:var(--ink)}
+.diy-no{border-left-color:var(--stop)}.diy-no strong{color:var(--stop)}
+/* Blink / flash pattern drawings on code pages */
+.bp{margin:14px 0 0;padding:12px 14px;border:1px solid var(--rule2);background:var(--paper)}
+.bp-row{display:flex;align-items:center;gap:14px}
+.bp-svg{flex:1;min-width:0;height:40px;width:100%;}
+.bp-led{flex:none;width:28px;height:28px;border-radius:50%;background:var(--bp);border:2px solid var(--ink);opacity:1}
+.bp figcaption{margin-top:8px;font-size:.95rem;line-height:1.5}
+.bp-src{display:block;color:var(--steel);font-size:.9rem;margin-top:4px}
+.bp-ctl{margin:10px 0 0}.bp-play{min-height:44px;cursor:pointer}.bp-rm{display:none;color:var(--steel);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.bp-play{display:none}.bp-rm{display:block}}
+.search .pre{background:var(--sig-ink)} /* white-on-orange "Look up" label was 3.5:1 on desktop; axe color-contrast */

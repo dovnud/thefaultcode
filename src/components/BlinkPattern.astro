@@ -1,0 +1,35 @@
+---
+// Drawing (and opt-in animation) of a blink/flash pattern stated in the page's cited manual. See src/lib/blink.ts.
+import type { Blink } from '../lib/blink';
+interface Props { b: Blink; id: string; label: string }
+const { b, id, label } = Astro.props;
+const PX = 40;                       // px per second for timed patterns
+const w = (s) => s.t == null ? (s.on ? 14 : 10) : Math.max(4, s.t * PX);
+let x = 0; const rects = []; const gaps = [];
+for (const s of b.steps) { const sw = w(s); if (s.on) rects.push({ x, w: sw }); else if (s.kind === 'pause') gaps.push({ x, w: sw }); x += sw; }
+const W = Math.ceil(x); const fill = b.color === 'amber' ? '#f2b632' : b.color === 'red' ? '#a3241a' : '#2f6b3a';
+// keyframes for the opt-in animation (timed patterns only)
+const total = b.timed ? b.steps.reduce((a, s) => a + (s.t ?? 0), 0) : 0;
+let acc = 0; const kf: string[] = [];
+if (b.timed) for (const s of b.steps) { kf.push(`${(acc / total * 100).toFixed(3)}%{opacity:${s.on ? 1 : .12}}`); acc += s.t ?? 0; }
+const anim = b.timed ? `@media (prefers-reduced-motion:no-preference){#${id}.playing .bp-led{animation:${id}-k ${total.toFixed(3)}s step-end infinite}}@keyframes ${id}-k{${kf.join('')}100%{opacity:.12}}` : '';
+---
+<figure class="bp" id={id}>
+<div class="bp-row">
+{b.timed && <span class="bp-led" style={`--bp:${fill}`} aria-hidden="true"></span>}
+<svg class="bp-svg" viewBox={`0 0 ${W} 40`} width={W} height="40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+<line x1="0" y1="34" x2={W} y2="34" stroke="#55544e" stroke-width="1.5" vector-effect="non-scaling-stroke" />
+{gaps.map(g => <rect x={g.x + 1} y="8" width={Math.max(1, g.w - 2)} height="26" fill="none" stroke="#55544e" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" />)}
+{rects.map(r => <rect x={r.x} y="8" width={r.w} height="26" fill={fill} stroke="#1d1d1b" stroke-width="1.5" vector-effect="non-scaling-stroke" />)}
+</svg>
+</div>
+<figcaption><strong>{label}:</strong> {b.text} <span class="bp-src">{b.lamp}. From the {b.ref}.{b.timed ? ' Bars are drawn to time scale; the dashed box is the pause.' : ' The dashed box is the 2.5-second pause.'}</span></figcaption>
+{b.timed && <p class="bp-ctl"><button type="button" class="btn btn-o btn-sm bp-play" aria-pressed="false" aria-controls={id}>Play the pattern</button><span class="bp-rm">Animation is off because your device asks for reduced motion. The drawing above shows the same pattern.</span></p>}
+{anim && <style is:inline set:html={anim}></style>}
+</figure>
+<script>
+document.querySelectorAll<HTMLButtonElement>('.bp-play').forEach(btn => btn.addEventListener('click', () => {
+  const fig = document.getElementById(btn.getAttribute('aria-controls') || ''); if (!fig) return;
+  const on = fig.classList.toggle('playing'); btn.setAttribute('aria-pressed', String(on)); btn.textContent = on ? 'Stop the pattern' : 'Play the pattern';
+}));
+</script>

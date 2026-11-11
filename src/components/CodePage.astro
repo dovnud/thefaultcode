@@ -8,6 +8,8 @@ import { allCodes } from '../lib/paths';
 import { articleLd, breadcrumbLd } from '../lib/schema';
 import SafetyNotice from './SafetyNotice.astro'; import CaptureForm from './CaptureForm.astro'; import { affiliates, AMAZON_STATEMENT } from '../config/affiliates'; import { fmtDate } from '../config/site';
 import { codeNote } from '../lib/codeNotes';
+import { diyVerdict, DIY_TEXT } from '../lib/diy';
+import { blinkFor } from '../lib/blink'; import BlinkPattern from './BlinkPattern.astro';
 import { sisterFor } from '../lib/sisters';
 import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
 const { e, related } = Astro.props;
@@ -24,6 +26,8 @@ const shortMeaning = (meaning: string) => {
 const h1 = `${e.brand} ${e.code}: ${shortMeaning(e.meaning)}`;
 const relLabel = (meaning: string) => shortMeaning(meaning).split(/\s+/).slice(0, 6).join(' ');
 const visiblePattern = e.displayPattern.replace(/\s*\(([^)]{60,})\)/g, '').replace(/\s{2,}/g, ' ').trim();
+const diy = diyVerdict(e);
+const blink = blinkFor(e);
 const note = codeNote(`${cat.slug}/${e.brandSlug}/${e.codeSlug}`);
 const everyCode = await allCodes();
 const sister = sisterFor(e, everyCode);
@@ -60,6 +64,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 {e.example && <p class="ex"><strong>EXAMPLE DATA: not verified, do not publish.</strong></p>}
 {hasAff && <p class="affnote">Affiliate links may earn us a commission.{hasAmazon && <>{" "}{AMAZON_STATEMENT}</>} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><h1>{h1}</h1><p class="meta-l">{e.sourceManualUrl ? <>Source: <a href={e.sourceManualUrl} rel="noopener" target="_blank">{hdrSrc}<span class="sr-only"> (opens in a new tab)</span> ↗</a></> : <>From the {e.brand} {eq} manual</>} · Updated <time datetime={e.updated}>{fmtDate(e.updated)}</time></p></div>
+{diy && <p class={`diy-mark diy-${diy}`}><span class="diy-q">Can I fix this myself?</span> <strong>{DIY_TEXT[diy].label}</strong><span class="diy-why">{DIY_TEXT[diy].why}</span></p>}
 <div class="layout">
 <article>
 <div class="card result" data-critical>
@@ -70,6 +75,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 {primary && <div class="result-cta"><p class="result-cta-l">Homeowner part this code names: {primary.name}.</p><a class="btn btn-p" rel="sponsored nofollow noopener" target="_blank" href={primary.href} aria-label={`Search on Amazon: ${primary.name} (sponsored link, opens in a new tab)`}>Search on Amazon</a><p class="disc">Opens an Amazon search for that name. Check the size against your manual. {AMAZON_STATEMENT}</p></div>}
 <div class="badges">{e.proNeeded?<a class="badge b-pro" href="#call-a-pro">Call a pro<span class="sr-only">: jump to when to call a pro</span> <span aria-hidden="true">↓</span></a>:<a class="badge b-diy" href="#diy-steps">Basic checks first<span class="sr-only">: jump to safe DIY steps</span> <span aria-hidden="true">↓</span></a>}<span class="lbl-static"><span class="sr-only">Equipment type: </span>{eq}</span></div>
 <div class="pattern"><strong>How it shows:</strong> {visiblePattern}</div>
+{blink && <BlinkPattern b={blink} id={`bp-${e.brandSlug}-${e.codeSlug}`} label={`${e.brand} ${e.code} pattern`} />}
 {note && <p class="code-note">{note}</p>}
 {sister && <p class="pattern"><strong>{sister.heading}:</strong> {sister.before} <a href={sister.href}>{sister.label}</a>{sister.after}</p>}
 {twins.length>0 && <p class="pattern"><strong>Same characters, different appliance:</strong> {twins.map(c => { const noun = catOf(c).noun; const art = /^[aeiou]/i.test(noun) ? 'an' : 'a'; return <span>{`${e.brand} ${e.code} on ${art} ${noun} is a different code. `}<a href={codePath(c)}>{`${e.brand} ${typeLabel(c)} ${e.code}`}</a>. </span>; })}</p>}

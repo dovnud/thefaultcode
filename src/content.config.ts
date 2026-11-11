@@ -23,6 +23,8 @@ const codes = defineCollection({
     moreSources: z.array(z.object({ name: z.string(), url: z.string().url() })).default([]),
     // Optional cap on Amazon links in the 'Parts & tools' block of this code page (newer pages use 3). Unset = no cap.
     amazonMax: z.number().int().min(0).optional(),
+    // Optional 'Can I fix this myself' override. Only set it when the page content clearly supports the call; gas/electrical/refrigerant work is never yes/maybe.
+    diy: z.enum(['yes','maybe','no']).optional(),
     updated: z.string(),
   }),
 });
