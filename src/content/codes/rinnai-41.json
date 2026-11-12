@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "41",
+  "codeSlug": "41",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The freeze-protection sensor failed, and what the heater does next depends on the family. The N-series chart names code 41 Freeze Protection Thermistor and says to follow the exhaust-thermistor steps. Document 100000652 does not stop at that. It gives three different behaviors. If a KB heater's freeze-protection sensor is unplugged, cut, or shorted, the heater will not fire, and it will show code 41. If a VC heater's freeze-protection sensor is unplugged, cut, or shorted, the heater will still fire. It flashes code 41 alternating with the set-point temperature. On outdoor models, if the outside-air thermistor is open or disconnected, the heater keeps running and flashes code 41, alternating with the set point. The manual's reason is that this thermistor turns freeze protection on, so there is no need to stop the heater. After the cause is cleared, the code disappears. The checks that follow apply to SENSEI and non-SENSEI in this document. Check the sensor harness back to the PC board. Make sure the sensor is open to outside air and is not covered with insulation. Measure it on a meter that can read 20k ohms. Resistance falls when the bulb is warmed, including between two fingers, and rises against ice. Typical values: 11.4 to 14k ohms at 59°F, 6.4 to 7.7k ohms at 86°F, 3.6 to 4.5k ohms at 113°F, 2.2 to 2.7k ohms at 140°F, and 0.6 to 0.8k ohms at 221°F. The 140°F and 221°F lines on this page are printed as 2.2 to 2.7k and 0.6 to 0.8k, without the word ohms on those two lines. The earlier lines in the same list say ohms. Code 32 uses the same temperature points, but it is the outgoing water thermistor, it requires a drain and an O-ring, and the heater is not described as being allowed to keep firing. A KB unit that will not fire on code 41 is not a VC unit that fires while the code flashes. Read the model family before you decide the heater is 'dead.'",
+  "causes": [
+    "KB freeze-protection sensor unplugged, cut, or shorted, which blocks firing",
+    "VC freeze-protection sensor unplugged, cut, or shorted, which still allows firing",
+    "Outdoor-model outside-air thermistor open or disconnected, which still allows firing",
+    "Sensor covered with insulation or not open to outside air",
+    "Harness loose, broken, or damaged",
+    "Resistance that does not fall when the bulb is warmed"
+  ],
+  "diySteps": [
+    "Find the model family on the rating plate. KB not firing is the behavior this document describes. VC or an outdoor model may still heat while 41 flashes",
+    "Do not pack insulation over a sensor that is supposed to see outside air. If you can see insulation buried against an outdoor sensor without opening the cabinet, clear that covering",
+    "Technician: check the harness, confirm the sensor is open to outside air, and measure it against the list above"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 41 is the freeze sensor, and the manual splits the symptom by family. A KB heater that will not start is following this document. A VC or outdoor heater that keeps running while 41 alternates with the set point is also following it. Call a qualified technician to measure the sensor. Do not disable freeze protection for the winter."
+}

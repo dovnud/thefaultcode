@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "54",
+  "codeSlug": "54",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "Exhaust temperature stayed above 163°F. Document 100000652 defines code 54 as high exhaust gas temperature. If exhaust temperature exceeds 163°F, the water heater reduces its input firing rate. If the exhaust is still above 163°F after 120 seconds, the heater shuts down and flashes code 54. The N-series chart's short version is to make sure the heat exchanger fins are clean, confirm inlet water is not too high, reset power, and make sure condensate is not blocked. The timed 163°F behavior is from 100000652. Check clearances at the vent termination. Check the intake and exhaust ports for restrictions. Verify vent clearances and lengths. Make sure the gas type matches the rating plate. Make sure inlet water temperature is not too high. This 2019 page does not give a degree number for 'too high.' Check the heat exchanger surface for hot spots. Hot spots mean a blockage inside the heat exchanger from scale. Flush the heat exchanger with four gallons of vinegar, using the flushing instructions in the owner's manual. If the heat exchanger is damaged from poor maintenance, replace it. If scale caused code 54, treat the water so it does not happen again. Check for fan air leakage between the air intake and the combustion chamber. Turn off electrical, gas, and water before removing the heat exchanger. Separate the burner from the primary heat exchanger and inspect the fins. Clean debris with 120 psi compressed air. If the debris will not come out, replace the heat exchanger and all gaskets. If the burner is removed, the manual says to purchase 101 Burner Gasket-Large. The burner gasket must not be reused. The burner plate and the heat exchanger surface have to be clean and smooth before the burner goes back. The printed sentence says 'change and smooth,' in the 2019 text. If code 54 remains, replace the PC board. Code 14 on the existing pages is heat exchanger overheat from the N-series chart. Code 54 is this exhaust-temperature timer: derate above 163°F, shut down if it lasts 120 seconds.",
+  "causes": [
+    "Exhaust above 163°F for 120 seconds after the heater has already reduced firing rate",
+    "Vent termination clearances, restrictions, or vent length",
+    "Gas type that does not match the rating plate",
+    "Inlet water hotter than this installation allows",
+    "Scale in the heat exchanger, seen as hot spots, flushed with four gallons of vinegar",
+    "Fan air leaking between the intake and the combustion chamber",
+    "Debris in the heat exchanger fins",
+    "PC board, if code 54 remains after the inspections"
+  ],
+  "diySteps": [
+    "Look at the outdoor termination for a blocked or buried cap. Do not open the heat exchanger",
+    "A vinegar flush of four gallons is the manual's scale step, and it follows the owner's flushing procedure. Do it only if you already flush this heater and you can isolate it. Otherwise leave it",
+    "Technician: confirm the 163°F and 120 second behavior, check vents and gas type, look for hot spots, flush or replace a scaled exchanger, check fan leakage, blow out fins at 120 psi, use a new 101 burner gasket, and replace the PC board last"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 54 is the heater protecting itself after exhaust stays above 163°F. Removing the burner requires a new gasket, part description 101 Burner Gasket-Large, and the old gasket is not reused. Call a qualified technician if a clear termination does not restore normal firing. Scale that has already damaged the exchanger is a replacement, not another flush."
+}

@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Flue temp too high",
+  "codeSlug": "flue-temp-too-high",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "Flue temperature passed 216°F. FLUE TEMP TOO HIGH occurs when the flue temperature sensor exceeds 216°F. An automatic reset occurs if the temperature drops below 216°F for 2.5 minutes. A manual reset is required if the temperature rises above 225°F. Reset it from the manual reset screen. Those two thresholds are the whole difference between a boiler that may start itself and one that stays locked. The row says to follow the temperature-sensor procedure for a shorted or open sensor before treating this as a real flue temperature. In addition, inspect the heat exchanger combustion chamber and the flueways for abnormal wear or buildup. Inspect the vent system for abnormal wear or damage. Then contact WM Technologies Technical Support. A separate maintenance check in the same manual is not this fault, and the numbers are different. At high fire, flue gas temperature should be no more than 54°F higher than the boiler return temperature. If it is higher, shut the boiler down, let it cool, and clean the Nanogate coated heat exchanger starting at the procedure on page 125. Do not use the 54°F rise rule as if it were the 216°F lockout. One is a maintenance comparison with return water. The other is the sensor crossing 216°F, with 225°F forcing a manual reset. SUPPLY 58F > RETURN is also a different display. That one compares boiler outlet water with boiler inlet water, by more than 58°F, while the burner is on. It is a water-flow fault. Flue temp too high is the flue sensor.",
+  "causes": [
+    "Flue temperature sensor above 216°F",
+    "Temperature that climbs above 225°F, which forces a manual reset",
+    "A shorted or open flue sensor, which this row says to rule out first",
+    "Abnormal wear or buildup in the combustion chamber or flueways",
+    "Abnormal wear or damage in the vent system"
+  ],
+  "diySteps": [
+    "Leave the boiler off if the display is still above the manual-reset threshold. Do not bypass the sensor",
+    "From outdoors, look at the vent termination for obvious blockage, snow, or damage. If you see damage, stop and call",
+    "Technician: confirm the sensor is not shorted or open using the temperature-sensor procedure, inspect the combustion chamber, flueways, and vent, and contact WM Technologies Technical Support"
+  ],
+  "proNeeded": true,
+  "proAdvice": "The row ends at WM Technologies Technical Support after the sensor, the heat exchanger, and the vent are inspected. A homeowner look at the outdoor termination does not replace that. If the temperature went above 225°F, the control will not clear itself when the flue cools. 216°F can clear after 2.5 minutes below that line. 225°F cannot."
+}

@@ -1,6 +1,6 @@
 // Open Graph / Twitter card specs: one entry per page path. Rendered to 1200x630 PNG at build by src/pages/og/[...path].png.ts.
 import { getCollection } from 'astro:content';
-import { CATEGORIES, catOf, codePath, groupCodes, typeLabel } from '../config/categories';
+import { CATEGORIES, catOf, codePath, groupCodes, groupNoun, typeLabel } from '../config/categories';
 import { PARTS } from '../data';
 import { FINDER_PARTS, codesForPart } from './partFinder';
 
@@ -36,8 +36,9 @@ async function build() {
     text(`/parts/for/${c.slug}/`, 'Parts and tools', `Parts and tools for ${c.noun} codes`, 'What each part is, how to choose and test it, when to call a pro.');
   }
   for (const g of groups) {
-    text(g.href, g.cat.name, `${g.brand} ${g.cat.noun} error codes`, `${g.codes.length} codes, each linked to the ${g.brand} source document.`);
-    text(`/parts/for/${g.cat.slug}/${g.brandSlug}/`, 'Parts and tools', `Parts and tools for ${g.brand} ${g.cat.noun} codes`, `Which ${g.brand} codes name each part, tool or supply.`);
+    const noun = groupNoun(g.codes);
+    text(g.href, g.cat.name, `${g.brand} ${noun} error codes`, `${g.codes.length} codes, each linked to the ${g.brand} source document.`);
+    text(`/parts/for/${g.cat.slug}/${g.brandSlug}/`, 'Parts and tools', `Parts and tools for ${g.brand} ${noun} codes`, `Which ${g.brand} codes name each part, tool or supply.`);
   }
   for (const e of codes) {
     const t = typeLabel(e);

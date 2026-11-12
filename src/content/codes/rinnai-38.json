@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "38",
+  "codeSlug": "38",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The exhaust gas temperature sensor failed, and the later steps leave the sensor and look at gas and the heat exchanger. The N-series chart names code 38 Exhaust Thermistor: check wiring, measure resistance, replace the sensor. Document 100000652 applies the longer procedure to SENSEI and non-SENSEI, and it calls the part the exhaust gas temperature sensor. Check the harness at the sensor and at the PC board. Remove the sensor and measure it. The thermistor check in this document uses a meter that can read 20k ohms. Resistance should fall when the bulb is warmed, including when it is held between two fingers, and it should rise if ice is held against the bulb. The typical values printed on this code are 11.4 to 14k ohms at 59°F, 6.4 to 7.7k ohms at 86°F, 3.6 to 4.5k ohms at 113°F, 2.2 to 2.7k ohms at 140°F, and 0.6 to 0.8k ohms at 221°F. If the readings are correct, reinstall the sensor into the exhaust port. That location is the difference from code 32. Code 32's sensor is in the outgoing water and has an O-ring. This sensor goes back into the exhaust port. Start water flow. If code 38 continues, the manual moves on. Verify the gas type against the rating plate. If the heater was converted, for example from natural gas to propane, verify the conversion was done per the gas conversion manual for that model. Verify clearances around the heater and the vent terminals. Make sure parameter settings or DIP switches match the installation. The manual says to contact Rinnai for the proper settings if you need them. A qualified technician then uses a manometer to verify forced low and forced high manifold gas pressures, using the technical data sheet inside the front cover. The manual says a manometer must be used. Turn off gas and water before the next inspection. Inspect the burner manifold, the burner assembly, and the heat exchanger copper fins for debris or blockage. Verify venting clearances and lengths. If code 38 remains, replace the sensor. Code 32 stops at replace the thermistor after the water-side O-ring check. Code 38 does not stop there. The gas-type, conversion, clearance, manometer, and fin checks are on 38 because the sensor is in the exhaust.",
+  "causes": [
+    "Exhaust gas temperature sensor harness loose, broken, or damaged",
+    "Sensor resistance that does not track the values shared with the water thermistors",
+    "Wrong gas type, or a conversion that was not done for that model",
+    "Clearances, parameter or DIP settings, or vent length wrong for the installation",
+    "Manifold gas pressure out of range on forced low or forced high",
+    "Debris in the burner manifold, burner, or heat exchanger fins"
+  ],
+  "diySteps": [
+    "Compare the rating-plate gas type with the gas supplied to the house, if you know it. Do not adjust a conversion",
+    "Look at the outdoor vent termination for a blockage or a termination that is obviously buried or covered",
+    "Technician: measure the exhaust sensor, reinstall it in the exhaust port, then check conversion, clearances, DIP or parameters, manifold pressure with a manometer, the fins, and the vent length"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 38 starts like a thermistor code and then becomes a combustion-air and gas-pressure code if the sensor readings are already good. The manometer step is marked for someone qualified to service gas systems. Call a qualified technician. Do not replace the sensor until those later steps have been done, because the manual puts replacement last."
+}

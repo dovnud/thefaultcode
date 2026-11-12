@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "No display, boiler off",
+  "codeSlug": "no-display-no-power",
+  "displayPattern": "Nothing shown on the U-Control display of an Ultra Series 4, and no other boiler components are operating. Manual 550-100-440/1025, Figure 125.",
+  "meaning": "The display is blank and the rest of the boiler is off. Figure 125 describes 'Nothing is shown in display screen and no other boiler components are operating.' The control is not receiving 120V power. Check that the service switch and the circuit breaker to the boiler are on. Turn on the service switch to power the boiler. If there is not 120 volts at the service switch, troubleshoot and correct the power supply to that switch. The Ultra's ON/OFF power switch is located behind the control pod. Turn that switch to ON. Check for 120 volts at the line voltage terminal block inside the control pod. Correct the wiring inside the pod using the wiring diagram in the manual. Inspect the 12-amp fuse shown on page 116 and replace it if necessary, using the proper part from the replacement-part section. If the fuse blows again, recheck the wiring against the diagram. The other blank-screen row, blower running at full speed, is 24V and a 3-amp fuse. Do not put a 3-amp fuse in this 12-amp position, or the reverse. DISPLAY COMM is yet another message: display communications out for 30 seconds, with an automatic reset when communication returns, and a loose molex on the control and on the back of the display. That display still has a message. This row has no message because 120V is missing.",
+  "causes": [
+    "Control not receiving 120V",
+    "Service switch or circuit breaker off",
+    "No 120 volts at the service switch",
+    "Ultra ON/OFF power switch behind the control pod turned off",
+    "Wiring at the line-voltage terminal block inside the control pod",
+    "Open 12-amp fuse"
+  ],
+  "diySteps": [
+    "Check the boiler service switch and the breaker. If either was off, turn it on and see whether the display returns",
+    "Do not open the control pod to hunt for the 12-amp fuse or the switch behind the pod",
+    "Technician: measure 120 volts at the service switch and at the line-voltage terminal block, confirm the power switch behind the pod, and replace the 12-amp fuse with the listed part if it is open"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A homeowner can check the switch and the breaker. Voltage at the service switch, the terminal block inside the pod, and the 12-amp fuse are technician checks. If the blower is running while the screen is dark, you are on the other row, the 24V fault, and the 12-amp fuse is the wrong part."
+}

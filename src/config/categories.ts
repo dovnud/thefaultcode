@@ -50,6 +50,14 @@ const TYPE_LABELS: Record<string, string> = { 'washing-machine': 'washing machin
 export const typeLabel = (e: CodeData) => TYPE_LABELS[e.equipmentType] ?? e.equipmentType.replace(/-/g, ' ');
 
 export const brandPath = (e: CodeData) => { const c = catOf(e); return c.slug === 'furnaces' ? `/${e.brandSlug}/` : `/${c.slug}/${e.brandSlug}/`; };
+
+/** Noun for a brand list. Furnace-category boilers stay "boiler"; every other furnace brand stays "furnace". */
+export function groupNoun(codes: CodeData[]): string {
+  const cat = catOf(codes[0]);
+  const types = new Set(codes.map(c => c.equipmentType));
+  if (types.size === 1 && types.has('boiler')) return 'boiler';
+  return cat.slug === 'furnaces' ? 'furnace' : cat.noun;
+}
 export const codePath = (e: CodeData) => `${brandPath(e)}${e.codeSlug}/`;
 /** Words the search box / filters should also match for this code (e.g. "washer" for a washing machine). */
 export const searchText = (e: CodeData) => `${e.brand} ${e.code} ${e.meaning} ${typeLabel(e)} ${catOf(e).aliases}`.toLowerCase();

@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/boilers/6721853955_greenstar_wall_iom_en_11.2025.pdf",
+  "sourceTitle": "Bosch Greenstar wall-mounted residential gas condensing boiler installation and service instructions 6721853955 (2025/11), section 15",
+  "safetyNote": "Section 15 of the Greenstar wall manual is written for contractors. Close the gas cock before work on the gas train, and check for gas leaks afterward. Check the venting system for leaks after any work on it, because of flue gas. Disconnect the appliance from mains power before work, and prevent it from being switched back on accidentally. Hot water can scald. Drain the appliance before opening water-filled components, and cover the Heatronic so a leak does not damage the control. A fault shutdown in cold weather can let the heating system freeze. Rectify the fault and restart. If you cannot, drain the heating system and the hot water pipes at the lowest point.",
+  "code": "Temperature rise too fast",
+  "codeSlug": "temperature-rise-too-fast",
+  "displayPattern": "Heatronic display on a Bosch Greenstar wall boiler covered by installation instructions 6721853955 (2025/11). A fault sounds a warning tone. Press a button to mute it. The reset button may flash.",
+  "meaning": "Supply temperature rose too fast for the gradient limiter. Table 38 has a display row with no letter code: 'Temperature gradient limiter: Temperature rise too fast.' Fully open the service shut-off valves. Check the electrical connection between the heating zone pump and the Heatronic. Check the pump plug connection per the installation instructions. Manually test operation of the heating zone pump and replace the pump if it is defective. Set the pump speed correctly to match maximum output. Those five actions are the whole row. E9 also involves heat that is not being carried away, but E9 is a tripped heat exchanger safety high limit or flue gas limiter. E9's pump item is the pump capacitor, and E9 adds a 6.3 A fuse, a purge, and the DHW-side heat exchanger. This gradient row does not. Two faults that are not shown as letter codes also mention pump speed. 'Flow noises' and 'Heating-up takes too long' both say to set pump speed to match maximum output, and to set the pump mode. They are not this display. This display is the gradient limiter, and it adds the service valves, the Heatronic connection, the pump plug, and a manual test of the pump. Weil-McLain's 'temp rise too quickly' is a different boiler and a different manual. It uses 2°F per second. This Greenstar row does not state a degrees-per-second number. Do not import one.",
+  "causes": [
+    "Service shut-off valves not fully open",
+    "Electrical connection between the heating zone pump and the Heatronic",
+    "Pump plug connection",
+    "Heating zone pump that fails a manual test",
+    "Pump speed not set to match maximum output"
+  ],
+  "diySteps": [
+    "Look at service shut-off valves you can see without opening the boiler. The row says to open them fully. Do not force a valve that will not move",
+    "Do not unplug the heating zone pump from the Heatronic. That connection is the next line in the table, and it is contractor work",
+    "Technician: confirm the valves, the pump-to-Heatronic connection, the plug per the installation instructions, a manual pump test, and pump speed matched to maximum output"
+  ],
+  "proNeeded": true,
+  "proAdvice": "The gradient limiter is the Greenstar row for temperature rising too fast, and it has no letter. Opening a visible service valve is the one step aimed at flow. The pump wiring, the plug, the manual test, and the speed setting belong to a trained and certified installer."
+}

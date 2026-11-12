@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Air pressure SW fault",
+  "codeSlug": "air-pressure-sw-fault",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "The air-pressure switch input is open, and a residential Ultra does not use that switch. AIR PRESSURE SW FAULT means the air pressure switch is open. Ultra residential boilers do not use an air pressure switch. They have a wire jumper installed between P7 pins 4 and 5. Reset this fault from the manual reset screen. Check the boiler size selected in the U-Control against the boiler rating label. Correct the selection if it does not match. Check the P7 connection in Figure 111 on page 96 and Figure 112 on page 97 for the proper jumper location. The same Figure 125 gives a boiler-size check, and no other residential repair, to four neighboring displays. GAS PRESSURE SW FAULT means the gas pressure switch is open, high or low. Residential Ultra boilers do not use gas pressure switches. It requires a manual reset. The action is the same size check against the rating label. HW FAULT EXPANSION BRD means the expansion control board hardware has failed. Residential Ultra boilers do not use an expansion control board. Manual reset, then the size check. GV FAULT EXPANSION BRD is the gas valve output of the expansion board. Residential models do not use that board. Manual reset, then the size check. EXP BOARD COM FAULT is lost communication between the expansion control board and the U-Control. Residential models do not use that board. Manual reset, then the size check. Those four are not separate pages. They do not have the P7 pins 4 and 5 jumper that this air-pressure row has. If the rating label and the selected size already match, and the P7 jumper is in place, this page does not add a replacement part the manual does not name.",
+  "causes": [
+    "Air pressure switch input open on a residential Ultra, which uses a jumper instead of a switch",
+    "Boiler size selected in the U-Control does not match the rating label",
+    "Jumper missing or misplaced between P7 pins 4 and 5",
+    "GAS PRESSURE SW FAULT, HW FAULT EXPANSION BRD, GV FAULT EXPANSION BRD, or EXP BOARD COM FAULT, which this manual treats as the same wrong-size selection on a residential Ultra"
+  ],
+  "diySteps": [
+    "Do not install an air pressure switch to clear this display on a residential Ultra. The manual says the boilers use a jumper",
+    "Read the rating label and write down the model before anyone changes the size selected in the control",
+    "Technician: set the U-Control boiler size to the rating label, and confirm the P7 pins 4 and 5 jumper using Figures 111 and 112",
+    "If the display is one of the four size-only rows named above, the technician checks the selected size and does not go looking for an expansion board on a residential boiler"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Selecting the wrong boiler size makes the U-Control look for hardware a residential Ultra does not have. The air-pressure row is the one that also names a jumper on P7 pins 4 and 5. Call a qualified heating technician. Do not add a switch or an expansion board to satisfy a display the manual says the residential boiler does not use."
+}

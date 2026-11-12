@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Low WTR cutoff open",
+  "codeSlug": "low-wtr-cutoff-open",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "The low-water cutoff opened for more than one second. LOW WTR CUTOFF OPEN occurs when the low water cutoff device contacts stay open for more than 1 second. It requires a manual reset of the U-Control, and it may also require a manual reset of the low-water cutoff device, depending on the model. Check for a low water condition in the system and repair the system as necessary. The row points at the piping section of the manual. If the system is not low on water, open Diagnostics, Inputs, and view the status of the low water cutoff. If it is shown as OPEN, check the wiring between the low water cutoff and the U-Control. The user's information manual adds a maintenance step that is not this fault: if a low water cutoff is installed, test it periodically during the heating season, follow that device's own instructions, and reset the boiler control after the test. A test that leaves the contacts open will produce this display. Resetting without water in the boiler does not satisfy the row. LIMIT OPEN is a different input. That row is an external manual or automatic reset limit, with jumpers on the orange 4-pin connector P13. The low-water cutoff is not those P13 jumpers. The one-second rule means a brief open that lasts one second or less is not this display. Diagnostics, Inputs, is the screen that shows the cutoff as OPEN or not, which is a different menu from Diagnostics, Temperatures. The temperature-sensor page uses Temperatures. This page uses Inputs.",
+  "causes": [
+    "Low water cutoff contacts open for more than 1 second",
+    "A real low-water condition in the system",
+    "Wiring between the low water cutoff and the U-Control when Diagnostics, Inputs, still shows OPEN and the system is full",
+    "A cutoff that was tested and not reset, from the user's manual maintenance step"
+  ],
+  "diySteps": [
+    "Do not keep selecting MANUAL RESET on a boiler that may be low on water",
+    "If you just tested the low water cutoff, follow that device's reset and then reset the boiler control, as the user's manual says for the periodic test",
+    "Technician: confirm the system is full using the piping section, read the cutoff status on Diagnostics, Inputs, and check the wiring if the status stays OPEN with the system full"
+  ],
+  "proNeeded": true,
+  "proAdvice": "An open low-water cutoff is a manual reset of the U-Control, and some cutoff models also need their own reset. Filling, piping repairs, and the wiring to the U-Control belong to a qualified heating technician. Call if the display returns after a single reset, or if you cannot confirm the system is full of water."
+}

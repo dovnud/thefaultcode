@@ -11,7 +11,7 @@ import { codeNote } from '../lib/codeNotes';
 import { diyVerdict, DIY_TEXT } from '../lib/diy';
 import { blinkFor } from '../lib/blink'; import BlinkPattern from './BlinkPattern.astro';
 import { sisterFor } from '../lib/sisters';
-import { catOf, typeLabel, brandPath, codePath, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
+import { catOf, typeLabel, brandPath, codePath, groupNoun, proLocator, locatorLabel, locatorSr, locatorNote } from '../config/categories';
 const { e, related } = Astro.props;
 const cat = catOf(e); const furn = cat.slug === 'furnaces';
 const eq = typeLabel(e);
@@ -91,7 +91,7 @@ const hdrSrc = e.sourceType==='support-page' ? `${e.brand} support page` : `${e.
 <CaptureForm purpose="fix" pageUrl={codePath(e)} extra={{ brand: e.brand, code: e.code, equipment: eq }} />
 {cat.kind === 'hvac' && <CaptureForm purpose="reminder" pageUrl={codePath(e)} />}
 <CodeParts e={e} />
-{related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h">{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{relLabel(c.meaning)}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn?'':cat.noun+' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
+{related.length>0 && <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h" class="rel-h">{relH}</h2><div class="rel">{related.map(c=><a href={codePath(c)}><span class="cc">{c.code}</span><span class="cm">{relLabel(c.meaning)}</span></a>)}</div><p class="rel-more"><a class="btn btn-o" href={brandPath(e)}>All {e.brand} {furn && e.equipmentType !== 'boiler' ? '' : groupNoun([e]) + ' '}codes →</a><a class="btn btn-o" href="/codes/">Browse every code</a></p></section>}
 </article>
 <aside class="side" data-critical>
 {pointed.length>0 && <div class="card box"><h2 class="h3" style="font-size:1.35rem;margin:0 0 6px">Parts this code points to</h2><p>Named in the manufacturer document for this code. Each link is the part finder page for that part.</p><ul class="parts">{pointed.map(h=><li><a href={`/part-finder/${h.part.slug}/`}>{h.part.name}</a></li>)}</ul><p style="margin:8px 0 0"><a href="/part-finder/">Part finder</a></p></div>}

@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Return > supply",
+  "codeSlug": "return-gt-supply",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "Return water stayed hotter than supply. RETURN > SUPPLY occurs when a return water temperature is greater than the corresponding supply temperature by 10°F or more. It applies to system sensors or to boiler sensors. The condition must occur for 10 minutes for system sensors. The row does not put that 10 minute wait on the boiler sensors. It automatically resets when the condition no longer exists. There is no one-hour lockout and no manual-reset requirement on this row. Verify the flow direction of the boiler circulator. It should be installed to push water through the boiler's return pipe, as shown in Figure 4 on page 11. Verify placement of system sensors for a single boiler or for multiple boilers. System sensors should be on the system piping, not on the boiler loop. System sensors may need to be located further from the boiler-loop connection if being close to that loop heats them inaccurately. SUPPLY 58F > RETURN is the opposite direction and a different number: outlet more than 58°F above inlet, only while the burner is on, with a 30 second automatic reset. This return-over-supply display can be a pump pushing the wrong way, or system sensors sitting in the wrong place. It is not the flue sensor and it is not the 2°F-per-second temp-rise fault. On a multiple-boiler system the same sentence applies: system sensors go on the system piping. The row does not give a pipe diameter or a Taco model. Those lists are on temp rise, on supply 58F greater than return, and on high temp limit. Copying a Taco 0014 onto this display invents a part the row does not name. The automatic reset has no delay printed on this row. It clears when the temperatures are no longer 10°F apart.",
+  "causes": [
+    "Return water at least 10°F hotter than the matching supply temperature",
+    "Boiler circulator not pushing water into the boiler return as in Figure 4",
+    "System sensors installed on the boiler loop instead of the system piping",
+    "System sensors close enough to the boiler loop that the loop heats them"
+  ],
+  "diySteps": [
+    "Do not reverse a pump or move a sensor yourself. The row's checks are the circulator direction and the sensor locations",
+    "If heat is coming from the wrong pipe, leave the boiler in its automatic-reset state and call",
+    "Technician: confirm the circulator pushes into the boiler return, and move system sensors onto system piping, farther from the boiler loop if the loop is heating them"
+  ],
+  "proNeeded": true,
+  "proAdvice": "This display clears itself when return water is no longer 10°F above supply. If it stays, the manual points at circulator direction and at where the system sensors are mounted. That is piping work for a qualified heating technician, not a reset."
+}

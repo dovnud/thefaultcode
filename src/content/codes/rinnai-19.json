@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "19",
+  "codeSlug": "19",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "An electrical short appears as soon as water flows, and there is no flame. The N-series chart names code 19 Electrical Grounding and says to check all components for an electrical short. Document 100000652 applies that code to SENSEI and non-SENSEI, and it describes the short this way. The heading in that section is 'Immediate code 12 or 19 (No flame visible in burner box).' If code 19 appears immediately after water flow begins, there is an electrical short in one of the water heater's components. The short could be in a wiring harness, the water flow control, the bypass valve, or any other component in the DC circuit. The way the manual tracks it down is to unplug one component at a time and try to cycle the water heater. If you unplug a component and the water heater then cycles three times, the short is in that device. Three cycles after the unplug is the test result that names the part. A heater that still shows 19 with that part unplugged is not the proof the manual describes. Code 12 on the existing N-series page is no flame, and its owner steps are the gas supply and the flame rod. Code 19 in this troubleshooting document is the immediate short with no flame in the burner box, found by unplugging DC components one at a time. Do not treat code 19 as a gas-valve problem. This section does not mention gas pressure, a flame rod, or a vent. The applies-to line names both SENSEI and non-SENSEI. The test is the same on both: one unplugged component, then three successful cycles, means the short is in the part you just unplugged. A heater that still shows 19 with every part plugged in has not isolated anything.",
+  "causes": [
+    "Electrical short in a wiring harness",
+    "Electrical short in the water flow control",
+    "Electrical short in the bypass valve",
+    "Electrical short in another component on the DC circuit"
+  ],
+  "diySteps": [
+    "If code 19 appears the moment a faucet opens, and you cannot see flame, stop cycling the faucet",
+    "Do not unplug harnesses inside the cabinet. The one-at-a-time unplug test is for a qualified technician",
+    "Technician: unplug one DC component at a time and cycle the heater. The component that lets the heater complete three cycles is the shorted device"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 19 here is an immediate short, not a failed ignition trial. The manual's isolation test is inside a live appliance: unplug one part, cycle, and count to three cycles. Call a qualified technician. Code 12's gas-supply checks are a different code."
+}

@@ -415,6 +415,126 @@ export const CODE_NOTES: Record<string, string> = {
 
   'ac/lg/ch07':
 `LG CH07 means heating and cooling are selected at the same time on a 2-in-1 or a multi-room system. Set every indoor unit to heating, or to cooling or dehumidification. Cooling with dehumidification is allowed. Air Purification and Fan are allowed with either family. It is not CH04.`,
+
+  'furnaces/weil-mclain/ignition-fault':
+`Weil-McLain Ultra ignition fault is five tries with no flame, then a one-hour automatic reset. The fault row's cable figure is 1,000 ohms plus or minus 50. The annual startup in the same manual says 900 to 1,000 ohms for a good cable. The spark gap on this row is 3.5 mm. Flame fault is flame when there should be none, and it does not use the one-hour reset.`,
+
+  'furnaces/weil-mclain/flame-fault':
+`Weil-McLain flame fault is flame detected when there should be no flame, cleared only from the manual reset screen. If flame continues after shutdown, the row says to replace the gas valve and the venturi. Figure 119's shutdown flame-signal values, and the rule of staying at least 20 above them, are the maintenance check in the same manual. Ignition fault is five misses and no flame.`,
+
+  'furnaces/weil-mclain/flue-temp-too-high':
+`Weil-McLain flue temp too high is the flue sensor above 216°F. It can reset itself after 2.5 minutes below 216°F. Above 225°F it needs a manual reset. The maintenance comparison, flue no more than 54°F above return water at high fire, is a different number. Supply 58F > return is outlet water versus inlet water.`,
+
+  'furnaces/weil-mclain/temp-rise-too-quickly':
+`Weil-McLain temp rise too quickly is supply water climbing faster than 2°F per second in the first two minutes of burner operation. Five automatic resets in the same Priority demand force a manual reset. The Ultra 80 and 105 line on this row includes a Taco 007 as well as a 007e ECM. The supply-58 row does not name the 007.`,
+
+  'furnaces/weil-mclain/supply-58f-gt-return':
+`Weil-McLain supply 58F > return is boiler outlet more than 58°F above boiler inlet while the burner is on, with a 30 second automatic reset. It does not count five resets. The Ultra 80 and 105 circulator on this row is the Taco 007e ECM only. Temp rise too quickly is a rate, 2°F per second, not a 58°F gap.`,
+
+  'furnaces/weil-mclain/return-gt-supply':
+`Weil-McLain return > supply is return water at least 10°F hotter than supply. System sensors must hold that difference for 10 minutes. The row does not put that wait on the boiler sensors, and it names no pipe size and no Taco model. It clears when the gap is gone. Supply 58F > return is the other direction.`,
+
+  'furnaces/weil-mclain/temperature-sensor':
+`Weil-McLain temperature sensor is two rows with the same words. SHORT or OPEN uses Diagnostics, Temperatures, and Figure 123. Unused outdoor, system supply, and system return sensors show OPEN, and that is normal. The other row is the pair spread by more than 10°F. Flue temp too high tells you to start with this short-or-open check, then adds 216°F.`,
+
+  'furnaces/weil-mclain/low-wtr-cutoff-open':
+`Weil-McLain low WTR cutoff open is the cutoff contacts open for more than 1 second. It needs a manual reset of the U-Control and sometimes of the cutoff itself. Read it on Diagnostics, Inputs. Limit open is the external limit on orange connector P13, not this input.`,
+
+  'furnaces/weil-mclain/limit-open':
+`Weil-McLain limit open is an external manual or automatic limit. The automatic one resets 2.5 minutes after the device closes. The manual one waits for Reset Lockout. P13 pins 1 and 2 are the manual-reset pair. Pins 3 and 4 are the automatic pair. Jump the pair you are not using. High temp limit does not use P13.`,
+
+  'furnaces/weil-mclain/high-temp-limit':
+`Weil-McLain high temp limit is a boiler temperature sensor at the high-limit setting, and that setting is no higher than 200°F. It is a manual reset. Priority circulator outputs and the pipe sizes are on this row. Flue temp too high is 216°F at the flue sensor. Temp rise too quickly can trip in the first two minutes without reaching 200°F.`,
+
+  'furnaces/weil-mclain/blower-fault':
+`Weil-McLain blower fault is a blower that cannot reach speed, or that does not fall to 0 RPM when off. Standby speed must read 0 on Diagnostics, Inputs, or the blower is replaced. 120 Vac at the blower with no start also replaces the blower. No 120 Vac at the U-Control replaces the U-Control. The one-hour reset is this row. Figure 121's RPM bands are the manual-test procedure, not this fault text.`,
+
+  'furnaces/weil-mclain/gas-valve-fault':
+`Weil-McLain gas valve fault is the U-Control's gas-valve output circuit. It retries, then again after one hour, then it wants a manual reset. The row says to check the harness and, if the lockout returns, replace the U-Control. It does not say to replace the gas valve. Flame fault is the row that replaces the gas valve and venturi, and only if flame continues after shutdown. The resistance sentence in the table is unfinished, so this page states no ohm value.`,
+
+  'furnaces/weil-mclain/air-pressure-sw-fault':
+`Weil-McLain air pressure SW fault on a residential Ultra is an open air-pressure input on a boiler that uses a jumper between P7 pins 4 and 5, plus a boiler-size check against the rating label. Gas pressure SW fault, HW fault expansion brd, GV fault expansion brd, and exp board com fault are the same size check without that jumper. They are not separate pages.`,
+
+  'furnaces/weil-mclain/no-display-blower-full':
+`A blank Ultra display with the blower at full speed means the control is not receiving 24V. The fuse on this row is the 3-amp low-voltage fuse. Replace the transformer only when it has 120 VAC in and no 24 VAC out. The blank display with nothing else running is the 12-amp, 120V row.`,
+
+  'furnaces/weil-mclain/no-display-no-power':
+`A blank Ultra display with no other component running means no 120V. The fuse on this row is 12 amps. The power switch behind the control pod is part of this row. A blower that is already running at full speed is the 24V, 3-amp row instead.`,
+
+  'furnaces/weil-mclain/no-display-boiler-running':
+`A blank Ultra display while the boiler still runs is lost communication at plug P9, and the row ends at a new display module. DISPLAY COMM is the named code for communications out for 30 seconds, and it resets itself when the link returns. It names the molex, not a new display. Neither row is a missing 24V or 120V supply.`,
+
+  'furnaces/bosch/ea':
+`Bosch Greenstar EA is no flame, and the safety time expired. The list includes the gas cock, inlet gas pressure, the gas/air ratio, the fan-inlet diaphragm, and the code plug. F7 is flame with the burner off and does not use those items. The gas valve is printed twice on the EA row.`,
+
+  'furnaces/bosch/e9':
+`Bosch Greenstar E9 is the heat exchanger safety high limit or the flue gas temperature limiter. The pump item is the capacitor. The fuse is 6.3 A to the IEC default. The DHW side of the heat exchanger is on this row. The letterless temperature-rise row uses pump speed and the service valves, not this fuse.`,
+
+  'furnaces/bosch/d3':
+`Bosch Greenstar d3 is a defective temperature high limit, a tripped external guard, or a locked-out temperature limiter. TB1 and the jumper across 8-9 or PR-P0 are this row. E9 does not use that jumper. CC, which is not a separate page, is the outdoor sensor on terminals A and F.`,
+
+  'furnaces/bosch/f7':
+`Bosch Greenstar F7 is flame detected while the burner is off. The list is electrodes, the flue, and moisture on the PCB. FA is flame after the gas is switched off, and FA adds the gas valve and the condensate trap. F7 does not. F0's 3-second reset is not this code.`,
+
+  'furnaces/bosch/fa':
+`Bosch Greenstar FA is flame detected after the gas is switched off. The first action is the gas valve. Then the condensate trap, the electrodes and leads, and the flue. F7's moisture-on-the-PCB step is not on FA. Fd is a reset button pressed by mistake.`,
+
+  'furnaces/bosch/temperature-rise-too-fast':
+`Bosch Greenstar temperature rise too fast has no letter. It is the temperature gradient limiter. Open the service valves, check the heating-zone pump connection to the Heatronic, the plug, a manual pump test, and pump speed. The manual states no degrees-per-second figure. E9 is the letter code for a tripped high limit.`,
+
+  'water-heaters/rinnai/15':
+`Rinnai 15 in document 100000652 is SENSEI venturi control at connector D. Red pin 12 to black pin 30 is 12 to 14 VDC. The two ohm pairs are 35 to 41 ohms. Code 17 is a blocked venturi and uses the t, F, S, E, ECL button reset. Code 15 resets by cycling main power.`,
+
+  'water-heaters/rinnai/17':
+`Rinnai 17 is venturi blockage: condensate drain, the vent, then debris in the venturi after it is removed from the fan. The reset is button B through t, F, S, and E, then A and B for 10 seconds until ECL. E is only for code 17 or 52. Code 15 does not use those buttons.`,
+
+  'water-heaters/rinnai/19':
+`Rinnai 19 is an electrical short that shows up immediately when water flows, with no flame in the burner box. Unplug one DC component at a time. Three cycles after that unplug means the short is in that part. It applies to SENSEI and non-SENSEI. Code 12 is no flame and starts with the gas supply.`,
+
+  'water-heaters/rinnai/32':
+`Rinnai 32 is the outgoing water thermistor. Drain the heater, clean scale, and use the O-ring. At 86°F the band in this document is 6.4 to 7.7k ohms. Code 33, the heat exchanger thermistor, repeats these steps and is not its own page. Code 38 is the exhaust sensor and adds the manometer and the fins.`,
+
+  'water-heaters/rinnai/38':
+`Rinnai 38 is the exhaust gas temperature sensor, reinstalled in the exhaust port, not in the water with an O-ring. If the resistance is already good, the procedure continues to gas type, conversion, clearances, forced low and high manifold pressure, and the copper fins. Replacement of the sensor is the last step.`,
+
+  'water-heaters/rinnai/41':
+`Rinnai 41 is the freeze-protection sensor. A KB heater will not fire. A VC heater will fire and flash 41 against the set point. An open outside-air thermistor on an outdoor model also lets the heater keep running. The sensor has to see outside air. Code 32 is the outgoing water thermistor and does not use this keep-running rule.`,
+
+  'water-heaters/rinnai/52':
+`Rinnai 52 is the gas valve. On the SENSEI block, connector D pins 27 and 29 are 18 to 22 ohms or 11 to 13 VDC, then the valve and venturi are replaced and the t, F, S, E, ECL reset is run. The POV block measures the coil against the tech data sheet and ends at a new PC board. Code 71 adds the DIP switch and the moisture tube.`,
+
+  'water-heaters/rinnai/54':
+`Rinnai 54 cuts firing rate when exhaust exceeds 163°F and shuts down if that lasts 120 seconds. The scale flush in this section is four gallons of vinegar. Burner gasket 101 must not be reused. Inlet water "too high" has no degree number on this 2019 page. Code 14 is a different overheat code.`,
+
+  'water-heaters/rinnai/70':
+`Rinnai 70 is the PC board fault. Check parameters and the harnesses at the board, then replace the board. The data-transfer cable sentence on code 70's SENSEI line is explicit. Code 21 is a transfer that was never finished after a board was already replaced. Code 72 replaces a board only after the flame-rod test.`,
+
+  'water-heaters/rinnai/71':
+`Rinnai 71 is the solenoid valve circuit. The single DIP switch must be OFF. Pins 27 and 29 match code 52's 18 to 22 ohms or 11 to 13 VDC, and this code adds a grounded-circuit check. The SV0 through SV4 block looks for moisture in the plastic tube to the gas valve and for a solenoid with no resistance. Code 52 does not mention that tube.`,
+
+  'water-heaters/rinnai/72':
+`Rinnai 72 is the flame rod. It has to touch the flame, and the output has to hold at least 1 microamp. Carbon means a new rod and gasket. A leaking heat exchanger is on this list. The 1 microamp figure is not on code 52 or code 71. SENSEI board replacement still needs the data transfer.`,
+
+  'water-heaters/rinnai/79':
+`Rinnai 79 in document 100000652 is the non-SENSEI leak detector. Dry a wet bottom pan and the sensor. If the cabinet is already dry and the heater runs with the sensor unplugged, replace the sensor and the screw. Code 19's three-cycle unplug test is a different short. The N-series section 5.6 chart does not list 79.`,
+
+  'water-heaters/rinnai/lc':
+`Rinnai LC on non-SENSEI heaters is scale. Older units keep running, beep, and alternate LC with the set temperature. Newer units lock out. Five presses of on/off buy 70 hours. This page does not add "within five seconds." That timing belongs to SENSEI code SS. The hard reset is A and B together for five seconds, and it is not the t, F, S, E sequence.`,
+
+  'water-heaters/noritz/11':
+`Noritz 11 in owner's guide SBB81M1 is ignition failure. Open the gas valve, then close and open the hot fixture, or cycle the POWER button. If the blinking number stays away, the guide says it is solved. Code 90 adds the vents and the condensate line. Code 91 is the conversion, and it does not use this faucet cycle.`,
+
+  'water-heaters/noritz/90':
+`Noritz 90, 901, and 902 are one row: indoor air-supply vent, exhaust vent, low gas supply pressure for a professional, and a condensate line that is clogged or frozen. Steam on a cold day is normal and is not this code. Code 11 does not use these vent checks. A missing propane conversion sticker is the odor note, which belongs with code 91.`,
+
+  'water-heaters/noritz/91':
+`Noritz 91 means gas conversion was not done correctly. The only chart action is to contact the installer. Factory gas is natural. Propane needs the supplied kit, a new orifice, a sticker, a manometer, and a gas analyzer. The work is charged even in warranty. Do not run a propane unit that has no sticker.`,
+
+  'water-heaters/noritz/06':
+`Noritz 06, 061, and 062 are recirculation abnormality, and the chart marks them NRCR only. Check the return line filter and the crossover valve's filter. EZ models in the same guide are not this row. C1# is the descaling reminder. Turning recirculation off is not the listed repair.`,
+
+  'water-heaters/noritz/c1':
+`Noritz C1# is the descaling reminder, with the last digit from 1 to 9. It is not a lockout. The chart says scale can cause premature heat exchanger failure, and dust or lint in the fan and intake can affect combustion. The action is to call 1-866-766-7489 for the maintenance procedure. It does not state a vinegar quantity.`,
 };
 
 export function codeNote(key: string): string | undefined {

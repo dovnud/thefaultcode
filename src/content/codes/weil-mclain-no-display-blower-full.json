@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "No display, blower full speed",
+  "codeSlug": "no-display-blower-full",
+  "displayPattern": "Nothing shown on the U-Control display of an Ultra Series 4, with the blower running at full speed. Manual 550-100-440/1025, Figure 125.",
+  "meaning": "The display is blank and the blower is running at full speed. Figure 125's first row is 'Nothing shown on display screen and blower running at full speed.' The condition is that the control is not receiving 24V power. Check the wiring for a short circuit or incorrect wiring, and correct it per the wiring diagram, including the transformer connection to the U-Control. Check the 3-amp low voltage fuse on the U-Control, shown on page 116. Replace it with the proper part from the replacement-part section. If the fuse blows again, recheck the wiring against the diagram. Check the transformer connection to the U-Control per the wiring diagram, and check for 24V output of the transformer. Replace the transformer if it is receiving 120 VAC but not outputting 24 VAC. This is not the blank display where nothing else runs. That row is loss of 120V, a 12-amp fuse, and the power switch behind the control pod. This is not a blank display while the boiler still operates. That row is lost communication from the U-Control to the display, at plug P9. A blower at full speed with a dark screen means the line-voltage blower can still run while the 24V supply to the control is missing. Replacing the display will not restore 24V. The 3-amp fuse is the low-voltage fuse, drawn on page 116. The 12-amp fuse is the other blank-screen row, the one where no components operate. The transformer test is specific: 120 VAC in, and no 24 VAC out, means replace the transformer. If the transformer is not receiving 120 VAC, this row's wiring check comes first, because the condition stated at the top is that the control is not receiving 24V.",
+  "causes": [
+    "Control not receiving 24V",
+    "Short circuit or incorrect wiring, including the transformer connection to the U-Control",
+    "Open 3-amp low-voltage fuse on the U-Control",
+    "Transformer receiving 120 VAC and not outputting 24 VAC"
+  ],
+  "diySteps": [
+    "Leave the blower alone if it is running with a dark screen. Do not pull the 3-amp fuse with the boiler powered",
+    "Check the service switch only enough to know whether the boiler has power. A running blower already says line voltage is present",
+    "Technician: correct the wiring per the diagram, test and replace the 3-amp fuse with the listed part, and replace the transformer only if 120 VAC is present and 24 VAC is not"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A dark screen plus a blower at full speed is a 24V problem, not a failed display and not a lost 120V supply. The fuse value on this row is 3 amps. The blank-and-dead row uses a 12-amp fuse. Call a qualified heating technician and tell them the blower is running."
+}

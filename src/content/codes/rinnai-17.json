@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "17",
+  "codeSlug": "17",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The venturi is blocked, or the vent and condensate path are. Document 100000652 puts code 17 on the venturi-blockage steps. The N-series chart uses that same name and says to follow code 10 first, then make sure the venturi is not blocked, then call Rinnai technical. The steps below are the longer 100000652 procedure. Verify the condensate drain line is draining. Inspect the entire vent system, the intake air, the exhaust chamber, and the vent termination for obstructions. Inspect the venturi for blockage or debris. Remove the gas valve and venturi assembly from the fan motor and inspect the area the manual illustrates. Clean debris from the venturi assembly, reinstall it, and run the reset below. Start with the controller off, so the display is blank. Press button B for 1 second until the display shows t. Press B again for 1 second until F. Press B again for 1 second until S. Press B again for 1 second until E. The manual says the E step is only if code 17 or code 52 is occurring. Then press buttons A and B together for 10 seconds until the display shows ECL, which means the reset is complete. The applies-to line on this reset block in the 2019 document is SENSEI. The obstruction and venturi-cleaning steps sit in the same code 17 section. Code 15 is the electrical test of the venturi control at connector D. It does not ask you to pull the venturi off the fan and clean debris, and it does not use buttons A and B. Code 52, gas valve, is the other code allowed to use the E step in that same button sequence. Code 17 is the blockage code. Code 52 is the valve code.",
+  "causes": [
+    "Condensate drain line not draining",
+    "Obstruction in the vent system, intake air, exhaust chamber, or termination",
+    "Debris in the venturi, found after the gas valve and venturi assembly are removed from the fan"
+  ],
+  "diySteps": [
+    "Look at the outdoor termination and the condensate drain for an obvious blockage or a frozen line. Do not take the venturi out",
+    "If code 17 remains, the cleaning and the button sequence are for a qualified technician",
+    "Technician: remove the gas valve and venturi from the fan, clean the debris, reinstall, and run button B through t, F, S, and E, then A and B for 10 seconds until ECL"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Opening the gas valve and venturi assembly is not a homeowner step. The reset that finishes the job is specific: t, F, S, E, then A and B held 10 seconds to ECL, and E is only for code 17 or code 52. Call a qualified technician if the drain and the outdoor termination are already clear."
+}

@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "71",
+  "codeSlug": "71",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "A gas solenoid circuit fault, with a DIP switch that can create it and a second block that names SV0 through SV4. The N-series chart names code 71 Solenoid Valve Circuit: DIP switch off, gas control wire intact, heater circuit not grounded, then replace the PC board. Document 100000652, for SENSEI and non-SENSEI, starts there. Turn off electrical, gas, and water before the checks. The single DIP switch on the PC board must be in the OFF position. Check the gas solenoid harnesses back to the PC board. At connector D, black pin 27 and yellow pin 29 should be 18 to 22 ohms or 11 to 13 VDC. Make sure the heater circuit is not grounded. Replace the gas valve. Replace the PC board. Afterward, transfer data with the cable that comes with the new board, or program every parameter from the instructions in the box. The 2019 text puts that transfer sentence on this code without limiting it to SENSEI in the sentence itself. Code 70's transfer sentence is explicitly SENSEI only. Do not collapse the two. The following block is still code 71. It is titled SV0, SV1, SV2 or SV3 Solenoid Valve Fault, and step 5 says 'if you are still getting a code 71.' Check harnesses to SV0, SV1, SV2, SV3, and SV4. On internal water heaters, check the plastic tubing from the bottom of the combustion box back to the gas valve for moisture. If there is moisture in that tube, replace the gas valve. Then find the water. Remove the burner manifold and burner. A leaking heat exchanger means replace the exchanger and anything the leak damaged. Condensation running back from the vent means add a condensate drain at the top of the heater so it stops. Check voltage to SV0 and SV1 while the heater is trying to fire. If voltage is present and the code remains, continue. Measure SV0, SV1, SV2, SV3, and SV4. If any solenoid is open, meaning no resistance, replace the gas valve and the burner manifold with the new solenoids. The resistance values that count as good are in the technical data sheet under the front cover, not printed in this paragraph. Good resistance can still hide a mechanical obstruction inside the valve. If code 71 remains, replace the gas control valve for that reason. Then replace the PC board. Code 52's SENSEI measurement uses the same pin 27 and pin 29 numbers. Code 52 does not mention the single DIP switch, the grounded heater circuit, or moisture in the plastic tube. Code 71 does.",
+  "causes": [
+    "Single DIP switch on the PC board not in the OFF position",
+    "Gas solenoid harness loose, broken, or damaged",
+    "Connector D pins 27 and 29 outside 18 to 22 ohms or 11 to 13 VDC",
+    "Heater circuit grounded",
+    "Moisture in the plastic tube from the combustion box to the gas valve",
+    "A leaking heat exchanger, or vent condensate running back into the heater",
+    "SV0, SV1, SV2, SV3, or SV4 open, with no resistance",
+    "Gas valve mechanically obstructed even though resistance is good"
+  ],
+  "diySteps": [
+    "Do not flip DIP switches. The manual's instruction is that the single DIP switch belongs OFF, and a technician confirms that",
+    "If you see water under an indoor heater, shut off the water and the power and call. Do not open the combustion box",
+    "Technician: confirm the DIP switch, measure pins 27 and 29, check that the circuit is not grounded, replace the gas valve if required, then follow the SV0 through SV4 block including the moisture tube"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 71 can be a switch left in the wrong position, a grounded circuit, or water in the tube that runs to the gas valve. Those are three different repairs, and the manual puts all of them on this code. Call a qualified technician. The ohm values for the individual SV coils are on the tech data sheet, not in the paragraph."
+}

@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Limit open",
+  "codeSlug": "limit-open",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "An external limit opened. LIMIT OPEN occurs when a manual or automatic reset limit opens. An automatic external limit resets 2.5 minutes after that external limit device closes. A manual limit fault must be reset by choosing Reset Lockout on the display. Ask whether an external safety device is connected. If it is, troubleshoot that external limit and find what opened it. Also check for loose wiring. Remove the top front cover and inspect the orange 4-pin connector P13. A jumper must be installed between pins 1 and 2 if the boiler is not using a manual reset external limit. A jumper must be installed between pins 3 and 4 if the boiler is not using an automatic reset external limit. A missing jumper on a boiler that has no external limit will look like a tripped limit. LOW WTR CUTOFF OPEN is not this connector. High temp limit is the boiler's own high-limit setting, not an external device on P13. The 2.5 minute wait applies only to the automatic external limit, and only after that device has closed again. It is not a 2.5 minute timer from the moment the display appears. A manual limit does not get that wait. It stays until someone chooses Reset Lockout. The connector is orange and has 4 pins. Pins 1 and 2 are the manual-reset external limit pair. Pins 3 and 4 are the automatic-reset pair. A boiler with no external limits needs both jumpers. A boiler with only one kind of external limit needs the jumper on the pair that is not used. HIGH TEMP LIMIT is the boiler sensor reaching a setting no higher than 200°F, and it does not mention P13.",
+  "causes": [
+    "A manual-reset or automatic-reset external limit is open",
+    "Loose wiring at that external limit",
+    "Missing jumper between P13 pins 1 and 2 when no manual reset external limit is used",
+    "Missing jumper between P13 pins 3 and 4 when no automatic reset external limit is used"
+  ],
+  "diySteps": [
+    "If an external safety device is installed, do not jumper it to restore heat. Find why it opened",
+    "Choosing Reset Lockout clears a manual limit fault on the display. It does not close the external device",
+    "Technician: identify the external limit, repair what opened it, check the wiring, and confirm the P13 jumpers match whether each kind of external limit is actually used"
+  ],
+  "proNeeded": true,
+  "proAdvice": "P13 is inside the boiler, under the top front cover, and the jumpers are there so a boiler without an external limit does not sit in LIMIT OPEN. Do not add or remove those jumpers unless you are the qualified technician and you know which external limits are installed. Call if the limit opens again after it is reset."
+}

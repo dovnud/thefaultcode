@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Noritz",
+  "brandSlug": "noritz",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://noritz.com/assets/nrcr_ownersguide.pdf",
+  "sourceTitle": "Noritz condensing tankless gas water heater owner's guide SBB81M1 Rev. 10/25 (EZ111DV, EZ98DV, EZ71DV, NRCR111DV, NRCR92DV)",
+  "safetyNote": "The owner's guide says: if you smell gas, do not try to light any appliance, do not touch any electrical switch, and do not use any phone in the building. Call the gas supplier from a neighbor's phone. If you cannot reach the gas supplier, call the fire department. Installation and service must be performed by a qualified installer, service agency, or the gas supplier. The error list says to contact Noritz America Technical Support at 1-866-766-7489 when the code returns or when a code appears that is not on the owner chart.",
+  "code": "C1#",
+  "codeSlug": "c1",
+  "displayPattern": "Operation panel or remote controller on a Noritz condensing tankless covered by owner's guide SBB81M1 Rev. 10/25: EZ111DV (GQ-C3261WX-FF-1 US), EZ98DV (GQ-C2861WX-FF-1 US), EZ71DV (GQ-C2661WX-FF-1 US), NRCR111DV (GQ-C3261WXQ-FF-1 US), and NRCR92DV (GQ-C2661WXQ-FF-1 US). A failure blinks on the operation panel and on the remote.",
+  "meaning": "The heater is asking for descaling. It is a reminder, not a lockout. The owner chart lists error code C1#, where # is 1 through 9, so the display can read C11 through C19. The cause is a descaling reminder, a notice for periodic maintenance. The heater has an automatic descaling reminder. Excessive scale build-up may cause premature failure of the heat exchanger. Excessive dust or lint build-up in the fan and air intake may affect efficiency and combustion performance. The action is to contact Noritz America for the recommended maintenance procedures, at 1-866-766-7489. The chart does not say to pour vinegar through the heater, and it does not give a gallon amount. A Rinnai code 54 page on this site does name four gallons of vinegar. That number is Rinnai's. It is not in this Noritz row. The follow-up section says Noritz will stock repair and maintenance parts for this model for 10 years, and for 12 years for the heat exchanger, after production of the model has ended. That parts window is why the reminder exists in a guide that also tells you scale can destroy the heat exchanger early. Code 90 is a blinking fault for the vent, combustion, gas pressure, or the condensate drain. It is not a maintenance notice. Code 06 is recirculation on NRCR models, and it names two filters. C1# does not. When you call, the follow-up section asks for the model, serial number, gas type, date of purchase, and the blinking code in as much detail as possible. The rating plate or Heater Info has the model and the gas type. A service request may be rejected if the heater is installed where working on it may be dangerous. The guide then says to contact a plumber.",
+  "causes": [
+    "Automatic descaling reminder, shown as C1# with the last digit from 1 to 9",
+    "Scale that the guide warns can cause premature heat exchanger failure",
+    "Dust or lint in the fan and air intake that the guide warns can affect efficiency and combustion"
+  ],
+  "diySteps": [
+    "Read the last digit. C11 through C19 are the same reminder in this chart",
+    "Do not ignore it until the heater stops. The row says excessive scale may cause premature heat exchanger failure",
+    "Call Noritz America at 1-866-766-7489 and ask for the recommended maintenance procedure for this model",
+    "Have the model, serial, gas type, purchase date, and the exact blinking code ready"
+  ],
+  "proNeeded": true,
+  "proAdvice": "C1# is a maintenance notice. The chart's action is a phone call for the procedure, not a reset and not a home flush recipe. The heat exchanger parts window in this guide is 12 years after production ends, and the rest of the parts window is 10 years. Call Noritz Technical Support. Hot-water service can continue while you schedule the maintenance, which is how a reminder differs from code 11 or code 90."
+}

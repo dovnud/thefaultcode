@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Noritz",
+  "brandSlug": "noritz",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://noritz.com/assets/nrcr_ownersguide.pdf",
+  "sourceTitle": "Noritz condensing tankless gas water heater owner's guide SBB81M1 Rev. 10/25 (EZ111DV, EZ98DV, EZ71DV, NRCR111DV, NRCR92DV)",
+  "safetyNote": "The owner's guide says: if you smell gas, do not try to light any appliance, do not touch any electrical switch, and do not use any phone in the building. Call the gas supplier from a neighbor's phone. If you cannot reach the gas supplier, call the fire department. Installation and service must be performed by a qualified installer, service agency, or the gas supplier. The error list says to contact Noritz America Technical Support at 1-866-766-7489 when the code returns or when a code appears that is not on the owner chart.",
+  "code": "90",
+  "codeSlug": "90",
+  "displayPattern": "Operation panel or remote controller on a Noritz condensing tankless covered by owner's guide SBB81M1 Rev. 10/25: EZ111DV (GQ-C3261WX-FF-1 US), EZ98DV (GQ-C2861WX-FF-1 US), EZ71DV (GQ-C2661WX-FF-1 US), NRCR111DV (GQ-C3261WXQ-FF-1 US), and NRCR92DV (GQ-C2661WXQ-FF-1 US). A failure blinks on the operation panel and on the remote.",
+  "meaning": "Combustion air, the exhaust, gas pressure, or the condensate drain stopped a clean burn. The owner's guide puts codes 90, 901, and 902 on one row, with four causes and four actions. They are not four different failures with four different pages. When combustion air is supplied from indoors, the air supply vent may be clogged. Check that vent for blockage or obstruction. The guide points this check at its vent section. The exhaust vent may be clogged. Check the exhaust vent for blockage or obstruction. Abnormal combustion or low gas supply pressure is the third cause. Have a professional check the gas supply pressure. That action is not an owner measurement. The condensate drain line may be clogged. Check whether it is clogged or frozen. If the display continues, contact the nearest Noritz agent. Code 11 is ignition failure, and its only owner action is the gas valve plus a faucet or power cycle. Code 90 does not use that faucet cycle as its action. Code 91 is an incorrect gas conversion, which can also make combustion abnormal, but the guide gives 91 its own row: contact the installer. The troubleshooting notes above the error list are not labeled as code 90, and this page does not turn them into causes. One of them does belong next to the combustion causes: if exhaust gas has an odor and burns your eyes, gas conversion may not have been performed correctly. When the gas is propane, look for the gas conversion sticker. If the sticker is not attached, do not use the unit, and contact the installer. That sticker check is the guide's odor note. It is the same subject as code 91, not a fifth cause printed on the 90 row. White smoke from the exhaust on a cold day is steam, and the guide says that is normal. Do not treat steam as code 90. If the display continues after the vent and the condensate line are clear, the row already says to contact a Noritz agent, and the follow-up section gives Technical Support at 1-866-766-7489.",
+  "causes": [
+    "Indoor combustion-air supply vent clogged",
+    "Exhaust vent clogged",
+    "Abnormal combustion or low gas supply pressure",
+    "Condensate drain line clogged or frozen"
+  ],
+  "diySteps": [
+    "Check the air supply vent and the exhaust vent for a blockage or obstruction you can see without dismantling the vent",
+    "Check whether the condensate drain line is clogged or frozen. The chart stops at that check. It does not describe a thawing method",
+    "Do not measure gas pressure. The guide says a professional checks gas supply pressure",
+    "If you are on propane and the exhaust odor burns your eyes, look for the conversion sticker. If it is missing, do not use the heater, and contact the installer. That check is the guide's odor note, which sits next to code 91",
+    "If 90, 901, or 902 remains, contact the nearest Noritz agent or Technical Support at 1-866-766-7489"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Codes 90, 901, and 902 share this row. The owner checks are the air vent, the exhaust vent, and a condensate line that is clogged or frozen. Gas supply pressure is the line the guide assigns to a professional. Call if the display continues after the vents and the drain are clear."
+}

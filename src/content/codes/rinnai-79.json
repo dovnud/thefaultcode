@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [],
+  "code": "79",
+  "codeSlug": "79",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "A leak detector inside a non-SENSEI heater has tripped. Document 100000652 applies code 79 to non-SENSEI series. The steps are the leak detector, not a thermistor and not a flame rod. The N-series with-pump section 5.6 used for the other Rinnai pages on this site does not list code 79. This page stays with 100000652. Check the wiring harness at the leak detector for loose, broken, or damaged wiring. Check the heat exchanger and all piping inside the water heater for leaks. If no leaks are found, inspect the cabinet for water pooled on the bottom pan. Wipe or blow out any water. Dry the leak sensor and restart the heater. If no water is found in the cabinet, unplug the sensor and fire the heater. If the heater operates with the sensor unplugged, replace the sensor and the screw. That unplug test is the opposite of a normal safety test. The manual uses it only after the pan is dry and no leak was found, to decide whether the sensor itself is the fault. It is not code 19. Code 19 is an immediate electrical short as soon as water flows, with no flame, isolated by unplugging components until the heater completes three cycles. It is not scale code LC. LC alternates with the set temperature and beeps, or locks out on newer heaters, because of scale in the heat exchanger. Code 79 is water where the leak detector can see it.",
+  "causes": [
+    "Leak-detector harness loose, broken, or damaged",
+    "Heat exchanger or internal piping leaking",
+    "Water pooled on the bottom pan, with a wet leak sensor",
+    "Leak sensor that still stops the heater when the cabinet is dry, proven by the heater running with the sensor unplugged"
+  ],
+  "diySteps": [
+    "If you can see water coming from the heater or under it, shut off the cold-water valve and the power, and call. Do not unplug the sensor",
+    "Drying the pan and unplugging the sensor are inside the cabinet. Leave them to a qualified technician",
+    "Technician: check the harness, find any leak at the exchanger or the internal pipes, dry the pan and the sensor, and replace the sensor and screw only if the dry cabinet runs with the sensor unplugged"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 79 in this 2019 document is a non-SENSEI leak-detector fault. A wet sensor is dried and the heater is restarted. A dry cabinet that only runs with the sensor unplugged gets a new sensor and screw. Call a qualified technician. Do not leave the sensor unplugged as a repair."
+}

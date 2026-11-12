@@ -1,5 +1,65 @@
 # Publish log
 
+## 2026-11-12
+
+### Heating-season boiler, tankless, and Noritz codes
+
+40 new pages. Meanings, causes, and checks are taken from the manufacturer document named on each page, read 2026-11-12. Sitemap lastmod, llms.txt, llms-full.txt, and the dataset are generated from content. New pages use `updated` 2026-11-12. Older pages were not redated. Amazon tag unchanged. No new ASINs. `amazonMax` is 0 and parts arrays are empty on every new page.
+
+Folded into the hub instead of a thin page: Bosch Greenstar A7, E2, E3, and CC (the table only says to check the sensor and its leads; A7, E2, and E3 share NTC table 42, and CC uses outdoor table 40 on terminals A and F). Rinnai code 33 (heat exchanger thermistor; document 100000652 repeats the code 32 resistance checks). Weil-McLain residential Ultra rows GAS PRESSURE SW FAULT, HW FAULT EXPANSION BRD, GV FAULT EXPANSION BRD, and EXP BOARD COM FAULT (each one tells the technician to check the boiler size selected in the U-Control; they are described on the air-pressure switch page, which is the row that also names the P7 pins 4 and 5 jumper).
+
+Weil-McLain Ultra Series 4 boiler manual 550-100-440/1025, Figure 125, with the user's manual 550-100-441/1025 for the red lockout screen:
+
+- Ignition fault — https://thefaultcode.com/weil-mclain/ignition-fault/
+- Flame fault — https://thefaultcode.com/weil-mclain/flame-fault/
+- Flue temp too high — https://thefaultcode.com/weil-mclain/flue-temp-too-high/
+- Temp rise too quickly — https://thefaultcode.com/weil-mclain/temp-rise-too-quickly/
+- Supply 58F > return — https://thefaultcode.com/weil-mclain/supply-58f-gt-return/
+- Return > supply — https://thefaultcode.com/weil-mclain/return-gt-supply/
+- Temperature sensor — https://thefaultcode.com/weil-mclain/temperature-sensor/
+- Low WTR cutoff open — https://thefaultcode.com/weil-mclain/low-wtr-cutoff-open/
+- Limit open — https://thefaultcode.com/weil-mclain/limit-open/
+- High temp limit — https://thefaultcode.com/weil-mclain/high-temp-limit/
+- Blower fault — https://thefaultcode.com/weil-mclain/blower-fault/
+- Gas valve fault — https://thefaultcode.com/weil-mclain/gas-valve-fault/
+- Air pressure SW fault — https://thefaultcode.com/weil-mclain/air-pressure-sw-fault/
+- No display, blower full speed — https://thefaultcode.com/weil-mclain/no-display-blower-full/
+- No display, boiler off — https://thefaultcode.com/weil-mclain/no-display-no-power/
+- No display, boiler running — https://thefaultcode.com/weil-mclain/no-display-boiler-running/
+
+Bosch Greenstar wall boiler installation instructions 6721853955 (2025/11), section 15:
+
+- EA — https://thefaultcode.com/bosch/ea/
+- E9 — https://thefaultcode.com/bosch/e9/
+- d3 — https://thefaultcode.com/bosch/d3/
+- F7 — https://thefaultcode.com/bosch/f7/
+- FA — https://thefaultcode.com/bosch/fa/
+- Temperature rise too fast — https://thefaultcode.com/bosch/temperature-rise-too-fast/
+
+Rinnai troubleshooting document 100000652 (4/2019). Short names for codes that also appear in N-series section 5.6 are cited from that manual. Not a rewrite of the codes already published from section 5.6 (10, 11, 12, 14, 16, 25, 61, SS):
+
+- 15 — https://thefaultcode.com/water-heaters/rinnai/15/
+- 17 — https://thefaultcode.com/water-heaters/rinnai/17/
+- 19 — https://thefaultcode.com/water-heaters/rinnai/19/
+- 32 — https://thefaultcode.com/water-heaters/rinnai/32/
+- 38 — https://thefaultcode.com/water-heaters/rinnai/38/
+- 41 — https://thefaultcode.com/water-heaters/rinnai/41/
+- 52 — https://thefaultcode.com/water-heaters/rinnai/52/
+- 54 — https://thefaultcode.com/water-heaters/rinnai/54/
+- 70 — https://thefaultcode.com/water-heaters/rinnai/70/
+- 71 — https://thefaultcode.com/water-heaters/rinnai/71/
+- 72 — https://thefaultcode.com/water-heaters/rinnai/72/
+- 79 — https://thefaultcode.com/water-heaters/rinnai/79/
+- LC — https://thefaultcode.com/water-heaters/rinnai/lc/
+
+Noritz owner's guide SBB81M1 Rev. 10/25 (EZ111DV, EZ98DV, EZ71DV, NRCR111DV, NRCR92DV):
+
+- 11 — https://thefaultcode.com/water-heaters/noritz/11/
+- 90 — https://thefaultcode.com/water-heaters/noritz/90/
+- 91 — https://thefaultcode.com/water-heaters/noritz/91/
+- 06 — https://thefaultcode.com/water-heaters/noritz/06/
+- C1# — https://thefaultcode.com/water-heaters/noritz/c1/
+
 ## 2026-11-11
 
 ### Heating-season furnace, tankless, and mini-split codes

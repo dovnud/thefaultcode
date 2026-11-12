@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "No display, boiler running",
+  "codeSlug": "no-display-boiler-running",
+  "displayPattern": "Nothing shown on the U-Control display of an Ultra Series 4 while the boiler is still operating. The named code DISPLAY COMM is the related 30-second loss of display communication. Manual 550-100-440/1025, Figure 125.",
+  "meaning": "The screen is blank, or it reports DISPLAY COMM, while the boiler can still run. Figure 125 has two communication rows, and they are not the power rows. 'Nothing is shown on display screen, but boiler is operating' occurs when communication is lost from the U-Control to the display. Check for loose connections and proper pin alignment on the U-Control plug P9 and on the back of the display circuit board. Check continuity on the wire harness from the display to the U-Control. The repair-parts section has the replacement part. Cycle power off and on with the boiler power switch and check for operation. Replace the display module if it still fails. The repair-parts section has the proper part. The row says to replace the display, not the U-Control. DISPLAY COMM occurs when display communications are out for 30 seconds. It automatically resets when communication is re-established. Check for a loose connection at the molex plug on the control and at the connection on the back of the display. The blank-and-running row names plug P9, a continuity check, a power cycle, and a new display module. DISPLAY COMM names a 30 second timeout, an automatic reset, and the molex at both ends. It does not say to replace the display module. Neither row is a 24V or 120V loss. If the blower is at full speed and the screen is dark, use the 3-amp fuse row. If nothing in the boiler is operating, use the 12-amp fuse row.",
+  "causes": [
+    "Communication lost from the U-Control to the display while the boiler still operates",
+    "Loose pins or poor alignment on plug P9 or on the back of the display board",
+    "Open harness between the display and the U-Control",
+    "DISPLAY COMM: communications out for 30 seconds",
+    "Loose molex on the control or on the back of the display"
+  ],
+  "diySteps": [
+    "If the boiler is heating and the screen is blank, do not shut off the gas. Cycle the boiler power switch once, as this row allows, and watch the display",
+    "If the words DISPLAY COMM appear, wait to see whether it clears on its own. The row says it resets when communication returns",
+    "Technician: reseat P9 and the display-board connector, check harness continuity, and replace the display module if the blank-while-running row remains. For DISPLAY COMM, reseat the molex at the control and at the display"
+  ],
+  "proNeeded": true,
+  "proAdvice": "One power cycle is the step the blank-while-running row gives before a new display module. Opening the pod to reseat P9 or the molex is technician work. Call a qualified heating technician if the screen stays blank while the boiler runs, or if DISPLAY COMM keeps returning after communication has already been restored once."
+}

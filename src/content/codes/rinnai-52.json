@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "52",
+  "codeSlug": "52",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The gas valve circuit failed, and on the non-SENSEI path the modulating solenoid is the part being measured. The N-series chart names code 52 Gas Valve: check the flame rod and wire, check the gas solenoid for an open or a short, replace the gas valve assembly, and call Rinnai technical. Document 100000652 splits the work. Disconnect power and gas first. On the SENSEI block: check the flame rod and its wiring for loose, broken, or damaged parts. Check the gas solenoid harness. At connector D, black wire pin 27 and yellow wire pin 29 should read 18 to 22 ohms, or 11 to 13 VDC. Reapply power and check voltage to the gas valve while the heater is trying to fire. Replace the gas valve and venturi assembly. If code 52 appears after that replacement, run the reset. Controller off and blank. Press button B for 1 second for t, again for F, again for S, again for E. E is only if code 17 or code 52 is occurring. Then press A and B for 10 seconds until ECL. If code 52 does not reset after that procedure, contact Rinnai technical support. The next block is titled Modulating Solenoid Valve Signal Abnormal (POV), and it still says code 52. Check the harness from the POV valve to the PC board. Unplug the POV valve and measure the coil. The proper resistance is in the tech data sheet on the back of the front panel, or in the service manual for that model. This page does not copy a number the 2019 text does not print. If the coil is open, replace the gas valve. If the resistance is in specification, go on. The manual notes that meters disagree, a weak battery changes the reading, the meter must be on the right ohms range, and the coil must be isolated from the heater's circuit and from power. Check voltage to the POV valve while the heater is trying to fire. If voltage is present and the code remains, continue. If code 52 is still there, replace the PC board. Code 17 uses the same t-F-S-E-ECL reset, but code 17 is a blocked venturi, not a valve coil. Code 71 also measures pin 27 and pin 29 at 18 to 22 ohms or 11 to 13 VDC, and it adds a DIP switch that must be OFF and a grounding check. Code 52's SENSEI block is the flame rod plus that solenoid measurement plus the button reset after a new valve.",
+  "causes": [
+    "Flame rod or its wiring loose, broken, or damaged",
+    "Gas solenoid harness loose or damaged",
+    "Connector D pins 27 and 29 not at 18 to 22 ohms or 11 to 13 VDC",
+    "Gas valve and venturi assembly failed, or code 52 still present after that replacement until the ECL reset",
+    "POV coil open, or POV voltage present while code 52 remains, which ends at a new PC board"
+  ],
+  "diySteps": [
+    "Do not run the t, F, S, E button sequence as a homeowner reset before the valve work. In this document it comes after the gas valve and venturi are replaced",
+    "If you smell gas, leave and call the gas supplier",
+    "Technician: disconnect power and gas, check the flame rod and solenoid harness, measure pins 27 and 29, replace the valve and venturi if required, then perform the ECL reset. On the POV block, measure the coil against the tech data sheet and replace the PC board only if code 52 survives that"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 52 is gas-valve work with power and gas shut off. The button reset is how the heater accepts a new valve, and the manual says to call Rinnai technical support if ECL does not clear the code. The POV coil's ohm value is not printed in the procedure. It is on the tech data sheet inside the front cover."
+}

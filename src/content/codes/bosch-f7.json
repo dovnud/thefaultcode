@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/boilers/6721853955_greenstar_wall_iom_en_11.2025.pdf",
+  "sourceTitle": "Bosch Greenstar wall-mounted residential gas condensing boiler installation and service instructions 6721853955 (2025/11), section 15",
+  "safetyNote": "Section 15 of the Greenstar wall manual is written for contractors. Close the gas cock before work on the gas train, and check for gas leaks afterward. Check the venting system for leaks after any work on it, because of flue gas. Disconnect the appliance from mains power before work, and prevent it from being switched back on accidentally. Hot water can scald. Drain the appliance before opening water-filled components, and cover the Heatronic so a leak does not damage the control. A fault shutdown in cold weather can let the heating system freeze. Rectify the fault and restart. If you cannot, drain the heating system and the hot water pipes at the lowest point.",
+  "code": "F7",
+  "codeSlug": "f7",
+  "displayPattern": "Heatronic display on a Bosch Greenstar wall boiler covered by installation instructions 6721853955 (2025/11). A fault sounds a warning tone. Press a button to mute it. The reset button may flash.",
+  "meaning": "Flame was detected while the burner was off. F7 in Table 38 is 'Flame detected even when burner is off.' Check the electrodes and replace them if they are defective. Check the flue gas system and clean or repair it if it is defective. Check the PCB for moisture and dry it if needed. That is the entire elimination list. Three items. FA is the code people confuse with F7. FA is 'After switching gas off: Flame is detected.' FA's list is the gas valve, cleaning the condensate trap, electrodes and their leads, and the flue gas system. F7 does not say to replace the gas valve, and it does not say to clean the condensate trap. FA does not say to dry the PCB. EA is no flame at all during the safety time. Its long list includes the gas cock, gas pressure, the gas/air ratio, the fan-inlet diaphragm, and the code plug. None of those are on F7. Moisture on the PCB is the item that makes F7 its own page. Drying a control board, and deciding the electrodes are defective, is contractor work. Section 15.1 says to disconnect mains power before work and to cover the Heatronic before opening water-filled parts so a drip does not create the moisture this code is describing. The warning tone and the flashing reset button are the same section 15.1 behavior as the other letter codes. Holding reset does not dry a board. F0, the internal-fault row in the same table, says to press reset for 3 seconds and release, then check plug-in contacts and ignition leads and replace the PCB if it is defective. That 3 second instruction is F0's. F7 does not use it. Fd says the reset button was pressed by mistake and to press it again. F7 is not a mistaken press.",
+  "causes": [
+    "Electrodes defective while the burner is off and flame is still detected",
+    "Flue gas system in need of cleaning or repair",
+    "Moisture on the PCB"
+  ],
+  "diySteps": [
+    "Do not keep resetting F7. A flame indication while the burner is off is a reason to leave the boiler off",
+    "If you smell gas, close the gas cock and call from outside. F7's own list does not start with the gas cock. The gas-train warning in section 15 does",
+    "Technician: check and replace the electrodes if defective, clean or repair the flue, and dry the PCB if it is wet"
+  ],
+  "proNeeded": true,
+  "proAdvice": "F7 means the control sees flame when the burner should be out. The manual's three checks are the electrodes, the flue, and moisture on the PCB. Call a trained and certified installer. Do not swap in FA's gas-valve replacement unless the display actually says FA."
+}

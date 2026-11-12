@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/boilers/6721853955_greenstar_wall_iom_en_11.2025.pdf",
+  "sourceTitle": "Bosch Greenstar wall-mounted residential gas condensing boiler installation and service instructions 6721853955 (2025/11), section 15",
+  "safetyNote": "Section 15 of the Greenstar wall manual is written for contractors. Close the gas cock before work on the gas train, and check for gas leaks afterward. Check the venting system for leaks after any work on it, because of flue gas. Disconnect the appliance from mains power before work, and prevent it from being switched back on accidentally. Hot water can scald. Drain the appliance before opening water-filled components, and cover the Heatronic so a leak does not damage the control. A fault shutdown in cold weather can let the heating system freeze. Rectify the fault and restart. If you cannot, drain the heating system and the hot water pipes at the lowest point.",
+  "code": "FA",
+  "codeSlug": "fa",
+  "displayPattern": "Heatronic display on a Bosch Greenstar wall boiler covered by installation instructions 6721853955 (2025/11). A fault sounds a warning tone. Press a button to mute it. The reset button may flash.",
+  "meaning": "Flame was still detected after the gas was switched off. FA in Table 38 is 'After switching gas off: Flame is detected.' Check the gas valve and replace it if it is defective. Clean the condensate trap. Check the electrodes and their leads, and replace them if they are defective. Check the flue gas system and clean or repair it if it is defective. F7 is flame detected even when the burner is off, and it does not name the gas valve or the condensate trap. F7 names moisture on the PCB, which FA does not. The gas valve on FA is the part that should have shut off the gas. The manual's response to flame after that shutoff is to check the valve and replace it if it is defective, then clean the trap, then the electrodes and leads, then the flue. EA also says to check the gas valve, but EA is no flame during the safety time, and EA adds gas pressure, the gas/air ratio, the fan-inlet diaphragm, and the code plug. FA does not. Section 15 says to close the gas cock before any work on the gas train and to check for leaks afterward. That warning sits on top of this row because the row's first action is the gas valve. Fd, the next letter in the table, is the reset button pressed by mistake. Fd says to press the reset button again, and to check the cable harness to the safety high limit and the gas cock for a ground connection. FA is not a mistaken button press.",
+  "causes": [
+    "Gas valve defective after the gas has been switched off and flame is still detected",
+    "Condensate trap in need of cleaning",
+    "Electrodes or their leads defective",
+    "Flue gas system in need of cleaning or repair"
+  ],
+  "diySteps": [
+    "If the display says FA, do not reset it and leave the boiler running. Flame after the gas is commanded off is a reason to stop",
+    "Close the gas cock if you can do that without removing a panel, then call",
+    "Technician: check and replace the gas valve if it is defective, clean the condensate trap, check the electrodes and leads, and clean or repair the flue. Check for gas leaks after any work on the gas train"
+  ],
+  "proNeeded": true,
+  "proAdvice": "FA is flame that remains after the control has switched the gas off. The manual starts with the gas valve. Call a trained and certified installer or the gas supplier. F7's PCB-moisture step is not on this row."
+}

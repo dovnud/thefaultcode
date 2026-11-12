@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [],
+  "code": "LC",
+  "codeSlug": "lc",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "Scale is building up in the heat exchanger, and on older non-SENSEI heaters the heater is allowed to keep running. Document 100000652 titles code LC, and LC0 through LC9, as scale build-up in the heat exchanger. When you look in maintenance-code history, 00 is substituted for LC. The applies-to line is non-SENSEI series. The N-series with-pump chart does not list LC, which is why the existing SS page, from that chart, is a different code. Flush the heat exchanger using the procedure in the owner's manual. LC, LC0 through LC9 are the only codes in this section that let a water heater continue to operate. The display alternates between the LC code and the temperature setting. The controller keeps beeping. On older products, turn power off and back on to reset LC. On newer products, a shutdown feature is built in so scale does not destroy the heater. LC, 00, or LC0 through LC9 means the exchanger needs to be flushed. Hard water has to be treated. These codes lock the heater out until the reset below. To run it temporarily until the flush, push the on/off button on the temperature controller five times. The heater operates for 70 hours and then locks out with another LC code. The manual's example: LC2 indicates the water heater has been reset for 3 70-hour periods without a flush and without the hard reset. After the temporary reset, the controller cycles between the set temperature and the LC number. This 2019 non-SENSEI page does not say the five presses must happen within five seconds. The SS reset on SENSEI heaters does say five times in five seconds. Do not borrow that timing. After the flush, the hard reset is both switches A and B on the PC board, pressed at the same time for five seconds. The heater returns to normal operation and the LC number goes back to 0. The manual says this hard reset is not in the owner's or installation manual or the tech sheet. It is not the code 17 sequence of t, F, S, E, then A and B for 10 seconds. LC's hard reset is A and B together for five seconds, with no letter sequence. SS is a timer set at installation, parameter 03, on SENSEI heaters. LC is scale, on non-SENSEI heaters, and it counts how many 70-hour delays you have used.",
+  "causes": [
+    "Scale in the heat exchanger",
+    "Hard water that has not been treated, so scale returns",
+    "A flush that was never finished, so the LC count keeps climbing",
+    "A temporary five-press reset that has already been used for 70-hour blocks"
+  ],
+  "diySteps": [
+    "Read the display. If it alternates between LC and the set temperature and the controller is beeping, the heater is still running and the exchanger still needs a flush",
+    "The five on/off presses buy 70 hours. They are not the repair. Use them only to get hot water until the flush, and do not keep stacking them",
+    "Flush using the owner's procedure, or have a qualified technician do it. The A-and-B hard reset is on the PC board and is not in the owner's manual",
+    "Treat the water if scale caused the code. The manual says untreated hard water damages the heat exchanger"
+  ],
+  "proNeeded": true,
+  "proAdvice": "LC is the scale code that, on older non-SENSEI heaters, lets the burner keep firing while it beeps. Newer heaters in this section lock out, allow 70 hours after five on/off presses, and then lock out again. The hard reset that zeros the count is A and B together for five seconds, inside the cabinet. Call a qualified technician for the flush and that reset. SS is a different brand of reminder and a different button rule."
+}
