@@ -1,0 +1,36 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "70",
+  "codeSlug": "70",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The PC board failed, and a SENSEI replacement has to be taught the old heater's data. The N-series chart names code 70 PC Board and says to replace the PC board. Document 100000652, for SENSEI and non-SENSEI, puts three checks in front of that replacement. Check that all water heater parameters were set properly. Check every wiring harness at the PC board for a loose, broken, or damaged connection. Replace the PC board. SENSEI models only: after the new board is in, transfer data from the old board with the data transfer cable that comes with the new board. If the transfer is not possible, manually program all parameters with the step-by-step instructions included with the new board. The non-SENSEI path in this section stops at replacing the board. It does not describe that cable. Parameters are checked first because a board that was never programmed for the model can be replaced for no reason. The harness check is at the connection on the board, not at the other end of the heater. Code 72 also replaces a PC board, but only after a flame-rod reading under 1 microamp and a heat-exchanger leak check. Code 70 does not measure microamps. Code 21 in the N-series chart is a data transfer error after a board has already been replaced. Code 70 is the fault that leads to the replacement. Code 52's POV block also ends at a new PC board, but only after the modulating coil is measured. Code 72 ends at a new PC board after the flame rod is measured at a minimum of 1 microamp. Code 70 is the board fault itself, and its only pre-checks are parameters and the harnesses.",
+  "causes": [
+    "Water heater parameters not set properly",
+    "A wiring harness loose, broken, or damaged at the PC board",
+    "PC board failed",
+    "On SENSEI, data not transferred to the new board, and parameters not programmed by hand"
+  ],
+  "diySteps": [
+    "Do not buy a control board and plug it in. On a SENSEI heater the new board needs the old board's data or a full parameter set",
+    "Write down the code and the model before power is removed",
+    "Technician: confirm parameters, reseat or repair harnesses at the board, replace the board, and on SENSEI complete the data transfer or the manual parameter procedure shipped with the board"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 70 is a board replacement with a programming step on SENSEI models. A new board without the transfer can look like a different fault, which is why code 21 exists for a transfer that did not finish. Call a qualified technician. There is no owner reset in this section."
+}

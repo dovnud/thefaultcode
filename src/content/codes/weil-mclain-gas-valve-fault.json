@@ -1,0 +1,35 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Gas valve fault",
+  "codeSlug": "gas-valve-fault",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "The U-Control flagged its gas-valve output. GAS VALVE FAULT means the U-Control has detected a problem with its gas valve output circuit. The manual's wording is 'it gas valve output circuit.' The control retries automatically while the condition exists. The boiler resets if the condition clears. If the condition does not clear, the boiler retries in one hour. If the condition is still not clear after that hour, the boiler requires a manual reset. Check the wire harness connections between the gas valve and the U-Control. The printed row then says to check resistance, and the rest of that sentence is not completed in the text of the table. This page does not invent the missing resistance value or the missing test points. If the lockout occurs again, replace the U-Control. FLAME FAULT is the row that says to replace the gas valve and the venturi, and only when flame continues after shutdown. This gas-valve-fault row does not say to replace the gas valve. It says to check the harness and, if the lockout returns, replace the U-Control. AIR PRESSURE SW FAULT and GAS PRESSURE SW FAULT are different rows. On a residential Ultra they usually mean the wrong boiler size is selected, not a failed gas valve output. The user's manual shows a red lockout screen cleared with MANUAL RESET. On this fault, that button is what the boiler manual means by a manual reset after the one-hour retry has already failed. Using it earlier only restarts the automatic retry. The harness check is between the gas valve and the U-Control, not a measurement of inlet gas pressure. Inlet gas pressure is on the ignition-fault row.",
+  "causes": [
+    "A problem in the U-Control gas-valve output circuit",
+    "Wire harness connections between the gas valve and the U-Control",
+    "A lockout that returns after the harness is checked, which this row answers by replacing the U-Control"
+  ],
+  "diySteps": [
+    "Do not jumper the gas valve to the control to see if the boiler lights",
+    "If the display clears and then returns after the one-hour retry, stop resetting it",
+    "Technician: check the harness between the gas valve and the U-Control. If the lockout reoccurs, replace the U-Control. Do not substitute a gas-valve replacement from the flame-fault row"
+  ],
+  "proNeeded": true,
+  "proAdvice": "The gas valve output circuit is inside the control's decision to open the valve. The manual's end point, when the lockout comes back, is a new U-Control, after the harness is checked. Call a qualified heating technician. Do not cycle the manual reset through the one-hour retries."
+}

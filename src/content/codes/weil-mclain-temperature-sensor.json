@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Temperature sensor",
+  "codeSlug": "temperature-sensor",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "A sensor is shorted, open, or the pair disagrees. Figure 125 uses the words TEMPERATURE SENSOR for two different conditions. Read the detail line before ordering a sensor. The first condition is a temperature sensor that has electrically shorted (SHORT) or become disconnected (OPEN). It automatically resets when the condition no longer exists. Check every temperature reading on Diagnostics, Temperatures, and see whether any sensor is currently SHORT or OPEN. Compare that with the temperatures recorded under Diagnostics, Errors, Lockout History, Temperatures, for the last several lockouts. Measure the suspect sensor's resistance and compare it with Figure 123 on page 116. If the resistance is incorrect, replace the sensor. The repair-parts section has the part number. This page does not copy Figure 123, because the values live in that figure. OUTDOOR TEMP, SYSTEM SUPPLY, and SYSTEM RETURN are the optional outdoor-air and system-water sensors. If they are not being used, they will always show OPEN. The manual says that is normal unless those sensors were installed. Check the wire harness for loose connections and pin engagement at the sensor, at the chassis connector through the sheet metal, and at the U-Control. Unplug both ends and check continuity. If the problem remains, replace the U-Control. The second condition, still labeled TEMPERATURE SENSOR, occurs when dual temperature sensor values have spread by more than 10°F. The manual's wording is 'more that 10ºF.' It automatically resets when the sensors are within 10°F. Use the same short-and-open checks. If the measured resistances convert to temperatures separated by more than 10°F, replace the sensor. FLUE TEMP TOO HIGH tells you to use this short-and-open procedure first, and then adds the heat exchanger, the vent, and a call to technical support. A flue temperature of 216°F is not this display.",
+  "causes": [
+    "A temperature sensor electrically shorted or disconnected",
+    "Optional outdoor, system supply, or system return sensors left unused, which display OPEN and are normal",
+    "Loose pins at the sensor, the chassis connector, or the U-Control",
+    "Dual sensors whose readings have spread by more than 10°F",
+    "A failed U-Control after the harness and the sensor check out"
+  ],
+  "diySteps": [
+    "Do not replace an outdoor sensor that was never installed. OPEN on OUTDOOR TEMP, SYSTEM SUPPLY, or SYSTEM RETURN is normal when those sensors are not used",
+    "Write down which reading says SHORT or OPEN, and whether the line is a boiler sensor or an optional system sensor",
+    "Technician: compare resistance with Figure 123, check continuity end to end, and replace the sensor only when the resistance is wrong or the two sensors disagree by more than 10°F"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Sensor replacement and the U-Control are technician work. The useful homeowner step is to notice whether the open reading is an optional sensor the house never had. Call a qualified heating technician when a boiler sensor, not an unused optional sensor, shows SHORT or OPEN, or when two sensors disagree by more than 10°F."
+}

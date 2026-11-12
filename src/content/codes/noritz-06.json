@@ -1,0 +1,30 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Noritz",
+  "brandSlug": "noritz",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://noritz.com/assets/nrcr_ownersguide.pdf",
+  "sourceTitle": "Noritz condensing tankless gas water heater owner's guide SBB81M1 Rev. 10/25 (EZ111DV, EZ98DV, EZ71DV, NRCR111DV, NRCR92DV)",
+  "safetyNote": "The owner's guide says: if you smell gas, do not try to light any appliance, do not touch any electrical switch, and do not use any phone in the building. Call the gas supplier from a neighbor's phone. If you cannot reach the gas supplier, call the fire department. Installation and service must be performed by a qualified installer, service agency, or the gas supplier. The error list says to contact Noritz America Technical Support at 1-866-766-7489 when the code returns or when a code appears that is not on the owner chart.",
+  "code": "06",
+  "codeSlug": "06",
+  "displayPattern": "Operation panel or remote controller on a Noritz condensing tankless covered by owner's guide SBB81M1 Rev. 10/25: EZ111DV (GQ-C3261WX-FF-1 US), EZ98DV (GQ-C2861WX-FF-1 US), EZ71DV (GQ-C2661WX-FF-1 US), NRCR111DV (GQ-C3261WXQ-FF-1 US), and NRCR92DV (GQ-C2661WXQ-FF-1 US). A failure blinks on the operation panel and on the remote.",
+  "meaning": "Recirculation is abnormal, and only the NRCR models use this code. The owner chart labels codes 06, 061, and 062 as NRCR models only. The cause is recirculation abnormality. The actions are to check the return line filter, check the crossover valve's filter, and contact Noritz America if there are any other questions. EZ111DV, EZ98DV, and EZ71DV are in this same owner's guide, and this row does not apply to them. NRCR111DV and NRCR92DV are the recirculation models the row names. The recirculation chapter explains the hardware those filters belong to, without adding extra causes to code 06. NRCR models that use crossover valves can set temperature only at 120°F or higher, or 50°C or higher. Turning the power button off stops both hot water and recirculation. Setting the power switch to off does the same. Auto-recirculation on NRCR models learns the schedule after hot water has been used for at least 15 minutes, and then runs the next day at that time. None of those settings is listed as the remedy for code 06. The chart's remedies are the two filters, then a call. Code C1# is a descaling reminder, not a recirculation fault. It can show C11 through C19. It does not ask you to clean a crossover filter. Code 90 is the vent and condensate row. A frozen condensate line is not code 06. If 06, 061, or 062 returns after both filters are clean, the follow-up section says to call Technical Support at 1-866-766-7489 with the model, the serial, the gas type, and the blinking code.",
+  "causes": [
+    "Recirculation abnormality on an NRCR model",
+    "Return line filter",
+    "Crossover valve filter"
+  ],
+  "diySteps": [
+    "Confirm the model is an NRCR. Codes 06, 061, and 062 are marked NRCR only in this guide",
+    "Check the return line filter and the crossover valve's filter. The chart says check, then contact Noritz if you still have questions. It does not describe how to take the filters apart",
+    "Do not turn recirculation mode off and leave it off as a repair. The chart does not say to change Recirc Mode",
+    "If the code remains, contact Noritz America Technical Support at 1-866-766-7489"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Codes 06, 061, and 062 are one recirculation row, and only on NRCR models. The owner actions are the return-line filter and the crossover-valve filter. Call Noritz if either code remains. An EZ model showing some other number is not this row."
+}

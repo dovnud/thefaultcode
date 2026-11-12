@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Flame fault",
+  "codeSlug": "flame-fault",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "Flame was sensed when the burner should be off. FLAME FAULT in Figure 125 occurs when flame is detected when there should be no flame. Reset it from the manual reset screen. It does not use ignition fault's one-hour automatic reset. The manual's first suspicion is combustion: the burner may be operating too hot because combustion is incorrect. Inspect the flame and conduct a combustion test. Force the boiler into high fire, check the flue gases with a combustion analyzer, and correct them using the maintenance and startup procedure in the same manual. On Diagnostics, Inputs, the FLAME SIGNAL value must go to zero quickly when the gas valve closes. Check for flame at the burner by flame current with the burner off. Turn the boiler off and watch the flame through the observation port. If flame continues after shutdown, replace the gas valve and the venturi. The annual flame-signal check in the same manual is a different measurement, and it belongs with this display because it is how the control judges a weak flame. Navigate to Diagnostics, Inputs. The flame signal must be at least 20 above the shutdown values in Figure 119. If it drops below that, the U-Control tries to correct by increasing the firing rate. Figure 119 lists those shutdown values by model. Ultra 80 is 95, and 80 HA is 95. Ultra 105 is 135, and 105 HA is 135. Ultra 155 is 80, and 155 HA is 80. Ultra 230 is 100, and 230 HA is 100. Ultra 299 is 130, and 299 HA is 130. Ultra 399 is 120, and 399 HA is 120. The note says HA means high altitude, 5,500 feet or more. A lower flame signal may indicate a fouled ignitor or damaged ignitor insulation. If cleaning the ignitor does not improve it, and ground wiring and ground continuity are satisfactory, replace the ignitor. If the signal is still low, inspect the vent and air piping, then the heat exchanger, and clean the exchanger if necessary. Ignition fault is the opposite event: five tries and no flame at all. Do not use the gas-valve-and-venturi replacement from this row on a boiler that never lit.",
+  "causes": [
+    "Burner operating too hot from incorrect combustion",
+    "Proving value that does not fall to zero when the gas valve closes",
+    "Flame that continues after shutdown, which this row answers by replacing the gas valve and venturi",
+    "Fouled ignitor or damaged ignitor insulation, from the annual flame-signal check in the same manual",
+    "Vent, air piping, or heat exchanger condition when the proving value stays low after the ignitor and the ground are checked"
+  ],
+  "diySteps": [
+    "Do not reset a flame-with-the-gas-off display and leave the boiler in service. Select MANUAL RESET only after the cause is found",
+    "Technician: inspect the flame, run a combustion test at forced high fire, and correct it with the startup procedure",
+    "Technician: on Diagnostics, Inputs, confirm the proving value goes to zero as the gas valve closes. If flame continues in the observation port after shutdown, replace the gas valve and venturi",
+    "Technician: compare that value with Figure 119. It must stay at least 20 above that model's shutdown value"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Flame fault is a manual reset because the control saw flame when the burner should have been off. Combustion analysis, the gas valve, and the venturi are technician work. If flame continues after shutdown, the row says to replace the gas valve and the venturi, not to clean a flame sensor and try again."
+}

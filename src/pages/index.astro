@@ -1,7 +1,7 @@
 ---
 import { ORG, SITE_URL } from '../config/site';
 import { organizationLd } from '../lib/schema';
-import Base from '../layouts/Base.astro'; import HeroBoard from '../components/HeroBoard.astro'; import CatIcon from '../components/CatIcon.astro'; import { getCollection } from 'astro:content'; import { groupCodes, CATEGORIES, codePath, typeLabel } from '../config/categories';
+import Base from '../layouts/Base.astro'; import HeroBoard from '../components/HeroBoard.astro'; import CatIcon from '../components/CatIcon.astro'; import { getCollection } from 'astro:content'; import { groupCodes, CATEGORIES, codePath, typeLabel, groupNoun } from '../config/categories';
 const codes = (await getCollection('codes')).filter(c=>!c.data.example).map(c=>c.data);
 const groups = groupCodes(codes);
 const cats = CATEGORIES.filter(c=>groups.some(g=>g.cat.slug===c.slug));
@@ -36,7 +36,7 @@ const jsonld=[organizationLd(), {'@context':'https://schema.org','@type':'WebSit
 <div class="blocks">
 <section class="block"><div class="wrap"><div class="sec-h"><h2>Browse by equipment and brand</h2><p>Each code comes from a named manufacturer document, linked on every page.</p></div>
 {cats.map(c=>{const gs=groups.filter(g=>g.cat.slug===c.slug);return <><h3 class="cat-h"><span class="cat-ic-w"><CatIcon slug={c.slug} size={28} /></span><a href={c.hub}>{c.name}</a><small>{gs.reduce((n,g)=>n+g.codes.length,0)} codes</small></h3>
-<div class="grid g5">{gs.map((g)=><a class="card brand-card" data-reveal href={g.href}><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {c.noun} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div></>})}</div></section>
+<div class="grid g5">{gs.map((g)=><a class="card brand-card" data-reveal href={g.href}><div class="bn">{g.brand}</div><div class="bc">{g.codes.length} {groupNoun(g.codes)} codes</div><span class="go"><span>Open code list</span><span aria-hidden="true">→</span></span></a>)}</div></>})}</div></section>
 <section class="block band"><div class="wrap"><div class="sec-h"><h2>Codes on file</h2><p>A sample from each equipment type and brand. Search above, or browse the full list.</p></div>
 <div class="grid g3">{featured.map(c=><a class="card code-card" data-reveal href={codePath(c)}><span class="cc">{c.code}</span><span class="cb">{c.brand} · {typeLabel(c)}</span><p class="cm">{c.meaning}</p></a>)}</div>
 <p style="margin-top:14px"><a href="/codes/" class="btn btn-o">Browse all {codes.length} codes →</a></p></div></section>

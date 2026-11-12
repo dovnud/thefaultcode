@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "15",
+  "codeSlug": "15",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The venturi control on a SENSEI heater failed its electrical checks. In document 100000652, code 15 is the venturi-control procedure, and the applies-to line is SENSEI series only. The N-series with-pump chart names the same code 'Venturi Control' and tells a technician to make sure the venturi motor is operating, replace the gas valve assembly, and clear the code by resetting main power. The pin measurements below are from 100000652, not from that one-line chart. Reset main power to the water heater. Check the gas valve and solenoid wiring harnesses for loose, damaged, or broken connections. Measure the venturi control device at connector D on the PC board. Red wire pin 12 to black wire pin 30 is 12 to 14 VDC when 120 VAC is applied. Brown wire pin 25 to black wire pin 30 is less than 1 VDC. Grey wire pin 23 to black wire pin 30 is less than 1 VDC. Blue wire pin 5 to white wire pin 7 is 35 to 41 ohms. Yellow wire pin 11 to red wire pin 9 is 35 to 41 ohms. The manual says to use the electric circuit table in the tech sheet and wiring diagram if those connector names need confirming. Check the fan motor for proper operation. Make sure air can move through the intake and exhaust ports. Then replace the gas valve assembly. Then replace the fan motor. Code 17 is venturi blockage, not this electrical check. Code 17's reset sequence spells t, F, S, E on the controller and ends at ECL. Code 15 does not use that sequence. Code 15's clear is a main-power reset, and it is SENSEI only in this 2019 document.",
+  "causes": [
+    "Gas valve or solenoid harness loose, damaged, or broken",
+    "Venturi control voltages or resistances at connector D outside the values above",
+    "Fan motor not operating properly",
+    "Intake or exhaust airflow blocked",
+    "Gas valve assembly or fan motor that still fails after those checks"
+  ],
+  "diySteps": [
+    "Reset power once at the breaker or the plug, then run a hot faucet. If code 15 returns, stop",
+    "Look at the outdoor intake and exhaust terminations for a blockage you can see without opening the cabinet",
+    "Technician: measure connector D at the pins listed above, check the fan, and replace the gas valve assembly or the fan motor only after those readings fail"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 15 in this document is a SENSEI venturi-control measurement, with live voltage at connector D. The two ohm checks are 35 to 41 ohms, on different pin pairs from the voltage checks. Call a qualified technician if a power reset and a clear outdoor termination do not clear it. Do not use code 17's button sequence on code 15."
+}

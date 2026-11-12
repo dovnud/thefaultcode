@@ -1,0 +1,32 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/boilers/6721853955_greenstar_wall_iom_en_11.2025.pdf",
+  "sourceTitle": "Bosch Greenstar wall-mounted residential gas condensing boiler installation and service instructions 6721853955 (2025/11), section 15",
+  "safetyNote": "Section 15 of the Greenstar wall manual is written for contractors. Close the gas cock before work on the gas train, and check for gas leaks afterward. Check the venting system for leaks after any work on it, because of flue gas. Disconnect the appliance from mains power before work, and prevent it from being switched back on accidentally. Hot water can scald. Drain the appliance before opening water-filled components, and cover the Heatronic so a leak does not damage the control. A fault shutdown in cold weather can let the heating system freeze. Rectify the fault and restart. If you cannot, drain the heating system and the hot water pipes at the lowest point.",
+  "code": "d3",
+  "codeSlug": "d3",
+  "displayPattern": "Heatronic display on a Bosch Greenstar wall boiler covered by installation instructions 6721853955 (2025/11). A fault sounds a warning tone. Press a button to mute it. The reset button may flash.",
+  "meaning": "The temperature high limit, an external guard, or the temperature limiter has locked out. d3 in Table 38 carries three descriptions at once: temperature high limit defective, external guard has tripped, and temperature limiter locked out. Check the temperature sensor and its leads for interruptions or shorts, and replace the sensor if it is defective. Temperature guard TB1 has tripped. Check whether the jumper across terminals 8-9 or PR-P0 is missing. Reset the external temperature limiter if one is installed. Reset the LWCO if one is installed. Reset the pressure regulator if one is installed. E9 is the boiler's own heat exchanger safety high limit or flue gas limiter, and its list is leads, operating pressure, the pump capacitor, a 6.3 A fuse, a purge, and the DHW heat exchanger. d3 is the row that names TB1, the 8-9 or PR-P0 jumper, an external temperature limiter, an LWCO, and a pressure regulator. A missing jumper on a boiler that has no external guard will look like a tripped guard. The manual says to check for that missing jumper. It does not say to leave the jumper out. CC, the outdoor sensor code, is not d3. CC asks whether the outdoor sensor is on terminals A and F. d3 does not use terminals A and F.",
+  "causes": [
+    "Temperature high limit defective, or its sensor and leads interrupted or shorted",
+    "External guard tripped",
+    "Temperature limiter locked out",
+    "Temperature guard TB1 tripped",
+    "Jumper missing across terminals 8-9 or PR-P0",
+    "External temperature limiter, LWCO, or pressure regulator needs a reset, if that device is installed"
+  ],
+  "diySteps": [
+    "Do not remove or add the 8-9 or PR-P0 jumper to force the boiler on",
+    "If you know an external low-water cutoff or a pressure regulator is installed and it has its own reset, the table includes resetting that device. If you are not sure the device is there, stop",
+    "Technician: check the sensor and leads, TB1, the jumper, and reset only the external limiter, LWCO, or pressure regulator that is actually installed"
+  ],
+  "proNeeded": true,
+  "proAdvice": "d3 mixes a defective high limit with an external guard and a locked-out temperature limiter. The jumper check is the part that is easy to get wrong: it is there so TB1 is not an open circuit on a boiler that has no external guard. Call a trained and certified installer if d3 returns after one reset of a device you know is installed."
+}

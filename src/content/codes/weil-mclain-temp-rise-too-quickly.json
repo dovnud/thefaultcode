@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Temp rise too quickly",
+  "codeSlug": "temp-rise-too-quickly",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "Supply water rose faster than 2°F per second. TEMP RISE TOO QUICKLY occurs when supply water temperature in the heat exchanger rises faster than 2°F per second during the first two minutes the burner is on. It automatically resets after a 1 minute delay, or from the manual reset screen. A manual reset is necessary after five automatic resets during the same Priority heat demand. The piping check is primary/secondary connection to the boiler loop, with Figure 4 on page 11 as the example. Minimum pipe sizes on this row are 1 inch for Ultra 80 and 105, 1.25 inch for Ultra 155 and 230, and 1.5 inch for Ultra 299 and 399. Verify circulator sizing for the boiler size and the system, starting on page 10. The manual says the boilers ship with these circulators: Ultra 80 and 105 with a Taco 007e ECM or a Taco 007, Ultra 155, 230, and 299 with a Taco 0014, and Ultra 399 with a Taco 0013. Then follow the loose-connection procedure under the TEMPERATURE SENSOR message. SUPPLY 58F > RETURN is the slower cousin, not this display. That fault is boiler outlet water more than 58°F above boiler inlet water while the burner is on, and it waits 30 seconds before an automatic reset. Its shipped-circulator line for the Ultra 80 and 105 names only the Taco 007e ECM. This temp-rise row also names the Taco 007. Do not copy one list onto the other. HIGH TEMP LIMIT is the supply sensor reaching the high-limit setting, which the manual caps at 200°F. That is a level, not a rate of 2°F per second in the first two minutes.",
+  "causes": [
+    "Supply water in the heat exchanger rising faster than 2°F per second in the first two minutes of burner operation",
+    "Boiler loop not piped primary/secondary as in Figure 4",
+    "Pipe smaller than the minimum for that Ultra size",
+    "Circulator not sized for the boiler and the system",
+    "Loose temperature-sensor connections, via the temperature-sensor procedure"
+  ],
+  "diySteps": [
+    "If the display returns five times during the same heat demand, stop resetting it. The control now wants a manual reset because the automatic ones are used up",
+    "Do not close valves to 'test' the rise. A separate 2011 bulletin describes a low-flow test, and it is not the corrective action in this 2025 manual",
+    "Technician: confirm primary/secondary piping, the minimum pipe size for the model, the shipped circulator size, and the sensor connections"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Pipe size, circulator sizing, and sensor connectors are technician checks. The homeowner piece is to stop clearing the red screen once five automatic resets have already happened on the same Priority demand. Call a qualified heating technician and leave the display text for them."
+}

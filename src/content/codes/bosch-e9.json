@@ -1,0 +1,34 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/boilers/6721853955_greenstar_wall_iom_en_11.2025.pdf",
+  "sourceTitle": "Bosch Greenstar wall-mounted residential gas condensing boiler installation and service instructions 6721853955 (2025/11), section 15",
+  "safetyNote": "Section 15 of the Greenstar wall manual is written for contractors. Close the gas cock before work on the gas train, and check for gas leaks afterward. Check the venting system for leaks after any work on it, because of flue gas. Disconnect the appliance from mains power before work, and prevent it from being switched back on accidentally. Hot water can scald. Drain the appliance before opening water-filled components, and cover the Heatronic so a leak does not damage the control. A fault shutdown in cold weather can let the heating system freeze. Rectify the fault and restart. If you cannot, drain the heating system and the hot water pipes at the lowest point.",
+  "code": "E9",
+  "codeSlug": "e9",
+  "displayPattern": "Heatronic display on a Bosch Greenstar wall boiler covered by installation instructions 6721853955 (2025/11). A fault sounds a warning tone. Press a button to mute it. The reset button may flash.",
+  "meaning": "A safety high limit or the flue gas limiter tripped. E9 in Table 38 is 'Heat exchanger safety high limit or flue gas temperature limiter has tripped.' It is not EA. EA is no flame during the safety time. E9 means a temperature limiter opened. Check the flue gas safety high limit and its leads for interruptions or shorts, and replace it if defective. Check the heat exchanger safety high limit and its leads for interruptions or shorts, and replace it if defective. Check the operating pressure. Check the temperature limit and replace it if defective. Check the pump capacitor and replace the pump if the capacitor is defective. Check the PCB fuse and replace it if it is blown. The manual specifies a 6.3 A fuse according to IEC default. The same 6.3 A IEC fuse is named again under faults that are not shown on the display: if the Heatronic is flashing, meaning all buttons, all display segments, and the burner indicator are flashing, replace fuse Si 3 (24 V), also specified as a 6.3 A fuse according to IEC default. A flashing Heatronic with no letter code is that fuse note. E9 is the letter code that also names the PCB fuse. Purge the appliance. Check the heat exchanger on the DHW side and replace it if it is clogged. The temperature-gradient row has no letter. It is 'Temperature rise too fast,' and its fixes are service shut-off valves and the heating-zone pump. E9 does not use that pump-speed sentence. It uses the pump capacitor and a DHW-side heat exchanger. Section 15.1 still applies: mute the tone with a button, hold a flashing reset button until the supply temperature returns, or switch the appliance off and on if the button is not flashing.",
+  "causes": [
+    "Flue gas safety high limit or its leads interrupted or shorted",
+    "Heat exchanger safety high limit or its leads interrupted or shorted",
+    "Operating pressure",
+    "Temperature limit defective",
+    "Pump capacitor defective",
+    "Blown PCB fuse, specified as 6.3 A to IEC default",
+    "Appliance needs purging",
+    "Heat exchanger clogged on the DHW side"
+  ],
+  "diySteps": [
+    "Do not replace the fuse and restart a boiler that shut down on a high limit. The limit opened for a reason",
+    "If the whole Heatronic is flashing with no letter code, the no-display-fault table points at fuse Si 3. E9 is the letter code. Tell the technician which one you see",
+    "Technician: check both high limits and their leads, operating pressure, the temperature limit, the pump capacitor, the 6.3 A PCB fuse, purge the appliance, and check the DHW side of the heat exchanger"
+  ],
+  "proNeeded": true,
+  "proAdvice": "E9 is a limit trip, so the boiler is refusing to fire until the limiter and the flow path are checked. The pump capacitor, the fuse, and the DHW heat exchanger are in this row and not in the no-flame row EA. Call a trained and certified installer. In freezing weather, section 15.1 says to drain the system at the lowest point if the boiler cannot be restarted."
+}

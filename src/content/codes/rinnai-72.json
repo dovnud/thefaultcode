@@ -1,0 +1,39 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "72",
+  "codeSlug": "72",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The flame rod circuit failed. The N-series chart names code 72 Flame Rod: check the rod and the wire, and verify the heat exchanger is not leaking. Document 100000652 applies the longer list to SENSEI and non-SENSEI. Check the flame-rod harnesses back to the PC board for broken or damaged connections. Make sure the flame rod is touching the flame when the heater fires. Remove the flame rod and check for carbon. Replace the rod and the gasket if necessary. Measure microamp output from the flame rod. It should maintain a minimum of 1 microamp. Replace the flame rod and the flame rod gasket. Verify the heat exchanger is not leaking, and replace it if it is. Replace the PC board. SENSEI only: transfer data from the old board with the cable supplied with the new board, or program all parameters from the instructions in the box. The 1 microamp minimum is this code's number. It is not printed on code 52 or code 71. Code 52's SENSEI block does inspect the flame rod and its wiring, but then it measures the gas solenoid at pins 27 and 29 and replaces the gas valve and venturi. Code 72 never mentions those pins. A leaking heat exchanger is on this flame-rod list and also inside code 71's moisture-tube steps. On 72 the leak check is after the microamp reading. On 71 the moisture is in a plastic tube to the gas valve.",
+  "causes": [
+    "Flame rod harness broken or damaged back to the PC board",
+    "Flame rod not touching the flame while the heater fires",
+    "Carbon on the flame rod",
+    "Flame-rod output below a minimum of 1 microamp",
+    "Heat exchanger leaking",
+    "PC board, after the rod and the exchanger are checked",
+    "On SENSEI, a new board installed without the data transfer"
+  ],
+  "diySteps": [
+    "Do not sand the flame rod or unplug it. The removal, the carbon check, and the microamp reading are technician steps",
+    "If water is dripping from the cabinet, shut off water and power. A leaking heat exchanger is on this list",
+    "Technician: confirm the rod touches the flame, replace the rod and gasket if carbon is present or output is under 1 microamp, check the heat exchanger for leaks, then replace the PC board and, on SENSEI, transfer the data"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 72 is a flame-sensing measurement. The pass value in this document is a steady minimum of 1 microamp. The gasket is replaced with the rod. Call a qualified technician. Code 71's DIP switch and solenoid ohms are not the checks for a flame rod."
+}

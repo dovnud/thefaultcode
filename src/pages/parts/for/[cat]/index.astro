@@ -1,7 +1,7 @@
 ---
 import Base from '../../../../layouts/Base.astro';
 import { allCodes } from '../../../../lib/paths';
-import { titleCase, CATEGORIES, catBySlug, catOf, groupCodes } from '../../../../config/categories';
+import { titleCase, CATEGORIES, catBySlug, catOf, groupCodes, groupNoun } from '../../../../config/categories';
 import { AMAZON_STATEMENT } from '../../../../config/affiliates';
 import { PARTS, compactLinks, partUrl, partsBrandUrl } from '../../../../lib/partLinks';
 export function getStaticPaths(){ return CATEGORIES.map(c=>({params:{cat:c.slug},props:{slug:c.slug}})); }
@@ -19,7 +19,7 @@ const jsonld={'@context':'https://schema.org','@type':'CollectionPage',name:`Par
 {n>0 && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}
 <div class="page-h"><p class="kicker" style="color:var(--sig-ink);margin:0">{list.length} guides</p><h1>Parts and tools for {cat.noun} error codes</h1><p>These are the parts, tools and supplies that the manufacturer manuals behind our {cat.noun} code pages name. Each guide explains what the item does, how to choose and test it and when to leave it to a technician. Shopping links are Amazon links; search links open results and never confirm a fit for your model.</p></div>
 <h2 class="rel-h">By brand</h2>
-<p class="shoplinks">{groups.map(g=><a class="btn btn-o btn-sm" href={partsBrandUrl(slug,g.brandSlug)}>{g.brand} {cat.noun}</a>)}</p>
+<p class="shoplinks">{groups.map(g=><a class="btn btn-o btn-sm" href={partsBrandUrl(slug,g.brandSlug)}>{g.brand} {groupNoun(g.codes)}</a>)}</p>
 <h2 class="rel-h" style="margin-top:24px">Guides</h2>
 {items.map(({p,links},i)=><><section class="card sec" style="margin-top:14px"><div class="pt-kind">{p.kind}</div><h3 style="margin:2px 0"><a href={partUrl(p.slug)}>{p.name}</a></h3><p style="margin:4px 0">{p.summary}</p>
 {links.length>0 && <div class="shoplinks">{links.map(l=><a class={`btn btn-o btn-sm${l.kind==='asin'?' pd':''}`} rel="sponsored nofollow noopener" target="_blank" href={l.href} aria-label={`${l.kind==='asin'?'Amazon product page':'Amazon search'}: ${l.label} (sponsored link, opens in a new tab)`}>{l.kind==='asin'?'':'Search: '}{l.label}</a>)}</div>}</section>{links.length>0 && (i+1)%6===0 && <p class="disc" style="margin:8px 0 0">{AMAZON_STATEMENT}</p>}</>)}

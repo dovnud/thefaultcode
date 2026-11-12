@@ -2,15 +2,16 @@
 import Base from '../layouts/Base.astro'; import CatIcon from './CatIcon.astro'; import SourceLine from './SourceLine.astro';
 import { getCollection } from 'astro:content';
 import { fmtDate } from '../config/site'; import { homeownerShops, AMAZON_STATEMENT } from '../config/affiliates';
-import { titleCase, catOf, typeLabel, brandPath, codePath, searchText } from '../config/categories';
+import { titleCase, catOf, typeLabel, brandPath, codePath, searchText, groupNoun } from '../config/categories';
 import { guideMentions } from '../lib/guideLinks';
 const { codes } = Astro.props;
 const first = codes[0]; const cat = catOf(first); const furn = cat.slug==='furnaces';
 const updated=[...codes.map(c=>c.updated)].sort().pop(); const brand = first.brand; const src = first.sourceManualUrl;
 const shop = homeownerShops(codes.flatMap(c=>c.parts.map(p=>p.partKey)), 3);
-const noun = furn ? 'furnace' : cat.noun;
-const bTitle = `${brand} ${titleCase(cat.label)} Error Codes: Meanings & Fixes`;
-const intro = `What does your ${brand} ${noun} error code mean? ${codes.length} codes from ${furn?`the ${brand} furnace manual`:`official ${brand} ${noun} documentation`}. Select a code for causes, how to fix it safely and when to call a pro.`;
+const noun = groupNoun(codes);
+const boiler = noun === 'boiler';
+const bTitle = `${brand} ${titleCase(boiler ? noun : cat.label)} Error Codes: Meanings & Fixes`;
+const intro = `What does your ${brand} ${noun} error code mean? ${codes.length} codes from ${boiler ? `the ${brand} boiler manual` : furn ? `the ${brand} furnace manual` : `official ${brand} ${noun} documentation`}. Select a code for causes, how to fix it safely and when to call a pro.`;
 const pageUrl = `https://thefaultcode.com${brandPath(first)}`;
 const jsonld=[
   {'@type':'CollectionPage','@id':`${pageUrl}#main`,name:`${brand} ${noun} error codes`,url:pageUrl,dateModified:updated,description:intro},
@@ -23,7 +24,7 @@ const moreGuides = allGuides.filter(g => g.data.category === cat.slug && !mentio
 const brandGuides = [...mentioned, ...moreGuides];
 const proCount = codes.filter(c => c.proNeeded).length;
 ---
-<Base title={bTitle.length>52?bTitle:`${bTitle} | The Fault Code`} description={`${brand} ${noun} error ${furn?'and flash ':''}codes: what all ${codes.length} codes mean, likely causes and how to fix them safely, from ${furn?'the manufacturer manual':'official manufacturer documentation'}.`} jsonld={jsonld} updated={updated} affLinks={shop.length>0} amazon={shop.length>0}>
+<Base title={bTitle.length>52?bTitle:`${bTitle} | The Fault Code`} description={`${brand} ${noun} error ${furn && !boiler ? 'and flash ' : ''}codes: what all ${codes.length} codes mean, likely causes and how to fix them safely, from ${furn?'the manufacturer manual':'official manufacturer documentation'}.`} jsonld={jsonld} updated={updated} affLinks={shop.length>0} amazon={shop.length>0}>
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href={cat.hub}>{cat.name}</a></li><li aria-current="page">{brand}</li></ol></nav>
 {shop.length>0 && <p class="affnote">Affiliate links may earn us a commission. {AMAZON_STATEMENT} <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>}

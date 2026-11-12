@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Supply 58F > return",
+  "codeSlug": "supply-58f-gt-return",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "Outlet water ran more than 58°F above the inlet. SUPPLY 58F > RETURN means boiler out temperature has exceeded boiler in temperature by more than 58°F while the burner is on. It automatically resets after a 30 second delay, or from the manual reset screen. That 30 second wait is not the one minute wait on TEMP RISE TOO QUICKLY, and this row does not say that five automatic resets force a manual reset. Temp rise does say that. The corrective actions match the flow checks, with one circulator difference. Verify primary/secondary piping using Figure 4 on page 11. Minimum pipe sizes are 1 inch for Ultra 80 and 105, 1.25 inch for Ultra 155 and 230, and 1.5 inch for Ultra 299 and 399. Verify circulator sizing starting on page 10. The shipped circulators on this row are a Taco 007e ECM for Ultra 80 and 105, a Taco 0014 for Ultra 155, 230, and 299, and a Taco 0013 for Ultra 399. The temp-rise row adds 'or 007' on the Ultra 80 and 105. This row does not. Then follow the loose-connection procedure on the TEMPERATURE SENSOR message. RETURN > SUPPLY is the reverse comparison: return water at least 10°F hotter than the matching supply temperature. It points at circulator direction and at system sensors sitting too close to the boiler loop. It is not a 58°F rise. This 58°F comparison is only while the burner is on. A wide temperature split with the burner off is not the condition in the row. The 30 second delay is how long the temperatures have to be back within 58°F before the automatic reset, or the manual reset screen can be used instead. The row does not say that five automatic resets force a manual reset. Temp rise too quickly does say that, after a 1 minute delay, and only during the same Priority heat demand.",
+  "causes": [
+    "Boiler outlet more than 58°F above boiler inlet while the burner is on",
+    "Boiler loop not connected primary/secondary as in Figure 4",
+    "Pipe below the minimum size for that Ultra model",
+    "Circulator not the size the manual lists for that model",
+    "Loose temperature-sensor connections"
+  ],
+  "diySteps": [
+    "Write down the display before using manual reset. A 30 second automatic reset can clear it if the temperature difference falls back inside the limit",
+    "Do not throttle the boiler return valve to see whether the code appears. That is a test procedure, not a repair",
+    "Technician: check primary/secondary piping, pipe diameter, the circulator model against this row, and the sensor connections"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A difference above 58°F means the heat exchanger is not moving enough water while the burner is firing. The manual's fixes are piping, pipe size, and the circulator, then the sensor connections. Call a qualified heating technician if the display returns after the 30 second automatic reset."
+}

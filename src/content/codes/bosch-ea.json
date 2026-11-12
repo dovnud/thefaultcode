@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Bosch",
+  "brandSlug": "bosch",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/boilers/6721853955_greenstar_wall_iom_en_11.2025.pdf",
+  "sourceTitle": "Bosch Greenstar wall-mounted residential gas condensing boiler installation and service instructions 6721853955 (2025/11), section 15",
+  "safetyNote": "Section 15 of the Greenstar wall manual is written for contractors. Close the gas cock before work on the gas train, and check for gas leaks afterward. Check the venting system for leaks after any work on it, because of flue gas. Disconnect the appliance from mains power before work, and prevent it from being switched back on accidentally. Hot water can scald. Drain the appliance before opening water-filled components, and cover the Heatronic so a leak does not damage the control. A fault shutdown in cold weather can let the heating system freeze. Rectify the fault and restart. If you cannot, drain the heating system and the hot water pipes at the lowest point.",
+  "code": "EA",
+  "codeSlug": "ea",
+  "displayPattern": "Heatronic display on a Bosch Greenstar wall boiler covered by installation instructions 6721853955 (2025/11). A fault sounds a warning tone. Press a button to mute it. The reset button may flash.",
+  "meaning": "No flame was detected, and the safety time expired. Table 38 lists EA as 'No flame detected. GFA: Safety time expired.' The elimination list is longer than any other letter code in that table, and several items appear only here. Check that the ground lead is properly connected, and replace it if it is defective. Check that the gas cock is open. Check inlet gas pressure and correct it if needed. Check the power supply. Check the electrodes for visual damage and replace them if they are defective. Check the flue gas system and clean or repair it if it is defective. Check the gas/air ratio and correct it if it is out of range. Check the gas valve and replace it if it is defective. The table lists the gas valve twice on this row. In room-air operation, check the air supply or the ventilation apertures. Clean the condensate trap. Remove the diaphragm at the fan inlet connection and check it for contamination or cracks. Check the heat exchanger for soiling. Insert the code plug correctly, or replace it if it is defective. The shared fault behavior in section 15.1 is separate from that list. An audible warning sounds. Press a button to mute it. If the reset button is flashing, hold it until the appliance starts again and the current supply temperature is displayed. If the reset button is not flashing, switch the appliance off and on. If the fault persists, check the PCB and replace it if required, then adjust the service functions to the commissioning report. F7 is flame detected even when the burner is off. Its list is electrodes, the flue, and moisture on the PCB. It does not include the gas cock, the gas/air ratio, the diaphragm, or the condensate trap. FA is flame detected after the gas is switched off. Its list adds the gas valve and the condensate trap, and it does not include the diaphragm or the room-air apertures. E9 is a high-limit trip, not a failure to light.",
+  "causes": [
+    "Ground lead not properly connected",
+    "Gas cock closed, or inlet gas pressure incorrect",
+    "Power supply problem",
+    "Electrodes visually damaged",
+    "Flue gas system defective",
+    "Gas/air ratio out of range",
+    "Gas valve defective",
+    "Room-air apertures blocked, on a room-air installation",
+    "Condensate trap needs cleaning",
+    "Diaphragm at the fan inlet contaminated or cracked",
+    "Heat exchanger soiled",
+    "Code plug inserted wrong or defective"
+  ],
+  "diySteps": [
+    "If you smell gas, close the gas cock, leave, and call the gas supplier from outside. Do not use the reset button to get the boiler to light",
+    "Confirm the gas cock handle is open if you can see it without removing a panel. Then stop",
+    "Technician: work the elimination list in the table, including gas pressure, electrodes, flue, gas/air ratio, gas valve, room-air openings, condensate trap, fan-inlet diaphragm, heat exchanger, and code plug"
+  ],
+  "proNeeded": true,
+  "proAdvice": "EA is the no-flame code. The only owner-visible item on its list is whether the gas cock is open. Gas pressure, the gas/air ratio, the diaphragm, and the gas valve are contractor work, and the manual says to close the gas cock before work on the gas train. Call a trained and certified installer or the gas supplier if EA returns after one reset."
+}

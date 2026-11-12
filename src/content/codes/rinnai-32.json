@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Rinnai",
+  "brandSlug": "rinnai",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://media.rinnai.us/salsify_asset/s-3e3cd69f-0edc-4b85-8d6d-93b39057fab5/100000652-Troubleshooting%20TWH%20Diagnostic%20Codes.pdf",
+  "sourceTitle": "Rinnai Troubleshooting Tankless Water Heater Diagnostic Codes, document 100000652 (4/2019)",
+  "safetyNote": "Document 100000652 is a troubleshooting manual for qualified service. If you smell gas, do not try to light the water heater, do not touch an electrical switch, and do not use a phone in the building. Leave and call the gas supplier from outside. Steps that say to disconnect power, gas, or water, or to measure voltage, are for a qualified technician. Do not unplug components inside the cabinet to chase a short unless you are qualified to service the heater.",
+  "moreSources": [
+    {
+      "name": "Rinnai N-series residential with-pump SENSEI installation and operation manual, section 5.6 short names",
+      "url": "https://www.rinnai.us/download/download?filename=N+Series+Residential+with+Pump+SENSEI+Tankless+Water+Heater+%28English%29.pdf&path=%2Fs--siHnEeal--%2Fsqevtjipt4hst6nhh6vc.pdf"
+    }
+  ],
+  "code": "32",
+  "codeSlug": "32",
+  "displayPattern": "Diagnostic code on a Rinnai tankless water heater covered by troubleshooting document 100000652 (4/2019). The model lists in that document split SENSEI from non-SENSEI.",
+  "meaning": "The outgoing water thermistor failed. The N-series chart names code 32 Outgoing Thermistor: check the wiring, measure the sensor, clean scale, and replace the sensor. Document 100000652 applies the procedure to SENSEI and non-SENSEI. Turn off the water and drain the heater before the next steps. Check the thermistor harness for loose, broken, or damaged connections from the thermistor back to the PC board. With no water left in the hot supply lines, remove the thermistor and clean scale or any other substance off it. The thermistor check in this document uses a meter that can read 20k ohms. Resistance should fall when the bulb is warmed, including when it is held between two fingers, and it should rise if ice is held against the bulb. The typical values printed on this code are 11.4 to 14k ohms at 59°F, 6.4 to 7.7k ohms at 86°F, 3.6 to 4.5k ohms at 113°F, 2.2 to 2.7k ohms at 140°F, and 0.6 to 0.8k ohms at 221°F. If the readings are correct, reinstall the thermistor. The small O-ring has to be intact. The manual says to put a small amount of grease or lubricant on the O-ring so it is not damaged during installation. Turn the water on and check for leaks around the thermistor. Fire the heater. If code 32 is still there, replace the thermistor. Code 33 is the heat exchanger thermistor. In the N-series chart, code 33 says to follow the code 32 steps. In 100000652 the code 33 pages repeat this same resistance list, the same O-ring, and the same leak check, and they end with 'if code 33 still appears, replace the thermistor.' Code 33 is not a separate page. The sensor is the heat exchanger thermistor, not the outgoing-water thermistor. The checks printed for it are these checks. Code 38 is the exhaust gas temperature sensor. It uses the same resistance numbers, then adds gas type, conversion, clearances, a manometer, and the burner fins. Those extra steps are not on code 32.",
+  "causes": [
+    "Outgoing thermistor harness loose, broken, or damaged back to the PC board",
+    "Scale or other buildup on the thermistor",
+    "Resistance that does not match the temperatures listed above, or that does not fall when the bulb is warmed",
+    "O-ring damaged on reinstall, showing up as a leak at the thermistor",
+    "Thermistor that still throws code 32 after the readings were correct"
+  ],
+  "diySteps": [
+    "Code 32 does not have a filter or a vent step in this procedure. Do not flush the heat exchanger for this code. That flush belongs to scale code LC",
+    "Shut off power to the heater if you are stopping for the night, and call",
+    "Technician: isolate and drain the water, clean the outgoing thermistor, measure it against the list above, grease the O-ring, check for leaks, and replace the thermistor if code 32 remains"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Removing the outgoing thermistor means draining the heater and opening a wet fitting. The resistance bands on this page are the ones printed for code 32 in document 100000652, including 6.4 to 7.7k ohms at 86°F. Call a qualified technician. If the display says 33, use this same procedure on the heat exchanger thermistor."
+}

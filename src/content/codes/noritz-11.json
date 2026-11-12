@@ -1,0 +1,29 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Noritz",
+  "brandSlug": "noritz",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://noritz.com/assets/nrcr_ownersguide.pdf",
+  "sourceTitle": "Noritz condensing tankless gas water heater owner's guide SBB81M1 Rev. 10/25 (EZ111DV, EZ98DV, EZ71DV, NRCR111DV, NRCR92DV)",
+  "safetyNote": "The owner's guide says: if you smell gas, do not try to light any appliance, do not touch any electrical switch, and do not use any phone in the building. Call the gas supplier from a neighbor's phone. If you cannot reach the gas supplier, call the fire department. Installation and service must be performed by a qualified installer, service agency, or the gas supplier. The error list says to contact Noritz America Technical Support at 1-866-766-7489 when the code returns or when a code appears that is not on the owner chart.",
+  "code": "11",
+  "codeSlug": "11",
+  "displayPattern": "Operation panel or remote controller on a Noritz condensing tankless covered by owner's guide SBB81M1 Rev. 10/25: EZ111DV (GQ-C3261WX-FF-1 US), EZ98DV (GQ-C2861WX-FF-1 US), EZ71DV (GQ-C2661WX-FF-1 US), NRCR111DV (GQ-C3261WXQ-FF-1 US), and NRCR92DV (GQ-C2661WXQ-FF-1 US). A failure blinks on the operation panel and on the remote.",
+  "meaning": "Ignition failed. The owner's guide error list gives code 11 one cause: ignition failure. The action is to check whether the gas valve is open. The heater resumes when the hot water fixture is closed and then opened. The error can also be cleared by turning the POWER button or the power switch off and then on. If the blinking number does not return, the problem is solved. That is the whole owner row. It does not list the igniter, the flame rod, gas pressure, or the vent. Those parts show up on other rows or in other manufacturers' charts. They are not the code 11 action in this guide. Code 90, including 901 and 902, is the row for a clogged air supply, a clogged exhaust, abnormal combustion, low gas supply pressure, or a clogged or frozen condensate drain. Code 91 is a gas conversion that was not performed correctly, and the action is to contact the installer, not to cycle the faucet. Code 11 is the ignition row, and its clear methods are the faucet cycle or the power cycle, after the gas valve is confirmed open. The follow-up section says to use the troubleshooting list first. If the error is not corrected, contact Noritz America Technical Support at 1-866-766-7489. Have the model, the serial number, the gas type, the date of purchase, and the blinking code. The model and gas type are on the rating plate, or under Heater Info. The same section says Noritz stocks repair parts for this model for 10 years, and the heat exchanger for 12 years, after production ends. A service request may be rejected if the heater is installed where working on it may be dangerous. In that case the guide says to contact a plumber. If any other error code appears, or this code comes back after the gas valve and the faucet cycle, stop resetting it.",
+  "causes": [
+    "Ignition failure",
+    "Gas valve not open"
+  ],
+  "diySteps": [
+    "If you smell gas, leave and call the gas supplier from outside. Do not cycle the power button",
+    "Check that the gas valve is open. Close the hot water fixture, then open it again",
+    "If the code is still blinking, turn the POWER button or the power switch off, then on, and open a hot fixture once more",
+    "If the blinking number does not return, the guide says the problem is solved. If it returns, call Noritz Technical Support at 1-866-766-7489 with the model, serial, gas type, and the code"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 11's owner action ends when the gas valve is open and the code still blinks. The guide does not send the owner into the burner. Call a qualified installer or Noritz Technical Support. Code 90 is the row that adds the vent and the condensate line. Code 91 is the conversion row."
+}

@@ -1,0 +1,31 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Noritz",
+  "brandSlug": "noritz",
+  "equipmentType": "water-heater",
+  "sourceManualUrl": "https://noritz.com/assets/nrcr_ownersguide.pdf",
+  "sourceTitle": "Noritz condensing tankless gas water heater owner's guide SBB81M1 Rev. 10/25 (EZ111DV, EZ98DV, EZ71DV, NRCR111DV, NRCR92DV)",
+  "safetyNote": "The owner's guide says: if you smell gas, do not try to light any appliance, do not touch any electrical switch, and do not use any phone in the building. Call the gas supplier from a neighbor's phone. If you cannot reach the gas supplier, call the fire department. Installation and service must be performed by a qualified installer, service agency, or the gas supplier. The error list says to contact Noritz America Technical Support at 1-866-766-7489 when the code returns or when a code appears that is not on the owner chart.",
+  "code": "91",
+  "codeSlug": "91",
+  "displayPattern": "Operation panel or remote controller on a Noritz condensing tankless covered by owner's guide SBB81M1 Rev. 10/25: EZ111DV (GQ-C3261WX-FF-1 US), EZ98DV (GQ-C2861WX-FF-1 US), EZ71DV (GQ-C2661WX-FF-1 US), NRCR111DV (GQ-C3261WXQ-FF-1 US), and NRCR92DV (GQ-C2661WXQ-FF-1 US). A failure blinks on the operation panel and on the remote.",
+  "meaning": "The heater was not converted for the gas it is burning. Code 91's cause in the owner chart is that gas conversion has not been performed correctly. The action is to contact the installer. The gas conversion section of the same guide is what that call is about. The factory setting is natural gas. When the supplied gas is propane, conversion includes replacing the gas orifice, using the propane conversion kit that was supplied with the unit. Units that have been converted have a gas conversion sticker attached. If you move to a region that uses a different gas, or if the local gas supply is converted, the orifice has to be replaced and the unit adjusted. The guide says this work must be performed by Noritz or a qualified installer, service agency, or the gas supplier. It is charged even during the warranty period. The qualified installer buys the conversion kit from the manufacturer. A digital gas manometer and a gas analyzer are required. The guide says not to proceed if that equipment is not immediately available. After the parts are replaced, conversion is completed using the app or the operation panel. The installer verifies inlet gas pressure at the gas supply inlet fitting, and the offset pressure at the gas valve. Proper adjustments are made, and a final gas leak check confirms the parts are secure. All parts in the kit have to be replaced and installed by that qualified person. The odor note in the troubleshooting section matches this code. If exhaust gas has an odor and burns your eyes, conversion may be wrong. On propane, if the conversion sticker is not on the unit, do not use it, and contact the installer. Code 11's faucet cycle will not convert the orifice. Code 90's professional gas-pressure check is a different row. Code 91 does not ask the owner to open the gas valve and try again.",
+  "causes": [
+    "Gas conversion not performed correctly",
+    "Propane in use without the supplied conversion kit and the orifice change",
+    "Missing gas conversion sticker on a propane installation",
+    "A move or a utility conversion to a different gas, without a new orifice and a new adjustment"
+  ],
+  "diySteps": [
+    "If the unit is on propane, look for the gas conversion sticker. If it is not attached, do not use the unit",
+    "Do not replace the orifice, and do not change gas settings in the app or on the operation panel",
+    "Contact the installer. The guide also gives Noritz America Technical Support at 1-866-766-7489 for conversion questions",
+    "The installer needs a digital gas manometer and a gas analyzer. The guide says not to start the conversion without them"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Code 91 is not a reset. The chart's only action is to contact the installer. Orifice replacement, inlet pressure, offset pressure at the gas valve, and the leak check are the conversion section, and they are charged even in warranty. Call the installer or Noritz Technical Support. Do not fire a propane heater that has no conversion sticker."
+}

@@ -1,0 +1,38 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "High temp limit",
+  "codeSlug": "high-temp-limit",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "A boiler temperature sensor reached the high limit. HIGH TEMP LIMIT means a boiler temperature sensor reached the high temp limit setting. The manual says that setting is no higher than 200°F. Reset it from the manual reset screen. Verify that all isolation valves are open and that circulators are programmed into the U-Control properly. Each Priority input can be configured to turn on any combination of three circulator outputs. The U-Control setup section is where those outputs are assigned. Verify primary/secondary piping with Figure 4 on page 11. Minimum pipe sizes are 1 inch for Ultra 80 and 105, 1.25 inch for Ultra 155 and 230, and 1.5 inch for Ultra 299 and 399. Verify circulator sizing starting on page 10. Shipped circulators on this row are a Taco 007e ECM or a Taco 007 for Ultra 80 and 105, a Taco 0014 for Ultra 155, 230, and 299, and a Taco 0013 for Ultra 399. That 'or 007' matches the temp-rise row and does not match the supply-58 row, which names only the 007e ECM for the 80 and 105. Then follow the loose-connection procedure on TEMPERATURE SENSOR. TEMP RISE TOO QUICKLY can happen in the first two minutes at 2°F per second without the water ever reaching 200°F. High temp limit is the sensor hitting the setting. FLUE TEMP TOO HIGH is 216°F at the flue sensor, which is allowed to be above the 200°F water limit because it is a different sensor.",
+  "causes": [
+    "Boiler temperature sensor at the high limit setting, which is not set above 200°F",
+    "Isolation valves closed",
+    "Circulator outputs not programmed for the Priority that is calling",
+    "Primary/secondary piping or pipe size wrong for the Ultra model",
+    "Circulator not sized as this row lists",
+    "Loose temperature-sensor connections"
+  ],
+  "diySteps": [
+    "Look at isolation valves on the boiler piping only if you can see them without opening the jacket. If a valve handle is across the pipe, leave it and call. Do not force a hot valve",
+    "Resetting the red screen without opening a closed valve or restoring flow will bring the limit back",
+    "Technician: confirm valve position, Priority circulator programming, pipe size, circulator model, and the sensor connections"
+  ],
+  "proNeeded": true,
+  "proAdvice": "A high limit at or under 200°F means the control did what it was set to do. The manual's causes are no flow, the wrong circulator output for that Priority, undersized pipe, or a sensor connection. Call a qualified heating technician. Do not raise the limit setting above what the manual allows."
+}

@@ -1,0 +1,37 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Blower fault",
+  "codeSlug": "blower-fault",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "The blower missed its speed, or it would not stop. BLOWER FAULT means the blower is unable to reach the required speed, or it does not reach 0 RPM when it is turned off. It automatically resets after one hour, or it can be reset from the manual reset screen. Check the wire harness for loose connections and pin engagement at the blower, at the chassis connector through the sheet metal, and at the U-Control. Unplug the connection at the blower and at the U-Control and check continuity between the ends. The blower is connected to both a low-voltage harness and a line-voltage harness. On Diagnostics, Inputs, with the boiler in standby and the blower not supposed to be running, BLOWER SPEED must be 0 RPM. If it is not 0 RPM, replace the blower. If the blower does not rotate during the ignition sequence, check for 120V at the blower connection. If 120 Vac is present at the blower motor and it does not start, replace the blower. Check power at the U-Control. If 120 Vac is not present at the U-Control when the boiler is powered, replace the U-Control. The repair-parts section has the kit number. The annual blower-speed check is a different screen. In manual test mode, low fire should sit between the minimum setting and the ignition factory setting in Figure 121, and medium and high fire should be within 200 RPM of the values in that figure. This fault row does not quote Figure 121. A blower that will not start, or that will not read 0 RPM in standby, is this display. A blower that runs at the wrong RPM during a manual test is the maintenance procedure, and the manual says to contact the factory if those speeds are outside the figure. IGNITION FAULT can be caused by a blower that never established combustion air, but its row does not say to replace the blower. If the display says blower fault, stay on this row.",
+  "causes": [
+    "Blower unable to reach the required speed",
+    "Blower that does not fall to 0 RPM when turned off",
+    "Loose pins or an open harness between the blower and the U-Control, on the low-voltage or the line-voltage connection",
+    "120 Vac present at the blower during ignition and the blower does not start",
+    "120 Vac missing at the U-Control while the boiler is powered"
+  ],
+  "diySteps": [
+    "Do not keep cycling power to make a blower start. A blower that runs when it should be stopped is also this fault",
+    "Technician: check both harnesses and continuity, read BLOWER SPEED on Diagnostics, Inputs, in standby, and check 120 Vac at the blower and at the U-Control during the ignition sequence",
+    "Technician: replace the blower if speed is not 0 RPM in standby, or if 120 Vac is present and the blower does not start. Replace the U-Control if 120 Vac never arrives there"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Line voltage at the blower and at the U-Control is technician work. The one-hour automatic reset will try again. If the blower still will not reach speed, or will not stop, call a qualified heating technician. The manual's replacement choice depends on where the 120 Vac is missing."
+}

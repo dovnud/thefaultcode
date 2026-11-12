@@ -1,0 +1,40 @@
+{
+  "example": false,
+  "updated": "2026-11-12",
+  "parts": [],
+  "amazonMax": 0,
+  "sourceType": "manual-pdf",
+  "brand": "Weil-McLain",
+  "brandSlug": "weil-mclain",
+  "equipmentType": "boiler",
+  "sourceManualUrl": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-Boiler-Manual-550100440_1025.pdf",
+  "sourceTitle": "Weil-McLain Ultra Series 4 gas-fired water boiler manual, part number 550-100-440/1025, Figure 125",
+  "safetyNote": "This boiler manual is written for a qualified heating installer or service technician. Before any maintenance, disconnect all electrical supplies to avoid electric shock, and let the boiler cool to avoid severe burns. The boiler contains ceramic fiber and fiberglass materials. If the boiler overheats or the gas supply fails to shut off, do not turn off or disconnect electrical supply to the pump. Shut off the gas supply at a location external to the appliance. The manual says a carbon monoxide alarm on the same electrical circuit as the boiler is strongly recommended, and that the installer must verify one is operational in the living space before the appliance is put into operation. Do not leave the boiler operating without a complete diagnosis of an outage.",
+  "moreSources": [
+    {
+      "name": "Weil-McLain Ultra Series 4 user's information manual 550-100-441/1025",
+      "url": "https://www.weil-mclain.com/wp-content/uploads/Ultra-Series-4-User-Manual-550100441_1025.pdf"
+    }
+  ],
+  "code": "Ignition fault",
+  "codeSlug": "ignition-fault",
+  "displayPattern": "U-Control display on a Weil-McLain Ultra Series 4 gas-fired water boiler (manual 550-100-440/1025). The screen flashes red to gray during an automatic or manual reset condition.",
+  "meaning": "Five ignition attempts never detected flame. Figure 125 in the Ultra Series 4 boiler manual defines IGNITION FAULT as the boiler going through five ignition attempts and never detecting flame. The control automatically resets after one hour, or it can be reset from the manual reset screen. The user's information manual shows the U-Control turning red on a lockout and says to select MANUAL RESET. That reset is not the repair. The boiler manual says to determine the cause of an outage and not to leave the boiler operating without a complete diagnosis. The corrective actions on this row stay inside the heat exchanger, the gas train, and the vent. Check the condensate trap for a blockage that lets condensate accumulate inside the heat exchanger. The same trap check is printed twice on this row. The igniter may be fouled, worn, bent, or faulty. Fouled igniters can be cleaned for additional use with fine grit sandpaper or steel wool. Worn or badly fouled igniters are replaced with the proper repair part. Igniter rods should be parallel, with a spark gap of 3.5 mm (0.138 in). A dirty burner or heat exchanger causes high back pressure and poor ignition. The maintenance section cleans the burner and heat exchanger with a flue cleaning tool and a rinse. The manual says a visual inspection of the flueways often will not be able to diagnose that condition. Check combustion settings on high fire and low fire and adjust them per the setup instructions if necessary. Check incoming gas pressure with the boiler off and at high fire, and adjust it within the limits on the rating label. Verify the correct boiler model is selected in the control, and that high altitude is selected for installations 5,500 ft above sea level. The ignition cable should measure 1,000 ohms, plus or minus 50 ohms. That is the figure on the fault row. A separate annual-startup step in the same manual says a good ignition cable will have resistance between 900 and 1,000 ohms. Use the sentence that belongs to the job you are doing. Check the flue pipe and the intake pipe for restrictions or blockage, the burner fasteners and gaskets, the venturi gaskets, and the proper propane orifice. This display is not FLAME FAULT. Flame fault means flame was detected when there should be no flame, and that row requires a manual reset rather than the one-hour automatic reset on ignition fault.",
+  "causes": [
+    "Condensate trap blocked so condensate collects in the heat exchanger",
+    "Ignition electrode fouled, worn, bent, or faulty, or rods not parallel at a 3.5 mm (0.138 in) spark gap",
+    "Dirty burner or heat exchanger causing high back pressure",
+    "Combustion settings out of the setup range on high or low fire",
+    "Incoming gas pressure outside the rating-label limits, boiler off or at high fire",
+    "Wrong boiler model selected, or high altitude not selected at 5,500 ft or above",
+    "Ignition cable not at 1,000 ohms, plus or minus 50 ohms, on this fault row",
+    "Flue or intake restriction, burner fasteners or gaskets, venturi gaskets, or the propane orifice"
+  ],
+  "diySteps": [
+    "If you smell gas, shut the boiler down using the operating instructions in the user's manual and call a qualified service technician. Do not keep resetting the display to get heat",
+    "The red screen can be cleared from MANUAL RESET, as the user's manual shows. Write down IGNITION FAULT before you clear it. The control also stores three lockout histories under Diagnostics, then Errors",
+    "Technician: check the condensate trap, clean or replace the ignition electrode to the 3.5 mm gap, clean the burner and heat exchanger with the flue tool and rinse, read gas pressure off and at high fire, confirm the model and the 5,500 ft altitude setting, and measure the ignition cable"
+  ],
+  "proNeeded": true,
+  "proAdvice": "Every corrective action on the ignition-fault row is service work: gas pressure, the igniter gap, combustion settings, the venturi, and the propane orifice. Call a qualified heating technician. The manual says not to leave the boiler running without a diagnosis. To clear all lockout histories, the manual says to hold the left and right arrow buttons together for 5 seconds while on the Errors screen. Do that only after the technician has recorded the histories."
+}
